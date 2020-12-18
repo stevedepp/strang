@@ -78,3 +78,12 @@ formed by the points of the tips of u, v, w.
 v @ w = 0 --> perpendicular
 
 length = ||v|| = (v @ v)**.5
+
+mu = unit vector = v / ||v|| = u such that ||u|| = 1
+
+angle between v and w has cos theta = v @ w / (||v||*||w||)  
+or if u_v and u_w are unit vectors: u_v=v/||v|| and u_w=w/||w||  
+then angle between v and w has cos theta = u_v @ u_w
+
+acos(u_v @ u_w) = radians angle between v and w
+acos(u_v @ u_w) * 180 / math.pi
