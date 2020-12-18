@@ -22,6 +22,6 @@ row vector = column vector.T
 
 (1,0,0) and (2,0,0) are on a line
 (1,0,0) and (0,1,0) are on a plane
-(1,0,0), (0,1,0) and (0,0,1) are in R^^3
+(1,0,0), (0,1,0) and (0,0,1) are in R<sup>3</sup>3
 
 
