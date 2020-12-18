@@ -42,7 +42,7 @@ or better said its because you only have 2 vectors
 and the 3rd is just a combination of the first 3.
 
 
-the slope of the vector (v1, v2) is v2/v1
+the slope of the vector (v1, v2) is v2/v1  
 the slope of the vector (v1, v2, v3) in any of the three 2d spaces is  
 - v2/v1
 - v3/v2
