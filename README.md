@@ -47,3 +47,30 @@ the slope of the vector (v1, v2, v3) in any of the three 2d spaces is
 - v2/v1
 - v3/v2
 - v3/v1
+
+graphically:
+
+2 vectors v and w  
+- v + w is the vector from zero along diagonal between v amd w
+to the 4th corner of the parallelogram  
+
+- v - w is the vector from zero along diagonal between v and -w
+
+- 1*v + 0*w is the vector v and 0*v + 1*w is the vector w  
+
+- .5*v + .5*w is the vector from zero   
+to the point mid way on the line between v and w
+
+- .25*v + .75*w is the vector from zero  
+to the point on the line between v and w  
+3/4 of the way from v to w
+
+- .25*v + .25*w is the vector  
+extending from zero 1/2 of the distance to 0.5*v + 0.5*w;  
+the endpoint of the vector lies on the line between 0.5*v and 0.5*w
+
+- 0.75*v + 0.75*w is 50% longer than and on same line as 0.5*v + 0.5*w
+
+- in R<sup>3</sup> space, (1/3)*u + (1/3)*v + (1/3)*w 
+lies in the middle of a triangle 
+formed by the points of the tips of u, v, w.
