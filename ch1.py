@@ -17,6 +17,7 @@ Out[9]: ((1, 2), (2, 1), (1, 2), (2, 1), (1, 2), (2, 1))
 """
 
 import numpy as np
+import math
 
 def row_vector_shape(list):
     c = len(list)
@@ -40,3 +41,45 @@ def col_vector_bracket(list):
 
 def vector(list):
     return col_vector_shape(list)
+
+def orthog(v,w):
+    return (v.T @ w)[0][0] == 0
+
+def length(v):
+    return ((v.T @ v)**.5)[0][0]
+
+def mu(v):
+    return v / length(v)
+
+# page 1.15 dont use since only works with 2d vecs
+# not sure what to do w it in 3d
+def vecangle_0(v):
+    return math.acos(mu(v)[0][0])*180/math.pi
+def vecangle_1(v):
+    return math.asin(mu(v)[1][0])*180/math.pi
+
+
+def costheta(v, w):
+    return (mu(v).T @ mu(w))[0][0]
+
+# page1.16 v=[cos alpha, sin alpha].T w=[cos beta, sin beta]
+# theta=beta-alpha
+# dotprod = cos alpha*cos beta + sin alpha*sin beta
+#         = cos theta = cos beta - alpha if vectors are unitary
+# where cos is v1 and w1 and sin is v2 adn w2.  so ...
+ 
+def costheta_unitaries(v,w):
+    return mu(v)[0][0]*mu(w)[0][0] + mu(v)[1][0]*mu(w)[1][0]
+
+def costheta_m(v, w):
+    return (mu(v).T @ mu(w))[0][0]
+
+def costheta_d(v, w):
+    return ((v.T @ w) / (length(v) * length(w)))[0][0]
+
+def vecangle(v, w):
+    return math.acos(costheta(v, w)) * 180 / math.pi
+
+def sintheta(v, w):
+    return math.sin(vecangle(v, w) * math.pi / 180)[0][0]
+
