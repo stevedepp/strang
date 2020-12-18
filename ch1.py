@@ -54,6 +54,31 @@ def mu(v):
 def unit(v):
     return mu(v)
 
+def deg(rad):
+    return rad * 180 / math.pi
+
+def rad(deg):
+    return deg * math.pi / 180
+
+def unit_x(deg):
+    rads = rad(deg)
+    return math.cos(rads)
+
+def unit_y(deg):
+    rads = rad(deg)
+    return math.sin(rads)
+
+def pythag(deg):
+    rads = rad(deg)
+    return math.cos(rads)**2 + math.sin(rads)**2
+
+def unit_deg(deg):
+    rads = rad(deg)
+    return np.array([[math.cos(rads)],[math.sin(rads)]])
+
+def unit_rad(rad):
+    return np.array([[math.cos(rad)],[math.sin(rad)]])
+
 # page 1.15 dont use since only works with 2d vecs
 # not sure what to do w it in 3d
 def vecangle_0(v):

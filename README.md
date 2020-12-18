@@ -81,6 +81,8 @@ length = ||v|| = (v @ v)**.5
 
 mu = unit vector = v / ||v|| = u such that ||u|| = 1
 
+the angle beteen the dot product elements has cos theta in radians
+
 angle between v and w has cos theta = v @ w / (||v||*||w||)  
 or if u_v and u_w are unit vectors: u_v=v/||v|| and u_w=w/||w||  
 then angle between v and w has cos theta = u_v @ u_w
@@ -110,3 +112,21 @@ then 90 degrees angle between them = u_v @ u_w * 180 / math.pi
 eg  
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/102623971-561e2e00-4111-11eb-90fa-96f384f88a4f.png">
+
+-1 <= u_v @ u_w <= 1  
+u @ v > 0 --> acute heading toward 0  
+u @ v < 0 --> obtuse heading toward 180  
+
+cos 90 deg = 0
+sin 90 deg = 1
+
+deg = rad * 180 / math.pi
+rad = deg * math.pi / 180
+
+unit vector = (cos theta, sin theta)
+
+unit_x = cos(rad) and unit_y = sin(rad)
+
+since x and y vector components form a hypotenuse vector to unit circle:
+
+cos(rad)<sup>2</sup> + sin(rad)<sup>2</sup>
