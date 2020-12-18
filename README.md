@@ -74,3 +74,7 @@ the endpoint of the vector lies on the line between 0.5*v and 0.5*w
 - in R<sup>3</sup> space, (1/3)*u + (1/3)*v + (1/3)*w 
 lies in the middle of a triangle 
 formed by the points of the tips of u, v, w.
+
+v @ w = 0 --> perpendicular
+
+length = ||v|| = (v @ v)**.5
