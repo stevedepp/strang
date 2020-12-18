@@ -177,7 +177,14 @@ what we do with this? all 3 sides need to be divided by cos theta
 ||v+w|| is the geometric mean i think
 
 
+
+
+
+
 if one vector is multiple of the other
 then the angle is zero or 180 degrees:
 -  abs(cos theta) = 1 = abs(v @ w)/(||v||*||w||)  
 -  ||v + w|| = ||v|| + ||w||
+
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/102666823-d9617300-4155-11eb-937b-be0c6308f16a.png">
