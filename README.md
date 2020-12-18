@@ -86,4 +86,26 @@ or if u_v and u_w are unit vectors: u_v=v/||v|| and u_w=w/||w||
 then angle between v and w has cos theta = u_v @ u_w
 
 acos(u_v @ u_w) = radians angle between v and w  
-acos(u_v @ u_w) * 180 / math.pi
+acos(u_v @ u_w) * 180 / math.pi = degrees angle between v and w
+
+absolute value of u_v @ u_w = |v @ w| <= 1
+
+if u_v @ u_w = 1  
+then u_v and u_w are the same unit vector  
+and u and v are vectors on the same line.
+ie unit vectors with 
+zero degrees angle between them
+
+if u_v @ u_w = -1   
+then u_v and u_w are opposite unit vectors  
+ie unit vectors with  
+180 degrees angle between them  
+180/math.pi radians angle between them  
+and u and v are vectors are on the same line,  
+just pointing away from each other  
+
+if u_v @ u_w = 0 or v @ w = 0  
+then 90 degrees angle between them = u_v @ u_w * 180 / math.pi
+
+eg
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/102623971-561e2e00-4111-11eb-90fa-96f384f88a4f.png">

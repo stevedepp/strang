@@ -51,6 +51,9 @@ def length(v):
 def mu(v):
     return v / length(v)
 
+def unit(v):
+    return mu(v)
+
 # page 1.15 dont use since only works with 2d vecs
 # not sure what to do w it in 3d
 def vecangle_0(v):
