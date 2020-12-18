@@ -114,8 +114,8 @@ eg
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/102623971-561e2e00-4111-11eb-90fa-96f384f88a4f.png">
 
 -1 <= u_v @ u_w <= 1  
-u @ v > 0 --> acute heading toward 0  
-u @ v < 0 --> obtuse heading toward 180  
+v @ w > 0 --> acute heading toward 0  
+v @ w < 0 --> obtuse heading toward 180  
 
 cos 90 deg = 0
 sin 90 deg = 1
@@ -129,4 +129,55 @@ unit_x = cos(rad) and unit_y = sin(rad)
 
 since x and y vector components form a hypotenuse vector to unit circle:
 
-cos(rad)<sup>2</sup> + sin(rad)<sup>2</sup>
+cos(rad)<sup>2</sup> + sin(rad)<sup>2</sup> = 1
+
+number of dimensions -> angles between vector pairs  
+numbering C(n=d,r=2)= d!/(d-2)/2
+   
+the 'rule' cos theta = u_v @ u_w --> vecangle(v,w) = acos(u_v @ u_w)*180/pi
+if v is the x-axis then this 'rule' is taking acos(w's x-axis component  
+and not its y-axis component since vector u_v is (1,0)  
+multiplies u_w = (w1,w2).  as u_v moves away from x-axis, the rule takes  
+progressively less of the w vector's x component  
+and starts to take the w vectors y-component.
+
+u_v = (cos theta, sin theta)
+u_w = (cos theta, sin theta)
+at 90 degrees u_v @ u_w = cos(theta)<sup>2</sup> + sin(theta)<sup>2</sup> = 1
+
+so if measure u_v vs x axis to get its angle
+u_v angle is theta in cos(theta)
+
+and if measure w_v vs x axis to get its angle
+u_w angle is theta in cos(theta)
+
+and angle between them is cos(theta_v) - cos(theta_w) = cos(theta_v-theta_w)?
+
+
+schwartz inequality:  
+
+cos theta <=1 
+= u_v @ u_w <=1
+= (v @ w) / (||v|| * ||w||) <= 1  
+
+--> cos<sup>2</sup>theta + sin<sup>2</sup>theta <= 1
+
+--> v @ w <= ||v|| * ||w||
+
+triangle inequality:
+||v + w|| <= ||v|| + ||w||
+where ||v + w|| is length of the v+w parallelogram's diagonal
+sum of ||v|| and ||w|| separates going to diagonal endpoint 
+cannot be shorter than the diagonal itself.
+
+can we also get ?
+cos theta = cos<sup>2</sup>theta + sin<sup>2</sup>theta <= 1
+what we do with this? all 3 sides need to be divided by cos theta
+
+||v+w|| is the geometric mean i think
+
+
+if one vector is multiple of the other
+then the angle is zero or 180 degrees:
+-  abs(cos theta) = 1 = abs(v @ w)/(||v||*||w||)  
+-  ||v + w|| = ||v|| + ||w||

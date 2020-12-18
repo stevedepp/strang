@@ -68,6 +68,7 @@ def unit_y(deg):
     rads = rad(deg)
     return math.sin(rads)
 
+# always 1
 def pythag(deg):
     rads = rad(deg)
     return math.cos(rads)**2 + math.sin(rads)**2
@@ -79,13 +80,15 @@ def unit_deg(deg):
 def unit_rad(rad):
     return np.array([[math.cos(rad)],[math.sin(rad)]])
 
+def combs(n,r):
+    return math.factorial(n)/math.factorial(n-r)/math.factorial(r)
+
 # page 1.15 dont use since only works with 2d vecs
 # not sure what to do w it in 3d
 def vecangle_0(v):
     return math.acos(mu(v)[0][0])*180/math.pi
 def vecangle_1(v):
     return math.asin(mu(v)[1][0])*180/math.pi
-
 
 def costheta(v, w):
     return (mu(v).T @ mu(w))[0][0]
@@ -111,3 +114,9 @@ def vecangle(v, w):
 def sintheta(v, w):
     return math.sin(vecangle(v, w) * math.pi / 180)[0][0]
 
+def schwartz(v, w):
+    print(f'{v} dot {w},\n ||{v}||*||{w}||')
+    return abs(v.T @ w)[0][0], length(v)*length(w)
+
+def triangle(v, w):
+    return length(v + w), length(v) + length(w)
