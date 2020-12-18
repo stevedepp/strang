@@ -107,5 +107,6 @@ just pointing away from each other
 if u_v @ u_w = 0 or v @ w = 0  
 then 90 degrees angle between them = u_v @ u_w * 180 / math.pi
 
-eg
+eg  
+
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/102623971-561e2e00-4111-11eb-90fa-96f384f88a4f.png">
