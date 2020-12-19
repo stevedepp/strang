@@ -197,4 +197,4 @@ depending on whether
 angle theta is > or < 90
 cos theta is < or > zero
 
-||v-w||<sup>2</sup>2 = ||v||<sup>2</sup>2 - 2 * ||v|| * ||w|| * costheta(v, w) + ||w||<sup>2</sup> 
+||v-w||<sup>2</sup> = ||v||<sup>2</sup> - 2 * ||v|| * ||w|| * costheta(v, w) + ||w||<sup>2</sup> 
