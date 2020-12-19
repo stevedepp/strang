@@ -205,7 +205,7 @@ any hypotenuse v+w or v-w length can be gotten to via costheta
 cos theta v,w = v • w / ||v|| * ||w||   
 v • w = cos theta v,w * ||v|| * ||w||  
 
-using these vector algebra rules
+using these vector algebra rules:  
 v • w = w • v  
 u • (v + w) = u • v + u • w   
 (c * v) • w = c * (v • w)  
