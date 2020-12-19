@@ -211,8 +211,8 @@ u • (v + w) = u • v + u • w
 (c * v) • w = c * (v • w)  
 
 ||v|| = (v • v)<sup>0.5</sup>  
-||v-w|| = (([v-w] • [v-w])<sup>0.5</sup>)  
-||v+w|| = (([v+w] • [v+w])<sup>0.5</sup>)  
+||v-w|| = ([v-w] • [v-w])<sup>0.5</sup>  
+||v+w|| = ([v+w] • [v+w])<sup>0.5</sup>  
 
 ||v||<sup>2</sup> = ((v • v)<sup>0.5</sup>)<sup>2</sup>  
 ||v-w||<sup>2</sup> = (([v-w] • [v-w])<sup>0.5</sup>))<sup>2</sup>   
