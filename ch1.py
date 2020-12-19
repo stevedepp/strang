@@ -120,3 +120,34 @@ def schwartz(v, w):
 
 def triangle(v, w):
     return length(v + w), length(v) + length(w)
+
+def axisangle(v):
+    d = len(v)
+    angles_list = [0] * d
+    costheta_list = [0] * d
+    for i in range(d):
+        axis = [0] * d        
+        axis[i] = 1
+        axis = vector(axis)
+        v_1d = [0] * d
+        v_1d[i] = v[i][0]
+        v_1d = vector(v_1d)
+        angles_list[i] = vecangle(axis, v)
+        costheta_list[i] = costheta(axis, v)**2
+    return angles_list, costheta_list
+
+def lawcosines(v,w):
+    l_v = length(v)
+    l_w = length(w)
+    l_diff2 = length(v - w) ** 2
+    l_v2 = l_v ** 2
+    ct = costheta(v, w)
+    l_w2 = l_w ** 2
+    r = 2
+    print(f'\t||v-w||^2          {round(l_diff2, r)} =\n \
+    \t+||v||^2         + {round(l_v2, r)}\n \
+    \t-2               - 2\n \
+    \t*||v||           * {round(l_v, r)}\n \
+    \t*||w||           * {round(l_w, r)}\n \
+    \t*costheta(v,w)   * {round(ct, r)}\n \
+    \t+||w||^2         + {round(l_w2, r)}')

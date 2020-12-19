@@ -188,3 +188,13 @@ then the angle is zero or 180 degrees:
 
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/102666823-d9617300-4155-11eb-937b-be0c6308f16a.png">
+
+
+
+law of cosines says how the hypotenuse between v and w
+differs from pythagorean 
+depending on whether 
+angle theta is > or < 90
+cos theta is < or > zero
+
+||v-w||<sup>2</sup>2 = ||v||<sup>2</sup>2 - 2 * ||v|| * ||w|| * costheta(v, w) + ||w||<sup>2</sup> 
