@@ -223,7 +223,7 @@ u • (v + w) = u • v + u • w
 ||v+w||<sup>2</sup> = [v+w] • [v+w]
 
 ||v-w||<sup>2</sup> = v • v - 2 * v • w + w • w                           
-||v+w||<sup>2</sup> = v • v + 2 * v • w + w • w
+||v+w||<sup>2</sup> = v • v + 2 * v • w + w • w  
 
-||v-w||<sup>2</sup> = v • v - 2 * cos theta v,w * ||v|| * ||w|| + w • w
-||v+w||<sup>2</sup> = v • v + 2 * cos theta v,w * ||v|| * ||w|| + w • w
+||v-w||<sup>2</sup> = v • v - 2 * cos theta v,w * ||v|| * ||w|| + w • w  
+||v+w||<sup>2</sup> = v • v + 2 * cos theta v,w * ||v|| * ||w|| + w • w  
