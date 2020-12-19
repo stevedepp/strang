@@ -189,7 +189,7 @@ then the angle is zero or 180 degrees:
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/102666823-d9617300-4155-11eb-937b-be0c6308f16a.png">
 
-
+sum of angles for a n-d vector to all axes have sum of cos<sup>2</sup>theta = 1
 
 law of cosines says how the hypotenuse between v and w
 differs from pythagorean 
