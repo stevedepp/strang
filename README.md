@@ -198,3 +198,18 @@ angle theta is > or < 90
 cos theta is < or > zero
 
 ||v-w||<sup>2</sup> = ||v||<sup>2</sup> - 2 * ||v|| * ||w|| * costheta(v, w) + ||w||<sup>2</sup> 
+
+actually more generally
+any hypotenuse v+w or v-w length can be gotten to via costheta
+
+cos theta v w = v dot w / len v * len w   
+v dot w = cos theta v w * len v * len w  
+
+||v|| = (v dot v)(sup)0.5(/sup)  
+||v-w|| = ([v-w] dot [v-w])(sup)0.5(/sup))  
+||v+w|| = ([v+w] dot [v+w])(sup)0.5(/sup))  
+
+||v||(sup)2(/sup) = ((v dot v)(sup)0.5(/sup))(sup)2(/sup)  
+||v-w||(sup)2(/sup) = ([v-w] dot ([v-w])(sup)0.5(/sup)))(sup)2(/sup)   
+||v+w||(sup)2(/sup) = ([v+w] dot ([v+w])(sup)0.5(/sup)))(sup)2(/sup)  
+
