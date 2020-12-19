@@ -206,9 +206,9 @@ cos theta v,w = v • w / ||v|| * ||w||
 v • w = cos theta v,w * ||v|| * ||w||  
 
 using these vector algebra rules
-v • w = w • v
-u • (v + w) = u • v + u • w
-(c * v) • w = c * (v • w)
+v • w = w • v  
+u • (v + w) = u • v + u • w   
+(c * v) • w = c * (v • w)  
 
 ||v|| = (v • v)<sup>0.5</sup>  
 ||v-w|| = (([v-w] • [v-w])<sup>0.5</sup>)  
