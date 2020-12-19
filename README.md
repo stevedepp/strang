@@ -202,14 +202,19 @@ cos theta is < or > zero
 actually more generally
 any hypotenuse v+w or v-w length can be gotten to via costheta
 
-cos theta v w = v dot w / len v * len w   
-v dot w = cos theta v w * len v * len w  
+cos theta v,w = v • w / ||v|| * ||w||   
+v • w = cos theta v,w * ||v|| * ||w||  
 
-||v|| = (v dot v)<sup>0.5</sup>  
+using these vector algebra rules
+v • w = w • v
+u • (v + w) = u • v + u • w
+(c * v) • w = c * (v • w)
+
+||v|| = (v • v)<sup>0.5</sup>  
 ||v-w|| = (([v-w] • [v-w])<sup>0.5</sup>)  
 ||v+w|| = (([v+w] • [v+w])<sup>0.5</sup>)  
 
-||v||<sup>2</sup> = ((v dot v)<sup>0.5</sup>)<sup>2</sup>  
+||v||<sup>2</sup> = ((v • v)<sup>0.5</sup>)<sup>2</sup>  
 ||v-w||<sup>2</sup> = (([v-w] • [v-w])<sup>0.5</sup>))<sup>2</sup>   
 ||v+w||<sup>2</sup> = (([v+w] • [v+w])<sup>0.5</sup>))<sup>2</sup>  
 
