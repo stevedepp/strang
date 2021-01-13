@@ -1,5 +1,18 @@
 chapter 2 matrices
 
+column picture = vector equation = vector space
+
+row picture = dot product = cartesian space
+
+when b vector = zero then one comb x of vectors can be zero.
+
+difficult to see row picture when more than 3d in vector space because then youre talking about more than 3 planes in cartesian space.
+
+EA = U
+A = LU
+
+the rank of A after elimination gives dimension of Ax = 0 solutions = null set
+
 exch()  
 exchange matrix = exch(n)  
  0  1  
