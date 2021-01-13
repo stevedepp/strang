@@ -151,3 +151,4 @@ def lawcosines(v,w):
     \t*||w||           * {round(l_w, r)}\n \
     \t*costheta(v,w)   * {round(ct, r)}\n \
     \t+||w||^2         + {round(l_w2, r)}')
+
