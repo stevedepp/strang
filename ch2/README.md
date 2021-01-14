@@ -43,9 +43,11 @@ puts col 3 in col 1
 puts col 1 in col 2  
 puts col 2 in col 3  
 
-rotating degrees  
-def rotate(d):  
-        r = d * math.pi / 180  
-        x = math.cos(r)  
-        y = math.sin(r)  
-        return np.array([[x, -y], [y, x]])  
+`rotating degrees ` 
+`def rotate(d):  `
+`       r = d * math.pi / 180  `
+`      x = math.cos(r)  `
+
+
+`        y = math.sin(r)  `
+`        return np.array([[x, -y], [y, x]])  `
