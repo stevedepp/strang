@@ -49,3 +49,4 @@ puts col 2 in col 3
 `   x = math.cos(r)`  
 `   y = math.sin(r)`  
 `   return np.array([[x, -y], [y, x]])`  
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/104539534-bfe40780-55eb-11eb-9eaf-90fef0d49954.png">
