@@ -52,7 +52,7 @@ puts col 2 in col 3
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/104539534-bfe40780-55eb-11eb-9eaf-90fef0d49954.png">
 
 
-matrix represents in row view the equations for 3 planes:
+matrix represents in row view the equations for 3 planes, all 3 of which slope:
 
  2  4 -2  2  
  4  8 -4  4  
@@ -70,4 +70,8 @@ the matrix is * 1.0 so that it is no longer integer matrix whose components cann
 [i should provide more comments in code]  
 [U is correct; L is not]  
 
+end up with 3 planes, 2 of which slope and 3rd is 4z = 8 is horizontal to xy cartesian plane.  
+
+
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/104737669-8e199080-5712-11eb-9b20-079cd79df1a7.png">
+
