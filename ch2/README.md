@@ -79,3 +79,6 @@ A x = b = [2,8,10].T
 so x solves both U and A for expected c and b respectively.
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/104740710-4137b900-5716-11eb-8ce9-46cda9aa5b14.png">
+
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/104787181-eb3a3400-575c-11eb-8ca5-108d08b6904a.png">
