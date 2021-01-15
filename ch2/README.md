@@ -74,5 +74,8 @@ end up with 3 planes, 2 of which slope and 3rd is 4z = 8 is horizontal to xy car
 
 U x = c = [2,4,8].T  
 
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/104737669-8e199080-5712-11eb-9b20-079cd79df1a7.png">
+A x = b = [2,8,10].T  
 
+so x solves both U and A for expected c and b respectively.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/104740710-4137b900-5716-11eb-8ce9-46cda9aa5b14.png">
