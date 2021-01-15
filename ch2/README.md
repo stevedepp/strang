@@ -72,6 +72,7 @@ the matrix is * 1.0 so that it is no longer integer matrix whose components cann
 
 end up with 3 planes, 2 of which slope and 3rd is 4z = 8 is horizontal to xy cartesian plane.  
 
+U x = c = [2,4,8].T  
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/104737669-8e199080-5712-11eb-9b20-079cd79df1a7.png">
 
