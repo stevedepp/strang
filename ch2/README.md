@@ -50,3 +50,24 @@ puts col 2 in col 3
 `   y = math.sin(r)`  
 `   return np.array([[x, -y], [y, x]])`  
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/104539534-bfe40780-55eb-11eb-9eaf-90fef0d49954.png">
+
+
+matrix represents in row view the equations for 3 planes:
+
+ 2  4 -2  2  
+ 4  8 -4  4  
+ 4  9 -3  8  
+ 
+finding U and L. 
+i = row  
+j = column  
+
+i,j is first elimination  
+j,j is first pivot  
+l is multiplier  =  i,j / j,j  
+the matrix is * 1.0 so that it is no longer integer matrix whose components cannot subtract floats.  
+
+[i should provide more comments in code]  
+[U is correct; L is not]  
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/104737669-8e199080-5712-11eb-9b20-079cd79df1a7.png">
