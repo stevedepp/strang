@@ -82,3 +82,9 @@ so x solves both U and A for expected c and b respectively.
 
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/104787181-eb3a3400-575c-11eb-8ca5-108d08b6904a.png">
+
+
+
+P is permutation matrix that starts as identity matrix and as need row changes in A, P adapts by making changes in I. So, if A needs row 2 and 3 switched then P for this task is I with rows 2 and 3 switched.
+
+E contains the compounded effects of each multiplier, l or -l.  To express the compounded effects of each, use a new matrix E
