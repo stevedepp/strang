@@ -24,7 +24,7 @@ row vector = column vector.T
 
 (1,0,0) and (2,0,0) are on a line
 (1,0,0) and (0,1,0) are on a plane
-(1,0,0), (0,1,0) and (0,0,1) are in R<sup>3</sup>
+(1,0,0), (0,1,0) and (0,0,1) are in R<sub>3</sup>
 
 
 if u, v, w, x and 0 are column vectors  
