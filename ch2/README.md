@@ -143,4 +143,9 @@ A<sup>p</sup>A<sup>q</sup> = A<sup>p+q</sup>
 
 (A<sup>p</sup>)<sup>q</sup> = A<sup>p</sup><sup>q</sup>
 
-(A<sup>0</sup> = I
+A<sup>0</sup> = I
+
+
+For elimination, we use E which it is important to remember is doing the same operation on both sides of each equation in the matrices it operates on. So is not changing the relationship between the variables x, y, z, etc...
+
+So for block operations, as long as the individual underlying matrices can operate on each other in terms of sizes, then the multiplication is valid. Then we can also say that block elimination is valid and expose Schuler's constant D - CA<sup>-1</sup>B
