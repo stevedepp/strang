@@ -148,7 +148,57 @@ A<sup>0</sup> = I
 
 For elimination, we use E which it is important to remember is doing the same operation on both sides of each equation in the matrices it operates on. So is not changing the relationship between the variables x, y, z, etc...
 
-So for block operations, as long as the individual underlying matrices can operate on each other in terms of sizes, then the multiplication is valid. Then we can also say that block elimination is valid and expose Schuler's constant D - CA<sup>-1</sup>B
+So for block operations, as long as the individual underlying matrices can operate on each other in terms of sizes, then the multiplication is valid. Then we can also say that block elimination is valid and expose Schuler's constant D - CA<sup>-1</sup>B as in this example matrix:
 
 A B  
 0 Schulers constant
+
+
+section 2.5  
+
+
+algorithm to test invertibility is elimination: A must have n non-zero pivots
+
+algebra to test invertibility is determinant: det A must not = zero
+
+equation to test invertibility is Ax = 0 only for x = 0
+
+if A and B are invertible, then so is AB
+
+(AB)<sup>-1</sup> = B<sup>-1</sup>A<sup>-1</sup>
+
+Gauss-Jordan eliminates AI to IA<sup>-1</sup>
+
+There are 14 conditions for A to be invertible:
+
+Invertible [Singular]
+
+1. A is invertible [singular].
+
+2. Columns are independent [dependent].
+
+3. Rows are independent [dependent].
+
+4. Determinant is non-zero [zero].
+
+5. Ax = 0 has only 1 solution: x=0 [infinite solutions].
+
+6. Ax = b has one solution [no solution / infinite solutions].
+
+7. A has n non-zero pivots [r < n pivots].
+
+8. A has full rank r = n [rank r < n].
+
+9. Reduced row echelon form is R = Identity. [R has at least one zero row.]
+
+10. Column space is all of R<sub>n</sub>. [Column space dimension r < n.]
+
+11. Row space is all of R<sub>n</sub> [Row space dimension r < n.]
+
+12. All eigenvalues are non-zero. [Zero is an eigenvalue of A.]
+
+13. A<sup>T</sup>A is symmetric positive definite. [A<sup>T</sup>A is only semidefinite.] 
+
+14. A has n positive singular values. [A has r < n singular values.]
+
+
