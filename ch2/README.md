@@ -202,3 +202,33 @@ Invertible [Singular]
 14. A has n positive singular values. [A has r < n singular values.]
 
 
+Six things about A's inverse A<sup>-1</sup>: Whatever A does to x, A<sup>-1</sup> undoes it. 
+
+1. Inverse exists only if elimination reveals n pivots.  Elimination solves Ax = b without using the matrix A<sup>-1</sup>.
+
+2. A cannot have 2 different inverses: if BA = I and AC = I, then B = C.  To prove this, must know that A<sup>-1</sup>A = I = AA<sup>-1</sup>: if A is square then its inverse can take it to I whether on RHS or LHS.
+
+B(AC) = (BA)C thus B(I) = IC and thus B=C
+
+3. If A is invertible, then the one and only soution to Ax = b is x = A<sup>-1</sup>b:
+
+(Ax =b)A<sup>-1</sup> = x = A<sup>-1</sup>Ax = A<sup>-1</sup>b
+
+4. If there is a non-zero vector x that Ax = 0, then A cannot have an inverse. This is trye because no matrix A<sup>-1</sup> can bring b = 0 back to x:
+
+Ax = b = 0 and if there is an x that makes this true, then there cannot be an A<sup>-1</sup> that multiplies b = 0 to equal x.  That is, A<sup>-1</sup>Ax = A<sup>-1</sup>b = A<sup>-1</sup>0 = x is not possible when x is non-zero.
+
+5. A 2x2 matric is invertible only when ad-bc = 0
+
+np.array( [[a,b],[c,d]] )<sup>-1</sup> = 1/(ad-bc) * np.array( [[d,-b],[c,a]] )
+
+Since (ad-bc) is determinant of A and appears in denominator, it cannot be zero.
+
+The test of pivots, (test #1 of 14 above) is usally decided before teh determinant appears.
+
+6. A diagonal matrics as an inverse provided no diagonal entries are zero.
+
+if A = np.diag([d<sub>1</sub>, ..., d<sub>n</sub>])  
+then A<sup>-1</sup> = np.diag([1/d<sub>1</sub>, ..., 1/d<sub>n</sub>])
+
+So no d can = 0 since d appears in demoninator of diagonal values of A's inverse.
