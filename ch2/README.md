@@ -97,3 +97,50 @@ The magic is in the E A = U, L U = A and E L = I
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/104829444-f31fd400-5841-11eb-998b-90227281811d.png">
 
 
+Section 2.4 
+
+4 ways to multiply matrices
+
+Row picture: Dot product of A rows B columns --> 1 matrix
+
+a<sub>1,:</sub><sup>T</sup>b<sub>:,1</sub> ... a<sub>m,:</sub><sup>T</sup>b<sub>n,p</sub>
+
+Column picture: matrix A x columns of B --> each AB column is an average of A columns weighted by row of a B column 
+
+A [ b<sub>1</sub> ... b<sub>p</sub>] = [Ab<sub>1</sub> ... Ab<sub>p</sub>]
+
+
+Columns of A in outer product with Rows of B and then n matrices are summed
+
+
+Laws of matrix operations:
+
+Addition:
+
+commutative: A + B = B + A  
+
+distributive: c ( A + B ) = cA + cB  
+
+associative: A + ( B + C ) = ( A + B ) + C
+
+Mulitplication:
+
+commutative: A B != B A  
+
+but all square matrices commute with I: A I = I A
+
+distributive from LHS: A ( B + C ) = AB + AC 
+
+distributive from RHS: ( A + B ) C  = AC + BC
+
+associative: A (BC) = (AB) C
+
+Exponents:
+
+A<sup>p</sup> = AAA...A (p factors)
+
+A<sup>p</sup>A<sup>q</sup> = A<sup>p+q</sup>
+
+(A<sup>p</sup>)<sup>q</sup> = A<sup>p</sup><sup>q</sup>
+
+(A<sup>0</sup> = I
