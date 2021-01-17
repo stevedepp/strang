@@ -150,5 +150,5 @@ For elimination, we use E which it is important to remember is doing the same op
 
 So for block operations, as long as the individual underlying matrices can operate on each other in terms of sizes, then the multiplication is valid. Then we can also say that block elimination is valid and expose Schuler's constant D - CA<sup>-1</sup>B
 
-A B
+A B  
 0 Schulers constant
