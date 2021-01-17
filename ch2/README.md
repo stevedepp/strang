@@ -90,3 +90,10 @@ P is permutation matrix that starts as identity matrix and as need row changes i
 E contains the compounded effects of each multiplier, l or -l.  To express the compounded effects of each, use a new matrix E<sub>21</sub> to eliminte item (2,1) in row 2 column 1 to zero then E<sub>31</sub> to eliminate the item below that, E<sub>32</sub> to eliminte the item to the right of that.  In a 3x3 matrix, E<sub>32</sub> E<sub>31</sub> E<sub>21</sub> A = U.  
 
 If item 21 contains a zero, then a row exchange is afforded by P<sub>32</sub> which swaps rows 3 and 2 and then E<sub>21</sub> can be applied: E<sub>32</sub> E<sub>31</sub> E<sub>21</sub> P<sub>32</sub> A = U
+
+
+The magic is in the E A = U, L U = A and E L = I  
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/104829444-f31fd400-5841-11eb-998b-90227281811d.png">
+
+
