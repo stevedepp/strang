@@ -252,6 +252,34 @@ Diagonally dominant
 |a<sub>ii</sub>| > SUM<sub>i≠j</sub>|a<sub>ij</sub>|
 
 
+A is diagonally dominant. B is not diagonally dominant but is invertible.  C is singular.
+
+![A = \begin{bmatrix}
+3&1&1\\
+1&3&1 \\
+1&1&3
+\end{bmatrix}
+,B = \begin{bmatrix}
+2&1&1\\
+1&2&1 \\
+1&1&3
+\end{bmatrix}
+,   C = \begin{bmatrix}
+1&1&1\\
+1&1&1 \\
+1&1&3
+\end{bmatrix}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+A+%3D+%5Cbegin%7Bbmatrix%7D%0A3%261%261%5C%5C%0A1%263%261+%5C%5C%0A1%261%263%0A%5Cend%7Bbmatrix%7D%0A%2CB+%3D+%5Cbegin%7Bbmatrix%7D%0A2%261%261%5C%5C%0A1%262%261+%5C%5C%0A1%261%263%0A%5Cend%7Bbmatrix%7D%0A%2C+++C+%3D+%5Cbegin%7Bbmatrix%7D%0A1%261%261%5C%5C%0A1%261%261+%5C%5C%0A1%261%263%0A%5Cend%7Bbmatrix%7D%0A)
+
+
+
+
+
+
+
+
+
+
 https://tex-image-link-generator.herokuapp.com
 
 
