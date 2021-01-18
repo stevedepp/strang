@@ -271,7 +271,9 @@ A is diagonally dominant. B is not diagonally dominant but is invertible.  C is 
 \end{bmatrix}
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+A+%3D+%5Cbegin%7Bbmatrix%7D%0A3%261%261%5C%5C%0A1%263%261+%5C%5C%0A1%261%263%0A%5Cend%7Bbmatrix%7D%0A%2CB+%3D+%5Cbegin%7Bbmatrix%7D%0A2%261%261%5C%5C%0A1%262%261+%5C%5C%0A1%261%263%0A%5Cend%7Bbmatrix%7D%0A%2C+++C+%3D+%5Cbegin%7Bbmatrix%7D%0A1%261%261%5C%5C%0A1%261%261+%5C%5C%0A1%261%263%0A%5Cend%7Bbmatrix%7D%0A)
 
+Reasoning. Because we are testing the diagonal elements of A, we are testing the weight applied to every x in Ax=0.  So if for every row of A there is an a that is greater than the sum of all other a's then it is impossible for all x components to mulitply all a components and arrive at zero vector b.
 
+SUM<sub>j≠i</sub> |a<sub>ij</sub>x<sub>j</sub>| ≤ SUM<sub>j≠i</sub> |a<sub>ij| • |</sub>x<sub>j</sub>| < |a<sub>jj| • |</sub>x<sub>j</sub>|
 
 
 
