@@ -251,6 +251,10 @@ Diagonally dominant
 
 |a<sub>ii</sub>| > SUM<sub>i≠j</sub>|a<sub>ij</sub>|
 
+
+https://tex-image-link-generator.herokuapp.com
+
+
 ![\begin{pmatrix}
 1&2&3\\
 A&B&C
