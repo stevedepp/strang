@@ -357,10 +357,10 @@ If A has column of zeros then so does BA and thus if B = A<sup>-1</sup>. then BA
 
 problem 18  
 if B is inverse of A<sup>2</sup> then show that AB is the inverse of A:  
-A<sup>2</sup>B = I
-AAB = I
-A<sup>-1</sup>AAB = A<sup>-1</sup>
-IAB = AB = A<sup>-1</sup>
+A<sup>2</sup>B = I  
+AAB = I  
+A<sup>-1</sup>AAB = A<sup>-1</sup>  
+IAB = AB = A<sup>-1</sup>  
 
 
 
