@@ -304,7 +304,7 @@ Pascal triangle: add each entry on left give entry below. Entries on left are bi
 \end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A1%260%260%260%5C%5C%0A1%261%260%260%5C%5C%0A1%262%261%260%5C%5C%0A1%263%263%261%5C%5C%0A%5Cend%7Bbmatrix%7D)
 
 
-Adjacency matrix
+Adjacency matrix for network that has one 1-step connection between 1-1,1-2 and 2-1, 1-3 and 3-1, 2-3 and 3-2, 3-4 and 4-3 and 4-4 but no connections between any other pairs.  if you take square of this matrix, you get the number of 2-step connections between the nodes.
 
 ![\begin{bmatrix}
 0&1&1&0\\
