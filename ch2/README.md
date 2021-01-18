@@ -294,6 +294,25 @@ Sum matrix (is difference matrix inverted)
 
 
 
+Pascal triangle: add each entry on left give entry below. Entries on left are binomial coefficients.
+
+![\begin{bmatrix}
+1&0&0&0\\
+1&1&0&0\\
+1&2&1&0\\
+1&3&3&1\\
+\end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A1%260%260%260%5C%5C%0A1%261%260%260%5C%5C%0A1%262%261%260%5C%5C%0A1%263%263%261%5C%5C%0A%5Cend%7Bbmatrix%7D)
+
+
+Adjacency matrix
+
+![\begin{bmatrix}
+0&1&1&0\\
+1&0&1&1\\
+1&1&0&1\\
+0&1&1&0\\
+\end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A0%261%261%260%5C%5C%0A1%260%261%261%5C%5C%0A1%261%260%261%5C%5C%0A0%261%261%260%5C%5C%0A%5Cend%7Bbmatrix%7D)
+
 https://tex-image-link-generator.herokuapp.com
 
 
