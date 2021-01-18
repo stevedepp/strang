@@ -334,6 +334,35 @@ C is square since A and B are square and so C<sup>-1</sup> can multiply on eithe
 A<sup>-1</sup>CC<sup>-1</sup>=A<sup>-1</sup>ABC<sup>-1</sup>  
 A<sup>-1</sup> = BC<sup>-1</sup>  
 
+problem 13
+if M = ABC is invertible, then A, B, and C are invertible (?). Find formla for B<sup>-1</sup> involving M<sup>-1</sup>, A, C  
+M<sup>-1</sup> = C<sup>-1</sup>B<sup>-1</sup>A<sup>-1</sup>  
+but heres the answer  
+M = ABC  
+MC<sup>-1</sup>B<sup>-1</sup> = ABCC<sup>-1</sup>B<sup>-1</sup>  
+MC<sup>-1</sup>B<sup>-1</sup> = A  
+B<sup>-1</sup> = CM<sup>-1</sup>A
+
+problem 14  
+If add row 1 to row 2 of A to equal B, then how find B<sup>-1</sup> from A<sup>-1</sup>?  
+
+B = np.array([[1,0],[1,1]])A = PA  
+B<sup>-1</sup> = (PA)<sup>-1</sup>  
+B<sup>-1</sup> = A<sup>-1</sup>P<sup>-1</sup>
+
+problem 15  
+Prove that if a matrix has a column of zeros then it cannot have an inverse.  
+If has a column of zeros then it cannot generate a pivot not = 0.  
+If A has column of zeros then so does BA and thus if B = A<sup>-1</sup>. then BA = I = np.eye() is impossible.  np.eye is identity matrix with a one in all columns.  
+
+problem 18  
+if B is inverse of A<sup>2</sup> then show that AB is the inverse of A:  
+A<sup>2</sup>B = I
+AAB = I
+A<sup>-1</sup>AAB = A<sup>-1</sup>
+IAB = AB = A<sup>-1</sup>
+
+
 
 https://tex-image-link-generator.herokuapp.com
 
