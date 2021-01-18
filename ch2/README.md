@@ -326,7 +326,13 @@ for this matrix there is a solution but not a unique one because it is singluar.
 Some interesting algebra from problem 9:  if B = PA then some exchange of rows makes B and A equal.  When inverting, we find that some exchange of columns makes their inversions equal.  B<subp-1</sup> = P<subp-1</sup>A<subp-1</sup>
 
 
-
+problem 12
+if C = AB invertible, and A and B are square, then A is invertible. Formula for A<sup>-1</sup> is found  
+C = AB  
+A<sup>-1</sup>C = A<sup>-1</sup>AB
+C is square since A and B are square and so C<sup>-1</sup> can multiply on either side
+A<sup>-1</sup>CC<sup>-1</sup>=A<sup>-1</sup>ABC<sup>-1</sup>
+A<sup>-1</sup> = BC<sup>-1</sup>
 
 
 https://tex-image-link-generator.herokuapp.com
