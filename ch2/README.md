@@ -315,10 +315,10 @@ Adjacency matrix for network that has one 1-step connection between 1-1,1-2 and 
 
 
 Note from problem 8b
-np.array([
-[a,b,a+b],
-[c,d,c+d],
-[e,f,e+f]
+np.array([  
+[a,b,a+b],  
+[c,d,c+d],  
+[e,f,e+f]  
 ])
 
 for this matrix there is a solution but not a unique one because it is singluar.  the vector (a,c,e) can be added to vector (b,d,f) so that when vector (a+b,c+d,e+f) is subtracted you get the zero vector (0,0,0). In other words Ax = b = 0 for vector x = (1,1,-1) or visually, can go out the first column vector then extend via the second column vector and return to zero via the third column vector. 
