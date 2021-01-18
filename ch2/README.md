@@ -313,6 +313,22 @@ Adjacency matrix for network that has one 1-step connection between 1-1,1-2 and 
 0&1&1&0\\
 \end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A0%261%261%260%5C%5C%0A1%260%261%261%5C%5C%0A1%261%260%261%5C%5C%0A0%261%261%260%5C%5C%0A%5Cend%7Bbmatrix%7D)
 
+
+Note from problem 8b
+np.array([
+[a,b,a+b],
+[c,d,c+d],
+[e,f,e+f]
+])
+
+for this matrix there is a solution but not a unique one because it is singluar.  the vector (a,c,e) can be added to vector (b,d,f) so that when vector (a+b,c+d,e+f) is subtracted you get the zero vector (0,0,0). In other words Ax = b = 0 for vector x = (1,1,-1) or visually, can go out the first column vector then extend via the second column vector and return to zero via the third column vector. 
+
+Some interesting algebra from problem 9:  if B = PA then some exchange of rows makes B and A equal.  When inverting, we find that some exchange of columns makes their inversions equal.  B<subp-1</sup> = P<subp-1</sup>A<subp-1</sup>
+
+
+
+
+
 https://tex-image-link-generator.herokuapp.com
 
 
