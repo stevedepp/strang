@@ -232,3 +232,27 @@ if A = np.diag([d<sub>1</sub>, ..., d<sub>n</sub>])
 then A<sup>-1</sup> = np.diag([1/d<sub>1</sub>, ..., 1/d<sub>n</sub>])
 
 So no d can = 0 since d appears in demoninator of diagonal values of A's inverse.
+
+Notes:
+
+Even if A and B are invertible, difficult to say if A+B is invertible.
+
+Inverses come out of parentheses in reverse order because:
+
+ABC(ABC)<sup>-1</sup>=ABCC<sup>-1</sup>B<sup>-1</sup>A<sup>-1</sup> = I
+
+Which finds a good example in the E<sub>ij</sub> elimination matrices and their inverses E<sub>ij</sub><sup>-1</sup>: MIght have: 
+
+E<sub>22</sub>E<sub>31</sub>E<sub>21</sub>A = U
+but apply inverses:
+E<sub>21</sub>E<sub>31</sub>E<sub>22</sub>U = A
+
+Diagonally dominant
+
+|a<sub>ii</sub>| > SUM<sub>i≠j</sub>|a<sub>ij</sub>|
+
+![\begin{align*}
+R(g) &= \frac{1}{n} \sum_{i=1}^{n} \ell(y_i,g(x_i))\\
+&=\frac{1}{2n} (\mathbf{X}\boldsymbol{w}-\mathbf{y})^T (\mathbf{X}\boldsymbol{w}-\mathbf{y})
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AR%28g%29+%26%3D+%5Cfrac%7B1%7D%7Bn%7D+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%5Cell%28y_i%2Cg%28x_i%29%29%5C%5C%0A%26%3D%5Cfrac%7B1%7D%7B2n%7D+%28%5Cmathbf%7BX%7D%5Cboldsymbol%7Bw%7D-%5Cmathbf%7By%7D%29%5ET+%28%5Cmathbf%7BX%7D%5Cboldsymbol%7Bw%7D-%5Cmathbf%7By%7D%29%0A%5Cend%7Balign%2A%7D%0A)
