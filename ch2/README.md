@@ -273,7 +273,7 @@ A is diagonally dominant. B is not diagonally dominant but is invertible.  C is 
 
 Reasoning. Because we are testing the diagonal elements of A, we are testing the weight applied to every x in Ax=0.  So if for every row of A there is an a that is greater than the sum of all other a's then it is impossible for all x components to mulitply all a components and arrive at zero vector b.
 
-SUM<sub>j≠i</sub> |a<sub>ij</sub>x<sub>j</sub>| ≤ SUM<sub>j≠i</sub> |a<sub>ij| • |</sub>x<sub>j</sub>| < |a<sub>jj| • |</sub>x<sub>j</sub>|
+SUM<sub>j≠i</sub> |a<sub>ij</sub>x<sub>j</sub>| ≤ SUM<sub>j≠i</sub> |a<sub>ij</sub>| • |x<sub>j</sub>| < |a<sub>jj</sub>| • |x<sub>j</sub>|
 
 
 
