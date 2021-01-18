@@ -276,9 +276,21 @@ Reasoning. Because we are testing the diagonal elements of A, we are testing the
 SUM<sub>j≠i</sub> |a<sub>ij</sub>x<sub>j</sub>| ≤ SUM<sub>j≠i</sub> |a<sub>ij</sub>| • |x<sub>j</sub>| < |a<sub>jj</sub>| • |x<sub>j</sub>|
 
 
+Difference matrix:  
 
+![\begin{bmatrix}
+1&0&0\\
+-1&1&0\\
+1&-1&0\\
+\end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-1%261%260%5C%5C%0A1%26-1%260%5C%5C%0A%5Cend%7Bbmatrix%7D)
 
+Sum matrix (is difference matrix inverted)
 
+![\begin{bmatrix}
+1&0&0\\
+1&1&0\\
+1&1&0\\
+\end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A1%261%260%5C%5C%0A1%261%260%5C%5C%0A%5Cend%7Bbmatrix%7D)
 
 
 
