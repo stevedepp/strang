@@ -258,7 +258,7 @@ A&B&C
 
 
 
-\begin{bmatrix}
+![\begin{bmatrix}
 1&2&3\\
 A&B&C
-\end{bmatrix}
+\end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A1%262%263%5C%5C%0AA%26B%26C%0A%5Cend%7Bbmatrix%7D)
