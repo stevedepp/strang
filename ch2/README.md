@@ -365,6 +365,19 @@ IAB = AB = A<sup>-1</sup>
 problem 28  
 if A has row of zeros then AB does too.  So AB cannot = I.  So B cannot = A<sup>-1</sup>
 
+
+section 2.6
+
+diagonal x upper = upper  
+
+upper x diagonal = upper
+
+diagonal x lower = lower
+
+lower x diagonal = lower
+
+
+
 Section 2.7
 
 Transpose  
@@ -379,18 +392,19 @@ x•y = x<sup>T</sup>y
 
 (Ax)<sup>T</sup>y = x<sup>T</sup>A<sup>T</sup>y = x•A<sup>T</sup>y because x• is same as x<sup>T</sup>
 
-section 2.6
+the product of A<sup>T</sup>A is always symmetric but not always invertible.
 
-diagonal x upper = upper  
+Orthogonal matrix has Q<sup>T</sup> = Q<sup>-1</sup>
 
-upper x diagonal = upper
+there are n! different orderings of Permutation matrix rows.
 
-diagonal x lower = lower
+P<sup>T</sup> = P<sup>-1</sup>
 
-lower x diagonal = lower
+(A + B)<sup>T</sup> = A<sup>T</sup> + B<sup>T</sup>
 
+(A<sup>-1</sup>)<sup>T</sup> = (A<sup>T</sup>)<sup>-1</sup>
 
-
+[A<sup>-1</sup>B<sup>-1</sup> = (AB)<sup>-1</sup>][AB] = I
 
 https://tex-image-link-generator.herokuapp.com
 
