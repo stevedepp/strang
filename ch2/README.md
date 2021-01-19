@@ -365,7 +365,19 @@ IAB = AB = A<sup>-1</sup>
 problem 28  
 if A has row of zeros then AB does too.  So AB cannot = I.  So B cannot = A<sup>-1</sup>
 
+Section 2.7
 
+Transpose  
+
+(Ax)<sup>T</sup> = x<sup>T</sup>A<sup>T</sup>
+
+(AB)<sup>T</sup> = B<sup>T</sup>A<sup>T</sup>
+
+(A<sup>-1</sup>)<sup>T</sup> = (A<sup>T</sup>)<sup>-1</sup>
+
+x•y = x<sup>T</sup>y  
+
+(Ax)<sup>T</sup>y = x<sup>T</sup>A<sup>T</sup>y = x•A<sup>T</sup>y because x• is same as x<sup>T</sup>
 
 section 2.6
 
