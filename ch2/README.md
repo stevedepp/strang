@@ -377,7 +377,7 @@ Transpose
 
 x•y = x<sup>T</sup>y  
 
-(Ax)<sup>T</sup>y = x<sup>T</sup>A<sup>T</sup>y = x•A<sup>T</sup>y = Ax•y because x• is same as x<sup>T</sup>
+(Ax)<sup>T</sup>y = x<sup>T</sup>A<sup>T</sup>y = x•A<sup>T</sup>y because x• is same as x<sup>T</sup>
 
 section 2.6
 
