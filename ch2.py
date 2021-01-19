@@ -36,6 +36,17 @@ def multiplier(i, j):
 # for swapping rows
 # https://stackoverflow.com/questions/54069863/swap-two-rows-in-a-numpy-array-in-python
 
+'''
+this could be done by finding the mulitpliers l,
+inserting each into an identity matrix to make E_ij,
+mulitiplying E_ij with the subject matrix in a loop,
+one loop iteration for each multiplier l, 
+and that would be cleaner code than the following,
+but i think the following has fewer multiplications,
+since we only multiply the subject pivot row's n items by a multiplier,
+ie n multiplications and then subtract.
+the cleaner code would have nxn multiplications for each multipler l.
+'''
 
 def eliminator(matrix):
     d = matrix.shape

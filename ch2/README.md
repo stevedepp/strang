@@ -362,6 +362,22 @@ AAB = I
 A<sup>-1</sup>AAB = A<sup>-1</sup>  
 IAB = AB = A<sup>-1</sup>  
 
+problem 28  
+if A has row of zeros then AB does too.  So AB cannot = I.  So B cannot = A<sup>-1</sup>
+
+
+
+section 2.6
+
+diagonal x upper = upper  
+
+upper x diagonal = upper
+
+diagonal x lower = lower
+
+lower x diagonal = lower
+
+
 
 
 https://tex-image-link-generator.herokuapp.com
