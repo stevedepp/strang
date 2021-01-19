@@ -406,6 +406,27 @@ P<sup>T</sup> = P<sup>-1</sup>
 
 [A<sup>-1</sup>B<sup>-1</sup> = (AB)<sup>-1</sup>][AB] = I
 
+Ax combines columns of A
+
+(Ax)<sup>T</sup> combines rows of A<sup>T</sup> because x<sup>T</sup> appears on LHS
+
+(A<sup>-1</sup>A) = I  
+
+A<sup>T</sup>(A<sup>-1</sup>)<sup>T</sup> = I  
+
+A<sup>T</sup> is invertible when A is invertible
+
+when a 3x3 LHS multiplies a 3x3 RHS, each cell is   
+a weighted average of LHS columns based on a single RHS of weights  
+a weighted average of RHS rows bsaed on a single row of LHS weights  
+the sum of 3 matrices = 3 outside products of 1st col LHS ª 1st row RHS, 2nd col LHS • 2nd row RHS, etc   
+
+
+<img width="864" alt="image" src="https://user-images.githubusercontent.com/38410965/105074375-410d2580-5a56-11eb-948c-0ed9f976ee34.png">
+
+
+
+
 https://tex-image-link-generator.herokuapp.com
 
 
