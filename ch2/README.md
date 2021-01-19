@@ -422,12 +422,65 @@ a weighted average of RHS rows bsaed on a single row of LHS weights
 the sum of 3 matrices = 3 outside products of 1st col LHS ª 1st row RHS, 2nd col LHS • 2nd row RHS, etc   
 
 
+meaning of inner and outer product.  when T is inside, x<sup>T</sup>x, it is inside product and when T is outside, xx<sup>T</sup>, it is outer product.
+
+A<sup>T</sup> is often characterized a flipping the matrix across its diagonal but it is mathematically the matrix that makes these 2 inner products equal:  
+(Ax)<sup>T</sup>y = x<sup>T</sup>(A<sup>T</sup>y)
+
+
+Symmetric matrix; A<sup>T</sup> = A  = S = most important matrices  
+
+The inverse of a symmetric matrix is also symmetric  
+
+The transpose of a symmetric matrix inverse is the same matrix of course.
+
+S<sup>-1</sup> = (S<sup>-1</sup>)<sup>T</sup> = (S<sup>T</sup>)<sup>-1</sup> = S<sup>-1</sup>  
+
+Implies that when S is invertible (ie when A is symmetric and invertible) S<sup>-1</sup> is symmetric
+
 <img width="864" alt="image" src="https://user-images.githubusercontent.com/38410965/105074375-410d2580-5a56-11eb-948c-0ed9f976ee34.png">
+
+
+
+A<sup>T</sup>A and AA<sup>T</sup> and LDL<sup>T</sup> are all symmetric.  
+Can produce S square symmetric matrix from any matrix and its transpose.   
+
+Every (i,j) = (j,i) cell of A<sup>T</sup>A or AA<sup>T</sup> because    
+(i,j) in AA<sup>T</sup> = a product of A's ith row and A<sup>T</sup>'s jth column which is A's jth row  
+(j,i) in AA<sup>T</sup> = a product of A's jth row and A<sup>T</sup>'s ith column which is A's ith row  
+These are the same combinations each time.   
+
+AA<sup>T</sup>(i,j) = A[i,:] • A<sup>T</sup>[:,j] = A[i,:] • A[j,:]  
+
+AA<sup>T</sup>(j,i) = A[j,:] • A<sup>T</sup>[:,i] = A[j,:] • A[i,:]  
+
+AA<sup>T</sup> is symmetric but not necessarily = A<sup>T</sup>A which is also symmetric
+
+When A is S then factoring A into LDU actually factors it into LDL<sup>-1</sup>, but cannot see this in LU, must be LDU.  
+Notice (LDL<sup>T</sup>)<sup>T</sup> = (L<sup>T</sup>)<sup>T</sup>D<sup>T</sup>L<sup>T</sup> = LDL<sup>T</sup>  
+
+Importantly, the multiplications are fewer too since you only need L not U
+
+Of the n! permutation matrices, the single row exchanges are their own inverses, and are their transposes too  
+since PP<sup>-1</sup> = P<sup>-1</sup>P = I  
+then PP<sup>T</sup> = P<sup>T</sup>P = I  
+
+In elmination, if P is done before E then PA = LU but must put A's rows in right order for each E<sub>ij</sub> elmination steps.   
+If P is inserted between E<sub>ij</sub> elmination steps then A = LPU   
+PA = LU is used in computing   
+A = LPU is more elegant   
+P = I when A=LU requires no exchanges  
+
+
+
+
+
 
 
 
 
 https://tex-image-link-generator.herokuapp.com
+
 
 
 ![\begin{bmatrix}
