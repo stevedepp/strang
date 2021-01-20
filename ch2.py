@@ -61,7 +61,9 @@ def eliminator(matrix):
         print('len piv indexes',len(pivot_indexes))
         if len(pivot_indexes) == 0:
             print('inside1')
-            return L, U
+            D = np.diag(np.diag(U))
+            np.fill_diagonal(U, 1)
+            return E, L, D, U
         elif pivot_indexes[0][0] != 0:
             print('1st pivot index',j+pivot_indexes[0][0])
             print('INSIDE2')
@@ -89,4 +91,7 @@ def eliminator(matrix):
             print(U[i])
             U[i] = U[i] - U[j]*l
             print(U)
-    return E, L, U, 
+    Dinv = np.diag(1/np.diag(U))
+    D = np.diag(np.diag(U))
+    U = Dinv @ U
+    return E, L, D, U 

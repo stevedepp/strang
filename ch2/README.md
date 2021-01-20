@@ -472,11 +472,30 @@ A = LPU is more elegant
 P = I when A=LU requires no exchanges  
 
 
+The transpose of A<sub>-1</sub> is the inverse of A<sub>T</sub>:  (A<sub>-1</sub>)<sub>T</sub> = (A<sub>T</sub>)<sub>-1</sub>  
+
+whatever confusion there might be from earlier section: (Ax)<sub>T</sub>y = x<sub>T</sub>(A<sub>T</sub>y)  
+
+When A is summetric S then its LDU factorization is symmetric S = LDL<sub>T</sub>   
+
+A permutation matric has a 1 in each row and column and P<sub>T</sub> = P<sub>-1</sub>  
+
+There are n! permutation matrices, half even and half odd.  
+
+If A is invertible, then a permutation matrix will reorder its rows for PA = LU
+
+P on LHS uses its row elements to reorder rows  
+P on RHS uses its column elements to reorder columns 
+
+PSP<sup>T</sup>  
+P ruins symmetry
+P<sup>T</sup> recovers symmetry  
+but since P works rows and P<sup>T</sup> works columns the new matrix will not be the same as the old matrix  
 
 
+LDL<sup>T</sup> factorization  
 
-
-
+<img width="864" alt="image" src="https://user-images.githubusercontent.com/38410965/105108832-230ce880-5a89-11eb-9c0e-c136c082073b.png">
 
 
 https://tex-image-link-generator.herokuapp.com
