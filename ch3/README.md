@@ -82,3 +82,50 @@ can be solvable but not invertible and singular because over spacified m>n which
 
 If the matrix is invertible, then it is solvable for all b in its column space, not for limited b (e.g. a plane in R<sup>3</sup>) in its vector space.  If invertible, its subspace is all R<sup>n</sup>
 
+if keep only part of the plane or line, e.g. the positive part of line or only the part of the plane in quadrant 1, then requirements for subspace dont hold. I think this limits the usefulness of linear algebra since cannot move parts around. For example, if only x,y vectors with positive components then only 1/4 of plane and cannot multiply by c<0.
+
+An example of M space is U which combined or multiplied by another U is still a U.  D's are another example.
+
+The good RHS of Ax=b is the column space.  
+
+If A is not invertible, the the system is solveable but for some b and not other b in R<sup>m</sup>
+[though to me it seems that e.g. if m>n overspecification as in our plane specified in a 3x2 matrix of R<sup>m=3</sup>, then the solution is to reduce rows specification and reduce space from R<sup>m</sup> to R<sup>n</sup>] 
+
+Column space is all the linear combinations of the columns of A that produce the column space of A and is a vector space made up column vectors.
+
+A 3x2 matrix A in combinations may pass through (0,0,0) but not necessarily.
+
+There is only one non zero vector v in S.  The subspace SS is the line through v.  Always SS is the smallest subspace containing S.  This is a fundamental way to create subspaces.  The columns span the column space.  The subspace is the span of S containing all combinations of vectors of S. The subspace SS contains all combinations of the vectors of S.   
+
+Interesting problems:
+
+If A is any 5x5 invertible matrix then its column space is in R<sup>5</sup>.   [Dont think necessarily, it is all of R<sup>5</sup>].  The equation Ax=b is always solvable by x=A<sup>-1</sup>b so every b is in the column space of that invertible matrix. 
+
+If the 9x12 system Ax=b is solvable for every b, then C(A) is in R<sup>9</sup>.
+
+Some notes on 3.1 and 3.2
+
+R<sup>n</sup> is all column vectors with n components
+
+Ax and AB are linear combinations of n vectors.
+
+Vector space R<sup>n</sup> consists of all column vectors v with n [real] components.
+
+8 conditions required of every vector space.
+
+M = all 2 dimensional real matrices.  
+F = all real functions.  
+Z = the space that consists of only a zero vector.  Smallest possible vector space.  Not R<sup>0</sup> which means compents.  Z has vectors.  It has exactly 1 vector = zero vector.  
+C<sup>n</sup> = the n dimnensional space of complex numbers with vectors of n components.  
+R<sup>n</sup> = same but real  
+
+Subspace is only part of vector spaces R C M F.  "Inside vector space" means that the result stays in the space when a linear combination are performed. 
+
+"Invertible" is about A only.  
+"Solvable" if and only if b in column spac of A, i.e. if b is a combination of the columns of A.  
+If A is invertible, then Ax=b is solvable for all b in R<sup>n</sup>. ******
+
+
+3.2
+
+
