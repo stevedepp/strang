@@ -480,9 +480,34 @@ When A is summetric S then its LDU factorization is symmetric S = LDL<sub>T</sub
 
 A permutation matric has a 1 in each row and column and P<sub>T</sub> = P<sub>-1</sub>  
 
-There are n! permutation matrices, half even and half odd.  
+There are n! permutation matrices, half even and half odd.  Even refers to an even number of off diagonal 1s.   
 
 If A is invertible, then a permutation matrix will reorder its rows for PA = LU
+
+A<sup>T</sup>A is invertible if A has independent columns.
+
+If A and B are symmetric, then  
+
+their AB product is symmetric.  <-- A=np.array([[a,b],[b,c]) and B=np.array([[d,e],[e,f]]) contradict this.
+their sum and difference are symmetric A + B and A - B
+A B A is symmetric
+(A + B)(A+B) is not symmetric
+
+Skew symmetric is -A = A<sup>T</sup>
+
+The transpose of a block matrix transposes the blocks' insides as well. np.array([[A,B],[B,C]])
+
+x•y = Px•Py because youre moving x's and y's in the same ways.
+
+(Px)<sup>T</sup>Py = x•y because = x<sup>T</sup>P<sup>T</sup>Py and P<sup>T</sup>P = I  
+
+
+A<sup>T</sup>A can have no negative number in the diagonal because all squares.   
+A.shape = (3,2) ... A = np.array([[a,d],[b,e],[c,f]])  
+np.diag(A<sup>T</sup>A) = array(a<sup>2</sup>)+b<sup>2</sup>+c<sup>2</sup>, d<sup>2</sup>+e<sup>2</sup>+f<sup>2</sup>)
+The 2 diagonal cells of A<sup>T</sup>A each contain the sqaures of one of A's 2 columns. A(1,1) contains square of 1st column and A(2,2) contains square of 2nd column.  The off diagonals contain the dot products of the two columns and are the same = symmetric.
+
+
 
 P on LHS uses its row elements to reorder rows  
 P on RHS uses its column elements to reorder columns 
