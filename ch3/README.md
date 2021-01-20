@@ -56,3 +56,29 @@ F is infinite but P<sup>n</sup> would be all polynomials of degree n a<sub>0</su
 Z is smallest possible vector space and contains only one vector = zero.  No space can do without zero vector.  Each space has its own zero vector = zero matrix, zero function, zero vector.
 
 In our terms, b is the object with n dimensions in the space with R<sup>m</sup> dimensions
+
+
+Start with 3d space, R<sup>3</sup>. Then imagine a plane through (0,0,0). That plane is a vector space itself.  Add 2 vectors in the plane.  Their sum is in the plane (closed to addition).  Multiply by a scalar and still in the plane (closed multiplication). A plane in R<sup>3</sup> looks like R<sup>2</sup> but its not in R<sup>2</sup> space.  The vectors in the vector space of the plane have 3 components and so belong to R<sup>3</sup>.  The plane is a vector space inside of R<sup>3</sup>.  Most fundamental Linear Algebra idea: The plane through 0,0.0 is a subspace of the full vector space R<sup>3</sup>.  Definition: A subspace of a vector space is a set of vectors (including zero) that satisfies two requirements: if v and w vectors in the subspace and c is any scalar, then:  
+1. v+w is in the subspace  
+2. cv is in the subspace 
+
+np.array( [ [a, d], [b, e], [c, f] ] )
+
+These mean the set of vectors is closed under addition v+w and multiplication cv and dw.  Can subtract because -w is in the subspace and its addition with v enables v-w in the subspace too. All linear combinations stay in the subspace.  Those are 4 of the rules of subspace (add, mulitply, negative, add negative).  Every subspace contains zero vector.  The plane in R<sup>3</sup> MUST GO THROUGH (0.0.0): choose c = 0 and the cv = 0.0.0.  Planes that fail this test, dont go through the origin and arent subspaces. Line through the origin (0,0,0) are also subspaces. R<sup>3</sup> is another subspace. Z is a subspace (0,0,0).
+
+SUBSPACE INVERTIBILITY SOLVABILITY  
+
+topic / requirement / question         
+subspace / Ax / does it meet 8 rules ?
+invertibility / A and A<sup>-1</sup> / can it be inverted ?
+solvability / Ax = b and x = A<sup>-1</sup>b / is b in the column space ?
+
+my conclusions:  
+if not a subspace then cannot use x to linear combine.  
+if not invertible then cannot solve for any b or a unique b even if A is a subspace.   
+if not solvable for b, b may not be in A's column space, even if a subspace and invertible.
+
+can be solvable but not invertible and singular because over spacified m>n which leads to cannot fill its R<sup>m</sup>.  Can only fill a plane subspace in R<sup>3</sup> defined by A with m>m times all x's.  It is solvable for only b's in its column space.  Ax=0 is solveable but only for x = 0 vector.
+
+If the matrix is invertible, then it is solvable for all b in its column space, not for limited b (e.g. a plane in R<sup>3</sup>) in its vector space.  If invertible, its subspace is all R<sup>n</sup>
+
