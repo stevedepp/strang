@@ -185,3 +185,80 @@ R = np.array( [ [ 1, 0, 2, 0 ], [ 0, 1, 0, 2 ] ] )
 m = 2, n = 4, r = 2, s = 2 = free solutions = null space dimension
 
 set x components for one free variable to 1 and pivot to that free variable's coefficent negative value.  then do the other free variables in the same way. 
+
+rank of matrix = number of pivots
+
+Null space ia subspace of R<sup>n</sup>  
+
+(0,0,0) is not mentioned as a null solution because the zero vector is always in every subspace (its a requirement to be a subspace.)
+
+An invertible matrix has no free variables.TF  An invertible square matrix has no free variables.  Wonder why put square in the answer since I dont think you can invert a rectangular matrix. Seems invertible and square are redundant.  
+
+https://en.wikipedia.org/wiki/Invertible_matrix
+Answer: A square matrix that is not invertible is called singular or degenerate. A square matrix is singular if and only if its determinant is zero. ... Non-square matrices (m-by-n matrices for which m ≠ n) do not have an inverse. However, in some cases such a matrix may have a left inverse or right inverse.   If A is m-by-n and the rank of A is equal to n (n ≤ m), then A has a left inverse, an n-by-m matrix B such that BA = I<sub>n</sub>. If A has rank m (m ≤ n), then it has a right inverse, an n-by-m matrix B such that AB = I<sub>m</sub>.
+
+A good way to see null solutions and what they provide in terms of solutions to a series of equations. The plan x - 3y -z = 12 is parallel to [the plane] x - 3y - z = 0.  One particular p solution on this plane is found (12, 0, 0).  All points on the plane have form combining the one particular solution and 2 special solutions: (x,y,z) = p1(1,0,0) + s1(3,1,0) + s2(1,0,1).
+
+if A is an m x n matric with r = 1 then its columns are multipls of one column and its rows are multples of one row. C(A) is a line in R<sup>m</sup>.  The null space matrix N has a shape of a [hyper]plane in R<sup>n</sup>.  The null space matrix is n x (n-1) with n-1 special solutions whcih makes sense since there are n-1 free variables when r = 1 (1 pivot) =.  Null space is all x --> Ax=0. The column space of A<sup>T</sup> is a line. 
+
+Elimination: the big picture
+
+To eliminate at vector level and subspace level when A --> R start wth 1st pivot and move L-->R column at a time T-->B row at a time, answering 2 questions
+
+1. Is this column a combination of previous columns?  If column contains a pivot then the answer is no.  Pivot columns are independent of previous columns.  If col 4 has no pivot it is a combination of columns 123.
+
+2. Is this row a combination of previous rows?  If the row contains a pivot then the answer is no.  Pivot rows are independent of previous rows.  If rows 3 ends up with no pivot it is a zero row ans is moved to the bottom of R.
+
+THen thats A --> U via T-->B.  Next B-->T takes us U-->R.
+
+U tells us which columns are combinations of earlier columns (pivots missing).  Then R tells us what those combinations are: tells us the special solutions to Ax=0.  R reveals the 'basis' for 3 fundamental spaces.  
+
+Column space of A = choose the pivot columns of A as basis.
+
+Row space of A - choose the non-zero rows of R as basis.
+
+The null space of A - choose special solutions to Rx = 0 (and same as Ax = 0)
+
+When A is square and invertible R = I. and E = A<sup>-1</sup>.
+
+We learn most important number from elimination: Rank.
+
+Rank counts pivot columns and pivot rows.  Then n-r count free columns and special solutions.  Reducing AI to RE tells you even more about A in EA=R.  E keeps a record of eliminations A-->R.
+
+section 3.3
+
+Principles
+
+1. the complete solution to Ax=b
+
+x 
+= (one particular solution x<sub>p</sub>)  
++ (any x<sub>n</sub> in null space as special solution)
+
+2. elimination on [Ab] leads to [Rd] then Ax=b is equivalent to Rx=d
+
+3. Ax=b and Rx=d are solvable only when all zeros rows of R have zeros rows in d.
+
+4. when Rx=d is solvable one very particular solution x<sub>p</sub> has all free variables equal to zero.
+
+5. A has full column rank r=n when its nullspace N(A) = zero vector: no free variables.
+
+6. A has full row rank r=m when its column space C(A) is R<sup>m</sup>: Ax=b is always solvable.
+
+7. the 4 cases are
+
+r=m=n so that A is invertible 
+r=m<n so that every Ax=b is solvable (with infinite solutions?)
+r=n<m where Ax=b has one or zero solutions
+r<m and r<n where zero or infinite solutions are possible.
+
+Last section solved Ax=0  
+Elimination converted Ax=0 --> Rx=0  
+Free variables given 0 or 1 special values  
+Pivot variables found via back substitution  
+RHS was easy - always zero no matter what we did to LHS
+The solution x was in the null space of A
+
+Now treat b ≠ 0.  Ax=b reduces to Rx=d and look for 0=0 in that reduction.  Generally if a row of Rx=d ends up 0=0, then one or more b's are a combination of the other b's: b<sub>1</sub> +  b<sub>2</sub> = b<sub>3</sub>  
+
+
