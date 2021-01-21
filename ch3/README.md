@@ -144,3 +144,44 @@ example 2 is x + 2y + 3z with A = np.array( [ 1, 2, 3 ] ) where Ax = 0 is a plan
 [The reason that the solution to x + 2y + 3z has a plane of solutions for whatever b is selected is that it is under specified. If there were 2 other equations in cartesian space; i.e. vector space was R<sup>3</sup> not R<sup>1</sup>, then 2 of the 3 components of x and 2 of the 3 column vectors would not be useless.  So we can choose 2 solutions. One sets one of the free variables to 1 and the other to 0 and solves for the 1st variable.  s<sub>1</sub> = np.array( [ -2, 1, 0] ). The other sets teh second of the free variables to 1 and the first of free variables to 0 and solves for the 1st variable again.  s<sub>2</sub> = np.array( [ -3, 0, 1] )  Both lie in the plane x + 2y + 3z = 0 and form a basis for the null space.  So whatever solution you arrive at for a selected b: x + 2y + 3z = b = 5 can be solved with (0, 1, 1) if you add either of the null space vectors to it, the solution stands (0,1,1) + either or both (-2,1,0) + (-3,0,1) then the solution Ax=5 still holds since those 2 null space basis vectors into x + 2y + 3z yield no change to b.
 
 How to find null space.  Arbitrarily we assume the first column vector contains the pivot.  So we assume the first component of x is not free.  Then choose 1 for one of the free variables, 0 for the other free variables and solve for the x associated with the pivot. 
+
+pvots and rank
+
+max pivots = m that determine vector space
+
+max variables = n that determines object and its solution
+
+dimension in null space = at least n - m and maybe more if m > r  
+
+free variables = n - m or more really = max variables n - max pivots r < m  
+so dimension of null space > n - m if pivots < m
+
+rank = number of pivots with max = number of rows m
+
+pivots = max m rows  
+= not in zero rows  
+= not in identical columns or rows
+
+null space = n - r = number of free variables = number of special solutions
+
+if n=r then invertible because null space = 0
+
+special solutions show how free columns are combinations of pivot columns.
+
+null space arrived via elimination.  just set Ux = 0 and solve for x.
+
+if overspecified m > n but n = r then null space is also Z.  This is because extra rows do not expand x dimensions beyond r since x dimensions are set by n not m.
+
+null spaces does not change as move from A to U to R = reduced row echelon form where 1s are on diagonal and zeros are above and below. rref simply makes easier to see the pivot and free variables.   
+
+Example:
+
+A = np.array( [ [ 1, 2, 2, 4 ], [ 3, 8, 6, 16 ] ] )
+
+U = np.array( [ [ 1, 2, 2, 4 ], [ 0, 2, 0, 4 ] ] )
+
+R = np.array( [ [ 1, 0, 2, 0 ], [ 0, 1, 0, 2 ] ] )
+
+m = 2, n = 4, r = 2, s = 2 = free solutions = null space dimension
+
+set x components for one free variable to 1 and pivot to that free variable's coefficent negative value.  then do the other free variables in the same way. 
