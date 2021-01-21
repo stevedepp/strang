@@ -126,6 +126,21 @@ Subspace is only part of vector spaces R C M F.  "Inside vector space" means tha
 If A is invertible, then Ax=b is solvable for all b in R<sup>n</sup>. ******
 
 
-3.2
+3.2 Null space
 
+[  
+some combination of the columns Ax will = 0.  
+if invertible, then the only combination will be x = 0.  
+if m>n then a minimum of m-n non-zero column values will get Ax to zero.
+two ways to look at this.  there are n unknowns in cartesian space and only m equations and so cannot solve for a point. or in vector space, there are m-n excess vectors in R<sup>m</sup> space that must be dependent or combinations of other vectors.  So e.g. if 2x3 matrix ...  
+]
 
+For invertible matrices x = is only solution to Ax=0. For non invertible matrices, there are non-zero solutions that belong to null space of A in R<sup>n</sup>.  These null space solution vectors have n components.
+
+example A = np.array( [ [1, 2], [3, 6] ] ) we have 1 line x<sub>1</sub> + 2x<sub>2</sub> = 0.  Choose one point on that line and all other points are mulitple of this.  It is also the combination of the column vectors: 2 of vector a<sub>1</sub> plus 1 of vector a<sub>2</sub> = 0.  So (-2,1) solves Ax = 0 and the null space of A contains all multiples of np.array([-2,1])
+
+example 2 is x + 2y + 3z with A = np.array( [ 1, 2, 3 ] ) where Ax = 0 is a plane x, y, z and so all vectors that solve Ax=b whatever b it is will lie on the plane x + 2y + 3z = 0 which is the plane that is perpendicular to vector np.array( [ 1, 2, 3 ] )
+
+[The reason that the solution to x + 2y + 3z has a plane of solutions for whatever b is selected is that it is under specified. If there were 2 other equations in cartesian space; i.e. vector space was R<sup>3</sup> not R<sup>1</sup>, then 2 of the 3 components of x and 2 of the 3 column vectors would not be useless.  So we can choose 2 solutions. One sets one of the free variables to 1 and the other to 0 and solves for the 1st variable.  s<sub>1</sub> = np.array( [ -2, 1, 0] ). The other sets teh second of the free variables to 1 and the first of free variables to 0 and solves for the 1st variable again.  s<sub>2</sub> = np.array( [ -3, 0, 1] )  Both lie in the plane x + 2y + 3z = 0 and form a basis for the null space.  So whatever solution you arrive at for a selected b: x + 2y + 3z = b = 5 can be solved with (0, 1, 1) if you add either of the null space vectors to it, the solution stands (0,1,1) + either or both (-2,1,0) + (-3,0,1) then the solution Ax=5 still holds since those 2 null space basis vectors into x + 2y + 3z yield no change to b.
+
+How to find null space.  Arbitrarily we assume the first column vector contains the pivot.  So we assume the first component of x is not free.  Then choose 1 for one of the free variables, 0 for the other free variables and solve for the x associated with the pivot. 
