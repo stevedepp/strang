@@ -245,12 +245,16 @@ x
 
 6. A has full row rank r=m when its column space C(A) is R<sup>m</sup>: Ax=b is always solvable.
 
-7. the 4 cases are
+7. the 4 cases are / the augmented [ R ] matrix is
 
-r=m=n so that A is invertible 
-r=m<n so that every Ax=b is solvable (with infinite solutions?)
-r=n<m where Ax=b has one or zero solutions
-r<m and r<n where zero or infinite solutions are possible.
+r=m=n so that A is invertible   [ I ]  
+r=m<n so that every Ax=b is solvable (with infinite solutions?)  [ I F ]   
+r=n<m where Ax=b has one or zero solutions  
+[ I  ]   
+[ 0 ]  
+r<m and r<n where zero or infinite solutions are possible.  
+[ I F ]
+[ 0 0 ]   
 
 Last section solved Ax=0  
 Elimination converted Ax=0 --> Rx=0  
@@ -260,5 +264,22 @@ RHS was easy - always zero no matter what we did to LHS
 The solution x was in the null space of A
 
 Now treat b ≠ 0.  Ax=b reduces to Rx=d and look for 0=0 in that reduction.  Generally if a row of Rx=d ends up 0=0, then one or more b's are a combination of the other b's: b<sub>1</sub> +  b<sub>2</sub> = b<sub>3</sub>  
+
+Review
+
+1. the rank r is th number of pivots
+
+2. the matrix R has m-r zero rows  
+
+3. Ax=b is solvable if and only if the last m-r rows / equations reduce to 0=0
+
+4. One particular solution x<sub>p</sub>  has all free variables = 0
+
+5. the pivot variables are determined after the free variables are chosen
+
+6. full column rank r = n means no free variables: one or no solution
+
+7. full row rank r=m meanns solution if m=n or infinite if m<n
+
 
 

@@ -51,46 +51,54 @@ the cleaner code would have nxn multiplications for each multipler l.
 def eliminator(matrix):
     d = matrix.shape
     r, c = d[0], d[1]
+    pivot = 0
+    print('r',r,'c',c)
+    # these multiply from LHS so must be r
     L = np.eye(r)
     E = np.eye(r)
     U = matrix*1.
-    for j in range(min(c, r - 1)):
-        pivot_col = U[j:,j]
-        print('piv col', pivot_col)
-        pivot_indexes = np.argwhere(pivot_col != 0)
-        print('len piv indexes',len(pivot_indexes))
-        if len(pivot_indexes) == 0:
-            print('inside1')
-            D = np.diag(np.diag(U))
-            np.fill_diagonal(U, 1)
-            return E, L, D, U
-        elif pivot_indexes[0][0] != 0:
-            print('1st pivot index',j+pivot_indexes[0][0])
-            print('INSIDE2')
-            next_pivot_row = j+pivot_indexes[0][0]
-            print('swap',U[j])
-            print('with',U[next_pivot_row])
-            U[[j, next_pivot_row]] = U[[next_pivot_row, j]]
-            P = np.eye(r)
-            P[[j, next_pivot_row]] = P[[next_pivot_row, j]]
-            E = P @ E
-            print(U)
-        for i in range(j + 1, r):
-            print('i',i)
-            print('j',j)
-            print('i,j',U[i,j])
-            print('j,j',U[j,j])
-            l = U[i,j] / U[j,j]
-            print('l',l)
-            L[i,j] = l
-            E_temp = np.eye(r)
-            E_temp[i,j] = -l
-            E = E_temp @ E
-            print(U[j])
-            print(U[j]*l)
-            print(U[i])
-            U[i] = U[i] - U[j]*l
-            print(U)
+    for j in range(c):
+        print('col',j)
+        pivot_nominees = U[pivot:,j]
+        print('piv nomineees', pivot_nominees)
+        pivot_indexes = np.argwhere(pivot_nominees != 0)
+        print('pivot indexes',pivot_indexes, 'len', len(pivot_indexes))
+        pivot_exists = len(pivot_indexes)
+        print('pivot exists',pivot_exists)
+        if pivot_exists:
+            print('here')
+            print(range(pivot,r))
+            if pivot_indexes[0][0] != 0:
+                print('next pivot index',pivot+pivot_indexes[0][0])
+                print('INSIDE2')
+                next_pivot_row = pivot+pivot_indexes[0][0]
+                print('swap',U[pivot])
+                print('with',U[next_pivot_row])
+                U[[pivot, next_pivot_row]] = U[[next_pivot_row, pivot]]
+                P = np.eye(r)
+                P[[pivot, next_pivot_row]] = P[[next_pivot_row, pivot]]
+                E = P @ E
+                print(U)
+            for i in range(pivot+1, r):
+                print('i',i)
+                print('j',j)
+                print('i,j',U[i,j])
+                print('j,j',U[j,j])
+                print('dividing')
+                l = U[i,j] / U[j,j]
+                print('l',l)
+                L[i,j] = l
+                E_temp = np.eye(r)
+                E_temp[i,j] = -l
+                E = E_temp @ E
+                print(U[j])
+                print(U[j]*l)
+                print(U[i])
+                U[i] = U[i] - U[j]*l
+                print('end with\n', U)
+            pivot += 1
+        elif not pivot_exists:
+            print('moving to next column')
     Dinv = np.diag(1/np.diag(U))
     D = np.diag(np.diag(U))
     U = Dinv @ U
