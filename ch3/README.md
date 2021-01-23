@@ -282,4 +282,7 @@ Review
 7. full row rank r=m meanns solution if m=n or infinite if m<n
 
 
+Using sympy
 
+
+<img width="864" alt="image" src="https://user-images.githubusercontent.com/38410965/105608588-cdc72480-5d71-11eb-8d62-a262ee6bbdc2.png">
