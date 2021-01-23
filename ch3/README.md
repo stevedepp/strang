@@ -282,7 +282,8 @@ Review
 7. full row rank r=m meanns solution if m=n or infinite if m<n
 
 
-Using sympy to find particular and 2 special solutions
+Using sympy to find particular and 2 special solutions and show the left null space
 
+Every column of A above is perpendicular to y = np.array([2,1,-1]) which means that if you combine 2 of row 1 with 1 of row 2 with -1 of row 3 you get zeros.  This is the left null space of A.  A<sup>T</sup> y = np.array([0,0,0,0,0]])
 
-<img width="864" alt="image" src="https://user-images.githubusercontent.com/38410965/105609000-4dee8980-5d74-11eb-9597-87ea3137d38f.png">
+<img width="864" alt="image" src="https://user-images.githubusercontent.com/38410965/105609683-e555db80-5d78-11eb-879f-31e39e4986ea.png">
