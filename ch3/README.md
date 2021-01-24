@@ -432,8 +432,26 @@ a particular solution is y(x) = x<sup>2</sup>.  A complete solution is however y
 
 The space Z that contains only the zero vector has dimension zero.  The empty set containing no vectors is a basis for Z.  We can never let the zero vector into a basis because then linear independence is lost. 
 
+Example
+v<sub>1</sub> =  (1,2,0) and v<sub>2</sub> = (2,3,0)   
+Are they linearly independent? v<sub>1</sub> and v<sub>2</sub> are linearly independent: the only combination to give Z is 0*v<sub>1</sub> + 0*v<sub>2</sub> as shown by moving from A = np.array( [ [ 1, 2 ] , [ 2, 3 ], [0, 0] ] ) to R = np.array( [ [ 1, 0 ], [ 0, 1 ], [ 0, 0 ] ] )
 
+Are v<sub>1</sub> and v<sub>2</sub> a basis for any space?  Yes they are a bsis for the space they span.
 
+Which space V for they span?  The space V contains all vectors (x,y,0).  It is the xy plane in R<sup>3</sup>.
 
+What is the dimension of V?  The dimension of V is 2 since the basis contains 2 vectors.
 
+Which matrices A have V as their column space?  This matrix V is the column space of any 3 x n matrix of rank 2 if every column is a combination of v<sub>1</sub> and v<sub>2</sub>.
 
+Which matrices have V as their null space.  This V is null space of any m x 3 matrix B of rank 1 if every row is a mulitple of (0,0,1).  In particular, take B = np.transpose(np.array( [ 0, 0, 1] ) ).  Then Bv<sub>1</sub> = Bv<sub>2</sub> = 0
+
+Describe all vectors v<sub>3</sub> that complete a basis v<sub>1</sub>, v<sub>2</sub>,v<sub>3</sub> for R<sup>3</sup>.  Any 3rd vector v<sub>3</sub> = (a.b,c) will complete a bsis for R<sup>3</sup> provided c is not = 0 [ because any vector would --> R = I ]
+
+Change of basis matrix B is 
+
+np.transpose(np.arrray([v<sub>1</sub>,v<sub>2</sub>,v<sub>3</sub>])) = np.transpose(np.arrray([w<sub>1</sub>,w<sub>2</sub>,w<sub>3</sub>])) B
+
+where V is 1 x 3 and W is 1 x 3 and B is 3 x 3
+
+Independent v's come from independent w's when B is invertible and if these vectors v and w are in R<sup>3</sup> then they are not only independent, but they are a basis for R<sup>3</sup>.  [We obtain an R<sup>n</sup>] basis of v's from basis of w's when the change of basis matrix B is invertible.
