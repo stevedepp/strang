@@ -455,3 +455,55 @@ np.transpose(np.arrray([v<sub>1</sub>,v<sub>2</sub>,v<sub>3</sub>])) = np.transp
 where V is 1 x 3 and W is 1 x 3 and B is 3 x 3
 
 Independent v's come from independent w's when B is invertible and if these vectors v and w are in R<sup>3</sup> then they are not only independent, but they are a basis for R<sup>3</sup>.  [We obtain an R<sup>n</sup>] basis of v's from basis of w's when the change of basis matrix B is invertible.
+
+This is true v = Aw or v = wB.  If A or B are invertible then if w is a basis for R<sup>3</sup> then so is v. 
+
+A square triangular matrix has indpendent columns when its diagonal has no zeros.
+
+TF if zero vector is in the row space, the rows are dependent.  F if only zero in the null space then independent. Zero vector is always in the row space. 
+
+v+w and v-w are combinations of v and w.  wirte v and w as combinations of v+w and v-w.
+
+v = 0.5 (v+w) + .5 (v-w)
+
+w = 0.5 (v+w) - .5 (v-w)
+
+the 2 pairs of vectors v+w and v-w span the space because they can be combined to make the same things.  They are a basis when they are independent. 
+
+The columns of every invertible n x n matrix give a basis for R<sup>n</sup> because all columns will be indpendent.
+
+By definition a matrix is commutative with its inverse on multiplication: A<sup>-1</sup>A = AA<sup>-1</sup>= I   
+A and A<sup>-1</sup> must be square.  
+
+If the columns of A are vectors from R<sup>m</sup> and linearly independent, then:  
+the rank of A is r = n since n independent columns have rank r = n  
+If they are a basis for R<sup>m</sup> then the columns span R<sup>m</sup> and rank m = n.  [If n>m then cannot be a basis for R<sup>m</sup> since too many for a basis.]
+The rank counts the number of independent columns. 
+
+
+As shown earlier a basis for the plane x-2y+3z=0 in R<sup>3</sup> are the vectors of special solutions.
+
+A basis gives exactly one solution for every b. Because a basis contains independent b's.  
+
+
+Example: Find all functions that satisfy y' = 0  
+y(x) = constant c  
+Choose a particular function that satisfies y' = 3  
+y(x) = 3x 
+Find all functions that satisfy y' = 3
+y(x) = 3x + c = x<sub>p</sub> + x<sub>n</sub>  
+
+
+Suppose y<sub>1</sub>(x), y<sub>2</sub>(x), y<sub>3</sub>(x) are 3 different functions of x. The vector space they span could have dimension 1, 2 or 3.  Show examples of vectors for each dimension.
+
+function  y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub>  
+dim = 1: x  2x  3x
+dim=2:  x  2x  x<sup>2</sup>
+dim=3:  x x<sup>2</sup>  x<sup>3</sup>   
+
+so e.g. 2x, 2x, x<sup>2</sup> is 2 dim because its null space contains 1 dimension (1,-1,0)
+
+Find a basis for space of polynomials with degree 3:  y = 1, y=x, y=x<sup>2</sup>, y=x<sup>3</sup>
+
+
+Suppose A is a 5x4 matric with rank 4. Show how Ax=b no solution when the 5x5 augmented matrix [A b] is invertible.  Answer is that if [A b] is the 5x5 identity matrix then the last row is 4 zeros and 1 one which is unsolvable since LHS not = RHS. "If the 5x5 [A b] is invertible then b is not a combination of the columns of A and so Ax=b cannot be solved" [since x is the factor that combines As columns to make b].
