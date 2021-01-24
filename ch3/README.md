@@ -346,3 +346,49 @@ Span
 The column space is all combinations of the columns is spanned by the columns.  A set of vectors (columns) spans a space if their linear combination fills the space.  
 
 The columsn of a matrix span its columns space.  They might be dependent.  For example np.array([1,1]) and np.array([-1,-1]) are surely dependent, but they span a line in RR<sup>2</sup>.  
+
+
+Row space = the subspace of RR<sup>n</sup> spanned by the rows.  
+Columns span column space  
+Row space is the combination of rows.  
+The row space of A = C(A<sup>T</sup>) = column space of A<sup>T</sup>  
+
+The rows are vectors in R<sup>n</sup> or would be in R<sup>n</sup> if they are written as column vectors which happens when the matrix is transposed to e.g. A<sup>T</sup>
+
+
+Example: A = np.array( [ [ 1, 4 ], [ 2, 7 ], [ 3, 5 ] ] ) and A<sup>T</sup> = np.array( [ [ 1, 2, 3 ], [ 4, 7, 5 ] ] )
+The column space of A is the plane (2d) in R<sup>3</sup> space that is spanned by the columns of A.  The row space is all of R<sup>2</sup> that is spanned by the three rows of A.  The rows are oin R<sup>n</sup> spanning the row space.  The columns are in R<sup>m</sup> spanning the column space. 
+
+2 vectors cannot span all of R<sup>3</sup> even if theyre independent.  
+4 vectors cannot be independent in R<sup>3</sup> even if they span all of R<sup>3</sup>.
+
+We want enough vectors to span space but not more thna enough becuse we waqnt the vectors to be independent.
+
+A basis for a vector space is a sequence of vectors with 2 properties: the basis vectors are linearly independent and they span the space.  This combination of properties is fundamental to LA.
+
+Every vector v in the space is a combination of the basis vectors becaaue they span the space.  The combination of basis vectors that produces vector v is unique because basis vectors v<sub>1</sub> ... v<sub>n</sub> are independent.
+
+There is one and only one way to write v as a combination of basis vectors.
+
+Columns of I produce the standard basis for any R<sup>n</sup>.
+
+The columns of ANY and EVERY invertible n x n matrix give a basis for R<sup>n</sup>.
+
+R<sup>n</sup> has infinity many different bases.
+
+The pivot columns (rows) of A (A<sup>T</sup>) are a basis for the column (row) space.
+
+A and R share the same row space but not necessarily the same column space.
+[think this is because A is modified via elimination which doesnt change the relative weighting of row components but does change the relative weighting of column components.
+
+Find the basis for the space that matrix vectors span by elimination to Rd.
+The pivots of A columns are a basis for its column space.  The pivot rows of A are a basis for its row space as are the rows of R.
+
+Dimension of a space is the number of vectors in every basis.
+
+Good example of how dimension of a sole vector is one in R<sup>3</sup> while its null space dimension is 2 and they add to the space's dimension 3.
+The line through np.array( [1,5,2] ) has dimension one.  It is a subspace with this one vector in its basis.  Perpendicular to v = (1,5,2) is the plan x + 5y + 2z = 0.  This plane has dimension of 2.  To prove that, find a basis in vectors (5,1,0) and (-2,0,1) to solve the equation.  
+
+Special solutions always give the dimension for the null space of a matrix, such as the matrix A above np.array( [ 1, 5, 2] ). 
+
+Never say the rank of a space or the dimension of  basis or the basis of a matrix.  Dimension of the column space.  The rank of a matrix.  These are correct. 
