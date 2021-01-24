@@ -392,3 +392,48 @@ The line through np.array( [1,5,2] ) has dimension one.  It is a subspace with t
 Special solutions always give the dimension for the null space of a matrix, such as the matrix A above np.array( [ 1, 5, 2] ). 
 
 Never say the rank of a space or the dimension of  basis or the basis of a matrix.  Dimension of the column space.  The rank of a matrix.  These are correct. 
+
+Defined dimension of a space is the number of vectors in every basis.  v = np.array( [ 1, 5, 2 ] ) has dim 1 and 1x<sub>1</sub> + 5x<sub>2</sub> + 2x<sub>3</sub> = 0 has dim 2.
+
+Matrix spaces for the space of M
+
+Vector space M contains all 2x2 matrices. Its dimension is 4:
+
+A<sub>1</sub> = np.array( [ [ 1, 0], [0, 0] ] )  
+A<sub>2</sub> = np.array( [ [ 0, 1], [0, 0] ] )  
+A<sub>3</sub> = np.array( [ [ 0, 0], [0, 1] ] )  
+A<sub>4</sub> = np.array( [ [ 0, 0], [1, 0] ] )  
+
+A linear combinations of these 4 can create any 2x2 matrix and so it spans the space.
+Only a linear combination where all c's are zero creates the zero matrix. So the matrices are linearly independent. 
+
+c<sub>1</sub>A<sub>1</sub> + c<sub>2</sub>A<sub>2</sub> + c<sub>3</sub>A<sub>3</sub> + <sub>4</sub>A<sub>4</sub>
+
+c<sub>1</sub>A<sub>1</sub> + c<sub>2</sub>A<sub>2</sub> + c<sub>3</sub>A<sub>3</sub> are a basis for all upper triangular matrices which as subspace has dimension 3
+
+c<sub>1</sub>A<sub>1</sub> + c<sub>3</sub>A<sub>3</sub> are a basis for all diagonal matrices which as subspace has dimension 2
+
+c<sub>1</sub>A<sub>1</sub> + c<sub>2</sub>A<sub>2</sub> and c<sub>3</sub>A<sub>3</sub> + <sub>4</sub>A<sub>4</sub> are a basis for all symmetric matrices who dimension is 2 or 4?
+
+The space of al n x n matrices has a basis in single non-zero entries matrices.  There are n<sup>2</sup> positions for that entry; so there are n<sup>2</sup> basis matrices.
+
+The dimension for the whole n x n matric space is n<sup>2</sup>.  The dimension for the subspace of upper triangular matrices is 0.5*n<sup>2</sup> + 0.5*n
+
+Function spaces
+
+d<sup>2</sup>y/dx<sup>2</sup> = y'' = 0 is solved by any linear function y = cx + d  
+
+d<sup>2</sup>y/dx<sup>2</sup> = y'' = -y is solved by any combination of y = c*sinx + d*cosx  
+
+d<sup>2</sup>y/dx<sup>2</sup> = y'' = y is solved by any combination of y = c*e<sup>x</sup> + d*e<sup>-x</sup>  
+
+d<sup>2</sup>y/dx<sup>2</sup> = y'' = 2 doesnt form a subspace:  
+a particular solution is y(x) = x<sup>2</sup>.  A complete solution is however y(x) = x<sup>2</sup> + cx + d since all those functions satisfy y'' = 2.  Notice that the particular function + any function c*x+d [is column space +] null space.  A linear differential equation is like a linear matrix equation except it is solved by calculus instead of linear algebra. 
+
+The space Z that contains only the zero vector has dimension zero.  The empty set containing no vectors is a basis for Z.  We can never let the zero vector into a basis because then linear independence is lost. 
+
+
+
+
+
+
