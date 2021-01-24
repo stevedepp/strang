@@ -287,3 +287,62 @@ Using sympy to find particular and 2 special solutions and show the left null sp
 Every column of A above is perpendicular to y = np.array([2,1,-1]) which means that if you combine 2 of row 1 with 1 of row 2 with -1 of row 3 you get zeros.  This is the left null space of A.  A<sup>T</sup> y = np.array([0,0,0,0,0]])
 
 <img width="864" alt="image" src="https://user-images.githubusercontent.com/38410965/105609683-e555db80-5d78-11eb-879f-31e39e4986ea.png">
+
+if not provided with the b, and want to know what b's are valid, then set solve Ab to Rd and the d will be a linear combination of the b's.  This linear combination will show you the surface of solutions possible in terms of b1 b2 b3 etc.
+
+b combinations in the row filled with all zeros show the combinations of rows that are valid for solution. shows the conditions for b's to fit into column space. 
+
+full column rank when r = n  
+full row rank when r = m  
+
+section 3.4
+
+principles
+
+The independent columns of A: the only solution to Ax = 0 is x = 0 and null space = Z.  
+
+Independent vectors: Th eonly zero combination c<sub>1</sub>v<sub>1</sub> + c<sub>k</sub>v<sub>k</sub> = 0 has all c's = 0.
+
+A matrix with m<n has dependent columns.  At least n-m free variables / special solutions
+
+The vectors v<sub>1</sub> ... v<sub>k</sub> span the space S if S = all comninations of the v's.
+
+The vectors v<sub>1</sub> ... v<sub>k</sub> are a basis for S if they are independent and they span S.
+
+The dimension of a space S is the number of vectors in every basis for S.
+
+If A is 4x4 and invertible then its columns are a basis for R<sup>4</sup>. The dimension of R<sup>4</sup> is 4.
+
+Independent vectors ... no extra vectors
+
+Spanning a space ... enough vectors to produce the rest
+
+Basis for a space ... not too many or too few
+
+Dimension of a space ... the number of vectors in a basis
+
+Linear independence  
+The columns of  are linearly independent when the only solution to Ax = 0 is x = 0.  No other combination of the columns gives this zero vector Z.  
+If you can go out on one vector and get back to the zero vector(s), orgin, via another vector, then your path out is some combination of your path home.  If you can do that without the zero vector, the members of your collection of vectors is not independent.   
+
+Correct: A sequence of vectors is linearly independent.  
+OK: The vectors (i.e. without sequence) are independent.
+Wrong: The matrix is independent.  
+
+In RR<sup>2</sup> any 3 or more vectors are dependent.  
+
+Columns of a matrix are dependent exactly when there is a non-zero vector in the null space.  
+
+Any vector and the zero vector are dependent since any non zero vector times the zero vector is zero vector.  
+
+Dependent columns imply dependent rows if m=n.
+
+Full column rank means the columns are independent.  
+
+In a dependent sequence of vectors or in a matrix containing dependent vectors, we do not one way or one vector that causes dependence.
+
+Span
+
+The column space is all combinations of the columns is spanned by the columns.  A set of vectors (columns) spans a space if their linear combination fills the space.  
+
+The columsn of a matrix span its columns space.  They might be dependent.  For example np.array([1,1]) and np.array([-1,-1]) are surely dependent, but they span a line in RR<sup>2</sup>.  
