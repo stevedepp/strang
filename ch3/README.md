@@ -507,3 +507,51 @@ Find a basis for space of polynomials with degree 3:  y = 1, y=x, y=x<sup>2</sup
 
 
 Suppose A is a 5x4 matric with rank 4. Show how Ax=b no solution when the 5x5 augmented matrix [A b] is invertible.  Answer is that if [A b] is the 5x5 identity matrix then the last row is 4 zeros and 1 one which is unsolvable since LHS not = RHS. "If the 5x5 [A b] is invertible then b is not a combination of the columns of A and so Ax=b cannot be solved" [since x is the factor that combines As columns to make b].
+
+section 3.5
+
+cheat sheet  
+subspaces of vector spaces are C(A) and N(A<sup>T</sup>) for R<sup>m</sup> and N(A) and C(A<sup>T</sup>) for  R<sup>n</sup>  
+rank of matrix = number of pivots = r  
+dimensions of sub spaces = number of basis vectors = r for = C(A) and C(A<sup>T</sup>), n-r for N(A) and m-r for N(A<sup>T</sup>)   
+bases vectors for spaces = pivots = independences  
+basis vectors span the sub spaces and vector spaces
+
+Principles
+
+1. the column space C(A) and row space C(A<sup>T</sup>) both have dimension r = the rank of A
+
+2. the null space N(A) has dimension n-r  
+the left null space N(A<sup>T</sup>) has dimension m-r  
+
+3. Elimination produces bases for the row space and null space of A.  The bases for these two spaces of A are the the same as for R.
+
+4. Elimination often changes the column space and left null space so that bases for A, C(A) and N(A<sup>T</sup>), are not the same as for R.  Dimensions dont change from A to R. 
+
+5. Rank one matrices A = u•v<sup>T</sup> = column times row: C(A) has basis u and C(A<sup>T</sup>) has basis in v.
+
+Main theorem connects rank with dimension. Rank of matrix = number of pivots.  Dimension of subspace = number of vectors in basis.  We count pivots or we count basis vectors. 
+
+The rank of A reveals the dimensions of all for fundamental subspaces:
+
+1. row space = C(A<sup>T</sup>) = subspace of R<sup>n</sup>
+
+2. column space = C(A) = subspace of R<sup>m</sup>
+
+3. null space = N(A) = subspace of R<sup>n</sup>
+
+4. left null space = N(A<sup>T</sup>) = subspace of R<sup>m</sup>
+
+2 subspaces come from A and 2 from A<sup>T</sup>
+
+column space is an R<sup>m</sup> subspace = combination of r of n columns of A
+
+null space is an R<sup>n</sup> subspace = combination of n-r of n columns of A 
+
+row space is an R<sup>n</sup> subspace = combination of r of m rows of A
+
+left null space is an R<sup>m</sup> subspace = combination of m-r of m rows of .
+
+Any of the above subspaces of R<sup>m</sup> change as elimination moves from A to R because multipliers and add subtraction change the ratio of rows fonud in columns.
+
+
