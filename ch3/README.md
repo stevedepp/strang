@@ -554,4 +554,98 @@ left null space is an R<sup>m</sup> subspace = combination of m-r of m rows of .
 
 Any of the above subspaces of R<sup>m</sup> change as elimination moves from A to R because multipliers and add subtraction change the ratio of rows fonud in columns.
 
+Row space contains all combinations of all rows of A. Row space of A is column space of A<sup>T</sup>
 
+Null space solves Ax = 0  
+Left null space solves A<sup>T</sup>y = 0 and is the null space of A<sup>T</sup>  
+y<sup>T</sup>A = 0<sup>T</sup> represents the same mathematics as A<sup>T</sup>y = 0  
+
+
+Part 1 of Fundamental Theorem  
+row space and column space have same dimension r
+r is rank of matrix  
+null space and left null space make up the full n and m left over after r is counted  
+
+Part 2 of Fundamental Theorem
+row space combines the essential rows of A but only r of m add new information  
+row space is dimensioned by the essential columns of A = r of n  
+the non zero rows of R form a basis and are linearly independent  
+column space combines essential columns of A = r of n  
+column space is dimensioned by the essential rows of m  
+the pivot columns form a basis and are linearly independent  
+null space combines the free columns of A = n-r of n  
+null space is dimensioned by the free columns of A = n-r of n  
+the special solutions form a basis for null space and are linearly independent  
+left null space combinese the free rows of A = m-r of m  
+left null space is dimensioned by the free rows of A = m-r of m  
+
+Find 4 subspaces by eliminating/reducing to R echelon form and finding a basis for each subspace.
+
+A has same dimension r as R  
+A has same basis as R  
+Same because every row of A is a combination of the rows of R  
+Same because every row of R is a combination of the rows of A  
+Elimination changes rows but not row spaces
+
+Rank theorem: the number of independent columns = the number of independent rows.  
+A and R do not have the same column space.   
+The columns of R often end in zeros.
+The columns of A dont often end in zeros.
+C(A) not = C(R)  
+but the same combination of the columns are zero. So N(A) = N(R)?
+Dependent columns in A are dependent columns in R.  Independent in A are independent in R.  
+
+
+Rank 2 matrices = Rank 1 + Rank 1
+
+A    
+1 0 3    
+1 1 7    
+4 2 20    
+
+C  
+1 0 0  
+1 1 0  
+4 2 1  
+
+R  
+1 0 0  
+1 1 0  
+4 2 1  
+
+A = CR  
+
+R = rref(A)  Some elimination matrix E simplifies A to EA = R.  Then the inverse matrix C = E<sup>-1</sup> converts R back to A = CR.  
+
+Row space of R clearly has 2 bsais vectors v<sub>1</sub><sup>T</sup> = [1 0 3] and v<sub>2</sub><sup>T</sup> = [0 1 4]. So the **same** row space of A has this basis and row rank is 2.  Multiplying C times R says that row 3 of A = 
+A =  4v<sub>1</sub><sup>T</sup> + 2v<sub>2</sub><sup>T = [4 2 1]  
+Now look at columns.  Pivot columns of R are clearly (1,0,0) and (0,1,0).  [Free to combine those columns Rx=0 would solution would be s1=(-3,-4,1).]  Pivot columns of A are also in columns 1 and 2,  u<sub>1</sub> = (1,1,4) and u<sub>2</sub> = (0,1,2). Notice that C has those same columns.  That is guaranteed to happen since C first 2 columns are multiplying [being weighted by in columnar matrix multiplication] the first 2 columns of R that are always an identity matrix.  R pivot columns wont change the same columns of C when making same first two columns of A. 
+Those pivot columns in A and C are both always u<sub>1</sub> and u<sub>2</sub> [when viewing an A=CR decomposition/factoring].  
+
+When you put letters v and u in for columns and rows, you see rank 2 = rank 1 + rank 1.
+
+Matric A (rank 2) =   
+A =   
+[u<sub>1</sub> u<sub>2</sub> u<sub>3</sub>]   
+times   
+[v<sub>1</sub><sup>T</sup>  
+ v<sub>2</sub><sup>T</sup>  
+ zero row]  
+= u<sub>1</sub>v<sub>1</sub><sup>T</sup> + u<sub>2</sub>v<sub>2</sub><sup>T</sup>  
+= rank 1 + rank 1  
+
+So multiplying matrices using columns x rows.  u<sub>2</sub> drops out when that column is multiplied by the zero row.  [In column x row matrix multiplication c1 x r1 + c2 x r2 + c3 x r3 remember is most useful form.]
+
+Every rank r matrix is the sum of r rank one matrices.  Pivot columns of A times non-zero rows of R.  The (0,0,0) row of $ disappears.  The pivot columns u<sub>1</sub> and u<sub>2</sub> are a basis for the column space of A.  {not R}
+
+
+Interesting problems:
+
+If the row space = column space then A<sup>T</sup> = A.  False. A can be invertible and unsymmetric even if C( A<sup>T</sup>) = C(A). Pick any invertible matrix m x m then the row and column spaces are the entire of Rm.  But many invertible matrices exist such that A not = At.
+
+Construct A = uv<sup>T</sup> + wz<sup>T</sup> whose C(A) has basis in (1,2,4) and (2,2,1) and R(A) = C(A<sup>T<?sup>) has basis in (1,0) and (1,1).  Write A as 3x2 times 2x2.
+
+u and w span the column space of A  
+v and z span the row space of A   
+
+ß
