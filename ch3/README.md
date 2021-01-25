@@ -648,4 +648,4 @@ Construct A = uv<sup>T</sup> + wz<sup>T</sup> whose C(A) has basis in (1,2,4) an
 u and w span the column space of A  
 v and z span the row space of A   
 
-ß
+<img width="864" alt="image" src="https://user-images.githubusercontent.com/38410965/105745866-bec8a980-5f0c-11eb-8239-0c9d668db8eb.png">
