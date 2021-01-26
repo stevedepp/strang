@@ -168,3 +168,13 @@ the null space N(A) and row space C(A<sup>T</sup>) are orthogonal complements wi
 the left null space N(A<sup>T</sup>) and column space C(A) are orthogonal complements with dimensions (m-r) + r = m.
 
 any n independent vectors in R<sup>n</sup> span R<sup>n</sup>.  Any n spanning vectors are independent. 
+
+generalizing the 2 walls meeting.  a p-dimensional subspace of R<sup>n</sup> and a q-dimensional subspace of R<sup>n</sup> share at least a line if p+q > n.  The p+q basis vectors of V and W cannot be independent; so some comnbinaion of the basis vectors of V is also a combination of the basis vectors of W. 
+
+These spaces A and B cannot be orthogonal. A has dimension p = 2 and B has dimensions q = 2 so AB has dimensions p+q unless they share a dimension as revealed by sharing column space at the vector [5,6,5] = Ax = Bxhat.  So p+q > n.  We know p+q>n because p+q=4 and rref shows n = 3 and because they share a soluition. in column space.
+
+The big point is that they are not orthogonal subspaces, which requries the vectors of AB to be independent and perpendicular.  They are not indpendent because there is a null soluion ABx = 0.  THis is same as floor V and wall W are not orthogonal subspaces because they share a non-zero vector along the line that they meet.  No plane V and W in R<sup>3</sup> can be orthogonal.  Ax = Bxhat means [AB](x,xhat).T = 0.Three homogenous equations always have a non zero solution 2 planes intersecting in R<sup>3</sup> must share a line.
+
+<img width="745" alt="image" src="https://user-images.githubusercontent.com/38410965/105848394-e5d6b800-5fac-11eb-83dc-06de95636ad6.png">
+
+If A is invertible, then column 1 of A<sup>-1</sup> is orthogonal to rows 2 and 3 of A as evidenced by the zeros in I(2,1) and I(3,1)
