@@ -130,3 +130,41 @@ every matrix can be diagonalized by selecting the right bases for for R<sup>n</s
 A row of A cannot be in the null space except zero vector. The only vector in 2 orthogonal subspaces is the zero vector.
 
 row space dimension is not equal to the number of rows but equal to the number of pivots in each row, how many components of rows pass information.  Null space is how many components do not transfer information.  
+
+Combining Bases from Subspaces
+
+independence and spanning:
+
+basis is linearly independent vectors that span the space.
+
+independent and span are properties
+
+normally check both properties.
+
+when the count is right, only one property is needed: one implies the other
+
+any n independent vectors in R<sup>n</sup> must span R<sup>n</sup>; so they are a basis.
+
+any n vectors that span R<sup>n</sup> must be independent; so they are a basis.
+
+when vectors go into columns of n x n square matrix A facts are:
+
+if the n columns are independent then they span R<sup>n</sup>: Ax=b is solvable
+
+if the columns span R<sup>n</sup> then they are independent: Ax=b has only one solution.
+
+uniqueness and existence properties imply one another:
+
+if there are no free variables the solution exists and is unique; there must be n pivot columns and back substitution solves Ax=b 
+
+if Ax=b can be solved for every b (i.e. if a solutions exist) then elimination produced no zeros, there are n pivots and no free variables, the null space contains only x = 0 and solutions are unique.
+
+review
+V and W subspaces are orthogonal if every v in V is orthogonal to every w in W
+
+V and W are orthogonal complements if W contains all vectors perpendicular to V.  Inside R<sup>n</sup> the dimensions of complements V and W add to n
+
+the null space N(A) and row space C(A<sup>T</sup>) are orthogonal complements with dimensions (n-r) + r = n  
+the left null space N(A<sup>T</sup>) and column space C(A) are orthogonal complements with dimensions (m-r) + r = m.
+
+any n independent vectors in R<sup>n</sup> span R<sup>n</sup>.  Any n spanning vectors are independent. 
