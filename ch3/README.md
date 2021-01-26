@@ -617,6 +617,8 @@ A = CR
 
 R = rref(A)  Some elimination matrix E simplifies A to EA = R.  Then the inverse matrix C = E<sup>-1</sup> converts R back to A = CR.  
 
+<img width="864" alt="image" src="https://user-images.githubusercontent.com/38410965/105750107-48c74100-5f12-11eb-8caf-75055208920c.png">
+
 Row space of R clearly has 2 bsais vectors v<sub>1</sub><sup>T</sup> = [1 0 3] and v<sub>2</sub><sup>T</sup> = [0 1 4]. So the **same** row space of A has this basis and row rank is 2.  Multiplying C times R says that row 3 of A = 
 A =  4v<sub>1</sub><sup>T</sup> + 2v<sub>2</sub><sup>T = [4 2 1]  
 Now look at columns.  Pivot columns of R are clearly (1,0,0) and (0,1,0).  [Free to combine those columns Rx=0 would solution would be s1=(-3,-4,1).]  Pivot columns of A are also in columns 1 and 2,  u<sub>1</sub> = (1,1,4) and u<sub>2</sub> = (0,1,2). Notice that C has those same columns.  That is guaranteed to happen since C first 2 columns are multiplying [being weighted by in columnar matrix multiplication] the first 2 columns of R that are always an identity matrix.  R pivot columns wont change the same columns of C when making same first two columns of A. 
@@ -649,3 +651,8 @@ u and w span the column space of A
 v and z span the row space of A   
 
 <img width="864" alt="image" src="https://user-images.githubusercontent.com/38410965/105745866-bec8a980-5f0c-11eb-8239-0c9d668db8eb.png">
+
+
+How do you know from these shapes that A cannot be invertible?  The rank of a 3x2 times a 2x3 cannot be be larger than the rank of either factor.  So rank <=2 and the resulting 3x3 matrix is non invertible with rank <=2.
+
+
