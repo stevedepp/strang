@@ -116,4 +116,17 @@ can do the same with A<sup>T</sup>y
 
 there is an r x r invertible matrix inside A if throw out the 2 null spaces.  From the row space to the column space, A is invertible.  The pseudo inverse will invert that part of A in section 7.4.
 
+Every matrix of rank r contains an r x r invertible matrix.  
 
+in a 3 x 5 with a r = 2, the other 11 zeros are the null spaces.
+
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/105800565-05e28900-5f65-11eb-867f-f2d36e55f7aa.png">
+
+In a 3 x 5 with r = 2 the invertible matrix is found in the pivot columns and rows.  
+
+every matrix can be diagonalized by selecting the right bases for for R<sup>n</sup> and R<sup>m</sup>   
+
+A row of A cannot be in the null space except zero vector. The only vector in 2 orthogonal subspaces is the zero vector.
+
+row space dimension is not equal to the number of rows but equal to the number of pivots in each row, how many components of rows pass information.  Null space is how many components do not transfer information.  
