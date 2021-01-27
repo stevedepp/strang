@@ -459,3 +459,10 @@ notice that dot product combinations for a<sub>1</sub>, a<sub>2</sub>, a<sub>3</
 since A is invertible P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> separates into AA<sup>-1</sup>(A<sup>T</sup>)<sup>-1</sup>A<sup>T</sup> = I which is the projection matrix onto the vector space of R<sup>2</sup>
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106065649-94701b00-60c9-11eb-9bc1-78cc82dd421b.png">
+
+
+11. project b into the column space of A by solving for e and show e perpendicular to A.
+
+here is not obvious that b is already lying in the plane or subspace of the plane of A, but computing e = 0 shows that. also showing that b is in the column space of a is that Ax=b despite A having m>n finds a solution, as revealed when computing the rref of the augmented Ab.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106066606-1ca2f000-60cb-11eb-8d93-4a27f0fa3e22.png">
