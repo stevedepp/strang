@@ -357,4 +357,17 @@ p = Pb = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> times b
 
 so P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>
 
+comparing column space line a (below) with column space surface A (above))
+
+for n = 1 / n > 1  
+
+x.hat = a<sup>T</sup>b / a<sup>T</sup>a   
+x.hat = (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b 
+
+p = a<sup>T</sup>b/a<sup>T</sup>a * a  
+p = Ax.hat = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b  
+
+P = aa<sup>T</sup> / a<sup>T</sup>a     
+P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>
+
 
