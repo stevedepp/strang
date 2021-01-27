@@ -283,4 +283,78 @@ Next move from projecting onto a line to projecting onto an n-dimensional subspa
 
 Projecting onto a subspace.
 
+start with n vectors a<sub>a</sub>, ... , a<sub>n</sub> in R<sup>m</sup> [don't make mistake to think a<sub>j</sub> are components. they are n vector columns in R<sup>m</sup> space.]
+
+assume these n a's are linearly independent (as they need be in a basis)
+
+problem is: find combination [combinations if not independent] p = x.hat<sub>1</sub>a<sub>1</sub> + , ... , x.hat<sub>n</sub>a<sub>n</sub> closests to a given vector b  
+
+projecting each [?] b in R<sub>m</sub> onto the subspace spanned by the a's
+"[?]" may refer to an object b composed of many b's on RHS projected onto surface A with many a's on LHS ?
+
+[application: what if value is p of object b shown onto perception a but we allow b to change and cast different projections over n infinitely brief times b<sub>1</sub>, ... , b<sub>n</sub> onto distinctly different minds that can only act at distinctly and infinitely brief time slots a<sub>1</sub>, ... , a<sub>n</sub> to create projections p<sub>1</sub>, ... , p<sub>n</sub>.  a's collect to A perceptions over landscape of minds.  b's collect to object B geography of true value over time.   p's collect to an X time-series weighted collection of a's.   key question: Can n times be dimensioned in the same R<sup>m</sup> space as n minds if allow x weights to have independent columns?
+p = xa.  we dont care about b or a really.  we only want the true value b to cast its shadow on many minds a and reveal p price projection. but then we are left with m dimensional p price in n dimensional time / mind segments. ....]
+
+
+[back to reality.  we have each b that may mean he wants to project B object onto A space]
+
+with n = 1 one vector a<sub>1</sub>, this projects b onto a line.  this line is the column space of A matrix which has only one column.  in general the matrix A has n columns a<sub>1</sub>, ... , a<sub>n</sub> 
+
+the combinations in R<sup>m</sup> are the vectors Ax in column space. 
+
+looking for the particular comnbination p = Ax.hat = the projection that is closest to b.  the 'hat' over x.hat indicates the best choice x.hat to give the closest vector p in the column space:
+
+x.hat = a<sup>T</sup>b/a<sup>T</sup>a when n = 1
+
+for n > 1, the best x.hat = the vector x.hat = (x.hat<sub>1</sub>, ... , .x.hat<sub>n</sub>) derived here:
+
+compute projections onto n-dimensional subspaces in 3 steps.  
+1. find the vector x.hat  
+2. find the projection p = Ax.hat
+3. find the projection matrix P:  p = Pb  
+
+[if b shines onto A in R<sup>m</sup> space then e must also be in R<sup>m</sup> space and can be just one vector. but what if b is an object?]
+
+the dotted line from b to nearest point Ax.hat in subspace.  b - Ax.hat is perpendicular to subspace.  the error b - Ax makes a right angle with all the vectors a<sub>1</sub>, ... , a<sub>n</sub> in the base.  the n right angles give the equation for x.hat.  
+
+a<sub>1</sub><sup>T<sup> (b - Ax.hat) = 0  
+...
+a<sub>n</sub><sup>T<sup> (b - Ax.hat) = 0
+
+[such that the a<sub>1</sub><sup>T<sup>, ... , a<sub>n</sub><sup>T<sup> are A<sup>T</sup> that has n rows and m columns and A.T is multiplying the error vector b - Ax.hat which has m rows because both A and e are in R<sup>m</sup>.  this product = 0 because A and e are both m dimensional in m-dimensional space and are perpendicular. i believe these are orthogonal complements.] 
+
+the matrix with these rows a<sub>i</sub><sup>T</sup> is A<sup>T<sup>.
+
+the n equations are exactly A<sup>T</sup>( b - Ax.hat ) = 0
+
+rewritten as  
+
+A<sup>T</sup>b - A<sup>T</sup>Ax.hat = 0
+
+rewritten as 
+
+A<sup>T</sup>Ax.hat = A<sup>T</sup>b
+
+which is equation for x.hat and its coefficient matrix A<sup>T</sup>A.
+
+now find x.hat and p and P.
+
+x.hat is n x 1
+
+A<sup>T</sup>A is symmetric and nxn and invertible if the a's are independent.  
+
+the solution is x.hat = (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b 
+
+the projection of b onto the subspace is p
+
+p is m x 1  
+
+p = Ax.hat = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b  
+
+the next formula picks out the P from the above formula in order to arrive at p = Pb
+
+p = Pb = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> times b  
+
+so P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>
+
 
