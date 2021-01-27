@@ -364,7 +364,7 @@ for n = 1 / n > 1
 x.hat = a<sup>T</sup>b / a<sup>T</sup>a   
 x.hat = (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b 
 
-p = a<sup>T</sup>b/a<sup>T</sup>a * a  
+p = x.hat*a = a<sup>T</sup>b/a<sup>T</sup>a * a  
 p = Ax.hat = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b  
 
 P = aa<sup>T</sup> / a<sup>T</sup>a     
