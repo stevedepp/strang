@@ -402,3 +402,29 @@ the projection of b on to a = p = Pb
 the projection p is perpendicular to the error e
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106051788-e5c2df00-60b6-11eb-8415-e0beccc093eb.png">
+
+
+Problems that involve rectangular matrices almost always employ A<sup>T</sup>A.  When A has independent columns, A<sup>T<sup>A is invertible. It's worth proving it.
+
+A<sup>T</sup>A is invertible if and only if A has linearly independent columns.
+
+Prove A<sup>T</sup>A has same null space as A.
+
+When columns of A are linearly independent, it's null space contains only the zero vector.  A<sup>T</sup>A has same null space and is invertible.
+
+Let A be any matrix.  If x is in the null space of A, then Ax = 0.  Multiplying by A<sup>T</sup> gives A<sup>T</sup>Ax also = 0 since A<sup>T</sup> is merely multiplying 0 = Ax.  So x is also in the null space of A<sup>T</sup>A.
+
+Now start with null space of A<sup>T</sup>A.  From A<sup>T</sup>Ax = 0 we prove Ax = 0.  We cannot multiply by (A<sup>T</sup>)<sup>-1</sup> because generally n > m for A<sup>T</sup> and so the inverse doesnt exist.  
+
+so we multiply by x<sup>T</sup>
+
+(x<sup>T</sup>)A<sup>T</sup>A = 0 = (Ax)<sup>T</sup>(Ax) = 0 = ||Ax||<sup>2</sup> = 0
+
+we have shown that if A<sup>T</sup>Ax = 0 then Ax has length = 0.  Therefore Ax = 0. Every vector in x in one null space is in the other null space.  
+
+
+if A<sup>T</sup>A has dependent columns then so does A   
+
+if A<sup>T</sup>A has independent columns then so does A
+
+
