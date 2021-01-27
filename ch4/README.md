@@ -393,3 +393,12 @@ here's the function:
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106050829-a1830f00-60b5-11eb-95de-dcff2b179d17.png">
 
+then, checking relationships: 
+
+vector space A is perpendicular to the error e, or more technically, e is the left null space to A, or e is the null space of A transpose.
+
+the projection of b on to a = p = Pb
+
+the projection p is perpendicular to the error e
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106051788-e5c2df00-60b6-11eb-8415-e0beccc093eb.png">
