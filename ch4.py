@@ -11,4 +11,5 @@ def projection(b, a):
     p = A @ xhat
     e = b - p
     P = A @ AtAinv @ At
+    print("A, b, At, AtA, AtAinv, xhat, p, e, P")
     return A, b, At, AtA, AtAinv, xhat, p, e, P

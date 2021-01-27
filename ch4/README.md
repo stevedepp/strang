@@ -428,3 +428,34 @@ if A<sup>T</sup>A has dependent columns then so does A
 if A<sup>T</sup>A has independent columns then so does A
 
 
+interesting problems
+
+2. b = np.array([cos theta, sin theta]) and a = np.array([1,0]) compute p 
+
+p = ( a<sup>T</sup>b / a<sup>T</sup> ) a = np.array([ cos theta, 0 ]) which makes sense since cos theta is in the x position in the vector and shines down onto the vector a that lies on the x axis at (1,0)
+
+4. compute the projection matrix for problem 2. only need a for this. not b. 
+
+when P is multiplied by b = (cos theta, sin theta) it will only pick up the cos theta and thus shines onto (1,0) on the x axis.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106062065-44428a00-60c4-11eb-9d98-1ee5df0715dd.png">
+
+
+5. cmopute the projection matrices onto the lines a<sub>1</sub> = (-1,2,2) and a<sub>2</sub> = (2,2,-1) and multiply their projection matrices and explain why their product P<sub>1</sub> P<sub>2</sub> is what it is. 
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106061025-d77ac000-60c2-11eb-8f84-9c5459c843d0.png">
+
+6. project b = (1,0,0) onto a<sub>1</sub> = (-1,2,2), a<sub>2</sub> = (2,2,-1), a<sub>3</sub> = (2,-1,2) and sump the 3 projections p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub>
+
+notice that dot product combinations for a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub> reveal they are perpendicular and that p<sub>1</sub> + p<sub>2</sub> + p<sub>3</sub> = b and that all the projection matrices = identity.  this is principal components moving the axes from traditional x, y, z to a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub> and by shining b onto those producing p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub> that are the coordinates of b onto these new 3 dimensional axes.  Thus the projection matrices sum to identity in this new 3 dimensional space.  if you mutliply the sum of (P<sub>1</sub> + P<sub>2</sub> + P<sub>3</sub> ) times b you get b's coordinates inthis new 3d system.  "we can add projections onto orthogonal vectors a<sub>1</sub>, a2</sub>, a3</sub> to get the projection matrix onto the larger space. "
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106063382-19f1cc00-60c6-11eb-900e-3dd865e739be.png">
+
+
+8. project b = (1,1) onto the lines through a<sub>1</sub> = (1,0) and a<sub>2</sub> = (1,2) and add p<sub>1</sub> + p<sub>2</sub>. these do not add to b because the a's are not orthogonal.  
+
+9. projections of b onto the plan containing a<sub>1</sub> = (1,0) and a<sub>2</sub> = (1,2) will sum to equal b.
+
+since A is invertible P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> separates into AA<sup>-1</sup>(A<sup>T</sup>)<sup>-1</sup>A<sup>T</sup> = I which is the projection matrix onto the vector space of R<sup>2</sup>
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106065190-ed8b7f00-60c8-11eb-8587-90c49464a6a7.png">
