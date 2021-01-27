@@ -463,6 +463,33 @@ since A is invertible P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> separates 
 
 11. project b into the column space of A by solving for e and show e perpendicular to A.
 
-here is not obvious that b is already lying in the plane or subspace of the plane of A, but computing e = 0 shows that. also showing that b is in the column space of a is that Ax=b despite A having m>n finds a solution, as revealed when computing the rref of the augmented Ab.
+here is not obvious that b is already lying in the plane or subspace of the plane of A, but computing e = 0 shows that. also showing that b is in the column space of a is that Ax=b despite A having m>n finds a solution, as revealed when computing the rref of the augmented Ab. note the last row of Ab.rref has zeros across. 
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106066606-1ca2f000-60cb-11eb-8d93-4a27f0fa3e22.png">
+
+16. what linear combination of (1,2,-1) and (1,0,1) is closest to (2,1,1).  
+
+This one is easy.  Put the first two vectors into A and find the the third's projection onto it.   
+Even easier is that the first two are orthogonal to one another and so A<sup>T</sup>A = some multiple of I   
+One cannot take them out of their parentheses, but they are invertible.    
+e = 0 so b is in A's column space.  
+Here again we see that Ab is solvable which means that b is in As column space.  
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106067966-b5d30600-60cd-11eb-81ce-61aaecff6849.png">
+
+
+17. P<sup>2</sup> = P then (I - P)<sup>2</sup> = (I - P).  When P projects into the column space of A, (I-P) projects into the left null space of A.  
+
+(I-P)<sup>2</sup> = (I-P)(I-P) = I<sup>2</sup> - PI - IP - P<sup>2</sup> = I - 2P + (P<sup>2</sup>=P) = I - P
+
+e = b - p = b - Pb = b (I - P) so e is the projection of b using (I - P) projection matrix. geometrically, b shines onto a plane that is perpendicular to A columns.  A's columns are perpendicular to A's left null space: C(A) N(A<sup>T</sup>) = zero vector.  So e is b's projection into A's left null space.
+
+18. for example, if P is the 3 x 3 projection matrix onto the line through (1,1,1) then I - P is the projection matrix onto the plane perpendicular to (1,1,1).  
+
+Do not even need to solve for this. The plane perpendicular to (1,1,1) is x + y + z = 0.  
+From the question, P projects b onto (1,1,1).  (I - P)b would be the projection of b into the space perpendicular to (1,1,1) because using that projection matrix on b = (I-P)b = b - p = e and we know e is perpendicular to (1,1,1) .
+
+20. similarly, to find the projection matrix P onto some plane x - y - 2z = 0, first write down a vector e that is perpendicular to the plane e.g. e = (3,1,1) and computer Q = ee<sup>T</sup> / e<sup>T</sup>e which is just treating like a as a line to be shone upon. 
+
+
+P<sup>2</sup> = P = A**(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>A**(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>
