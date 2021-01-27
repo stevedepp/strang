@@ -370,4 +370,26 @@ p = Ax.hat = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b
 P = aa<sup>T</sup> / a<sup>T</sup>a     
 P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>
 
+LA gives us the normal equation.  
+
+1. subspace is the column space of A  
+2. error vector b - Ax.hat is perpendicular to the column space of A  
+3. b - Ax.hat is in the null space of A<sup>T</sup>   
+[is it an orthogonal complement?  i think yes since we defined the subspaces row and null space as orthogonal complements.]
+hence: A<sup>T</sup>(b-Ax,hat) = 0 = A<sup>T</sup> • e = 0  the left null space of A contains the error vectors e = b - Ax.hat.  The vector b is being split into projection p which is in A's column space and the error e = b - p which is not in A's column space but orthogonal to it's row space.  projection produces a right triangle with sides p e and b. 
+
+https://docs.sympy.org/latest/modules/matrices/matrices.html
+
+example:
+
+
+<img width="656" alt="image" src="https://user-images.githubusercontent.com/38410965/106049865-a09dad80-60b4-11eb-9532-7ff9a05c8ed6.png">
+
+then applying that to a function:
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106050711-7a2c4200-60b5-11eb-9861-20d6ce3338ac.png">
+
+here's the function:
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106050829-a1830f00-60b5-11eb-95de-dcff2b179d17.png">
 
