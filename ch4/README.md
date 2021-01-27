@@ -178,3 +178,109 @@ The big point is that they are not orthogonal subspaces, which requries the vect
 <img width="745" alt="image" src="https://user-images.githubusercontent.com/38410965/105848394-e5d6b800-5fac-11eb-83dc-06de95636ad6.png">
 
 If A is invertible, then column 1 of A<sup>-1</sup> is orthogonal to rows 2 and 3 of A as evidenced by the zeros in I(2,1) and I(3,1)
+
+
+section 4.2  Projections
+
+principles
+
+the projection of a vector b onto the line a is the closes point p = a(a<sup>T</sup>b/a<sup>T</sup>a)
+
+the error e = b - p is the perpendicular to a: right triangle bpe has ||p||<sup>2</sup> + ||e||<sup>2</sup> = ||b||<sup>2</sup>
+
+the projection of b on to subspace S is the closest  vector p in S.  b-p is orthogonal to S.  [kind of like e]
+
+A<sup>T</sup>A is invertible (and symmetric) only if A has independent columns: N(A<sup>T</sup>A) = N(A) [same as problem 4.1 #8]
+
+the projection of b onto the column space of A is the vector p = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b
+
+The projection matrix on to C(A) is ... 
+
+P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>  
+
+p = Pb
+
+P<sup>2</sup> = P = P<sup>T</sup>
+
+Projection matrices are symmetrix matrices with P<sup>2</sup> = P where the projection of b is Pb.
+
+A projection onto a line comes from a rank one matrix and projection onto a plane comes from a rank 2 matrix.  Projection matrices match the rank of the destination subspace (line or plane in this case).
+
+goal is to find the part p in each subspace and to find the projection matrix P that produces that part p = Pb.
+
+every subspace of R<sup>m</sup> has its own m x m projection matrix. to compute P, obtain a description of the subspace upon which b is projected.  the best description of a subspace is a basis.  put the basis vectors into the columns of A and project b oto the column space of A.  
+
+start with a projection onto a line.
+
+a line through origin in direction of a = (a<sub>1</sub>, ... , a<sub>m</sub>).  
+along the line find point p closest to b = (b<sub>1</sub>, ... , b<sub>m</sub>).  
+the key to projection is orthogonality.  
+the line from b to p is perpendicular to a.  it is e = b - p.  
+[ in diagrams it is shown as a dotted line dropping from b to a, but since e = b - p, it is actually the line dropping from b - p to origin or said more correctly in my view, the vector from origin to b - p.  in this sense it might be easier to say you go out on b and then subtract e error to get to p along a.  b - p = e but more visually pleasing is b - e = p]
+[ reality might be b and model might be x<sub>hat</sub> model that finds p along a a la x<sub>hat</sub>a and error from reality to model is b - p =  b - x<sub>hat</sub>a]
+
+computing x<sub>hat</sub> gives us vector p. then from formular p = Pb, we read off the projection matrix P.  
+
+error e is perpendicular to a.  this helps to determine x<sub>hat</sub>.  that b - x<sub>hat</sub>a = e is perpendicular to a means that the dot product of (b-x<sub>hat</sub>a) to a is zero.  
+
+e =  b - p  = b - x<sub>hat</sub>a --> finding p
+
+a • e = a • ( b - x<sub>hat</sub>a ) = 0 = a • b - x<sub>hat</sub>a • a = 0
+
+thus x<sub>hat</sub> = (a • b) / (a • a) =  a<sup>T</sup>b / <sup>T</sup>a 
+
+use the transpose formula rather than dot product formula since it leads to how matrices will be multiplied.
+
+the projection of b onto th eline through a is  the vector p
+
+p = x<sub>hat</sub>a
+
+p = ( a<sup>T</sup>b / <sup>T</sup>a ) a
+
+2 special cases:
+
+if b = a then x<sub>hat</sub> = 1 : the projection of b = a onto a is a projection of a onto itself: Pa = a = ( a<sup>T</sup>a / <sup>T</sup>a ) a = 1a
+
+if b is perpendicular to a then a<sup>T</sup>b = a • b = 0 and then ( a<sup>T</sup>b / <sup>T</sup>a ) a = 0 times a = p = 0
+
+example: 
+
+project b = (1,1,1) onto a = (1,2,2) to find p = x<sub>hat</sub>a  
+
+solution: the number x<sub>hat</sub> is the ratio of a<sup>T</sup>b = 5 to a<sup>T</sup>a = 9
+
+so the projection is p = x<sub>hat</sub>a = ( a<sup>T</sup>b / a<sup>T</sup>a ) a = (5/9) a
+
+error vector = distance from b to p on a is e = b - p 
+
+where e is perpendicular to a and since p is on a perpendicular to p too.
+
+<img width="745" alt="image" src="https://user-images.githubusercontent.com/38410965/105938147-f9be0080-6024-11eb-9335-10ab9863a936.png">
+
+cos theta of the angle b to a is = b • a / ||b|| ||a||
+
+the vector b is split into 2 parts (similar to splitting any vector into its 2 axes).  There is a component along the line a which is p.  b' perpendicular part is e.  those 2 sides have length ||p|| = ||b|| cos theta = x and ||e|| = ||b|| sin theta = y.
+
+so p = a<sup>T</sup>b / a<sup>T</sup>a has length = ||p|| = ( ||a|| ||b|| cos theta / ||a||<sup>2</sup> ) ||a|| = ||b|| cos theta after cancelling the ||a|| components of that formula. 
+
+dot products are simpler than cos theta and ||b|| 
+
+projection matrix is outer product / inner product
+
+p = a x<sub>hat</sub> = a ( a<sup>T</sup>b / a<sup>T</sup>a ) = P b where P = aa<sup>T</sup> / a<sup>T</sup>a 
+
+P is projection matrix with m x m but here its rank is one since it is a single column times a single row in the numerator outer product.  
+
+the diagonal of P add to 1 because you are displacing 100% of b's weight onto the basis of a via P
+
+finally, the matrix I - P should be a projection because it produces the other side of e near origin.  (I - P) b = b - p = e in left null space
+
+
+<img width="745" alt="image" src="https://user-images.githubusercontent.com/38410965/105942950-3fcb9200-602e-11eb-96df-33ff85614270.png">
+
+
+Next move from projecting onto a line to projecting onto an n-dimensional subspace of R<sup>m</sup> 
+
+Projecting onto a subspace.
+
+
