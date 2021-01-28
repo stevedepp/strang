@@ -495,3 +495,7 @@ From the question, P projects b onto (1,1,1).  (I - P)b would be the projection 
 P<sup>2</sup> = P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>
 
 PPb = Pb becaue Pb is already in the column space of A and it's projection would of course be in the column space of A.
+
+if A is square and invertible then P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> = AA<sup>-1</sup>(A<sup>T</sup>)<sup>-1</sup>A<sup>T</sup> = I and thus P = I which means that column space of A is not a line or a plane or something limited.  Column space of A is all of R<sup>n</sup> and so b is in the column space of R<sup>n</sup> and p = Pb = Ib = b and e = b - p = 0.
+
+The null space of A<sup>T</sup> is orthogonal to the column space C(A). So if A<sup>T</sup>b = 0 then the projection of b onto the C(A) should be p = 0 since b is in the left null space of a = null space of A<sup>T</sup>, b is in the orthogonal complement of A<sup>T</sup> = N(A<sup>T</sup>.
