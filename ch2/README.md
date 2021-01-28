@@ -544,31 +544,3 @@ A&B&C
 \end](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A1%262%263%5C%5C%0AA%26B%26C%0A%5Cend%7Bbmatrix%7D)
 
 
-section 4.3 least squares approx
-
-m points cartesian plane represented by 2 vectors t = (0,1,2) along the x axis and b = (0,0,6) along the y axis 
-
-seeking C intercept and D slope for a line fitted nearest to these points to minimize error e
-
-C scales fixed 1 and D scales variable t resulting in a line p that is nearest to b.
-
-C and D are independent vectors at this point.
-
-finding x.hat, p and P
-
-compute square matrix A<sup>T</sup>A
-
-compute x.hat = (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b
-
-compute Ax.hat = p
-
-compute b - p = error
-
-from p = Pb = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b,  
-compute P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>  
-
-confirm e perpendicular to p and A   
-or more informative e as left null space to A or null space and orthogonal complement to A<sup>T</sup>  
-
-<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106184870-1e72bf00-6170-11eb-8de1-a7c651c9d263.png">
-

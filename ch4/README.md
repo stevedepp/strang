@@ -499,3 +499,33 @@ PPb = Pb becaue Pb is already in the column space of A and it's projection would
 if A is square and invertible then P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> = AA<sup>-1</sup>(A<sup>T</sup>)<sup>-1</sup>A<sup>T</sup> = I and thus P = I which means that column space of A is not a line or a plane or something limited.  Column space of A is all of R<sup>n</sup> and so b is in the column space of R<sup>n</sup> and p = Pb = Ib = b and e = b - p = 0.
 
 The null space of A<sup>T</sup> is orthogonal to the column space C(A). So if A<sup>T</sup>b = 0 then the projection of b onto the C(A) should be p = 0 since b is in the left null space of a = null space of A<sup>T</sup>, b is in the orthogonal complement of A<sup>T</sup> = N(A<sup>T</sup>.
+
+
+section 4.3 least squares approx
+
+m points cartesian plane represented by 2 vectors t = (0,1,2) along the x axis and b = (0,0,6) along the y axis 
+
+seeking C intercept and D slope for a line fitted nearest to these points to minimize error e
+
+C scales fixed 1 and D scales variable t resulting in a line p that is nearest to b.
+
+C and D are independent vectors at this point.
+
+finding x.hat, p and P
+
+compute square matrix A<sup>T</sup>A
+
+compute x.hat = (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b
+
+compute Ax.hat = p
+
+compute b - p = error
+
+from p = Pb = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b,  
+compute P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>  
+
+confirm e perpendicular to p and A   
+or more informative e as left null space to A or null space and orthogonal complement to A<sup>T</sup>  
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106184870-1e72bf00-6170-11eb-8de1-a7c651c9d263.png">
+
