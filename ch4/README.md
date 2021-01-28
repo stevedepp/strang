@@ -527,5 +527,5 @@ compute P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>
 confirm e perpendicular to p and A   
 or more informative e as left null space to A or null space and orthogonal complement to A<sup>T</sup>  
 
-<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106184870-1e72bf00-6170-11eb-8de1-a7c651c9d263.png">
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106185327-ae186d80-6170-11eb-9b3c-4d52e5c91db6.png">
 
