@@ -492,4 +492,6 @@ From the question, P projects b onto (1,1,1).  (I - P)b would be the projection 
 20. similarly, to find the projection matrix P onto some plane x - y - 2z = 0, first write down a vector e that is perpendicular to the plane e.g. e = (3,1,1) and computer Q = ee<sup>T</sup> / e<sup>T</sup>e which is just treating like a as a line to be shone upon. 
 
 
-P<sup>2</sup> = P = A**(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>A**(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>
+P<sup>2</sup> = P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>
+
+PPb = Pb becaue Pb is already in the column space of A and it's projection would of course be in the column space of A.
