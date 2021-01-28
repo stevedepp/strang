@@ -509,6 +509,12 @@ seeking C intercept and D slope for a line fitted nearest to these points to min
 
 C scales fixed 1 and D scales variable t resulting in a line p that is nearest to b.
 
+C + Dt = b
+
+C + D (t=0) = (b=6)
+C + D (t=1) = (b=0)
+C + D (t=2) = (b=0)
+
 C and D are independent vectors at this point.
 
 finding x.hat, p and P
@@ -559,3 +565,21 @@ and A<sup>T</sup>b is the vector
 \sum_{}^{} b_i\\
 \sum_{}^{} t_i b_i
 \end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A%5Csum_%7B%7D%5E%7B%7D+b_i%5C%5C%0A%5Csum_%7B%7D%5E%7B%7D+t_i+b_i%0A%5Cend%7Bbmatrix%7D)
+
+Ax = b has no solutions because m > n i.e. A is overspecified i.e. the n columns span a small slice of m dimensional space that may not include b.  
+
+Ax + e = b
+
+when e is as small as possible via x.hat it is a least squares solution.
+
+previous section sought p
+
+this section seeks x.hat
+
+Minimizing error:
+
+x.hat is found by geometry such that error e meets the column space A at a right angle and by algebra such that A<sup>T</sup>Ax.hat = A<sup>T</sup>b and by calculus which via first derivative = 0 gives minimum of the function for x.hat = || Ax - b ||<sup>2</sup>.
+
+calculus is the only unexplored interpretation of x.hat
+
+
