@@ -538,6 +538,8 @@ solving A<sup>T</sup>Ax.hat = A<sup>T</sup>b gives the projection p = Ax.hat of 
 
 when Ax = b has no solutions, x.hat is the least squares solution: || b - Ax ||<sup>2</sup> is minimized. (b - Ax = b - p = e)
 
+(recall ||a - b|| = ((a - b)<sup>2</sup>)<sup>0.5</sup>) = a<sup>2</sup> - ab cos theta - ba cos theta - b<sup>2</sup> but cos theta = 0 when a - b = b - Ax = e in this case is right angled.)
+
 setting partial derivatives of E = || b - Ax || to zero, ∂E / ∂x<sub>i</sub> = 0, also produces A<sup>T</sup>Ax.hat = A<sup>T</sup>b  
 
 to fit points (t<sub>i</sub>, b<sub>i</sub>), ... , (t<sub>m</sub>, b<sub>m</sub>) by a straight line, A is equipped with 2 columns (1, ... , 1) and (t<sub>1</sub>, ... , t<sub>m</sub>)  
