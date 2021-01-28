@@ -525,6 +525,10 @@ LDL<sup>T</sup> factorization
 
 https://tex-image-link-generator.herokuapp.com
 
+\begin{align*}
+\sum_{}^{} t_i^2 \\
+\mathbf{y})
+\end{align*}
 
 
 ![\begin{bmatrix}

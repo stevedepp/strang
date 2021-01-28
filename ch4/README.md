@@ -529,3 +529,31 @@ or more informative e as left null space to A or null space and orthogonal compl
 
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106185327-ae186d80-6170-11eb-9b3c-4d52e5c91db6.png">
 
+when e = 0, Ax = b  
+when e > 0, Ax.hat = p ≠ b
+
+principles:
+
+solving A<sup>T</sup>Ax.hat = A<sup>T</sup>b gives the projection p = Ax.hat of b onto the column space of A.
+
+when Ax = b has no solutions, x.hat is the least squares solution: || b - Ax ||<sup>2</sup> is minimized. (b - Ax = b - p = e)
+
+setting partial derivatives of E = || b - Ax || to zero, ∂E / ∂x<sub>i</sub> = 0, also produces A<sup>T</sup>Ax.hat = A<sup>T</sup>b  
+
+to fit points (t<sub>i</sub>, b<sub>i</sub>), ... , (t<sub>m</sub>, b<sub>m</sub>) by a straight line, A is equipped with 2 columns (1, ... , 1) and (t<sub>1</sub>, ... , t<sub>m</sub>)  
+
+in that case A<sup>T</sup>A is the 2 x 2 matrix 
+
+https://tex-image-link-generator.herokuapp.com
+
+![\begin{bmatrix}
+m&\sum_{}^{} t_i\\
+\sum_{}^{} t_i&\sum_{}^{} t_i^2
+\end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Am%26%5Csum_%7B%7D%5E%7B%7D+t_i%5C%5C%0A%5Csum_%7B%7D%5E%7B%7D+t_i%26%5Csum_%7B%7D%5E%7B%7D+t_i%5E2%0A%5Cend%7Bbmatrix%7D)
+
+and A<sup>T</sup>b is the vector  
+
+![\begin{bmatrix}
+\sum_{}^{} b_i\\
+\sum_{}^{} t_i b_i
+\end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A%5Csum_%7B%7D%5E%7B%7D+b_i%5C%5C%0A%5Csum_%7B%7D%5E%7B%7D+t_i+b_i%0A%5Cend%7Bbmatrix%7D)
