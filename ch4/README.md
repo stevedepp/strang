@@ -582,4 +582,98 @@ x.hat is found by geometry such that error e meets the column space A at a right
 
 calculus is the only unexplored interpretation of x.hat
 
+[not sure the reason for this]
+
+|| Ax - b ||<sup>2</sup> = || Ax - p ||<sup>2</sup> + || e ||<sup>2</sup>
+
+as reduce Ax - p to zero by employing x = x.hat you are left with only squared error.
+
+with C = 5 and D = 3 the error from B to p is (1,2,1) = (e<sub>1</sub>), e<sub>2</sub>, e<sub>3</sub>)
+
+from :  
+C + D (t=0) = (b=6)
+C + D (t=1) = (b=0)
+C + D (t=2) = (b=0)
+
+we get:  
+E = || Ax = b ||<sup>2</sup> =
+( C + D (t=0) = (b=6) )<sup>2</sup>
+( C + D (t=1) = (b=0) )<sup>2</sup>
+( C + D (t=2) - (b=0) )<sup>2</sup>
+
+with 2 unknowns, there are 2 partial derivatives.    
+the chain rule multiplies the derivative of the square by the derivative of its contents
+
+∂E / ∂C treats D as a constant and the derivative of the C = 1 in each case:
+
+∂E / ∂C
+= 2 ( C + D • 0 - 6 )<sup>1</sup> • 1
++ 2 ( C + D • 1 - 0 )<sup>1</sup> • 1
++ 2 ( C + D • 2 - 0 )<sup>1</sup> • 1
+= 0
+
+∂E / ∂D treats C as a constant and the derivative of the t<sub>i</sub>D = 0, 1, and 2 respectively:
+
+∂E / ∂D
+= 2 ( C + D • 0 - 6 )<sup>1</sup> • 0
++ 2 ( C + D • 1 - 0 )<sup>1</sup> • 1
++ 2 ( C + D • 2 - 0 )<sup>1</sup> • 2
+= 0
+
+the C factors are 1,1,1  
+the D factors are 0,1,2   
+obviously appear in A  
+and when algebra reduces ∂E / ∂C and ∂E / ∂D equations,   
+it sums these factors  
+which are squared because the first derivative chain rule places the factor outside the parentheses too 
+so the C factors end up as 1<sup>2</sup>, 1<sup>2</sup>, 1<sup>2</sup> and the D factors end up as 0<sup>2</sup> in the ∂E / ∂C, 1<sup>2</sup>, 2<sup>2</sup> = 5 in the ∂E / ∂D
+
+∂E / ∂C = 3C + 3D = 6
+
+∂E / ∂D = 3C + 5D = 0
+
+producing the matrix same as A<sup>T</sup>A
+
+![\begin{bmatrix}
+3&3\\
+3&5
+\end{bmatrix}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A3%263%5C%5C%0A3%265%0A%5Cend%7Bbmatrix%7D%0A)
+
+
+the calculus equation same as normal equation from linear algebra.
+
+partial derivatives of || Ax - b ||<sup>2</sup> are zero when A<sup>T</sup>Ax = A<sup>T</sup>b
+
+previously when n > m there were many, infinite, solutions to Ax = b and so x = x<sub>r</sub> + x<sub>n</sub> split.  
+
+here with m > n, there are no solutions to Ax = b.  Instead of splitting x, the problem splits b into p and e.  Instead of solving Ax = b which is impossible, solve Ax.hat = p and know e perpendicular to p gets us to b. 
+
+The null space of A<sup>T</sup> = N(A<sup>T</sup>) is very small.  With independent columns, the only solution is Ax = 0 is x = 0. Then A<sup>T</sup>A is invertible.  
+
+The equation A<sup>T</sup>Ax.hat = A<sup>T</sup>b fully determines the best vector x.hat. The error has A<sup>T</sup>e = 0.  All vectors in C(A) have dot product with e = zero.  They are orthogonal complements: left null and column spaces.
+
+A's vectors assumed independent and so A<sup>T</sup>A is invertible.
+
+A's vectors when orthogonal turn A<sup>T</sup>A into a diagonal matrix that is easier to solve since the orthogonal vectors' zero dot products appear in the off diagonals.  
+
+It is easier to solve A<sup>T</sup>Ax.hat = A<sup>T</sup>b:
+
+3C + 8D = np.array([ 7, 6 ]) --> C = 7/3 and D = 6/8
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106217161-a671bc80-61a2-11eb-8d7e-ca67a7fb3e16.png">
+
+so helpful are orthogonal columns that it is worth recentering t by subtracting t.bar = (t<sub>1</sub>, ... , t<sub>m</sub>) / m
+
+for example t = (1,3,5) subtracts t.bar = 3 to give the same solution as above. 
+
+(Similar to Gram-Schmift in next section.)
+
+Dependent columns:
+
+here instead of solving for the full matrix A, which has no solution because it isnt invertible because it's columns are not independent, solve via the single column which is repeated.
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106218677-c5be1900-61a5-11eb-8dac-148981444b27.png">
+
+how ever since A has a null space not zero, there are infinitely many solutions with x<sub>p</sub> = (2,2) and x<sub>n</sub> = (1,-1) and complete solution =  x<sub>p</sub> = (2,2) + s • x<sub>n</sub> = (1,-1).  with s = 0 then complete is (2,2) which is 
 
