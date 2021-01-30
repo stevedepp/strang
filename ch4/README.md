@@ -896,10 +896,10 @@ the least squares solution to Qx = b is x.hat = Q<sup>T</sup>b. Projection of b:
 
 the Gram-Schmidt process takes independent a<sub>i</sub> to orthonormal q<sub>i</sub>.  start with  q<sub>1</sub> = a<sub>1</sub> / || a<sub>1</sub> ||
 
-q<sub>i</sub> is = (a - projection p<sub>i</sub>) / || a<sub>i</sub> - p<sub>i</sub> || 
+q<sub>i</sub> is = (a<sub>i</sub> - projection p<sub>i</sub>) / || a<sub>i</sub> - p<sub>i</sub> || 
 
 projection p<sub>i</sub> = (a<sub>i</sub><sup>T</sup>q<sub>1</sub>) q<sub>1</sub> + ... + (a<sub>i</sub><sup>T</sup>q<sub>i-1</sub>) q<sub>i-1</sub>
 
-each a<sub>i</sub> will be a combination of q<sub>1</sub> to q<sub>i-1</sub> then A = QR: orthogonal Q and triangular R.
+each a<sub>i</sub> will be a combination of q<sub>1</sub> to q<sub>i</sub> then A = QR: orthogonal Q and triangular R.
 
 
