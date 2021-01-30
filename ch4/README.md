@@ -671,9 +671,45 @@ for example t = (1,3,5) subtracts t.bar = 3 to give the same solution as above.
 
 Dependent columns:
 
-here instead of solving for the full matrix A, which has no solution because it isnt invertible because it's columns are not independent, solve via the single column which is repeated.
+Independent columns in A provide an invertible A<sup>T</sup>A.
+Dependent columns in A disable inversion and so rather than solving for the full matrix A<sup>T</sup>A, solve via the single column which is repeated.
 
-<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106218677-c5be1900-61a5-11eb-8dac-148981444b27.png">
+Here A has 2 measurements of b = 1 and 3 at the same time = 1 so A = np.array([[1,1],[1,1]]) and b = np.array([3,1])
 
-how ever since A has a null space not zero, there are infinitely many solutions with x<sub>p</sub> = (2,2) and x<sub>n</sub> = (1,-1) and complete solution =  x<sub>p</sub> = (2,2) + s • x<sub>n</sub> = (1,-1).  with s = 0 then complete is (2,2) which is 
+As before a straight line cannot go through both points (1,3) and (1,1).  Projecting b = (3,1) onto the column space of A yields infinite solutions because A has null space ≠ 0 = (-1,1).
 
+Ax = b
+
+Ax.hat = p where p = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b 
+
+x.hat = x_p = (C, D) = (2,0) will solve but of course so will x_p + s • x_n = (2,0) + 1• (-1,1) e.g. (1,3) or (3,1) 
+
+1 = a1 = 1st column of A
+t = a2 = 2nd column of A
+C = x1 = intercept
+D = x2 = slope
+b = y
+p = projection of b on A
+
+C • 1 + D • t ≠ b
+
+no x = (C, D) --> (t,b) = (1,1) and (1,3):
+observations:
+C • 1 + D • t = b 
+C • 1 + D • 1 = 1
+C • 1 + D • 1 = 3
+but x.hat = x_p = (C, D) = (2,0) --> (t,b) = (2,2) and (2,2) that minimize error to 1 (flat line from 2 intercept)
+2 • 1 + 0 • 2 = 2 = p1
+2 • 1 + 0 • 2 = 2 = p2
+[b = (1,3)] - [p = (2,2)] = [e = (-1,1)]
+or with s = 1, x.hat = x_c = x_p + 1 • x_n = (C, D) = (2-1=1,0+1=1) --> (t,b) = p = (2,2) that has same error.
+1 • 1 + 1 • 1 = 2 = p1
+1 • 1 + 1 • 1 = 2 = p2
+b - p = e = (-1,1)
+or with s = -1, x.hat = x_p - 1 • x_n = (C, D) = (2--1=3,0-+1=-1) --> (t,b) = p = (2,2) that has same error.
+3 • 1 - 1 • 1 = 2 = p1
+3 • 1 - 1 • 1 = 2 = p2
+b - p = e = (-1,1)
+
+as shown here:  
+<img width="522" alt="image" src="https://user-images.githubusercontent.com/38410965/106343414-40a13580-6273-11eb-8fbc-d2ddeabf5384.png">
