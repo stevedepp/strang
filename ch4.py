@@ -21,8 +21,11 @@ def ls_doc(A, xhat, b, p):
     D = xhat[1]
     a1 = A[:,0]
     a2 = A[:,1]
+    At = A.T
+    AtA = At @ A
     e = b - p
     print('a1, C, a2, D, p, b')
     for i in range(len(b)):
         print(a1[i],C,'+',a2[i],D,'=',p[i],'!=',b[i], 'by',e[i])
-    return a1, C, a2, D, p, b 
+    print('normal equation: AtA', AtA, 'times xhat', xhat, '= Atb', At @ b)
+    return a1, C, a2, D, p, b

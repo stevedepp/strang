@@ -801,11 +801,86 @@ good problems:
 
 1  with b = 0,8,8,20 at t = 0,1,3, 4 solve normal equation A<sup>T</sup>Ax = A<sup>T</sup>b for xhat, P, heights p and minimum error E = ∑ e.  Find 4 equations Ca1 + Da2 = p ≠ b 
 
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106360442-6ddafb80-62e6-11eb-93b9-8a7f9379d8d8.png">
+compute the normal equation
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106361087-00c96500-62ea-11eb-8f26-0092fa4b7bf2.png">
 
 using new function "doc_ls"
 
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106360462-89460680-62e6-11eb-9a07-79f0df38a79f.png">
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106361097-0b83fa00-62ea-11eb-9145-46bf4def0f99.png">
 
+compute the partials ∂C / ∂e and ∂D / ∂E for the grouped 4 equations and reduce to the normal equation.
+
+E = (1•C + 0•D - 0)<sup>2</sup> + (1•C + 1•D - 8)<sup>2</sup> + (1•C + 3•D - 8)<sup>2</sup> + (1•C + 4•D - 20)<sup>2</sup>  
+
+∂C/∂E   
+= 2•(1•C + 0•D - 0)<sup>2</sup>•1 + 2•(1•C + 1•D - 8)<sup>2</sup>•1 + 2•(1•C + 3•D - 8)<sup>2</sup>•1 + 2•(1•C + 4•D - 20)<sup>2</sup>•1  
+= 4C + 8D = 36 = C + 2D = 9
+
+∂D/∂E   
+= 2•(1•C + 0•D - 0)<sup>2</sup>•0 + 2•(1•C + 1•D - 8)<sup>2</sup>•1 + 2•(1•C + 3•D - 8)<sup>2</sup>•3 + 2•(1•C + 4•D - 20)<sup>2</sup>•4
+= 8C + 26D = 112
+
+normal equation via calculus:   
+1C + 2D = 9   
+8C + 26D = 112   
+
+5. Find height C of best horizontal line to fit b = 0,8,8,20 at times t = 0,1,3,4.  Thus, only looking for flat line only intercept C is relevant and D irrelevant.  Set A = only the a1 component that is relevant to intercept and solve for p.  Show the normal equation.  This is projecting the vector b = (0,8,8,20) onto the line A = (1,1,1,1) to get p = (9,9,9,9) because xhat = 9 and notice that p is still perpendicular to e
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106361925-ff9a3700-62ed-11eb-9e09-de48cf6b9635.png">
+
+Find the closest line through the origin, i.e. with a zero intercept, and thus C and a1 irrelevant:
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106362020-86e7aa80-62ee-11eb-8e73-15d8f9dfeb9c.png">
+
+now use a degree 2 polynomial to solve for best parabola:
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106362348-48eb8600-62f0-11eb-8f67-1f10d63001b5.png">
+
+now fit a 4th degree, cube, to the 4 points.  as the matrix becomes square, we get a solution with zero error:
+
+"Vandermort gives exact interpolation by a cubic at 0,1,3,4"
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106362430-bf888380-62f0-11eb-92f0-57bf864417be.png">
+
+the average of the 4 times t = 0,1,3,4 = 2 and 4 actual heights b = 0,8,8,20 = 9
+verify that the best line goes through the center point t.bar, b.bar = 2,9  
+explain why C + D•t.bar = b.bar comes from the first equation where C = 1 and D = 4:
+C + D t.bar = b.bar ... 1 + 4 • 2 = 9
+
+The reason is that the first equation has C•m + D•∑t<sub>i</sub> = ∑b<sub>i</sub>  
+when divided by m, it shows that the best line goes through b.bar at time t.bar 
+
+
+12. project b = (b<sub>1</sub>, ... , b<sub>m</sub>) onto the line through a = (1, ... , 1) by solving m equations ax = b in 1 unknown by least squares. 
+
+solve a<sup>T</sup>ax = a<sup>T</sup>b to show that x.hat is the mean or average of the b's.  remember C = 1, .. ,1
+
+a = (1, ... , 1) has a<sup>T</sup>a = m = ∑ (1, ... , 1) and a<sup>T</sup>b = ∑ (b<sub>1</sub>, ... , b<sub>m</sub>)
+
+so a<sup>T</sup>b / a<sup>T</sup>a = (b<sub>1</sub> + ... + b<sub>m</sub>) / m = average of b's
+
+this was alluded to in the matrices formulas earlier in this section of chapter.
+
+Find e = b - ax.hat and variance of b || e ||<sup>2</sup> and standard deviation of b = || e || 
+
+|| e ||<sup>2</sup> =  (b<sub>1</sub> - weighted_mean)<sup>2</sup> + ... + (b<sub>m</sub> = weighted_mean)<sup>2</sup> = 
+
+|| e || = standard deviation
+
+
+13. first assumption behind least squares Ax = b noise e with mean zero. multiply the error vector e = b - Ax by (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> to get (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b - (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>x = x.hat - x on the RHS.  The estimation errors x.hat - x average to zero.  The estimation x.hat is unbiased. this tells us when the components of Ax - b add to zero, so do the components of x.hat - x.  so x unbiased estimator.   Ax-b = y.hat and y departing from zero when x.hat and x do so. "
+
+14. the m errors e<sub>i</sub> are independent with variance sigma squared so the average of (b-Ax)<sup>T</sup> is sigma<sup>2</sup> • I.   multiply on LHS by (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> and on RHS by A(A<sup>T</sup>A)<sup>-1</sup> to show that the average matrix (x.hat - x)(x.hat - x)<sup>T</sup> is sigma<sup>2</sup>(A<sup>T</sup>A)<sup>-1</sup>.  This covariance matrix W in section 10.2.
+
+might help: ee<sup>T</sup> = || e ||<sup>2</sup> = (b - Ax)(b-Ax)<sup>T</sup>
+
+the matrix (x.hat - x)(x.hat - x)<sup>T</sup> is (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>(b-Ax)(b-Ax)<sup>T</sup>A(A<sup>T</sup>A)<sup>-1</sup> when the average of (b-Ax)(b-Ax)<sup>T</sup> = sigma<sup>2</sup> • I
+the average of (x.hat - x)(x.hat - x)<sup>T</sup> will be the output covariance matrix (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>sigma<sup>2</sup>A(A<sup>T</sup>A)<sup>-1</sup> which simplifies to sigma<sup>2</sup>(A<sup>T</sup>A)<sup>-1</sup> that gives the average of the squared output errors x.hat - x.  
+
+15.  when A has a column of four 1s, problem 14 gives the expected error (x.hat - x) as sigma (A<sup>T</sup>A(<sup>-1</sup>) = sigma<sup>2</sup>/4 
+
+ny taking m measurements, the variance drops from sigma<sup>2</sup> to sigma<sup>2</sup>/m
+
+this leads to the monte carlo method in section 12
 
 
