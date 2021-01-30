@@ -713,3 +713,99 @@ b - p = e = (-1,1)
 
 as shown here:  
 <img width="522" alt="image" src="https://user-images.githubusercontent.com/38410965/106343414-40a13580-6273-11eb-8fbc-d2ddeabf5384.png">
+
+
+section 7.4 pseudo inverse of A chooses the shortest solution to Ax.hat = p, aka x<sup>+</sup> = (1,1) which is the particular solution in the row space of A, i.e. x<sub>p</sub> shown above, and x<sup>+</sup> has length √2 which is better than x.hat = (2,0) and (0,2) which have length = 2.  Arbitrarily can choose the bull space component of the x<sup>+</sup> solution to be zero [by setting s = 0 i guess].
+
+fit a parabola
+
+C + Dt + Et<sup>2</sup> = b  
+
+where b might be height of ball at time t  
+
+c.hat ( C, D, E ) 
+
+C + D t<sub>1</sub> + E t<sub>m</sub><sup>2</sup> = b<sub>1</sub>
+...
+C + D t<sub>m</sub> + E t<sub>m</sub><sup>2</sup> = b<sub>m</sub>
+
+Ax = b with a m x n or m x 3 matrix.
+
+3 normal equations are captured in A<sup>T</sup>A = A<sup>T</sup>b
+
+column space of A has dimension 3 = number of basis vectors.  
+
+the projection of b is p = Ax.hat combinig 3 columns using coefficients C, D, E
+
+error e at each data point is e<sub>i</sub> = b<sub>i</sub> - C - Dt<sub>i</sub> - Et<sub>i</sub><sup>2</sup>
+
+the total squared error is E = e<sub>i</sub><sup>2</sup> + ... + e<sub>m</sub><sup>2</sup>
+
+total squared error can be minimized via calculus by taking partial derivative of E with respect to C, D, E which will be zero when x = x.hat = (C, D, E) that solves the 3 x 3 system of equations when m = 3: A<sup>T</sup>Ax.hat = A<sup>T</sup>b.  
+
+section 10.5 does more with least squares: Fourier seires approximate function rather than vectors.
+
+example: 
+
+C + Dt + Et<sup>2</sup> = b to push us to 3 different heights b = (6,0,0) when t = (0,1,2):
+
+C + D•0 + E•0<sup>2</sup> = 6  
+C + D•1 + E•1<sup>2</sup> = 0  
+C + D•2 + E•2<sup>2</sup> = 0  
+
+x = x.hat = (6,-9, 3) so b = p = (6,0,0)
+
+6 + -9•0 + 3•0<sup>2</sup> = 6  
+6 + -9•1 + 3•1<sup>2</sup> = 0  
+6 + -9•2 + 3•2<sup>2</sup> = 0
+
+gives an exact fit because A is invertible, essentially because A is square already.  Wont always be invertible, even though we insist on indpendence, but certainly helps that m = n.
+
+A is square.
+
+A echelon form is the identity matrix  
+
+Ax = b --> x = A<sup>-1</sup>b = (6,-9,3)  --> Ax = (6,0,0)
+
+e = b - p = 0
+
+P = identity matrix because A column space is all of R<sup>3</sup> and so Pb which is projecting b onto A is projecting b into R<sup>3</sup>.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106346408-f1640080-6284-11eb-8d4b-32dd2b351a32.png">
+
+A has 3 columns that span the whole space of R<sup>3</sup>.  The projection matrix is the identity matrix.  The projection of b is b.  The error is zero.  We dont need A<sup>T</sup>Ax.hat = A<sup>2</sup>b because inversion solves Ax = b directly.  
+
+(t<sub>4</sub>, b<sub>4</sub>) may or may not be on the parabola.  if on the parabola, solve directly.  if not on the parabola then solve via A<sup>T</sup>Ax.hat = A<sup>T</sup>b.  The error will not be at the last point even though first 3 points are on this parabola.  The errors will be averaged out over all points. .  The 4th point makes m > n --> least squares need.
+
+review:  
+
+the least squares solution x.hat minimizes:
+
+|| Ax - b ||<sup>2</sup> = x<sup>T</sup>A<sup>T</sup>Ax - 2x<sup>T</sup>A<sup>T</sup>b + b<sup>T</sup>b
+
+which is E = the sum of squares of the errors in the m equations m > n.
+
+the best x.hat comes from the normal equations A<sup>T</sup>Ax.hat = A<sup>T</sup>b 
+
+To fit m points by a line b = C + Dt the normal equations give C and D
+
+the heights of the best fit line are p = (p<sub>1</sub>, ... , p<sub>m</sub>) 
+
+the vertical distances to the b data points are the errors e = (e<sub>1</sub>, ... , e<sub>m</sub>)
+
+A key equation is A<sup>T</sup>e = 0 for orthogonality.
+
+if fit m points by a combination of n < m functions, the m equations Ax = b are generally unsolvable.  The n equations A<sup>T</sup>Ax.hat = A<sup>T</sup>b give the least squares solution = combination with the smallest MSE.
+
+good problems:
+
+1  with b = 0,8,8,20 at t = 0,1,3, 4 solve normal equation A<sup>T</sup>Ax = A<sup>T</sup>b for xhat, P, heights p and minimum error E = ∑ e.  Find 4 equations Ca1 + Da2 = p ≠ b 
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106360442-6ddafb80-62e6-11eb-93b9-8a7f9379d8d8.png">
+
+using new function "doc_ls"
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106360462-89460680-62e6-11eb-9a07-79f0df38a79f.png">
+
+
+
