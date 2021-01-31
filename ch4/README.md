@@ -970,9 +970,9 @@ example of rotation:
 
 Q rotates every vector in the plane by angle theta
 
-the columns of Q are orthogonal: (cos, sin) • (-sin, cos) = -cos sin + sin cos = cos sin - cos sin = 0
+the columns of Q are orthogonal: (cos&theta;, sin&theta;) • (-sin&theta;, cos&theta;) = -cos&theta; sin&theta; + sin&theta; cos&theta; = cos&theta; sin&theta; - cos&theta; sin&theta; = 0
 
-the columns of Q are unit vectors: sin<sup>2</sup>&theta; + cos<sup>2</sup>&theta = = x<sup>2</sup> + y <sup>2</sup> = 1 as long as q<sub>1</sub> orthogonal to q<sub>2</sub>.
+the columns of Q are unit vectors: sin<sup>2</sup>&theta; + cos<sup>2</sup>&theta; = = x<sup>2</sup> + y <sup>2</sup> = 1 as long as q<sub>1</sub> orthogonal to q<sub>2</sub>.
 
 I = Q<sup>T</sup>Q = Q<sup>-1</sup>Q and because Q is square QQ<sup>-1</sup>
 
