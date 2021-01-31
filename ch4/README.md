@@ -1012,4 +1012,43 @@ every permutation matrix is an orthogonal matrix
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106394704-e7004e80-63cb-11eb-8218-7d3da20b539d.png">
 
+reflection matrix
 
+1. take any unit vector u   
+2. set Q = I - 2uu<sup>T</sup>   
+3. Q is symmetric and orthogonal and Q<sup>2</sup> = I  
+because reflecting twice through a mirror brings back the original like (-1)<sup>2</sup> = 1
+
+unit vector: u<sup>T</sup>u = 1  
+
+u = (u1, u2)
+
+uu<sup>T</sup> =   
+
+![\begin{bmatrix}
+u_1*u_1&u_1*u_2\\
+u_2*u_1&u_2*u_2
+\end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Au_1%2Au_1%26u_1%2Au_2%5C%5C%0Au_2%2Au_1%26u_2%2Au_2%0A%5Cend%7Bbmatrix%7D)
+
+np.diag(Q) = u<sub>1</sub><sup>2</sup>,  u<sub>2</sub><sup>T</sup>
+
+unit vectors: (u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>T</sup>)<sup>2</sup> = 1
+
+so diagonal sums to 1 in Q which means taking some percent of x and its complement percent goes to y
+
+opposite diagonals are identical.
+
+just for diagonals of Q = I - 2 (uu<sup>T</sup>) ...  
+if diagonal elements contain u1<sup>2</sup> and u2<sup>2</sup> respectively
+then they sum to 1 because as unit vector u, u<sup>2</sup> + u<sup>2</sup> = 1
+if ( x<sup>2</sup> + y<sup>2</sup> )<sup>0.5</sup> = 1  
+then (( x<sup>2</sup> + y<sup>2</sup> )<sup>0.5</sup>)<sup>2</sup> = 1<sup>2</sup>
+and x<sup>2</sup> + y<sup>2</sup> = 1  
+
+a = x<sup>2</sup>
+b = y<sup>2</sup>
+a = 1 - b
+
+if Q = I - 2uu<sup>T</sup>  
+np.diag(Q) = 1 - 2a, 1-2b = 1 - 2(1-b), 1-2b = 1-2 + 2b, 1-2b = -1+2b, 1-2b
+so the diagonals are same but opposite signed number = 
