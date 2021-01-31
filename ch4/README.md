@@ -980,6 +980,8 @@ logically since
 Q<sup>-1</sup>Q = QQ<sup>-1</sup> =   
 Q rotates vectors through &theta; and Q<sup>-1</sup> rotates vectors back through -&theta; 
 
+[i think every rotation matrix is an orthogonal matrix]
+
 ![\begin{bmatrix}
 cos\theta&-sin\theta\\
 sin\theta&cos\theta
@@ -994,3 +996,20 @@ the above Q matrix effect is shown here:
 and implemented in degrees_shift:
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106393706-b2d65f00-63c6-11eb-9c53-082013491229.png">
+
+example of permutation  
+
+change the order of rows when used on the LHS and of columns when used on the RHS.  
+
+since one and only one 1 is in every column    
+all columns are unit vectors and orthogonal to each other  
+
+the inverse of a permutation is its transpose  Q<sup>-1</sup> = Q<sup>T</sup>
+
+every permutation matrix is an orthogonal matrix
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106394687-d059f780-63cb-11eb-8654-d48dec8a3fbf.png">
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106394704-e7004e80-63cb-11eb-8218-7d3da20b539d.png">
+
+

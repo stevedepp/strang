@@ -69,3 +69,12 @@ def v2angle(v):
 def angle2v(degrees):
     radians = deg2rad(degrees)
     return sp.Matrix([cos(radians), sin(radians)])
+
+def permutation(order):
+    ''''order is a list object beginning at 1 of col or row order of I'''
+    r = max(order)
+    Q = sp.zeros(r)
+    for i in range(0, r):
+        Q[i, order[i] - 1] = 1
+    return Q
+        
