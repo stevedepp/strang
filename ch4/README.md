@@ -951,9 +951,8 @@ independent vs orthogonal
 rectangular vs square
 any length vs unit length
 
-example of rotation
 
-but first some utility functions:
+some utility functions:
 
 deg2rad - converts degrees from 1,0 to units of pi   
 rad2deg  - converts units of pi to deg  
@@ -967,4 +966,19 @@ angle2v - converts any angle from x-axis to a unit vector.
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106376359-a4eef280-6362-11eb-9afc-419e1b5e605b.png">
 
+example of rotation:
+
+Q rotates every vector in the plane by angle theta
+
+the columns of Q are orthogonal: (cos, sin) • (-sin, cos) = -cos sin + sin cos = cos sin - cos sin = 0
+
+the columns of Q are unit vectors: sin<sup>2</sup>/theta + cos<sup>2</sup>/theta = = x<sup>2</sup> + y <sup>2</sup> = 1 as long as q<sub>1</sub> orthogonal to q<sub>2</sub>.
+
+I = Q<sup>T</sup>Q = Q<sup>-1</sup>Q and because Q is square QQ<sup>-1</sup>
+
+![\begin{bmatrix}
+cos\theta&-sin\theta\\
+sin\theta&cos\theta
+\end{bmatrix}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Acos%5Ctheta%26-sin%5Ctheta%5C%5C%0Asin%5Ctheta%26cos%5Ctheta%0A%5Cend%7Bbmatrix%7D%0A)
 
