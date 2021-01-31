@@ -1034,12 +1034,12 @@ np.diag(Q) = 1 - 2 • u<sub>1</sub><sup>2</sup>,  1 - 2 • u<sub>2</sub><sup>2
 
 unit vectors: (u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup>)<sup>0.5</sup> = 1
 
-so diagonal sums to 1 in Q which means taking some percent of x and its complement percent goes to y
+so diagonal of uu<sup>T</sup> sums to 1 
 
 opposite diagonals are identical.
 
 just for diagonals of Q = I - 2 (uu<sup>T</sup>) ...  
-if diagonal elements contain u1<sup>2</sup> and u2<sup>2</sup> respectively
+if diagonal elements contain u<sub>1</sub><sup>2</sup> and u<sub>2</sub><sup>2</sup> respectively
 then they sum to 1 because as unit vector u, u<sup>2</sup> + u<sup>2</sup> = 1
 if ( x<sup>2</sup> + y<sup>2</sup> )<sup>0.5</sup> = 1  
 then (( x<sup>2</sup> + y<sup>2</sup> )<sup>0.5</sup>)<sup>2</sup> = 1<sup>2</sup>
