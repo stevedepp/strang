@@ -968,4 +968,3 @@ angle2v - converts any angle from x-axis to a unit vector.
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106376359-a4eef280-6362-11eb-9afc-419e1b5e605b.png">
 
 
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106392629-c383d680-63c0-11eb-90aa-87ddcdce44e9.png">
