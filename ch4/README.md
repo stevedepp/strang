@@ -1039,16 +1039,24 @@ then (( u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup> )<sup>0.5</sup>)<s
 then u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup> = 1  
 
 Since Q = I - 2uu<sup>T</sup>  
+this means for diagonals   
 np.diag(Q) = 1 - 2 • u<sub>1</sub><sup>2</sup>,  1 - 2 • u<sub>2</sub><sup>2</sup>
 
-just for diagonals of Q = I - 2 (uu<sup>T</sup>) ...  
-
-a = x<sup>2</sup>
-b = y<sup>2</sup>
-a = 1 - b
+set
+a = u<sub>1</sub><sup>2</sup>
+b = u<sub>2</sub><sup>2</sup>
+b = 1 - a
 
 if Q = I - 2uu<sup>T</sup>  
-np.diag(Q) = 1 - 2a, 1-2b = 1 - 2(1-b), 1-2b = 1-2 + 2b, 1-2b = -1+2b, 1-2b
+then 
+np.diag(Q) 
+= 1 - 2a, 1 - 2b 
+= 1 - 2a, 1 - 2 (1 - a) 
+= 1 - 2a, 1 - 2 + 2a 
+= 1 - 2a, -1 + 2a
+= -(2a - 1), 2a - 1
+= -(2(u<sub>1</sub><sup>2</sup>) - 1), 2(u<sub>1</sub><sup>2</sup>) - 1
+
 so the diagonals are same but opposite signed number = 
 
 opposite diagonals are identical.
