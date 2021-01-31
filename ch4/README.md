@@ -1032,11 +1032,11 @@ u_2*u_1&u_2*u_2
 
 if diagonal elements contain u<sub>1</sub><sup>2</sup> and u<sub>2</sub><sup>2</sup> respectively  
 then they sum to 1   
+u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup> = 1   
 because as unit vector u,   
-u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup> = 1
-if ( x<sup>2</sup> + y<sup>2</sup> )<sup>0.5</sup> = 1  
-then (( x<sup>2</sup> + y<sup>2</sup> )<sup>0.5</sup>)<sup>2</sup> = 1<sup>2</sup>
-and x<sup>2</sup> + y<sup>2</sup> = 1  
+( u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup> )<sup>0.5</sup> = 1  
+then (( u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup> )<sup>0.5</sup>)<sup>2</sup> = 1<sup>2</sup>  
+then u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup> = 1  
 
 
 np.diag(Q) = 1 - 2 • u<sub>1</sub><sup>2</sup>,  1 - 2 • u<sub>2</sub><sup>2</sup>
