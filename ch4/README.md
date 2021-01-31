@@ -902,4 +902,70 @@ projection p<sub>i</sub> = (a<sub>i</sub><sup>T</sup>q<sub>1</sub>) q<sub>1</sub
 
 each a<sub>i</sub> will be a combination of q<sub>1</sub> to q<sub>i</sub> then A = QR: orthogonal Q and triangular R.
 
+detail:
 
+orthogonality good because A<sup>T</sup> is diagonal.
+
+gram-schmidt chooses combinations of A's original basis vectors to produce right angles of orthonormal basis vectors in a new matrix Q
+
+basis   
+independent vectors  
+span a space  
+meet at any angle except zero and 180 degrees (identical)
+
+cannot make independent vectors from dependent vectors
+can make orthogonal vectors from independent vectors
+
+vectors q<sub>1</sub>, ... , q<sub>n</sub> are orthogonal when dot product q<sub>i</sub> • q<sub>j</sub> are zero: q<sub>i</sub><sub>T</sub>q<sub>j</sub>   i ≠ j
+
+normal when lenght || q || = 1 = unit vectors.
+
+orthogonal unit vectors = orthonormal.
+
+vectors q<sub>1</sub>, ... , q<sub>n</sub> are orthonormal are an orthonormal basis if 
+
+q<sub>i</sub><sup>T</sup>q<sub>j</sub> = 0 when i ≠ j orthogonal vectors  
+q<sub>i</sub><sup>T</sup>q<sub>i</sub> = 1 when i = j unit vectors || q || = 1  
+
+A matrix with orthonormal columns is assigned the special letter Q.
+
+Q easy to work with because Q<sup>T</sup>Q = I    
+
+Q matrices have columns that are orthonormal. 
+
+Q is not required to be square.
+
+when Q square, Q<sup>T</sup>Q = I means that Q<sup>T</sup>=Q<sup>-1</sup>
+
+Q that is square   
+called orthogonal matrix not orthonormal matrix   
+inverse from LHS and RHS too 
+rows of square Q are orthonormal too
+inverse is transpose
+
+any matrix with orthonormal columns uses the letter Q
+
+rotation, permutation, reflection are orthogonal matrices
+
+independent vs orthogonal
+rectangular vs square
+any length vs unit length
+
+example of rotation
+
+but first some utility functions:
+
+deg2rad - converts degrees from 1,0 to units of pi   
+rad2deg  - converts units of pi to deg  
+length_xy - takes x and y coordinates  
+length - takes any dim vector   
+make_unit - converts vector to unit vector   
+degrees_shift_xy - moves a point in x,y to a point degrees away from that. from_point and to_point keep non unit length  
+degrees_shift - takes any number of vectors in R<sup>2</sup> and shifts them degrees  
+v2angle - converts a R<sup>2</sup> vector to an angle vs x-axis
+angle2v - converts any angle from x-axis to a unit vector.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106376359-a4eef280-6362-11eb-9afc-419e1b5e605b.png">
+
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106392629-c383d680-63c0-11eb-90aa-87ddcdce44e9.png">
