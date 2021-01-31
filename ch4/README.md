@@ -1032,7 +1032,7 @@ u_2*u_1&u_2*u_2
 
 np.diag(Q) = 1 - 2 • u<sub>1</sub><sup>2</sup>,  1 - 2 • u<sub>2</sub><sup>2</sup>
 
-unit vectors: (u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>T</sup>)<sup>0.5</sup> = 1
+unit vectors: (u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup>)<sup>0.5</sup> = 1
 
 so diagonal sums to 1 in Q which means taking some percent of x and its complement percent goes to y
 
