@@ -976,9 +976,21 @@ the columns of Q are unit vectors: sin<sup>2</sup>&theta; + cos<sup>2</sup>&thet
 
 I = Q<sup>T</sup>Q = Q<sup>-1</sup>Q and because Q is square QQ<sup>-1</sup>
 
+logically since   
+Q<sup>-1</sup>Q = QQ<sup>-1</sup> =   
+Q rotates vectors through &theta; and Q<sup>-1</sup> rotates vectors back through -&theta; 
+
 ![\begin{bmatrix}
 cos\theta&-sin\theta\\
 sin\theta&cos\theta
 \end{bmatrix}
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Acos%5Ctheta%26-sin%5Ctheta%5C%5C%0Asin%5Ctheta%26cos%5Ctheta%0A%5Cend%7Bbmatrix%7D%0A)
 
+the above Q matrix effect is shown here:  
+
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106393690-9cc89e80-63c6-11eb-8511-81e077ac33c6.png">
+
+and implemented in degrees_shift:
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106393706-b2d65f00-63c6-11eb-9c53-082013491229.png">
