@@ -1030,8 +1030,10 @@ u_1*u_1&u_1*u_2\\
 u_2*u_1&u_2*u_2
 \end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Au_1%2Au_1%26u_1%2Au_2%5C%5C%0Au_2%2Au_1%26u_2%2Au_2%0A%5Cend%7Bbmatrix%7D)
 
-if diagonal elements contain u<sub>1</sub><sup>2</sup> and u<sub>2</sub><sup>2</sup> respectively
-then they sum to 1 because as unit vector u, u<sup>2</sup> + u<sup>2</sup> = 1
+if diagonal elements contain u<sub>1</sub><sup>2</sup> and u<sub>2</sub><sup>2</sup> respectively  
+then they sum to 1   
+because as unit vector u,   
+u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup> = 1
 if ( x<sup>2</sup> + y<sup>2</sup> )<sup>0.5</sup> = 1  
 then (( x<sup>2</sup> + y<sup>2</sup> )<sup>0.5</sup>)<sup>2</sup> = 1<sup>2</sup>
 and x<sup>2</sup> + y<sup>2</sup> = 1  
