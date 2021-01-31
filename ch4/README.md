@@ -1030,9 +1030,9 @@ u_1*u_1&u_1*u_2\\
 u_2*u_1&u_2*u_2
 \end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Au_1%2Au_1%26u_1%2Au_2%5C%5C%0Au_2%2Au_1%26u_2%2Au_2%0A%5Cend%7Bbmatrix%7D)
 
-np.diag(Q) = u<sub>1</sub><sup>2</sup>,  u<sub>2</sub><sup>T</sup>
+np.diag(Q) = 1 - 2 • u<sub>1</sub><sup>2</sup>,  1 - 2 • u<sub>2</sub><sup>2</sup>
 
-unit vectors: (u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>T</sup>)<sup>2</sup> = 1
+unit vectors: (u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>T</sup>)<sup>0.5</sup> = 1
 
 so diagonal sums to 1 in Q which means taking some percent of x and its complement percent goes to y
 
