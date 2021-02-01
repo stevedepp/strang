@@ -1017,7 +1017,9 @@ reflection matrix
 1. take any unit vector u   
 2. set Q = I - 2uu<sup>T</sup>   
 3. Q is symmetric and orthogonal and Q<sup>2</sup> = I  
-because reflecting twice through a mirror brings back the original like (-1)<sup>2</sup> = 1
+because reflecting twice through a mirror brings back the original like (-1)<sup>2</sup> = 1,
+reflection matrix squared Q<sup>T</sup>Q is the identity matrix = (I - 2uu<sup>T</sup>)<sup>2</sup> = I - 4uu<sup>T</sup> +4uu<sup>T</sup>uuT because u<sup>T</sup>u = 1
+
 
 unit vector: u<sup>T</sup>u = 1  
 
@@ -1057,6 +1059,7 @@ np.diag(Q)
 = -(2a - 1), 2a - 1
 = -(2(u<sub>1</sub><sup>2</sup>) - 1), 2(u<sub>1</sub><sup>2</sup>) - 1
 
-so the diagonals are same but opposite signed number = 
+so the diagonal components are same but opposite signed number
 
-opposite diagonals are identical.
+off diagonals are identical.
+
