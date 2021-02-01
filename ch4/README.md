@@ -1018,7 +1018,7 @@ reflection matrix
 2. set Q = I - 2uu<sup>T</sup>   
 3. Q is symmetric and orthogonal and Q<sup>2</sup> = I  
 because reflecting twice through a mirror brings back the original like (-1)<sup>2</sup> = 1,
-reflection matrix squared Q<sup>T</sup>Q is the identity matrix = (I - 2uu<sup>T</sup>)<sup>2</sup> = I - 4uu<sup>T</sup> +4uu<sup>T</sup>uuT because u<sup>T</sup>u = 1
+reflection matrix squared Q<sup>T</sup>Q is the identity matrix = (I - 2uu<sup>T</sup>)<sup>2</sup> = I - 4uu<sup>T</sup> +4uu<sup>T</sup>uu<sup>T</sup> because u<sup>T</sup>u = 1
 
 
 unit vector: u<sup>T</sup>u = 1  
@@ -1063,3 +1063,6 @@ so the diagonal components are same but opposite signed number
 
 off diagonals are identical.
 
+example: v<sub>1</sub> = sp.Matrix([-10,10]) reduces to unit vector u<sub>1</sub> = sp.Matrix( [ -1/√2, 1 / √2 ] ) which is orthogonal and unit: u<sub>1</sub><sup>T</sup>u<sub>1</sub> = 1.  Q = sp.Matrix([ [ 0, -1 ], [ -1, 0 ] ]) which when applied to v<sub>2</sub> = sp.Matrix( [3,3] ) flips it across the y axis by switching x and y and signs to sp.Matrix( [-3, -3] )
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106481484-7bc18580-647a-11eb-9bc3-6608ff30a919.png">
