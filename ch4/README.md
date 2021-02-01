@@ -1072,5 +1072,86 @@ Q = sp.Matrix([ [ 0, 1 ], [ 1, 0 ] ]) which when applied to v<sub>2</sub> = sp.M
 v<sub>3</sub> = sp.Matrix( [1,0] ) flips across u<sub>1</sub> in direction of u<sub>1</sub> to sp,Matrix( [0,1] ).
 
 
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106507091-91de3e80-6498-11eb-908c-0b3ac859eed7.png">
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106507283-d1a52600-6498-11eb-970a-1ef9cc375491.png">
+
+example: v<sub>1</sub> = sp.Matrix([10,10]) reduces to unit vector u<sub>1</sub> = sp.Matrix( [ 1/√2, 1 / √2 ] ) which is orthogonal and unit: u<sub>1</sub><sup>T</sup>u<sub>1</sub> = 1.  v<sub>1</sub> points from LL origin to UR on 45 degree line. 
+
+Q causes a reflection to -u<sub>1</sub> ie across a vector from LR to UL.
+
+Q = sp.Matrix([ [ 0, 1 ], [ 1, 0 ] ]) which when applied to v<sub>2</sub> = sp.Matrix( [3,3] ) yeilds a flip across the line throught -u<sub>1</sub> that runs LR to UL to sp.Matrix( [-3, -3 ] )
+
+v<sub>3</sub> = sp.Matrix( [1,0] ) flips across the same -u<sub>1</sub> in direction to sp,Matrix( [-1, 0] ).
+
+<img width="638" alt="image" src="https://user-images.githubusercontent.com/38410965/106508038-e0400d00-6499-11eb-902f-d92d724cca4d.png">
+
+Not entirely sure of the reflection workings.
+
+With reflections lengths do not change || Qx<sup>2</sup> || = || x<sup>2</sup> || because  
+(Qx)<sup>T</sup>(Qx) = x<sup>T</sup>Q<sup>T</sup>Qx = x<sup>T</sup>Ix = x<sup>T</sup>s
+
+if Q has orthonormal columns Q<sup>T</sup>Q = I
+
+Q also preserves dot products between 2 different vectors, x and y: (Qx)<sup>T</sup>Qy = x<sup>T</sup>Q<sup>T</sup>Qy = x<sup>T</sup>y
+
+Projections with orthonormal bases 
+
+Orthonormal matrices simplify computations; numbers do not grow large when lengths of vectors are fixed.  Stable computer codes use Qs as much as possible. 
+
+Projections onto subspaces, e.g., use A<sup>T</sup>A where this A<sup>T</sup>A matrix entries are dot products of a<sub>i</sub><sup>T</sup>a<sub>j</sub> of the basis vectors a<sub>1</sub>, ... , a<sub>n</sub> from A
+
+if basis vectors are orthonormal A<sup>T</sup>A simplifies to Q<sup>T</sup>Q and x.hat, p and P formulas improve. Instead of Q<sup>T</sup>Q or its equivalent I, the formula has a blank:
+
+A<sup>T</sup>Ax.hat = A<sup>T</sup>b --> Q<sup>T</sup>Qx.hat = Q<sup>T</sup>b --> Ix.hat = Q<sup>T</sup>b --> x.hat = Q<sup>T</sup>b
+
+p = Ax.hat = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b --> p = Qx.hat = Q(Q<sup>T</sup>Q)<sup>-1</sup>Q<sup>T</sup>b = QQ<sup>T</sup>b or can just replace x.hat with the formula from paragraph above Q<sup>T</sup>b in the formula p = Qx.hat --> QQ<sup>T</sup>b
+
+P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> = Q(Q<sup>T</sup>Q)<sup>-1</sup>Q<sup>T</sup> = Q ( I ) Q<sup>T</sup> = QQ<sup>T</sup> which also provides a formula for p = Pb = QQ<sup>T</sup>b
+
+least squares solution of Qx = b is x.hat = Q<sup>T</sup>b.
+
+the projection matrix is QQ<sup>T</sup> = P
+
+the projection is p = Qx.hat = QQ<sup>T</sup>b
+
+no matrices are inverted because of orthonormal basis.  
+
+best x.hat = Q<sup>T</sup>b just has dot products of q<sub>1</sub>, ... , q<sub>n</sub> with b --> 1 dimensional (one basis vector) projections. 
+
+the 'coupling matrix' or 'correlation matrix' A<sup>T</sup>A is not Q<sup>T</sup>Q = I.   
+there is no coupling.  
+
+projection onto q's:  
+p 
+= QQ<sup>T</sup>b
+= [q<sub>1</sub>, ... , q<sub>n</sub>] 
+• 
+[
+[q<sub>1</sub><sup>T</sup>b]
+[...]
+[q<sub>n</sub><sup>T</sup>b]
+]
+= q<sub>1</sub>(q<sub>1</sub><sup>T</sup>b) + ... + q<sub>n</sub>(q<sub>n</sub><sup>T</sup>b)
+
+[where each q<sub>j</sub><sup>T</sup>b is a inner product ]
+
+when Q is square m = n the space is whole sapce and Q<sup>T</sup> = Q<sup>-1</sup> and x.hat = Q<sup>T</sup>b is same as x = Q<sup>-1</sup>b: solution is exact not projection. 
+
+the projection of b onto whole space Q is b itself and p = b and P = QQ<sup>T</sup> = I.
+
+if Q not square then p ≠ b.
+
+when projecting onto whole space, when p = b the formular assembles b from 1 dimensional projections.
+
+if q<sub>1</sub>, ... , q<sub>n</sub> is an orthonormal basis for the whole space then Q is square.
+
+[logic appears to go both ways: square --> whole space basis and whole space basis --> square]
+
+every b = QQ<sup>T</sup>b is the sum of its components along the q's:
+
+b = q<sub>1</sub>(q<sub>1</sub><sup>T</sup>b) + ... + q<sub>n</sub>(q<sub>n</sub><sup>T</sup>b)
+
+transforms QQ<sup>T</sup> = I is the foundation of Fourier series and all great transforms of applied mathematics.  transforms break b or functions f(x) into perpendicular pieces.  
+
+inverse transforms add the pieces to put b and f(x) back together.
+
 
