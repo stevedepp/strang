@@ -1063,6 +1063,14 @@ so the diagonal components are same but opposite signed number
 
 off diagonals are identical.
 
-example: v<sub>1</sub> = sp.Matrix([-10,10]) reduces to unit vector u<sub>1</sub> = sp.Matrix( [ -1/√2, 1 / √2 ] ) which is orthogonal and unit: u<sub>1</sub><sup>T</sup>u<sub>1</sub> = 1.  Q = sp.Matrix([ [ 0, -1 ], [ -1, 0 ] ]) which when applied to v<sub>2</sub> = sp.Matrix( [3,3] ) flips it across the y axis by switching x and y and signs to sp.Matrix( [-3, -3] )
+example: v<sub>1</sub> = sp.Matrix([-10,10]) reduces to unit vector u<sub>1</sub> = sp.Matrix( [ -1/√2, 1 / √2 ] ) which is orthogonal and unit: u<sub>1</sub><sup>T</sup>u<sub>1</sub> = 1.  v<sub>1</sub> points from lower right origin to upper left on 45 degree line and that is the direction of reflection. 
 
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106481484-7bc18580-647a-11eb-9bc3-6608ff30a919.png">
+Q causes a reflection to -u<sub>1</sub> ie across a vector from LL to UR.
+
+Q = sp.Matrix([ [ 0, 1 ], [ 1, 0 ] ]) which when applied to v<sub>2</sub> = sp.Matrix( [3,3] ) yeilds no change because v<sub>2</sub> lies on the same vector as u<sub>1</sub> across which vectors are reflected.  
+
+v<sub>3</sub> = sp.Matrix( [1,0] ) flips across u<sub>1</sub> in direction of u<sub>1</sub> to sp,Matrix( [0,1] ).
+
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106507091-91de3e80-6498-11eb-908c-0b3ac859eed7.png">
+
