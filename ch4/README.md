@@ -1312,7 +1312,7 @@ Usually always q's contain square roots.
 <img width="522" alt="image" src="https://user-images.githubusercontent.com/38410965/106632509-d37bf180-654b-11eb-9451-e710925f9507.png">
 
 
-
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/38410965/106632509-d37bf180-654b-11eb-9451-e710925f9507.png">
 
 
 
