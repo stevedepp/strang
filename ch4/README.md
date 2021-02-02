@@ -1211,29 +1211,33 @@ the first direction is accepted as it comes.
 
 2. B is chosen perpendicular to A
 by starting with b   
-from b subtract b's projection p on A because b - p = e is perpendicular to A
+from b subtract b's projection p on A because b - p = e is perpendicular to A  
+and we are looking for something perpendicular to A.    Here's how it goes again:   
 
 B = b - p = e  
 p = Ax.hat = some combination of A's column vectors each weighted by x.hat elements.    
+substitute Ax.hat in for p   
 B = b - Ax.hat = e  
-e is perpendicular to A and since B = e, B is perpendicular to A   
-multiply B = b - Ax.hat by A<sup>T</sup>  and set to zero:   
-A<sup>T</sup>B = 0 = A<sup>T</sup>b - A<sup>T</sup>Ax.hat  
+to solve for and then remove x.hat, use the fact that e is perpendicular to A and since B = e, B is perpendicular to A   
+multiply B = b - Ax.hat by A<sup>T</sup> and set to zero:   
+A<sup>T</sup>B = 0 = A<sup>T</sup>(b - Ax.hat) = A<sup>T</sup>b - AA<sup>T</sup>   
+use the RHS to solve for x.hat:  
 0 = A<sup>T</sup>b - A<sup>T</sup>Ax.hat  
 A<sup>T</sup>b = A<sup>T</sup>Ax.hat   
 ( A<sup>T</sup>b ) / ( A<sup>T</sup> )A = x.hat    
-return to B = b - Ax.hat and replace x.hat with ( A<sup>T</sup>b ) / ( A<sup>T</sup> )A     
---> B = b - A( A<sup>T</sup>b ) / ( A<sup>T</sup> )A
+return to B = b - Ax.hat and replace x.hat with ( A<sup>T</sup>b ) / ( A<sup>T</sup> )A:     
+B = b - A( A<sup>T</sup>b ) / ( A<sup>T</sup> )A
 
 B = b - (A<sup>T<sup>b)A / (A<sup>T<sup>A) 
 
-a and b can be any angle.  
-A and B are orthogonal.
+[ in the end remember B = e on LHS and b - p is on the RHS ]
 
-multiply B = b - (A<sup>T<sup>b) / (A<sup>T<sup>A) by A<sup>T<sup> to verify A and B orthogonal
+[ a and b can be any angle. ] 
+A and B are now orthogonal.
 
-A<sup>T<sup>B = A<sup>T<sup>b - A<sup>T<sup>(A<sup>T<sup>b) / (A<sup>T<sup>A)  
-
-cancell A<sup>T<sup> and A separately in numerator and denominator of the 2nd term on the RHS
-
+multiply B = b - (A<sup>T</sup>b)A / (A<sup>T<sup>A) by A<sup>T<sup> to verify A and B orthogonal:   
+A<sup>T<sup>B = A<sup>T<sup>b - A<sup>T<sup>(A<sup>T<sup>b)A / (A<sup>T<sup>A)   
+cancel A<sup>T<sup> and A separately in numerator and denominator of the 2nd term on the RHS   
+the equality on RHS with zero confirms that the LHS is orthogonal:    
 A<sup>T<sup>B = A<sup>T<sup>b - A<sup>T<sup>(A<sup>T<sup>b) / (A<sup>T<sup>A) 
+A<sup>T<sup>B = A<sup>T<sup>b - (A<sup>T<sup>b)  
