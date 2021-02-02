@@ -1268,3 +1268,52 @@ if had 4th vector for R<sup>4</sup>, subtract d's 3 projections onto A, B and C 
 
 Then divide A by || A ||, B by || B ||, and C by || C || to obtain unit vectors, q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub>
 
+example of gram schmidt
+
+independent, non-orthogonal vectors a, b, c:
+
+a = sp.Matrix( [ 1, -1, 0 ] )  
+b = sp.Matrix ( [ 2, 0, -2 ] )
+c = sp.Matrix ( [ 3, -3, 3 ] )
+
+independence seen via inversion or reduction, non-orthogonality via dot products.
+
+A = a
+
+B 
+= p - p 
+= b - ((A<sup>T</sup>b) / (A<sup>T</sup>A)) A =  b - 2/3 A 
+= sp.Matrix([1,1,2])   
+A<sup>T</sup>A = 2 ; A<sup>T</sup>b = 2  
+Subtract from b, it's projection p along A  
+confirm A<sup>T</sup>B = 0 as engineered  
+B is left null space of A
+
+C 
+= c - p  
+= c - ((A<sup>T</sup>c) / (A<sup>T</sup>A))A - ((B<sup>T</sup>c) / (B<sup>T</sup>B))B   
+= c - (6/2)A + (6/6)B   
+= sp.Matrix([1,1,1])  
+confirm that C is perpendicular to A and B: A<sup>T</sup>C = 0 and B<sup>T</sup>C = 0  
+
+[is p in the column space of AB?  how confirm?  if the rref of AB has zeros at bottom then yes?]
+
+convert A, B, C to unit vectors:
+|| A || = √2, || B || = √6, || C || = √3  
+divide by those lengths for orthonormal bases:  
+q<sub>1</sub> = (1/√2) sp.Matrix( [1,-1,0] )  
+q<sub>2</sub> = (1/√2) sp.Matrix( [1,1,-2] )  
+q<sub>3</sub> = (1/√2) sp.Matrix( [1,1,1] )  
+
+A ,B, C usually contain fractions.   
+Usually always q's contain square roots.  
+
+
+<img width="522" alt="image" src="https://user-images.githubusercontent.com/38410965/106632509-d37bf180-654b-11eb-9451-e710925f9507.png">
+
+
+
+
+
+
+
