@@ -1138,7 +1138,7 @@ p
 There are a few ways to look at this mathematics:  
 1. we've learned that 2 matrices multiplied can be viewed as the sum of matrices formed by the outside products between 1st column x 1st row + 2nd column x 2nd row + ... + nth column x nth row and so QQ<sup>T</sup> is just that q<sub>1</sub>(q<sub>1</sub><sup>T</sup>) + q<sub>2</sub>(q<sub>2</sub><sup>T</sup>) + ... + q<sub>n</sub>(q<sub>n</sub><sup>T</sup> and QQ<sup>T</sup>b is a square matrix whose columns are weighted by the row components of b: 
 
-QQ<sup>T</sup>
+QQ<sup>T</sup>  
 = (q<sub>1</sub>(q<sub>1</sub><sup>T</sup>) + q<sub>2</sub>(q<sub>2</sub><sup>T</sup>) + ... + q<sub>n</sub>(q<sub>n</sub><sup>T</sup>)b
 
 = q<sub>1</sub>(q<sub>1</sub><sup>T</sup>b) + q<sub>2</sub>(q<sub>2</sub><sup>T</sup>b) + ... + q<sub>n</sub>(q<sub>n</sub><sup>T</sup>b)
@@ -1154,7 +1154,7 @@ x.hat • a<sup>T</sup>a = a<sup>T</sup>b
 x.hat = a<sup>T</sup>b / a<sup>T</sup>a   
 since p = P b = a x.hat = a ( a<sup>T</sup>b ) / ( a<sup>T</sup>a )   
 P = aa<sup>T</sup> / a<sup>T</sup>a   
-if P = Q because it has orthonormal vectors, then, P = aa<sup>T</sup> / a<sup>T</sup>a = qq<sup>T</sup> / q<sup>T</sup>q where the denominator is the length of the unit vector 1 and the numerator is a single dimension of many q's in Q that are added together to make Q.  p = Pb = qq<sup>T</sup>b as shown in our formula,
+if P = Q because it has orthonormal vectors, then, P = aa<sup>T</sup> / a<sup>T</sup>a = qq<sup>T</sup> / q<sup>T</sup>q where the denominator is the length of the unit vector 1 and the numerator is a single dimension of many q's in Q that are added together to make Q.  p = Pb = qq<sup>T</sup>b as shown in our formula,   
 
 when Q is square m = n the space is whole sapce and Q<sup>T</sup> = Q<sup>-1</sup> and x.hat = Q<sup>T</sup>b is same as x = Q<sup>-1</sup>b: solution is exact not projection. 
 
@@ -1184,7 +1184,7 @@ Q<sup>T</sup>Q = QQ<sup>T</sup> = I
 
 sum of projections of b on Q is shown as sum of projections of b on each of Qs columnar vectors.  b is pulled out and distributed to each of the q<sub>j</sub>q<sub>j</sub><sup>T</sup> that are summed up to produce p = b.
 
-each of the q<sub>j</sub><sup>T<sup>b values are shown before they are then multiplied by q<sub>j</sub>
+each of the q<sub>j</sub><sup>T</sup>b values are shown before they are then multiplied by q<sub>j</sub>
 
 q<sub>j</sub>q<sub>j</sub><sup>T</sup>  
 separate projections of b = sp.Matrix([0,0,1]) on to q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub> are p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub>
@@ -1193,7 +1193,7 @@ because QQ<sup>T</sup>b decomposes into sum of outside products q<sub>j</sub>(q<
 
 separate q<sub>j</sub>q<sub>j</sub><sup>T</sup>b are 2/3 q<sub>1</sub>, 2/3 q<sub>2</sub>, -1/3q<sub>3</sub> 
 
-the individual q<sub>j</sub>q</sub>j</sub></sup>T<sup> are summed to produce I as QQ<sup>T</sup> would as well.
+the individual q<sub>j</sub>q</sub>j</sub></sup>T</sup> are summed to produce I as QQ<sup>T</sup> would as well.
 
 <img width="522" alt="image" src="https://user-images.githubusercontent.com/38410965/106540483-07183680-64ce-11eb-96e0-b9beb31e4f11.png">
 
@@ -1255,7 +1255,7 @@ heres c formula:
 C = c - e<sub>A</sub> - e<sub>B</sub>  
 C = c - A<sup>T</sup>cA / A<sup>T</sup>A - B<sup>T</sup>cB / B<sup>T</sup>B  
 
-[try to derive here:actually no need because its simply C<sub>A</sub> = c - p<sub>A</sub>] and then C = C<sub>A</sub> - p<sub>B<sub>
+[try to derive here:actually no need because its simply C<sub>A</sub> = c - p<sub>A</sub>] and then C = C<sub>A</sub> - p<sub>B</sub>
 C = c - p = e   
 p = ABx.hat     
 C and c - p and c - ABx.hat and e are equal and are perpendicular to AB  
