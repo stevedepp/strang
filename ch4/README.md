@@ -1419,7 +1419,7 @@ r<sub>i,j</sub> = ∑ i=1 to m of q<sub>i,k</sub>v<sub>i,j</sub>
 and  
 v<sub>i,j</sub> = v<sub>i,j</sub> - q<sub>i,k</sub>r<sub>k,j</sub>  
 and  
-r<sub>j,j</sub> = ( ∑ i = 1 to m of v<sub>i,j</sub><sup>2</sup )<sup>1/2</sup>  
+r<sub>j,j</sub> = ( ∑ i = 1 to m of v<sub>i,j</sub><sup>2</sup )<sup>0.5</sup>  
 and 
 q<sub>i,j</sub> = v<sub>i,j</sub> / r<sub>j,j</sub>
 
