@@ -1210,7 +1210,7 @@ in our example, start with three vectors that are independent: a, b, c and const
 the first direction is accepted as it comes.
 
 2. B is chosen perpendicular to A
-by starting with b
+by starting with b   
 from b subtract b's projection p on A because b - p = e is perpendicular to A
 
 B = b - p = e  
