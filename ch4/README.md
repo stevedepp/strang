@@ -1241,3 +1241,30 @@ cancel A<sup>T</sup> and A separately in numerator and denominator of the 2nd te
 the equality on RHS with zero confirms that the LHS is orthogonal:    
 A<sup>T</sup>B = A<sup>T</sup>b - A<sup>T</sup>(A<sup>T</sup>b) / (A<sup>T</sup>A) 
 A<sup>T</sup>B = A<sup>T</sup>b - (A<sup>T</sup>b)  
+
+third dimension starts with c.   
+c is not likely perpendicular to A and B.   
+
+c is a vector.   
+c is not likely in perpendicular to A or B.   
+c is not likely in A or B 
+c can project onto A and B which together are perpendicular axes  of a plane
+heres c formula:  
+C = c - e<sub>A</sub> - e<sub>B</sub>  
+C = c - A<sup>T</sup>cA / A<sup>T</sup>A - B<sup>T</sup>cB / B<sup>T</sup>B  
+
+[try to derive here:]
+C = c - p = e   
+p = ABx.hat     
+C and c - p and c - ABx.hat and e are equal and are perpendicular to AB  
+multiply AB by c - ABx.hat and set = 0 to solve for x.hat  
+(AB)<sup>T</sup>(c - ABx.hat) = 0  
+(AB)<sup>T</sup>c = (AB)<sup>T</sup>ABx.hat)  
+(AB)<sup>T</sup>c / (AB)<sup>T</sup>AB = x.hat  
+return to C = c - ABx.hat and substitute in x.hat   
+C = c - AB((AB)<sup>T</sup>c / (AB)<sup>T</sup>AB)  
+
+if had 4th vector for R<sup>4</sup>, subtract d's 3 projections onto A, B and C to get D.  This is Gram-Schmidt.
+
+Then divide A by || A ||, B by || B ||, and C by || C || to obtain unit vectors, q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub>
+
