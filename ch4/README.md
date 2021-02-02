@@ -1236,8 +1236,8 @@ B = b - (A<sup>T<sup>b)A / (A<sup>T<sup>A)
 A and B are now orthogonal.
 
 multiply B = b - (A<sup>T</sup>b)A / (A<sup>T<sup>A) by A<sup>T<sup> to verify A and B orthogonal:   
-A<sup>T<sup>B = A<sup>T<sup>b - A<sup>T<sup>(A<sup>T<sup>b)A / (A<sup>T<sup>A)   
-cancel A<sup>T<sup> and A separately in numerator and denominator of the 2nd term on the RHS   
+A<sup>T<sup>B = A<sup>T<sup>b - A<sup>T<sup>(A<sup>T</sup>b)A / (A<sup>T</sup>A)   
+cancel A<sup>T</sup> and A separately in numerator and denominator of the 2nd term on the RHS   
 the equality on RHS with zero confirms that the LHS is orthogonal:    
-A<sup>T<sup>B = A<sup>T<sup>b - A<sup>T<sup>(A<sup>T<sup>b) / (A<sup>T<sup>A) 
-A<sup>T<sup>B = A<sup>T<sup>b - (A<sup>T<sup>b)  
+A<sup>T</sup>B = A<sup>T</sup>b - A<sup>T</sup>(A<sup>T</sup>b) / (A<sup>T</sup>A) 
+A<sup>T</sup>B = A<sup>T</sup>b - (A<sup>T</sup>b)  
