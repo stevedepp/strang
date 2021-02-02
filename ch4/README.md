@@ -1132,7 +1132,27 @@ p
 ]
 = q<sub>1</sub>(q<sub>1</sub><sup>T</sup>b) + ... + q<sub>n</sub>(q<sub>n</sub><sup>T</sup>b)
 
-[where each q<sub>j</sub><sup>T</sup>b is a inner product ]
+[
+There are a few ways to look at this mathematics:  
+1. we've learned that 2 matrices multiplied can be viewed as the sum of matrices formed by the outside products between 1st column x 1st row + 2nd column x 2nd row + ... + nth column x nth row and so QQ<sup>T</sup> is just that q<sub>1</sub>(q<sub>1</sub><sup>T</sup>) + q<sub>2</sub>(q<sub>2</sub><sup>T</sup>) + ... + q<sub>n</sub>(q<sub>n</sub><sup>T</sup> and QQ<sup>T</sup>b is a square matrix whose columns are weighted by the row components of b: 
+
+QQ<sup>T</sup>
+= (q<sub>1</sub>(q<sub>1</sub><sup>T</sup>) + q<sub>2</sub>(q<sub>2</sub><sup>T</sup>) + ... + q<sub>n</sub>(q<sub>n</sub><sup>T</sup>)b
+
+= q<sub>1</sub>(q<sub>1</sub><sup>T</sup>b) + q<sub>2</sub>(q<sub>2</sub><sup>T</sup>b) + ... + q<sub>n</sub>(q<sub>n</sub><sup>T</sup>b)
+
+2. each q<sub>j</sub><sup>T</sup>b is a inner product that weights q in q<sub>j</sub>(q<sub>j</sub><sup>T</sup>b)
+
+3. b shines onto a to form p 
+p is some percentage x.hat of a 
+a and p are perpendicular to error e = b - p: a • e = 0
+so, a • ( b - p ) = a • ( b - x.hat a ) = a • b - a • x.hat • a = 0
+a • x.hat • a = a • b
+x.hat • a<sup>T</sup>a = a<sup>T</sup>b 
+x.hat = a<sup>T</sup>b / a<sup>T</sup>a
+since p = P b = a x.hat = a ( a<sup>T</sup>b ) / ( a<sup>T</sup>a )
+P = aa<sup>T</sup> / a<sup>T</sup>a
+if P = Q because it has orthonormal vectors, then, P = aa<sup>T</sup> / a<sup>T</sup>a = qq<sup>T</sup> / q<sup>T</sup>q where the denominator is the length of the unit vector 1 and the numerator is a single dimension of many q's in Q that are added together to make Q.  p = Pb = qq<sup>T</sup>b as shown in our formula,
 
 when Q is square m = n the space is whole sapce and Q<sup>T</sup> = Q<sup>-1</sup> and x.hat = Q<sup>T</sup>b is same as x = Q<sup>-1</sup>b: solution is exact not projection. 
 
@@ -1153,5 +1173,15 @@ b = q<sub>1</sub>(q<sub>1</sub><sup>T</sup>b) + ... + q<sub>n</sub>(q<sub>n</sub
 transforms QQ<sup>T</sup> = I is the foundation of Fourier series and all great transforms of applied mathematics.  transforms break b or functions f(x) into perpendicular pieces.  
 
 inverse transforms add the pieces to put b and f(x) back together.
+
+example
+
+Q is shown as 1/3 scaling a 3x3 matrix.
+
+Q<sup>T</sup>Q = QQ<sup>T</sup> = I
+
+separate projections of b = sp.Matrix([0,0,1]) on to q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub> are p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub>
+
+because QQ<sup>T</sup>b decomposes into sum of outside products q<sub>j</sub>(q<sub>j</sub><sup>T</sup>b), the individual projections of b onto q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub> sum to the single projection of b onto Q.
 
 
