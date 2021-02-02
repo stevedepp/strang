@@ -1180,8 +1180,30 @@ Q is shown as 1/3 scaling a 3x3 matrix.
 
 Q<sup>T</sup>Q = QQ<sup>T</sup> = I
 
+sum of projections of b on Q is shown as sum of projections of b on each of Qs columnar vectors.  b is pulled out and distributed to each of the q<sub>j</sub>q<sub>j</sub><sup>T<sup> that are summed up to produce p = b.
+
+each of the q<sub>j</sub><sup>T<sup>b values are shown before they are then multiplied by q<sub>j</sub>
+
+q<sub>j</sub>q<sub>j</sub><sup>T<sup>
 separate projections of b = sp.Matrix([0,0,1]) on to q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub> are p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub>
 
 because QQ<sup>T</sup>b decomposes into sum of outside products q<sub>j</sub>(q<sub>j</sub><sup>T</sup>b), the individual projections of b onto q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub> sum to the single projection of b onto Q.
+
+separate q<sub>j</sub>q<sub>j</sub><sup>T<sup>b are 2/3 q<sub>1</sub>, 2/3 q<sub>2</sub>, -1/3q<sub>3</sub> 
+
+the individual q<sub>j</sub>q<sub>j</sub><sup>T<sup> are summed to produce I as QQ<sup>T</sup> would as well.
+
+<img width="522" alt="image" src="https://user-images.githubusercontent.com/38410965/106540483-07183680-64ce-11eb-96e0-b9beb31e4f11.png">
+
+gram schmidt process
+
+orthogonal is good.   
+projections always involve A<sup>T<sup>A and when columns are orthonormal that becomes Q<sup>T<sup>Q which makes inverses unnecessary.  
+
+gram schmidt uncouples the one dimensional projections into n separate dot products q<sub>j</sub>q<sub>j</sub><sup>T<sup>b 
+
+for all this to be true, all vectors in A need to be orthogonal and unit = orthonormal. gram-schmidt does that: makes A's columns orthonormal vectors.
+
+in our example, start with three vectors that are independent: a, b, c and construct three orthogonal vectors A, B, C and then at end divide by || A ||, || B ||, || C || to make them unit and orthonormal. 
 
 
