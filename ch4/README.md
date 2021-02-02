@@ -1,5 +1,7 @@
 ch4
 
+[yellow notes start with "this chapter is a bitch" and it is!]
+
 section 4.1  
 orthogonality of the 4 subspaces  
 
@@ -1315,5 +1317,44 @@ Usually always q's contain square roots.
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/38410965/106632509-d37bf180-654b-11eb-9451-e710925f9507.png">
 
 
+matrix A gave us a, b, c which are converted to matrix Q whose columns are q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub>.   how are these related?
 
+a, b, c are combinations of the q's and the q's are combinations of a, b, c   
+a third matric R connects A and A.
 
+the first step:
+
+q<sub>1</sub> = a / || a ||
+
+with no other vectors involved.
+
+the second step combines A with b:
+
+B = b - ((A<sup>T</sup>b) / (A<sup>T</sup>A)) A  
+q<sub>2</sub> = B / || B ||
+
+with C and q<sub>3</sub> uninvolves.
+
+C = c - ((A<sup>T</sup>c) / (A<sup>T</sup>A))A - ((B<sup>T</sup>c) / (B<sup>T</sup>B))B    
+q<sub>3</sub> = C / || C ||
+
+the uninvolvement of later vectors is THE key point of gram-schmidt:  
+- the vectors a and A and q<sub>1</sub> are all along a single line.  
+- the vectors a, b and A, B and q<sub>1</sub>, q<sub>2</sub> are all in the same plane  
+- the vectors a, b, c, and A, B, C are q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub> are in one subspace
+
+At every step a<sub>1</sub>, ... , a<sub>k</sub> are combinations of q<sub>1</sub>, ... , q<sub>k</sub>.  Later q's are not involved.  [not involved seems to imply trianglar R much like L?]  So the connecting matrix R is triangular:  A = QR  
+
+[ a b c ] = [ q<sub>1</sub> q<sub>2</sub> q<sub>3</sub> ] R
+
+where R is:  
+
+![\begin{bmatrix}
+q_1^Ta&q_1^Tb&q_1^Tc\\
+&q_2^Tb&q_2^Tc\\
+&&q_3^Tc
+\end{bmatrix}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aq_1%5ETa%26q_1%5ETb%26q_1%5ETc%5C%5C%0A%26q_2%5ETb%26q_2%5ETc%5C%5C%0A%26%26q_3%5ETc%0A%5Cend%7Bbmatrix%7D%0A)
+
+A = QR  
+R = Q<sup>T</sup>A  
