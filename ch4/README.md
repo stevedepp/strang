@@ -1143,15 +1143,15 @@ QQ<sup>T</sup>
 
 2. each q<sub>j</sub><sup>T</sup>b is a inner product that weights q in q<sub>j</sub>(q<sub>j</sub><sup>T</sup>b)
 
-3. b shines onto a to form p 
-p is some percentage x.hat of a 
-a and p are perpendicular to error e = b - p: a • e = 0
-so, a • ( b - p ) = a • ( b - x.hat a ) = a • b - a • x.hat • a = 0
-a • x.hat • a = a • b
-x.hat • a<sup>T</sup>a = a<sup>T</sup>b 
-x.hat = a<sup>T</sup>b / a<sup>T</sup>a
-since p = P b = a x.hat = a ( a<sup>T</sup>b ) / ( a<sup>T</sup>a )
-P = aa<sup>T</sup> / a<sup>T</sup>a
+3. b shines onto a to form p  
+p is some percentage x.hat of a  
+a and p are perpendicular to error e = b - p: a • e = 0   
+so, a • ( b - p ) = a • ( b - x.hat a ) = a • b - a • x.hat • a = 0   
+a • x.hat • a = a • b   
+x.hat • a<sup>T</sup>a = a<sup>T</sup>b    
+x.hat = a<sup>T</sup>b / a<sup>T</sup>a   
+since p = P b = a x.hat = a ( a<sup>T</sup>b ) / ( a<sup>T</sup>a )   
+P = aa<sup>T</sup> / a<sup>T</sup>a   
 if P = Q because it has orthonormal vectors, then, P = aa<sup>T</sup> / a<sup>T</sup>a = qq<sup>T</sup> / q<sup>T</sup>q where the denominator is the length of the unit vector 1 and the numerator is a single dimension of many q's in Q that are added together to make Q.  p = Pb = qq<sup>T</sup>b as shown in our formula,
 
 when Q is square m = n the space is whole sapce and Q<sup>T</sup> = Q<sup>-1</sup> and x.hat = Q<sup>T</sup>b is same as x = Q<sup>-1</sup>b: solution is exact not projection. 
@@ -1206,4 +1206,29 @@ for all this to be true, all vectors in A need to be orthogonal and unit = ortho
 
 in our example, start with three vectors that are independent: a, b, c and construct three orthogonal vectors A, B, C and then at end divide by || A ||, || B ||, || C || to make them unit and orthonormal. 
 
+1. begin choosing A = a.  
+the first direction is accepted as it comes.
 
+2. B is chosen perpendicular to A
+by starting with b
+from b subtract b's projection p on A because b - p = e is perpendicular to A
+
+B = b - p = e  
+p = Ax.hat = some combination of A's column vectors each weighted by x.hat elements.   
+B = b - Ax.hat  
+e and B are perpendicular to A:  so multiply B = b - Ax.hat by A<sup>T</sup>
+A<sup>T</sup>B = 0 = A<sup>T</sup>b - A<sup>T</sup>Ax.hat
+--> A<sup>T</sup>b = A<sup>T</sup>Ax.hat
+
+= b - (A<sup>T<sup>b) / (A<sup>T<sup>A) A 
+
+a and b can be any angle.  
+A and B are orthogonal.
+
+multiply B = b - (A<sup>T<sup>b) / (A<sup>T<sup>A) by A<sup>T<sup> to verify A and B orthogonal
+
+A<sup>T<sup>B = A<sup>T<sup>b - A<sup>T<sup>(A<sup>T<sup>b) / (A<sup>T<sup>A)  
+
+cancell A<sup>T<sup> and A separately in numerator and denominator of the 2nd term on the RHS
+
+A<sup>T<sup>B = A<sup>T<sup>b - A<sup>T<sup>(A<sup>T<sup>b) / (A<sup>T<sup>A) 
