@@ -1378,7 +1378,7 @@ r21 = q<sub>2</sub><sup>T</sup>a = 0 because q<sub>2</sub> is unit B = b - p = e
 r31 = q<sub>3</sub><sup>T</sup>a = 0 because q<sub>3</sub> is unit C = c - p = e which is perpendicular to b (p here is c's projection onto a)  
 r32 = q<sub>3</sub><sup>T</sup>b = 0 because q<sub>3</sub> is unit C = c - p = e which is perpendicular to b (p here is c's projection onto b)   
 
-<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106650219-a6860980-6560-11eb-8223-2e1f6e4d0126.png">
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106656740-18fae780-6569-11eb-8cc5-8fcea00f66fe.png">
 
 thus the point of gram-schmidt is that:  
 q<sub>1</sub> is only a  
@@ -1386,4 +1386,56 @@ q<sub>2</sub> is only a and b
 q<sub>3</sub> is a, b and c
 
 
+gram-schmidt   
+from independent vectors a<sub>1</sub>, ... , a<sub>n</sub> construct orthonormal vectors q<sub>1</sub>,  ... , q<sub>n</sub>: the matrices A and Q with these columns satisfy A = QR then R = Q<sup>T</sup> which is upper triangular because the later q's are orthogonal to the earlier q's.
 
+the i,j entry of R = Q<sup>T</sup>A is the row i of Q<sup>T</sup> (= q<sub>j</sub> vector of Q) times the column j of A.
+
+the lengths of A, B, C are √2, √6 and √3 on the diagonal of R.  
+
+the columns of Q are orthonormal  
+
+both LR and QR are fundamental to linear algebra
+
+Any m x n matrix A with indpendent columns can be factored into QR.  
+
+the m x n matrix Q has orthonormal columns and the square matrix R is upper triangular with a positive diagonal (lengths)
+
+usefulness for least squares:  
+A<sup>T</sup>A = (QR)<sup>T</sup>QR = R<sup>T</sup>Q<sup>T</sup>QR = R<sup>T</sup>R   
+so, the least squares equation A<sup>T</sup>Ax.hat = A<sup>T</sup>b simplifies to:   
+R<sup>T</sup>Rx.hat = R<sup>T</sup>Q<sup>T</sup>b  
+[ because R<sup>T</sup>R = A<sup>T</sup>A and (QR)<sup>T</sup> = A<sup>T</sup>]
+and then to  
+Rx.hat = Q<sup>T</sup>b   
+and then to
+x.hat = R<sup>-1</sup>Q<sup>T</sup>b  
+
+so instead of solving Ax = b, which is impossible, solve Rx.hat = Q<sup>T</sup>b by back substitution.  
+
+the cost is m x n<sup>2</sup> multiplications in the gram-schmidt process to construct orthonormal R and the triangular R with A = QR.
+
+r<sub>i,j</sub> = ∑ i=1 to m of q<sub>i,k</sub>v<sub>i,j</sub>  
+and  
+v<sub>i,j</sub> = v<sub>i,j</sub> - q<sub>i,k</sub>r<sub>k,j</sub>  
+and  
+r<sub>i,j</sub> = ( ∑ i = 1 to m of v<sub>i,j</sub><sup>2</sup )<sup>1/2</sup>  
+and 
+q<sub>i,j</sub> = v<sub>i,j</sub> / r<sub>j,j</sub>
+
+starting from a, b, c = a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub> this code constructs q<sub>1</sub>, then B, q<sub>2</sub> then C q<sub>3</sub>:
+
+q<sub>1</sub> = a<sub>1</sub> / || a ||
+
+B = a<sub>2</sub> - (q<sub>1</sub><sup>T</sup>a<sub>2</sub>)q<sub>1</sub>
+
+q<sub>2</sub> = B / || B ||
+
+C' = a<sub>3</sub> - (q<sub>1</sub><sup>T</sup>a<sub>3</sub>)q<sub>1</sub>
+
+C = C' - (q<sub>2</sub><sup>T</sup>C')q<sub>2</sub>  
+
+q<sub>3</sub> = C / || C ||
+
+
+code given.  not in these notes
