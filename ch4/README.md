@@ -1182,25 +1182,25 @@ Q is shown as 1/3 scaling a 3x3 matrix.
 
 Q<sup>T</sup>Q = QQ<sup>T</sup> = I
 
-sum of projections of b on Q is shown as sum of projections of b on each of Qs columnar vectors.  b is pulled out and distributed to each of the q<sub>j</sub>q<sub>j</sub><sup>T<sup> that are summed up to produce p = b.
+sum of projections of b on Q is shown as sum of projections of b on each of Qs columnar vectors.  b is pulled out and distributed to each of the q<sub>j</sub>q<sub>j</sub><sup>T</sup> that are summed up to produce p = b.
 
 each of the q<sub>j</sub><sup>T<sup>b values are shown before they are then multiplied by q<sub>j</sub>
 
-q<sub>j</sub>q<sub>j</sub><sup>T<sup>
+q<sub>j</sub>q<sub>j</sub><sup>T</sup>  
 separate projections of b = sp.Matrix([0,0,1]) on to q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub> are p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub>
 
 because QQ<sup>T</sup>b decomposes into sum of outside products q<sub>j</sub>(q<sub>j</sub><sup>T</sup>b), the individual projections of b onto q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub> sum to the single projection of b onto Q.
 
-separate q<sub>j</sub>q<sub>j</sub><sup>T<sup>b are 2/3 q<sub>1</sub>, 2/3 q<sub>2</sub>, -1/3q<sub>3</sub> 
+separate q<sub>j</sub>q<sub>j</sub><sup>T</sup>b are 2/3 q<sub>1</sub>, 2/3 q<sub>2</sub>, -1/3q<sub>3</sub> 
 
-the individual q<sub>j</sub>q<sub>j</sub><sup>T<sup> are summed to produce I as QQ<sup>T</sup> would as well.
+the individual q<sub>j</sub>q</sub>j</sub></sup>T<sup> are summed to produce I as QQ<sup>T</sup> would as well.
 
 <img width="522" alt="image" src="https://user-images.githubusercontent.com/38410965/106540483-07183680-64ce-11eb-96e0-b9beb31e4f11.png">
 
 gram schmidt process
 
 orthogonal is good.   
-projections always involve A<sup>T<sup>A and when columns are orthonormal that becomes Q<sup>T<sup>Q which makes inverses unnecessary.  
+projections always involve A<sup>T</sup>A and when columns are orthonormal that becomes Q<sup>T</sup>Q which makes inverses unnecessary.  
 
 gram schmidt uncouples the one dimensional projections into n separate dot products q<sub>j</sub>q<sub>j</sub><sup>T<sup>b 
 
@@ -1230,7 +1230,7 @@ A<sup>T</sup>b = A<sup>T</sup>Ax.hat
 return to B = b - Ax.hat and replace x.hat with ( A<sup>T</sup>b ) / ( A<sup>T</sup> )A:     
 B = b - A( A<sup>T</sup>b ) / ( A<sup>T</sup> )A
 
-B = b - (A<sup>T<sup>b)A / (A<sup>T<sup>A) 
+B = b - (A<sup>T</sup>b)A / (A<sup>T<sup>A) 
 
 [ in the end remember B = e on LHS and b - p is on the RHS ]
 
@@ -1255,7 +1255,7 @@ heres c formula:
 C = c - e<sub>A</sub> - e<sub>B</sub>  
 C = c - A<sup>T</sup>cA / A<sup>T</sup>A - B<sup>T</sup>cB / B<sup>T</sup>B  
 
-[try to derive here:]
+[try to derive here:actually no need because its simply C<sub>A</sub> = c - p<sub>A</sub>] and then C = C<sub>A</sub> - p<sub>B<sub>
 C = c - p = e   
 p = ABx.hat     
 C and c - p and c - ABx.hat and e are equal and are perpendicular to AB  
@@ -1420,12 +1420,12 @@ and
 v<sub>i,j</sub> = v<sub>i,j</sub> - q<sub>i,k</sub>r<sub>k,j</sub>  
 and  
 r<sub>j,j</sub> = ( ∑ i = 1 to m of v<sub>i,j</sub><sup>2</sup> )<sup>1/2</sup>  
-and 
+and   
 q<sub>i,j</sub> = v<sub>i,j</sub> / r<sub>j,j</sub>
 
 starting from a, b, c = a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub> this code constructs q<sub>1</sub>, then B, q<sub>2</sub> then C q<sub>3</sub>:
 
-q<sub>1</sub> = a<sub>1</sub> / || a ||
+q<sub>1</sub> = a<sub>1</sub> / || a<sub>1</sub> ||
 
 B = a<sub>2</sub> - (q<sub>1</sub><sup>T</sup>a<sub>2</sub>)q<sub>1</sub>
 
