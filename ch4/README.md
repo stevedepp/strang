@@ -1358,3 +1358,32 @@ q_1^Ta&q_1^Tb&q_1^Tc\\
 
 A = QR  
 R = Q<sup>T</sup>A  
+
+example continued
+
+[book labels original matrix A. I label it X since there is a vector A]
+
+X has a, b and c in its columns  
+Q has q<sub>1</sub>, q<sub>2</sub> and q<sub>3</sub> in its columns  
+Q has q<sub>1</sub><sup>T</sup>, q<sub>2</sub><sup>T</sup> and q<sub>3</sub><sup>T</sup> in its rows
+
+R is triangular from rows q<sub>1</sub><sup>T</sup>, q<sub>2</sub><sup>T</sup>, q<sub>3</sub><sup>T</sup> of Q.T multiplying columns a, b and c of X.
+
+R has square roots but has empties where   
+B's unit vector q<sub>2</sub> is designed perpendicular to a in R21
+C's unit vector q<sub>3</sub> is designed perpendicular to a in R31 and b in R32:  
+
+R = Q<sup>T</sup>X    
+r21 = q<sub>2</sub><sup>T</sup>a = 0 because q<sub>2</sub> is unit B = b - p = e which is perpendicular to a (p here is b's projection onto a)   
+r31 = q<sub>3</sub><sup>T</sup>a = 0 because q<sub>3</sub> is unit C = c - p = e which is perpendicular to b (p here is c's projection onto a)  
+r32 = q<sub>3</sub><sup>T</sup>b = 0 because q<sub>3</sub> is unit C = c - p = e which is perpendicular to b (p here is c's projection onto b)   
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106650219-a6860980-6560-11eb-8223-2e1f6e4d0126.png">
+
+thus the point of gram-schmidt is that:  
+q<sub>1</sub> is only a  
+q<sub>2</sub> is only a and b
+q<sub>3</sub> is a, b and c
+
+
+
