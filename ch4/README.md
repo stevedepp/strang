@@ -1214,13 +1214,18 @@ by starting with b
 from b subtract b's projection p on A because b - p = e is perpendicular to A
 
 B = b - p = e  
-p = Ax.hat = some combination of A's column vectors each weighted by x.hat elements.   
-B = b - Ax.hat  
-e and B are perpendicular to A:  so multiply B = b - Ax.hat by A<sup>T</sup>
-A<sup>T</sup>B = 0 = A<sup>T</sup>b - A<sup>T</sup>Ax.hat
---> A<sup>T</sup>b = A<sup>T</sup>Ax.hat
+p = Ax.hat = some combination of A's column vectors each weighted by x.hat elements.    
+B = b - Ax.hat = e  
+e is perpendicular to A and since B = e, B is perpendicular to A   
+multiply B = b - Ax.hat by A<sup>T</sup>  and set to zero:   
+A<sup>T</sup>B = 0 = A<sup>T</sup>b - A<sup>T</sup>Ax.hat  
+0 = A<sup>T</sup>b - A<sup>T</sup>Ax.hat  
+A<sup>T</sup>b = A<sup>T</sup>Ax.hat   
+( A<sup>T</sup>b ) / ( A<sup>T</sup> )A = x.hat    
+return to B = b - Ax.hat and replace x.hat with ( A<sup>T</sup>b ) / ( A<sup>T</sup> )A     
+--> B = b - A( A<sup>T</sup>b ) / ( A<sup>T</sup> )A
 
-= b - (A<sup>T<sup>b) / (A<sup>T<sup>A) A 
+B = b - (A<sup>T<sup>b)A / (A<sup>T<sup>A) 
 
 a and b can be any angle.  
 A and B are orthogonal.
