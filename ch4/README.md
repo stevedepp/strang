@@ -1558,6 +1558,49 @@ these two orthogonal vectors are not linearly independent (1,0) and (0,0)
 
 zero is orthogonal with every vector and not independent with any.
 
-any two orthogonal matrices, Q's, multiplied produce an orthogonal matrix:
-proving only need to show that their produce is I.  any two matrices whose product is I are orthogonal:
+any two orthogonal matrices, Q's, multiplied produce an orthogonal matrix:  
+proving only need to show that their produce is I.  any two matrices whose product is I are orthogonal; so if 2 orthogonal matrices are multiplied, you can prove that their product is orthogonal by multiplying the product by itself and finding I:  
 (Q<sub>1</sub>Q<sub>2</sub>)<sup>T</sup>Q<sub>1</sub>Q<sub>2</sub> = Q<sub>2</sub><sup>T</sup>Q<sub>1</sub><sup>T</sup>Q<sub>1</sub>Q<sub>2</sub> = Q<sub>2</sub><sup>T</sup>Q<sub>2</sub> = I
+
+when gram-schmidt gives Q with orthonormal columns, Q<sup>T</sup>Qx.hat = Q<sup>T</sup>b becomes x.bar = Q<sup>T</sup>b.  theres no cost to solving the normal equation. 
+
+if q<sub>1</sub> and q<sub>2</sub> are orthonormal vectors in R<sup>5</sup> then p = (q<sub>1</sub><sup>T</sup>b)q<sub>1</sub> + (q<sub>2</sub><sup>T</sup>b)q<sub>2</sub> is closest to b.  e = b - p is orthogonal to q<sub>1</sub> and q<sub>2</sub>
+
+Ax = b has no solution. Ax.hat = p has a solution and p is closest to b.  
+begin with Ax.hat = b   
+multiply by A<sup>T</sup> on both sides:  
+A<sup>T</sup>Ax.hat = A<sup>T</sup>b   
+multiply both sides by (A<sup>T</sup>A)<sup>-1</sup>  
+(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>Ax.hat = (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>  
+Ix.hat = x.hat = (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b  
+p = Ax.hat = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b  
+p = Pb = Ax.hat = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b  
+so P = Ax.hat = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>   
+
+when A is Q, i.e. when A's columns are orthonormal, then repeating
+p = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b  
+then substituting Q for A  
+p = Q(Q<sup>T</sup>Q)<sup>-1</sup>Q<sup>T</sup>b  
+then substituting I for Q<sup>T</sup>Q  
+p = Q(I)<sup>-1</sup>Q<sup>T</sup>b = QQ<sup>T</sup>b  
+p 
+= [ q<sub>1</sub> q<sub>2</sub> q<sub>3</sub>]
+@ 
+[
+[q<sub>1</sub><sup>T</sup>] 
+[q<sub>2</sub><sup>T</sup>] 
+[q<sub>3</sub><sup>T</sup>]
+]
+b
+= [ q<sub>1</sub> q<sub>2</sub> q<sub>3</sub>]
+@ 
+[
+[q<sub>1</sub><sup>T</sup>b] 
+[q<sub>2</sub><sup>T</sup>b] 
+[q<sub>3</sub><sup>T</sup>b]
+]
+
+since q<sub>j</sub><sup>T</sup>b is a dot product it is a scaler and becomes a 3 component vector shown in the second part of last equation that is then multiplied by a square matrix Q.  the following though shows the scalars q<sub>j</sub><sup>T</sup>b on the LHS of columns of Q because of columns multiplication.  q<sub>j</sub><sup>T</sup>b is weighting each of the j columns of Q.
+
+p = q<sub>1</sub><sup>T</sup>b(q<sub>1</sub>) + q<sub>2</sub><sup>T</sup>b(q<sub>2</sub>) + q<sub>3</sub><sup>T</sup>b(q<sub>3</sub>))
+
