@@ -78,3 +78,17 @@ def permutation(order):
         Q[i, order[i] - 1] = 1
     return Q
         
+def gsm(A):
+    A = sp.Matrix(A)
+    m, n = A.shape
+    Q = sp.zeros(m, n)
+    Q[:,0] = A[:,0].copy()
+    R = sp.zeros(m, n)
+    for j in range(n):
+        v = A[:, j]
+        for i in range(j):
+            R[i,j] = Q[:,i].T * v
+            v = v - R[i,j] * Q[:,i]
+        R[j,j] = v.norm()        
+        Q[:,j] = v / R[j,j]
+    return A, Q, R

@@ -1437,5 +1437,9 @@ C = C' - (q<sub>2</sub><sup>T</sup>C')q<sub>2</sub>
 
 q<sub>3</sub> = C / || C ||
 
+code for QR decomp and sympy function - same!
 
-code given.  not in these notes
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106694858-6e55e980-65a7-11eb-9e8e-54c464c96114.png">
+
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106694779-3fd80e80-65a7-11eb-84b6-87218da336bc.png">
