@@ -1627,4 +1627,15 @@ q<sub>2</sub>
 = b - (a<sub>1</sub><sup>T</sup>b)(a<sub>1</sub>)((a<sub>1</sub><sup>T</sup>a)<sup>0.5</sup>)<sup>2</sup>
 = b - (x.hat) a / length
 
+[not sure why B = b - p and then q = B / || B || doesnt divide b by length]
+[it is becuse this math is only about p not B.  B here just coincidentally has length 1]
+
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106800034-f7176880-662d-11eb-84f5-465515a3cf5f.png">
+
+confirming above calculations:
+
+also shows that A<sup>T</sup>A = (QR)<sup>T</sup>QR = R<sup>T</sup>R
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106804615-a0149200-6633-11eb-963e-3d4b64eb360c.png">
+
+
