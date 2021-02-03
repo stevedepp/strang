@@ -1463,3 +1463,77 @@ if Q is square then P = QQ<sup>T</sup> = I and every b = q<sub>1</sub>(q<sub>1</
 
 gram-schmidt produces orthonormal vectors q<sub>1</sub>q<sub>2</sub>q<sub>3</sub> from independent a, b, c. In matrix form this is factorization A = QR = (orthogonal Q)(triangular R)
 
+examples:
+
+Hadamard matrix ... add 2 columns that are orthogonal
+
+![\begin{bmatrix}
+1&1&x&x\\
+1&-1&x&x\\
+1&1&x&x\\
+1&-1&x&x
+\end{bmatrix}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A1%261%26x%26x%5C%5C%0A1%26-1%26x%26x%5C%5C%0A1%261%26x%26x%5C%5C%0A1%26-1%26x%26x%0A%5Cend%7Bbmatrix%7D%0A)
+
+this is orthogonal
+
+![\begin{bmatrix}
+1&1&1&1\\
+1&-1&1&-1\\
+1&1&-1&-1\\
+1&-1&-1&1
+\end{bmatrix}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0A1%261%261%261%5C%5C%0A1%26-1%261%26-1%5C%5C%0A1%261%26-1%26-1%5C%5C%0A1%26-1%26-1%261%0A%5Cend%7Bbmatrix%7D%0A)
+
+this H<sub>4</sub> can be built from H<sub>2</sub>'s in the same way that the below H<sub>8</sub> is built from H<sub>4</sub>'s
+
+![\begin{bmatrix}
+H_2&H_2\\
+H_2&-H_2
+\end{bmatrix}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0AH2%26H2%5C%5C%0AH2%26-H2%0A%5Cend%7Bbmatrix%7D%0A)
+
+what's the product of this H<sub>8</sub><sup>T</sup>H<sub>8</sub>
+
+![\begin{bmatrix}
+H_4&H_4\\
+H_4&-H_4
+\end{bmatrix}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0AH4%26H4%5C%5C%0AH4%26-H4%0A%5Cend%7Bbmatrix%7D%0A)
+
+making H<sub>8</sub> orthonormal?
+
+![\begin{bmatrix}
+H_4&H_4\\
+H_4&-H_4
+\end{bmatrix}^T
+\begin{bmatrix}
+H_4&H_4\\
+H_4&-H_4
+\end{bmatrix}
+=\begin{bmatrix}
+H_4^T&H_4^T\\
+H_4^T&-H_4^T
+\end{bmatrix}
+\begin{bmatrix}
+H_4&H_4\\
+H_4&-H_4
+\end{bmatrix}
+=\begin{bmatrix}
+8I&0\\
+0&8I
+\end{bmatrix}
+;\begin{bmatrix}
+Q_8
+\end{bmatrix}
+=\begin{bmatrix}
+\frac{H_8}{\sqrt8}
+\end{bmatrix}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0AH_4%26H_4%5C%5C%0AH_4%26-H_4%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cbegin%7Bbmatrix%7D%0AH_4%26H_4%5C%5C%0AH_4%26-H_4%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0AH_4%5ET%26H_4%5ET%5C%5C%0AH_4%5ET%26-H_4%5ET%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AH_4%26H_4%5C%5C%0AH_4%26-H_4%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0A8I%260%5C%5C%0A0%268I%0A%5Cend%7Bbmatrix%7D%0A%3B%5Cbegin%7Bbmatrix%7D%0AQ_8%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7BH_8%7D%7B%5Csqrt8%7D%0A%5Cend%7Bbmatrix%7D)
+
+key point of orhogonal columns is that A<sup>T</sup> is diagonal and easy to invert. 
+
+if the projection of b = (6,0,0,0,2) onto the 1st column of H<sub>4</sub> is p<sub>1</sub> = (2,2,2,2) and onto 2nd column is p<sub>2</sub> = (1,-1,1,-1) then the projection of b onto the 2 dimensional space spanned by the 1st two columns is p<sub>12</sub> = the sum of the first two projections.  this is true because the first two columns are orthogonal to one another. 
+
+
+
+
