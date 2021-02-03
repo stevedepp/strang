@@ -1443,3 +1443,23 @@ code for QR decomp and sympy function - same!
 
 
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106694779-3fd80e80-65a7-11eb-84b6-87218da336bc.png">
+
+Householder reflections are a better way than this code by acting on A to produce the upper triangular R, one column at a time int eh same way that elimination produces upper triangular U in LU.
+
+The reflection matrices I - 2uu<sup>T</sup> come in chapter 11 on numerical linear algebra.  A tridiagonal simplifies even more to 2 x 2 notations, always to A = QR. 
+
+Review:
+
+if orthonormal vectors q<sub>1</sub>, ... , q<sub>n</sub> are the columns of Q then q<sub>i</sub><sup>T</sup>q<sub>j</sub> = 0 and q<sub>j</sub><sup>T</sup>q<sub>j</sub> = 1 translate into the matrix multiplication Q<sup>T</sup>Q = I
+
+if Q is square (an orthonormal matrix) then Q<sup>T</sup> = Q<sup>-1</sup>: transpose = inverse
+
+the length of Qx = the length of x since all || Qx || = || x ||
+
+the projection onto the column space of Q spanned by the q's is P = QQ<sup>T</sup>
+[Q<sup>T</sup>Q = I but not QQ<sup>T</sup>]
+
+if Q is square then P = QQ<sup>T</sup> = I and every b = q<sub>1</sub>(q<sub>1</sub><sup>T</sup>b), ... , q<sub>n</sub>(q<sub>n</sub><sup>T</sup>b)
+
+gram-schmidt produces orthonormal vectors q<sub>1</sub>q<sub>2</sub>q<sub>3</sub> from independent a, b, c. In matrix form this is factorization A = QR = (orthogonal Q)(triangular R)
+
