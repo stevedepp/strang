@@ -1534,6 +1534,30 @@ key point of orhogonal columns is that A<sup>T</sup> is diagonal and easy to inv
 
 if the projection of b = (6,0,0,0,2) onto the 1st column of H<sub>4</sub> is p<sub>1</sub> = (2,2,2,2) and onto 2nd column is p<sub>2</sub> = (1,-1,1,-1) then the projection of b onto the 2 dimensional space spanned by the 1st two columns is p<sub>12</sub> = the sum of the first two projections.  this is true because the first two columns are orthogonal to one another. 
 
+independent if determinant is not zero
 
+orthogonal if dot product is zero
 
+orthogonal and therefore independent
 
+lenght 1 and orthogonal and thus orthonormal
+
+Q<sup>T</sup>Q = I only assured from left because only columns are orthonormal.
+
+3 orthogonal column length 4: A<sup>T</sup>A = 16 * I
+
+3 orthogonal columns lenghts 3, 4, 5: A<sup>T</sup>A = sp.diagonal( [9, 16, 25 ] ) 
+
+any Q with n > m has QQ<sup>T</sup> ≠ I
+
+QQ<sup>T</sup> = I only for sqaure Q
+
+nonzero orthogonal vectors are independent.
+
+these two orthogonal vectors are not linearly independent (1,0) and (0,0)
+
+zero is orthogonal with every vector and not independent with any.
+
+any two orthogonal matrices, Q's, multiplied produce an orthogonal matrix:
+proving only need to show that their produce is I.  any two matrices whose product is I are orthogonal:
+(Q<sub>1</sub>Q<sub>2</sub>)<sup>T</sup>Q<sub>1</sub>Q<sub>2</sub> = Q<sub>2</sub><sup>T</sup>Q<sub>1</sub><sup>T</sup>Q<sub>1</sub>Q<sub>2</sub> = Q<sub>2</sub><sup>T</sup>Q<sub>2</sub> = I
