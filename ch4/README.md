@@ -1604,3 +1604,8 @@ since q<sub>j</sub><sup>T</sup>b is a dot product it is a scaler and becomes a 3
 
 p = q<sub>1</sub><sup>T</sup>b(q<sub>1</sub>) + q<sub>2</sub><sup>T</sup>b(q<sub>2</sub>) + q<sub>3</sub><sup>T</sup>b(q<sub>3</sub>))
 
+example of that last point and shows that two orthogonal vectors whose Q<sup>T</sup>Q is I does not have QQ<sup>T</sup> = I:
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106788835-7ea9ab00-661f-11eb-9d52-6471890432cb.png">
+
+if a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub> are a basis for R<sup>3</sup> any vector b can be written as b = x<sub>1</sub>a<sub>1</sub> + x<sub>2</sub>a<sub>2</sub> + x<sub>3</sub>a<sub>3</sub> <--- this is simply columnar multiplication Ax=b.  Now if a's are orthonormal, then x<sub>1</sub> = a<sub>1</sub><sup>T</sup>b because when you substitute in x<sub>1</sub>a<sub>1</sub> + x<sub>2</sub>a<sub>2</sub> + x<sub>3</sub>a<sub>3</sub> for b, you have x<sub>1</sub> = a<sub>1</sub><sup>T</sup>(x<sub>1</sub>a<sub>1</sub> + x<sub>2</sub>a<sub>2</sub> + x<sub>3</sub>a<sub>3</sub>).  since a<sub>1</sub>a<sub>2</sub> = a<sub>1</sub>a<sub>3</sub> = 0 that reduces to x<sub>1</sub>(a<sub>1</sub><sup>T</sup>a<sub>1</sub>) and since  a<sub>1</sub><sup>T</sup>a<sub>1</sub> = || a || = 1, that reduces to x<sub>1</sub>. 
