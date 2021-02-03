@@ -1608,4 +1608,23 @@ example of that last point and shows that two orthogonal vectors whose Q<sup>T</
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106788835-7ea9ab00-661f-11eb-9d52-6471890432cb.png">
 
-if a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub> are a basis for R<sup>3</sup> any vector b can be written as b = x<sub>1</sub>a<sub>1</sub> + x<sub>2</sub>a<sub>2</sub> + x<sub>3</sub>a<sub>3</sub> <--- this is simply columnar multiplication Ax=b.  Now if a's are orthonormal, then x<sub>1</sub> = a<sub>1</sub><sup>T</sup>b because when you substitute in x<sub>1</sub>a<sub>1</sub> + x<sub>2</sub>a<sub>2</sub> + x<sub>3</sub>a<sub>3</sub> for b, you have x<sub>1</sub> = a<sub>1</sub><sup>T</sup>(x<sub>1</sub>a<sub>1</sub> + x<sub>2</sub>a<sub>2</sub> + x<sub>3</sub>a<sub>3</sub>).  since a<sub>1</sub>a<sub>2</sub> = a<sub>1</sub>a<sub>3</sub> = 0 that reduces to x<sub>1</sub>(a<sub>1</sub><sup>T</sup>a<sub>1</sub>) and since  a<sub>1</sub><sup>T</sup>a<sub>1</sub> = || a || = 1, that reduces to x<sub>1</sub>. 
+if a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub> are a basis for R<sup>3</sup> any vector b can be written as b = x<sub>1</sub>a<sub>1</sub> + x<sub>2</sub>a<sub>2</sub> + x<sub>3</sub>a<sub>3</sub> <--- this is simply columnar multiplication Ax=b.  Now if a's are orthonormal, then x<sub>1</sub> = a<sub>1</sub><sup>T</sup>b because when you substitute in x<sub>1</sub>a<sub>1</sub> + x<sub>2</sub>a<sub>2</sub> + x<sub>3</sub>a<sub>3</sub> for b, you have x<sub>1</sub> = a<sub>1</sub><sup>T</sup>(x<sub>1</sub>a<sub>1</sub> + x<sub>2</sub>a<sub>2</sub> + x<sub>3</sub>a<sub>3</sub>).  since a<sub>1</sub>a<sub>2</sub> = a<sub>1</sub>a<sub>3</sub> = 0 that reduces to x<sub>1</sub>(a<sub>1</sub><sup>T</sup>a<sub>1</sub>) and since  a<sub>1</sub><sup>T</sup>a<sub>1</sub> = || a || = 1, that original a<sub>1</sub><sup>T</sup>b reduces to x<sub>1</sub>. 
+
+what multiple of a = (1,1) should be subtracted from b = (4,0) to make the result B orthogonal to a?
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/106791421-e281a300-6622-11eb-833f-8eca6c29cabb.png">
+
+16 what multiple of a = (4,5,2,2) is closest to b = (1,2,0,0). find the orthonormal vectors q<sub>1</sub> and q<sub>2</sub> in the plane of a and b.
+
+q<sub>1</sub> = a / length(a) = a / sqrt( a<sup>T</sup>a )
+
+= B 
+= b - x.hat * a  
+= b - ( a<sup>T</sup>b / a<sup>T</sup>a ) a
+
+q<sub>2</sub> 
+= b - (q<sub>1</sub><sup>T</sup>b)(q<sub>1</sub>)
+= b - (a<sub>1</sub><sup>T</sup>b)(a<sub>1</sub>)((a<sub>1</sub><sup>T</sup>a)<sup>0.5</sup>)<sup>2</sup>
+= b - (x.hat) a / length
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/106800034-f7176880-662d-11eb-84f5-465515a3cf5f.png">
