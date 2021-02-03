@@ -92,3 +92,4 @@ def gsm(A):
         R[j,j] = v.norm()        
         Q[:,j] = v / R[j,j]
     return A, Q, R
+ 
