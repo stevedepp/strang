@@ -88,6 +88,8 @@ terminology
 
 det A = | A |
 
+every rule for rows applies to columns just by transposing A which we prove in rule 10 = A<sup>T</sup>
+
 1. the determinant of the n x n identity matrix is 1
 
 any n
@@ -170,4 +172,70 @@ det A = +/- det U depending on row exchanges.
 
 proof: add another row in the matrix to the zero row (rule 5) and the determinant is still zero (rule 5) because there are now duplicate rows (rule 4)
 
-7.  
+7.  det of triangular A = product of diagonal components for L or U
+
+proof: if U or L eliminate to a diagonal matrix by subtraction of one row multiple from another --> det unchanged (rule 5). then factor A's diagonal elements from a<sub>jj</sub> to 1  (rule 3) --> a<sub>jj</sub> (det I) = det A a<sub>jj</sub> = a<sub>jj</sub> • 1 ()rule 1)
+
+if a<sub>jj</sub> = 0 then det A = 0 since a<sub>jj</sub>= 0 is in the product of diagonals, by rule 6 because that row will be all zeros,  and A is singular
+
+8.  if A is singular then det A = 0; if A is invertible then det A ≠ 0
+
+proof: elimination A to U produces zero row --> singular and det zero (rule 6) and if non-zero pivots then det is non zero (rule 7)
+
+9. the determinant of AB is det A times det B: | A | • | B | = | AB |
+
+det [ [a,b], [c,d] ] • det  [ [p,q], [r,s] ] = det [ [ap+br, aq+bs], [cp+dr, cq+ds] ] 
+= (ad-bc) ( ps-qr) = (ap+br)(cq+ds) - (aq+bs)(cp+dr)
+
+when matrix B = A<sup>-1</sup>:
+|AB| = |AA<sup>-1</sup>| = | I | = |A| |A<sup>-1</sup>| = 1 thus rule 9 implies that |A<sup>-1</sup>| = 1 / |A|
+
+proof for n x n matrices: det A = det AB / det B. if A has all 3 properties of rules 1, 2 and 3 then det A has to be the determinant of A adn so |AB| / |B| = |A|.  How to check if A has properties 1,2, and 3?
+
+property 1 says determinant of I is 1. thus if A = I then ratio det A = det IB / det B = |B| / |B| = 1
+
+property 2 says sign reversal on row exchanges: when two rows of A are swapped, then the same two rows of AB are swapped.  thus, |AB| changes sign and so does ratio of |AB| / |B| 
+
+property 3 says linearity : t multiplies row 1 of A then it also multiplies row 1 of AB and t multiplies the det AB.  So the ratio |AB| / |B| is multiplied by t.  linearity also says that if you add row 1 of A to row 1 of A' (where other rows are same) then row one of AB adds to row 1 of A'B. after dividing by |B| the ratios add as desired. 
+
+|AB| / |B| has same 3 properties as define |A|.  therefore |AB| / |B| = |A| and this proves the produce rule |AB| = |A| |B|
+The case of |B| = 0 and dividing by zero is easily resolved because |AB| is singular when B is singular.  then |AB| = |A||B| = |A|•zero.
+
+10.  the transpose of A<sup>T</sup> has the same determinant as A
+
+| A<sup>T</sup> | = | A |
+
+det [ [a,b], [c,d] ] = det [ [a,c], [b,d] ] = ad - bc
+
+the equation | A<sup>T</sup> | = | A | becomes 0 = 0 for singular matrix transposes
+
+det PA = LU = det (PA)<sup>T</sup> = det (LU)<sup>T</sup> = | A<sup>T</sup>P<sup>T</sup> | = | U<sup>T</sup>L<sup>T</sup> |
+
+proof: by rule 9, |AB| = |A| |B| and then |L| = |L<sup>T</sup>| = 1 because L has 1s on diagonal.  |U| = |U<sup>T</sup>| because triangular matrice tranposes have same diagonal.
+
+the proof disintegrates here but essentially PA = LU where L = 1 and P = 1
+
+P<sup>T</sup>P = I so |P| |P<sup>T</sup>| = 1 by rule 9 and so |P| and |P<sup>T</sup>| are both -1 or 1.  [??]
+
+this leaves det A = det A<sup>T</sup> ??
+
+by rule 10, every rule for rows applies to columns just by transposing A.
+- determinant changes sign when columns exchanged
+- zero column or 2 equal columns makes determinant zero
+- column multiplied by t then the determinant is multiplied by t
+- determinant is a linear function of each column separately
+
+review:
+
+the determinant is defined by det I = 1, sign reversal, and linearity in each row (column)
+
+after elimination, det A is +/- product of pivots
+
+determinant is zero exactly when A is not invertible
+
+2 remarkable properties are:
+ 
+ det AB = det A det B
+ 
+ det A<sup>T</sup> = det A
+
