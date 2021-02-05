@@ -306,3 +306,18 @@ whats wrng with the proof that a projection matrix has det P = `1 ?
 P = A<sup>T</sup>(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> so det P = (|A| / |A<sup>T</sup>A|) • |A| = 1
 
 the problem is that A is rectangular and so det (A<sup>T</sup>A) ≠ (det A<sup>T</sup>)(det A).  Those determinants are not defined. in fact if A is tall and thin (m>n) then det (A<sup>T</sup>A) adds up to |det B\<sup>2</sup> where B's are all the nxn submatrices of A.  ???haah 
+
+section 5.2
+
+2x2 matrix has det = ad - bc which has 2! terms with +/- signs  
+nxn matrix has det A which has n! terms with +/- signs.
+
+for determinant formulas each row appears once in every row and every column appear once in every term.  for example, in a 3x3, two of the n! = 3! = 6 terms are a<sub>12</sub>a<sub>23</sub>a<sub>31</sub> and -a<sub>13</sub>a<sub>22</sub>a<sub>31</sub>.  row 1, 2, 3 appear in each term and column 1, 2, 3 appear in each term but only once each row and column in each term.  using rows 1, 2, 3 as done in both terms requires no row exchanges.  using columns 2, 3, 1 as in the 1st term requires two column exchanges 1 swapped with 2 making 2, 1, 3 and then 1 swapped with 3 making 2, 3, 1.  an even number of column swaps, 2 in 1st term, leads to -1<sup>2</sup> = +1 factor on that first term of the determinant.  using columns 3, 2, 1 in the 2nd term requires one or an odd number of column exchanges from 1, 2, 3 to 3, 2, 1 and so the factor on that term of the determinant is -1<sup>1<sup> = -1.
+
+the six terms include a<sub>11</sub>a<sub>22</sub>a<sub>33</sub> - a<sub>11</sub>a<sub>23</sub>a<sub>32</sub> = a<sub>11</sub>(a<sub>22</sub>a<sub>33</sub> - a<sub>23</sub>a<sub>32</sub>) where a<sub>11</sub> is the cofactor.
+
+always det A = a<sub>11</sub>C<sub>11</sub> + a<sub>12</sub>Ca<sub>12</sub> + a<sub>1n</sub>C<sub>1n</sub>.  cofactors are determinants of size n-1
+
+
+
+
