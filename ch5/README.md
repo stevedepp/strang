@@ -172,6 +172,8 @@ det A = +/- det U depending on row exchanges.
 
 proof: add another row in the matrix to the zero row (rule 5) and the determinant is still zero (rule 5) because there are now duplicate rows (rule 4)
 
+proof: multiply zero row by t=2 causes det A to be multiplied by t=2 (rule 3)but the matrix is the same adn so det A must also be unchanged.  Only 0 has this feature: t • matrix --> determinant unchanged.
+
 7.  det of triangular A = product of diagonal components for L or U
 
 proof: if U or L eliminate to a diagonal matrix by subtraction of one row multiple from another --> det unchanged (rule 5). then factor A's diagonal elements from a<sub>jj</sub> to 1  (rule 3) --> a<sub>jj</sub> (det I) = det A a<sub>jj</sub> = a<sub>jj</sub> • 1 ()rule 1)
@@ -239,3 +241,68 @@ determinant is zero exactly when A is not invertible
  
  det A<sup>T</sup> = det A
 
+
+
+Unrelated from problem 7: Pythagorian Trig Identities are easily understood if think of H = hypotenuse length H = radius of circle as the vector length whose x = cos and y = sin.  Opposite O is opposite of an angle.  O = y = sin if radius is unit.  A = cos theta = x if H is unit radius: 
+- sin theta = O / H = just a means of scaling the y component to the length of the hypotenuse.  if H = 1 then just read off the y
+- cos theta = A / H
+- O = H sin theta
+- A = H cos theta
+- H<sup>2</sup> = O<sup>2</sup> + A<sup>2</sup>
+- H<sup>2</sup> = (H sin theta)<sup>2</sup> + (H cos theta)<sup>2</sup>
+- H<sup>2</sup> = H<sup>2</sup>(sin<sup>2</sup>theta) + H<sup>2</sup>(cos<sup>2</sup>theta)
+- 1 = sin<sup>2</sup>theta + cos<sup>2</sup>theta
+
+
+orthogonal matrix 
+
+orthonormal vectors have unit length and are orthogonal to one another.   
+a matrix with orthonormal columns is assigned the special letter Q.  
+Q easy to work with because Q<sup>T</sup>Q = I   
+Q is not required to be square.   
+when Q square, Q<sup>T</sup>Q = QQ<sup>T</sup> = I means that QT=Q-1
+Q that is square
+called orthogonal matrix not orthonormal matrix
+inverse from LHS and RHS too rows of square Q are orthonormal too inverse is transpose
+
+every orthogonal matrix Q [where Q<sup>T</sup>Q = QQ<sup>T</sup> = I] has determinant 1 or -1 because | Q<sup>T</sup>Q = I | = | Q<sup>T</sup> | | Q | = | Q |<sup>2</sup> = 1 and so det Q is either -/+ 1 
+
+Q<sup>n</sup> stays orthogonal and so its determinanet doesnt blow up as n --> ∞
+
+if entries in every row of A add to zero then Ax = 0.  obvious since null space = (1,1, ... , 1,1)  and so it is singular and by rule 8 it has det A = 0 
+
+if entries in every row of A add to 1 then (A-I)x = 0 and similarly, the null space indicates singular and so det A = 0, but it doesnt mean det (A-I) = 0 since all rows are having 1s added to them.
+
+prove every orthgonal matrix Q<sup>T</sup> has a determinant 1 or -1
+
+Q<sup>T</sup>Q = I --> | Q<sup>T</sup> | | Q | = Q<sup>2</sup> = I --> | Q | = +/- 1
+
+skew symmetric matrix: A = -A<sup>T</sup>
+
+odd dimensioned skew symmetrix matrices determinants = 0 because det (K<sup>T</sup>) = det (-K) = -1<sup>n</sup> det(K) because to pull the -1 out you need to raise it to the dimension of the matrix.
+
+if you do one row add to another row the determinant doesnt change but if you do two row operations at the same time then the determinant changes.  
+
+det [ [a,b], [c,d] ] = ad - bc
+
+det [ [a-c,b-d], [c,d] ] = (a-c)d - (b-d)c = ad - cd - bc + dc = ad - bc
+
+det [ [a-c,b-d], [c-a,d-b] ] = (a-c)(d-b) - (b-d)(c-a) = ad - cd - ab + cb - bc + dc -da  + ba ≠ ad - bc
+
+rules 5 and 3 produce rule 2
+
+falsities:
+
+the determinant of A is always the product of its pivots.  Nope.  you forget that row exchanges cause -1 factors
+
+the determinant of A -B equals det A - det B.  Nope.  determinants are additive in one row only.  example: A = 2I and B = I have A - B = I but determinant = [ 2<sup>n<sup> for A = 2I ] minus [ 1 for B = I ]
+
+truths
+
+det AB = det A det B
+
+whats wrng with the proof that a projection matrix has det P = `1 ?
+
+P = A<sup>T</sup>(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup> so det P = (|A| / |A<sup>T</sup>A|) • |A| = 1
+
+the problem is that A is rectangular and so det (A<sup>T</sup>A) ≠ (det A<sup>T</sup>)(det A).  Those determinants are not defined. in fact if A is tall and thin (m>n) then det (A<sup>T</sup>A) adds up to |det B\<sup>2</sup> where B's are all the nxn submatrices of A.  ???haah 
