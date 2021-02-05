@@ -314,10 +314,52 @@ nxn matrix has det A which has n! terms with +/- signs.
 
 for determinant formulas each row appears once in every row and every column appear once in every term.  for example, in a 3x3, two of the n! = 3! = 6 terms are a<sub>12</sub>a<sub>23</sub>a<sub>31</sub> and -a<sub>13</sub>a<sub>22</sub>a<sub>31</sub>.  row 1, 2, 3 appear in each term and column 1, 2, 3 appear in each term but only once each row and column in each term.  using rows 1, 2, 3 as done in both terms requires no row exchanges.  using columns 2, 3, 1 as in the 1st term requires two column exchanges 1 swapped with 2 making 2, 1, 3 and then 1 swapped with 3 making 2, 3, 1.  an even number of column swaps, 2 in 1st term, leads to -1<sup>2</sup> = +1 factor on that first term of the determinant.  using columns 3, 2, 1 in the 2nd term requires one or an odd number of column exchanges from 1, 2, 3 to 3, 2, 1 and so the factor on that term of the determinant is -1<sup>1<sup> = -1.
 
-the six terms include a<sub>11</sub>a<sub>22</sub>a<sub>33</sub> - a<sub>11</sub>a<sub>23</sub>a<sub>32</sub> = a<sub>11</sub>(a<sub>22</sub>a<sub>33</sub> - a<sub>23</sub>a<sub>32</sub>) where a<sub>11</sub> is the cofactor.
+the six terms include a<sub>11</sub>a<sub>22</sub>a<sub>33</sub> - a<sub>11</sub>a<sub>23</sub>a<sub>32</sub> = a<sub>11</sub>(a<sub>22</sub>a<sub>33</sub> - a<sub>23</sub>a<sub>32</sub>) where a<sub>11</sub> is multiplying the cofactor C<sub>11</sub> = a<sub>22</sub>a<sub>33</sub> - a<sub>23</sub>a<sub>32</sub>.
 
 always det A = a<sub>11</sub>C<sub>11</sub> + a<sub>12</sub>Ca<sub>12</sub> + a<sub>1n</sub>C<sub>1n</sub>.  cofactors are determinants of size n-1
 
+computer finds determinant from pivots via elimination.
 
+here uses 2 formulas:   
+big formula uses all n! permutations  
+cofactor formula uses determinants of size n-1
+
+use this as example.
+
+A = 
+[
+[ 2, -1, 0, 0],
+[-1, 2, -1, 0],
+[0, -1, 2, -1],
+[0, 0, -1, 2]
+]
+
+1. pivots are 2 • 3/2 • 4/3 • 5/4 from elimination to LU; all numerators and denominators cancel --> det A = 5
+
+L = 
+[
+[1,0,0,0],
+[-1/2,1,0,0],
+[0,-2/3,1,0],
+[0,0,0,-3/4,1]
+]
+
+U =
+[
+[2,-1,0,0],
+[0,3/2,-1,0],
+[0,0,4/3,-1],
+[0,0,0,5/4]
+]
+
+2. big formual has n! = 4! terms of which only 5 are non-zero.
+
+det A = 16 - 4 - 4 -4 + 1 = 5
+
+the 16 comes from 2 • 2 • 2 • 2 on the diagonal selecting one of each column and row only once = a<sub>11</sub> • a<sub>22</sub> • a<sub>33</sub> • a<sub>44</sub>.  when you know where -4 and +1 come from you know the big formula.
+
+3. 2, -1, 0, 0 in 1st row multiply their cofactors 4, 3, 2, 1 from the other rows giving 2 • 4 - 1 • 3 + 0 • 2 + 0 • 1 = 5.  
+
+The cofactors are are 3x3 determinants. Every term in a determinant uses each row and column once. 
 
 
