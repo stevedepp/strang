@@ -362,4 +362,235 @@ the 16 comes from 2 • 2 • 2 • 2 on the diagonal selecting one of each colu
 
 The cofactors are are 3x3 determinants. Every term in a determinant uses each row and column once. 
 
+pivot formula
+
+elimination -> PA = LU = LDU
+
+det P det A = det L det U = det L det D det U = (1) • (d<sub>1</sub>, • ... • , d<sub>n</sub>) • (1)
+
+det A = +/- d<sub>1</sub> • ... • d<sub>n</sub>
+
+example:
+
+[
+[0,0,1],
+[0,2,3],
+[4,5,6]
+]
+
+requires 1 row exchange ( 1 <--> 3 ) via P
+
+det A = -1 • 4 • 2 • 1 = 8
+
+example:
+
+-1 2 -1 tridiagonal matrix --> factors to U with -1 off diagonal and 2 • 3/2 • 4/3 • ... • n+1/n on the diagonal. 
+
+so det A = n+1 since all the numerators and denominators of the diagonal fractions cancel except the last which is n+1
+
+important rule: for all matrices without row exchanges, the 1st pivot depends only on the top left entry which never changes in elimination.  thus the determinant of that submatrix, the top left corner cell, is A<sub>k</sub> where k = 1 is the subscript of how far through the diagononal from 1 to n the determinant calculation has progressed.
+
+elimination deals witg the matrix A<sub>k</sub> in the UL corner.  A<sub>k</sub> = L<sub>k</sub>U<sub>k</sub>. 
+
+dividing one determinant A<sub>k</sub> by the previous determinant A<sub>k-1</sub> cancels everything except the latest pivot d<sub>k</sub>
+
+thus, each pivot is a ratio of the determinants of sub matrices A<sub>k</sub>/A<sub>k-1</sub>
+
+so one can obtain the pivots from determinants: 
+
+the kth pivot is d<sub>k</sub> = (d<sub>1</sub>•d<sub>2</sub>• ... •d<sub>k</sub>)/(d<sub>1</sub>•d<sub>2</sub>• ... •d<sub>k-1</sub>) = det Asub>k</sub>/det Asub>k-1</sub>
+
+the math is easy: 
+
+(d<sub>1</sub>•d<sub>2</sub>• ... •d<sub>k</sub>)/(d<sub>1</sub>•d<sub>2</sub>• ... •d<sub>k</sub>) = (d<sub>1</sub>•d<sub>2</sub>• ... •d<sub>k</sub>)/(d<sub>1</sub>•d<sub>2</sub>• ... •d<sub>k</sub>)
+
+now divide LHS by by (d<sub>1</sub>•d<sub>2</sub>• ... •d<sub>k</sub>)/(d<sub>1</sub>•d<sub>2</sub>• ... •d<sub>k-1</sub>) and all but d<sub>k</sub>) cancel on LHS and you have the ratio shown above which equals det A<sub>k</sub> / det A<sub>k-1</sub>
+
+do not need row exchanges when all UL matrices have det A ≠ 0
+
+the big formula:
+
+pivots concentrate a lot of information into one number.  included in that information is the determinant, but it is difficult to connect the determinant to the original a<sub>ij</sub>.  rules 1-3 provide clues to connect to original data: linearity, sign reversal, det I = 1 help derive a single explicit formula for determinants, directly from a<sub>ij</sub>.
+
+the big formula has n! terms: for n=11, there are 40 million terms. 
+
+half of terms have minus signs e.g. -bc while 50% have positive e.g. ac.
+
+each term has one entry from each column and row.  if the order of the terms' subscripts are different from 123...n, then a +/- 1 comes into play. permutations tell us the sign.  for n=4, there are 24 ways, n!, to choose entruy from each row and column.  down the diagonal the column order is 111 2222 3333 4444 called the 'identity permutation'.
+
+deriving the big formula break each row into 2 simpler rows:
+
+A =
+[
+[a,b],
+[c,d]
+]
+
+all the following math occurs inside of determinant brackets |A| that arent shown. 
+
+[a,b] = [a,0] + [0,b]  
+[c,d] = [c,0] + [0,d]  
+
+apply linearity to arrive at 2<sup>2</sup> = 4 combinations that boil down to 2! = 2
+
+break up the first row first:
+[
+[a,b],
+[c,d]
+]
+= [
+[a,0],
+[c,d]
+]
++ [
+[0,b],
+[c,d]
+]
+
+then the complete set is shown after breaking the second row:
+[
+[a,b],
+[c,d]
+]
+= [
+[a,0],
+[c,0]
+]
++ [
+[a,0],
+[0,d]
+]
++ [
+[0,b],
+[c,0]
+]
++ [
+[0,b],
+[0,d]
+]
+
+any with only zeros in columns have zero determinants
+
+[
+[0,b],
+[0,d]
+]
+and
+[
+[a,0],
+[c,0]
+]
+
+leaves 2! determinants to compute
+
+[
+[a,b],
+[c,d]
+]
+= [
+[a,0],
+[0,d]
+]
++ [
+[0,b],
+[c,0]
+]
+
+strang uses P to put the factors into identity form to show the alternating -1 factor
+because there is no determinant calculation for the off diagonals; only a rule for the diagonals.
+
+splitting led to permutation matrices whose determinants give a +1 or -1 factor
+det (
+[
+[a,b],
+[c,d]
+]
+)
+= det (
+[
+[1,0],
+[0,1]
+]
+[
+[a,0],
+[0,d]
+]
+)
++
+det (
+[
+[0,1],
+[1,0]
+]
+[
+[0,b],
+[c,0]
+]
+)
+= +1 • det (
+[
+[a,0],
+[0,d]
+]
+)
++ 
+-1 • det (
+[
+[b,0],
+[0,d]
+]
+)
+
+in 3 dimensioned matrix there are 3<sup>3</sup> simpler matrices that boil down to 3! nonzero determinants. zero determinants are where each column or row is used MORE than once in a simplified matrix:
+
+det [
+[a<sub>11</sub>,0,0]
+[a<sub>21</sub>,0,0]
+[0,a<sub>12</sub>,0,0]
+] = 0
+
+of the 6 permutations of 1,2,3 there is one identity permutation and 5 where P ≠ I.
+
+123, 231, 312, 132, 213, 321 are the six where the first 3 are even and the last 3 are odd.  odd permutations require an odd number of column or row swaps and have determinant of P = -1
+
+as you choose column permutation, rows are automatically chosen since you choose a column for a row, e.g. row 1, and then no other columns are chosen for that row.  then you move to the next row.
+
+the determinant is the sum of these simple determinants that are a product of P<sup>+</sup> or P<sup>-</sup> that reorders the simple matrix with one entry in each row in a different column into a diagonal matrix which can then have its determinant determined by rule 7 about U matrices.
+
+
+when A is U, only one of the n! products can be non-zero, and that is from the diagonal.  all other column orderings pick at least one entry below the diagonal which is zero.
+
+determinants by cofactors
+
+the big formula's n! terms satisfy rules 1,2,3 then all other properties 4-10 follow.  the result is the simple matrices separating row items one at a time until n! terms.  one can separate each row into n-1 sets:
+
+n = 3 
+det A = 
+a<sub>11</sub>(a<sub>22</sub>a<sub>33</sub> - a<sub>23</sub>a<sub>32</sub>) +
+a<sub>12</sub>(a<sub>23</sub>a<sub>31</sub> - a<sub>21</sub>a<sub>33</sub>) +
+a<sub>13</sub>(a<sub>21</sub>a<sub>32</sub> - a<sub>22</sub>a<sub>31</sub>) 
+
+quantities in paranethese are cofactors which are 2x2 determinants from 2nd and 3rd row.
+
+lower rows contribute these cofactors C<sub>11</sub>, C<sub>12</sub>, C<sub>13</sub> 
+
+using linearity, can split A into 6 permutations that group into three 2x2 cofactors one for each of the 3 components of the first row.
+
+watch signs:  
+the 2x2 that goes with a<sub>11</sub> is positive, but the 2x2 that goes with a<sub>12</sub>.
+
+systematically, cofactors are C<sub>ij</sub> = (-1)<sup>i+j</sup> det M<sub>ij</sub> where for the first row, all i's are 1.  So for the determinant calculation
+
+det A = ∑ i =1, j from 1 to n of a<sub>ij</sub>C<sub>ij</sub> 
+
+= a<sub>ij</sub> (-1)<sup>i+j</sup> det M<sub>ij</sub>
+
+recursively, move from cofactors with determinants of order n -1 to n-2 to 1
+
+key properties are 1-3 : linearity, sign reversal and I =1
+
+since det A = det A<sup>T</sup> cofactors can be formed for columns instead of rows.
+
+cofactors are useful when matrices have many zeros
+
 
