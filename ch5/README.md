@@ -593,4 +593,21 @@ since det A = det A<sup>T</sup> cofactors can be formed for columns instead of r
 
 cofactors are useful when matrices have many zeros
 
+hessenberg matrix is a triangular matrix with one extra diagonal whose determinant follows the rule of |H<sub>4</sub>| = |H<sub>3</sub>| + |H<sub>2</sub>| or generally |H<sub>n</sub>| = |H<sub>n-1</sub>| + |H<sub>n-2</sub>| 
 
+the cofactor C<sub>11</sub> for H<sub>4</sub> is the determinant |H<sub>3</sub>| 
+
+since there is an additional diagonal ontop the triangular matrix L, need another cofactor C<sub>12</sub> for cell a<sub>12</sub> but of course it is factored by -1<sup>1+2</sup>  = -1.  
+
+C<sub>11</sub> is H3 and C<sub>12</sub> is H2
+
+so | H<sub>4</sub> | =  2 • | H<sub>3</sub> | - 1 • | H<sub>3</sub> | + 1 • | H<sub>2</sub> |
+
+| H<sub>n</sub> | = 2, 3, 5, 8 for n = 1, 2, 3, 4 and so follows Fibonacci | H<sub>n</sub> | = F<sub>n+2</sub>
+
+
+question  
+if A is 10x10 all ones how does the big formula give det A = 0  
+all products in big formula are 1 since all elements of matrix are 1.  half require even (1) and half require odd (-1) permutations which sum to 0 and of course an all 1s matrix has det A = 0 anyway. 
+
+for n = 2 and 3 the product of all n! permutation matrices is odd.  for n > 3 the product of all permutation matrices is even. 
