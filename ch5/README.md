@@ -634,7 +634,7 @@ volumn of box = | det A | if the rows of A (or columns of A) give the sides of t
 
 the cross product of w = u x v is =  
 | i   j   k  |   
-| u<sub>-1</sub> u<sub>-2</sub> u<sub>-3</sub> |   
-| v<sub>-1</sub> v<sub>-2</sub> v<sub>-3</sub> |
+| u<sub>1</sub> u<sub>2</sub> u<sub>3</sub> |   
+| v<sub>1</sub> v<sub>2</sub> v<sub>3</sub> |
 
 
