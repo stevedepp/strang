@@ -611,3 +611,30 @@ if A is 10x10 all ones how does the big formula give det A = 0
 all products in big formula are 1 since all elements of matrix are 1.  half require even (1) and half require odd (-1) permutations which sum to 0 and of course an all 1s matrix has det A = 0 anyway. 
 
 for n = 2 and 3 the product of all n! permutation matrices is odd.  for n > 3 the product of all permutation matrices is even. 
+
+a 3x3 matrix of only 1s and -1s can have 4 as its largest determinant because the determinant formula for 3x3 has 3! = 6 terms all + or - 1.  
+
+can group the cofactor results into matrix C and the source matrix A and AC<sup>T</sup> = (det A)I because a<sub>ij</sub> is multiplied with C<sub>ij</sub> and the products are summed. since C = C<sup>T</sup> can use AC<sup>T</sup> or C<sup>T</sup>A.
+
+
+section 5.3 
+
+cramers rule, inverses and volumes
+
+principles:
+
+A<sup>-1</sup> = C<sup>T / </sup>det A  
+then (A<sup>-1</sup>)<sub>ij</sub> = cofactor C<sub>-ij</sub> divided by det A  
+
+cramers rule computes x = A<sup>-1</sup>b from x<sub>j</sub> = det(A with column j changed to b) / det A
+
+area of parallelogram = | ad - bc | if the four corners are (0,0), (a,b), (c,d) and (a+c, b+d)
+
+volumn of box = | det A | if the rows of A (or columns of A) give the sides of the box.  
+
+the cross product of w = u x v is =  
+| i   j   k  |
+| u<sub>-1</sub> u<sub>-2</sub> u<sub>-3</sub> |
+| v<sub>-1</sub> v<sub>-2</sub> v<sub>-3</sub> |
+
+
