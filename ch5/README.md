@@ -779,38 +779,40 @@ so for 3 dimensions:
 X is A<sup>-1</sup>  
 b =  a column of I which we will label b<sub>1</sub> for 1st column of I
 
+B is the result of AX; notice that subscripts of B matrices are reversed of the X matrix because the 1 in the B matrices (that comes from their I column) is what directs the labeling of the B matrix subscripts because that 1 in each B is the factor and the remainder of the B is the cofactor for computing the determinant of B.  These will be same subscripts used for cofactor C<sub>ji</sub> and it's embedded matrix M<sub>ji</sub>. 
+
 for 1st column of X = X<sub>1</sub> = A<sup>-1</sup> on LHS that will eventually bring 1st column of I = (1,0,0) on RHS:  
 
 this gets you the first row of X<sub>1</sub> = X<sub>11</sub>:   
-[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ X<sub>1</sub> I<sub>2</sub> I<sub>3</sub> ] = [ I<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ] = B<sub>1</sub>
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ X<sub>1</sub> I<sub>2</sub> I<sub>3</sub> ] = [ I<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ] = B<sub>11</sub>
 
 this gets you the second row of X<sub>1</sub> = X<sub>21</sub>:   
-[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> X<sub>1</sub> I<sub>3</sub> ] = [ A<sub>1</sub> I<sub>1</sub> A<sub>3</sub> ] = B<sub>2</sub>
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> X<sub>1</sub> I<sub>3</sub> ] = [ A<sub>1</sub> I<sub>1</sub> A<sub>3</sub> ] = B<sub>12</sub>
 
 this gets you the third row of X<sub>1</sub> = X<sub>31</sub>:   
-[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> I<sub>2</sub> X<sub>1</sub> ] = [ A<sub>1</sub> A<sub>2</sub> I<sub>1</sub> ] = B<sub>3</sub>
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> I<sub>2</sub> X<sub>1</sub> ] = [ A<sub>1</sub> A<sub>2</sub> I<sub>1</sub> ] = B<sub>13</sub>
 
 for 2nd column of X = X<sub>2</sub> = A<sup>-1</sup> on LHS that will eventually bring 2nd column of I = (0,1,0) on RHS:  
 
 this gets you the first row of X<sub>2</sub> = X<sub>12</sub>:   
-[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ X<sub>2</sub> I<sub>2</sub> I<sub>3</sub> ] = [ I<sub>2</sub> A<sub>2</sub> A<sub>3</sub> ] = B<sub>4</sub>
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ X<sub>2</sub> I<sub>2</sub> I<sub>3</sub> ] = [ I<sub>2</sub> A<sub>2</sub> A<sub>3</sub> ] = B<sub>21</sub>
 
 this gets you the second row of X<sub>2</sub> = X<sub>22</sub>:   
-[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> X<sub>2</sub> I<sub>3</sub> ] = [ A<sub>1</sub> I<sub>2</sub> A<sub>3</sub> ] = B<sub>5</sub>
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> X<sub>2</sub> I<sub>3</sub> ] = [ A<sub>1</sub> I<sub>2</sub> A<sub>3</sub> ] = B<sub>22</sub>
 
 this gets you the third row of X<sub>2</sub> = X<sub>32</sub>:   
-[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> I<sub>2</sub> X<sub>2</sub> ] = [ A<sub>1</sub> A<sub>2</sub> I<sub>2</sub> ] = B<sub>6</sub>
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> I<sub>2</sub> X<sub>2</sub> ] = [ A<sub>1</sub> A<sub>2</sub> I<sub>2</sub> ] = B<sub>23</sub>
 
 for 3rd column of X = X<sub>3</sub> = A<sup>-1</sup> on LHS that will eventually bring 3rd column of I = (0,0,1) on RHS:  
 
 this gets you the first row of X<sub>3</sub> = X<sub>13</sub>:   
-[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ X<sub>3</sub> I<sub>2</sub> I<sub>3</sub> ] = [ I<sub>3</sub> A<sub>2</sub> A<sub>3</sub> ] = B<sub>7</sub>
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ X<sub>3</sub> I<sub>2</sub> I<sub>3</sub> ] = [ I<sub>3</sub> A<sub>2</sub> A<sub>3</sub> ] = B<sub>31</sub>
 
 this gets you the second row of X<sub>3</sub> = X<sub>23</sub>:   
-[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> X<sub>3</sub> I<sub>3</sub> ] = [ A<sub>1</sub> I<sub>3</sub> A<sub>3</sub> ] = B<sub>8</sub>
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> X<sub>3</sub> I<sub>3</sub> ] = [ A<sub>1</sub> I<sub>3</sub> A<sub>3</sub> ] = B<sub>32</sub>
 
 this gets you the third row of X<sub>3</sub> = X<sub>33</sub>:   
-[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> I<sub>2</sub> X<sub>3</sub> ] = [ A<sub>1</sub> A<sub>2</sub> I<sub>3</sub> ] = B<sub>9</sub>
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> I<sub>2</sub> X<sub>3</sub> ] = [ A<sub>1</sub> A<sub>2</sub> I<sub>3</sub> ] = B<sub>33</sub>
 
 
 
