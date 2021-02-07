@@ -750,4 +750,5 @@ c&cy_1 + dy_2
 =\begin{bmatrix}
 a&0\\
 c&1
-\end{bmatrix}-take-the-determinant->|A| (y_2) = |B_4|]](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0AA%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa%26b%5C%5C%0Ac%26d%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26y_1%5C%5C%0A0%26y_2%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Aa%26ay_1+%2B+by_2%5C%5C%0Ac%26cy_1+%2B+dy_2%0A%5Cend%7Bbmatrix%7D+%0A%3D%5Cbegin%7Bbmatrix%7D%0Aa%260%5C%5C%0Ac%261%0A%5Cend%7Bbmatrix%7D-take-the-determinant-%3E%7CA%7C+%28y_2%29+%3D+%7CB_4%7C%5D)
+\end{bmatrix}-take-the-determinant->|A| (y_2) = |B_4|
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0AA%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa%26b%5C%5C%0Ac%26d%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26y_1%5C%5C%0A0%26y_2%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Aa%26ay_1+%2B+by_2%5C%5C%0Ac%26cy_1+%2B+dy_2%0A%5Cend%7Bbmatrix%7D+%0A%3D%5Cbegin%7Bbmatrix%7D%0Aa%260%5C%5C%0Ac%261%0A%5Cend%7Bbmatrix%7D-take-the-determinant-%3E%7CA%7C+%28y_2%29+%3D+%7CB_4%7C%0A)
