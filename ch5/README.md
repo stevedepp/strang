@@ -774,6 +774,25 @@ A<sup>-1</sup> =
 [-c,a]
 ]
 
+\begin{bmatrix}
+a_11&a_12&a_13\\
+a_21&a_22&a_23\\
+a_31&a_32&a_33
+\end{bmatrix}
+\begin{bmatrix}
+x_11&0&0\\
+x_21&1&0\\
+x_31&0&1\\
+\end{bmatrix}
+= \begin{bmatrix}
+a_11x_11+a_12x_21+a_13x_31=1&a_12&a_13\\
+a_21x_11+a_22x_21+a_23x_31=0&a_22&a_23\\
+a_31x_11+a_32x_21+a_33x_31=0&a_32&a_33\\
+\end{bmatrix}
+= B_11
+
+
+
 so for 3 dimensions:  
 
 X is A<sup>-1</sup>  
@@ -817,3 +836,54 @@ this gets you the third row of X<sub>3</sub> = X<sub>33</sub>:
 
 
 
+![\begin{bmatrix}
+a_11&a_12&a_13\\
+a_21&a_22&a_23\\
+a_31&a_32&a_33
+\end{bmatrix}
+\begin{bmatrix}
+x_11&0&0\\
+x_21&1&0\\
+x_31&0&1\\
+\end{bmatrix}
+= \begin{bmatrix}
+a_11x_11+a_12x_21+a_13x_31=1&a_12&a_13\\
+a_21x_11+a_22x_21+a_23x_31=0&a_22&a_23\\
+a_31x_11+a_32x_21+a_33x_31=0&a_32&a_33\\
+\end{bmatrix}
+= B_11](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_11%260%260%5C%5C%0Ax_21%261%260%5C%5C%0Ax_31%260%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa_11x_11%2Ba_12x_21%2Ba_13x_31%3D1%26a_12%26a_13%5C%5C%0Aa_21x_11%2Ba_22x_21%2Ba_23x_31%3D0%26a_22%26a_23%5C%5C%0Aa_31x_11%2Ba_32x_21%2Ba_33x_31%3D0%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+B_11)
+
+
+![\begin{bmatrix}
+a_11&a_12&a_13\\
+a_21&a_22&a_23\\
+a_31&a_32&a_33
+\end{bmatrix}
+\begin{bmatrix}
+1&x_11&0\\
+0&x_21&0\\
+0&x_31&1\\
+\end{bmatrix}
+= \begin{bmatrix}
+a_11&a_11x_11+a_12x_21+a_13x_31=1&a_13\\
+a_21&a_21x_11+a_22x_21+a_23x_31=0&a_23\\
+a_31&a_31x_11+a_32x_21+a_33x_31=0&a_33\\
+\end{bmatrix}
+= B_12](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26x_11%260%5C%5C%0A0%26x_21%260%5C%5C%0A0%26x_31%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_11x_11%2Ba_12x_21%2Ba_13x_31%3D1%26a_13%5C%5C%0Aa_21%26a_21x_11%2Ba_22x_21%2Ba_23x_31%3D0%26a_23%5C%5C%0Aa_31%26a_31x_11%2Ba_32x_21%2Ba_33x_31%3D0%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+B_12)
+
+![\begin{bmatrix}
+a_11&a_12&a_13\\
+a_21&a_22&a_23\\
+a_31&a_32&a_33
+\end{bmatrix}
+\begin{bmatrix}
+1&0&x_11\\
+0&1&x_21\\
+0&0&x_31\\
+\end{bmatrix}
+= \begin{bmatrix}
+a_11&a_12&a_11x_11+a_12x_21+a_13x_31=1\\
+a_21&a_22&a_21x_11+a_22x_21+a_23x_31=0\\
+a_31&a_32&a_31x_11+a_32x_21+a_33x_31=0\\
+\end{bmatrix}
+= B_13](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%26x_11%5C%5C%0A0%261%26x_21%5C%5C%0A0%260%26x_31%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_11x_11%2Ba_12x_21%2Ba_13x_31%3D1%5C%5C%0Aa_21%26a_22%26a_21x_11%2Ba_22x_21%2Ba_23x_31%3D0%5C%5C%0Aa_31%26a_32%26a_31x_11%2Ba_32x_21%2Ba_33x_31%3D0%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+B_13)
