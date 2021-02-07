@@ -768,10 +768,13 @@ y<sub>1</sub> = |B<sub>3</sub>| / |A| = (factor = 1<sup>2+1</sup>) • (cofactor
 
 y<sub>2</sub> = |B<sub>4</sub>| / |A| = (factor = 1<sup>2+2</sup>) • (cofactor = a) / (ad-bc) 
 
-A<sup>-1</sup> =  
+A<sup>-1</sup> = 
 [
 [d,-b],
 [-c,a]
 ]
 
+so for 3 dimensions:  
+
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ x I<sub>2</sub> I<sub>3</sub> ] = [ b A<sub>2</sub> A<sub>3</sub> ] = B<sub>1</sub>
 
