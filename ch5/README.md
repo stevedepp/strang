@@ -664,6 +664,8 @@ the four 2x2's have x vector and y vector component unknowns on the LHS solving 
 
 the x<sub>j</sub>'s of X are solving for the (1,0) of B which is I identity since X is A's inverse = A<sup>-1</sup>.  
 
+the x<sub>j</sub>'s and y<sub>j</sub>'s are put in an identity matrix so that their determinant solves to just one of the 4 X components.  So they are inserted into an identity matrix that gives only 1s on the diagonal and zeros everywhere else (i.e. lower or upper triangular) that solves to a determinant of x<sub>1</sub>, or x<sub>2</sub>. or y<sub>1</sub> or y<sub>2</sub>.
+
 The objective of this set up is to have determinant of X on LHS get to x<sub>j</sub> and y<sub>j</sub> and our correct b on the RHS.  The x<sub>j</sub>'s should go to a b = (1,0) of I on the RHS and the y<sub>j</sub>'s should go to (0,1) of I on the RHS.  To get to the x<sub>1</sub> that yields (1,0) on the RHS, need to have x<sub>1</sub> in a lower triangular matrix so det of that X = x<sub>1</sub>; to have x<sub>1</sub> in a lower triangular the x<sub>j</sub>'s need to be on the LHS of X and the (1,0) thus are on the LHS of the B.  To get x<sub>2</sub> that yields (1,0) on the RHS, need to have x<sub>2</sub> in an upper triangular matrix so det of that X = x<sub>2</sub>; to have x<sub>2</sub> in a upper triangular, the x<sub>j</sub>'s need to be on the RHS of X and the (1,0) thus are on the RHS of the B.
 
 ![\begin{bmatrix}
@@ -730,7 +732,8 @@ cy_1 + dy_2&d
 =\begin{bmatrix}
 0&b\\
 1&d
-\end{bmatrix}-take-the-determinant->|A| (y_1) = |B_4|](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0AA%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa%26b%5C%5C%0Ac%26d%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay_1%260%5C%5C%0Ay_2%261%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Aay_1+%2B+by_2%26b%5C%5C%0Acy_1+%2B+dy_2%26d%0A%5Cend%7Bbmatrix%7D+%0A%3D%5Cbegin%7Bbmatrix%7D%0A0%26b%5C%5C%0A1%26d%0A%5Cend%7Bbmatrix%7D-take-the-determinant-%3E%7CA%7C+%28y_1%29+%3D+%7CB_4%7C)
+\end{bmatrix}-take-the-determinant->|A| (y_1) = |B_3|
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0AA%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa%26b%5C%5C%0Ac%26d%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay_1%260%5C%5C%0Ay_2%261%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Aay_1+%2B+by_2%26b%5C%5C%0Acy_1+%2B+dy_2%26d%0A%5Cend%7Bbmatrix%7D+%0A%3D%5Cbegin%7Bbmatrix%7D%0A0%26b%5C%5C%0A1%26d%0A%5Cend%7Bbmatrix%7D-take-the-determinant-%3E%7CA%7C+%28y_1%29+%3D+%7CB_3%7C%0A)
 
 ![\begin{bmatrix}
 A
