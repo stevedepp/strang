@@ -783,7 +783,7 @@ b =  a column of I which we will label b<sub>1</sub> for 1st column of I
 
 [ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> X<sub>1</sub> I<sub>3</sub> ] = [ A<sub>2</sub> I<sub>1</sub> A<sub>3</sub> ] = B<sub>2</sub>
 
-[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ x I<sub>1</sub> I<sub>2</sub> X<sub>1</sub> ] = [ A<sub>1</sub> A<sub>2</sub> I<sub>1</sub> ] = B<sub>3</sub>
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> I<sub>2</sub> X<sub>1</sub> ] = [ A<sub>1</sub> A<sub>2</sub> I<sub>1</sub> ] = B<sub>3</sub>
 
 
 
