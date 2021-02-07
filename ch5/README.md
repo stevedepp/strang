@@ -903,7 +903,7 @@ a_11x_12+a_12x_22+a_13x_32=0&a_12&a_13\\
 a_21x_12+a_22x_22+a_23x_32=1&a_22&a_23\\
 a_31x_12+a_32x_22+a_33x_32=0&a_32&a_33\\
 \end{bmatrix}
-= B_21](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_12%260%260%5C%5C%0Ax_22%261%260%5C%5C%0Ax_32%260%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa_11x_12%2Ba_12x_22%2Ba_13x_32%3D1%26a_12%26a_13%5C%5C%0Aa_21x_12%2Ba_22x_22%2Ba_23x_32%3D0%26a_22%26a_23%5C%5C%0Aa_31x_12%2Ba_32x_22%2Ba_33x_32%3D0%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+B_21)
+= B_21](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_12%260%260%5C%5C%0Ax_22%261%260%5C%5C%0Ax_32%260%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa_11x_12%2Ba_12x_22%2Ba_13x_32%3D0%26a_12%26a_13%5C%5C%0Aa_21x_12%2Ba_22x_22%2Ba_23x_32%3D1%26a_22%26a_23%5C%5C%0Aa_31x_12%2Ba_32x_22%2Ba_33x_32%3D0%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+B_21)
 
 ![\begin{bmatrix}
 a_11&a_12&a_13\\
@@ -951,13 +951,12 @@ x_23&1&0\\
 x_33&0&1\\
 \end{bmatrix}
 = \begin{bmatrix}
-a_11x_13+a_12x_23+a_13x_33=1&a_12&a_13\\
+a_11x_13+a_12x_23+a_13x_33=0&a_12&a_13\\
 a_21x_13+a_22x_23+a_23x_33=0&a_22&a_23\\
-a_31x_13+a_32x_23+a_33x_33=0&a_32&a_33\\
+a_31x_13+a_32x_23+a_33x_33=1&a_32&a_33\\
 \end{bmatrix}
 = B_31
-](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_13%260%260%5C%5C%0Ax_23%261%260%5C%5C%0Ax_33%260%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa_11x_13%2Ba_12x_23%2Ba_13x_33%3D1%26a_12%26a_13%5C%5C%0Aa_21x_13%2Ba_22x_23%2Ba_23x_33%3D0%26a_22%26a_23%5C%5C%0Aa_31x_13%2Ba_32x_23%2Ba_33x_33%3D0%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+B_31%0A)
-
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_13%260%260%5C%5C%0Ax_23%261%260%5C%5C%0Ax_33%260%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa_11x_13%2Ba_12x_23%2Ba_13x_33%3D0%26a_12%26a_13%5C%5C%0Aa_21x_13%2Ba_22x_23%2Ba_23x_33%3D0%26a_22%26a_23%5C%5C%0Aa_31x_13%2Ba_32x_23%2Ba_33x_33%3D1%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+B_31%0A)
 
 ![\begin{bmatrix}
 a_11&a_12&a_13\\
@@ -971,10 +970,10 @@ a_31&a_32&a_33
 \end{bmatrix}
 = \begin{bmatrix}
 a_11&a_11x_13+a_12x_23+a_13x_33=0&a_13\\
-a_21&a_21x_13+a_22x_23+a_23x_33=1&a_23\\
-a_31&a_31x_13+a_32x_23+a_33x_33=0&a_33\\
+a_21&a_21x_13+a_22x_23+a_23x_33=0&a_23\\
+a_31&a_31x_13+a_32x_23+a_33x_33=1&a_33\\
 \end{bmatrix}
-= B_32](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26x_13%260%5C%5C%0A0%26x_23%260%5C%5C%0A0%26x_33%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_11x_13%2Ba_12x_23%2Ba_13x_33%3D0%26a_13%5C%5C%0Aa_21%26a_21x_13%2Ba_22x_23%2Ba_23x_33%3D1%26a_23%5C%5C%0Aa_31%26a_31x_13%2Ba_32x_23%2Ba_33x_33%3D0%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+B_32)
+= B_32](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26x_13%260%5C%5C%0A0%26x_23%260%5C%5C%0A0%26x_33%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_11x_13%2Ba_12x_23%2Ba_13x_33%3D0%26a_13%5C%5C%0Aa_21%26a_21x_13%2Ba_22x_23%2Ba_23x_33%3D0%26a_23%5C%5C%0Aa_31%26a_31x_13%2Ba_32x_23%2Ba_33x_33%3D1%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+B_32)
 
 ![\begin{bmatrix}
 a_11&a_12&a_13\\
