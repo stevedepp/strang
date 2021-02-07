@@ -785,18 +785,32 @@ this gets you the first row of X<sub>1</sub> = X<sub>11</sub>:
 [ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ X<sub>1</sub> I<sub>2</sub> I<sub>3</sub> ] = [ I<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ] = B<sub>1</sub>
 
 this gets you the second row of X<sub>1</sub> = X<sub>21</sub>:   
-[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> X<sub>1</sub> I<sub>3</sub> ] = [ A<sub>2</sub> I<sub>1</sub> A<sub>3</sub> ] = B<sub>2</sub>
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> X<sub>1</sub> I<sub>3</sub> ] = [ A<sub>1</sub> I<sub>1</sub> A<sub>3</sub> ] = B<sub>2</sub>
 
 this gets you the third row of X<sub>1</sub> = X<sub>31</sub>:   
 [ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> I<sub>2</sub> X<sub>1</sub> ] = [ A<sub>1</sub> A<sub>2</sub> I<sub>1</sub> ] = B<sub>3</sub>
 
 for 2nd column of X = X<sub>2</sub> = A<sup>-1</sup> on LHS that will eventually bring 2nd column of I = (0,1,0) on RHS:  
 
+this gets you the first row of X<sub>2</sub> = X<sub>12</sub>:   
 [ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ X<sub>2</sub> I<sub>2</sub> I<sub>3</sub> ] = [ I<sub>2</sub> A<sub>2</sub> A<sub>3</sub> ] = B<sub>4</sub>
 
-[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> X<sub>2</sub> I<sub>3</sub> ] = [ A<sub>2</sub> I<sub>2</sub> A<sub>3</sub> ] = B<sub>5</sub>
+this gets you the second row of X<sub>2</sub> = X<sub>22</sub>:   
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> X<sub>2</sub> I<sub>3</sub> ] = [ A<sub>1</sub> I<sub>2</sub> A<sub>3</sub> ] = B<sub>5</sub>
 
+this gets you the third row of X<sub>2</sub> = X<sub>32</sub>:   
 [ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> I<sub>2</sub> X<sub>2</sub> ] = [ A<sub>1</sub> A<sub>2</sub> I<sub>2</sub> ] = B<sub>6</sub>
+
+for 3rd column of X = X<sub>3</sub> = A<sup>-1</sup> on LHS that will eventually bring 3rd column of I = (0,0,1) on RHS:  
+
+this gets you the first row of X<sub>3</sub> = X<sub>13</sub>:   
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ X<sub>3</sub> I<sub>2</sub> I<sub>3</sub> ] = [ I<sub>3</sub> A<sub>2</sub> A<sub>3</sub> ] = B<sub>7</sub>
+
+this gets you the second row of X<sub>3</sub> = X<sub>23</sub>:   
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> X<sub>3</sub> I<sub>3</sub> ] = [ A<sub>1</sub> I<sub>3</sub> A<sub>3</sub> ] = B<sub>8</sub>
+
+this gets you the third row of X<sub>3</sub> = X<sub>33</sub>:   
+[ A<sub>1</sub> A<sub>2</sub> A<sub>3</sub> ][ I<sub>1</sub> I<sub>2</sub> X<sub>3</sub> ] = [ A<sub>1</sub> A<sub>2</sub> I<sub>3</sub> ] = B<sub>9</sub>
 
 
 
