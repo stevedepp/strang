@@ -755,3 +755,23 @@ a&0\\
 c&1
 \end{bmatrix}-take-the-determinant->|A| (y_2) = |B_4|
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0AA%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa%26b%5C%5C%0Ac%26d%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26y_1%5C%5C%0A0%26y_2%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Aa%26ay_1+%2B+by_2%5C%5C%0Ac%26cy_1+%2B+dy_2%0A%5Cend%7Bbmatrix%7D+%0A%3D%5Cbegin%7Bbmatrix%7D%0Aa%260%5C%5C%0Ac%261%0A%5Cend%7Bbmatrix%7D-take-the-determinant-%3E%7CA%7C+%28y_2%29+%3D+%7CB_4%7C%0A)
+
+this explodes in complications of subscripts when go to 3x3. To see that go to yellow notes. 
+
+for this one, 
+
+x<sub>1</sub> = |B<sub>1</sub>| / |A| = (factor = 1<sup>1+1</sup>) • (cofactor = d) / (ad-bc) 
+
+x<sub>2</sub> = |B<sub>2</sub>| / |A| = (factor = 1<sup>1+2</sup>) • (cofactor = c) / (ad-bc) 
+
+y<sub>1</sub> = |B<sub>3</sub>| / |A| = (factor = 1<sup>2+1</sup>) • (cofactor = b) / (ad-bc) 
+
+y<sub>2</sub> = |B<sub>4</sub>| / |A| = (factor = 1<sup>2+2</sup>) • (cofactor = a) / (ad-bc) 
+
+A<sup>-1</sup> =  
+[
+[d,-b],
+[-c,a]
+]
+
+
