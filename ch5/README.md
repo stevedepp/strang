@@ -637,4 +637,117 @@ the cross product of w = u x v is =
 | u<sub>1</sub> u<sub>2</sub> u<sub>3</sub> |   
 | v<sub>1</sub> v<sub>2</sub> v<sub>3</sub> |
 
+v x u = =(u x v)    
+w<sub>1</sub>, w<sub>2</sub>, w<sub>3</sub> are cofactors of row 1  
+w<sup>T</sup>u and w<sup>T</sup>v = 0
 
+detail:
+
+this section :  
+- solves Ax = b.   
+- finds A<sup>-1</sup> by algebra not elimination.    
+- all formulas divide by det A.  
+- each entry in A<sup>-1</sup> and A<sup>-1</sup>b is a determinant divided by the determinant of A.  
+
+this formula is very complex to construct and for a 3x3 A multiplying a 3x3 X to get a 3x3 I so that X ends up being A<sup>-1</sup> there is a lot of substitution and subscripts.  I dont think it's possible to put it here with out a lot of work and not sure there is a benefit to knowing the construction of the algebra you end up with.
+
+key idea 
+
+using artificially constructed x or X and artificially constructed b or B to find x or A<sup>-1</sup>:
+
+one example is Ax = b  
+another is AX = I to find A<sup>-1</sup>  
+which is more interesting  
+and he goes on to do that for a 3x3  
+
+the four 2x2's have x vector and y vector component unknowns on the LHS solving for 0s and 1s on the b side RHS.  The a, b, c, and d on LHS and RHS are merely numbers that we can plug into the formula to verify. 
+
+the x<sub>j</sub>'s of X are solving for the (1,0) of B which is I identity since X is A's inverse = A<sup>-1</sup>.  
+
+The objective of this set up is to have determinant of X on LHS get to x<sub>j</sub> and y<sub>j</sub> and our correct b on the RHS.  The x<sub>j</sub>'s should go to a b = (1,0) of I on the RHS and the y<sub>j</sub>'s should go to (0,1) of I on the RHS.  To get to the x<sub>1</sub> that yields (1,0) on the RHS, need to have x<sub>1</sub> in a lower triangular matrix; to have x<sub>1</sub> in a lower triangular the x<sub>j</sub>'s need to be on the LHS of X and the (1,0) thus are on the LHS of the B.  To get x<sub>2</sub> that yields (1,0) on the RHS, need to have x<sub>2</sub> in an upper triangular matrix so det of that X = x<sub>2</sub>; to have x<sub>2</sub> in a upper triangular, the x<sub>j</sub>'s need to be on the RHS of X and the (1,0) thus are on the RHS of the B.
+
+![\begin{bmatrix}
+A
+\end{bmatrix}
+= \begin{bmatrix}
+a&b\\
+c&d
+\end{bmatrix}
+\begin{bmatrix}
+x_1&0\\
+x_2&1
+\end{bmatrix}
+=\begin{bmatrix}
+ax_1 + bx_2&b\\
+cx_1 + dx_2&d
+\end{bmatrix} 
+=\begin{bmatrix}
+1&b\\
+0&d
+\end{bmatrix}-take-the-determinant->|A| (x_1) = |B_1|]](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0AA%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa%26b%5C%5C%0Ac%26d%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%260%5C%5C%0Ax_2%261%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Aax_1+%2B+bx_2%26b%5C%5C%0Acx_1+%2B+dx_2%26d%0A%5Cend%7Bbmatrix%7D+%0A%3D%5Cbegin%7Bbmatrix%7D%0A1%26b%5C%5C%0A0%26d%0A%5Cend%7Bbmatrix%7D-take-the-determinant-%3E%7CA%7C+%28x_1%29+%3D+%7CB_1%7C%5D)
+
+
+![\begin{bmatrix}
+A
+\end{bmatrix}
+= \begin{bmatrix}
+a&b\\
+c&d
+\end{bmatrix}
+\begin{bmatrix}
+1&x_1\\
+0&x_2
+\end{bmatrix}
+=\begin{bmatrix}
+a&ax_1 + bx_2\\
+c&cx_1 + dx_2
+\end{bmatrix} 
+=\begin{bmatrix}
+a&1\\
+c&0
+\end{bmatrix}-take-the-determinant->|A| (x_2) = |B_2|]](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0AA%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa%26b%5C%5C%0Ac%26d%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26x_1%5C%5C%0A0%26x_2%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Aa%26ax_1+%2B+bx_2%5C%5C%0Ac%26cx_1+%2B+dx_2%0A%5Cend%7Bbmatrix%7D+%0A%3D%5Cbegin%7Bbmatrix%7D%0Aa%261%5C%5C%0Ac%260%0A%5Cend%7Bbmatrix%7D-take-the-determinant-%3E%7CA%7C+%28x_2%29+%3D+%7CB_2%7C%5D)
+
+
+the y<sub>j</sub>'s of X are solving for the (0,1) of B which is I identity since X is A's inverse = A<sup>-1</sup>.  
+
+The objective of this set up is to have determinant of X on LHS get to x<sub>j</sub> and y<sub>j</sub> and our correct b on the RHS.  The x<sub>j</sub>'s should go to a b = (1,0) of I on the RHS and the y<sub>j</sub>'s should go to (0,1) of I on the RHS.  To get to the x<sub>1</sub> that yields (1,0) on the RHS, need to have x<sub>1</sub> in a lower triangular matrix; to have x<sub>1</sub> in a lower triangular the x<sub>j</sub>'s need to be on the LHS of X and the (1,0) thus are on the LHS of the B.  To get x<sub>2</sub> that yields (1,0) on the RHS, need to have x<sub>2</sub> in an upper triangular matrix so det of that X = x<sub>2</sub>; to have x<sub>2</sub> in a upper triangular, the x<sub>j</sub>'s need to be on the RHS of X and the (1,0) thus are on the RHS of the B.
+
+![\begin{bmatrix}
+A
+\end{bmatrix}
+= \begin{bmatrix}
+a&b\\
+c&d
+\end{bmatrix}
+\begin{bmatrix}
+y_1&0\\
+y_2&1
+\end{bmatrix}
+=\begin{bmatrix}
+ay_1 + by_2&b\\
+cy_1 + dy_2&d
+\end{bmatrix} 
+=\begin{bmatrix}
+0&b\\
+1&d
+\end{bmatrix}-take-the-determinant->|A| (y_1) = |B_4|](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0AA%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa%26b%5C%5C%0Ac%26d%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay_1%260%5C%5C%0Ay_2%261%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Aay_1+%2B+by_2%26b%5C%5C%0Acy_1+%2B+dy_2%26d%0A%5Cend%7Bbmatrix%7D+%0A%3D%5Cbegin%7Bbmatrix%7D%0A0%26b%5C%5C%0A1%26d%0A%5Cend%7Bbmatrix%7D-take-the-determinant-%3E%7CA%7C+%28y_1%29+%3D+%7CB_4%7C)
+
+![\begin{bmatrix}
+A
+\end{bmatrix}
+= \begin{bmatrix}
+a&b\\
+c&d
+\end{bmatrix}
+\begin{bmatrix}
+1&y_1\\
+0&y_2
+\end{bmatrix}
+=\begin{bmatrix}
+a&ay_1 + by_2\\
+c&cy_1 + dy_2
+\end{bmatrix} 
+=\begin{bmatrix}
+a&0\\
+c&1
+\end{bmatrix}-take-the-determinant->|A| (y_2) = |B_4|]](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0AA%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa%26b%5C%5C%0Ac%26d%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26y_1%5C%5C%0A0%26y_2%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Aa%26ay_1+%2B+by_2%5C%5C%0Ac%26cy_1+%2B+dy_2%0A%5Cend%7Bbmatrix%7D+%0A%3D%5Cbegin%7Bbmatrix%7D%0Aa%260%5C%5C%0Ac%261%0A%5Cend%7Bbmatrix%7D-take-the-determinant-%3E%7CA%7C+%28y_2%29+%3D+%7CB_4%7C%5D)
