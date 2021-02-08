@@ -1128,3 +1128,35 @@ a_31&a_32&1\\
 
 
 [A] [A<sup>-1</sup>] = [ I ] = [A] [X] = [ I ] = [A] [C<sup>T</sup>] / |A|
+
+![\begin{align*}
+\begin{bmatrix} 
+I
+\end{bmatrix}
+&=
+\begin{bmatrix} 
+a_11&a_12&a_13\\
+a_21&a_22&a_23\\
+a_31&a_32&a_33\\
+\end{bmatrix}
+\begin{bmatrix} 
+x_11&x_12&x_13\\
+x_21&x_22&x_23\\
+x_31&x_32&x_33\\
+\end{bmatrix} \\
+&=\frac
+{\begin{bmatrix} 
+a_11&a_12&a_13\\
+a_21&a_22&a_23\\
+a_31&a_32&a_33\\
+\end{bmatrix}
+\begin{bmatrix} 
+C_11&C_21&C_31\\
+C_12&C_22&C_32\\
+C_13&C_23&C_33\\
+\end{bmatrix} }
+{ det\begin{bmatrix}A\end{bmatrix} }\\
+&=\frac
+{ \begin{bmatrix}A\end{bmatrix}\begin{bmatrix}C^T\end{bmatrix} } 
+{ det\begin{bmatrix}A\end{bmatrix} }
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bbmatrix%7D+%0AI%0A%5Cend%7Bbmatrix%7D%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D+%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D+%0Ax_11%26x_12%26x_13%5C%5C%0Ax_21%26x_22%26x_23%5C%5C%0Ax_31%26x_32%26x_33%5C%5C%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%26%3D%5Cfrac%0A%7B%5Cbegin%7Bbmatrix%7D+%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D+%0AC_11%26C_21%26C_31%5C%5C%0AC_12%26C_22%26C_32%5C%5C%0AC_13%26C_23%26C_33%5C%5C%0A%5Cend%7Bbmatrix%7D+%7D%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%5Cfrac%0A%7B+%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D%5Cbegin%7Bbmatrix%7DC%5ET%5Cend%7Bbmatrix%7D+%7D+%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%0A%5Cend%7Balign%2A%7D)
