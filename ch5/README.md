@@ -1271,4 +1271,73 @@ the same applies to a parallelogram that is not touching the origin and to a box
 
 a unit cube has volume 1 = det A = 1.  Row exchanges or edge exchanges leave the sme box and absolute value of volumne.  The determinant changes sign to indicate whether the edges are a right handed triple (det A > 0) or a left handed triple (det A < 0).  The box volume follows the rules for determinants and so the volume of det A = absolute value.  
 
-if multiply the determinant by 3 the volumne scales by 
+example:
+
+calculus sees the box infinitesimally small. 
+
+to integrate over a circle, can change x and y to r and theta polar coordinates: x = r cos theta and y = r sin theta and the area of a polar box is a determinant J times d r / d theta.
+
+A = area = pi • r<sup>2</sup>
+d A / d theta = r ( d r / d theta )
+since r = r (cos<sup>2</sup> + sin<sup>2</sup>) we can create this first matrix:
+
+x changes with r = dx/dr = cos theta
+y changes with r = dy/dr = sin theta
+x changes with theta = dx/d theta = -r sin theta <-- unsure if this should be cos theta
+y changes with theta = dy/d theta = r cos theta <-- unsure if this should be sin theta
+
+this determinant = J = r can be multiplied by dr/d theta = area 
+
+![\begin{align*}
+J
+&=det
+\begin{bmatrix} 
+cos\theta&-r(sin\theta)\\
+sin\theta&r(cos\theta)\\
+\end{bmatrix}\\
+&=det
+\begin{bmatrix} 
+dx/dr&dx/d\theta\\
+dy/dr&dx/d\theta\\
+\end{bmatrix}\\
+&=r
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AJ%0A%26%3Ddet%0A%5Cbegin%7Bbmatrix%7D+%0Acos%5Ctheta%26-r%28sin%5Ctheta%29%5C%5C%0Asin%5Ctheta%26r%28cos%5Ctheta%29%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3Ddet%0A%5Cbegin%7Bbmatrix%7D+%0Adx%2Fdr%26dx%2Fd%5Ctheta%5C%5C%0Ady%2Fdr%26dx%2Fd%5Ctheta%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3Dr%0A%5Cend%7Balign%2A%7D)
+
+this determinant is the r in the small area dA = r • dr/d theta.  the stretching factor J goes into double integrals just as dx/du goes into an ordinary integral ∫ dx = ∫ (dx/du) du.  for tripple integrls the Jacobian matrix J with 9 derivatives will be 3 x 3.
+
+
+cross product
+
+3 dimensions  
+vectors  
+u = (u<sub>1</sub>, u<sub>2</sub>, u<sub>3</sub>)  
+v = (v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>)
+
+cross product "u x v"  is said "u cross v" results in 2 component vector that is useful in geometry and physics
+
+![\begin{align*}
+u x v &=
+\begin{matrix}
+i&j&k\\
+u_1&u_2&u_3\\ 
+v_1&v_2&v_3\\ 
+\end{matrix}
+= (-1)^{1+3}(u_2v_3-u_3v_2)(i) + (-1)^{1+2}(u_1v_3-u_3v_1)(j) + (-1)^{1+3}(u_1v_2 - u_2v_1)
+\end{align*}(k)](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au+x+v+%26%3D%0A%5Cbegin%7Bmatrix%7D%0Ai%26j%26k%5C%5C%0Au_1%26u_2%26u_3%5C%5C+%0Av_1%26v_2%26v_3%5C%5C+%0A%5Cend%7Bmatrix%7D%0A%3D+%28-1%29%5E%7B1%2B3%7D%28u_2v_3-u_3v_2%29%28i%29+%2B+%28-1%29%5E%7B1%2B2%7D%28u_1v_3-u_3v_1%29%28j%29+%2B+%28-1%29%5E%7B1%2B3%7D%28u_1v_2+-+u_2v_1%29%0A%5Cend%7Balign%2A%7D%28k%29)
+
+u x v is perpendicular to u and v
+
+v x u = -(u x v)
+
+where it says i j and k above that is the vector i = (1,0,0) multiplying (u_2v_3-u_3v_2) which results in the vector ((u_2v_3-u_3v_2, 0,0) which displays the first component of the cross product. 
+
+property 1 of cross product
+
+v x u reverses rows 2 and 3 in the determinant and so = -(u x v)
+
+property 2 of cross product
+
+u x v is perpendicular to u and v.  proof is :
+
+u • (u x v) = u<sub>1</sub>(u<sub>2</sub>v<sub>3</sub>-u<sub>3</sub>v<sub>2</sub>) + u<sub>2</sub>(u<sub>3</sub>v<sub>1</sub>-u<sub>1</sub>v<sub>3</sub> + u<sub>3</sub>(u<sub>1</sub>v<sub>2</sub>-u<sub>2</sub>v<sub>1</sub>) = 0
+
