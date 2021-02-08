@@ -1210,3 +1210,65 @@ C<sub>ij</sub> + (-1)<sup>i+j</sup> det M<sub>ij</sub>
 we flip the i and j in C and M in deriving A<sup>-1</sup> because we are really deriving C<sup>T</sup>.
 
 
+Areas
+
+rectangle = b • h
+
+triangle = (1/2) • b • h
+
+if corners are known but not lengths, how?
+
+using corners to find base and height is inefficient.  
+
+triangle area is (1/2) of a 3 x 3 determinant.  
+
+![\begin{align*}
+Ttriangle
+&=\frac{1}{2} det
+\begin{bmatrix} 
+x_1&y_1&1\\
+x_2&y_2&1\\
+x_3&y_3&1
+\end{bmatrix}\\
+&=\frac{1}{2} (1)(-1)^{1+3}(x_2y_3 - y_2x_3)\\
+&+\frac{1}{2} (1)(-1)^{2+3}(x_1y_3 - y_1x_3)\\
+&+\frac{1}{2} (1)(-1)^{3+3}(x_1y_2 - y_1x_2)\\
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0ATtriangle%0A%26%3D%5Cfrac%7B1%7D%7B2%7D+det%0A%5Cbegin%7Bbmatrix%7D+%0Ax_1%26y_1%261%5C%5C%0Ax_2%26y_2%261%5C%5C%0Ax_3%26y_3%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%5Cfrac%7B1%7D%7B2%7D+%281%29%28-1%29%5E%7B1%2B3%7D%28x_2y_3+-+y_2x_3%29%5C%5C%0A%26%2B%5Cfrac%7B1%7D%7B2%7D+%281%29%28-1%29%5E%7B2%2B3%7D%28x_1y_3+-+y_1x_3%29%5C%5C%0A%26%2B%5Cfrac%7B1%7D%7B2%7D+%281%29%28-1%29%5E%7B3%2B3%7D%28x_1y_2+-+y_1x_2%29%5C%5C%0A%5Cend%7Balign%2A%7D%0A)
+
+of if triangle is anchored to origin with x<sub>3</sub>, y<sub>3</sub> = (0,0)
+
+![\begin{align*}
+Ttriangle
+&=\frac{1}{2} det
+\begin{bmatrix} 
+x_1&y_1&1\\
+x_2&y_2&1\\
+\end{bmatrix}\\
+&=\frac{1}{2} (1)(-1)^{1+3}(x_2y_3 - y_2x_3)\\
+&+\frac{1}{2} (1)(-1)^{2+3}(x_1y_3 - y_1x_3)\\
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0ATtriangle%0A%26%3D%5Cfrac%7B1%7D%7B2%7D+det%0A%5Cbegin%7Bbmatrix%7D+%0Ax_1%26y_1%261%5C%5C%0Ax_2%26y_2%261%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%5Cfrac%7B1%7D%7B2%7D+%281%29%28-1%29%5E%7B1%2B3%7D%28x_2y_3+-+y_2x_3%29%5C%5C%0A%26%2B%5Cfrac%7B1%7D%7B2%7D+%281%29%28-1%29%5E%7B2%2B3%7D%28x_1y_3+-+y_1x_3%29%5C%5C%0A%5Cend%7Balign%2A%7D%0A)
+
+remove the (1/2) factor to obtain the area of parallelogram that contains 2 equal triangles. 
+
+can prove that parallelogram starting at the origin has area in a 2x2 determinant by seeing that it follows the 3 rules of determinants:
+
+1. when A = I the parallelogram has unit area:
+
+[
+[1,0],
+[0,1]
+]
+
+has det I = 1.
+
+2. when rows are exchanges, the determinant reverses sign but the absolute value, positive area, stays the same.
+
+3. scaling a single row by t scales the area by r.  if add row 2 to row 1 then the parallelogram sides shift from x<sub>1</sub>, y<sub>1</sub> and x<sub>2</sub>, y<sub>2</sub> to x<sub>1</sub>+x<sub>2</sub>,, y<sub>1</sub>+y<sub>2</sub> and x<sub>2</sub>, y<sub>2</sub> and the area increases proportionately.
+
+the same applies to a parallelogram that is not touching the origin and to a box that is or is not touching the origin which is represented by 3 x 4 matrix in R<sup>3</sup> where the 4th column has all 1s.  when an edge is stretched by a factor of t the volumne is factored by that t. if edge 1 is added to edge 2 then the volume is the sum of the 2 original volumes.  
+
+a unit cube has volume 1 = det A = 1.  Row exchanges or edge exchanges leave the sme box and absolute value of volumne.  The determinant changes sign to indicate whether the edges are a right handed triple (det A > 0) or a left handed triple (det A < 0).  The box volume follows the rules for determinants and so the volume of det A = absolute value.  
+
+if multiply the determinant by 3 the volumne scales by 
