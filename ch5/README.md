@@ -992,3 +992,11 @@ a_31&a_32&a_31x_13+a_32x_23+a_33x_33=1\\
 \end{bmatrix}
 = B_33
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%26x_13%5C%5C%0A0%261%26x_23%5C%5C%0A0%260%26x_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_11x_13%2Ba_12x_23%2Ba_13x_33%3D0%5C%5C%0Aa_21%26a_22%26a_21x_13%2Ba_22x_23%2Ba_23x_33%3D0%5C%5C%0Aa_31%26a_32%26a_31x_13%2Ba_32x_23%2Ba_33x_33%3D1%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+B_33%0A)
+
+![\begin{equation}
+   \begin{vmatrix} 
+   a_{11} & a_{12} & a_{13}  \\
+   a_{21} & a_{22} & a_{23}  \\
+   a_{31} & a_{32} & a_{33}  \\
+   \end{vmatrix} 
+\end{equation}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bequation%7D%0A+++%5Cbegin%7Bvmatrix%7D+%0A+++a_%7B11%7D+%26+a_%7B12%7D+%26+a_%7B13%7D++%5C%5C%0A+++a_%7B21%7D+%26+a_%7B22%7D+%26+a_%7B23%7D++%5C%5C%0A+++a_%7B31%7D+%26+a_%7B32%7D+%26+a_%7B33%7D++%5C%5C%0A+++%5Cend%7Bvmatrix%7D+%0A%5Cend%7Bequation%7D)
