@@ -1129,7 +1129,13 @@ a_31&a_32&1\\
 
 [A] [A<sup>-1</sup>] = [ I ] = [A] [X] = [ I ] = [A] [C<sup>T</sup>] / |A|
 
-a<sub>21</sub>x<sub>11</sub> + a<sub>22</sub>x<sub>21</sub> + a<sub>23</sub>x<sub>31</sub> = I<sub>21</sub> and similar inner products are defined = 0 above.  So they continue = zero in the first row below.  Since they are zero in the first row, they are zero in the second row as well since e.g. x<sub>ij</sub> = C<sub>ji</sub>/|A|.
+a<sub>21</sub>x<sub>11</sub> + a<sub>22</sub>x<sub>21</sub> + a<sub>23</sub>x<sub>31</sub> = I<sub>21</sub> and similar inner products are defined = 0 above.  So they continue = zero in the first row below.  Since they are zero in the first row, they are zero in the second row as well since e.g. x<sub>ij</sub> = C<sub>ji</sub>/|A|.   "This is the cofactor rule for a new matrix when the second row of A is copied into its first row.  The new matrix has two equal rows so det A = 0"
+
+(A<sup>-1</sup>)<sub>ij</sub> = C<sub>ji</sub> / det A
+
+A<sup>-1</sup> = C<sup>T</sup> / det A
+
+so the flipped j and i in C in equation for (A<sup>-1</sup>)<sub>ij</sub> is represented in the full equation for A<sup>-1</sup> by C<sup>T</sup>. [ So it would be C<sup>T</sup>)<sub>ij</sub>.]
 
 ![\begin{align*}
 \begin{bmatrix} 
@@ -1164,3 +1170,38 @@ C_13&C_23&C_33\\
 &=
 \begin{bmatrix}A\end{bmatrix}\begin{bmatrix}A^{-1}\end{bmatrix} 
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bbmatrix%7D+%0AI%0A%5Cend%7Bbmatrix%7D%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D+%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D+%0Ax_11%26x_12%26x_13%5C%5C%0Ax_21%26x_22%26x_23%5C%5C%0Ax_31%26x_32%26x_33%5C%5C%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%26%3D%5Cfrac%0A%7B%5Cbegin%7Bbmatrix%7D+%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D+%0AC_11%26C_21%26C_31%5C%5C%0AC_12%26C_22%26C_32%5C%5C%0AC_13%26C_23%26C_33%5C%5C%0A%5Cend%7Bbmatrix%7D+%7D%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%5Cfrac%0A%7B+%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D%5Cbegin%7Bbmatrix%7DC%5ET%5Cend%7Bbmatrix%7D+%7D+%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D%5Cbegin%7Bbmatrix%7DA%5E%7B-1%7D%5Cend%7Bbmatrix%7D+%0A%5Cend%7Balign%2A%7D)
+
+of course this means that A C<sup>T</sup> = |A| • I where det A appears on the diagonal because this is cofactor rule defeined above. 
+
+example
+
+A is "sum matrix" and has determinent 1 and A<sup>-1</sup> contains cofactor: C<sub>11</sub> from crossing out row and column 1 has factor 1 and M that is a 3x3 sum matrix and permutations (-1)<sup>1+1</sup>=1.  C<sub>12</sub> crosses out the row 1 and column 2 and takes the determinant of M
+
+![\begin{align*}
+A&=
+\begin{bmatrix} 
+1&0&0&0\\
+1&1&0&0\\
+1&1&1&0\\
+1&1&1&1
+\end{bmatrix}\\
+A^{-1}
+&=\frac{C^T}{det A = 1} \\
+&=\begin{bmatrix} 
+1&0&0&0\\
+-1&1&0&0\\
+0&-1&1&0\\
+0&0&-1&1
+\end{bmatrix}
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA%26%3D%0A%5Cbegin%7Bbmatrix%7D+%0A1%260%260%260%5C%5C%0A1%261%260%260%5C%5C%0A1%261%261%260%5C%5C%0A1%261%261%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0AA%5E%7B-1%7D%0A%26%3D%5Cfrac%7BC%5ET%7D%7Bdet+A+%3D+1%7D+%5C%5C%0A%26%3D%5Cbegin%7Bbmatrix%7D+%0A1%260%260%260%5C%5C%0A-1%261%260%260%5C%5C%0A0%26-1%261%260%5C%5C%0A0%260%26-1%261%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+Dont be confused.  The cofactor formula is:
+
+det A = a<sub>i1</sub>C<sub>i1</sub> + a<sub>i2</sub>C<sub>i2</sub> + ... + a<sub>in</sub>C<sub>in</sub>
+
+with each cofactor of order n-1 without row i and column j includes the correct sign:
+
+C<sub>ij</sub> + (-1)<sup>i+j</sup> det M<sub>ij</sub>
+
+we flip the i and j in C and M in deriving A<sup>-1</sup> because we are really deriving C<sup>T</sup>.
