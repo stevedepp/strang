@@ -1175,7 +1175,10 @@ of course this means that A C<sup>T</sup> = |A| • I where det A appears on the
 
 example
 
-A is "sum matrix" and has determinent 1 and A<sup>-1</sup> contains cofactor: C<sub>11</sub> from crossing out row and column 1 has factor 1 and M that is a 3x3 sum matrix and permutations (-1)<sup>1+1</sup>=1.  C<sub>12</sub> crosses out the row 1 and column 2 and takes the determinant of M
+A is "sum matrix" and has determinent 1 and A<sup>-1</sup> contains cofactor: C<sub>11</sub> from crossing out row and column 1 has factor 1 and M that is a 3x3 sum matrix and permutations (-1)<sup>1+1</sup>=1.  C<sub>12</sub> crosses out the row 1 and column 2 and takes the determinant of M<sub>12</sub> which is 1 since it is a triangle and has 1s on its diagonal.  The factor is -1 = (-1)<sup>1+2</sup>.  So -1 goes into the 1,2 cell of C or the (2,1) cell of C<sup>T</sup> and A<sup>T</sup> = C<sup>T</sup> / det A.  Dont forget to flip to C<sup>T</sup>!  
+[C<sub>12</sub><sup>T</sup> crosses out the colum 1 and row 2 and takes the determinant of M<sub>21</sub>.]
+
+The inverse of a triangular is triangular and cofactors give a reason why!
 
 ![\begin{align*}
 A&=
@@ -1205,3 +1208,5 @@ with each cofactor of order n-1 without row i and column j includes the correct 
 C<sub>ij</sub> + (-1)<sup>i+j</sup> det M<sub>ij</sub>
 
 we flip the i and j in C and M in deriving A<sup>-1</sup> because we are really deriving C<sup>T</sup>.
+
+
