@@ -1129,6 +1129,8 @@ a_31&a_32&1\\
 
 [A] [A<sup>-1</sup>] = [ I ] = [A] [X] = [ I ] = [A] [C<sup>T</sup>] / |A|
 
+a<sub>21</sub>x<sub>11</sub> + a<sub>22</sub>x<sub>21</sub> + a<sub>23</sub>x<sub>31</sub> and similar inner products are defined = 0 above.  So they continue = zero in the first row below.  Since they are zero in the first row, they are zero in the second row as well since e.g. x<sub>ij</sub> = C<sub>ji</sub>/|A|.
+
 ![\begin{align*}
 \begin{bmatrix} 
 I
