@@ -1322,8 +1322,8 @@ i&j&k\\
 u_1&u_2&u_3\\ 
 v_1&v_2&v_3\\ 
 \end{matrix}
-= (-1)^{1+3}(u_2v_3-u_3v_2)(i) + (-1)^{1+2}(u_1v_3-u_3v_1)(j) + (-1)^{1+3}(u_1v_2 - u_2v_1)
-\end{align*}(k)](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au+x+v+%26%3D%0A%5Cbegin%7Bmatrix%7D%0Ai%26j%26k%5C%5C%0Au_1%26u_2%26u_3%5C%5C+%0Av_1%26v_2%26v_3%5C%5C+%0A%5Cend%7Bmatrix%7D%0A%3D+%28-1%29%5E%7B1%2B3%7D%28u_2v_3-u_3v_2%29%28i%29+%2B+%28-1%29%5E%7B1%2B2%7D%28u_1v_3-u_3v_1%29%28j%29+%2B+%28-1%29%5E%7B1%2B3%7D%28u_1v_2+-+u_2v_1%29%0A%5Cend%7Balign%2A%7D%28k%29)
+= (-1)^{1+3}(u_2v_3-u_3v_2)(i) + (-1)^{1+2}(u_1v_3-u_3v_1)(j) + (-1)^{1+3}(u_1v_2 - u_2v_1)(k)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au+x+v+%26%3D%0A%5Cbegin%7Bmatrix%7D%0Ai%26j%26k%5C%5C%0Au_1%26u_2%26u_3%5C%5C+%0Av_1%26v_2%26v_3%5C%5C+%0A%5Cend%7Bmatrix%7D%0A%3D+%28-1%29%5E%7B1%2B3%7D%28u_2v_3-u_3v_2%29%28i%29+%2B+%28-1%29%5E%7B1%2B2%7D%28u_1v_3-u_3v_1%29%28j%29+%2B+%28-1%29%5E%7B1%2B3%7D%28u_1v_2+-+u_2v_1%29%28k%29%0A%5Cend%7Balign%2A%7D)
 
 u x v is perpendicular to u and v
 
@@ -1337,7 +1337,141 @@ v x u reverses rows 2 and 3 in the determinant and so = -(u x v)
 
 property 2 of cross product
 
-u x v is perpendicular to u and v.  proof is :
+u x v is perpendicular to u and v.  proof is seen as terms cancel in this dot prodiuct:
 
-u • (u x v) = u<sub>1</sub>(u<sub>2</sub>v<sub>3</sub>-u<sub>3</sub>v<sub>2</sub>) + u<sub>2</sub>(u<sub>3</sub>v<sub>1</sub>-u<sub>1</sub>v<sub>3</sub> + u<sub>3</sub>(u<sub>1</sub>v<sub>2</sub>-u<sub>2</sub>v<sub>1</sub>) = 0
+u • (u x v) = u<sub>1</sub>(u<sub>2</sub>v<sub>3</sub>-u<sub>3</sub>v<sub>2</sub>) + u<sub>2</sub>(u<sub>3</sub>v<sub>1</sub>-u<sub>1</sub>v<sub>3</sub>) + u<sub>3</sub>(u<sub>1</sub>v<sub>2</sub>-u<sub>2</sub>v<sub>1</sub>) = 0
+
+the determinant for u • (u x v) would have 3 rows u, u and v as shown below and with 2 duplicate rows has a determinant = 0.  more importantly, this implies that he regards the cross product u x v as the dot product of (i,j,k) with their respective cofactors which is just exactly how it works out. so u x v is really (i,j,k) • (u x v)
+
+anyway so any vector u or v in dot product with a cross product of itself with another vector is perpendicular = 0
+
+![\begin{align*}
+u x v &=
+\begin{matrix}
+u_1&u_2&u_3\\
+u_1&u_2&u_3\\ 
+v_1&v_2&v_3\\ 
+\end{matrix}
+= (-1)^{1+3}(u_2v_3-u_3v_2)(u_1) + (-1)^{1+2}(u_1v_3-u_3v_1)(u_2) + (-1)^{1+3}(u_1v_2 - u_2v_1)(u_3)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au+x+v+%26%3D%0A%5Cbegin%7Bmatrix%7D%0Au_1%26u_2%26u_3%5C%5C%0Au_1%26u_2%26u_3%5C%5C+%0Av_1%26v_2%26v_3%5C%5C+%0A%5Cend%7Bmatrix%7D%0A%3D+%28-1%29%5E%7B1%2B3%7D%28u_2v_3-u_3v_2%29%28u_1%29+%2B+%28-1%29%5E%7B1%2B2%7D%28u_1v_3-u_3v_1%29%28u_2%29+%2B+%28-1%29%5E%7B1%2B3%7D%28u_1v_2+-+u_2v_1%29%28u_3%29%0A%5Cend%7Balign%2A%7D)
+
+if u and v are parallel, the cross product = 0.  
+[without checking i am guessing all terms cancel]
+
+when u and v are perpendicular the dot product of u and v = 0
+
+cross product involves sin theta 
+
+|| u x v || = || u || || v || |sin theta|
+
+when theta = 0, parallel, sin theta = 0
+
+dot product involves cos theta
+
+| u • v | = || u || || v || |cos theta|
+
+when theta = 90, perpendicular, cos theta = 0
+
+example: u and v are in the xy plane since z = 0 and u x v goes up the z axis.
+
+u = (3,2,0)  
+v = (1,4,0)
+u x v = (0,0,10)
+
+![\begin{align*}
+u x v &=
+\begin{matrix}
+i&j&k\\
+3&2&0\\ 
+1&4&0\\ 
+\end{matrix}\\
+&= (-1)^{1+3}(2*0-0*4)(i) + (-1)^{1+2}(3*0-0*1)(j) + (-1)^{1+3}(3*4 - 2*1)(k) \\
+&= 10(k) = 10 * (0,0,1)\\
+& = (0,0,10)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au+x+v+%26%3D%0A%5Cbegin%7Bmatrix%7D%0Ai%26j%26k%5C%5C%0A3%262%260%5C%5C+%0A1%264%260%5C%5C+%0A%5Cend%7Bmatrix%7D%5C%5C%0A%26%3D+%28-1%29%5E%7B1%2B3%7D%282%2A0-0%2A4%29%28i%29+%2B+%28-1%29%5E%7B1%2B2%7D%283%2A0-0%2A1%29%28j%29+%2B+%28-1%29%5E%7B1%2B3%7D%283%2A4+-+2%2A1%29%28k%29+%5C%5C%0A%26%3D+10%28k%29+%3D+10+%2A+%280%2C0%2C1%29%5C%5C%0A%26+%3D+%280%2C0%2C10%29%0A%5Cend%7Balign%2A%7D)
+
+the length of u x v is the area of the parallelogram with sides u and v.  
+
+|| u x v || = (0•0 + 0•0 + 10•10 )<sup>1/2</sup> = 10
+
+example
+
+u = (1,1,1)  
+v = (1,1,2)  
+u x v = (1,-1,0)
+area = || u x v || = √2
+
+example
+
+i = (1,0,0)
+j = (0,1,0)
+i x j = (0,0,1) = (1•1+0•0)(k) = k
+
+the order is cyclic: i x j = k,  j x k = i and k x i = j following the right hand rule
+when anti cyclic k x j = -i, i x k = -j and j x i = -k.  the reason they are opposite signs is that the rows are flipped and permutation sign changes are in effect. 
+
+
+|| u || || v || sin theta = || i, j, k ||
+
+physicists see (u<sub>1</sub>, u<sub>2</sub>, u<sub>3</sub>) as the position of a mass and 
+(F<sub>1</sub>, F<sub>2</sub>, F<sub>3</sub>) as force acting on the mass.   If F parallel to u then u x F = 0 and there is no turning.  So the cross product u x F is turning force or torque.  Torque points along the turning axis which is perpendicular to u and F.  the length of torque || u || || F || sin theta measures the moment that measures turning (seems it also measure angle between u and F).  
+
+triple product
+
+u x v is a vector
+
+take that u x v vector's dot product with a third vector w.
+ 
+ ( u x v ) • w
+
+"scalar" triple product is the term for this dot product because it is a number. 
+
+"scalar" is a determinant - it gives the volume of the u, v, w box.
+
+
+![\begin{align*}
+(u x v)\cdot(w)&=
+\begin{matrix}
+w_1&w_2&w_3\\
+u_1&u_2&u_3\\ 
+v_1&v_2&v_3\\ 
+\end{matrix}\\
+&= (-1)^{1+3}(u_2v_3-u_3v_2)(w_1) + (-1)^{1+2}(u_1v_3-u_3v_1)(w_2) + (-1)^{1+3}(u_1v_2 - u_2v_1)(w_3)\\
+&=
+\begin{matrix}
+u_1&u_2&u_3\\
+v_1&v_2&v_3\\ 
+w_1&w_2&w_3\\ 
+\end{matrix}\\
+&= (-1)^{3+1}(u_2v_3-u_3v_2)(w_1) + (-1)^{3+2}(u_1v_3-u_3v_1)(w_2) + (-1)^{3+3}(u_1v_2 - u_2v_1)(w_3)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%28u+x+v%29%5Ccdot%28w%29%26%3D%0A%5Cbegin%7Bmatrix%7D%0Aw_1%26w_2%26w_3%5C%5C%0Au_1%26u_2%26u_3%5C%5C+%0Av_1%26v_2%26v_3%5C%5C+%0A%5Cend%7Bmatrix%7D%5C%5C%0A%26%3D+%28-1%29%5E%7B1%2B3%7D%28u_2v_3-u_3v_2%29%28w_1%29+%2B+%28-1%29%5E%7B1%2B2%7D%28u_1v_3-u_3v_1%29%28w_2%29+%2B+%28-1%29%5E%7B1%2B3%7D%28u_1v_2+-+u_2v_1%29%28w_3%29%5C%5C%0A%26%3D%0A%5Cbegin%7Bmatrix%7D%0Au_1%26u_2%26u_3%5C%5C%0Av_1%26v_2%26v_3%5C%5C+%0Aw_1%26w_2%26w_3%5C%5C+%0A%5Cend%7Bmatrix%7D%5C%5C%0A%26%3D+%28-1%29%5E%7B3%2B1%7D%28u_2v_3-u_3v_2%29%28w_1%29+%2B+%28-1%29%5E%7B3%2B2%7D%28u_1v_3-u_3v_1%29%28w_2%29+%2B+%28-1%29%5E%7B3%2B3%7D%28u_1v_2+-+u_2v_1%29%28w_3%29%0A%5Cend%7Balign%2A%7D)
+
+can put w in to the top or bottom row. the 2 determinants will be the same because of an uneven number of row exchanges go from one to the other. 
+
+( u x v ) • w = 0 exactly when the vectors u, v, w are in the same plane.
+
+reason 1: u x v is perpendicular to that plane so (u x v)'s dot product with that plane is zero. 
+
+reason 2: 3 vectors in a plane are dependent.  the matrix containing the 3 vectors is singular (det = 0) 
+
+reason 3: zero volume when u, v, and w box is squashed into a plane.
+
+
+its remarkable that (u x v) • w equals the volume of a box with sides u, v, w.  this 3 x 3 determinant carries tremendous information.  Like ad-bc for 2x2 matrix, this triple product separates invertible from singular.  chapter 6 looks for singular. 
+
+
+review:
+
+1. cramers rule solves Ax = b by ratios like x<sub>1</sub> = B<sub>1</sub> / |A| = |ba<sub>2</sub> ... a<sub>n</sub>| / |A|
+
+2. when C is the cofactor matrix for A, the inverse is A<sup>-1</sup> = C<sup>T</sup>/ det A
+
+3.  the volumne of a box is det A when the box edges are the rows of A.
+
+4. area and volume are needed to change variables in double and triple integrals
+
+5.  in R<sup>3</sup> the cross product u x v is perpendicular to u and v.  notice that i x j = k
+
+example:
+
 
