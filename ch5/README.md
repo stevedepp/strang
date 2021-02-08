@@ -853,7 +853,6 @@ a_31x_11+a_32x_21+a_33x_31=0&a_32&a_33\\
 \end{bmatrix}
 = B_11](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_11%260%260%5C%5C%0Ax_21%261%260%5C%5C%0Ax_31%260%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa_11x_11%2Ba_12x_21%2Ba_13x_31%3D1%26a_12%26a_13%5C%5C%0Aa_21x_11%2Ba_22x_21%2Ba_23x_31%3D0%26a_22%26a_23%5C%5C%0Aa_31x_11%2Ba_32x_21%2Ba_33x_31%3D0%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+B_11)
 
-
 ![\begin{bmatrix}
 a_11&a_12&a_13\\
 a_21&a_22&a_23\\
@@ -993,10 +992,136 @@ a_31&a_32&a_31x_13+a_32x_23+a_33x_33=1\\
 = B_33
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_13%5C%5C%0Aa_21%26a_22%26a_23%5C%5C%0Aa_31%26a_32%26a_33%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%26x_13%5C%5C%0A0%261%26x_23%5C%5C%0A0%260%26x_33%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0Aa_11%26a_12%26a_11x_13%2Ba_12x_23%2Ba_13x_33%3D0%5C%5C%0Aa_21%26a_22%26a_21x_13%2Ba_22x_23%2Ba_23x_33%3D0%5C%5C%0Aa_31%26a_32%26a_31x_13%2Ba_32x_23%2Ba_33x_33%3D1%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+B_33%0A)
 
-![\begin{equation}
-   \begin{vmatrix} 
-   a_{11} & a_{12} & a_{13}  \\
-   a_{21} & a_{22} & a_{23}  \\
-   a_{31} & a_{32} & a_{33}  \\
-   \end{vmatrix} 
-\end{equation}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bequation%7D%0A+++%5Cbegin%7Bvmatrix%7D+%0A+++a_%7B11%7D+%26+a_%7B12%7D+%26+a_%7B13%7D++%5C%5C%0A+++a_%7B21%7D+%26+a_%7B22%7D+%26+a_%7B23%7D++%5C%5C%0A+++a_%7B31%7D+%26+a_%7B32%7D+%26+a_%7B33%7D++%5C%5C%0A+++%5Cend%7Bvmatrix%7D+%0A%5Cend%7Bequation%7D)
+
+
+![\begin{align*}
+x_11 
+&=\frac
+{ det\begin{bmatrix} 
+1&a_12&a_13\\
+0&a_22&a_23\\
+0&a_32&a_33\\
+\end{bmatrix} }
+{ det\begin{bmatrix}A\end{bmatrix} }\\
+&=\frac
+{ C_11=(F_11=1)(-1)^{(1+1)} det\begin{bmatrix}M_11\end{bmatrix} } 
+{ det\begin{bmatrix}A\end{bmatrix} }
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax_11+%0A%26%3D%5Cfrac%0A%7B+det%5Cbegin%7Bbmatrix%7D+%0A1%26a_12%26a_13%5C%5C%0A0%26a_22%26a_23%5C%5C%0A0%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D+%7D%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%5Cfrac%0A%7B+C_11%3D%28F_11%3D1%29%28-1%29%5E%7B%281%2B1%29%7D+det%5Cbegin%7Bbmatrix%7DM_11%5Cend%7Bbmatrix%7D+%7D+%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+
+![\begin{align*}
+x_21
+&=\frac
+{ det\begin{bmatrix} 
+a_11&1&a_13\\
+a_21&0&a_23\\
+a_31&0&a_33\\
+\end{bmatrix} }
+{ det\begin{bmatrix}A\end{bmatrix} }\\
+&=\frac
+{ C_12=(F_12=1)(-1)^{(2+1)} det\begin{bmatrix}M_12\end{bmatrix} } 
+{ det\begin{bmatrix}A\end{bmatrix} }
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax_21%0A%26%3D%5Cfrac%0A%7B+det%5Cbegin%7Bbmatrix%7D+%0Aa_11%261%26a_13%5C%5C%0Aa_21%260%26a_23%5C%5C%0Aa_31%260%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D+%7D%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%5Cfrac%0A%7B+C_12%3D%28F_12%3D1%29%28-1%29%5E%7B%282%2B1%29%7D+det%5Cbegin%7Bbmatrix%7DM_12%5Cend%7Bbmatrix%7D+%7D+%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+![\begin{align*}
+x_31
+&=\frac
+{ det\begin{bmatrix} 
+a_11&a_12&1\\
+a_21&a_22&0\\
+a_31&a_32&0\\
+\end{bmatrix} }
+{ det\begin{bmatrix}A\end{bmatrix} }\\
+&=\frac
+{ C_13=(F_13=1)(-1)^{(1+3)} det\begin{bmatrix}M_13\end{bmatrix} } 
+{ det\begin{bmatrix}A\end{bmatrix} }
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax_31%0A%26%3D%5Cfrac%0A%7B+det%5Cbegin%7Bbmatrix%7D+%0Aa_11%26a_12%261%5C%5C%0Aa_21%26a_22%260%5C%5C%0Aa_31%26a_32%260%5C%5C%0A%5Cend%7Bbmatrix%7D+%7D%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%5Cfrac%0A%7B+C_13%3D%28F_13%3D1%29%28-1%29%5E%7B%281%2B3%29%7D+det%5Cbegin%7Bbmatrix%7DM_13%5Cend%7Bbmatrix%7D+%7D+%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+![\begin{align*}
+x_21
+&=\frac
+{ det\begin{bmatrix} 
+0&a_12&a_13\\
+1&a_22&a_23\\
+0&a_32&a_33\\
+\end{bmatrix} }
+{ det\begin{bmatrix}A\end{bmatrix} }\\
+&=\frac
+{ C_21=(F_21=1)(-1)^{(2+1)} det\begin{bmatrix}M_21\end{bmatrix} } 
+{ det\begin{bmatrix}A\end{bmatrix} }
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax_21%0A%26%3D%5Cfrac%0A%7B+det%5Cbegin%7Bbmatrix%7D+%0A0%26a_12%26a_13%5C%5C%0A1%26a_22%26a_23%5C%5C%0A0%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D+%7D%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%5Cfrac%0A%7B+C_21%3D%28F_21%3D1%29%28-1%29%5E%7B%282%2B1%29%7D+det%5Cbegin%7Bbmatrix%7DM_21%5Cend%7Bbmatrix%7D+%7D+%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%0A%5Cend%7Balign%2A%7D)
+
+![\begin{align*}
+x_22 
+&=\frac
+{ det\begin{bmatrix} 
+a_11&0&a_13\\
+a_21&1&a_23\\
+a_31&0&a_33\\
+\end{bmatrix} }
+{ det\begin{bmatrix}A\end{bmatrix} }\\
+&=\frac
+{ C_22=(F_22=1)(-1)^{(2+2)} det\begin{bmatrix}M_22\end{bmatrix} } 
+{ det\begin{bmatrix}A\end{bmatrix} }
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax_22+%0A%26%3D%5Cfrac%0A%7B+det%5Cbegin%7Bbmatrix%7D+%0Aa_11%260%26a_13%5C%5C%0Aa_21%261%26a_23%5C%5C%0Aa_31%260%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D+%7D%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%5Cfrac%0A%7B+C_22%3D%28F_22%3D1%29%28-1%29%5E%7B%282%2B2%29%7D+det%5Cbegin%7Bbmatrix%7DM_22%5Cend%7Bbmatrix%7D+%7D+%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%0A%5Cend%7Balign%2A%7D)
+
+![\begin{align*}
+x_32 
+&=\frac
+{ det\begin{bmatrix} 
+a_11&a_12&0\\
+a_21&a_22&1\\
+a_31&a_32&0\\
+\end{bmatrix} }
+{ det\begin{bmatrix}A\end{bmatrix} }\\
+&=\frac
+{ C_23=(F_23=1)(-1)^{(2+3)} det\begin{bmatrix}M_23\end{bmatrix} } 
+{ det\begin{bmatrix}A\end{bmatrix} }
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax_32+%0A%26%3D%5Cfrac%0A%7B+det%5Cbegin%7Bbmatrix%7D+%0Aa_11%26a_12%260%5C%5C%0Aa_21%26a_22%261%5C%5C%0Aa_31%26a_32%260%5C%5C%0A%5Cend%7Bbmatrix%7D+%7D%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%5Cfrac%0A%7B+C_23%3D%28F_23%3D1%29%28-1%29%5E%7B%282%2B3%29%7D+det%5Cbegin%7Bbmatrix%7DM_23%5Cend%7Bbmatrix%7D+%7D+%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+![\begin{align*}
+x_13 
+&=\frac
+{ det\begin{bmatrix} 
+0&a_12&a_13\\
+0&a_22&a_23\\
+1&a_32&a_33\\
+\end{bmatrix} }
+{ det\begin{bmatrix}A\end{bmatrix} }\\
+&=\frac
+{ C_31=(F_31=1)(-1)^{(3+1)} det\begin{bmatrix}M_31\end{bmatrix} } 
+{ det\begin{bmatrix}A\end{bmatrix} }
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax_13+%0A%26%3D%5Cfrac%0A%7B+det%5Cbegin%7Bbmatrix%7D+%0A0%26a_12%26a_13%5C%5C%0A0%26a_22%26a_23%5C%5C%0A1%26a_32%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D+%7D%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%5Cfrac%0A%7B+C_31%3D%28F_31%3D1%29%28-1%29%5E%7B%283%2B1%29%7D+det%5Cbegin%7Bbmatrix%7DM_31%5Cend%7Bbmatrix%7D+%7D+%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%0A%5Cend%7Balign%2A%7D)
+
+![\begin{align*}
+x_23
+&=\frac
+{ det\begin{bmatrix} 
+a_11&0&a_13\\
+a_21&0&a_23\\
+a_31&1&a_33\\
+\end{bmatrix} }
+{ det\begin{bmatrix}A\end{bmatrix} }\\
+&=\frac
+{ C_32=(F_32=1)(-1)^{(3+2)} det\begin{bmatrix}M_32\end{bmatrix} } 
+{ det\begin{bmatrix}A\end{bmatrix} }
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax_23%0A%26%3D%5Cfrac%0A%7B+det%5Cbegin%7Bbmatrix%7D+%0Aa_11%260%26a_13%5C%5C%0Aa_21%260%26a_23%5C%5C%0Aa_31%261%26a_33%5C%5C%0A%5Cend%7Bbmatrix%7D+%7D%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%5Cfrac%0A%7B+C_32%3D%28F_32%3D1%29%28-1%29%5E%7B%283%2B2%29%7D+det%5Cbegin%7Bbmatrix%7DM_32%5Cend%7Bbmatrix%7D+%7D+%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+![\begin{align*}
+x_33 
+&=\frac
+{ det\begin{bmatrix} 
+a_11&a_12&0\\
+a_21&a_22&0\\
+a_31&a_32&1\\
+\end{bmatrix} }
+{ det\begin{bmatrix}A\end{bmatrix} }\\
+&=\frac
+{ C_33=(F_33=1)(-1)^{(3+3)} det\begin{bmatrix}M_33\end{bmatrix} } 
+{ det\begin{bmatrix}A\end{bmatrix} }
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax_33+%0A%26%3D%5Cfrac%0A%7B+det%5Cbegin%7Bbmatrix%7D+%0Aa_11%26a_12%260%5C%5C%0Aa_21%26a_22%260%5C%5C%0Aa_31%26a_32%261%5C%5C%0A%5Cend%7Bbmatrix%7D+%7D%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%5Cfrac%0A%7B+C_33%3D%28F_33%3D1%29%28-1%29%5E%7B%283%2B3%29%7D+det%5Cbegin%7Bbmatrix%7DM_33%5Cend%7Bbmatrix%7D+%7D+%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%0A%5Cend%7Balign%2A%7D)
