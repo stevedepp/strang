@@ -1127,4 +1127,4 @@ a_31&a_32&1\\
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax_33+%0A%26%3D%5Cfrac%0A%7B+det%5Cbegin%7Bbmatrix%7D+%0Aa_11%26a_12%260%5C%5C%0Aa_21%26a_22%260%5C%5C%0Aa_31%26a_32%261%5C%5C%0A%5Cend%7Bbmatrix%7D+%7D%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%5C%5C%0A%26%3D%5Cfrac%0A%7B+C_33%3D%28F_33%3D1%29%28-1%29%5E%7B%283%2B3%29%7D+det%5Cbegin%7Bbmatrix%7DM_33%5Cend%7Bbmatrix%7D+%7D+%0A%7B+det%5Cbegin%7Bbmatrix%7DA%5Cend%7Bbmatrix%7D+%7D%0A%5Cend%7Balign%2A%7D)
 
 
-[A] [A<sup>-1</sup>] = [ I ] = [A] [X] = [ I ] = [A] [C<sup>T</sup] / |A|
+[A] [A<sup>-1</sup>] = [ I ] = [A] [X] = [ I ] = [A] [C<sup>T</sup>] / |A|
