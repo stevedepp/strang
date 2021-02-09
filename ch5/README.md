@@ -1687,6 +1687,93 @@ u x v = det of A where A = a vector =
 || u x v || =   
 ( i<sup>2</sup> + j<sup>2</sup> + k<sup>2</sup> )<sup>1/2</sup> =   
 ( ( det A)<sup>2</sup>)<sup>1/2</sup> =   
-( a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>)<sup>1/2</sup>)•( a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>)<sup>1/2</sup>(sin theta)
+( a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>)<sup>1/2</sup>)•( a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>)<sup>1/2</sup>•(sin theta)
 
-if u // v i.e. if u parallel to v, then u x v = 0 because sin theta = 0
+if u // v 
+i.e. if u parallel to v, then u x v = 0 because sin theta = 0
+
+|| i, j, k|| = ||u|| ||v|| |sin theta|   
+if u//v then no force because sin theta = 0
+
+|| u x v || = area of paralleogram with angle between u and v of theta
+
+if u perpendicular to v, sin theta = sin 90 = 1 --> rectangle: || u x v || is maximized.
+
+if u // v sin theta = sin phi = 0 and thus the box  is flat.
+
+( u x v ) • w = volume  
+
+u = 1,0,0  
+v = 0,1,0  
+u x v =   
+0,0,1 which is as big as it can get since u and v are perpendicular to each other  
+u x v =  
+( 0 • 0 - 0 • 1 ) i , (1 • 0 - 0 • 0 ) j, ( 1 • 1 - 0 • 0 ) k ) = ( i, j, k ) 
+= (0,0,1)  
+
+||u x v|| =   
+( 1<sup>2</sup>+0<sup>2</sup>+0<sup>2</sup>)<sup>1/2</sup>)•( 0<sup>2</sup>+1<sup>2</sup>+0<sup>2</sup>)<sup>1/2</sup>•(sin 90 degrees = 1)   
+= 1
+
+( u x v ) • w =   
+w<sub>1</sub>(u<sub>2</sub>v<sub>3</sub>-u<sub>3</sub>v<sub>2</sub>) + w<sub>2</sub>(u<sub>3</sub>v<sub>1</sub>-u<sub>1</sub>v<sub>3</sub> + w<sub>3</sub>(u<sub>1</sub>v<sub>2</sub>-u<sub>2</sub>v<sub>1</sub>)
+
+( u x v ) • w = 0 = || u x v || || w || | cos theta |   
+when u x v // w and cos theta   
+= cos phi   
+= 0
+
+
+so to solve problem 
+
+|| u x v || || w || cos theta 
+= ( u x v ) • w   
+= area x height  
+
+base area   
+= || u x v ||   
+= || u || || v || sin theta  
+
+u x v   
+= det of     
+[    
+[i,j,k],  
+[2,4,0],  
+[-1,3,0]  
+] = 10k = (0,0,10)
+
+|| u x v || 
+= length ( u x v )   
+= length ( (0,0,10) )   
+= ( 0<sup>2</sup> + 0<sup>2</sup> + 1<sup>2</sup> )<sup>1/2</sup>  
+= 10  
+= || u || || v || sin theta 
+= ( 2<sup>2</sup> + 4<sup>2</sup> + 0<sup>2</sup>)<sup>1/2</sup>(-1<sup>2</sup> + 3<sup>2</sup> + 0<sup>2</sup>)<sup>1/2</sup> sin theta
+= (4 + 16)<sup>1/2</sup>(1 + 9)<sup>1/2</sup> sin theta
+= 200<sup>1/2</sup> = 10(2)<sup>1/2</sup> sin theta 
+
+so 10 = 10 (2)<sup>1/2</sup>sin theta --> sin theta = 1/(2)<sup>1/2</sup> --> theta = 45 degrees
+
+so the angle that forms the parallelogram of the base is 45 degrees (and the other angle is 135)
+
+volume is 
+= (u x v ) • w = (0,0,10) • (1,2,2) = 20
+= || u x v || || w || cos theta = 10 ( 1<sup>2</sup> + 2<sup>2</sup> + 2<sup>2</sup>)<sup>1/2</sup>cos theta = 10 • 3 cos theta = 30 cos theta 
+so volume calculated 2 ways is 20 and 30 cos theta   
+20 = 30 cos theta --> cos theta = 2/3 --> theta = 48 degrees
+
+height = vol / area of parallelogram base = 20 / 10 = 2
+height = || w || cos theta = 2 --> ( 1<sup>2</sup> + 2<sup>2</sup> + 2<sup>2</sup> )<sup>1/2</sup> cos theta = 2 --> 3 cos theta = 2 --> cos theta = 2/3 --> 48 degrees
+
+base area || u x v | = 1- 
+
+height ||w|| cos theta = 2
+
+volume = 10 • 2 
+
+|| u x v || || w || cos theta = ( u x v ) • w   
+|| u || || v || sin theta || w || cos phi = ( u x v ) • w  
+(2<sup>2</sup> + 4<sup>2</sup> + 0<sup>2</sup>)<sup>1/2</sup>(-1<sup>2</sup> + 3<sup>2</sup> + 0<sup>2</sup>)<sup>1/2</sup> sin 45 degrees (1<sup>2</sup> + 2<sup>2</sup> + 2<sup>2</sup>)<sup>1/2</sup> cos phi = (0, 0, 2•3-4•-1) • (1,2,2) = (0 + 0 + 20) = 20   
+(20)<sup>1/2</sup>(10)<sup>1/2</sup> sin 45 (9)<sup>1/2</sup> cos phi = 20  
+sin 45 = 1/(2)<sup>1/2</sup>  
+((200)<sup>1/2</sup>/2)(3)cos phi = 20 --> 30 cos phi = 20 --> cos phi = 2/3 = 48 degrees!
