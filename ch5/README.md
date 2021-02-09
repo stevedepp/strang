@@ -1569,3 +1569,124 @@ or because they are the same line  --> x = y = 0/0
 problem 5:  
 if right side b is the 1st column of A solve the 3x3 system Ax = b. How does each determinant in Cramers Rule lead to this solution x?  If 1st col of A is also right side b then det A = det B1 because B1 will have b in its first column too.  When b is placed in 2nd and 3rd columns of A to form B2 and B3 then we will see that those B2 and B3 have 2 copies of b in them (1 in the 1st column because A has b in its 1st column and 1 in either of columns 2 or 3 when forming B2 and B3).  Duplicates means det B2 = det B3 = 0.  So x1 = det B1 / det A and x2 and x3 = 0; x1 is 1 because A and B1 are the same.
 
+probelm 6
+an invertible symmetric matrix has a symmetric inverse.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107411269-579a2000-6adc-11eb-94b8-e574eed01ad7.png">
+
+if all the cofactors are zero then A<sup>-1</sup> would be a zero matrix since A<sup>-1</sup> = C<sup>T</sup> / |A|.  A<sup>-1</sup> wouldnt exist since det A = 0.  If none of the cofactors is zero, A is not guaranteed to be invertible.  A containing all 1's e.g. is not invertible but has only 1s or -1s as cofactors.  its det A = 0 too. 
+
+
+A<sup>-1</sup> = C<sup>T</sup> / det A  
+AA<sup>-1</sup> = AC<sup>T</sup> / det A
+I det A = AC<sup>T</sup>
+det A = AC<sup>T</sup>
+
+so if det A = 1 and know all cofactors of A, can find A
+I • 1 = AC<sup>T</sup>
+AC<sup>T</sup> = I = AA<sup>-1</sup>
+so C<sup>T</sup> = I = A<sup>-1</sup>
+
+
+if L is lower triangular, we know that the cofactors of its lower cells are zero because L<sup>-1</sup> is also lower triangular and L<sup>-1</sup> = C<sup>T</sup> / | L |.  C<sup>T</sup> would have to be L for L<sup>-1</sup> to be L. 
+
+the cofactor matrix of an orthogonal matrix Q will be orthogonal because C = det Q ( Q<sup>-1</sup>)<sup>T</sup> = Q
+
+det Q = 1 always.
+
+
+problem 17  
+box has edges. find its volume and area of each parallelogram face 
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107417798-f413f080-6ae3-11eb-954a-70b0fe3decd3.png">
+
+problem 19  
+the parallelogram with sides (2,1) and (2,3) has same area as the parallelogram with sides (2,2) and (1,3).  determinants give the areas and show they are equal becuase the det A = det A<sup>T</sup>.
+
+20. 
+Hadamard matrix H has orthogonal rows and the box is a hypercube.  the edges of the hypercube have length 2 and the volume is 2<sup>4</sup> = 16:  H/2 has orthonormal columns.  Then det (H/2) = 1.  
+
+21.  
+If columns of 4x4 matrix have lengths L1 L2 L3 L4 the largest volume is reached when the edges are orthogonal in R<sup>4</sup>.  If entries are all -1 and 1, then lengths are all 2.  The max determinant and volume are 16. 
+
+25.
+n dimensional cube has 2<sup>n</sup> corners and n•2<sup>n-1</sup> edges and 2n of n-1 dimensional faces.  
+
+28.
+if spherical coordinates rho phi theta satisfy x = rho sin phi cos theta and y = rho sin phi sin theta and z = rho cos phi then the 3x3 matrix of partial derivatives ∂ x / ∂ rho, ∂ x / ∂ phi, ∂ x / ∂ theta in row 1 is 
+
+[
+[sin phi cos theta, rho cos phi sin theta, -rho sin theta],
+[sin phi sin theta, rho cos phi, rho sin phi cos theta],
+[cos phi, -rho sin phi, theta]
+]
+
+and that = rho<sup>2</sup>sin phi.  
+
+this Jacobian J matrix is needed for triple integrals inside spheres =  p<sup>2</sup> sin phi (∂ p / ∂ theta)
+
+27. 
+polar coordinates satisfy x = r cos theta and y = r sin theta.  
+polar area = J ∂ r ∂ theta   
+where
+
+J = det of 
+[
+[∂ x / ∂ r, ∂ x / ∂ theta],
+[∂ y / ∂ r, ∂ y / ∂ theta]
+]
+
+which is = 
+
+[
+[cos theta, -r sin theta],
+[sin theta, r cos theta]
+]
+
+x = r cos theta , y = r sin theta give J = r 
+
+this is the r in polar area r ∂ r ∂ theta.  
+the columna are orthogonal and their lengths are 1 and r.
+
+this matrix connects r, theta with x, y
+
+problem 29 inverts the above matrix
+
+31.
+
+a box has a base with area || u x v ||
+
+its perpendicular height is || w || cos theta  
+
+base area times height = volume = || u x v || || w || cos theta which is ( u x v ) • w.
+
+computing base area, height, volume for u = (2,4,0), v = (-1,3,0) and w = (1,2,2)
+
+cross product  u x v   
+dot product  u * v  
+triple product  
+volume  
+area  
+legth  || u ||
+
+
+x = cos theta = zero when theta = 90 
+x = cos theta = 1 when theta = 0
+y = sin theta = 1 when theta = 90
+y = sin theta = zero when theta = 0
+
+if u = (a,b,c) and v = (d,e,f) 
+
+u x v = det of A where A = a vector = 
+[
+[ i, j, k ],
+[ a, b, c],
+[ d, e, f]
+]
+
+|| u x v || =   
+( i<sup>2</sup> + j<sup>2</sup> + k<sup>2</sup> )<sup>1/2</sup> =   
+( ( det A)<sup>2</sup>)<sup>1/2</sup> =   
+(( ( a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>)<sup>1/2</sup>)(( ( a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>)<sup>1/2</sup>)(sin theta)
+
+if u // v i.e. if u parallel to v, then u x v = 0 because sin theta = 0
