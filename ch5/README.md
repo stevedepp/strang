@@ -1557,12 +1557,15 @@ here is finding x y and z
 problem 3:  
 cramer's rule breaks when det = 0  
 
-either because the lines are parallel  
+either because the lines are parallel --> x = 3/0 and y = -2/0
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107391593-d6845e00-6ac6-11eb-8489-39202d61137f.png">
 
-or because they are the same line  
+or because they are the same line  --> x = y = 0/0
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107391821-16e3dc00-6ac7-11eb-8950-f66d1bf238d6.png">
 
+
+problem 5:  
+if right side b is the 1st column of A solve the 3x3 system Ax = b. How does each determinant in Cramers Rule lead to this solution x?  If 1st col of A is also right side b then det A = det B1 because B1 will have b in its first column too.  When b is placed in 2nd and 3rd columns of A to form B2 and B3 then we will see that those B2 and B3 have 2 copies of b in them (1 in the 1st column because A has b in its 1st column and 1 in either of columns 2 or 3 when forming B2 and B3).  Duplicates means det B2 = det B3 = 0.  So x1 = det B1 / det A and x2 and x3 = 0; x1 is 1 because A and B1 are the same.
 
