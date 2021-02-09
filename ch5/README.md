@@ -1537,3 +1537,9 @@ to get the 3rd column of A<sup>-1</sup>, need the 3rd row of C that is the third
 multiply cofactors times the third row of A to get |A| and then divide each cofactor by |A| to get (x, y, z) = third row of A<sup>-1</sup> which produces (0,0,1) when A multiplies xyz again.
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107312127-ba98a200-6a5d-11eb-880e-ae338358aece.png">
+
+
+the box with columns of A as edges = box with the rows of A has volume = det A = 2.   
+oddly, the box from the rows of A<sup>T</sup> has volume 1/|A| = 1/2.
+
+That the det A = 2 whether measured rows or columns doesnt negate that A<sup>T</sup> has 1/det A
