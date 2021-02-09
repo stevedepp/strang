@@ -1341,6 +1341,8 @@ u x v is perpendicular to u and v.  proof is seen as terms cancel in this dot pr
 
 u • (u x v) = u<sub>1</sub>(u<sub>2</sub>v<sub>3</sub>-u<sub>3</sub>v<sub>2</sub>) + u<sub>2</sub>(u<sub>3</sub>v<sub>1</sub>-u<sub>1</sub>v<sub>3</sub>) + u<sub>3</sub>(u<sub>1</sub>v<sub>2</sub>-u<sub>2</sub>v<sub>1</sub>) = 0
 
+[ seems that the cross product is scaling the original axes i, j, k so that u x v is perpendicular to u and v though u and v may not be perpendicular to each other]
+
 the determinant for u • (u x v) would have 3 rows u, u and v as shown below and with 2 duplicate rows has a determinant = 0.  more importantly, this implies that he regards the cross product u x v as the dot product of (i,j,k) with their respective cofactors which is just exactly how it works out. so u x v is really (i,j,k) • (u x v)
 
 anyway so any vector u or v in dot product with a cross product of itself with another vector is perpendicular = 0
@@ -1450,6 +1452,8 @@ can put w in to the top or bottom row. the 2 determinants will be the same becau
 
 ( u x v ) • w = 0 exactly when the vectors u, v, w are in the same plane.
 
+[ then scalar is the determinant of the 3x3 and is zero implying the 3x3 is not invertible.]
+
 reason 1: u x v is perpendicular to that plane so (u x v)'s dot product with that plane is zero. 
 
 reason 2: 3 vectors in a plane are dependent.  the matrix containing the 3 vectors is singular (det = 0) 
@@ -1475,3 +1479,61 @@ review:
 example:
 
 
+worked problem
+
+if A is singular then AC<sup>T</sup> = (det A)(I) = zero matrix where each column of C<sup>T</sup> is in the null space of A. 
+
+2 matrices are offered.  The 1st has these minor matrices and their determinants • (-1)<sup>i+j</sup>, and cofactor matrix.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107306137-5ae8c980-6a52-11eb-9fdb-11c573ed4986.png">
+
+the 2nd has zero cofactors across first row.  Null vector x = (0,0,0) is not interesting. Cofactors in row 2 solve Ax = 0.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107306511-fbd78480-6a52-11eb-9850-8afea3c8a83e.png">
+
+every n x n matrix of rank n-1 has at least one non-zero cofactor 
+
+but for rank n-2, all n-2 cofactors are zero.
+
+ example:
+ 
+ cramer's rule ratios det B<sub>j</sub> / det A solves Ax = b; find that numerator / denominatior.
+ what is A<sup>-1</sup> = C<sup>T</sup> / det A for b = (0,0,1)?  The solution x is column 3 of A<sup>-1</sup> because that column of A<sup>-1</sup> solves to third column of I = (0,0,1).  Which cofactors are involved in computing that column x  = (x, y, z)?
+ 
+ 
+ column 3 of A<sup>-1</sup> = (x,y,z) will produce (0,0,1)
+ ![Ax =
+ \begin{bmatrix}
+ 2&6&2\\
+ 1&4&2\\ 
+ 5&9&0\\ 
+ \end{bmatrix}
+ \begin{bmatrix}
+ x\\
+ y\\ 
+ z\\ 
+ \end{bmatrix}
+ =b=\begin{bmatrix}
+ 0\\
+ 1\\ 
+ 1\\ 
+ \end{bmatrix} ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+Ax+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%266%262%5C%5C%0A1%264%262%5C%5C+%0A5%269%260%5C%5C+%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%5C%5C+%0Az%5C%5C+%0A%5Cend%7Bbmatrix%7D%0A%3Db%3D%5Cbegin%7Bbmatrix%7D%0A0%5C%5C%0A1%5C%5C+%0A1%5C%5C+%0A%5Cend%7Bbmatrix%7D+)
+
+AA<sup>-1</sup> = I
+
+
+take determinant of each B<sub>j</sub>
+
+can solve this one of two ways
+
+1.  
+replace 1st, 2nd and 3rd columns of A with b = 3rd column of I = (0,0,1) to produce B<sub>1</sub>, B<sub>2</sub>, B<sub>3</sub>.
+
+|B<sub>j</sub>| / |A| gives x, y, z and A times xzy gives third column I
+
+2.   
+to get the 3rd column of A<sup>-1</sup>, need the 3rd row of C that is the third column of C<sup>T</sup> to produce 3rd column of A<sup>-1</sup>
+
+multiply cofactors times the third row of A to get |A| and then divide each cofactor by |A| to get (x, y, z) = third row of A<sup>-1</sup> which produces (0,0,1) when A multiplies xyz again.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107312127-ba98a200-6a5d-11eb-880e-ae338358aece.png">
