@@ -1548,11 +1548,11 @@ That the det A = 2 whether measured rows or columns doesnt negate that A<sup>T</
 problem 2:   
 find only y for b = (1,0,0)
 
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107390031-472a7b00-6ac5-11eb-8eab-a1c5b85f9cf7.png">
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107392163-65917600-6ac7-11eb-8e3a-250156a4e97c.png">
 
 here is finding x y and z
 
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107390240-7e992780-6ac5-11eb-8cb3-491fe099a563.png">
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107392328-8fe33380-6ac7-11eb-9f69-5e1200190c8f.png">
 
 problem 3:  
 cramer's rule breaks when det = 0  
