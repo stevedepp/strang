@@ -1554,3 +1554,15 @@ here is finding x y and z
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107390240-7e992780-6ac5-11eb-8cb3-491fe099a563.png">
 
+problem 3:  
+cramer's rule breaks when det = 0  
+
+either because the lines are parallel  
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107391593-d6845e00-6ac6-11eb-8489-39202d61137f.png">
+
+or because they are the same line  
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107391821-16e3dc00-6ac7-11eb-8950-f66d1bf238d6.png">
+
+
