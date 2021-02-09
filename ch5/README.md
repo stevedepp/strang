@@ -1687,6 +1687,6 @@ u x v = det of A where A = a vector =
 || u x v || =   
 ( i<sup>2</sup> + j<sup>2</sup> + k<sup>2</sup> )<sup>1/2</sup> =   
 ( ( det A)<sup>2</sup>)<sup>1/2</sup> =   
-(( ( a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>)<sup>1/2</sup>)(( ( a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>)<sup>1/2</sup>)(sin theta)
+( a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>)<sup>1/2</sup>)•( a<sup>2</sup>+b<sup>2</sup>+c<sup>2</sup>)<sup>1/2</sup>(sin theta)
 
 if u // v i.e. if u parallel to v, then u x v = 0 because sin theta = 0
