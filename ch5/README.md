@@ -1543,3 +1543,14 @@ the box with columns of A as edges = box with the rows of A has volume = det A =
 oddly, the box from the rows of A<sup>T</sup> has volume 1/|A| = 1/2.
 
 That the det A = 2 whether measured rows or columns doesnt negate that A<sup>T</sup> has 1/det A
+
+
+problem 2:   
+find only y for b = (1,0,0)
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107390031-472a7b00-6ac5-11eb-8eab-a1c5b85f9cf7.png">
+
+here is finding x y and z
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107390240-7e992780-6ac5-11eb-8cb3-491fe099a563.png">
+
