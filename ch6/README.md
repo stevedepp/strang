@@ -90,7 +90,7 @@ If eigenvector is multiplied by A again, the same eigenvector is produced by the
 
 When A is squared, the eigenvectors stay the same,  the eigenvalues are squared.  this pattern continues because the eigenvectors stay in their same directions, and never change. The eigenvectors of A<sup>100</sup> are teh same x<sub>1</sub> and x<sub>2</sub> as the eigenvalues become 1<sup>100</sup> = 1 and 0.5<sup>100</sup> = 0
 
-eigenvalues via det (A<sup>n</sup> - &lambda;<sup>n</sup>I) = 0 produces the same x<sub>1</sub> and x<sub>2</sub> eigenvectors via (A<sup>n</sup> - &lambda;<sup>n</sup>I)x = 0 for all n.
+&lambda;<sub>1</sub> and &lambda;<sub>2</sub> eigenvalues via det (A<sup>n</sup> - &lambda;<sup>n</sup>I) = 0 produces the same x<sub>1</sub> and x<sub>2</sub> eigenvectors via (A<sup>n</sup> - &lambda;<sup>n</sup>I)x = 0 for all n.
 
 <img width="522" alt="image" src="https://user-images.githubusercontent.com/38410965/107570798-03fd0480-6bb8-11eb-841b-8f6f99c2c48f.png">
 
