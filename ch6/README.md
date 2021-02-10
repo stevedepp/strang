@@ -192,7 +192,9 @@ thoughts that Strang has before the above procedures:
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107583712-5561bf80-6bc9-11eb-987b-c95a7f59222c.png">
 
-<img width="752" alt="image" src="https://user-images.githubusercontent.com/38410965/107583676-424eef80-6bc9-11eb-806e-9d07754e10b4.png">
+Ax<sub>1</sub> = x<sub>1</sub>
+
+<img width="752" alt="image" src="https://user-images.githubusercontent.com/38410965/107585789-d40c2c00-6bcc-11eb-9ab8-e96305fdf277.png">
 
 <img width="638" alt="image" src="https://user-images.githubusercontent.com/38410965/107583837-8510c780-6bc9-11eb-82da-5a6893cd52d4.png">
 
