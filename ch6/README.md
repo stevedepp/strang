@@ -8,4 +8,4 @@ principles
 
 1. eigenvector x lies along the same line as Ax
 
-Ax = \$lambda 
+Ax = $\lambda 
