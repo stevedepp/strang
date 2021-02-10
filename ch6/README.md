@@ -192,10 +192,11 @@ thoughts that Strang has before the above procedures:
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107583712-5561bf80-6bc9-11eb-987b-c95a7f59222c.png">
 
-Ax<sub>1</sub> = x<sub>1</sub>
+V1 = V2 = V3 = x<sub>1</sub> = Ax<sub>1</sub> = &lambda;x<sub>1</sub> all going the same direction  
+V4 = V5 = V6 = x<sub>2</sub> = 2*Ax<sub>2</sub> = 2*&lambda;x<sub>1</sub>, but all going the same direction  
 
 <img width="752" alt="image" src="https://user-images.githubusercontent.com/38410965/107585789-d40c2c00-6bcc-11eb-9ab8-e96305fdf277.png">
 
-<img width="638" alt="image" src="https://user-images.githubusercontent.com/38410965/107583837-8510c780-6bc9-11eb-82da-5a6893cd52d4.png">
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107586500-09654980-6bce-11eb-9342-a376dec5567a.png">
 
 
