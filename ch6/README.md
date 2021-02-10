@@ -59,7 +59,10 @@ left unchanged  when multiplied by A:
 &lambda = 2 or 1/2 or -1 or +1 or zero.
 
 all vectors are eigenvectors of the identity matrix I because A = I then has Ax = x.  
-all eigenvalues of the identity matrix are &lambda; = 1  
+all eigenvalues of the identity matrix are &lambda; = 1  which means   
+no stretching or shrinking   
+all vectors are eigenvectors of identity matrix because all vectors are unchanged by the identity matrix   
+which is the point of eigenvectors   
 which is odd because most 2 x 2 matrices have 2 eigenvector directions and 2 eignvectors. 
 
 Ax = &lambda;Ix --> (A - &lambda;I) = 0
@@ -79,7 +82,17 @@ the eigenvectors x<sub>1</sub> and x<sub>2</sub> are in the null space of matric
 
 factoring the quadratic into &lambda; -1 and &lambda; -1/2 gives eigenvalues that transform A into singular, symptomized by zero determinant.  
 
-x<sub>1</sub> and x<sub>2</sub> are in the null space of the A - &lamnda;I matrix, (the A - 1•I and A - 0.5•I matrices)
+x<sub>1</sub> and x<sub>2</sub> are in the null space of the A - &lambda;I matrix, (the A - 1•I and A - 0.5•I matrices)
+
+and Ax<sub>1</sub> = &lambda<sub>1<.sub>x<sub>1<.sub>  and Ax<sub>2</sub> = &lambda;<sub>2<.sub>x<sub>2<.sub>
+
+If eigenvector is multiplied by A again, the same eigenvector is produced by the procedure for constructing eigenvalues and eigenvectors.  direction of x does not change as A is multiplied 100 times.  A<sup>100</sup>x = &lambda;<sup>100</sup>x inasmuch as A is still replacing &lambda; and x stays the same.  
+
+When A is squared, the eigenvectors stay the same,  the eigenvalues are squared.  this pattern continues because the eigenvectors stay in their same directions, and never change. The eigenvectors of A<sup>100</sup> are teh same x<sub>1</sub> and x<sub>2</sub> as the eigenvalues become 1<sup>100</sup> = 1 and 0.5<sup>100</sup> = 0
+
+eigenvalues via det (A<sup>n</sup> - &lambda;<sup>n</sup>I) = 0 produces the same x<sub>1</sub> and x<sub>2</sub> eigenvectors via (A<sup>n</sup> - &lambda;<sup>n</sup>I)x = 0 for all n.
+
+<img width="522" alt="image" src="https://user-images.githubusercontent.com/38410965/107570798-03fd0480-6bb8-11eb-841b-8f6f99c2c48f.png">
 
 eigenvalues &lambda; and eigenvectors x are found by geometry, determinants and linear algebra.  
 
@@ -138,7 +151,12 @@ this process shifts A by a multiple of I to make it singular.
 process:
 1. compute A - &lambda;I determinant. 
 
-this determinant starts with either &lambda;<sup>n</sup> or -&lambda;<sup>n</sup> and this determinant is a polynomial of degree n: can be solved by quadratic formula
+this determinant starts with either &lambda;<sup>n</sup> or -&lambda;<sup>n</sup> and this determinant is a polynomial of degree n.
+
+2. find roots of the degree n polynomial det (A - &lambda;I) = 0 which can be solved by quadratic formula.  
+
+the n roots are the eignvalues of A.  
+the n roots of det (A - &lambda;I) = 0 make the matrix A - &lambda;I singular.
 
 ![\begin{align*}
 A &=\begin{bmatrix}
@@ -164,3 +182,11 @@ b & = -(w+z)\\
 c &= (wz - xy)\\
 \end{align*}
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%26%3D%5Cbegin%7Bbmatrix%7D%0Aw%26x%5C%5C%0Ay%26z%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A0+%26%3Ddet%5Cbegin%7Bbmatrix%7D%0Aw+-+%5Clambda+I%26x%5C%5C%0Ay%26z-%5Clambda+I%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%26%3D%5Clambda%5E2+-+%28w+%2B+z%29%5Clambda+%2B+wz+-+xy%5C%5C%0A%5C%5C%0A%26%3D+%5Cfrac%7B-b+%5Cpm+%5Csqrt%7Bb%5E2+-+4ac%7D%7D%7B2a%7D+%5C%5C%0A%5C%5C%0A%26%3D+%5Cfrac%7B%28w%2Bz%29+%5Cpm+%5Csqrt%7B%28w%2Bz%29%5E2+-+4%2A1%2A%28wz-xy%29%7D%7D%7B%282%2A1%29%7D+%5C%5C%0A%5C%5C%0Aa+%26%3D+1%5C%5C%0A%5C%5C%0Ab+%26+%3D+-%28w%2Bz%29%5C%5C%0A%5C%5C%0Ac+%26%3D+%28wz+-+xy%29%5C%5C%0A%5Cend%7Balign%2A%7D%0A)
+
+3. for each eigenvalue &lambda;<sub>1</sub> solve (A - &lambda;I) x = 0 to find the eigenvector x<sub>1</sub>.  
+
+each eigenvector is in the null space of its individual matrix (A - &lambda;I)
+
+thoughts that Strang has before the above procedures:
+
+
