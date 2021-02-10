@@ -197,6 +197,8 @@ V4 = V5 = V6 = x<sub>2</sub> = 2*Ax<sub>2</sub> = 2*&lambda;x<sub>1</sub>, but a
 
 <img width="752" alt="image" src="https://user-images.githubusercontent.com/38410965/107585789-d40c2c00-6bcc-11eb-9ab8-e96305fdf277.png">
 
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107586500-09654980-6bce-11eb-9342-a376dec5567a.png">
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107586694-6e20a400-6bce-11eb-8332-0300dc006019.png">
+
+square A to A<sup>2</sup> and &lambda; to &lambda;<sup>2</sup> and the directions do not change but the magnitude does. 
 
 
