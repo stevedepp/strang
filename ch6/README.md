@@ -199,6 +199,96 @@ V4 = V5 = V6 = x<sub>2</sub> = 2*Ax<sub>2</sub> = 2*&lambda;x<sub>1</sub>, but a
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107586694-6e20a400-6bce-11eb-8332-0300dc006019.png">
 
-square A to A<sup>2</sup> and &lambda; to &lambda;<sup>2</sup> and the directions do not change but the magnitude does. 
+square A to A<sup>2</sup> and &lambda; to &lambda;<sup>2</sup> and the directions do not change but the magnitude does. you can barely see that the brown line is shorter, but can see the numbers below.
+
+<img width="752" alt="image" src="https://user-images.githubusercontent.com/38410965/107587259-5e558f80-6bcf-11eb-9e08-1e87832d1cd4.png">
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107587178-42ea8480-6bcf-11eb-870f-eb798f50440d.png">
+
+
+other vectors, not v_1 and v_2 derived from &lambda;s will change direction.  but these other vectors are combinations of the 2 eigenvectors [much in the same way all vectors are combinations of the axes i and j which coincidentally do not change either when acted upon by their A = I; so I am thinking that eigenvalues adjust A and create new eigenvectors as axes of this new space.]
+
+the first column of A is a combination of x<sub>1</sub> and x<sub>2</sub>.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107587623-15eaa180-6bd0-11eb-8a76-004fc6ca7de1.png">
+
+A * (8,2) = eigenvalues * ( weighting * eigenvectors = (8,2) )
+
+so eigenvalues and eigenvectors can do the work of A.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107587969-c8226900-6bd0-11eb-9402-b1e481e49a9e.png">
+
+makes it easier when using powers of matrices: A<sup>99</sup>(8,2) = (weight = 100%)&lambda;<sub>1</sub><sup>99</sup>x<sub>1</sub> + (weight = 20%)&lambda;<sub>2</sub><sup>99</sup>x<sub>2</sub> 
+
+that last number is very small
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107588553-f48ab500-6bd1-11eb-9e5b-f76e61ccf293.png">
+
+eigenvector is steady state that doesnt chnage because &lambda;<sub>1</sub> = 1
+
+&lambda;<sub>2</sub> is a decaying mode that disappears.  the higher the powers of A the more the columns approach the steady state.
+
+A is a Markov matrix whose largest eigenvalue is 1.  All columns of A<sup>k</sup> will approach its eigenvalue 1's eigenvector.   
+
+for projection matrices, P, one can see when Px is parallel to x: the eigenvectors for &lambda; = 1 and &lambda; = 0 fill the column space and null space.  The column space doesnt change: Px = x because &lambda; = 1 and the null space goes to zero (Px = 0x).  
+
+example: 
+this projection matrix P has eigenvalues &lambda;<sub>1</sub> = 1 and &lambda;<sub>2</sub> = 0 and eigenvectors x<sub>1</sub> = (1,1) and x<sub>2</sub> = (1,-1).  Px<sub>1</sub> = x<sub>1</sub> = 1 and Px<sub>2</sub> = x<sub>2</sub> = 0: so :
+Px = x for both vectors.    
+the first eigenvalue is steady state and the second is null space.
+
+this example illustrates Markov, singular and most important symmetric matrices' special &lambda;'s and x's.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107592590-661b3100-6bdb-11eb-92a2-d2b5b1cd2610.png">
+
+1. Each Markov column's components add to 1.  
+2. P is singular so &lambda; = 0 is an eigenvalue: the determinant of P is zero before &lambda; is subtracted.   
+3. P is symmetric; so its eigenvalues (1,1) and (1,-1) are perpendicular. 
+
+the only eigenvalues for a projection matrix are 0 and 1  
+the eigenvectors for &lambda; = 0 where Px = 0x fill up the null space.  
+the eigenvectors for &lambda; = 1 where Px = x fill up the column space.  
+
+the null space is projected to zero.  the column space projects onto itself.  
+the projection keeps the column space and destroys the null space.  
+
+example:  
+&lambda;<sub>1</sub> = 0  
+&lambda;<sub>2</sub> = 1  
+v = (1,-1) + (2,2) projects onto Pv = (0,0) + (2,2) = 0•(1,-1) + 1•(2,2) = &lambda;<sub>1</sub>x<sub>1</sub> + &lambda;<sub>2</sub> + x<sub>2</sub>
+
+
+permutations have all | &lambda; | = 1   
+
+example:
+R = permutation = reflection matrix
+
+
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107595465-b3e76780-6be2-11eb-91be-d219585ee141.png">
+
+the first eigenvector is unaffected by R and &lambda;: x = Rx = &lambda;x  
+
+the second eigenvector has its signs reversed by R and &lambda;
+
+evidence that a matrix with no negative entries can have a negative eigenvalue 
+
+the eigenvectors for R are same as for P because 2 • projection P - I = R
+
+when a matrix is shifted by I, each lambda is shifted by 1 since det I = 1.  since det A needs to be zero, the shift in eigenvalues is 1 --> no change in eigenvalues. 
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107595873-f78ea100-6be3-11eb-8757-78bc6515fc5e.png">
+
+the 2 vectors for P and R stay the same whether on their own, multiplied by P or R or multiplied by their eigenvalues. 
+
+P vectors
+
+<img width="752" alt="image" src="https://user-images.githubusercontent.com/38410965/107596404-9f589e80-6be5-11eb-966b-41dee131a475.png">
+
+R vectors
+
+<img width="752" alt="image" src="https://user-images.githubusercontent.com/38410965/107596434-b5665f00-6be5-11eb-909f-3781ed264f82.png">
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107596452-c1eab780-6be5-11eb-80a6-e5e4dbef9f8d.png">
 
 
