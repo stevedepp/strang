@@ -308,11 +308,102 @@ diagonal of U contains its eigenvalues = the pivots
 &lambda;<sub>1</sub> + &lambda;<sub>2</sub> = sum(A.diagonal()) = trace A  
 (A.diagonal() doesnt contain pivots but still can be used)
 
-&lambda;<sub>1</sub> * &lambda;<sub>2</sub> = det A = pivot<sub>1</sub>*pivot<sub>2</sub>  
+&lambda;<sub>1</sub> * &lambda;<sub>2</sub> = det A 
+= pivot<sub>1</sub>*pivot<sub>2</sub>  
 (of course pivots can only be found in U)
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107671362-c48af280-6c61-11eb-93a1-f92e0f8557fb.png">
 
 example: the trace =  sum of diagonals is 3 and determinant is 2 for all 3 matrices
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107674371-e8036c80-6c64-11eb-93fa-1060941b802c.png">
 
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107671362-c48af280-6c61-11eb-93a1-f92e0f8557fb.png">
+the eigenvalues of a triangular matrix lie along its diagonal because in determinants the non-zero part multiplies the zero part. 
+
+imaginary eigenvalues 
+
+https://docs.python.org/3/library/cmath.html
+
+eigenvalues may be complex numbers 
+
+example  
+R = Q = rotation = 
+[
+[0, -1],
+[1, 0]
+]
+
+has no real eigenvectors.  
+
+R = Q's eigenvalues are &lambda;<sub>1</sub> = i and &lambda;<sub>2</sub> = -i  
+then since i = √-1, 
+
+&lambda;<sub>1</sub> + &lambda;<sub>2</sub> = i + -i = 0 = trace A
+
+&lambda;<sub>1</sub> • &lambda;<sub>2</sub> = i • -i = -1 = det A
+
+after rotation by &lambda; • I, no real vector Qx stays in same direction as x (except zero vector which is useless).  there cannot be an real eigenvector but there can be an imaginary eigenvector.
+
+If Q is rotation through 90 degrees, then Q<sup>2</sup> is rotation through 180 which fits :
+
+Q<sup>2</sup>x = -Ix = &lambda;<sup>2</sup>x = i<sup>2</sup> = -1<sup>2</sup> = -1x  
+
+&lambda;s come from (Q - &lambda;I) = 0 as usual --> &lambda;<sup>2</sup> + 1 = 0 whose roots are i and -i.
+
+complex eigenvectors x<sub>1</sub> = -i • (1,i) and x<sub>2</sub> = i • (i, 1) keep direction as rotated.  
+[somehow the math doesnt work at the end of this example i • [1,i] = [-i,1] but it does something else]  
+
+important: real matrices can easily have complex eigenvalues and eigenvectors
+
+<img width="672" alt="image" src="https://user-images.githubusercontent.com/38410965/107687592-a975ae00-6c74-11eb-8425-03a278b95489.png">
+
+these two eigenvalues i and -i illustrate:
+1. Q is an orthogonal matrix; so the absolute value of each &lambda; is | &lambda; | = 1   
+2. Q is skew symmetric matrix; so, each &lamnda; is pure imaginary (i.e. not complex)
+
+symmetric matrix S<sup>T</sup> = S is compared with real number.
+
+a skew symmetric matrix A<sup>T</sup> = -A is compared with an imaginary number.  
+
+an orthogonal matrix Q<sup>T</sup>Q = I corresponds to a complex number with | &lambda; | = 1
+
+for eigenvalues of S, A, Q those are more than analogies.  They are facts.  
+
+the eigenvectors for all these special matrices S, A, Q are perpendicular.  
+(i,1) and (1,i) are perpendicular.  
+
+
+Eigenvealues of AB and A+B
+
+eigenvalue of A times eigenvalue of B usually doesnt equal eigenvalue of AB   
+
+ABx = A&lambda;<sub>B</sub>x   
+ABx = &lambda;<sub>A</sub>Bx  
+doesnt mean 
+ABx = &lambda;<sub>A</sub>&lambda;<sub>B</sub>x
+
+unless x is an eigenvector for A and B when this proof would be correct.  
+
+for same reason, eigenvalues of A + B are not generally the sum of the eigenvalues of A and B
+
+
+if x is an eigenvector for A and B then can multiply eigenvalues.  
+
+the test for shared eigenvectors is important in quantum mechanics.  
+
+A and B share the same n independent eigenvectors if and only if 
+
+AB = BA  
+
+Heisenbergs uncertainty principle: 
+
+Review
+1. Ax = &lambda;x says eigenvectors keep the same directoin when multiplied by A  
+2. Ax = &lambda;x says det (A - &lambda;I) = 0 which determines n eigenvalues &lambda;s.  
+3. eigenvalues of A<sup>2</sup> and A<sup>-1</sup> are &lambda;<sup>2</sup> and &lambda;<sup>-1</sup> with the same eigenvectors.  
+4. the sum of the &lambda;s equals the sum down main diagonal of A = trace.    
+5. the product of the &lambda;s equals the determinant of A = product of the pivots of A which are likely NOT the digaonals of A since A is not reduced to U.  
+6. projections P, reflections R, 90 degree rotations Q have special eigenvalues 1, 0, -1, i, -i.  Singular matrices have &lambda; = 0.  Triangular matrices have &lambda;s on their diagonals.  
+7. special properties of a matrix lead to special eigenvalues and eigenvectors. this is major theme of this chaper. 
+
+
