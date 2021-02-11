@@ -292,3 +292,13 @@ R vectors
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107596452-c1eab780-6be5-11eb-80a6-e5e4dbef9f8d.png">
 
 
+A - &lambda;I solves for &lambda eigenvalues when singular, i.e. when det A - &lambdaI; = 0   
+then both rows of matrix A - &lambdaI; are multiples of vector (a,b)  
+then eigenvector x is ANY multiple of vector (b,-a)  
+repeating example, but previously  the 2nd eigenvector x<sub>2</sub> paired with &lambda;<sub>2</sub> = 5 was (1,2) and now (2,4).  there is a line of eigenvectors = any non-zero multiple of x.  MatLab provides the unit vector equivalent.   
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107666704-cb633680-6c5c-11eb-9448-5b691d9c9546.png">
+
+some 2x2 matrices have only one line of eigenvectors when 2 eigenvectors are equal.  A = I has equal eigenvalues and infinite eigenvectors.  Without a full set of eigenvectors there is no basis and cannot write every v as a combination of eigenvectors which translates into saying 'we cannot diagonalize the matrix without independent eigenvectors'
+
+
