@@ -301,4 +301,18 @@ repeating example, but previously  the 2nd eigenvector x<sub>2</sub> paired with
 
 some 2x2 matrices have only one line of eigenvectors when 2 eigenvectors are equal.  A = I has equal eigenvalues and infinite eigenvectors.  Without a full set of eigenvectors there is no basis and cannot write every v as a combination of eigenvectors which translates into saying 'we cannot diagonalize the matrix without independent eigenvectors'
 
+eigenvalues change from A to U in elimination:  
+add a row of A to another row or exchange rows, eigenvalues &lambda; change.  
+diagonal of U contains its eigenvalues = the pivots  
 
+&lambda;<sub>1</sub> + &lambda;<sub>2</sub> = sum(A.diagonal()) = trace A  
+(A.diagonal() doesnt contain pivots but still can be used)
+
+&lambda;<sub>1</sub> * &lambda;<sub>2</sub> = det A = pivot<sub>1</sub>*pivot<sub>2</sub>  
+(of course pivots can only be found in U)
+
+example: the trace =  sum of diagonals is 3 and determinant is 2 for all 3 matrices
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107674371-e8036c80-6c64-11eb-93fa-1060941b802c.png">
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107671362-c48af280-6c61-11eb-93a1-f92e0f8557fb.png">
