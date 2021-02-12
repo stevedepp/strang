@@ -140,7 +140,7 @@ solve for eigenvalues 0 and 5 that make the determinant = 0, make A - &lambda;I 
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107555075-bcb94880-6ba4-11eb-8b01-045d99002bf0.png">
 
-solve (A - &lambda;I )x = 0 vector for each &lambda;<sub>1</sub> = 0 producing x<sub>1</sub> vector = (2,-1) and &lambda;<sub>2</sub> = 5 producing x<sub>2<sub> vector = (1,2), confirming that for both (A - &lambda;I)x = 0 and that those 2 vectors are each in the null space of of their respective matrices: x<sub>1</sub> = (2,-1) in null space of A_lambda_1 and x<sub>1</sub> = (1,2) in the null space of A_lambda_2.  dimensions are conserved: n = n-r + r
+solve (A - &lambda;I )x = 0 vector for each &lambda;<sub>1</sub> = 0 producing x<sub>1</sub> vector = (2,-1) and  &lambda;<sub>2</sub> = 5 producing x<sub>2</sub> vector = (1,2), confirming that for both (A - &lambda;I)x = 0 and that those 2 vectors are each in the null space of of their respective matrices: x<sub>1</sub> = (2,-1) in null space of A_lambda_1 and x<sub>1</sub> = (1,2) in the null space of A_lambda_2.  dimensions are conserved: n = n-r + r
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107558099-651cdc00-6ba8-11eb-93b9-4edef2a8517d.png">
 
@@ -193,8 +193,8 @@ c &= (wz - xy)\\
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%26%3D%5Cbegin%7Bbmatrix%7D%0Aw%26x%5C%5C%0Ay%26z%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A0+%26%3Ddet%5Cbegin%7Bbmatrix%7D%0Aw+-+%5Clambda+I%26x%5C%5C%0Ay%26z-%5Clambda+I%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%26%3D%5Clambda%5E2+-+%28w+%2B+z%29%5Clambda+%2B+wz+-+xy%5C%5C%0A%5C%5C%0Awith%3A%26%5C%5C%0A%5C%5C%0Aa+%26%3D+1%5C%5C%0A%5C%5C%0Ab+%26+%3D+-%28w%2Bz%29%5C%5C%0A%5C%5C%0Ac+%26%3D+%28wz+-+xy%29%5C%5C%0A%5C%5C%0A%5Clambda+%26%3D+%5Cfrac%7B-b+%5Cpm+%5Csqrt%7Bb%5E2+-+4ac%7D%7D%7B2a%7D+%5C%5C%0A%5C%5C%0A%5C%5C%0A%5Clambda_1%2C%5Clambda_2%26%3D+%5Cfrac%7B%28w%2Bz%29+%5Cpm+%5Csqrt%7B%28w%2Bz%29%5E2+-+4%2A1%2A%28wz-xy%29%7D%7D%7B%282%2A1%29%7D+%5C%5C%0A%5C%5C%0A%5C%5C%0A%5C%5C%0A%5Clambda_1+%2B+%5Clambda_2+%26+%3D+%28w%2Bz%29+%3D+trace_A%5C%5C%0A%5C%5C%0A%5Clambda_1+%2A+%5Clambda_2+%26+%3D+wz-xy+%3D+det+A+%3D+pivot_1+%2A+pivot_2%0A%5C%5C%0A%5Cend%7Balign%2A%7D)
 
 here:   
-&lambda;<sup>2</sup> + (w + z)&lambda; + (wz - xy)    
-&lambda;<sup>2</sup> + (Trace<sub>A</sub> = w + z = sum of &lambda;s)&lambda; + ( det A = wz - xy = &lambda;<sub>1</sub>*&lambda;<sub>2</sub>)
+&lambda;<sup>2</sup> - (w + z)&lambda; + (wz - xy)    
+&lambda;<sup>2</sup> - (Trace<sub>A</sub> = w + z = sum of &lambda;s)&lambda; + ( det A = wz - xy = &lambda;<sub>1</sub>*&lambda;<sub>2</sub>)
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107811934-f4f38f00-6d3c-11eb-9918-b512ca6bf45d.png">
 
