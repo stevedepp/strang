@@ -171,7 +171,7 @@ y&z-\lambda I
 \\
 &=\lambda^2 - (w + z)\lambda + wz - xy\\
 \\
-&= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+\lambda &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
 \\
 &= \frac{(w+z) \pm \sqrt{(w+z)^2 - 4*1*(wz-xy)}}{(2*1)} \\
 \\
@@ -180,8 +180,17 @@ a &= 1\\
 b & = -(w+z)\\
 \\
 c &= (wz - xy)\\
+\\
+\\
+\lambda_1 + lambda2 & = (w+z)
 \end{align*}
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%26%3D%5Cbegin%7Bbmatrix%7D%0Aw%26x%5C%5C%0Ay%26z%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A0+%26%3Ddet%5Cbegin%7Bbmatrix%7D%0Aw+-+%5Clambda+I%26x%5C%5C%0Ay%26z-%5Clambda+I%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%26%3D%5Clambda%5E2+-+%28w+%2B+z%29%5Clambda+%2B+wz+-+xy%5C%5C%0A%5C%5C%0A%26%3D+%5Cfrac%7B-b+%5Cpm+%5Csqrt%7Bb%5E2+-+4ac%7D%7D%7B2a%7D+%5C%5C%0A%5C%5C%0A%26%3D+%5Cfrac%7B%28w%2Bz%29+%5Cpm+%5Csqrt%7B%28w%2Bz%29%5E2+-+4%2A1%2A%28wz-xy%29%7D%7D%7B%282%2A1%29%7D+%5C%5C%0A%5C%5C%0Aa+%26%3D+1%5C%5C%0A%5C%5C%0Ab+%26+%3D+-%28w%2Bz%29%5C%5C%0A%5C%5C%0Ac+%26%3D+%28wz+-+xy%29%5C%5C%0A%5Cend%7Balign%2A%7D%0A)
+
+
+here lambda<sup>2</sup> + (Trace<sub>A</sub> = a + d = sum of &lambda;s) + ( det A = ad - bc = &lambda;<sub>1</sub> * &lambda;<sub>2</sub>)
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107806710-2e280100-6d35-11eb-8cf0-5f33783786ec.png">
+
 
 3. for each eigenvalue &lambda;<sub>1</sub> solve (A - &lambda;I) x = 0 to find the eigenvector x<sub>1</sub>.  
 
@@ -489,3 +498,31 @@ A =
 
 "near" means not more than 3 away from d<sub>1</sub>, d<sub>2</sub>, d<sub>3</sub>
 
+
+interesting problems:
+
+if know x eigenvector, the way to find &lambda; is to multiply Ax and know that it should = &lambda;x.
+
+
+if A has &lambda;<sub>1</sub> = 4 and &lambda;<sub>2</sub> = 5 then det (A - &lambda; • I) = (&lambda;<sub>1</sub> - 4)(&lambda;<sub>2</sub>-5) = &lambda;<sup>2</sup> - 9&lambda; + 20.  Find 3 matrices that have trace a + d = 9 and determinant = 20 and &lambda;s 4 and 5.  Use quadradic formula for hints.  &lambda;<sup>1</sup> = 1, a + d = 9  ad - bc = determinant = 20.  
+
+the eigenvalues of A equal the eigenvalues of A<sup>T</sup> because (A - &lambda; I) has same determinant as (A - &lambda;I)<sup>T</sup> because every square matrix has det M = det M<sup>T</sup>.  
+
+markov matrix M has M<sup>T</sup> (1,1,1) = (1,1,1) means that 1 is a &lambda; since M and M<sup>T</sup> share eignvalues.  Markovs are always singular; so zero is a &lambda; too.  If we konw that trace = 1/2, then we know the 3rd &lambda; is -1/2.  
+
+find three 2x2 matrices that have &lambda;<sub>1</sub> = &lambda;<sub>1</sub> = 0, the trace = 0  and the determinant is zero.  A may not be the zero matrix but A<sup>2</sup> = 0.
+
+1 -1
+1 -1
+
+0 1
+0 0
+
+0 0
+1 0
+
+find matrix singular with rank 1 and 3 &lambda;s and 3 eigenvectors.  
+
+
+eigenvectors are column space if eigenvalues are ≠ 0.  that is true because Ax = &lambda;x  
+eigenvectors are null space if eigenvalues are = 0.  that is true because Ax = 0x  
