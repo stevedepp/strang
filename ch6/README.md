@@ -550,4 +550,21 @@ section 6.2
 principles:
 
 1. the colmns of AX and XA are Ax<sub>k</sub> = &lambda;<sub>k</sub>x<sub>k</sub>.  
-the eigenvalue matrix &Lambda; is diagonal.
+the eigenvalue matrix &Lambda; is diagonal.  
+
+2. n independent eigenvectors in X diagonalize A:  
+
+A = X&Lambda;X<sup>-1</sup> and &Lambda; = AX<sup>-1</sup>A
+
+3. the eigenvector matrix X also diagonalizes all powers A<sup>k</sup>
+
+A<sup>k<sup> = X&Lambda;<sup>k<sup>X<sup>-1</sup> [and &Lambda;<sup>k<sup> = X<sup>-1<sup>A<sup>k<sup>X]
+
+4. solve u<sub>k+1<sub> = Au<sub>k<sub> by u<sub>k<sub> = A<sup>k<sup><sub>u<sub>0</sub></sub> = X&Lambda;<sup>k<sup>X<sup>-1<sup>u<sub>0<sub> = c<sub>1<sub>(&lambda;<sub>1<sub>)<sup>k<sup>x<sub>1<sub> + ... + c<sub>n<sub>(&lambda;<sub>n<sub>)<sup>k<sup>x<sub>n<sub>
+
+5. 
+no equal eigenvalues --> A invertible and A can be diagonalized.  
+
+equal eigenvalues --> A might have too few independent eigenvectors and then X<sup>-1</sup> fails
+
+6. every matrix C = B<sup>-1</sup>AB has same eigenvalues as A.  These Cs are similar to A.  
