@@ -443,6 +443,6 @@ product of ( A + 4 * I )'s &lambda;s = 5 * 7 = 35
 
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107711816-43018780-6c96-11eb-86d8-cfb2481c39e7.png">
 
-the eigenvectors from A are the same for A<sup>2</sup>, A<sup>-1</sup> and A - 4 * I in that they the eigenvectors from A are n the null space of A, A<sup>2</sup>, A<sup>-1</sup> and A - 4 * I  and in the sense that the eigenvectors do not change direction when multiplied by A, A<sup>2</sup>, A<sup>-1</sup> or A - 4 * I 
+the eigenvectors from A are the same for A<sup>2</sup>, A<sup>-1</sup> and A - 4 * I in that they the eigenvectors from A are n the null space of A, A<sup>2</sup>, A<sup>-1</sup> and A - 4 * I  and in the sense that the eigenvectors do not change direction when multiplied by A, A<sup>2</sup>, A<sup>-1</sup> or A - 4 * I  or when multiplied by the eigenvalues of A, A<sup>2</sup>, A<sup>-1</sup> and A - 4 * I as shown here:
 
 <img width="672" alt="image" src="https://user-images.githubusercontent.com/38410965/107715258-e0f85080-6c9c-11eb-8510-d2295874ae3e.png">
