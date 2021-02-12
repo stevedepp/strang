@@ -375,7 +375,7 @@ important: real matrices can easily have complex eigenvalues and eigenvectors
 
 these two eigenvalues i and -i illustrate:
 1. Q is an orthogonal matrix; so the absolute value of each &lambda; is | &lambda; | = 1   
-2. Q is skew symmetric matrix; so, each &lamnda; is pure imaginary (i.e. not complex)
+2. Q is skew symmetric matrix; so, each &lambda; is pure imaginary (i.e. not complex)
 
 symmetric matrix S<sup>T</sup> = S is compared with real number.
 
