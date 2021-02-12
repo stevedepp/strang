@@ -446,3 +446,46 @@ product of ( A + 4 * I )'s &lambda;s = 5 * 7 = 35
 the eigenvectors from A are the same for A<sup>2</sup>, A<sup>-1</sup> and A - 4 * I in that they the eigenvectors from A are n the null space of A, A<sup>2</sup>, A<sup>-1</sup> and A - 4 * I  and in the sense that the eigenvectors do not change direction when multiplied by A, A<sup>2</sup>, A<sup>-1</sup> or A - 4 * I  or when multiplied by the eigenvalues of A, A<sup>2</sup>, A<sup>-1</sup> and A - 4 * I as shown here:
 
 <img width="672" alt="image" src="https://user-images.githubusercontent.com/38410965/107715258-e0f85080-6c9c-11eb-8510-d2295874ae3e.png">
+
+
+
+Gershgorin estimation of eigenvales in A
+
+Every eigenvalue of A must be 'near' at least one of the entries a<sub>ii</sub> on the main diagonal.  For &lambda; to be 'near a<sub>ii</sub>' means that |a<sub>ii</sub> - &lambda;| is no more than the sum R<sub>i</sub> of all other |a<sub>ii</sub>| in the row i of the matrix.  Then R<sub>i</sub> = ∑<sub>j≠i</sub> | a<sub>ij</sub> is the radius of a circle centered at a<sub>ii</sub>.
+
+[a<sub>ii</sub> is the center and &lambda; is inside the circle with radius = sum of absolute values of other row items]
+
+every &lambda; is in the circle around one or more diagonal entries a<sub>ii</sub>: | a<sub>ii</sub> - &lambda; | ≤ R<sub>i</sub>
+
+from chapter 2
+
+reasoning: if &lambda; is an eigenvalue, then A-&lambda;•I is not invertible.  then A - &lambda;•I cannot be diagonally dominant.  "usually it takes work to decode if a matrix is invertible.  find a full set of non-zero pivots in elmination and the determinant is the product of the pivots.  but for some matrices, invertibility can be discerned when every number a<sub>ii</sub> on the main diagonal dominates the off diagonal part of that row.  diagonally dominant matrices are invertible.  each a<sub>ii</sub> on the diagonal is larger than the total sum along the rest of the row i:"
+
+|a<sub>ii</sub>| > ∑<sub>j≠i</sub> |a<sub>ij</sub>| means that |a<sub>ii</sub> > |a<sub>i1</sub> + ... (skip |a<sub>ii</sub>|) ... + |a<sub>in</sub>|
+
+see chanpter 2 for reasoning. 
+
+so at least one diagonal entry <sub>ii</sub> - &lambda; is not larger than the sum R<sub>i</sub> of all other entries |a<sub>ij</sub>| in row i.
+
+example: every eigenvalue &lambda; of this A falls into one or both Gershgorin circles whose centers are center<sub>1</sub> = a and center<sub>2</sub> = d and radii are R<sub>1</sub> =  |b| and R<sub>2</sub> = |c| which are the other components of the same row as the diagonal a and d.
+
+first circle: | &lambda; - a | ≤ | b |  
+first circle: | &lambda; - d | ≤ | c |
+
+those are circles in the complex plane since &lambda; could be complex.
+
+example 2:  all eigenvalues of A lie in a circle of radius R = 3 around one or more of the diagonal entries d<sub>1</sub>, d<sub>2</sub>, d<sub>3</sub>:
+
+A = 
+[
+[ d<sub>1</sub>, 1, 2 ],
+[ 2, d<sub>2</sub>, 1 ],
+[ -1, 2, d<sub>3</sub> ],
+]
+
+| &lambda; - d<sub>1</sub> | ≤ 1 + 2 = R<sub>1</sub>  
+| &lambda; - d<sub>2</sub> | ≤ 2 + 1 = R<sub>2</sub>  
+| &lambda; - d<sub>3</sub> | ≤ 1 + 2 = R<sub>3</sub>  
+
+"near" means not more than 3 away from d<sub>1</sub>, d<sub>2</sub>, d<sub>3</sub>
+
