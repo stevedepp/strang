@@ -433,29 +433,29 @@ demonstrates
 - A<sup>-1</sup>'s &lambda;s = 1 / A's &lambda;s
 - A + 4 * I &lambda;s = A's &lambda;s + 4 * det I = A's &lambda;s + 4 * 1 
 
-A's &lambda;s = 1 and 3
-trace of A = 2 + 2 = 4 
-sum of A's &lambda;s = 1 + 3
-det A = 3
-product of A's &lambda;s = 1 * 3
+A's &lambda;s = 1 and 3  
+trace of A = 2 + 2 = 4   
+sum of A's &lambda;s = 1 + 3  
+det A = 3  
+product of A's &lambda;s = 1 * 3  
 
-A<sup>2</sup>'s &lambda;s = 1<sup>2</sup> or 1 and 3<sup>2</sup> or 9
-trace of A<sup>2</sup> = 2 + 2 = 4 
-sum of A<sup>2</sup>'s &lambda;s = 1 + 3
-det A<sup>2</sup> = 3
-product of A<sup>2</sup>'s &lambda;s = 1 * 3
+A<sup>2</sup>'s &lambda;s = 1<sup>2</sup> or 1 and 3<sup>2</sup> or 9  
+trace of A<sup>2</sup> = 2 + 2 = 4   
+sum of A<sup>2</sup>'s &lambda;s = 1 + 3  
+det A<sup>2</sup> = 3  
+product of A<sup>2</sup>'s &lambda;s = 1 * 3  
 
-A<sup>-1</sup>'s &lambda;s = 1/1 and 1/3
-trace of A<sup>-1</sup> = 2/3 + 2/3 = 4/3 
-sum of A<sup>-1</sup>'s &lambda;s = 1/1 + 1/3 = 4/3
-det A<sup>-1</sup> = 1/3
-product of A<sup>-1</sup>'s &lambda;s = 1/1 * 1/3 = 1/3
+A<sup>-1</sup>'s &lambda;s = 1/1 and 1/3  
+trace of A<sup>-1</sup> = 2/3 + 2/3 = 4/3   
+sum of A<sup>-1</sup>'s &lambda;s = 1/1 + 1/3 = 4/3  
+det A<sup>-1</sup> = 1/3  
+product of A<sup>-1</sup>'s &lambda;s = 1/1 * 1/3 = 1/3  
 
-( A + 4 * I )'s &lambda;s = 1 + 4 * 1 = 5 and 3 + 4 * 1 = 7
-trace of ( A + 4 * I ) = 2 + 4 * 1 + 2 + 4 * 1 = 6 + 6 = 12
-sum of ( A + 4 * I )'s &lambda;s = 1+4 * 1 + 3 + 4 * 1 = 5 + 7 = 12
-det( A + 4 * I ) = 6 * 6 - (-1 * -1) = 35
-product of ( A + 4 * I )'s &lambda;s = 5 * 7 = 35
+( A + 4 * I )'s &lambda;s = 1 + 4 * 1 = 5 and 3 + 4 * 1 = 7  
+trace of ( A + 4 * I ) = 2 + 4 * 1 + 2 + 4 * 1 = 6 + 6 = 12  
+sum of ( A + 4 * I )'s &lambda;s = 1+4 * 1 + 3 + 4 * 1 = 5 + 7 = 12  
+det( A + 4 * I ) = 6 * 6 - (-1 * -1) = 35  
+product of ( A + 4 * I )'s &lambda;s = 5 * 7 = 35  
 
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107711816-43018780-6c96-11eb-86d8-cfb2481c39e7.png">
 
