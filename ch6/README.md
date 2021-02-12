@@ -84,7 +84,7 @@ factoring the quadratic into &lambda; -1 and &lambda; -1/2 gives eigenvalues tha
 
 x<sub>1</sub> and x<sub>2</sub> are in the null space of the A - &lambda;I matrix, (the A - 1•I and A - 0.5•I matrices)
 
-and Ax<sub>1</sub> = &lambda<sub>1<.sub>x<sub>1<.sub>  and Ax<sub>2</sub> = &lambda;<sub>2<.sub>x<sub>2<.sub>
+and Ax<sub>1</sub> = &lambda</sub>1</sub>x<sub>1</sub>  and Ax<sub>2</sub> = &lambda;<sub>2</sub>x<sub>2</sub>
 
 If eigenvector is multiplied by A again, the same eigenvector is produced by the procedure for constructing eigenvalues and eigenvectors.  direction of x does not change as A is multiplied 100 times.  A<sup>100</sup>x = &lambda;<sup>100</sup>x inasmuch as A is still replacing &lambda; and x stays the same.  
 
