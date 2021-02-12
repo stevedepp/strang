@@ -16,7 +16,7 @@ A<sup>-1</sup>x = &lambda;<sup>-1</sup>x
 the same x in each case LHS RHS
 
 3. if Ax = &lambda;x  
-(A - lamnda I)x = 0  
+(A - &lambda; I)x = 0  
 A - &lambda;I is singular and   
 det (A - &lambda; I) = 0  
 n eigenvalues
@@ -84,7 +84,7 @@ factoring the quadratic into &lambda; -1 and &lambda; -1/2 gives eigenvalues tha
 
 x<sub>1</sub> and x<sub>2</sub> are in the null space of the A - &lambda;I matrix, (the A - 1•I and A - 0.5•I matrices)
 
-and Ax<sub>1</sub> = &lambda</sub>1</sub>x<sub>1</sub>  and Ax<sub>2</sub> = &lambda;<sub>2</sub>x<sub>2</sub>
+and Ax<sub>1</sub> = &lambda;</sub>1</sub>x<sub>1</sub>  and Ax<sub>2</sub> = &lambda;<sub>2</sub>x<sub>2</sub>
 
 If eigenvector is multiplied by A again, the same eigenvector is produced by the procedure for constructing eigenvalues and eigenvectors.  direction of x does not change as A is multiplied 100 times.  A<sup>100</sup>x = &lambda;<sup>100</sup>x inasmuch as A is still replacing &lambda; and x stays the same.  
 
@@ -124,7 +124,7 @@ each &lambda; leads to x:
 
 finding eigenvectors:
 
-for each eigenvalue lambda, solve (A - &lambda;I)x = 0 or Ax = &lambda;x to find an eigenvector x.
+for each eigenvalue &lambda;, solve (A - &lambda;I)x = 0 or Ax = &lambda;x to find an eigenvector x.
 
 if A is already singular then 0 will already be one of its eigenvalues: Ax = 0x has solution already [found in the x null space of A]; those solutions are the eigenvectors for the eigenvalue &lambda; = 0.  (A - &lambda;I) = is the way to find all &lambda;'s and x's: always subtract &lambda;I from A.
 
@@ -291,7 +291,7 @@ evidence that a matrix with no negative entries can have a negative eigenvalue
 
 the eigenvectors for R are same as for P because 2 • projection P - I = R
 
-when a matrix is shifted by I, each lambda is shifted by 1 since det I = 1.  since det A needs to be zero, the shift in eigenvalues is 1 --> no change in eigenvalues. 
+when a matrix is shifted by I, each &lambda; is shifted by 1 since det I = 1.  since det A needs to be zero, the shift in eigenvalues is 1 --> no change in eigenvalues. 
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107595873-f78ea100-6be3-11eb-8757-78bc6515fc5e.png">
 
@@ -308,8 +308,8 @@ R vectors
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107596452-c1eab780-6be5-11eb-80a6-e5e4dbef9f8d.png">
 
 
-A - &lambda;I solves for &lambda eigenvalues when singular, i.e. when det A - &lambdaI; = 0   
-then both rows of matrix A - &lambdaI; are multiples of vector (a,b)  
+A - &lambda;I solves for &lambda; eigenvalues when singular, i.e. when det A - &lambda;I = 0   
+then both rows of matrix A - &lambda;I are multiples of vector (a,b)  
 then eigenvector x is ANY multiple of vector (b,-a)  
 repeating example, but previously  the 2nd eigenvector x<sub>2</sub> paired with &lambda;<sub>2</sub> = 5 was (1,2) and now (2,4).  there is a line of eigenvectors = any non-zero multiple of x.  MatLab provides the unit vector equivalent.   
 
@@ -533,3 +533,15 @@ find matrix singular with rank 1 and 3 &lambda;s and 3 eigenvectors.
 
 eigenvectors are column space if eigenvalues are ≠ 0.  that is true because Ax = &lambda;x  
 eigenvectors are null space if eigenvalues are = 0.  that is true because Ax = 0x  
+
+the eigenvalues of a equal the eigenvalues of A<sup>T</sup> because det (A - &lambda;I) = det (A<sup>T</sup> - &lambda;I) and that is true because every square matrix has det M = det M<sup>T</sup>.  But the eigenvectors of A and A<sup>T</sup> are not the same.  
+
+construct a 3x3 markov matrix M: positive entries down each column add to 1.  show that M<sup>T</sup>(1,1,1) = (1,1,1).  [ would seem obvious from the description of a markov matrix that if you transpose it then the sum of the rows achieved by a vector x = (1,1,1) would be 1s. ] but he's clearly interested in something else.  by the last problem, know that M and M<sup>T</sup> share eigenvalues.  So &lambda; = 1 is also an eigenvalue of M.  a 3x3 singular matrix with trace 1/2 has what &lambda;s?  the eignenvalues must be 1 (because it is a markov) and zero (because it is singular) and -1/2 since the sum of its eigenvalues = 1/2
+
+this matrix is singular with rank 1, duh since it is an outside product, find 3 &lambda;s and 3 eigenvectors:  A = u<sup>T</sup>v (1,2,1)<sup>T</sup>(2,1,2).   
+answer: 2 &lambda;s = 0 since it is singular: is this a rule such that same number of non-zero pivots as non-zero &lambda;s?  yes! because this will reduce to 2 rows of zeros and 1 row with a single pivot. still doesnt pove that zero rows contribute zero &lambda;s.  waxman said that since A is singular we know 'at least one eigenvalue = 0'.
+
+since the sum of diagonals is 2+2+2 = 6, then the third &lambda; = 6. 
+
+2 eigenvectors are in the null space of A since it is rank 1 and zero is subtracted from A's first 2 diagonals.  (0,-2,1) and (1,-2,0) the 3rd is u = (1,2,1) which is the original u.
+
