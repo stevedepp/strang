@@ -545,3 +545,9 @@ since the sum of diagonals is 2+2+2 = 6, then the third &lambda; = 6.
 
 2 eigenvectors are in the null space of A since it is rank 1 and zero is subtracted from A's first 2 diagonals.  (0,-2,1) and (1,-2,0) the 3rd is u = (1,2,1) which is the original u.
 
+section 6.2
+
+principles:
+
+1. the colmns of AX and XA are Ax<sub>k</sub> = &lambda;<sub>k</sub>x<sub>k</sub>.  
+the eigenvalue matrix &Lambda; is diagonal.
