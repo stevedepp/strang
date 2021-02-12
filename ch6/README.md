@@ -407,3 +407,42 @@ Review
 7. special properties of a matrix lead to special eigenvalues and eigenvectors. this is major theme of this chaper. 
 
 
+example:
+demonstrates
+- finding &lambda; via the determinant of the matrix A - &lambda;I set to zero.  
+- trace of A = sum of A's &lambda;s
+- determinant of A = product of As &lambda;s
+- these methods translate to sqaure and inverse of A and to linear combinations of A with I e.g.  [wonder if that works because I has same eigenvectors as A]
+- A<sup>2</sup>'s &lambda;s = A's &lambda;s<sup>2</sup>
+- A<sup>-1</sup>'s &lambda;s = 1 / A's &lambda;s
+- A + 4 * I &lambda;s = A's &lambda;s + 4 * det I = A's &lambda;s + 4 * 1 
+
+A's &lambda;s = 1 and 3
+trace of A = 2 + 2 = 4 
+sum of A's &lambda;s = 1 + 3
+det A = 3
+product of A's &lambda;s = 1 * 3
+
+A<sup>2</sup>'s &lambda;s = 1<sup>2</sup> or 1 and 3<sup>2</sup> or 9
+trace of A<sup>2</sup> = 2 + 2 = 4 
+sum of A<sup>2</sup>'s &lambda;s = 1 + 3
+det A<sup>2</sup> = 3
+product of A<sup>2</sup>'s &lambda;s = 1 * 3
+
+A<sup>-1</sup>'s &lambda;s = 1/1 and 1/3
+trace of A<sup>-1</sup> = 2/3 + 2/3 = 4/3 
+sum of A<sup>-1</sup>'s &lambda;s = 1/1 + 1/3 = 4/3
+det A<sup>-1</sup> = 1/3
+product of A<sup>-1</sup>'s &lambda;s = 1/1 * 1/3 = 1/3
+
+( A + 4 * I )'s &lambda;s = 1 + 4 * 1 = 5 and 3 + 4 * 1 = 7
+trace of ( A + 4 * I ) = 2 + 4 * 1 + 2 + 4 * 1 = 6 + 6 = 12
+sum of ( A + 4 * I )'s &lambda;s = 1+4 * 1 + 3 + 4 * 1 = 5 + 7 = 12
+det( A + 4 * I ) = 6 * 6 - (-1 * -1) = 35
+product of ( A + 4 * I )'s &lambda;s = 5 * 7 = 35
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107711816-43018780-6c96-11eb-86d8-cfb2481c39e7.png">
+
+the eigenvectors from A are the same for A<sup>2</sup>, A<sup>-1</sup> and A - 4 * I in that they the eigenvectors from A are n the null space of A, A<sup>2</sup>, A<sup>-1</sup> and A - 4 * I  and in the sense that the eigenvectors do not change direction when multiplied by A, A<sup>2</sup>, A<sup>-1</sup> or A - 4 * I 
+
+<img width="672" alt="image" src="https://user-images.githubusercontent.com/38410965/107715258-e0f85080-6c9c-11eb-8510-d2295874ae3e.png">
