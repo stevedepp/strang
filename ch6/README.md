@@ -31,7 +31,7 @@ Ax = b --> balance, equilibrium, steady state
 
 next is about change.  time enters the picture: continuous time in differential equations ∂ u / ∂ t = A u or time steps in a difference equatoin. u<sub>k+1</sub> = Au<sub>k</sub> in equations that are not solved via elimination. 
 
-key is avoiding matrix related complications.  the solution vector u(t) stays in same direction as fixed vector x.  and then solve only to find the number [lambda] changing with time that multiplies x.  a number is easier than a vector.  
+key is avoiding matrix related complications.  the solution vector u(t) stays in same direction as fixed vector x.  and then solve only to find the number [&lambda;] changing with time that multiplies x.  a number is easier than a vector.  
 
 eigenvectors x dont change direction when multiplied by A  
 
@@ -56,7 +56,7 @@ eigenvectors do not change direction when multiplied by A.  the direction of eig
 stretched or shrunk  
 reversed   
 left unchanged  when multiplied by A:     
-&lambda = 2 or 1/2 or -1 or +1 or zero.
+&lambda; = 2 or 1/2 or -1 or +1 or zero.
 
 all vectors are eigenvectors of the identity matrix I because A = I then has Ax = x.  
 all eigenvalues of the identity matrix are &lambda; = 1  which means   
