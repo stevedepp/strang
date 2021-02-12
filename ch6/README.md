@@ -558,9 +558,9 @@ A = X&Lambda;X<sup>-1</sup> and &Lambda; = AX<sup>-1</sup>A
 
 3. the eigenvector matrix X also diagonalizes all powers A<sup>k</sup>
 
-A<sup>k</sup> = X&Lambda;<sup>k<sup>X<sup>-1</sup> [and &Lambda;<sup>k<sup> = X<sup>-1<sup>A<sup>k<sup>X]
+A<sup>k</sup> = X&Lambda;<sup>k</sup>X<sup>-1</sup> [and &Lambda;<sup>k<sup> = X<sup>-1<sup>A<sup>k<sup>X]
 
-4. solve u<sub>k+1</sub> = Au<sub>k</sub> by u<sub>k</sub> = A<sup>k</sup><sub>u</sub>0</sub></sub> = X&Lambda;<sup>k</sup>X<sup>-1</sup>u<sub>0</sub> = c<sub>1<sub>(&lambda;<sub>1<sub>)<sup>k<sup>x<sub>1<sub> + ... + c<sub>n<sub>(&lambda;<sub>n<sub>)<sup>k<sup>x<sub>n<sub>
+4. solve u<sub>k+1</sub> = Au<sub>k</sub> by u<sub>k</sub> = A<sup>k</sup><sub>u</sub>0</sub></sub> = X&Lambda;<sup>k</sup>X<sup>-1</sup>u<sub>0</sub> = c<sub>1</sub>(&lambda;<sub>1</sub>)<sup>k</sup>x<sub>1</sub> + ... + c<sub>n</sub>(&lambda;<sub>n</sub>)<sup>k</sup>x<sub>n</sub>
 
 5. 
 no equal eigenvalues --> A invertible and A can be diagonalized.  
