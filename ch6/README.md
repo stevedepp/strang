@@ -589,3 +589,16 @@ X = eigenvector matrix
 
 X<sup>-1</sup>AX = &Lambda; = diag(&lambda;<sub>1</sub>, ... , &lambda;<sub>n</sub>)
 
+[ Doing this with variables first: ]
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107838523-33f10700-6d74-11eb-821a-e63f93349a64.png">
+
+and now with numbers in letters.  do it over I would have assigned a, b and d as variables but kept the LL corner as zero. 
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107838835-ca71f800-6d75-11eb-93aa-7951e4c4039b.png">
+
+heres the math and interesting result that X's and Xinv's cancel so that powers of A are translated only to powers of &Lambda; which makes perfect sense since we saw that before.  A<sup>n</sup>x = &lambda;<sup>n</sup>x before --> A<sup>n</sup>X = X&Lambda;<sup>n</sup>X<sup>-1</sup>X = X&Lambda;<sup>n</sup>
+
+A<sup>200</sup> has the same eigenvectors in X and squared eigenvalues in &Lambda;:
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107839176-0e65fc80-6d78-11eb-8b16-77c3296b394f.png">
