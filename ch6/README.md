@@ -601,6 +601,8 @@ heres the math and interesting result that X's and Xinv's cancel so that powers 
 
 A<sup>200</sup> has the same eigenvectors as A in X and eigenvalues powered 200 times in &Lambda;:
 
+note (not shown here) that when n = 0, A<sup>n</sup> = X&Lambda;<sup>n</sup>X<sup>-1</sup> = A<sup>0</sup> = X&Lambda;<sup>0</sup>X<sup>-1</sup> = X&IX<sup>-1</sup> = X&X<sup>-1</sup> = I because inside &Lambda;, each &lambda;<sup>0</sup> = 1 and so only has 1s on the diagonal, which is the identity matrix I.
+
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107839176-0e65fc80-6d78-11eb-8b16-77c3296b394f.png">
 
 interesting to note that the 2 spaces (A - &lambda;<sub>1</sub>I) andn (A - &lambda;<sub>2</sub>I) used to discover the (never changing, axis-like) eigenvectors are orthogonal.  
@@ -652,4 +654,36 @@ include this to show that &Lambda;X is not the same but also so to realize that 
 
 AX = X&Lambda; --> A = X&Lambda;X<sup>-1</sup> --> &Lambda; = X<sup>-1</sup>AX
 
+A multiplies eigenvectors in columns of X and the first column of AX is Ax<sub>1</sub> = &lambda;x<sub>1</sub>.  Each column x<sub>j</sub> of X multiplies its respective &lambda;<sub>j</sub> in the column j of diagonal matrix &Lambda; 
+
+X&Lambda; = [&lambda;<sub>1</sub>x<sub>1</sub>, ... , &lambda;<sub>j</sub>x<sub>j</sub>, ... , &lambda;<sub>n</sub>x<sub>n</sub>]
+
+keep those matrices in the right order!  AX = X&Lambda; !
+
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107859279-7cf19b80-6e06-11eb-9950-a4b66700b9b0.png">
+
+diagonalization is replacing A for all the columns of X with &Lambda; for all columns of X where &Lambda; is simpler than A because &Lambda; is diagonal and A is not. 
+
+X has an inverse because its columns (the eigenvectors of A) are assumed to be linearly independent. 
+
+without n independent eigenvectors x<sub>j</sub> we could not diagonalize. 
+
+&lambdas; shift their respective i row of A by &lambdal•1 subtracted from the diagonal element of that row.
+
+4 remarks:
+
+1. any matrix that has no repeated eigenvalues can be diagonalized because its eigenvectors are independent. 
+
+2. eigenvectors can be multiplied by any non-zero constant: A(cx) = &lambda;(cx).  this is because the eigenvectors are in the null space of A-&lambda;•I matrices and remember null space solutions can be multiplied by constants (since their goal is to = 0). Most software packages yield the eigenvector solution that has unit length: ||x|| = 1.
+
+3. the eigenvectors of X come in the same order as the eigenvalues of &Lambda;.  Seems obvious since X&Lambda; = [x<sub>1</sub>, ... , x<sub>n</sub>][&lambda;<sub>1</sub>, ... , &lambda;<sub>n</sub>]
+
+to diagonalize A, use eigenvector matrix. 
+
+4. repeated warning for repeated eigenvalues: matrices with too few eigenvectors cannot be diagonalized. repeated eigenvalues are lead to repeated eigenvectors which are not independent.  if you only have n-1 eigenvectors then your X has non-independent eigenvectors. 
+
+there is no connection between invertibility and diagonalizability: &lambda; = 0 means A singular.  
+
+invertibility relates to eigenvalues: &lambda; zero or non-zero.  
+diagonalizability relates to the eigenvectors: too few or enough for X.   
+[not sure if the implication is that an x<sub>j</sub> that is paired with &lambda;<sub>j</sub> = 0 would be in the null space of A and independent of another x<sub>j</sub> that is paired with &lambda;<sub>j</sub> != 0 would be in the column space of A ?]
