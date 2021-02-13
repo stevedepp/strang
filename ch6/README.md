@@ -568,3 +568,24 @@ no equal eigenvalues --> A invertible and A can be diagonalized.
 equal eigenvalues --> A might have too few independent eigenvectors and then X<sup>-1</sup> fails
 
 6. every matrix C = B<sup>-1</sup>AB has same eigenvalues as A.  These Cs are similar to A.  
+
+
+Ax = &lambda;x removes matrix interconnected difficulties and so follows the eigenvectors separately.  &lambda;s are like having a diagonal matrix with no off diagonal interconnections: the 100th power of a diagonal matrix is easy.  
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107833480-69402980-6d61-11eb-810e-ec86f3678451.png">
+
+A --> &Lambda; diagonal matrix via diagonalization.
+
+Diagonalization:  
+A is n x n  
+A has n linearly independent eigenvectors x<sub>1</sub>, ... , x<sub>n</sub>   
+Put A's independent eigenvectors into the columns of eigenvector matrix X.  
+X<sup>-1</sup>AX is the eigenvalue matrix &Lambda;
+
+Ax = &lambda;x  
+AX = &Lambda;X
+X = eigenvector matrix
+&Lambda; = eigenvalue matrix
+
+X<sup>-1</sup>AX = &Lambda; = diag(&lambda;<sub>1</sub>, ... , &lambda;<sub>n</sub>)
+
