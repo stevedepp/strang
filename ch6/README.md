@@ -622,13 +622,13 @@ the sqrts are opposite signs so anything they multiply cancel except each other;
 the sqrts are opposite signs so anything they multiply cancel except each other; remember they're each divided by 2
 = b*c + aa/4 + dd/4 - 2ad/4 + aa/4 - 2ad/4 - 4bc/4 - dd/4 = 0
 
-(1,1): b*c + (a/2 - d/2 - sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2)*(a/2 - d/2 + sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2)  
+(1,1): b•c + (a/2 - d/2 - sqrt(a••2 - 2•a•d + 4•b•c + d••2)/2)•(a/2 - d/2 + sqrt(a••2 - 2•a•d + 4•b•c + d••2)/2)  
 
-(1,2): b*(-a/2 + d/2 - sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2) + b*(a/2 - d/2 + sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2)
+(1,2): b•(-a/2 + d/2 - sqrt(a••2 - 2•a•d + 4•b•c + d••2)/2) + b•(a/2 - d/2 + sqrt(a••2 - 2•a•d + 4•b•c + d••2)/2)
 
-(2,1): c*(-a/2 + d/2 + sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2) + c*(a/2 - d/2 - sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2) 
+(2,1): c•(-a/2 + d/2 + sqrt(a••2 - 2•a•d + 4•b•c + d••2)/2) + c•(a/2 - d/2 - sqrt(a••2 - 2•a•d + 4•b•c + d••2)/2) 
 
-(2,2): b*c + (-a/2 + d/2 - sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2)*(-a/2 + d/2 + sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2)
+(2,2): b•c + (-a/2 + d/2 - sqrt(a••2 - 2•a•d + 4•b•c + d••2)/2)•(-a/2 + d/2 + sqrt(a••2 - 2•a•d + 4•b•c + d••2)/2)
 
 so the row space created from (A - &lambda;1•I) is orthogonal to column space created by (A - &lambda;2•I) since their product = 0
 
