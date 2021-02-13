@@ -599,6 +599,43 @@ and now with numbers in letters.  do it over I would have assigned a, b and d as
 
 heres the math and interesting result that X's and Xinv's cancel so that powers of A are translated only to powers of &Lambda; which makes perfect sense since we saw that before.  A<sup>n</sup>x = &lambda;<sup>n</sup>x before --> A<sup>n</sup>X = X&Lambda;<sup>n</sup>X<sup>-1</sup>X = X&Lambda;<sup>n</sup>
 
-A<sup>200</sup> has the same eigenvectors in X and squared eigenvalues in &Lambda;:
+A<sup>200</sup> has the same eigenvectors as A in X and eigenvalues powered 200 times in &Lambda;:
 
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107839176-0e65fc80-6d78-11eb-8b16-77c3296b394f.png">
+
+interesting to note that the 2 spaces (A - &lambda;<sub>1</sub>I) andn (A - &lambda;<sub>2</sub>I) used to discover the (never changing, axis-like) eigenvectors are orthogonal.  
+
+by numerical example these row space of one is orthogonal to the colum space of the other, but the resulting eigenvectors are not. 
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107839625-1d01e300-6d7b-11eb-9168-df64cf49d06e.png">
+
+by variables, a, b, c, d; yellow sheets have all the quadratics arriving at lambda_1, lambda_2 but solve does the work!
+
+
+
+those long formulars at end are in cells (1,1) (1,2) (2,1) (2,2) respectively in A:  
+- all items in off diagonals (1,2) and (2,1) cancel.
+- cell (1,1):   
+the sqrts are opposite signs so anything they multiply cancel except each other; remember they're each divided by 2
+= b*c + aa/4 + dd/4 - 2ad/4 + aa/4 - 2ad/4 - 4bc/4 - dd/4 = 0
+- cell (2,2):
+the sqrts are opposite signs so anything they multiply cancel except each other; remember they're each divided by 2
+= b*c + aa/4 + dd/4 - 2ad/4 + aa/4 - 2ad/4 - 4bc/4 - dd/4 = 0
+
+(1,1): b*c + (a/2 - d/2 - sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2)*(a/2 - d/2 + sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2)  
+
+(1,2): b*(-a/2 + d/2 - sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2) + b*(a/2 - d/2 + sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2)
+
+(2,1): c*(-a/2 + d/2 + sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2) + c*(a/2 - d/2 - sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2) 
+
+(2,2): b*c + (-a/2 + d/2 - sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2)*(-a/2 + d/2 + sqrt(a**2 - 2*a*d + 4*b*c + d**2)/2)
+
+so the row space created from (A - &lambda;1•I) is orthogonal to column space created by (A - &lambda;2•I) since their product = 0
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107840445-baabe100-6d80-11eb-8494-1b2294030ca0.png">
+
+in sum:
+
+(A - &lambda<sub>2</sub>•I) perpendicular to (A - &lambda<sub>1</sub>•I) perpendicular to x<sub>1</sub><sup>T</sup>
+
+(A - &lambda<sub>1</sub>•I) perpendicular to (A - &lambda<sub>2</sub>•I) perpendicular to x<sub>2</sub><sup>T</sup>
