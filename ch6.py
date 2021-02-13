@@ -47,3 +47,8 @@ def plotvec2(vectors):
     plt.grid(b=True, which='major') #<-- plot grid lines
     plt.show()
 
+def quadratic(a, b, c):
+    '''( -b  +/- squareroot (b**2 - 4ac) ) / 2a when a != 0'''
+    if a == 0:
+        return 0, 0, 'a is zero; solution undefined'
+    return (-b+(b**2-4*a*c)**.5)/2*a,(-b-(b**2-4*a*c)**.5)/2*a, 'a is not zero'

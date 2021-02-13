@@ -639,3 +639,17 @@ in sum:
 (A - &lambda<sub>2</sub>•I) perpendicular to (A - &lambda<sub>1</sub>•I) perpendicular to x<sub>1</sub><sup>T</sup>
 
 (A - &lambda<sub>1</sub>•I) perpendicular to (A - &lambda<sub>2</sub>•I) perpendicular to x<sub>2</sub><sup>T</sup>
+
+this function, quadratic in ch6, provides the same solution as solve.
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107858478-4c0f6780-6e02-11eb-8e59-e6d924fab69e.png">
+
+multiplying X * &Lambda; gives you x<sub>j</sub>&lambda;<sub>j</sub> in each column.
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107859022-fe482e80-6e04-11eb-8637-2db550e1bd92.png">
+
+include this to show that &Lambda;X is not the same but also so to realize that AX = X&Lambda not &Lambda;X which has the x<sub>j</sub>&lambda;<sub>j</sub> in each row.
+
+AX = X&Lambda; --> A = X&Lambda;X<sup>-1</sup> --> &Lambda; = X<sup>-1</sup>AX
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107859279-7cf19b80-6e06-11eb-9950-a4b66700b9b0.png">
