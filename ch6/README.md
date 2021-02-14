@@ -687,3 +687,412 @@ there is no connection between invertibility and diagonalizability: &lambda; = 0
 invertibility relates to eigenvalues: &lambda; zero or non-zero.  
 diagonalizability relates to the eigenvectors: too few or enough for X.   
 [not sure if the implication is that an x<sub>j</sub> that is paired with &lambda;<sub>j</sub> = 0 would be in the null space of A and independent of another x<sub>j</sub> that is paired with &lambda;<sub>j</sub> != 0 would be in the column space of A ?]
+
+
+eigenvectors for n different eigenvalues are independent --> diagonalization can
+
+independent eigenvectors x from different eigenvalues &lambda;
+
+eigenvectors x<sub>1</sub>, ... , x<sub>j</sub> that correspond to distinct (all different) eigenvalues are linearly independent.
+
+n x x matrix that has n different eigenvalues (no repeats) must be diagaonlizable. 
+
+theres a proof for when &lambda; eigenvalues are distinct, eigenvectors x are independent.
+
+1. c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub> = 0 but no x<sub>j</sub> = 0   
+2. multiply that equation by A (use diagonal [&lambda;<sub>1</sub>, &lambda;<sub>2</sub>] in As place) you get c<sub>1</sub>&lambda;<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>&lambda;<sub>2</sub>x<sub>2</sub> = 0   
+3. multiply that equation by &lambda;<sub>2</sub> via diagonal [&lambda;<sub>2</sub>, &lambda;<sub>2</sub>]) you get c<sub>1</sub>&lambda;<sub>2</sub>x<sub>1</sub> + c<sub>2</sub>&lambda;<sub>2</sub>x<sub>2</sub> = 0   
+4. subtract quantities in 2 and 3 above:  (&lambda;<sub>1</sub>-&lambda;<sub>2</sub>)c<sub>1</sub>x<sub>1</sub>  
+5. since &lambda;<sub>1</sub> ≠ &lambda;<sub>2</sub> by assumption, &lambda;<sub>1</sub>-&lambda;<sub>2</sub> > 0.  also all x<sub>j</sub> ≠ 0.  so only c<sub>1</sub> can = 0.  only c can cause the amount in 1 above to be zero. 
+
+A<sup>k</sup> --> zero when all | &Lambda; | < 1
+
+A<sup>k</sup> = 
+[
+[a<sup>k</sup>, 0],
+[0, d<sup>k</sup>]
+]
+
+
+Similar matrices: same eigenvalues
+
+supposed eigenvalues matrix &Lambda; is fixed.  
+as change eigenvector matrix X, a whole family of matrices A = X&Lambda;X<sup>-1</sup> emerges all with same eigenvalues in &Lambda;.  these are called "similar matrices"   
+
+... and this category extends to matrices that cannot be diagonalized: choose one constant matrix that is not necessarily &Lambda;, and categorize whole family of matrices A = B C B<sup>-1</sup> that includes all invertible (i.e. with independent columns) matrices B.  A and C are called "similar".
+
+A and C are "similar" in A = BCB<sup>-1</sup> when columns of B are independent. 
+
+C need not be diagonal.  
+B might not be eigenvectors [i.e. might not be born from the null space of orthogonal spaces]   
+only requirement: B is invertible, [independent columns], its columns contain any basis for R<sup>n</sup>.  
+
+the key fact about these similar matrices A and C is that they contain the same eigenvalues of C. [even if C is not diagonal]
+
+proof:
+remember we started with :
+"suppose matrix &Lambda; is fixed ... family of different matrices ... same eigenvalues in &Lambda; ... all those matrices A (with the same &Lambda;) are called similar."
+then: 
+"extends ... cant be diagonalized ... one constant matrix C (not necessarily &Lambda;) ... A = BCB<sup>-1</sup>" for all invertible matrices B.  C not &Lambda; because not necessarily diagonal; B not X because not necessarily eigenvectors = null space of A - &lambda;<sub>A</sub>.  B only need be invertible.  and to be similar, A and C need only share the same eigenvalues. 
+
+Cx = &lambda;x exits   
+similar matrix BCB<sup>-1</sup> must have same &lambda; with new eigenvector, call it Bx:
+
+BCB<sup>-1</sup>(Bx) = "reduces to" = B•I•Cx = BCx = "we know C = &lambda;" = B&lambda;x = &lambda;(Bx) 
+
+which is what we said: C has a similar matrix BCB<sup>-1</sup> and that this similar matrix has a new eigenvector (Bx).  Thus since C and BCB<sup>-1</sup> are similar, both reduce to the same &lambda; and the similar BCB<sup>-1</sup> multiplies this eigenvector to be &lambda;(Bx).  
+
+examples of families:
+
+C as Identity matrix I has only one eigenvalue 1 so its family is small.  The only family member is BIB<sup>-1</sup> = I because the identity matric is the only diagonalizable matrix with all eigenvalues = 1.  [no zeros eigenvalues and obviously an eigenvector for each eigenvalue since it is diagonalizable]
+
+a larger family    
+with &lambda;s 1 and 1    
+but with only one eigenvector (NOT diagonalizable).  
+
+the simplest C [with family]   
+Jordan form  
+all similar matrices have
+2 parameters r and s that are not both zeros  
+always has determinant 1 and trace 2   
+such as 
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/107869177-1cd81500-6e59-11eb-83a8-055290549463.png">
+
+another important family    
+&lambda; = 1 and 0    
+whole family is diagonalizable with same eigenvalue matrix &Lambda;    
+gives us every 2 x 2 matrix that has eigenvalues 1 and 0 with trace 1 and determinant = zero.    
+[note diagonalizable but non-invertible since determinant = 0]   
+all matrices A = A<sup>2</sup> including A = &Lambda; when B = I   
+When A is symmetric, these are projection matrices.  
+eigenvalues 1 and 0 make life easy.   
+4 example matrices are below: &Lambda;, A1, A2, A3  
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107869601-054f5b00-6e5e-11eb-8f50-48e7b5c41d1b.png">
+
+
+
+famous example: how quickly fibonacci numbers grow
+
+0, 1, 1, 2, 3, 5, 6, 13, ... , F<sub>k+2</sub> = F<sub>k+1</sub> + F<sub>k</sub>
+
+find the fibonacci number F<sub>100</sub> without following the rule one step at a time: F<sub>8</sub> = 21 = F<sub>7</sub> = 13 + F<sub>6</sub> = 8
+
+where this is headed:  
+solve u<sub>k+1</sub> = Au<sub>k</sub> by solving u<sub>k</sub> = A<sup>k</sup>u<sub>0</sub> = X&Lambda;<sup>k</sup>X<sup>-1</sup>u<sub>0</sub> = c<sub>1</sub>(&lambda;<sub>1</sub>)<sup>k</sup>x<sub>1</sub> + ... + c<sub>n</sub>(&lambda;<sub>n</sub>)<sup>k</sup>x<sub>n</sub>   
+A<sup>k</sup> and its simpler cousin &Lambda;<sup>k</sup> get take u<sub>0</sub> to u<sub>k</sub>  
+
+first step:  
+u<sub>k+1</sub> = Au<sub>k</sub>  
+is one-step rule for vectors.  
+fibonacci is a 2 step rule for scalars.  
+employ the 1-step rule for the 2-step need by putting 2 fibonacci [scalar] numbers into a vector.   
+
+let u<sub>k</sub> = [F<sub>k+1</sub>, F<sub>k</sub>].T  
+act on --> u<sub>k</sub>   
+with [[1,1],[1,0]].T
+
+the fibonacci rule to be mimmicked with vectors is:
+
+[F<sub>k+2</sub>, F<sub>k+1</sub>].T = [F<sub>k+1</sub> + F<sub>k</sub>, F<sub>k+1</sub>].T 
+
+executed by:
+
+u<sub>k+1</sub> =  
+[F<sub>k+2</sub>, 
+F<sub>k+1</sub>]
+= [
+[1, 1],
+[1, 0]
+]
+• u<sub>k</sub>
+= [
+[1, 1],
+[1, 0]
+]
+• [
+F<sub>k+1</sub>, 
+F<sub>k</sub>
+] 
+
+every step multiplies by A   
+after 100 steps, reach u<sub>100</sub> = A<sup>100</sup>u<sub>0</sub>:
+
+![\begin{align*}
+let:&
+u_k =\begin{bmatrix}
+F_{k+1}\\
+F_k
+\end{bmatrix}\\
+translate:&
+\begin{matrix}
+F_{k+2}\\
+F_{k+1}\\ \end{matrix} =\begin{matrix}
+F_{k+1}+F_{k}\\
+F_{k+1}
+\end{matrix}\\
+\\
+by:&
+u_{k+1} =\begin{bmatrix}
+1&1\\
+1&0
+\end{bmatrix} u_k\\
+or:&
+u_{k+1} =
+\begin{bmatrix}
+F_{k+2}\\
+F_{k+1}
+\end{bmatrix} = 
+\begin{bmatrix}
+F_{k+1}+F_{k}\\
+F_{k+1}
+\end{bmatrix}=
+\begin{bmatrix}
+1&1\\
+1&0
+\end{bmatrix}\begin{bmatrix}
+F_{k+1}\\
+F_{k}
+\end{bmatrix}\\
+\\
+with: & 
+A = \begin{bmatrix}
+1&1\\
+1&0
+\end{bmatrix}\\
+100 steps:& u_0 = \begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+= \begin{bmatrix}
+F_1\\
+F_0
+\end{bmatrix}=\begin{bmatrix}
+F_{k+1}\\
+F_{k}
+\end{bmatrix}; 
+u_1 = A^1u_0 = 
+\begin{bmatrix}
+1&1\\
+1&0
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}=
+\begin{bmatrix}
+F_{2}\\
+F_{1}
+\end{bmatrix}=
+\begin{bmatrix}
+1\\
+1
+\end{bmatrix};
+\\
+&u_2 = 
+A^1u_1 = 
+\begin{bmatrix}
+1&1\\
+1&0
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+1
+\end{bmatrix}=
+A^2u_0 = 
+\begin{bmatrix}
+2&1\\
+1&1
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}=
+\begin{bmatrix}
+F_{3}\\
+F_{2}
+\end{bmatrix}=
+\begin{bmatrix}
+2\\
+1
+\end{bmatrix};
+\\
+&u_3 = 
+A^1u_2 = 
+\begin{bmatrix}
+1&1\\
+1&0
+\end{bmatrix}
+\begin{bmatrix}
+2\\
+1
+\end{bmatrix}=
+A^3u_0 = 
+\begin{bmatrix}
+3&2\\
+2&1
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}=
+\begin{bmatrix}
+F_{4}\\
+F_{3}
+\end{bmatrix}=
+\begin{bmatrix}
+3\\
+2
+\end{bmatrix};
+\\
+&u_100 = 
+A^1u_99 = 
+\begin{bmatrix}
+1&1\\
+0&1
+\end{bmatrix}
+\begin{bmatrix}
+?\\
+?
+\end{bmatrix}=
+A^100u_0 = 
+\begin{bmatrix}
+573,147,844,013,817,084,101&354,224,848,179,261,915,075\\
+354,224,848,179,261,915,075&218,922,995,834,555,169,026
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}=
+\begin{bmatrix}
+F_{101}\\
+F_{100}
+\end{bmatrix}=
+\begin{bmatrix}
+573,147,844,013,817,084,101\\
+354,224,848,179,261,915,075
+\end{bmatrix};
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Alet%3A%26%0Au_k+%3D%5Cbegin%7Bbmatrix%7D%0AF_%7Bk%2B1%7D%5C%5C%0AF_k%0A%5Cend%7Bbmatrix%7D%5C%5C%0Atranslate%3A%26%0A%5Cbegin%7Bmatrix%7D%0AF_%7Bk%2B2%7D%5C%5C%0AF_%7Bk%2B1%7D%5C%5C+%5Cend%7Bmatrix%7D+%3D%5Cbegin%7Bmatrix%7D%0AF_%7Bk%2B1%7D%2BF_%7Bk%7D%5C%5C%0AF_%7Bk%2B1%7D%0A%5Cend%7Bmatrix%7D%5C%5C%0A%5C%5C%0Aby%3A%26%0Au_%7Bk%2B1%7D+%3D%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D+u_k%5C%5C%0Aor%3A%26%0Au_%7Bk%2B1%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0AF_%7Bk%2B2%7D%5C%5C%0AF_%7Bk%2B1%7D%0A%5Cend%7Bbmatrix%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0AF_%7Bk%2B1%7D%2BF_%7Bk%7D%5C%5C%0AF_%7Bk%2B1%7D%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D%5Cbegin%7Bbmatrix%7D%0AF_%7Bk%2B1%7D%5C%5C%0AF_%7Bk%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Awith%3A+%26+%0AA+%3D+%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D%5C%5C%0A100+steps%3A%26+u_0+%3D+%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%0A%3D+%5Cbegin%7Bbmatrix%7D%0AF_1%5C%5C%0AF_0%0A%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7D%0AF_%7Bk%2B1%7D%5C%5C%0AF_%7Bk%7D%0A%5Cend%7Bbmatrix%7D%3B+%0Au_1+%3D+A%5E1u_0+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AF_%7B2%7D%5C%5C%0AF_%7B1%7D%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%3B%0A%5C%5C%0A%26u_2+%3D+%0AA%5E1u_1+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%3D%0AA%5E2u_0+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%261%5C%5C%0A1%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AF_%7B3%7D%5C%5C%0AF_%7B2%7D%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%3B%0A%5C%5C%0A%26u_3+%3D+%0AA%5E1u_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%3D%0AA%5E3u_0+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A3%262%5C%5C%0A2%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AF_%7B4%7D%5C%5C%0AF_%7B3%7D%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A2%0A%5Cend%7Bbmatrix%7D%3B%0A%5C%5C%0A%26u_100+%3D+%0AA%5E1u_99+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A0%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%3F%5C%5C%0A%3F%0A%5Cend%7Bbmatrix%7D%3D%0AA%5E100u_0+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A573%2C147%2C844%2C013%2C817%2C084%2C101%26354%2C224%2C848%2C179%2C261%2C915%2C075%5C%5C%0A354%2C224%2C848%2C179%2C261%2C915%2C075%26218%2C922%2C995%2C834%2C555%2C169%2C026%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AF_%7B101%7D%5C%5C%0AF_%7B100%7D%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A573%2C147%2C844%2C013%2C817%2C084%2C101%5C%5C%0A354%2C224%2C848%2C179%2C261%2C915%2C075%0A%5Cend%7Bbmatrix%7D%3B%0A%5Cend%7Balign%2A%7D)
+
+this problem is just right for eigenvalues.  
+
+subtract &lambda; from diagonal of A:
+
+![\begin{align*}
+A - &lambda;I = \begin{bmatrix}
+1-&lambda;&1\\
+1&-&lambda
+\end{bmatrix} --> det(A - &lambda;I) = 0 = &lambda;^2 - &lambda; - 1\\
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+-+%26lambda%3BI+%3D+%5Cbegin%7Bbmatrix%7D%0A1-%26lambda%3B%261%5C%5C%0A1%26-%26lambda%0A%5Cend%7Bbmatrix%7D+--%3E+det%28A+-+%26lambda%3BI%29+%3D+0+%3D+%26lambda%3B%5E2+-+%26lambda%3B+-+1%5C%5C%0A%5Cend%7Balign%2A%7D)
+
+the equation &lambda;<sup>2</sup> - &lambda; - 1 solved by quadratic formula gives:
+
+&lambda;<sub>1</sub> = 1.618 = ( 1 + √5 ) / 2 
+
+&lambda;<sub>2</sub> = 0.618 = ( 1 - √5 ) / 2 
+
+2 eigenvalues lead to 2 eigenvectors via (A - &lambda;I)x = 0:
+
+x<sub>1</sub> = (&lambda;<sub>1</sub>, 1)
+x<sub>2</sub> = (&lambda;<sub>2</sub>, 1)
+
+![\begin{align*}
+\begin{bmatrix}
+1-&lambda;&1\\
+1&-&lambda;
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}&=
+\begin{bmatrix}
+x - &lambda;x+y = -(&lambda;x-x-y)\\
+x-&lambda;y
+\end{bmatrix}
+\\ x_1 = x_2 \begin{bmatrix}
+x\\
+y
+\end{bmatrix} = \begin{bmatrix}
+&lambda;\\
+1
+\end{bmatrix}...&= \begin{bmatrix}
+-(&lambda;&lambda;-x-1) = -(&lambda;^2-x-1) = (A -&lambda;I) = 0)\\
+&lambda;-&lambda;*1=&lambda;-&lambda;=0
+\end{bmatrix}= \begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bbmatrix%7D%0A1-%26lambda%3B%261%5C%5C%0A1%26-%26lambda%3B%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax+-+%26lambda%3Bx%2By+%3D+-%28%26lambda%3Bx-x-y%29%5C%5C%0Ax-%26lambda%3By%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+x_1+%3D+x_2+%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D+%3D+%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D...%26%3D+%5Cbegin%7Bbmatrix%7D%0A-%28%26lambda%3B%26lambda%3B-x-1%29+%3D+-%28%26lambda%3B%5E2-x-1%29+%3D+%28A+-%26lambda%3BI%29+%3D+0%29%5C%5C%0A%26lambda%3B-%26lambda%3B%2A1%3D%26lambda%3B-%26lambda%3B%3D0%0A%5Cend%7Bbmatrix%7D%3D+%5Cbegin%7Bbmatrix%7D%0A0%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+that will lead to A<sub>100</sub> = &lambda;<sub>100</sub>  
+by way of &lambdal<sub>1</sub> = (1 + √5)/2 and &lambda;<sub>2</sub> = (1-√5)/2     
+acting on x<sub>1</sub> = (&lambda;<sub>1</sub>, 1) and x<sub>2</sub> =  (&lambda;<sub>2</sub>,1)  
+but fibonacci starts with u<sub>0</sub> = (1,0)  
+to act on u<sub>0</sub> with &lambda; eigenvaluess,   
+need to make a u<sub>0</sub> from eigenvectors   
+step 2 finds the combinations of these eigenvectors that gives u<sub>0</sub> = (1,0):  
+
+![\begin{align*}
+u_0 = \begin{bmatrix}
+1\\
+0
+\end{bmatrix} = \frac{1}{&lambda;_1-&lambda;_2} ((x_1=
+\begin{bmatrix}
+&lambda;_1\\
+1
+\end{bmatrix})-(x_2=
+\begin{bmatrix}
+&lambda;_2\\
+1
+\end{bmatrix}))=
+\frac{1}{&lambda;_1-&lambda;_2} (
+\begin{bmatrix}
+&lambda;_1\\
+1
+\end{bmatrix}-
+\begin{bmatrix}
+&lambda;_2\\
+1
+\end{bmatrix})=
+\begin{bmatrix}
+\frac{(1)&lambda;_1-(1)&lambda;_2}{&lambda;_1-&lambda;_2}\\
+\frac{1}{&lambda;_1-&lambda;_2}-\frac{1}{&lambda;_1-&lambda;_2}
+\end{bmatrix}
+=\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au_0+%3D+%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D+%3D+%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%28%28x_1%3D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%29-%28x_2%3D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_2%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%29%29%3D%0A%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%28%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D-%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_2%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%29%3D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B%281%29%26lambda%3B_1-%281%29%26lambda%3B_2%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D-%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0A0%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+so if need u<sub>0</sub> take a linear combination of x<sub>1</sub> = (&lambda;<sub>1</sub>).T and x<sub>2</sub> = (&lambda;<sub>1</sub>).T  with this factor. c and -c where c = 1/(&lambda;<sub>1</sub> - &lambda;<sub>2</sub>):
+
+
+![\begin{align*}
+u_0 &= \begin{bmatrix}
+1\\
+0
+\end{bmatrix} = (\frac{1}{&lambda;_1-&lambda;_2} )x_1- (\frac{1}{&lambda;_1-&lambda;_2} )x_2
+=\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+\\when:&\\
+x_1 &=\begin{bmatrix}
+&lambda;_1\\
+1
+\end{bmatrix}
+\\
+x_2 &=\begin{bmatrix}
+&lambda;_2\\
+1
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au_0+%26%3D+%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D+%3D+%28%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29x_1-+%28%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29x_2%0A%3D%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%0A%5C%5Cwhen%3A%26%5C%5C%0Ax_1+%26%3D%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0Ax_2+%26%3D%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_2%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+
+step 3 multiplys u<sub>0</sub> by A<sup>100</sup> to find u<sub>100</sub>.  
+
+the eigenvectors x<sub>1</sub> and x<sub>2</sub> are separate multiplied by &lambda;<sub>1</sub><sup>100</sup> and &lambda;<sub>2</sub><sup>100</sup>:
+
+
+
