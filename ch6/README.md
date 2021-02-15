@@ -1245,4 +1245,83 @@ for example: 0,1,1,3 ... F<sub>4</sub> = (2<sup>4</sup> - (-1)<sup>4</sup>) / 3 
 
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107902556-c6301100-6f14-11eb-8fc4-5a9a27eed40f.png">
 
+non-diagonalizable matrices
+
+&lambda; is an eigenvalue of A discovered in one of two ways:
+
+- eigenvectors (geometric) ... there are non-zero solutions to Ax = &lambda;x   
+- eigenvalues (algebraic) ... the determinant of (A - &lambda;I) = 0
+
+&lambda may be a "simple" eigenvalue or a "multiple" eigenvalue.  
+
+[for multiple eigenvalues,] we want to know the eigenvalue's multiplicity.  
+
+most eigenvalues have multiplicity of M = 1 (simple eigenvalues).    
+then there is a single line of eigenvectors. [line created by a scalar like c in previous examples; cx still solves (A - &lambda;I)cx = 0]    
+det(A - &lambda;I) does not have a double factor [&lambda;<sup>2</sup>]    
+
+for exceptional matrices, an eigenvalue can be repeated.   
+there are 2 different ways to count multiplicity.   
+1. geometric multiplicity = GM  
+GM counts the independent eigenvectors for &lambda;   
+GM is dimension of the null space of (A - &lambda;I)  
+
+[notice there may be multiple &lambda; that satisfy det (A-&lambda;I) = 0, e.g. 0,0 in the example below, but this isnt what this null space is about.  this is about after you use det(A - &lamnda;I) = 0 to find your &lambda;s and are plugging one of them back into (A-&lambda;I), you find that there are a number of dimensions to the null space, i.e. more than one x eigenvector satisfies (A-&lambda;I)x = 0]   GM is about eigenvectors; null space of  A-&lambda;I.  AM is about eigenvalues; det A-&lambda;I.
+
+[eigenvectors per &lambda;]  
+2. algebraic multiplicity = AM  
+AM counts the number of repetitions of &lambda; among the eigenvalues.  
+AM looks at the n roots of det(A - &lambda;) = 0 
+
+if A has &lambda; = 4, 4, 4 then that eigenvalue has AM = 3 but may have GM of 1,2 or 3. 
+
+example 1:  
+
+A = [ [ 0, 1 ], [ 0, 0 ] ]  
+AM = 2   
+GM = 1  
+det A - &lambda; I = &lambda;<sup>2</sup> 
+
+det A has a double factor aka double root
+&lambda; = 0, 0   
+2 eigenvalues --> AM = 2
+1 eigenvector = (1,0) 1 dimension in null space of (A - &lambda;I) --> GM = 1
+
+**the shortage of eigenvectors when GM < AM means that A is not diagonalizable.**
+
+example 2:  
+
+all 3 matrices have same shortage of eigenvectors.   their repeated eigenvalue is &lambda; = 5.   
+trace - 10 in all cases (&lambda;<sub>1</sub> + &lambda;<sub>2</sub>, d<sub>1</sub> + d<sub>2</sub>) and determinants are 25 (&lambda;<sub>1</sub> * &lambda;<sub>2</sub>).
+
+each has 1 line of eigenvectors to solve (A - &lambda;I) = 0: A1 has x<sub>1<sub> = (1, 0).T, A2 has x<sub>1<sub> = (1, 1).T, A3 has x<sub>1<sub> = (1, -1).T 
+
+AM = 2 because there are 2 &lambda; eigenvalue roots to det(A - &lambda;) = 0   
+GM = 1 because there is 1 eigenvector in the null space of (A - &lambda;) = only 1 line of eigenvectors that solves (A - &lambda;)x = 0 for &lambda; = 5.  these matrices are not diagonalizable because GM < AM. 
+
+<img width="442" alt="image" src="https://user-images.githubusercontent.com/38410965/107976959-5c514f00-6f88-11eb-8d0a-a7c57c45ac9f.png">
+
+
+review:
+1. if A has n independent eignevectors, x<sub>1</sub>, ... , x<sub>n</sub> they go into the columns of X  
+
+A is diagonalized by X.
+
+X<sup>-1</sup>AX = &Lambda;  
+X&Lambda;X<sup>-1</sup> = A  
+
+2. the powers of A are A<sup>k</sup> = X&Lambda;<sup>k</sup>X<sup>-1</sup>  
+
+the eigenvectors in X are unchanged by powers.
+
+3. the eigenvalue of A<sup>k</sup> are (&Lambda;<sub>1</sub>)<sup>k</sup>, ... , (&Lambda;<sub>n</sub>)<sup>k</sup> in the matric &Lambda;<sup>k</sup>  
+
+4. the solution to U<sub>k+1</sub> = Au<sub>k</sub> starting from u<sub>0</sub> is u<sub>k</sub> = A<sup>k</sup>u<sub>0</sub> = X&Lambda;<sup>k</sup>X<sup>-1</sup>u<sub>0</sub>: 
+
+u<sub>k</sub> = c<sub>1</sub>(&lambda;<sub>1</sub>)<sup>k</sup>x<sub>1</sub> + ... + c<sub>n</sub>(&lambda;<sub>n</sub>)<sup>k</sup>x<sub>n</sub> provided u<sub>0</sub> = c<sub>1</sub>x<sub>1</sub> + ... + c<sub>n</sub>x<sub>n</sub>
+
+that shows Steps 1, 2, 3: c's from X<sup>-1</sup>u<sub>0</sub>, &lambda;<sup>k</sup> from &Lambda;<sup>k</sup> and x's from X.
+
+5. A is diagonalizable if every eigenvalue (GM) has enough eigenvectors (AM): GM = AM.
+
 
