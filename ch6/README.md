@@ -1294,7 +1294,7 @@ example 2:
 all 3 matrices have same shortage of eigenvectors.   their repeated eigenvalue is &lambda; = 5.   
 trace - 10 in all cases (&lambda;<sub>1</sub> + &lambda;<sub>2</sub>, d<sub>1</sub> + d<sub>2</sub>) and determinants are 25 (&lambda;<sub>1</sub> * &lambda;<sub>2</sub>).
 
-each has 1 line of eigenvectors to solve (A - &lambda;I) = 0: A1 has x<sub>1<sub> = (1, 0).T, A2 has x<sub>1<sub> = (1, 1).T, A3 has x<sub>1<sub> = (1, -1).T 
+each has 1 line of eigenvectors to solve (A - &lambda;I) = 0: A1 has x<sub>1</sub> = (1, 0).T, A2 has x<sub>1</sub> = (1, 1).T, A3 has x<sub>1</sub> = (1, -1).T 
 
 AM = 2 because there are 2 &lambda; eigenvalue roots to det(A - &lambda;) = 0   
 GM = 1 because there is 1 eigenvector in the null space of (A - &lambda;) = only 1 line of eigenvectors that solves (A - &lambda;)x = 0 for &lambda; = 5.  these matrices are not diagonalizable because GM < AM. 
