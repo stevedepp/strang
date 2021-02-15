@@ -1090,9 +1090,159 @@ x_2 &=\begin{bmatrix}
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au_0+%26%3D+%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D+%3D+%28%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29x_1-+%28%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29x_2%0A%3D%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%0A%5C%5Cwhen%3A%26%5C%5C%0Ax_1+%26%3D%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0Ax_2+%26%3D%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_2%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
 
 
-step 3 multiplys u<sub>0</sub> by A<sup>100</sup> to find u<sub>100</sub>.  
+step 3 multiplys u<sub>0</sub> by A<sup>100</sup> or its eigenvalues to find u<sub>100</sub>.  
 
 the eigenvectors x<sub>1</sub> and x<sub>2</sub> are separate multiplied by &lambda;<sub>1</sub><sup>100</sup> and &lambda;<sub>2</sub><sup>100</sup>:
 
+need only F<sub>100</sub> = second component of u<sub>100</sub>.  
+the 2nd component of x<sub>1</sub> and x<sub>2</sub> is 1 and so can substitute 1 for x<sub>1</sub> and x<sub>2</sub>.  
+
+notice that &lambda;<sub>2</sub><sup>k</sup> goes to zero as k goes to 100.
+
+![\begin{align*}
+Au_0 =
+u_100 = \begin{bmatrix}
+F_101\\
+F_100
+\end{bmatrix} 
+&=
+c_1&lambda;_1^100x_1 + c_2&lambda;_2^100x_2\\
+&=
+(\frac{1}{&lambda;_1-&lambda;_2} )&lambda;_1^100x_1 - 
+(\frac{1}{&lambda;_1-&lambda;_2} )&lambda;_2^100x_2\\
+&= 
+(\frac{1}{&lambda;_1-&lambda;_2} )&lambda;_1^100 \begin{bmatrix}
+&lambda;_2\\
+1
+\end{bmatrix} - 
+(\frac{1}{&lambda;_1-&lambda;_2} )&lambda;_2^100 \begin{bmatrix}
+&lambda;_1\\
+1
+\end{bmatrix}
+\\
+where&\\
+c_1&=(\frac{1}{&lambda;_1-&lambda;_2} )\\
+c_1&=-(\frac{1}{&lambda;_1-&lambda;_2} )
+\\
+\\
+need&\\
+F_100&= 
+(\frac{1}{&lambda;_1-&lambda;_2} )&lambda;_1^100 \begin{bmatrix}
+1
+\end{bmatrix} - 
+(\frac{1}{&lambda;_1-&lambda;_2} )&lambda;_2^100 \begin{bmatrix}
+1
+\end{bmatrix}\\
+&= 
+(\frac{&lambda;_1^100}{&lambda;_1-&lambda;_2} ) - 
+(\frac{&lambda;_2^100}{&lambda;_1-&lambda;_2} )\\
+&= 
+\frac{&lambda;_1^100-&lambda;_2^100}{&lambda;_1-&lambda;_2} \\
+&= 
+\frac{1}{\sqrt{5}}(\frac{1+\sqrt{5}}{2})^100 \\
+because&\\
+\\
+&lambda;_1&=\frac{1+\sqrt{5}}{2};&lambda;_1^100=(\frac{1+\sqrt{5}}{2})^100\\
+and&\\
+\\
+&lambda;_2^100
+&= zero\\
+and&\\
+\\
+&lambda;_1-&lambda;_2&=\sqrt{5}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AAu_0+%3D%0Au_100+%3D+%5Cbegin%7Bbmatrix%7D%0AF_101%5C%5C%0AF_100%0A%5Cend%7Bbmatrix%7D+%0A%26%3D%0Ac_1%26lambda%3B_1%5E100x_1+%2B+c_2%26lambda%3B_2%5E100x_2%5C%5C%0A%26%3D%0A%28%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29%26lambda%3B_1%5E100x_1+-+%0A%28%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29%26lambda%3B_2%5E100x_2%5C%5C%0A%26%3D+%0A%28%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29%26lambda%3B_1%5E100+%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_2%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D+-+%0A%28%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29%26lambda%3B_2%5E100+%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0Awhere%26%5C%5C%0Ac_1%26%3D%28%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29%5C%5C%0Ac_1%26%3D-%28%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29%0A%5C%5C%0A%5C%5C%0Aneed%26%5C%5C%0AF_100%26%3D+%0A%28%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29%26lambda%3B_1%5E100+%5Cbegin%7Bbmatrix%7D%0A1%0A%5Cend%7Bbmatrix%7D+-+%0A%28%5Cfrac%7B1%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29%26lambda%3B_2%5E100+%5Cbegin%7Bbmatrix%7D%0A1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D+%0A%28%5Cfrac%7B%26lambda%3B_1%5E100%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29+-+%0A%28%5Cfrac%7B%26lambda%3B_2%5E100%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%29%5C%5C%0A%26%3D+%0A%5Cfrac%7B%26lambda%3B_1%5E100-%26lambda%3B_2%5E100%7D%7B%26lambda%3B_1-%26lambda%3B_2%7D+%5C%5C%0A%26%3D+%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B5%7D%7D%28%5Cfrac%7B1%2B%5Csqrt%7B5%7D%7D%7B2%7D%29%5E100+%5C%5C%0Abecause%26%5C%5C%0A%5C%5C%0A%26lambda%3B_1%26%3D%5Cfrac%7B1%2B%5Csqrt%7B5%7D%7D%7B2%7D%3B%26lambda%3B_1%5E100%3D%28%5Cfrac%7B1%2B%5Csqrt%7B5%7D%7D%7B2%7D%29%5E100%5C%5C%0Aand%26%5C%5C%0A%5C%5C%0A%26lambda%3B_2%5E100%0A%26%3D+zero%5C%5C%0Aand%26%5C%5C%0A%5C%5C%0A%26lambda%3B_1-%26lambda%3B_2%26%3D%5Csqrt%7B5%7D%0A%5Cend%7Balign%2A%7D)
+
+the ratio of F<sub>101</sub>/F<sub>100</sub> =  (1 + √5)/2 must be close to a limiting ratio with k = 100.  The greeks called this ratio the golden mean.  For some reason a rectangle with side 1.618 / 1 is graceful.
+
+
+fibonacci is a difference equation  
+u<sub>k+1</sub> = Au<sub>k</sub>   
+each step multiplies by A   
+solution is u<sub>k</sub> = A<sup>k</sup>u<sub>0</sub>  
+
+diagonalizing matrices computes A<sup>k</sup> quick via &Lambda<sup>k</sup>.
+
+u<sub>k+1</sub> = A<sub>k</sub> is a difference equation that structures the solution u<sub>k</sub> = A<sup>k</sup>u<sub>0</sub>
+
+find u<sub>k</sub> in 3 steps:  
+
+will compute powers of A via factoring A into &Lambda; matrix of eigenvalues and X matrix of eigenvectors; the trick to the speed is that XX<sup>-1</sup>=I inside of A<sup>k</sup>u<sub>0</sub> = X&Lambda;X<sup>-1</sup> • ... • X&Lambda;X<sup>-1</sup>u<sub>0</sub>= X&Lambda;<sup>k</sup>X<sup>-1</sup>u<sub>0</sub>
+
+1. write u<sub>0</sub> as combination u<sub>0</sub> = c<sub>1</sub>x<sub>1</sub> + ... + c<sub>n</sub>x<sub>n</sub> of the eigenvectors.  to find c: c = X<sup>-1</sup>u<sub>0</sub>  
+
+the eigenvectors of X lead to the c's inthe combinations u<sub>0</sub> = c<sub>1</sub>x<sub>1</sub> + ... + c<sub>n</sub>x<sub>n</sub>
+
+u<sub>0</sub> = (x<sub>1</sub> ... x<sub>n</sub>).T c<sub>1</sub> ... c<sub>n</sub>) = Xc
+
+these coefficients are c = X<sup>-1</sup>u<sub>0</sub>
+
+2. multiply each eigenvector x<sub>1</sub> by &lambda;<sub>1</sub><sup>k</sup>.  
+thus &Lambda;<sup>k</sup>
+
+multiply by U<sup>k</sup> to get :
+
+u<sub>k</sub> =  ∑<sub>j=1,n</sub> c<sub>j</sub>(&Lambda;<sub>j</sub>)<sup>k</sup>x<sub>j</sub>
+
+
+3. add up the pieces c<sub>j</sub>&lambda;<sub>j</sub>x<sub>j</sub> to find solution u<sub>k</sub> = A<sup>k</sup>u<sub>0</sub> which is 
+
+A<sup>k</sup>u<sub>0</sub> = X&Lambda;<sup>k</sup>X<sup>-1</sup>u<sub>0</sub> = X&Lambda;<sup>k</sup>c = u<sub>k+1</sub>
+
+because X<sup>-1</sup>u<sub>0</sub> = c
+
+the result is exactly u<sub>k</sub> = c<sub>1</sub>(&lambda;<sub>1</sub>)<sup>k</sup>x<sub>1</sub> + ... + c<sub>n</sub>(&lambda;<sub>n</sub>)<sup>k</sup>x<sub>n</sub>
+
+u<sub>k+1</sup> = Au<sub>k</sup>
+
+![\begin{align*}
+A^ku_0 &= X&Lambda;^kX^{-1}u_0 = X&Lambda^{k}c = \begin{bmatrix}x_1 ... x_n\end{bmatrix}\begin{bmatrix}(&lambda;_1)^k&&\\&..&\\&&(&lambda;_n)^k\end{bmatrix}
+\begin{bmatrix}
+c_1\\
+...\\
+c_n
+\end{bmatrix}
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA%5Eku_0+%26%3D+X%26Lambda%3B%5EkX%5E%7B-1%7Du_0+%3D+X%26Lambda%5E%7Bk%7Dc+%3D+%5Cbegin%7Bbmatrix%7Dx_1+...+x_n%5Cend%7Bbmatrix%7D%5Cbegin%7Bbmatrix%7D%28%26lambda%3B_1%29%5Ek%26%26%5C%5C%26..%26%5C%5C%26%26%28%26lambda%3B_n%29%5Ek%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5C%0A...%5C%5C%0Ac_n%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+
+example
+
+Fibonacci like but rule is F<sub>k+2</sub> = F<sub>k+1</sub> + 2F<sub>k</sub>.   
+start similar to Fibonacci 0,1,1,3, ... but grow faster because eignevalue &lambda; = 2
+
+the basics:
+
+A, eigenvalue &lambda;<sub>1</sub> and &lambda;<sub>2</sub>, eigenvectors x<sub>1</sub> and x<sub>2</sub>, x's Ax's and &lambda;x's all in same direction, but notice that As and &lambda;s eigenvalues times eigenvectors x's do not produce the right F0, F1, F2, F3, etc.  F<sub>0</sub>, F<sub>1</sub>, F<sub>2</sub>, F<sub>3</sub>, ... , F<sub>k</sub> are a product of A<sup>k</sup>u<sub>0</sub> where u<sub>0</sub> is a vector (not a scalar like F<sub>k</sub>) that looks like (F<sub>k+1</sub>, F<sub>k</sub>).T = A<sup>k</sup>u<sub>0</sub> with the example here k=3.  To get to the right F one needs to move to the 3 steps.
+
+<img width="672" alt="image" src="https://user-images.githubusercontent.com/38410965/107902003-363d9780-6f13-11eb-8b6f-a5a086c8a6ad.png">
+
+now the 3 steps:   
+1. express u<sub>0</sub> as linear combination of the eigenvectors so that the eigenvalues can replace A and arrive at the same outcomes.  
+2. multiply the linear combination by &Lambda;  
+3. inject the actual values.  
+
+linear combination.  the goal is:  
+u<sub>0</sub> = c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub>   
+u<sub>k</sub> = c<sub>1</sub>&lambda;<sup>k</sup>x<sub>1</sub> + c<sub>2</sub>&lambda;<sup>k</sup>x<sub>2</sub>   
+where e.g. ...
+u<sub>0</sub> = c<sub>1</sub>&lambda;<sup>k=0</sup>x<sub>1</sub> + c<sub>2</sub>&lambda;<sup>k=0</sup>x<sub>2</sub>   
+
+arrive at c:  start with k=0
+u<sub>0</sub> = (1,0).T = c(x<sub>1</sub> + x<sub>2</sub>) = c ( (2,1).T + (1,-1).T ) = c (3,0).T --> c = (1/3)
+u<sub>0</sub> = (1,0).T = (1/3)x<sub>1</sub> + (1/3)x<sub>2</sub>
+
+u<sub>0</sub>[index 1] = F<sub>0</sub>
+
+add in &lambda;s:
+
+u<sub>k</sub> = A<sup>k</sup>u<sub>0</sub> = c<sub>1</sub>&lambda;<sup>k</sup>x<sub>1</sub> + c<sub>2</sub>&lambda;<sup>k</sup>x<sub>2</sub> = (1/3)(2)<sup>k</sup>(2,1).T + (1/3)(-1)<sup>k</sup>(1,-1).T = (F<sub>k+1</sub>, F<sub>k</sub>)
+
+only take the 2nd component (indexed 1):
+
+u<sub>k</sub>[1] = A<sup>k</sup>[1] = F<sub>k</sub> = (2<sup>k</sup> - (-1)<sup>k</sup>) / 3
+
+for example: 0,1,1,3 ... F<sub>4</sub> = (2<sup>4</sup> - (-1)<sup>4</sup>) / 3 = (16 - (-1)<sup>4</sup>)/3 = 15/3 = 5
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107902556-c6301100-6f14-11eb-8fc4-5a9a27eed40f.png">
 
 
