@@ -1324,4 +1324,10 @@ that shows Steps 1, 2, 3: c's from X<sup>-1</sup>u<sub>0</sub>, &lambda;<sup>k</
 
 5. A is diagonalizable if every eigenvalue (GM) has enough eigenvectors (AM): GM = AM.
 
+Lukas numbers (1, 3, 4, 7, 11, 18, ... ) use the same rule L<sub>k+2</sub> = L<sub>k+1</sub> + L<sub>k</sub> as Fibonacci (0,1, 1, 2, 3, 5, 8, 13, 21, ... ) = F<sub>k+2</sub> = F<sub>k+1</sub> + F<sub>k</sub>, but start at 1 rather than 0.
 
+L<sub>100</sub> = &lambda;<sub>1</sub><sup>100</sup> + &lambda;<sub>2</sub><sup>100</sup>
+
+as with Fibonacci u<sub>k+1</sub> = [ [ 1, 1 ], [1, 0 ] ] u<sub>k</sub> where u<sub>k</sub> = [ [L<sub>k+1</sub>], [L<sub>k</sub>] ] as with Fibonacci: 
+
+u<sub>k+1</sub> = [ [ 1, 1 ], [1, 0 ] ] u<sub>k</sub> =  [ [ 1, 1 ], [1, 0 ] ] [ [L<sub>k+1</sub>], [L<sub>k</sub>] ] = [ [L<sub>k+2</sub>], [L<sub>k+1</sub>] ] = [ [L<sub>k+1</sub> + L<sub>k</sub>], [L<sub>k+1</sub>] ]
