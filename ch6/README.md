@@ -1326,6 +1326,8 @@ that shows Steps 1, 2, 3: c's from X<sup>-1</sup>u<sub>0</sub>, &lambda;<sup>k</
 
 example:
 
+the formulas below are better than the text below; the terminal example can be improved. 
+
 Lukas numbers (1, 3, 4, 7, 11, 18, ... ) use the same rule L<sub>k+2</sub> = L<sub>k+1</sub> + L<sub>k</sub> as Fibonacci (0,1, 1, 2, 3, 5, 8, 13, 21, ... ) = F<sub>k+2</sub> = F<sub>k+1</sub> + F<sub>k</sub>, but start at 1 rather than 0.
 
 L<sub>100</sub> = &lambda;<sub>1</sub><sup>100</sup> + &lambda;<sub>2</sub><sup>100</sup>
@@ -1356,4 +1358,91 @@ x's = [&lambda;, 1] but only need second component, 1 since only need second com
 
 L<sub>100</sub> = A<sup>100-1</sup>u<sub>1</sub> = 1•&Lambda;<sup>99</sup>c = &Lambda;<sup>100</sup>
 
-
+![\begin{align*}
+u_1 =&
+\begin{bmatrix}
+3\\
+1\\
+\end{bmatrix}=
+c_1x_1 + c_2x_2 = &lambda;_1x_1 + &lambda;_2x_2 = 
+&lambda;_1\begin{bmatrix}
+&lambda;_1\\
+1\\
+\end{bmatrix}+
+&lambda;_2\begin{bmatrix}
+&lambda;_2\\
+1\\
+\end{bmatrix}= 
+(\frac{1+\sqrt{2}}{2})\begin{bmatrix}
+(\frac{1+\sqrt{2}}{2})\\
+1\\
+\end{bmatrix}+
+(\frac{1-\sqrt{2}}{2})\begin{bmatrix}
+(\frac{1-\sqrt{2}}{2})\\
+1\\
+\end{bmatrix}\\=&
+&lambda;_1\begin{bmatrix}
+&lambda;_1\\
+1\\
+\end{bmatrix}+
+&lambda;_2\begin{bmatrix}
+&lambda;_2\\
+1\\
+\end{bmatrix} =
+\begin{bmatrix}
+&lambda;_1^2\\
+&lambda;_1\\
+\end{bmatrix}+
+\begin{bmatrix}
+&lambda;_2^2\\
+&lambda;_2\\
+\end{bmatrix} =
+\begin{bmatrix}
+&lambda;_1^2+&lambda;_2^2\\
+&lambda;_1+&lambda;_2\\
+\end{bmatrix}=
+\begin{bmatrix}
+trace_{A^2}\\
+trace_A\\
+\end{bmatrix}\\ \\
+u_100=&
+A_99 u_1=X&Lambda;^99X^{-1}u_1 
+= X&Lambda;^99c
+=\begin{bmatrix}
+x_1&x_2\\
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2\\
+\end{bmatrix}^99
+\begin{bmatrix}
+c_1\\
+c_2\\
+\end{bmatrix}=
+\begin{bmatrix}
+&lambda;_1&&lambda;_2\\
+1&1
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1^99&\\
+&&lambda;_2^99\\
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1\\
+&lambda;_2\\
+\end{bmatrix}=
+\begin{bmatrix}
+&lambda;_1&&lambda;_2\\
+1&1
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1^100\\
+&lambda;_2^100\\
+\end{bmatrix}=
+\begin{bmatrix}
+&lambda;_1^101+&lambda;_2^101\\
+&lambda;_1^100+&lambda;_2^100\\
+\end{bmatrix}\\
+L_100 =& u_100[1] = &lambda;_1^100+&lambda;_2^100
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au_1+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0Ac_1x_1+%2B+c_2x_2+%3D+%26lambda%3B_1x_1+%2B+%26lambda%3B_2x_2+%3D+%0A%26lambda%3B_1%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D%2B%0A%26lambda%3B_2%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_2%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%0A%28%5Cfrac%7B1%2B%5Csqrt%7B2%7D%7D%7B2%7D%29%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7B1%2B%5Csqrt%7B2%7D%7D%7B2%7D%29%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D%2B%0A%28%5Cfrac%7B1-%5Csqrt%7B2%7D%7D%7B2%7D%29%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7B1-%5Csqrt%7B2%7D%7D%7B2%7D%29%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C%3D%26%0A%26lambda%3B_1%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D%2B%0A%26lambda%3B_2%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_2%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5E2%5C%5C%0A%26lambda%3B_1%5C%5C%0A%5Cend%7Bbmatrix%7D%2B%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_2%5E2%5C%5C%0A%26lambda%3B_2%5C%5C%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5E2%2B%26lambda%3B_2%5E2%5C%5C%0A%26lambda%3B_1%2B%26lambda%3B_2%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0Atrace_%7BA%5E2%7D%5C%5C%0Atrace_A%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C+%5C%5C%0Au_100%3D%26%0AA_99+u_1%3DX%26Lambda%3B%5E99X%5E%7B-1%7Du_1+%0A%3D+X%26Lambda%3B%5E99c%0A%3D%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%5C%5C%0A%5Cend%7Bbmatrix%7D%5E99%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5C%0Ac_2%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%26lambda%3B_2%5C%5C%0A1%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5E99%26%5C%5C%0A%26%26lambda%3B_2%5E99%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5C%5C%0A%26lambda%3B_2%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%26lambda%3B_2%5C%5C%0A1%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5E100%5C%5C%0A%26lambda%3B_2%5E100%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5E101%2B%26lambda%3B_2%5E101%5C%5C%0A%26lambda%3B_1%5E100%2B%26lambda%3B_2%5E100%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C%0AL_100+%3D%26+u_100%5B1%5D+%3D+%26lambda%3B_1%5E100%2B%26lambda%3B_2%5E100%0A%5Cend%7Balign%2A%7D%0A)
