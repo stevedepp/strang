@@ -1338,7 +1338,14 @@ the eigenvalues and eigenvectors of A = [ [ 1, 1 ], [1, 0 ] ] still come from de
 
 u<sub>1</sub> = [L<sub>2</sub>, L<sub>1</sub>] = [3,1] = A<sup>0</sup>u<sub>1</sub>   
 u<sub>k</sub> = [L<sub>k+1</sub>, L<sub>k</sub>] = [L<sub>k+1</sub>,L<sub>k</sub>] = A<sup>k-1</sup>u<sub>1</sub>  
-u<sub>100</sub> = [L<sub>100+1</sub>, L<sub>100</sub>] = [L<sub>100+1</sub>,L<sub>100</sub>] = A<sup>100-1</sup>u<sub>1</sub>
+u<sub>100</sub> = [L<sub>100+1</sub>, L<sub>100</sub>] = [L<sub>100+1</sub>,L<sub>100</sub>] = A<sup>100-1</sup>u<sub>1</sub> = X&Lambda;<sup>99</sup>X<sup>-1</sup>u<sub>1</sub>
 
-u<sub>100</sub> = [L<sub>101</sub>, L<sub>100</sub>] = [3,1]  
+since u<sub>1</sub> = cX, c = X<sup>-1</sup>u<sub>1</sub> and so c can replace X<sup>-1</sup>u<sub>1</sub> in last equation.
+
+u<sub>100</sub> = A<sup>100-1</sup>u<sub>1</sub> = X&Lambda;<sup>99</sup>c
+
+x's = [&lambda;, 1] but only need second component, 1 since only need second component of u<sub>100</sub> = [L<sub>100+1</sub>, L<sub>100</sub>].  c = &lambda;.  thus, 
+
+L<sub>100</sub> = A<sup>100-1</sup>u<sub>1</sub> = 1•&Lambda;<sup>99</sup>c = &Lambda;<sup>100</sup>
+
 
