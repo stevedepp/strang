@@ -1326,7 +1326,7 @@ that shows Steps 1, 2, 3: c's from X<sup>-1</sup>u<sub>0</sub>, &lambda;<sup>k</
 
 example:
 
-the formulas below are better than the text below; the terminal example can be improved. 
+the terminal example can be improved. 
 
 Lukas numbers (1, 3, 4, 7, 11, 18, ... ) use the same rule L<sub>k+2</sub> = L<sub>k+1</sub> + L<sub>k</sub> as Fibonacci (0,1, 1, 2, 3, 5, 8, 13, 21, ... ) = F<sub>k+2</sub> = F<sub>k+1</sub> + F<sub>k</sub>, but start at 1 rather than 0.
 
@@ -1345,17 +1345,6 @@ because u<sub>1</sub> = [3,1] = c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>
 
 with x<sub>1</sub> = [&lambda;<sub>1</sub>, 1],  x<sub>2</sub> = [&lambda;<sub>2</sub>, 1], &lambda;<sub>1</sub> = (1+√5)/2, and &lambda;<sub>2</sub> = (1-√5)/2, solve for c<sub>1</sub> = &lambda;<sub>1</sub> and c<sub>2</sub> = &lambda;<sub>2</sub>.
 
-so:
-
-u<sub>1</sub> = [3,1] = c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub>  = &lambda;<sub>1</sub>x<sub>1</sub> + &lambda;<sub>2</sub>x<sub>2</sub> = &lambda;<sub>1</sub>Matrix([&lambda;<sub>1</sub>, 1]) + &lambda;<sub>2</sub>Matrix([&lambda;<sub>1</sub>, 1]) = Matrix([ [&lambda;<sub>1</sub><sup>2</sup> + &lambda;<sub>2</sub><sup>2</sup>], [&lambda;<sub>1</sub> + &lambda;<sub>2</sub>] ]) = Matrix([ [trace<sub>A<sup>2</sup></sub>], [trace<sub>A</sub>] ]) = Matrix([3,1]) = u<sub>1</sub>
-
-cX, c = X<sup>-1</sup>u<sub>1</sub> and so c can replace X<sup>-1</sup>u<sub>1</sub> in last equation.
-
-u<sub>100</sub> = A<sup>100-1</sup>u<sub>1</sub> = X&Lambda;<sup>99</sup>c
-
-x's = [&lambda;, 1] but only need second component, 1 since only need second component of u<sub>100</sub> = [L<sub>100+1</sub>, L<sub>100</sub>].  c = &lambda;.  thus, 
-
-L<sub>100</sub> = A<sup>100-1</sup>u<sub>1</sub> = 1•&Lambda;<sup>99</sup>c = &Lambda;<sup>100</sup>
 
 ![\begin{align*}
 u_1 =&
