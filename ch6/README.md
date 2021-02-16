@@ -1507,3 +1507,132 @@ A^{-1}= &
 \end{bmatrix} 
 \end{align*}
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%3D+%26%0A5%2A%5Cbegin%7Bbmatrix%7D%0A1%26%26%26%5C%5C%0A%261%26%26%5C%5C%0A%26%261%26%5C%5C%0A%26%26%261%0A%5Cend%7Bbmatrix%7D-%0A%5Cbegin%7Bbmatrix%7D%0A1%261%261%261%5C%5C%0A1%261%261%261%5C%5C%0A1%261%261%261%5C%5C%0A1%261%261%261%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A%2B4%26-1%26-1%26-1%5C%5C%0A-1%26%2B4%26-1%26-1%5C%5C%0A-1%26-1%26%2B4%26-1%5C%5C%0A-1%26-1%26-1%26%2B4%0A%5Cend%7Bbmatrix%7D%5C%5C%0AX+%3D+%26%0A%5Cfrac%7B1%7D%7B2%7D%2A%5Cbegin%7Bbmatrix%7D%0A%2B1%26%2B1%26%2B1%26%2B1%5C%5C%0A%2B1%26-1%26%2B1%26-1%5C%5C%0A%2B1%26%2B1%26-1%26-1%5C%5C%0A%2B1%26-1%26-1%26%2B1%0A%5Cend%7Bbmatrix%7D+%3D+H%5ET+%3DH%5E%7B-1%7D%5C%5C%0AA%5E%7B-1%7D%3D+%26+%0A%5Cfrac%7B1%7D%7B5%7D%2A%5Cbegin%7Bbmatrix%7D%0A2%261%261%261%5C%5C%0A1%262%261%261%5C%5C%0A1%261%262%261%5C%5C%0A1%261%261%262%0A%5Cend%7Bbmatrix%7D+%0A%5Cend%7Balign%2A%7D%0A)
+
+
+problems
+
+4. TF if columns of X (eigenvectors of A) are linearly independent,  ...
+... A is invertible. FALSE because eigenvalues can still be zero in which case Ax = 0 which means at least one of the eigenvalues is in the null space.  
+... A is dagonalizable.  TRUE.  the matrix of eigenvectors X has an inverse   
+... X is invertible.  TRUE.  X has full rank and so is invertible.   
+... X is diagonalizable.  FALSE.  to know this we need X's eigenvalues: X could have repeated eigenvalues and therefore a non computable set of eigenvectors.
+
+5. If eigenvectors of A are columns of I, then A is diagonal:  X = I = X<sup>-1<sup> means A = X&Lambda;X<sup>-1</sup> = &Lambda;
+
+6. If eigenvector matrix X is triangular then X<sup>-1</sup> is triangular and A is triangular.   Since &Lambda;X is triangular, two triangulars multiplying = triangular. 
+
+if X diagonalizes A then all multiples of X diagaonlize A since X is the null set of A-&lambda;I.  all non-zero multiples of X also diagonalize A<sup>-1</sup>
+
+9. if G<sub>k+2</sub> is the average of 2 previous numbers G<sub>k+1</sub> and G<sub>k</sub>, can use the same process as with Fibonacci to digaonalize A = [ [ .5, .5 ], [ 1, 0 ] ]
+
+<img width="522" alt="image" src="https://user-images.githubusercontent.com/38410965/108092889-275a0080-704b-11eb-9f7b-fb40a9cf34b3.png">
+
+11.  TF if eigenvalues of A are 2,2,5 then A is CERTAINLY ...    
+... invertible.  TRUE.  no zero eigenvalues. this is true because if eigenvalues = 0 then A-&lambda;I = A and if det (A) ≠ 0 then invertible.  
+... diagonalizable.  FALSE.  repeated eigenvalue 2 may have only one line of eigenvectors.  
+... not diagonalizable.  FALSE.  repeated eigenvalue 2 may have a full set of eigenvectors.  
+
+GM counts the independent eigenvectors for eigenvalue.  Then GM is the dimension of the null space of A - &lambda;I
+
+AM counts the repetitions of an eigenvalue among eigenvalues.  look at the roots of det (A-&lambda;I)
+
+TF if the ONLY eigenvector of A is a multiple of (1,4) then A has ...   
+... no inverse.  FALSE.  dont kow if eigenvalues are zero.   
+... a repeated eigenvalue.  TRUE. an eigenvector is missing which can only happen for a repeated eigenvalue.   
+... no diagonalizable X&Lambda;X<sup>-1</sup>  TRUE.  we konw there is only one line of eigenvectors.  there are not enough eigenvectors to fill the eigenvector matrix X.   
+
+14. the matrix A = [ [ 3,1 ], [ 0,3 ] ] is not diagonalizable because the rank of A - &lamba;I is one.  What to change to make it diagonalizable?  
+Changing any entry except a(1,2) = 1 would make it diagonalizable as the new A will have different eigenvalues.   
+The rank of A - 3I = one.  Since rank + null space dim must = n = 2, then the null space has dim = 2 - 1 = 1 and therefore there is not a complete set of 2 eigenvectors for the &lambda; = 3 eigenvalue.  
+
+markov matrices have at least one eigenvalue = 1 and so A<sup>k</sup> will not go to zero as k goes to infnity.  if a matrix has eigenvalues that are all < 1 then A<sup>k</sup> will go to zero as k goes to infnity
+
+diagonalize A = [ [ .6, .4 ], [ .4, .6 ] ]   
+since we know it is a Markov, we know one eigenvalue = 1  
+using trace and determinant rules:  &lambda;<sub>1</sub> + &lambda;<sub>2</sub> = 1.2 = trace and det A = &lambda;<sub>1</sub> • &lambda;<sub>2</sub> = 0.2   
+thus, &lambda;<sub>1</sub> = 1 then &lambda;<sub>2</sub> = .2   
+X can be solved to [ [ 1,1], [ 1,-1 ] ] and Xinv solved to 0.5 • [ [ 1,1], [ 1,-1 ] ]  
+at lmit A<sup>k</sup> k to infinity, &lambda;<sub>2</sub><sup>k</sup> = 0  
+so &Lambda;<sup>k</sup> = [ [ 1,0], [ 0,0 ] ] with k = infinity  
+and A<sup>infinity</sup> = 0.5 • [ [ 1,1], [ 1,-1 ] ]
+
+
+17. find &Lambda; and X to diagonalize A in problem 15.  What is A<sup>10</sup>u<sub>0</sub> for these u<sub>0</sub>?  
+
+for &lambda;<sub>1</sub> = 0.3, the eigenvector is given by the null space of (A - 0.3 • I) or the span of (-3,1).T  
+for &lambda;<sub>2</sub> = 0.9, the eigenvector is given by the null space of (A - 0.9 • I) or the span of (3,1).T  
+
+this span enables us to take a linear combination of eigenvectors to express u<sub>0</sub> in the form of eigenvectors and a scalar that would ordinarily be found in special solutions of null space.
+
+<img width="522" alt="image" src="https://user-images.githubusercontent.com/38410965/108105123-36947a80-705a-11eb-9e01-41742ef0454a.png">
+
+to evaluate A<sup>10</sup>u<sub>0</sub>, decompose aka factor u<sub>0</sub> in a basis provided by the eigenvectors of A.  
+c<sub>1</sub> and c<sub>2</sub> will scale x<sub>1</sub> and x<sub>2</sub> to express each u<sub>0</sub> as a linear combination of the x's.  XC = that linear combination = U<sub>0</sub>
+
+u<sub>0_1<sub> = (3,1).T = c<sub>1_1</sub>x<sub>1</sub> + c<sub>2_1</sub>x<sub>2</sub>   
+u<sub>0_2<sub> = (3,1).T = c<sub>1_2</sub>x<sub>1</sub> + c<sub>2_2</sub>x<sub>2</sub>   
+u<sub>0_3<sub> = (3,1).T = c<sub>1_3</sub>x<sub>1</sub> + c<sub>2_3</sub>x<sub>2</sub>   
+
+since U<sub>0</sub> = [u<sub>0_1<sub>, u<sub>0_2<sub>, u<sub>0_3<sub>] = XC, then C = X<sup>-1</sup>U<sub.0</sub> which is named C<sub>values</sub> here for clarity.
+
+![\begin{align*}
+A^ku_0 =&A^kXc = X&Lambda;^kX^{-1}u_0 = X&Lambda;^kX^{-1}Xc = X&Lambda;^kc\\
+A^kU_0 =&A^kXC = X&Lambda;^kX^{-1}U_0 = X&Lambda;^kX^{-1}XC = X&Lambda;^kC \\
+\begin{bmatrix}
+a_1&a_2\\
+\end{bmatrix}^{k}
+\begin{bmatrix}
+u_1&u_2&u_3\\
+\end{bmatrix}=&
+\begin{bmatrix}
+a_1&a_2\\
+\end{bmatrix}^{k}
+\begin{bmatrix}
+x_1&x_2\\
+\end{bmatrix}
+\begin{bmatrix}
+c_1&c_2&c_3\\
+\end{bmatrix}\\
+\begin{bmatrix}
+x_1&x_2\\
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2\\
+\end{bmatrix}^k
+\begin{bmatrix}
+x_1&x_2\\
+\end{bmatrix}^{-1}
+\begin{bmatrix}
+u_1&u_2&u_3\\
+\end{bmatrix}=&
+\begin{bmatrix}
+x_1&x_2\\
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2\\
+\end{bmatrix}^k
+\begin{bmatrix}
+x_1&x_2\\
+\end{bmatrix}^{-1}
+\begin{bmatrix}
+x_1&x_2\\
+\end{bmatrix}
+\begin{bmatrix}
+c_1&c_2&c_3\\
+\end{bmatrix}=
+\begin{bmatrix}
+x_1&x_2\\
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2\\
+\end{bmatrix}^k
+\begin{bmatrix}
+c_1&c_2&c_3\\
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA%5Eku_0+%3D%26A%5EkXc+%3D+X%26Lambda%3B%5EkX%5E%7B-1%7Du_0+%3D+X%26Lambda%3B%5EkX%5E%7B-1%7DXc+%3D+X%26Lambda%3B%5Ekc%5C%5C%0AA%5EkU_0+%3D%26A%5EkXC+%3D+X%26Lambda%3B%5EkX%5E%7B-1%7DU_0+%3D+X%26Lambda%3B%5EkX%5E%7B-1%7DXC+%3D+X%26Lambda%3B%5EkC+%5C%5C%0A%5Cbegin%7Bbmatrix%7D%0Aa_1%26a_2%5C%5C%0A%5Cend%7Bbmatrix%7D%5E%7Bk%7D%0A%5Cbegin%7Bbmatrix%7D%0Au_1%26u_2%26u_3%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Aa_1%26a_2%5C%5C%0A%5Cend%7Bbmatrix%7D%5E%7Bk%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%26c_2%26c_3%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%5C%5C%0A%5Cend%7Bbmatrix%7D%5Ek%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%5C%5C%0A%5Cend%7Bbmatrix%7D%5E%7B-1%7D%0A%5Cbegin%7Bbmatrix%7D%0Au_1%26u_2%26u_3%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%5C%5C%0A%5Cend%7Bbmatrix%7D%5Ek%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%5C%5C%0A%5Cend%7Bbmatrix%7D%5E%7B-1%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%26c_2%26c_3%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%5C%5C%0A%5Cend%7Bbmatrix%7D%5Ek%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%26c_2%26c_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/108109458-e4565800-705f-11eb-8e15-a1721e8faf3b.png">
+
