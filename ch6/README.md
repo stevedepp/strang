@@ -1569,11 +1569,11 @@ this span enables us to take a linear combination of eigenvectors to express u<s
 to evaluate A<sup>10</sup>u<sub>0</sub>, decompose aka factor u<sub>0</sub> in a basis provided by the eigenvectors of A.  
 c<sub>1</sub> and c<sub>2</sub> will scale x<sub>1</sub> and x<sub>2</sub> to express each u<sub>0</sub> as a linear combination of the x's.  XC = that linear combination = U<sub>0</sub>
 
-u<sub>0_1<sub> = (3,1).T = c<sub>1_1</sub>x<sub>1</sub> + c<sub>2_1</sub>x<sub>2</sub>   
-u<sub>0_2<sub> = (3,1).T = c<sub>1_2</sub>x<sub>1</sub> + c<sub>2_2</sub>x<sub>2</sub>   
-u<sub>0_3<sub> = (3,1).T = c<sub>1_3</sub>x<sub>1</sub> + c<sub>2_3</sub>x<sub>2</sub>   
+u<sub>0_1</sub> = (3,1).T = c<sub>1_1</sub>x<sub>1</sub> + c<sub>2_1</sub>x<sub>2</sub>   
+u<sub>0_2</sub> = (3,1).T = c<sub>1_2</sub>x<sub>1</sub> + c<sub>2_2</sub>x<sub>2</sub>   
+u<sub>0_3</sub> = (3,1).T = c<sub>1_3</sub>x<sub>1</sub> + c<sub>2_3</sub>x<sub>2</sub>   
 
-since U<sub>0</sub> = [u<sub>0_1<sub>, u<sub>0_2<sub>, u<sub>0_3<sub>] = XC, then C = X<sup>-1</sup>U<sub.0</sub> which is named C<sub>values</sub> here for clarity.
+since U<sub>0</sub> = [u<sub>0_1</sub>, u<sub>0_2</sub>, u<sub>0_3</sub>] = XC, then C = X<sup>-1</sup>U<sub.0</sub> which is named C<sub>values</sub> here for clarity.
 
 ![\begin{align*}
 A^ku_0 =&A^kXc = X&Lambda;^kX^{-1}u_0 = X&Lambda;^kX^{-1}Xc = X&Lambda;^kc\\
