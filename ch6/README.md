@@ -1434,3 +1434,76 @@ c_2\\
 L_100 =& u_100[1] = &lambda;_1^100+&lambda;_2^100
 \end{align*}
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au_1+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0Ac_1x_1+%2B+c_2x_2+%3D+%26lambda%3B_1x_1+%2B+%26lambda%3B_2x_2+%3D+%0A%26lambda%3B_1%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D%2B%0A%26lambda%3B_2%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_2%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3D+%0A%28%5Cfrac%7B1%2B%5Csqrt%7B2%7D%7D%7B2%7D%29%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7B1%2B%5Csqrt%7B2%7D%7D%7B2%7D%29%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D%2B%0A%28%5Cfrac%7B1-%5Csqrt%7B2%7D%7D%7B2%7D%29%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7B1-%5Csqrt%7B2%7D%7D%7B2%7D%29%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C%3D%26%0A%26lambda%3B_1%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D%2B%0A%26lambda%3B_2%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_2%5C%5C%0A1%5C%5C%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5E2%5C%5C%0A%26lambda%3B_1%5C%5C%0A%5Cend%7Bbmatrix%7D%2B%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_2%5E2%5C%5C%0A%26lambda%3B_2%5C%5C%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5E2%2B%26lambda%3B_2%5E2%5C%5C%0A%26lambda%3B_1%2B%26lambda%3B_2%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0Atrace_%7BA%5E2%7D%5C%5C%0Atrace_A%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C+%5C%5C%0Au_100%3D%26%0AA_99+u_1%3DX%26Lambda%3B%5E99X%5E%7B-1%7Du_1+%0A%3D+X%26Lambda%3B%5E99c%0A%3D%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%5C%5C%0A%5Cend%7Bbmatrix%7D%5E99%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5C%0Ac_2%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%26lambda%3B_2%5C%5C%0A1%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5E99%26%5C%5C%0A%26%26lambda%3B_2%5E99%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5C%5C%0A%26lambda%3B_2%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%26lambda%3B_2%5C%5C%0A1%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5E100%5C%5C%0A%26lambda%3B_2%5E100%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5E101%2B%26lambda%3B_2%5E101%5C%5C%0A%26lambda%3B_1%5E100%2B%26lambda%3B_2%5E100%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C%0AL_100+%3D%26+u_100%5B1%5D+%3D+%26lambda%3B_1%5E100%2B%26lambda%3B_2%5E100%0A%5Cend%7Balign%2A%7D%0A)
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/108013583-fe4d5780-6fd9-11eb-9a5c-738d3feb49b7.png">
+
+
+second example:
+
+find the inverse and eigenvalues and determinant of matrix A.  describe the eigenvector matrix X that gives X<sup>-1</sup>AX = &Lambda; 
+
+A = 5 * eye(4) - ones(4) = 4s down the diagonal and -1's everywhere else
+
+the eigenvalues of eye = 1,1,1,1  
+the eigenvalues of 5 * eye = 5,5,5,5  
+
+the eigenvalues of ones:   
+its rank is certainly 1  
+so 3 eigenvalues are zero  
+the trace is 4  
+so the 4th eigenvalue is 4
+
+det A = det ( 5 • eye(4) ) - det ( ones(4) ) =  5•5•5•5 - 4•0•0•0 = 1•5•5•5 = difference of the products of eigenvalues  
+
+the determinant of A is 125 = 1 • 5 • 5 • 5 
+
+A - &lambda;<sub>1</sub> • I = 4 * eye(4) - ones(4) = 3s down diagonal and -1s everywhere else.  the diagonal is reduced by 1 because &lambda;<sub>1</sub> = 1.   
+thus, the eigenvector for &lambda;<sub>1</sub> = 1 is x<sub>1</sub> =  (1,1,1,1) or (c,c,c,c).
+the other 3 eigenvectors for &lambda;s<sub>2</sub>,&lambda;s<sub>3</sub>, &lambda;s<sub>4</sub> = 5 are perpendicular to x<sub>1</sub> because A is symmetric.  The nicest eigenvector matrix X is the symmetric orthogonal matrix, Hadamard matrix H.  The (1/2) factor produces unit column vectors.  H<sup>T</sup> = H<sup>-1</sup>
+
+the eigenvalues of A<sup>-1</sup> are 1, 1/5, 1/5, 1/5 = 1/&lambda;<sub>1</sub>, 1/&lambda;<sub>2</sub>, 1/&lambda;<sub>3</sub>, 1/&lambda;<sub>4</sub>.
+
+the eigenvectors are not changed by inversion.  so A<sup>-1</sup> = H&Lambda;<sup>-1</sup>H<sup>-1</sup>.  
+
+A<sup>-1</sup> = (1/5) • ( (eye(4) + ones(4) ) which has 2s down diagonal and 1s everywhere else. 
+
+A is a rank-one change from 5•I = 5*eye(4)   
+so A<sup>-1</sup> is a rank one change from I / 5
+
+
+![\begin{align*}
+A = &
+5*\begin{bmatrix}
+1&&&\\
+&1&&\\
+&&1&\\
+&&&1
+\end{bmatrix}-
+\begin{bmatrix}
+1&1&1&1\\
+1&1&1&1\\
+1&1&1&1\\
+1&1&1&1
+\end{bmatrix}=
+\begin{bmatrix}
++4&-1&-1&-1\\
+-1&+4&-1&-1\\
+-1&-1&+4&-1\\
+-1&-1&-1&+4
+\end{bmatrix}\\
+X = &
+\frac{1}{2}*\begin{bmatrix}
++1&+1&+1&+1\\
++1&-1&+1&-1\\
++1&+1&-1&-1\\
++1&-1&-1&+1
+\end{bmatrix} = H^T =H^{-1}\\
+A^{-1}= & 
+\frac{1}{5}*\begin{bmatrix}
+2&1&1&1\\
+1&2&1&1\\
+1&1&2&1\\
+1&1&1&2
+\end{bmatrix} 
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%3D+%26%0A5%2A%5Cbegin%7Bbmatrix%7D%0A1%26%26%26%5C%5C%0A%261%26%26%5C%5C%0A%26%261%26%5C%5C%0A%26%26%261%0A%5Cend%7Bbmatrix%7D-%0A%5Cbegin%7Bbmatrix%7D%0A1%261%261%261%5C%5C%0A1%261%261%261%5C%5C%0A1%261%261%261%5C%5C%0A1%261%261%261%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A%2B4%26-1%26-1%26-1%5C%5C%0A-1%26%2B4%26-1%26-1%5C%5C%0A-1%26-1%26%2B4%26-1%5C%5C%0A-1%26-1%26-1%26%2B4%0A%5Cend%7Bbmatrix%7D%5C%5C%0AX+%3D+%26%0A%5Cfrac%7B1%7D%7B2%7D%2A%5Cbegin%7Bbmatrix%7D%0A%2B1%26%2B1%26%2B1%26%2B1%5C%5C%0A%2B1%26-1%26%2B1%26-1%5C%5C%0A%2B1%26%2B1%26-1%26-1%5C%5C%0A%2B1%26-1%26-1%26%2B1%0A%5Cend%7Bbmatrix%7D+%3D+H%5ET+%3DH%5E%7B-1%7D%5C%5C%0AA%5E%7B-1%7D%3D+%26+%0A%5Cfrac%7B1%7D%7B5%7D%2A%5Cbegin%7Bbmatrix%7D%0A2%261%261%261%5C%5C%0A1%262%261%261%5C%5C%0A1%261%262%261%5C%5C%0A1%261%261%262%0A%5Cend%7Bbmatrix%7D+%0A%5Cend%7Balign%2A%7D%0A)
