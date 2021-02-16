@@ -1342,11 +1342,11 @@ u<sub>100</sub> = [L<sub>100+1</sub>, L<sub>100</sub>] = [L<sub>100+1</sub>,L<su
 
 u<sub>1</sub> = [3,1] = c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub> 
 
-with x<sub>1</sub> = [&lambda;<sub>1</sub>, 1],  x<sub>2</sub> = [&lambda;<sub>2</sub>, 2], &lambda;<sub>1</sub> = (1+√5)/2, and &lambda;<sub>2</sub> = (1-√5)/2, c<sub>1</sub> = &lambda;<sub>1</sub> and c<sub>2</sub> = &lambda;<sub>2</sub>.
+with x<sub>1</sub> = [&lambda;<sub>1</sub>, 1],  x<sub>2</sub> = [&lambda;<sub>2</sub>, 1], &lambda;<sub>1</sub> = (1+√5)/2, and &lambda;<sub>2</sub> = (1-√5)/2, solve for c<sub>1</sub> = &lambda;<sub>1</sub> and c<sub>2</sub> = &lambda;<sub>2</sub>.
 
 so:
 
-u<sub>1</sub> = [3,1] = &lambda;<sub>1</sub>x<sub>1</sub> + &lambda;<sub>2</sub>x<sub>2</sub> = [ [&lambda;<sub>1</sub><sup>2</sup> + &lambda;<sub>2</sub><sup>2</sup>], [&lambda;<sub>1</sub> + &lambda;<sub>2</sub>] ] = [ [trace<sub>A<sup>2</sup></sub>], [trace<sub>A</sub>] = [3,1] = u<sub>1</sub>
+u<sub>1</sub> = [3,1] = c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub>  = &lambda;<sub>1</sub>x<sub>1</sub> + &lambda;<sub>2</sub>x<sub>2</sub> = [ [&lambda;<sub>1</sub><sup>2</sup> + &lambda;<sub>2</sub><sup>2</sup>], [&lambda;<sub>1</sub> + &lambda;<sub>2</sub>] ] = [ [trace<sub>A<sup>2</sup></sub>], [trace<sub>A</sub>] = [3,1] = u<sub>1</sub>
 
 cX, c = X<sup>-1</sup>u<sub>1</sub> and so c can replace X<sup>-1</sup>u<sub>1</sub> in last equation.
 
