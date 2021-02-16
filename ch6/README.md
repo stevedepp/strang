@@ -1340,9 +1340,8 @@ the eigenvalues and eigenvectors of A = [ [ 1, 1 ], [1, 0 ] ] still come from de
 
 u<sub>1</sub> = [L<sub>2</sub>, L<sub>1</sub>] = [3,1] = A<sup>0</sup>u<sub>1</sub>   
 u<sub>k</sub> = [L<sub>k+1</sub>, L<sub>k</sub>] = [L<sub>k+1</sub>,L<sub>k</sub>] = A<sup>k-1</sup>u<sub>1</sub>  
-u<sub>100</sub> = [L<sub>100+1</sub>, L<sub>100</sub>] = [L<sub>100+1</sub>,L<sub>100</sub>] = A<sup>100-1</sup>u<sub>1</sub> = X&Lambda;<sup>99</sup>X<sup>-1</sup>u<sub>1</sub>
-
-u<sub>1</sub> = [3,1] = c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub> 
+u<sub>100</sub> = [L<sub>100+1</sub>, L<sub>100</sub>] = [L<sub>100+1</sub>,L<sub>100</sub>] = A<sup>100-1</sup>u<sub>1</sub> = X&Lambda;<sup>99</sup>X<sup>-1</sup>u<sub>1</sub> = X&Lambda;<sup>99</sup>c  
+because u<sub>1</sub> = [3,1] = c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub> = Xc, and so c = X<sup>-1</sup>u<sub>1</sub>  
 
 with x<sub>1</sub> = [&lambda;<sub>1</sub>, 1],  x<sub>2</sub> = [&lambda;<sub>2</sub>, 1], &lambda;<sub>1</sub> = (1+√5)/2, and &lambda;<sub>2</sub> = (1-√5)/2, solve for c<sub>1</sub> = &lambda;<sub>1</sub> and c<sub>2</sub> = &lambda;<sub>2</sub>.
 
