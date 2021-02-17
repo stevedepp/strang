@@ -1757,8 +1757,24 @@ AB = X&Lambda;<sub>1</sub>X<sup>-1</sup>X&Lambda;<sub>2</sub>X<sup>-1</sup> = X&
 
 works on A not U as well
 
+34.  the nth power of rotation through &theta; is a rotation through n &theta;
 
+prove this formular by diagonalizing A = X&Lambda;X<sup>-1</sup>.
 
+the eigenvalues are:  
+&lambda;<sub>1</sub> = e<sup>i&theta;</sup>  
+&lambda;<sub>2</sub> = e<sup>-i&theta;</sup>  
+
+verify the trace = 2cos&theta; and determinant = 1
+
+the eigenvector columns are:
+(1,i).T and (i,1).T
+
+Euler's formular is:  
+e<sup>i&theta;</sup> = cos&theta; + isin&theta;  
+e<sup>-i&theta;</sup> = cos&theta; - isin&theta;
+
+geometrically then, n rotations by &theta; give one rotation through n&theta;:
 
 ![\begin{align*}
 A&=
