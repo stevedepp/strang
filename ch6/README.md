@@ -1981,3 +1981,11 @@ j•z = j•(cos theta + j•sin theta) = j•cos theta - sin theta)
 j*z = j*e**( j*theta)
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108246606-a0c32300-711f-11eb-80cb-966e6855457e.png">
+
+
+34.  the transpose of A = X&Lambda;X<sup>-1</sup> is A<sup>T</sup> = (X<sup>-1</sup>)<sup>T</sup>&Lambda;X<sup>T</sup>.  
+the eigenvectors y in A<sup>T</sup> = &lamnda;y are the columns of that matrix (X<sup>-1</sup>)<sup>T</sup>.  
+they are clled the 'left eigenvectors' of A because y<sup>T</sup>A = &lambda;y<sup>T</sup>.  
+how do you multiply matrices to find the formula for A.  
+
+A = X&Lambda;X<sup>-1</sup> = &lambda;<sub>1</sub>x<sub>1</sub>y<sub>1</sub><sup>T</sup> + ... + &lambda;<sub>n</sub>x<sub>n</sub>y<sub>n</sub><sup>T</sup>
