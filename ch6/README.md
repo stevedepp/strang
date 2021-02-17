@@ -1636,3 +1636,123 @@ c_1&c_2&c_3\\
 
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/108109458-e4565800-705f-11eb-8e15-a1721e8faf3b.png">
 
+20.  for diagonalizable matrices A = X&Lambda;X<sup>-1</sup>, determinants of both sides prove that det A = det &Lambda; = &lambda;<sub>1</sub>&lambda;<sub>2</sub>...&lambda;<sub>n-1</sub>&lambda;<sub>n</sub>:
+
+det A = (det X)(det&Lambda;)(det X<sup>-1</sup>) = det&Lambda; = &lambda;<sub>1</sub>&lambda;<sub>2</sub>...&lambda;<sub>n-1</sub>&lambda;<sub>n</sub> because (det X)(det X<sup>-1</sup>)=1 since X has independent columns and because det X = 1/(det X).
+
+trace XY = trace YX
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108115937-dbb64f80-7068-11eb-9b11-e0d693c3bec7.png">
+
+now if choose Y = &Lambda;X<sup>-1</sup>, then X&Lambda;X<sup>-1</sup> has the same trace as &Lambda;X<sup>-1</sup>X = &Lambda; which proves that the trace of A = trace of &Lambda; = sum of eigenvalues.
+
+again this assume that A is diagonalizable.  
+
+for a general m x m matrix the product AB has elements given by ∑<sub>k=1</sub><sup>m</sup>a<sub>ik</sub>b<sub>kj</sub> and the product BA has the terms given by ∑<sub>k=1</sub><sup>m</sup>b<sub>ik</sub>a<sub>kj</sub>.  so the trace AB is given by summing diagonal terms of AB = Tr(AB) = ∑<sub>i=1</sub><sup>m</sup>(∑<sub>k=1</sub><sup>m</sup>a<sub>ik</sub>b<sub>ki</sub>) while the trace BA is given by summing the diagonal terms of BA or Tr(BA) = ∑<sub>i=1</sub><sup>m</sup>(∑<sub>k=1</sub><sup>m</sup>b<sub>ik</sub>b<sub>ki</sub>) and these expressions are euqal which shows the traces are equal. 
+
+
+if A = X&Lambda;X<sup>-1</sup> and B is blockform as shown, then decompose (factor) B as shown.   
+thus, eigenvalue matrix for block represents A and 2A with &Lambda; and 2&Lambda; and the eigenvector matrix of B is their respective X's which are the same since A and 2A have the same eigenvectors. 
+
+![\begin{align*}
+B=&
+\begin{bmatrix}
+A&0\\
+0&2A
+\end{bmatrix}=
+\begin{bmatrix}
+X&Lambda;X^{-1}&0\\
+0&X(2&Lambda;)X^{-1}
+\end{bmatrix}=
+\begin{bmatrix}
+X&0\\
+0&X
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;&0\\
+0&2&lambda;\\
+\end{bmatrix}
+\begin{bmatrix}
+X^{-1}&0\\
+0&X^{-1}
+\end{bmatrix} = 
+\begin{bmatrix}
+X&0\\
+0&X
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;X^{-1}&0\\
+0&2&lambda;X^{-1}\\
+\end{bmatrix}=
+\begin{bmatrix}
+X&lambda;X^{-1}&0\\
+0&X(2&lambda;)X^{-1}\\
+\end{bmatrix}=
+\begin{bmatrix}
+A&0\\
+0&2A
+\end{bmatrix}\\
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AB%3D%26%0A%5Cbegin%7Bbmatrix%7D%0AA%260%5C%5C%0A0%262A%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AX%26Lambda%3BX%5E%7B-1%7D%260%5C%5C%0A0%26X%282%26Lambda%3B%29X%5E%7B-1%7D%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AX%260%5C%5C%0A0%26X%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B%260%5C%5C%0A0%262%26lambda%3B%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AX%5E%7B-1%7D%260%5C%5C%0A0%26X%5E%7B-1%7D%0A%5Cend%7Bbmatrix%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0AX%260%5C%5C%0A0%26X%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3BX%5E%7B-1%7D%260%5C%5C%0A0%262%26lambda%3BX%5E%7B-1%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AX%26lambda%3BX%5E%7B-1%7D%260%5C%5C%0A0%26X%282%26lambda%3B%29X%5E%7B-1%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AA%260%5C%5C%0A0%262A%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cend%7Balign%2A%7D)
+
+24. for all 4 x 4 matrices A that are diagonalized by the same fixed eigenvector matrix X, A forms a subspace = cA and A<sub>1</sub> + A<sub>2</sub> for which all have the same X.  
+
+S set = { A | X&Lambda;X<sup>-1</sup>} for a given X.  then if A<sub>1</sub> and A<sub>2</sub> are in S we know:  
+
+A<sub>1</sub> + A<sub>2</sub> = X&Lambda;<sub>1</sub>X<sup>-1</sup> + X&Lambda;<sub>2</sub>X<sup>-1</sup> = X(&Lambda;<sub>1</sub> + &Lambda;<sub>2</sub>)X<sup>-1</sup>
+
+A<sub>1</sub> + A<sub>2</sub> is in S  
+if A<sub>1</sub> element of S then cA<sub>1</sub> = X&(cLambda;<sub>1</sub>)X<sup>-1</sup> is element of S.  
+S is a subspace thusly.  
+
+
+
+when X = Identity, the As with those eigenvectors give the subspace of diagonal matrices.  the dim of that matrix space is 4 since the matrices are 4 x 4.  
+
+25.  A<sup>2</sup> = A  
+A multiplies each column of A  
+which of the 4 subspaces contains the eigenvectors with &lambda; = 1?  [column space of A]
+which subspace contains the eigenvectors with &lambda; = 0?  [null space of A]
+from the dim of those subspaces, A has a full set of independent eigenvectors so the matrix A<sup>2</sup> = A can be diagonalized.   
+
+the column space of A contains the eigenvectors with &lambda; = 1: the columns of A has dim = n = number of columns of X since in order to be diagonalized, X's columns must be independent.  
+
+a &lambda; = 0 implies that Ax = 0 when x is not = zero.which is the null space of A or else it implies that A is singular which it is not.  A is not singular since (A-&lambda;I)x = 0 but (A-zero•I)x ≠ 0 which would prevents singularity.   
+so &lambda; ≠ 0 imparts invertibility.  
+and &lambda; = 0 only occurs in null space not in column space. 
+
+wax:  
+suppose A<sup>2</sup> = A ...  
+then the column space of A contains eigenvectors with &lambda; = 1  
+in fact, all vectors in column space of A are eigenvectors with eigenvalues = 1.  
+the vectors with &lambda; = 0 lie in the null space and from the 1st fundamental theorem of linear algebra, the dim of the col space plus dim of null space = n.  [col space contains independent columns; null space contains dependent ones]  
+A will be diagonalizable since we guaranteed to have enough n eigenvectors. 
+
+if A has cols x<sub>1</sub> ... x<sub>n</sub> then col by col A<sup>2</sup>=A means every Ax<sub>i</sub> = x<sub>i<sub>.  {because x = A in that]  All vectors in col space combinations of the x<sub>i</sub> columns are eigenvectors with &lambda; = 1.  
+always null space has &lambda; = 0.  A might have dependent columns; so there could be less than n eigenvectors with &lambda; = 1.  dimenions of those spaces columns and null add to n.
+
+26.  Ax = &lambda;x 
+if &lambda; = 0 then x is in the null space of A.
+if &lambda; ≠ 0, then x is in the columns space of A.  
+those spaces have dim n-r and r totalling n.   
+if they total n, why doesnt every square matrix have n linearly independent eigenvectors?
+
+null space and column space overlap.
+[null space is the set of coefficients that combine the columns and column space is the columns]
+x that is the null space coefficients can be in the column space too.  
+there might also NOT be r independent eigenvectors in the column space. 
+
+when A has non-empty null space, then n-r > 0 non linearly independent eigenvectors.  
+if x is not in the null space of A, there is no guarantee that Ax = &lambda;x for any constant &lambda;   
+thus, the r vectors in the column space of A may have no basis such that Ax = &lambda;x.  
+In addiont the null space and column space can overlap if one of the null space vectors is in fact a column of the original A. 
+
+[eigenvectors are in the null space of A-&lambda;•I but if &lambda; = 0 then that eigenvector is in the null space of A too]
+
+29. the same X diagonalizes both A and B. they have the same eigenvectors in A = X&Lambda;<sub>1</sub>X<sup>-1</sup> and B = X&Lambda;<sub>2</sub>X<sup>-1</sup>.  prove AB = BA.
+AB = X&Lambda;<sub>1</sub>X<sup>-1</sup>X&Lambda;<sub>2</sub>X<sup>-1</sup> = X&Lambda;<sub>1</sub>&Lambda;<sub>2</sub>X<sup>-1</sup> = X&Lambda;<sub>2</sub>&Lambda;<sub>1</sub>X<sup>-1</sup> = X&Lambda;<sub>2</sub>X<sup>-1</sup>X&Lambda;<sub>1</sub>X<sup>-1</sup> = BA since diagonal matrices commute: &Lambda;<sub>1</sub>&Lambda;<sub>2</sub> = &Lambda;<sub>2</sub>&Lambda;<sub>1</sub>
+
+30. if A = U as shown and determinant of A - &lambda; • I = (&lambda; - a)(&lambda; - d) then Cayley Hamilton Theorem says that (A - a • I)(A - b • I) = 0 or that the respective (A - &lambda;<sub>1</sub> • I) and (A - &lambda;<sub>2</sub> • I) are perpendicular which makes sense since we have been saying that this diagonalization creates perpendicular axes.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108156630-03c8a180-70af-11eb-8c51-c794b0f562a7.png">
+
+works on A not U as well
