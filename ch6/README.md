@@ -1944,3 +1944,40 @@ i*e^{ik\theta}+i*e^{-ik\theta}&-e^{ik\theta}+e^{-ik\theta}\\
 \sin^k\theta&\cos^k\theta
 \end{bmatrix}
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Acos%5Ctheta%26-sin%5Ctheta%5C%5C%0Asin%5Ctheta%26cos%5Ctheta%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Adeterminant%3A%26%0A%5C%5C%0A%7CA-%26lambda%3BI%7C%26%3D%0Adet%5Cbegin%7Bbmatrix%7D%0Acos%5Ctheta-%5Clambda%26-sin%5Ctheta%5C%5C%0Asin%5Ctheta%26cos%5Ctheta-%5Clambda%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%5Clambda%5E2+%2B+cos%5E2%5Ctheta+-+2%26lambda%3Bcos%5Ctheta-sin%5E2%5Ctheta+%5C%5C%0A%26%3D%28%5Clambda+-+%28cos%5Ctheta+%2B+isin%5Ctheta%29%29%28%5Clambda+-%28cos%5Ctheta+-+isin%5Ctheta%29%29%5C%5C%0A%5C%5C%0Abecause%26%5C%5C%0A%26%3D%5Clambda%5E2+-%5Clambda%28cos%5Ctheta+%2B+isin%5Ctheta%29-%5Clambda%28cos%5Ctheta+-+isin%5Ctheta%29+%2B+%28cos%5Ctheta%2Bsin%5Ctheta%29%28cos%5Ctheta-sin%5Ctheta%29%5C%5C%0A%26%3D%5Clambda%5E2+-2%26lambda%3Bcos%5Ctheta+-+i%26lambda%3Bsin%5Ctheta+%2B+i%26lambda%3Bsin%5Ctheta%2B+cos%5E2%5Ctheta-sin%5E2%5Ctheta%5C%5C%0A%26%3D%5Clambda%5E2+-2%26lambda%3Bcos%5Ctheta+%2B+cos%5E2%5Ctheta-sin%5E2%5Ctheta%5C%5C%0A%26%3D%5Clambda%5E2+%2B+cos%5E2%5Ctheta-2%26lambda%3Bcos%5Ctheta+-sin%5E2%5Ctheta%5C%5C%0A%5C%5C%0Aeigenvalues%3A%26%5C%5C%0A%5C%5C%0A%7CA-%26lambda%3BI%7C%26%3D0%5C%5C%0Awhere%26%5C%5C%0A%5Clambda_1%26%3D%28cos%5Ctheta+%2B+i+sin%5Ctheta%29+%3D+e%5E%7Bi%5Ctheta%7D%5C%5C%0A%5Clambda_2%26%3D%28cos%5Ctheta+-+i+sin%5Ctheta%29+%3De%5E%7B-i%5Ctheta%7D%5C%5C%0A%5C%5C%0Aconfirming%26%5C%5C%0Atrace%26%5C%5C%0A%5Clambda_1%2B%5Clambda_2%26%3De%5E%7Bi%5Ctheta%7D%2Be%5E%7B-i%5Ctheta%7D%3D2cos%5Ctheta+%3D+d_1%2Bd_2%5C%5C%0A%5C%5C%0Adeterminant%26%5C%5C%0A%5Clambda_1%5Clambda_2%26%3Dcos%5E2%5Ctheta-%28-sin%5E2theta%29%3Dcos%5E2%5Ctheta%2Bsin%5E2theta%3D1%5C%5C%0A%5C%5C%0Aeigenvectors%3A%5C%5C%0A%5C%5C%0Asince%26%5C%5C%0AA-%26lambda%3B_1I%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Acos%5Ctheta-e%5E%7Bi%5Ctheta%7D%26-sin%5Ctheta%5C%5C%0Asin%5Ctheta%26cos%5Ctheta-e%5E%7Bi%5Ctheta%7D%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Acos%5Ctheta-%28cos%5Ctheta+%2B+i+sin%5Ctheta%29%26-sin%5Ctheta%5C%5C%0Asin%5Ctheta%26cos%5Ctheta-%28cos%5Ctheta+%2B+i+sin%5Ctheta%29%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0A-i+sin%5Ctheta%26-sin%5Ctheta%5C%5C%0Asin%5Ctheta%26-i+sin%5Ctheta%0A%5Cend%7Bbmatrix%7D%5C%5C%0Ax_1%26%3D%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-i%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Aand%26%5C%5C%0AA-%26lambda%3B_2I%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Acos%5Ctheta-e%5E%7B-i%5Ctheta%7D%26-sin%5Ctheta%5C%5C%0Asin%5Ctheta%26cos%5Ctheta-e%5E%7B-i%5Ctheta%7D%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Acos%5Ctheta-%28cos%5Ctheta+-+i+sin%5Ctheta%29%26-sin%5Ctheta%5C%5C%0Asin%5Ctheta%26cos%5Ctheta-%28cos%5Ctheta+-+i+sin%5Ctheta%29%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0A%2Bi+sin%5Ctheta%26-sin%5Ctheta%5C%5C%0Asin%5Ctheta%26%2Bi+sin%5Ctheta%0A%5Cend%7Bbmatrix%7D%5C%5C%0Ax_1%26%3D%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0Ai%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Adiagonalizing%3A%26%0A%5C%5C%0AX%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A-i%26i%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5CLambda%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7Bi%5Ctheta%7D%26%5C%5C%0A%26e%5E%7B-i%5Ctheta%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0AX%5E%7B-1%7D%26%3D%0A%5Cfrac%7B1%7D%7B2i%7D%5Cbegin%7Bbmatrix%7D%0Ai%26-1%5C%5C%0Ai%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Apowers%26%5C%5C%0A%5C%5C%0AA%5Ek%26%3DX%26Lambda%3BX%5E%7B-1%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A-i%26i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7Bi%5Ctheta%7D%26%5C%5C%0A%26e%5E%7B-i%5Ctheta%7D%0A%5Cend%7Bbmatrix%7D%5Ek%0A%5Cfrac%7B1%7D%7B2i%7D%5Cbegin%7Bbmatrix%7D%0Ai%26-1%5C%5C%0Ai%261%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A-i%26i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7Bik%5Ctheta%7D%26%5C%5C%0A%26e%5E%7B-ik%5Ctheta%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B2i%7D%5Cbegin%7Bbmatrix%7D%0Ai%26-1%5C%5C%0Ai%261%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%2Ae%5E%7Bik%5Ctheta%7D%261%2Ae%5E%7B-ik%5Ctheta%7D%5C%5C%0A-i%2Ae%5E%7Bik%5Ctheta%7D%26i%2Ae%5E%7B-ik%5Ctheta%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B2i%7D%5Cbegin%7Bbmatrix%7D%0Ai%26-1%5C%5C%0Ai%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%26%3D+%0A%5Cfrac%7B1%7D%7B2i%7D%0A%5Cbegin%7Bbmatrix%7D%0Ai%2A1%2Ae%5E%7Bik%5Ctheta%7D%2Bi%2A1%2Ae%5E%7B-ik%5Ctheta%7D%26-1%2A1%2Ae%5E%7Bik%5Ctheta%7D%2B1%2A1%2Ae%5E%7B-ik%5Ctheta%7D%5C%5C%0Ai%2A%28-i%29%2Ae%5E%7Bik%5Ctheta%7D%2Bi%2Ai%2Ae%5E%7B-ik%5Ctheta%7D%26%28-1%29%2A-i%2Ae%5E%7Bik%5Ctheta%7D%2B1%2Ai%2Ae%5E%7B-ik%5Ctheta%7D%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26%3D+%0A%5Cfrac%7B1%7D%7B2i%7D%0A%5Cbegin%7Bbmatrix%7D%0Ai%2Ae%5E%7Bik%5Ctheta%7D%2Bi%2Ae%5E%7B-ik%5Ctheta%7D%26-e%5E%7Bik%5Ctheta%7D%2Be%5E%7B-ik%5Ctheta%7D%5C%5C%0A%28%2B1%29%2Ae%5E%7Bik%5Ctheta%7D%2B%28-1%29%2Ae%5E%7B-ik%5Ctheta%7D%26i%2Ae%5E%7Bik%5Ctheta%7D%2Bi%2Ae%5E%7B-ik%5Ctheta%7D%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7Bi%2Ae%5E%7Bik%5Ctheta%7D%2Bi%2Ae%5E%7B-ik%5Ctheta%7D%7D%7B2i%7D%26%5Cfrac%7B-e%5E%7Bik%5Ctheta%7D%2Be%5E%7B-ik%5Ctheta%7D%7D%7B2i%7D%5C%5C%0A%5Cfrac%7B%28%2B1%29%2Ae%5E%7Bik%5Ctheta%7D%2B%28-1%29%2Ae%5E%7B-ik%5Ctheta%7D%7D%7B2i%7D%26%5Cfrac%7Bi%2Ae%5E%7Bik%5Ctheta%7D%2Bi%2Ae%5E%7B-ik%5Ctheta%7D%7D%7B2i%7D%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7Be%5E%7Bik%5Ctheta%7D%2Be%5E%7B-ik%5Ctheta%7D%7D%7B2%7D%26%5Cfrac%7Be%5E%7B-ik%5Ctheta%7D-e%5E%7Bik%5Ctheta%7D%7D%7B2i%7D%5C%5C%0A%5Cfrac%7Be%5E%7Bik%5Ctheta%7D-e%5E%7B-ik%5Ctheta%7D%7D%7B2i%7D%26%5Cfrac%7Be%5E%7Bik%5Ctheta%7D%2Be%5E%7B-ik%5Ctheta%7D%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B%28cos%5Ek%5Ctheta%2Bisin%5Ek%5Ctheta%29%2B%28cos%5Ek%5Ctheta-isin%5Ek%5Ctheta%29%7D%7B2%7D%26%5Cfrac%7B%28cos%5Ek%5Ctheta-isin%5Ek%5Ctheta%29-%28cos%5Ek%5Ctheta%2Bisin%5Ek%5Ctheta%29%7D%7B2i%7D%5C%5C%0A%5Cfrac%7B%28cos%5Ek%5Ctheta%2Bisin%5Ek%5Ctheta%29-%28cos%5Ek%5Ctheta-isin%5Ek%5Ctheta%29%7D%7B2i%7D%26%5Cfrac%7B%28cos%5Ek%5Ctheta%2Bisin%5Ek%5Ctheta%29%2B%28cos%5Ek%5Ctheta-isin%5Ek%5Ctheta%29%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B2cos%5Ek%5Ctheta%7D%7B2%7D%26%5Cfrac%7B-2isin%5Ek%5Ctheta%7D%7B2i%7D%5C%5C%0A%5Cfrac%7B2isin%5Ek%5Ctheta%7D%7B2i%7D%26%5Cfrac%7B2cos%5Ek%5Ctheta%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Ccos%5Ek%5Ctheta%26-sin%5Ek%5Ctheta%5C%5C%0A%5Csin%5Ek%5Ctheta%26%5Ccos%5Ek%5Ctheta%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+coordinates in e:
+
+imaginary on the vertical (y) axis = sin theta 
+real on the horizontal (x) axis = cos theta
+
+j = (-1)**.5
+
+unit circle:
+
+z = cos theta + j•sin theta
+
+variable r circle
+
+z = r•cos theta + j•r•sin theta
+
+the Euler equations:
+
+e<sup>j&theta;</sup> = cos&theta; + j sin&theta;
+
+e<sup>-j&theta;</sup> = cos&theta; - j sin&theta;
+
+the two LHS sum to 1
+
+e<sup>j&theta;</sup> + e<sup>-j&theta;</sup> = 1
+
+the two RHS sum to 1
+
+cos&theta; + j sin&theta; + cos&theta; - j sin&theta; = 1
+
+effect of j = 90 degrees: (also shown in example below)
+
+j•z = j•(cos theta + j•sin theta) = j•cos theta - sin theta)
+
+j*z = j*e**( j*theta)
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108246606-a0c32300-711f-11eb-80cb-966e6855457e.png">
