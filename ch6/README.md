@@ -1989,3 +1989,18 @@ they are clled the 'left eigenvectors' of A because y<sup>T</sup>A = &lambda;y<s
 how do you multiply matrices to find the formula for A.  
 
 A = X&Lambda;X<sup>-1</sup> = &lambda;<sub>1</sub>x<sub>1</sub>y<sub>1</sub><sup>T</sup> + ... + &lambda;<sub>n</sub>x<sub>n</sub>y<sub>n</sub><sup>T</sup>
+
+
+section 6.2
+
+systems of differential equations
+
+principles:
+
+1. if Ax = &lambda;x and looking to solve ∂u/∂t = Au = &lambda;u by finding u, then u(t) = e<sup>&lambda;t</sup> works.  Each &lambda; and x give a solution e<sup>&lambda;t</sup>x to satisfy the diagonalization procedures discussed in previous section: Ax = &lambda;x --> ∂u/∂t = Au = e<sup>&lambda;t</sup>x
+
+2. if Ax = X&Lambda;X<sup>-1</sup> then [as done in previous section, express any u(t) as a function acting on the initial value u(0). &Lambda; is the function A and u(0) is denominated as a function = linear combination of the eigenvectors, X.  Remember, u(0) = XC and then X<sup>-1</sup>u(0) = C where C is inserted into X&Lambda;X<sup>-1</sup>u(0) replacing X<sup>-1</sup>u(0).
+
+u(t) = e<sup>At</sup> = Xe<sup>&Lambda;t</sup>X<sup>-1</sup>u(0) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>x<sub>1</sub> + c<sub>n</sub>e<sup>&lambda;<sub>n</sub>t</sup>x<sub>n</sub> 
+
+
