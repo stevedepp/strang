@@ -1995,12 +1995,109 @@ section 6.2
 
 systems of differential equations
 
+starting with the example 2 which shows where this chapter is heading.  otherwise it is too abstract and wandering up front to follow.  
+
+first a quick review:   
+
+this chapter started with Ax = &lambda;x  where Ax and &lambda;x are scalars and Asup>k</sup>x = &lambda;<sup>k</sup>x. then the chapter moved to vector u<sub>k</sup> = A<sup>k</sup>u<sub>0</sub> = vector =  X&Lambda;<sup>k</sup>X<sup>-1</sup>u<sub>0</sub> and put u in terms of a linear combination of X's columns, the eigenvectors.  So until now, the function has been linear constants of A multiplying scalar x or vector u.    Here it is function u of t where A is again constants that act on t in function u.   taking the derivative of u with respect to t ∂u/∂t results in the constant A times u which only occurs when u is the exponential constant to the power of At.  t is regarded as constant.  since ∂u/∂t can only be solved by e<sup>At</sup> we are replacing ∂u/∂t = e<sup>At</sup> with ∂u/∂t = X<supe<sup>&Lambda;t</sup>X<sup>-1<sup> and then making it a function of the eigenvectors not t by expressing the known value u<sub>0</sub>, where t=0 in the exponent, as a linear combination of the eigenvectors x and eigenvalues &lambda;:
+
+example 2:
+
+solve ∂u/∂t = Au, that is find the function u, knowing the constant A, the eigenvalues and eigenvectors of A and the initial value of the function u aka u<sub>0</sub>:
+
+- eigenvalues of A are &lambda;<sub>1</sub>, &lambda;<sub>2</sub>, &lambda;<sub>3</sub> are 1, 2, 3.     
+- eigenvaectors of A are x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> are (1,0,0)<sup>T</sup>, (1,1,0)<sup>T</sup>, (1,1,1)<sup>T</sup>.   
+- the initial value of u is u<sub>0</sub> = (9,7,4)<sup>T</sup>.
+
+we know the derivative of function u with respect to t, ∂u/∂t equals some constant coefficient matrix A times variable u.    
+the only function u whose derivative is a constant times that function is u = e<sup>At</sup> whose ∂u/∂t = Ae<sup>At</sup>.     
+
+the goal is to replace A with eigenvalues and eigenvectors. until now this has meant Ax = &lambda;x
+step 1: vector u(0) = (9,7,4)<sup>T</sup> is 2(x<sub>1</sub>) + 3((x<sub>2</sub>) + 4((x<sub>3</sub>) = 2(e<sup>&lambda;<sub>1</sub>(t=0)</sup>)(x<sub>1</sub>) + 3(e<sup>&lambda;<sub>2</sub>(t=0)</sup>)((x<sub>2</sub>) + 4(e<sup>&lambda;<sub>3</sub>(t=0)</sup>)((x<sub>3</sub>) = (c<sub>1</sub>)(e<sup>&lambda;<sub>1</sub>(t=0)</sup>)((x<sub>1</sub>) + (c<sub>2</sub>)(e<sup>&lambda;<sub>2</sub>(t=0)</sup>)((x<sub>2</sub>) + (c<sub>3</sub>)(e<sup>&lambda;<sub>3</sub>(t=0)</sup>)((x<sub>3</sub>)
+
+where of course c<sub>1</sub> = 2, c<sub>2</sub> = 3, c<sub>3</sub> = 4
+
+very helpful link:
+http://heath.cs.illinois.edu/scicomp/notes/cs450_chapt09.pdf
+
+then this one which has the example in this book
+http://web.mit.edu/18.06/www/Spring17/Matrix-Exponentials.pdf
+
+
+
+
+
 principles:
 
 1. if Ax = &lambda;x and looking to solve ∂u/∂t = Au = &lambda;u by finding u, then u(t) = e<sup>&lambda;t</sup> works.  Each &lambda; and x give a solution e<sup>&lambda;t</sup>x to satisfy the diagonalization procedures discussed in previous section: Ax = &lambda;x --> ∂u/∂t = Au = e<sup>&lambda;t</sup>x
 
 2. if Ax = X&Lambda;X<sup>-1</sup> then [as done in previous section, express any u(t) as a function acting on the initial value u(0). &Lambda; is the function A and u(0) is denominated as a function = linear combination of the eigenvectors, X.  Remember, u(0) = XC and then X<sup>-1</sup>u(0) = C where C is inserted into X&Lambda;X<sup>-1</sup>u(0) replacing X<sup>-1</sup>u(0).
 
-u(t) = e<sup>At</sup> = Xe<sup>&Lambda;t</sup>X<sup>-1</sup>u(0) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>x<sub>1</sub> + c<sub>n</sub>e<sup>&lambda;<sub>n</sub>t</sup>x<sub>n</sub> 
+u(t) = e<sup>At</sup> = Xe<sup>&Lambda;t</sup>X<sup>-1</sup>u(0) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>x<sub>1</sub> + ... + c<sub>n</sub>e<sup>&lambda;<sub>n</sub>t</sup>x<sub>n</sub> 
+
+3. matrix A is stable and u(t) --> 0 and e<sup>At</sup> --> 0 when all eigenvalues of A have a real part < 0.
+
+4. matrix exponential e<sup>At</sup> = I + At + ... + (At)<sup>n</sup> / n! + ... = Xe<sup>&Lambda;t</sup>X<sup>-1<sup> if A is diagonalizable. 
+
+[I + At + ... + (At)<sup>n</sup> / n! + ... might also be written as (At)<sup>zero</sup> / zero! + (At)<sup>1</sup> / 1! + ... + (At)<sup>n</sup> / n! + ... where I = (At)<sup>zero</sup> and zero! = 1
+
+5. second order equation
+first order system
+u'' + Bu' + Cu = 0 is equivalent to [ [u], [u'] ]' = [ [ 0,1 ], [ -C, -B ] ] [ [u], [u'] ]
+
+
+
+A<sup>k</sup> = X&Lambda;<sup>k</sup>X<sup>-1</sup> 
+
+A<sup>k</sup>u<sub>0</sub> = X&Lambda;<sup>k</sup>X<sup>-1</sup>u<sub>0</sub> = X&Lambda;<sup>k</sup>c 
+A<sup>k</sup>U<sub>0</sub> = X&Lambda;<sup>k</sup>X<sup>-1</sup>u<sub>0</sub> = X&Lambda;<sup>k</sup>C 
+
+Au = ∂u/∂t can be diagonalized with eigenvalues and eigenvectors as well. 
+
+∂ e<sup>&lambda;t</sup> / ∂t = &lambda;e<sup>&lambda;t</sup>.
+
+Need to know for ∂u/∂t = u, the only function that does this is e<sup>t</sup>:  
+u = e<sup>t</sup> has ∂u/∂t = e<sup>t</sup>  
+u = e<sup>&lamdba;t</sup> has ∂u/∂t = &lambda;e<sup>&lambda;t</sup>  
+
+the point of this section is   
+constant coefficient differential equations translated into linear algebra.   
+
+so these equatoins are [only] solved by expoentials: ∂u/∂t = u and ∂u/∂t = &lambda;u
+
+∂u/∂t = u is solved by u(t) = Ce<sup>t</sup>   
+∂u/∂t = &lambda;u is solved by u(t) = Ce<sup>&lambda;t</sup>   
+
+at t = 0 those solutoins include e<sup>0</sup> = 1     
+so both would reduce to:   
+∂u/∂t = u is solved by u(t=0) = Ce<sup>0</sup> = C    
+∂u/∂t = &lambda;u is solved by u(t=0) = Ce<sup>&lambda;0</sup> = C   
+this initial value, t=0, tells us the right choice for value of C = u(0). 
+Thus the solutions to ∂u/∂t = u and ∂u/∂t = &lamnda;u and look for what u satisfies those two equatoins and that that start from number u(0) at time t=0 are revised from the above solutions u(t) = Ce<sup>t</sup> and u(t) = Ce<sup>&lambda;t</sup> to replace C with u(0):
+
+∂u/∂t = u is solved by u(t) =  u(0)e<sup>t</sup>   
+∂u/∂t = &lambda;u is solved by u(t) =  u(0)e<sup>&lambda;t</sup>   
+
+[as in 6.2 we found C and plug that solution back in]
+
+So that solves a 1x1 problem. 
+
+Linear algebra moves to n x n where u is a now a vector [in ∂u/∂t]   
+with initial vector u(0) = [ [ u<sub>1</sub>(0) ], ... , [ u<sub>n</sub>(0) ] ] 
+with n equations contain a square matrix A   
+we expect u to be u(t) with n &lambda;s that produce n exponents e<sup>&lambda;t<sup> in u(t)
+
+system of equations: ∂u/∂t = Au starting with u(0) = [ [ u<sub>1</sub>(0) ], ... , [ u<sub>n</sub>(0) ] ] at time t=0
+
+the differential equations [in that system of equations] are linear: if u(t) and v(t) are solutions [to finding u in ∂u/∂t] then so is C•u(t) + D•v(t).  there will be n constants like C and D to match the n components of u(0).  
+
+[ 
+think this is: 
+Ce<sup>&lambda;<sub>1</sub>t</sup>, ... , De<sup>&lambda;<sub>n</sub>t</sup> dot with u<sub>1</sub>(t), ... , u<sub>n</sub>(t)    
+but he's saying n contstants C and D to match n components of u(0) so we will be acting with exponents upon u(0):    
+Ce<sup>&lambda;<sub>1</sub>t</sup>, ... , De<sup>&lambda;<sub>n</sub>t</sup> dot with u<sub>1</sub>(t=0), ... , u<sub>n</sub>(t=0)    
+]
+
+first find n pure exponential solutions: u = e<sup>&lambda;t</sup> by ysung Ax = &lambda;x
 
 
