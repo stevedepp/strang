@@ -2420,4 +2420,117 @@ where of course c<sub>1</sub> = 2, c<sub>2</sub> = 3, c<sub>3</sub> = 4 come fro
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108641995-9b900c00-7470-11eb-83f6-a8ddfb176502.png">
 
 
+next  
+equations of second derivatives  ?
+does u(t) approach zero or blow up or just oscillate ?
+expoential e<sup>At</sup>:  the short formular e<sup>At</sup>u(0) solves the equation ∂u/∂t = Au in the same way that A<sup>k</sup>u<sub>0</sub> solves the equation u<sub>k+1</sub> = Au<sub>k</sub>.  Example 3 shows difference equation solving differential equations. 
+
+up till now:
+
+Au = &lambda;u = [x<sub>k+1</sub>, x<sub>k</sub>]
+
+Au = ∂u / ∂t = u
+
+now:
+
+Au = ∂u /∂t = [ y', y ]
+
+**second order equations**
+
+exampe for this section is the most important equation in mechanics
+
+second order equations contain the second derivative y'' = ∂<sup>2</sup>y / ∂t<sup>2</sup>.  
+this second order equation is linear because it has constant coefficients.
+
+m • y'' + b • y' + k • y = 0
+
+m • y'' = F = - b • y' - k • y
+
+- the first term is mass m times acceleration = a = y''.  m • a or m • y'' balances the force F from Newton's Law that includes:    
+- the second term which is dampening = - b • y' and 
+- the third term which is elastic force = - k • y proportional to distance moved.  [ y = distance moved? ]
+
+y = e<sup>&lambda;t</sup> is the solution in a differential problem.   
+each derivative of y brings down a factor &lambda;   
+here again, y = e<sup>&lambda;t</sup> solves the equation:  
+
+m • ∂<sup>2</sup>y / ∂t<sup>2</sup> + b • ∂y / ∂t + k • y = 0   
+
+which thus becomes ...
+
+m • &lambda;<sup>2</sup> • e<sup>&lambda;t</sup>' + b • &lambda; • e<sup>&lambda;t</sup> + k • e<sup>&lambda;t</sup> = 0
+
+( m • &lambda;<sup>2</sup> + b • &lambda; + k ) • e<sup>&lambda;t</sup> = 0
+
+because ... 
+
+y = e<sup>&lambda;t</sup>
+y' = &lambda; • e<sup>&lambda;t</sup>
+y'' = &lambda;<sup>2</sup> • e<sup>&lambda;t</sup>
+
+if m • &lambda;<sup>2</sup> + b • &lambda; + k = 0 has two roots: &lambda;<sub>1</sub> and &lambda;<sub>2</sub>,   
+then the equaton for y has 2 **pure** solutions y<sub>1</sub> = e<sup>&lambda;<sub>1</sub>t</sup and y<sub>2</sub> = e<sup>&lambda;<sub>2</sub>t</sup,   
+and the **complete** solution is the combination c<sub>1</sub> • y<sub>1</sub> + c<sub>2</sub> • y<sub>2</sub>   
+unless &lambda;<sub>1</sub> = &lambda;<sub>2</sub>
+   
+scalar equations with y'' done.   
+vector equations with y and y' next. notice only the first derivative y' in vector equations.
+
+example:
+
+mass m = 1   
+find u = (y, y').T  
+given ∂u / ∂t = Au
+
+∂u / ∂t where u = [ y, y' ].T  would be ∂u / ∂t = [ y', y'' ].T where:   
+- ∂y / ∂t is on top = y'   
+- ∂y' / ∂t is on bottom = y'' and we know y'' = - b • y' - k • y from m = 1 and the equation above m • y'' = - b • y' - k • y   
+so ..
+
+where u = [ y, y' ].T, ∂u / ∂t = ...
+∂y / ∂t = y' 
+∂y' / ∂t = y'' = - k • y - b • y' 
+
+which converts to vector equations
+
+![\begin{align*}
+\begin{matrix}
+\frac{\partial 
+y
+}{\partial t}\\
+\frac{\partial 
+y'
+}{\partial t}
+\end{matrix}=
+\begin{matrix}
+y'\\
+-k*y-b*y'
+\end{matrix}
+--->\frac{\partial 
+\begin{bmatrix}
+y\\
+y'
+\end{bmatrix}
+}{\partial t} &=
+\begin{bmatrix}
+0&1\\
+-k&-b
+\end{bmatrix}
+\begin{bmatrix}
+y\\
+y'
+\end{bmatrix}=  
+\begin{bmatrix}
+y'\\
+-ky-by'=(m=1)*y''
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bmatrix%7D%0A%5Cfrac%7B%5Cpartial+%0Ay%0A%7D%7B%5Cpartial+t%7D%5C%5C%0A%5Cfrac%7B%5Cpartial+%0Ay%27%0A%7D%7B%5Cpartial+t%7D%0A%5Cend%7Bmatrix%7D%3D%0A%5Cbegin%7Bmatrix%7D%0Ay%27%5C%5C%0A-k%2Ay-b%2Ay%27%0A%5Cend%7Bmatrix%7D%0A---%3E%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%0A%7D%7B%5Cpartial+t%7D+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-k%26-b%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%3D++%0A%5Cbegin%7Bbmatrix%7D%0Ay%27%5C%5C%0A-ky-by%27%3D%28m%3D1%29%2Ay%27%27%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+the second equation is key because it connects or "couples" y'' to y' to y in the matrix as it does in the equation m • y'' = - b • y' - k • y
+
+in the matrix the off diagonals do this magic: cell A(1,2) = 1 brings y' into component 1 and cell (2,1) = -k brings k * y into the second component with y'.
+
+together the first and second equation connect u' to u as is needed to solve ∂u / ∂t = u' = Au    
+
+start with eigenvectors of A
 
