@@ -2410,11 +2410,9 @@ step 1: vector u(0) = (9,7,4)<sup>T</sup> is u(0) = (c<sub>1</sub>)(e<sup>&lambd
 
 step 2: factors e<sup>&lambda;t</sup> for the exponential solutions: e<sup>1t</sup>x<sub>1</sub>, e<sup>2t</sup>x<sub>2</sub>, e<sup>3t</sup>x<sub>3</sub>
 
-u(t) = 2(e<sup>&lambda;<sub>1</sub>(t=0)</sup>)(x<sub>1</sub>) + 3(e<sup>&lambda;<sub>2</sub>(t=0)</sup>)((x<sub>2</sub>) + 4(e<sup>&lambda;<sub>3</sub>(t=0)</sup>)((x<sub>3</sub>) 
+step 3: the combination that starts from u(0) is u(t) = 2(e<sup>&lambda;<sub>1</sub>(t=0)</sup>)(x<sub>1</sub>) + 3(e<sup>&lambda;<sub>2</sub>(t=0)</sup>)((x<sub>2</sub>) + 4(e<sup>&lambda;<sub>3</sub>(t=0)</sup>)((x<sub>3</sub>) 
 
-step 3: the combination that starts from 
-
-where of course c<sub>1</sub> = 2, c<sub>2</sub> = 3, c<sub>3</sub> = 4
+where of course c<sub>1</sub> = 2, c<sub>2</sub> = 3, c<sub>3</sub> = 4 come from Xc = u(0) --> X<sup>-1</sup>u(0) = c as shown here:
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108641995-9b900c00-7470-11eb-83f6-a8ddfb176502.png">
 
