@@ -2187,25 +2187,8 @@ solving for y1 and y2 can follow the example and then back substitute: dy1/dt = 
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108647777-807cc680-7487-11eb-9c6c-6e54204d1227.png">
 
-example 2:
 
-solve ∂u/∂t = Au, that is find the function u, knowing the constant A, the eigenvalues and eigenvectors of A and the initial value of the function u aka u<sub>0</sub>:
-
-- eigenvalues of A are &lambda;<sub>1</sub>, &lambda;<sub>2</sub>, &lambda;<sub>3</sub> are 1, 2, 3.     
-- eigenvaectors of A are x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> are (1,0,0)<sup>T</sup>, (1,1,0)<sup>T</sup>, (1,1,1)<sup>T</sup>.   
-- the initial value of u is u<sub>0</sub> = (9,7,4)<sup>T</sup>.
-
-we know the derivative of function u with respect to t, ∂u/∂t equals some constant coefficient matrix A times variable u.    
-the only function u whose derivative is a constant times that function is u = e<sup>At</sup> whose ∂u/∂t = Ae<sup>At</sup>.      
-
-the goal is to replace A with eigenvalues and eigenvectors. until now this has meant Ax = &lambda;x
-step 1: vector u(0) = (9,7,4)<sup>T</sup> is 2(x<sub>1</sub>) + 3((x<sub>2</sub>) + 4((x<sub>3</sub>) = 2(e<sup>&lambda;<sub>1</sub>(t=0)</sup>)(x<sub>1</sub>) + 3(e<sup>&lambda;<sub>2</sub>(t=0)</sup>)((x<sub>2</sub>) + 4(e<sup>&lambda;<sub>3</sub>(t=0)</sup>)((x<sub>3</sub>) = (c<sub>1</sub>)(e<sup>&lambda;<sub>1</sub>(t=0)</sup>)((x<sub>1</sub>) + (c<sub>2</sub>)(e<sup>&lambda;<sub>2</sub>(t=0)</sup>)((x<sub>2</sub>) + (c<sub>3</sub>)(e<sup>&lambda;<sub>3</sub>(t=0)</sup>)((x<sub>3</sub>)
-
-where of course c<sub>1</sub> = 2, c<sub>2</sub> = 3, c<sub>3</sub> = 4
-
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108641995-9b900c00-7470-11eb-83f6-a8ddfb176502.png">
-
-principles:
+**principles:**
 
 1. if Ax = &lambda;x and looking to solve ∂u/∂t = Au = &lambda;u by finding u, then u(t) = e<sup>&lambda;t</sup> works.  Each &lambda; and x give a solution e<sup>&lambda;t</sup>x to satisfy the diagonalization procedures discussed in previous section: Ax = &lambda;x --> ∂u/∂t = Au = e<sup>&lambda;t</sup>x
 
@@ -2408,6 +2391,24 @@ u(t) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>x<sub>1</sub> + ... + c<sub
 the differential has the A ...
 both the differential and u have the initial value u(0) ...
 
-example 2 is shown above.
+
+example 2:
+
+solve ∂u/∂t = Au, that is find the function u, knowing the constant A, the eigenvalues and eigenvectors of A and the initial value of the function u aka u<sub>0</sub>:
+
+- eigenvalues of A are &lambda;<sub>1</sub>, &lambda;<sub>2</sub>, &lambda;<sub>3</sub> are 1, 2, 3.     
+- eigenvaectors of A are x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> are (1,0,0)<sup>T</sup>, (1,1,0)<sup>T</sup>, (1,1,1)<sup>T</sup>.   
+- the initial value of u is u<sub>0</sub> = (9,7,4)<sup>T</sup>.
+
+we know the derivative of function u with respect to t, ∂u/∂t equals some constant coefficient matrix A times variable u.    
+the only function u whose derivative is a constant times that function is u = e<sup>At</sup> whose ∂u/∂t = Ae<sup>At</sup>.      
+
+the goal is to replace A with eigenvalues and eigenvectors. until now this has meant Ax = &lambda;x
+step 1: vector u(0) = (9,7,4)<sup>T</sup> is 2(x<sub>1</sub>) + 3((x<sub>2</sub>) + 4((x<sub>3</sub>) = 2(e<sup>&lambda;<sub>1</sub>(t=0)</sup>)(x<sub>1</sub>) + 3(e<sup>&lambda;<sub>2</sub>(t=0)</sup>)((x<sub>2</sub>) + 4(e<sup>&lambda;<sub>3</sub>(t=0)</sup>)((x<sub>3</sub>) = (c<sub>1</sub>)(e<sup>&lambda;<sub>1</sub>(t=0)</sup>)((x<sub>1</sub>) + (c<sub>2</sub>)(e<sup>&lambda;<sub>2</sub>(t=0)</sup>)((x<sub>2</sub>) + (c<sub>3</sub>)(e<sup>&lambda;<sub>3</sub>(t=0)</sup>)((x<sub>3</sub>)
+
+where of course c<sub>1</sub> = 2, c<sub>2</sub> = 3, c<sub>3</sub> = 4
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108641995-9b900c00-7470-11eb-83f6-a8ddfb176502.png">
+
 
 
