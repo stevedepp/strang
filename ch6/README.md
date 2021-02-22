@@ -2469,7 +2469,7 @@ y' = &lambda; • e<sup>&lambda;t</sup>
 y'' = &lambda;<sup>2</sup> • e<sup>&lambda;t</sup>
 
 if m • &lambda;<sup>2</sup> + b • &lambda; + k = 0 has two roots: &lambda;<sub>1</sub> and &lambda;<sub>2</sub>,   
-then the equaton for y has 2 **pure** solutions y<sub>1</sub> = e<sup>&lambda;<sub>1</sub>t</sup> and y<sub>2</sub> = e<sup>&lambda;<sub>2</sub>t</sup,   
+then the equaton for y has 2 **pure** solutions y<sub>1</sub> = e<sup>&lambda;<sub>1</sub>t</sup> and y<sub>2</sub> = e<sup>&lambda;<sub>2</sub>t</sup>       
 and the **complete** solution is the combination c<sub>1</sub> • y<sub>1</sub> + c<sub>2</sub> • y<sub>2</sub>   
 unless &lambda;<sub>1</sub> = &lambda;<sub>2</sub>
    
