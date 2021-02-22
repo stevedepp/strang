@@ -2185,7 +2185,7 @@ an example without enough eigenvectors:
 
 solving for y1 and y2 can follow the example and then back substitute: dy1/dt = y2 and so y1 = t* constant and d2/dt = 0 --> y2 = constant. (unsure why.)
 
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108643900-8fa94780-747a-11eb-91ae-ab83cb40b3c1.png">
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108647777-807cc680-7487-11eb-9c6c-6e54204d1227.png">
 
 example 2:
 
@@ -2223,7 +2223,7 @@ u(t) = e<sup>At</sup> = Xe<sup>&Lambda;t</sup>X<sup>-1</sup>u(0) = c<sub>1</sub>
 first order system
 u'' + Bu' + Cu = 0 is equivalent to [ [u], [u'] ]' = [ [ 0,1 ], [ -C, -B ] ] [ [u], [u'] ]
 
-
+few equations from previous sections:
 
 A<sup>k</sup> = X&Lambda;<sup>k</sup>X<sup>-1</sup>   
 A<sup>k</sup>u<sub>0</sub> = X&Lambda;<sup>k</sup>X<sup>-1</sup>u<sub>0</sub> = X&Lambda;<sup>k</sup>c   
@@ -2233,9 +2233,9 @@ Au = ∂u/∂t can be diagonalized with eigenvalues and eigenvectors as well.
 
 ∂ e<sup>&lambda;t</sup> / ∂t = &lambda;e<sup>&lambda;t</sup>.
 
-Need to know for ∂u/∂t = u, the only function that does this is e<sup>t</sup>:  
+Need to know that for ∂u/∂t = u, the only function that does this is e<sup>t</sup>:  
 u = e<sup>t</sup> has ∂u/∂t = e<sup>t</sup>  
-u = e<sup>&lamdba;t</sup> has ∂u/∂t = &lambda;e<sup>&lambda;t</sup>  
+u = e<sup>&lambda;t</sup> has ∂u/∂t = &lambda;e<sup>&lambda;t</sup>  
 
 the point of this section is   
 constant coefficient differential equations translated into linear algebra.   
@@ -2245,36 +2245,169 @@ so these equatoins are [only] solved by expoentials: ∂u/∂t = u and ∂u/∂t
 ∂u/∂t = u is solved by u(t) = Ce<sup>t</sup>   
 ∂u/∂t = &lambda;u is solved by u(t) = Ce<sup>&lambda;t</sup>   
 
-at t = 0 those solutoins include e<sup>0</sup> = 1     
-so both would reduce to:   
-∂u/∂t = u is solved by u(t=0) = Ce<sup>0</sup> = C    
-∂u/∂t = &lambda;u is solved by u(t=0) = Ce<sup>&lambda;0</sup> = C   
-this initial value, t=0, tells us the right choice for value of C = u(0). 
-Thus the solutions to ∂u/∂t = u and ∂u/∂t = &lamnda;u and look for what u satisfies those two equatoins and that that start from number u(0) at time t=0 are revised from the above solutions u(t) = Ce<sup>t</sup> and u(t) = Ce<sup>&lambda;t</sup> to replace C with u(0):
-
-∂u/∂t = u is solved by u(t) =  u(0)e<sup>t</sup>   
-∂u/∂t = &lambda;u is solved by u(t) =  u(0)e<sup>&lambda;t</sup>   
-
-[as in 6.2 we found C and plug that solution back in]
+at t = 0 those solutions include e<sup>0</sup> = 1     
+which gives the initial value u(0) = Ce<sup>0</sup> = C
+[generally:
+∂u/∂t = u is solved by u(t) = u(0)e<sup>t</sup> = Ce<sup>t</sup>    
+∂u/∂t = &lambda;u is solved by u(t) = u(0)e<sup>&lambda;t</sup> = Ce<sup>&lambda;t</sup>   
 
 So that solves a 1x1 problem. 
 
-Linear algebra moves to n x n where u is a now a vector [in ∂u/∂t]   
-with initial vector u(0) = [ [ u<sub>1</sub>(0) ], ... , [ u<sub>n</sub>(0) ] ] 
+Linear algebra moves to n x n where u is a now a vector
+with initial vector u(0) = (u<sub>1</sub>(0), ... , u<sub>n</sub>(0) ).T  
 with n equations contain a square matrix A   
-we expect u to be u(t) with n &lambda;s that produce n exponents e<sup>&lambda;t<sup> in u(t)
+we expect u(t) with n e<sup>&lambda;t</sup> from 10 &lambda;s.
 
-system of equations: ∂u/∂t = Au starting with u(0) = [ [ u<sub>1</sub>(0) ], ... , [ u<sub>n</sub>(0) ] ] at time t=0
+system of equations: ∂u/∂t = Au starting with u(0) = ( u<sub>1</sub>(0) , ... , u<sub>n</sub>(0) ) at time t=0
 
-the differential equations [in that system of equations] are linear: if u(t) and v(t) are solutions [to finding u in ∂u/∂t] then so is C•u(t) + D•v(t).  there will be n constants like C and D to match the n components of u(0).  
+the differential equations [in that system of equations] are linear: if u(t) and v(t) are solutions [to finding u in ∂u/∂t] then so is C • u(t) + D • v(t).  there will be n constants like C and D to match the n components of u(0).  
 
-[ 
-think this is: 
-Ce<sup>&lambda;<sub>1</sub>t</sup>, ... , De<sup>&lambda;<sub>n</sub>t</sup> dot with u<sub>1</sub>(t), ... , u<sub>n</sub>(t)    
-but he's saying n contstants C and D to match n components of u(0) so we will be acting with exponents upon u(0):    
-Ce<sup>&lambda;<sub>1</sub>t</sup>, ... , De<sup>&lambda;<sub>n</sub>t</sup> dot with u<sub>1</sub>(t=0), ... , u<sub>n</sub>(t=0)    
-]
+first job is finding n "pure exponential solutions" u = e<up>&lambda;t</sup>x by using Ax = &lambda;x
+[x is an eigenvector]
 
-first find n pure exponential solutions: u = e<sup>&lambda;t</sup> by ysung Ax = &lambda;x
+A is a constant matrix   
+- doesnt change as t changes (as in other linear equations)   
+- doesnt change as u changes (as in non-linear equations)   
+∂u/∂t = Au is linear with constant coefficients.
+
+solve linear constant coefficient equations by exponentials e<sup>&lambda;t</sup>x
+
+**solution to ∂u/∂t = Au**
+
+pure exponential solution to ∂u/∂t = Au is finding the u which is = e<sup>lambda;t</sup> times a fixed vector x or the eigenvector. 
+
+substitute u = e<sup>lambda;t</sup>x into ∂u/∂t = Au = A e<sup>lambda;t</sup>x
+
+[lots of unintelligible words here. not including.]
+
+all components of this solution u = e<sup>&lambda;t</sup>x share the same  e<sup>&lambda;t</sup>.
+
+the solution grows when &lambda;>0, decays when &lambda; < 0.  
+
+if &lambda; is complex, the real part decides growth and decay, and imaginary part *w* gives oscillation e<sup>i*w*t</sup> like a sin wave. 
+
+example: solve ∂u/∂t = Au = [[0,1],[1,0]]u starting with u(0) = (4,2).T
+
+this is a vector equation for u containing 2 scalar equations for the components for the components y and z.  
+
+the 2 scalar equations are coupled together because A is not diagonal.  
+
+if diagonal, like the identity matrix, then ∂u/∂t = ∂ (y,z)/∂t produces ∂y/∂t = y and ∂z/∂t = z and so y and z would not be coupled.  
+
+![\begin{align*}
+A&=
+\begin{bmatrix}
+1&0\\
+0&1
+\end{bmatrix}\\
+\frac{\partial 
+\begin{bmatrix}
+y\\
+z
+\end{bmatrix}
+}{\partial t} &=
+\begin{bmatrix}
+1&0\\
+0&1
+\end{bmatrix}
+\begin{bmatrix}
+y\\
+z
+\end{bmatrix}
+=\begin{bmatrix}
+y\\
+z
+\end{bmatrix}\\
+\\
+thus:\\
+\\
+\frac{\partial y}{\partial t} &= y
+\\
+and\\
+\\
+\frac{\partial z}{\partial t} &= z
+\\
+\\
+\\
+but \, if:
+\\
+A&=
+\begin{bmatrix}
+0&1\\
+1&0
+\end{bmatrix}\\
+\frac{\partial 
+\begin{bmatrix}
+y\\
+z
+\end{bmatrix}
+}{\partial t} &=
+\begin{bmatrix}
+0&1\\
+1&0
+\end{bmatrix}
+\begin{bmatrix}
+y\\
+z
+\end{bmatrix}
+=\begin{bmatrix}
+z\\
+y
+\end{bmatrix}\\
+\\
+thus:\\
+\\
+\frac{\partial y}{\partial t} &= z
+\\
+and\\
+\\
+\frac{\partial z}{\partial t} &= y
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A0%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Az%0A%5Cend%7Bbmatrix%7D%0A%7D%7B%5Cpartial+t%7D+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A0%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Az%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Az%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Athus%3A%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+t%7D+%26%3D+y%0A%5C%5C%0Aand%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial+z%7D%7B%5Cpartial+t%7D+%26%3D+z%0A%5C%5C%0A%5C%5C%0A%5C%5C%0Abut+%5C%2C+if%3A%0A%5C%5C%0AA%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Az%0A%5Cend%7Bbmatrix%7D%0A%7D%7B%5Cpartial+t%7D+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Az%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0Az%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Athus%3A%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+t%7D+%26%3D+z%0A%5C%5C%0Aand%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial+z%7D%7B%5Cpartial+t%7D+%26%3D+y%0A%5Cend%7Balign%2A%7D)
+
+the use of eigenvectors is to move from 2 equations to 1 by 1 problems. 
+
+eigenvalues = 1, -1  
+eigenvectors = (1,1).T and (1,-1).T  
+
+pure exponential equation moves from ∂u/∂t = Au to eigenvalue times a function: u<sub>1</sub> and u<sub>2</sub> take the form e<sup>&lambda;t</sup>x.  
+
+u<sub>1</sub> = e<sup>&lambda;<sub>1</sub>t</sup>x<sub>1</sub> = e<sup>t</sub> • (1,1).T
+
+u<sub>2</sub> = e<sup>&lambda;<sub>2</sub>t</sup>x<sub>2</sub> = e<sup>-t</sub> • (1,-11).T
+
+the u's satisfy Au<sub>1</sub> = u<sub>1</sub> and Au<sub>2</sub> = u<sub>2</sub>. 
+
+the factors e<sup>t</sup> and e<sup>-t</sup> change with time.  
+
+those factors give ∂u<sub>1</sub>/∂t = u<sub>1</sub> = Au<sub>1</sub> and ∂u<sub>2</sub>/∂t = -u<sub>2</sub> = Au<sub>2</sub>. 
+
+2 solutions to ∂u/∂t = Au.  
+
+all other solutions come from multiplying those special solutions by any number C and D and adding.
+
+Complete solution 
+= u(t) = Ce<sup>t<sup>(`1,1).T + De<sup>-t<sup>(1,-11).T 
+= [ [ Ce<sup>t<sup> + De<sup>-t<sup> ], [ Ce<sup>t<sup> + De<sup>-t<sup> ] ]
+
+find C and D by setting t=0 so e<sup>t<sup> and e<sup>-t<sup> = 1 and set u<sub>0</sub> = (4,2).T = (x<sub>1</sub>, x<sub>2</sub>).T • (C, D) solving for CD via X<sup>-1</sup> --> C = 3, D = solving the initial value problem.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108650207-08b19a80-748d-11eb-983b-89bbca869eb9.png">
+
+1. write u(0) as combination of c<sub>1</sub>x<sub>1</sub> + ... + c<sub>n</sub>x<sub>n</sub> of eigenvectors of A:
+
+u(0) = c<sub>1</sub>x<sub>1</sub> + ... + c<sub>n</sub>x<sub>n</sub>
+
+2. multiply each eigenvector x<sub>i</sub> by its growth factor e<sup>&lambda;<sub>i</sub>t</sup>.  
+
+u(t) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>x<sub>1</sub> + ... + c<sub>n</sub>e<sup>&lambda;<sub>i</sub>t</sup>x<sub>n</sub>
+
+3.  the solution is the same combination of those pure solutions e<sup>&lambda;t</sup>x  
+
+∂u/∂t = Au has solution found when u(t) is found = u(t) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>x<sub>1</sub> + ... + c<sub>n</sub>e<sup>&lambda;<sub>i</sub>t</sup>x<sub>n</sub>
+
+the differential has the A ...
+both the differential and u have the initial value u(0) ...
+
+example 2 is shown above.
 
 
