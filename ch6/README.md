@@ -2404,7 +2404,15 @@ we know the derivative of function u with respect to t, ∂u/∂t equals some co
 the only function u whose derivative is a constant times that function is u = e<sup>At</sup> whose ∂u/∂t = Ae<sup>At</sup>.      
 
 the goal is to replace A with eigenvalues and eigenvectors. until now this has meant Ax = &lambda;x
-step 1: vector u(0) = (9,7,4)<sup>T</sup> is 2(x<sub>1</sub>) + 3((x<sub>2</sub>) + 4((x<sub>3</sub>) = 2(e<sup>&lambda;<sub>1</sub>(t=0)</sup>)(x<sub>1</sub>) + 3(e<sup>&lambda;<sub>2</sub>(t=0)</sup>)((x<sub>2</sub>) + 4(e<sup>&lambda;<sub>3</sub>(t=0)</sup>)((x<sub>3</sub>) = (c<sub>1</sub>)(e<sup>&lambda;<sub>1</sub>(t=0)</sup>)((x<sub>1</sub>) + (c<sub>2</sub>)(e<sup>&lambda;<sub>2</sub>(t=0)</sup>)((x<sub>2</sub>) + (c<sub>3</sub>)(e<sup>&lambda;<sub>3</sub>(t=0)</sup>)((x<sub>3</sub>)
+
+
+step 1: vector u(0) = (9,7,4)<sup>T</sup> is 2(x<sub>1</sub>) + 3((x<sub>2</sub>) + 4((x<sub>3</sub>)
+
+step 2: factors e<sup>&lambda;t</sup> for the exponential solutions: e<sup>1t</sup>x<sub>1</sub>, e<sup>2t</sup>x<sub>2</sub>, e<sup>3t</sup>x<sub>3</sub>
+
+u(t) = 2(e<sup>&lambda;<sub>1</sub>(t=0)</sup>)(x<sub>1</sub>) + 3(e<sup>&lambda;<sub>2</sub>(t=0)</sup>)((x<sub>2</sub>) + 4(e<sup>&lambda;<sub>3</sub>(t=0)</sup>)((x<sub>3</sub>) 
+
+step 3: the combination that starts from u(0) = (c<sub>1</sub>)(e<sup>&lambda;<sub>1</sub>(t=0)</sup>)((x<sub>1</sub>) + (c<sub>2</sub>)(e<sup>&lambda;<sub>2</sub>(t=0)</sup>)((x<sub>2</sub>) + (c<sub>3</sub>)(e<sup>&lambda;<sub>3</sub>(t=0)</sup>)((x<sub>3</sub>)
 
 where of course c<sub>1</sub> = 2, c<sub>2</sub> = 3, c<sub>3</sub> = 4
 
