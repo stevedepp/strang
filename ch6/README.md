@@ -2410,7 +2410,10 @@ step 1: vector u(0) = (9,7,4)<sup>T</sup> is u(0) = (c<sub>1</sub>)(e<sup>&lambd
 
 step 2: factors e<sup>&lambda;t</sup> for the exponential solutions: e<sup>1t</sup>x<sub>1</sub>, e<sup>2t</sup>x<sub>2</sub>, e<sup>3t</sup>x<sub>3</sub>
 
-step 3: the combination that starts from u(0) is u(t) = 2(e<sup>(&lambda;<sub>1</sub>=1)(t)</sup>)(x<sub>1</sub>) + 3(e<sup>(&lambda;<sub>2</sub>=2)(t)</sup>)((x<sub>2</sub>) + 4(e<sup>(&lambda;<sub>3</sub>=3)(t)</sup>)((x<sub>3</sub>) 
+step 3: the combination that starts from u(0) is 
+u(t)   
+= 2(e<sup>(&lambda;<sub>1</sub>=1)(t)</sup>)(x<sub>1</sub>) + 3(e<sup>(&lambda;<sub>2</sub>=2)(t)</sup>)((x<sub>2</sub>) + 4(e<sup>(&lambda;<sub>3</sub>=3)(t)</sup>)((x<sub>3</sub>)   
+= 2e<sup>t</sup>x<sub>1</sub> + 3e<sup>2t</sup>x<sub>2</sub> + 4e<sup>3t</sup>x<sub>3</sub> 
 
 where of course c<sub>1</sub> = 2, c<sub>2</sub> = 3, c<sub>3</sub> = 4 come from Xc = u(0) --> X<sup>-1</sup>u(0) = c as shown here:
 
