@@ -2833,6 +2833,6 @@ the vector equatoin My'' + Ky = f is a major part of computational mechanics.  i
 
 **Stability of 2 x 2 matrices**
 
-Does the solution to ∂u / ∂t = Au approach u = 0 as t approaches ∞ \infty
+Does the solution to ∂u / ∂t = Au approach u = 0 as t approaches ∞ \&infty& \infinity  &infinity;
 \infty
-$infty$
+\$infty$
