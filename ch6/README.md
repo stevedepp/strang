@@ -2787,5 +2787,26 @@ with this code:
 
 the lambda's tell all.
 
+both methods have eigenvalues 1 &pm; i&Delta;t   
+test the magnitude |&lambda;| not the real parts.   
+
+- i = 0 + i
+- | i | = | - i | = 1
+- | 1 + i | = | - ( 1 + i ) | = | 1 - i | =  | - ( 1 - i ) |  = | -1 + i | =  | - ( -1 - i ) |  = 1.41 = √2
+
+magnitude is computed same as vector length for complex number a + bi, magnitude = | a + b | = ( a<sup>2</sup> + b<sup>2</sup> )<sup>0.5</sup>
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108898247-fa769200-75e4-11eb-9fb3-cb34bd658c75.png">
+
+notice that the original backward method would spirals because it has the EXACT same &lambda;s as forward approximation that are > 1.  this is because backward method is initially approximating U<sub>n</sub> from U<sub>n+1</sub>.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108899208-2a726500-75e6-11eb-9880-f24b1895fe79.png">
+
+&lambda;s for original backward approximation A are 1 &pm; i&Delta;t whose magnitude is | 1 &pm; &Delta;t | > 1 
+
+can see that below where LAMBDA for &lambda;s are 1 &pm; i&Delta; in the first highlighted line
+
+for the inverse of backwards approximation A, the | lambda;s | are < 1 as shown in the second highlighted line where &lambda;s are < 1 because they equal 1 divided by 1 &pm; i&Delta;t  that is > 1.
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108904163-2b0dfa00-75ec-11eb-88a1-92f11bd61524.png">
+
