@@ -2726,4 +2726,6 @@ question is :
 do points (Y<sub>n</sub>, Z<sub>n</sub>) stay on the circle Y<sup>2</sup> + Z<sup>2</sup> = 1   
 with powers of A<sup>n</sup> not powers of e<sup>&lambda;t</sup>, we test the magnitude of |&lambda;| and not the real parts of the eigenvalues. 
 
-Eigenvalues of A: &Lambda; = 1 &plusminus;
+Eigenvalues of A: &Lambda; = 1 &pm;
+
+
