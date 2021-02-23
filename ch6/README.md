@@ -2737,9 +2737,8 @@ Backward
 Y_{n+1} = Y_n + &Delta;t Z_{n+1}\\
 Z_{n+1} = Z_n - &Delta;t Y_{n+1}
 \end{matrix}
-\begin{matrix}
-is
-\end{matrix}
+& \begin{matrix} is \end{matrix} \, \, \, \, \, \, \, \, \,  \, \, \, \, \, \, 
+Au_{n+1} =
 \begin{bmatrix}
 1&-&Delta; \, t\\
 &Delta; \, t&1\\
@@ -2752,8 +2751,23 @@ Z_{n+1}\\
 Y_{n}\\
 Z_{n}\\
 \end{bmatrix}=
-U_{n}
-\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bmatrix%7D%0ABackward%0A%5Cend%7Bmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0AY_%7Bn%2B1%7D+%3D+Y_n+%2B+%26Delta%3Bt+Z_%7Bn%2B1%7D%5C%5C%0AZ_%7Bn%2B1%7D+%3D+Z_n+-+%26Delta%3Bt+Y_%7Bn%2B1%7D%0A%5Cend%7Bmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ais%0A%5Cend%7Bmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-%26Delta%3B+%5C%2C+t%5C%5C%0A%26Delta%3B+%5C%2C+t%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%2B1%7D%5C%5C%0AZ_%7Bn%2B1%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%7D%5C%5C%0AZ_%7Bn%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0AU_%7Bn%7D%0A%5Cend%7Balign%2A%7D)
+U_{n}\\
+& \begin{matrix} inverted \end{matrix}
+U_{n+1} =
+\begin{bmatrix}
+Y_{n+1}\\
+Z_{n+1}\\
+\end{bmatrix}=
+\frac{1}{(&Delta;t)^2} 
+\begin{bmatrix}
+1&&Delta; \, t\\
+-&Delta; \, t&1\\
+\end{bmatrix}
+\begin{bmatrix}
+Y_{n}\\
+Z_{n}\\
+\end{bmatrix}=A^{-1}U_n
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bmatrix%7D%0ABackward%0A%5Cend%7Bmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0AY_%7Bn%2B1%7D+%3D+Y_n+%2B+%26Delta%3Bt+Z_%7Bn%2B1%7D%5C%5C%0AZ_%7Bn%2B1%7D+%3D+Z_n+-+%26Delta%3Bt+Y_%7Bn%2B1%7D%0A%5Cend%7Bmatrix%7D%0A%26+%5Cbegin%7Bmatrix%7D+is+%5Cend%7Bmatrix%7D+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C++%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%0AAu_%7Bn%2B1%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-%26Delta%3B+%5C%2C+t%5C%5C%0A%26Delta%3B+%5C%2C+t%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%2B1%7D%5C%5C%0AZ_%7Bn%2B1%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%7D%5C%5C%0AZ_%7Bn%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0AU_%7Bn%7D%5C%5C%0A%26+%5Cbegin%7Bmatrix%7D+inverted+%5Cend%7Bmatrix%7D%0AU_%7Bn%2B1%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%2B1%7D%5C%5C%0AZ_%7Bn%2B1%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cfrac%7B1%7D%7B%28%26Delta%3Bt%29%5E2%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%26%26Delta%3B+%5C%2C+t%5C%5C%0A-%26Delta%3B+%5C%2C+t%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%7D%5C%5C%0AZ_%7Bn%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3DA%5E%7B-1%7DU_n%0A%5Cend%7Balign%2A%7D)
 
 to see the results:  these do the perfect unit circle from [cos&theta;, -sin&theta;], euler's forward spiral approximation, and euler's backward spiral approximation.
 
