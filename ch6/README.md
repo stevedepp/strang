@@ -2598,13 +2598,51 @@ same as before:
 - find eigenvalues from determinant of A - &lambda * I   
 - find eigenvectors from the null space of those matrices (A - &lambda<sub>i</sub> * I)     
 - employ 3 steps:    
-1. combine the eigenvectors by finding c from u<sub>0</sub> = [1,0].T and X<sup>-1</sup> as shown below: u<sub>0</sub> = ∑<sub>i=1</sub><sup>n</sup> c<sub>i</sub>x<sub>i</sub>     
-confirm
+1. combine the eigenvectors by finding c from u<sub>0</sub> = [1,0].T and X<sup>-1</sup> as shown below: u<sub>0</sub> = ∑<sub>i=1</sub><sup>n</sup> c<sub>i</sub>x<sub>i</sub> by using c = X<sup>-1</sup>u<sub>0</sub>
+confirm u<sub>0</sub> = X<sup>-1</sup>c   
 
-2. apply the growth factor eigenvalues e<sup>&lambda;<sub>i</sub>t</sup> to respective eigenvectors give exponential solutions.    
-3. combination that starts from u(0) is the combination of the pure solutions.    
-∑<sub>i=1</sub><sup>n</sup> c<sub>i</sub>x<sub>i</sub>e<sup>&lambda;<sub>i</sub>t</sup> = X&Lambda;c    
+2. apply the growth factor eigenvalues e<sup>&lambda;<sub>i</sub>t</sup> to respective eigenvectors give exponential solutions.      
+3. combination u(t) that starts from u(0) is the combination of the pure solutions.     
+u(t) = ∑<sub>i=1</sub><sup>n</sup> c<sub>i</sub>x<sub>i</sub>e<sup>&lambda;<sub>i</sub>t</sup> = X&Lambda;c      
 
+here Euler's algebra:  
+e<sup>i &theta;</sup> = cos&theta; + i sin&theta;
+e<sup>-i &theta;</sup> = cos&theta; - i sin&theta;
+thus (using &theta; instead of t here):
 
+1st component of u(t):  
+( 1 / 2 ) • ( e<sup>i &theta;</sup> + e<sup>-i &theta;</sup> ) = (1 / 2) • (cos&theta; + i • sin&theta; + cos&theta; - i • sin&theta; ) = cos&theta; = y(t)
+
+2nd component of u(t):  
+( 1 / 2 ) • ( i ) • ( e<sup>i &theta;</sup>) + ( 1 / 2 ) • ( - i ) • ( e<sup>-i &theta;</sup>) = ( i / 2 ) • ( cos&theta; + i • sin&theta;) - (cos&theta; - i • sin&theta;) = ( i / 2 ) • 2 • ( i • sin&theta; - - i • sin&theta;) = i • i • sin&theta; = -sin&theta; = y'(t) = ∂y / ∂&theta; ∂ cos&theta; / ∂&theta since (cos&theta;)' = -sin&theta; 
+
+so u(t) =  [ cos&theta;, -sin&theta; ]
+
+![\begin{align*}
+u(t)& = \frac{1}{2}\, e^{it} \,
+\begin{bmatrix}
+1\\
+i\\
+\end{bmatrix} +
+\frac{1}{2} \,e^{-it}\,
+\begin{bmatrix}
+1\\
+-i\\
+\end{bmatrix}=
+\begin{bmatrix}
+\frac{1}{2}\,(1)\,(e^{i&theta;} + e^{-i&theta;})\\
+\frac{1}{2}\,(i)\,(e^{i&theta;} - e^{-i&theta;})\\
+\end{bmatrix}=
+\begin{bmatrix}
+cos t\\
+-sin t\\
+\end{bmatrix}=
+\begin{bmatrix}
+y(t)\\
+y'(t)\\
+\end{bmatrix}\\
+\\
+&=c_1 \, e^{&lambda;_1t} \, x_1 + c_2 \, e^{&lambda;_2t} \, x_2\\
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au%28t%29%26+%3D+%5Cfrac%7B1%7D%7B2%7D%5C%2C+e%5E%7Bit%7D+%5C%2C%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0Ai%5C%5C%0A%5Cend%7Bbmatrix%7D+%2B%0A%5Cfrac%7B1%7D%7B2%7D+%5C%2Ce%5E%7B-it%7D%5C%2C%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-i%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B2%7D%5C%2C%281%29%5C%2C%28e%5E%7Bi%26theta%3B%7D+%2B+e%5E%7B-i%26theta%3B%7D%29%5C%5C%0A%5Cfrac%7B1%7D%7B2%7D%5C%2C%28i%29%5C%2C%28e%5E%7Bi%26theta%3B%7D+-+e%5E%7B-i%26theta%3B%7D%29%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0Acos+t%5C%5C%0A-sin+t%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0Ay%28t%29%5C%5C%0Ay%27%28t%29%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%26%3Dc_1+%5C%2C+e%5E%7B%26lambda%3B_1t%7D+%5C%2C+x_1+%2B+c_2+%5C%2C+e%5E%7B%26lambda%3B_2t%7D+%5C%2C+x_2%5C%5C%0A%5Cend%7Balign%2A%7D)
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108797909-6a8c0600-755a-11eb-9bad-4c7e661ae978.png">
