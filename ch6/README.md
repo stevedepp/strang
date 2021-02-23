@@ -2573,4 +2573,8 @@ ergo:
 e<sup>i&theta;</sup> + e<sup>-i&theta;</sup> = cos&theta; + i sin&theta; + cos&theta; - i sin&theta;    
 which reduces to ...    
 (e<sup>i&theta;</sup> + e<sup>-i&theta;</sup>) / 2 = cos&theta;     
+]
 
+/frac{1}{2}
+]
+}
