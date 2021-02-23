@@ -2755,4 +2755,16 @@ Z_{n}\\
 U_{n}
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bmatrix%7D%0ABackward%0A%5Cend%7Bmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0AY_%7Bn%2B1%7D+%3D+Y_n+%2B+%26Delta%3Bt+Z_%7Bn%2B1%7D%5C%5C%0AZ_%7Bn%2B1%7D+%3D+Z_n+-+%26Delta%3Bt+Y_%7Bn%2B1%7D%0A%5Cend%7Bmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ais%0A%5Cend%7Bmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-%26Delta%3B+%5C%2C+t%5C%5C%0A%26Delta%3B+%5C%2C+t%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%2B1%7D%5C%5C%0AZ_%7Bn%2B1%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%7D%5C%5C%0AZ_%7Bn%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0AU_%7Bn%7D%0A%5Cend%7Balign%2A%7D)
 
+to see the results:  these do the perfect unit circle from [cos&theta;, -sin&theta;], euler's forward spiral approximation, and euler's backward spiral approximation.
 
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108892683-28a4a380-75de-11eb-9413-df872a44ca46.png">
+
+<img width="752" alt="image" src="https://user-images.githubusercontent.com/38410965/108891445-ba131600-75dc-11eb-9940-a66d2f3882b7.png">
+
+<img width="752" alt="image" src="https://user-images.githubusercontent.com/38410965/108891510-ceefa980-75dc-11eb-9bc4-9ec4fce3df17.png">
+
+<img width="752" alt="image" src="https://user-images.githubusercontent.com/38410965/108891564-ddd65c00-75dc-11eb-99e1-953485810584.png">
+
+with this code:
+
+<img width="752" alt="image" src="https://user-images.githubusercontent.com/38410965/108891564-ddd65c00-75dc-11eb-99e1-953485810584.png">
