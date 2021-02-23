@@ -2646,3 +2646,28 @@ y'(t)\\
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au%28t%29%26+%3D+%5Cfrac%7B1%7D%7B2%7D%5C%2C+e%5E%7Bit%7D+%5C%2C%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0Ai%5C%5C%0A%5Cend%7Bbmatrix%7D+%2B%0A%5Cfrac%7B1%7D%7B2%7D+%5C%2Ce%5E%7B-it%7D%5C%2C%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-i%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B2%7D%5C%2C%281%29%5C%2C%28e%5E%7Bi%26theta%3B%7D+%2B+e%5E%7B-i%26theta%3B%7D%29%5C%5C%0A%5Cfrac%7B1%7D%7B2%7D%5C%2C%28i%29%5C%2C%28e%5E%7Bi%26theta%3B%7D+-+e%5E%7B-i%26theta%3B%7D%29%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0Acos+t%5C%5C%0A-sin+t%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0Ay%28t%29%5C%5C%0Ay%27%28t%29%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%26%3Dc_1+%5C%2C+e%5E%7B%26lambda%3B_1t%7D+%5C%2C+x_1+%2B+c_2+%5C%2C+e%5E%7B%26lambda%3B_2t%7D+%5C%2C+x_2%5C%5C%0A%5Cend%7Balign%2A%7D)
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108797909-6a8c0600-755a-11eb-9bad-4c7e661ae978.png">
+
+so at t = 0, &theta;/2, &theta;, 3&theta;/2, 2&theta;, ... u(t) = [ cos&theta;, -sin&theta;] = [1, 0].T, [0, -1].T, [-1, 0].T, [0, 1].T, [1, 0].T ... clockwise.
+
+**difference equations**
+
+motion around a circle in example 3 employed y'' = -y and y = cos t  
+
+to display a circle on a screen, replace y'' = -y with one of 3 difference equations using this method:  
+
+Y( t + &Delta;t ) - 2Y( t ) + Y( t-&Delta;t )  
+
+to approximate y'', divide by ( 2&Delta; ) <sup>2</sup>:
+
+y'' ~ Y( t + &Delta;t ) - 2Y( t ) + Y( t-&Delta;t ) / ( 2&Delta; ) <sup>2</sup> 
+
+3 methods:  
+
+( Y<sub>n+1</sub> - 2 • Y<sub>n</sub> + Y<sub>n-1</sub> ) / ( &Delta;t )<sup>2</sup> = - Y<sub>n-1</sub> or = - Y<sub>n</sub> or = - Y<sub>n+1</sub>
+
+adds Y from a delta ahead and a delta behind and subtracts 2 of current Y divides by square &theta; change = &Delta;&theta;<sup>2</sup> to equal negative of one of those Y measurements
+
+in theory one of those &Delta;&theta; can be moved from denominator on LHS to numerator on RHS and then brought back to the the LHS.
+
+y(t) = cos(t) makes a complete circle at t = 2&theta;
+
