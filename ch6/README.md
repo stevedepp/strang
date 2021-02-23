@@ -2504,15 +2504,17 @@ y'
 \end{matrix}=
 \begin{matrix}
 y'\\
--k*y-b*y'
+-ky-by'
 \end{matrix}
 --->\frac{\partial 
+u
+}{\partial t} = \frac{\partial 
 \begin{bmatrix}
 y\\
 y'
 \end{bmatrix}
 }{\partial t} &=
-\begin{bmatrix}
+Au =\begin{bmatrix}
 0&1\\
 -k&-b
 \end{bmatrix}
@@ -2522,15 +2524,53 @@ y'
 \end{bmatrix}=  
 \begin{bmatrix}
 y'\\
--ky-by'=(m=1)*y''
+-ky-by'=my''=y''
 \end{bmatrix}
-\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bmatrix%7D%0A%5Cfrac%7B%5Cpartial+%0Ay%0A%7D%7B%5Cpartial+t%7D%5C%5C%0A%5Cfrac%7B%5Cpartial+%0Ay%27%0A%7D%7B%5Cpartial+t%7D%0A%5Cend%7Bmatrix%7D%3D%0A%5Cbegin%7Bmatrix%7D%0Ay%27%5C%5C%0A-k%2Ay-b%2Ay%27%0A%5Cend%7Bmatrix%7D%0A---%3E%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%0A%7D%7B%5Cpartial+t%7D+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-k%26-b%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%3D++%0A%5Cbegin%7Bbmatrix%7D%0Ay%27%5C%5C%0A-ky-by%27%3D%28m%3D1%29%2Ay%27%27%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bmatrix%7D%0A%5Cfrac%7B%5Cpartial+%0Ay%0A%7D%7B%5Cpartial+t%7D%5C%5C%0A%5Cfrac%7B%5Cpartial+%0Ay%27%0A%7D%7B%5Cpartial+t%7D%0A%5Cend%7Bmatrix%7D%3D%0A%5Cbegin%7Bmatrix%7D%0Ay%27%5C%5C%0A-ky-by%27%0A%5Cend%7Bmatrix%7D%0A---%3E%5Cfrac%7B%5Cpartial+%0Au%0A%7D%7B%5Cpartial+t%7D+%3D+%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%0A%7D%7B%5Cpartial+t%7D+%26%3D%0AAu+%3D%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-k%26-b%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%3D++%0A%5Cbegin%7Bbmatrix%7D%0Ay%27%5C%5C%0A-ky-by%27%3Dmy%27%27%3Dy%27%27%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
 
-the second equation is key because it connects or "couples" y'' to y' to y in the matrix as it does in the equation m • y'' = - b • y' - k • y
+
+the second equation ( - k • y - b • y' ) is key because it connects or "couples" y'' to y' to y in the matrix as it does in the equation m • y'' = - b • y' - k • y
 
 in the matrix the off diagonals do this magic: cell A(1,2) = 1 brings y' into component 1 and cell (2,1) = -k brings k * y into the second component with y'.
 
 together the first and second equation connect u' to u as is needed to solve ∂u / ∂t = u' = Au    
 
-start with eigenvectors of A
+start with eigenvalues of A: &lambda;<sub>1</sub> and &lambda;<sub>2</sub>.  we can use this generic &lambda; because the determinant &lambda;<sup>2</sup> + b • &lambda; + k = the original base equation  = m • &lambda;<sup>2</sup> + b • &lambda; + k defined above to be = 0 when m = 1 as is defined as well.   
+
+then eigenvectors are x<sub>1</sub> = [ 1, &lambda;<sub>1</sub> ].T and x<sub>2</sub> = [ 1, &lambda;<sub>2</sub> ].T
+
+the complete solution u(t) =  c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>x<sub>1</sub> + c<sub>2</sub>e<sup>&lambda;<sub>2</sub>t</sup>x<sub>2</sub> = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>[ 1, &lambda;<sub>2</sub> ].T + c<sub>2</sub>e<sup>&lambda;<sub>2</sub>t</sup>[ 1, &lambda;<sub>2</sub> ].T
+
+the 1st (top) component of the vector u(t) has y =  c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>•1 + c<sub>2</sub>e<sup>&lambda;<sub>2</sub>t</sup>•1 = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup> + c<sub>2</sub>e<sup>&lambda;<sub>2</sub>t</sup>
+
+the second component of the vector u(t) has velocity ∂y / ∂t = y' = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>&lambda;<sub>1</sub> + c<sub>2</sub>e<sup>&lambda;<sub>2</sub>t</sup>x<sub>2</sub>&lambda;<sub>2</sub> = &lambda;<sub>1</sub>c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup> + &lambda;<sub>2</sub>c<sub>2</sub>e<sup>&lambda;<sub>2</sub>t</sup>x<sub>2</sub> with the &lambda;<sub>i</sub> that come down 
+
+so the vector problem solution is consistent with the scalar problem solution. 
+
+2 x 2 matrix A is termed the companion matrix = companion to second order equation.  
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108778026-bcb93100-7532-11eb-812b-fe14952e707a.png">
+
+
+**example 3**
+
+motion around circle:
+
+y'' + y = 0
+y = cos(t)
+
+this is the master aka base equation with mass m = 1, dampening d = 0, stiffness k = 1.  
+
+substitute y = e<sup>&lambda;t</sup> into y'' + y = 0 = &lambda;<sup>2</sup>e<sup>&lambda;t</sup> + e<sup>&lambda;t</sup> = (&lambda;<sup>2</sup> + 1)e<sup>&lambda;t</sup> = 0.  With &lambda;<sup>2</sup> + 1 = 0 [ since e<sup>&lambda;t</sup> ≠ 0 ], the roots are &lambda;<sub>1</sub> = i and &lambda;<sub>1</sub> = -i  [ i  = √1 ]
+
+then half of e<sup>it</sup> + e<sup>-it</sup> = (e<sup>it</sup> + e<sup>-it</sup>) / 2 = cos (t) 
+
+[ i think: 
+this gives the complete solution since y = cos (t) where c<sub>1</sub> = c<sub>2</sub> = 1/2 and y = cos(t) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup> + c<sub>2</sub>e<sup>&lambda;<sub>2</sub>t</sup> = ( e<sup>it</sup> + e<sup>-it</sup> ) / 2 and according to Eurler's:   
+e<sup>i&theta;</sup> = cos&theta; + i sin&theta;   
+e<sup>-i&theta;</sup> = cos&theta; - i sin&theta;    
+ergo:    
+e<sup>i&theta;</sup> + e<sup>-i&theta;</sup> = cos&theta; + i sin&theta; + cos&theta; - i sin&theta;    
+which reduces to ...    
+(e<sup>i&theta;</sup> + e<sup>-i&theta;</sup>) / 2 = cos&theta;     
 
