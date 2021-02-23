@@ -2771,6 +2771,14 @@ Z_{n}\\
 \end{bmatrix}=A^{-1}U_n
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bmatrix%7D%0ABackward%0A%5Cend%7Bmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0AY_%7Bn%2B1%7D+%3D+Y_n+%2B+%26Delta%3Bt+Z_%7Bn%2B1%7D%5C%5C%0AZ_%7Bn%2B1%7D+%3D+Z_n+-+%26Delta%3Bt+Y_%7Bn%2B1%7D%0A%5Cend%7Bmatrix%7D%0A%26+%5Cbegin%7Bmatrix%7D+is+%5Cend%7Bmatrix%7D+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C++%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%0AAu_%7Bn%2B1%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-%26Delta%3B+%5C%2C+t%5C%5C%0A%26Delta%3B+%5C%2C+t%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%2B1%7D%5C%5C%0AZ_%7Bn%2B1%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%7D%5C%5C%0AZ_%7Bn%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0AU_%7Bn%7D%5C%5C%0A%26+%5Cbegin%7Bmatrix%7D+inverted+%5Cend%7Bmatrix%7D%0AU_%7Bn%2B1%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%2B1%7D%5C%5C%0AZ_%7Bn%2B1%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cfrac%7B1%7D%7B%28%26Delta%3Bt%29%5E2%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%26%26Delta%3B+%5C%2C+t%5C%5C%0A-%26Delta%3B+%5C%2C+t%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%7D%5C%5C%0AZ_%7Bn%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3DA%5E%7B-1%7DU_n%0A%5Cend%7Balign%2A%7D)
 
+Y is horizontal axis and Z is the vertical
+
+Forward difference makes Y<sub>n+1</sub> and Z<sub>n+1</sub> forward value from Y<sub>n</sub> and Z<sub>n</sub> added to some &Delta;t increment. Forward Y<sub>n+1</sub> is the sum of current Y<sub>n</sub> plus a &Delta;t increment of current Z<sub>n</sub>.  Forward Z<sub>n+1</sub> is the sum of current Z<sub>n</sub> plus a &Delta;t increment of current Y<sub>n</sub>.  The forward method starts with U<sub>0</sub> at its correct value [ 1, 0 ] and then goes off course as it spirals outward.
+
+Backward difference makes Y<sub>n</sub> and Z<sub>n</sub> backward value from Y<sub>n+1</sub> and Z<sub>n+1</sub> added to some &Delta;t increment. Backward Y<sub>n</sub> is the sum of forward Y<sub>n+1</sub> plus a &Delta;t increment of forward Z<sub>n+1</sub>.  Backward Z<sub>n</sub> is the sum of forward Z<sub>n+1</sub> plus a &Delta;t increment of forward Y<sub>n+1</sub>.  The backward method starts with U<sub>0</sub> at its correct value [ 1, 0 ] and then goes off course as it spirals inward.
+
+both travel in clockwise fashion.
+
 to see the results:  these do the perfect unit circle from [cos&theta;, -sin&theta;], euler's forward spiral approximation, and euler's backward spiral approximation.
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108892683-28a4a380-75de-11eb-9413-df872a44ca46.png">
@@ -2787,8 +2795,10 @@ with this code:
 
 the lambda's tell all.
 
-both methods have eigenvalues 1 &pm; i&Delta;t   
+both the forward and original backward matrix A have eigenvalues 1 &pm; i&Delta;t   
 test the magnitude |&lambda;| not the real parts.   
+
+the inverted A from backward method has &lambda; magnitudes <1 and so spirals inwards.
 
 - i = 0 + i
 - | i | = | - i | = 1
@@ -2798,7 +2808,7 @@ magnitude is computed same as vector length for complex number a + bi, magnitude
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108898247-fa769200-75e4-11eb-9fb3-cb34bd658c75.png">
 
-notice that the original backward method would spirals because it has the EXACT same &lambda;s as forward approximation that are > 1.  this is because backward method is initially approximating U<sub>n</sub> from U<sub>n+1</sub>.
+notice that the original backward method would spiral out like the forward method because it has the EXACT same &lambda;s as forward approximation that are > 1.  this is because backward method is initially approximating U<sub>n</sub> from U<sub>n+1</sub>.
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108899208-2a726500-75e6-11eb-9880-f24b1895fe79.png">
 
@@ -2810,3 +2820,17 @@ for the inverse of backwards approximation A, the | lambda;s | are < 1 as shown 
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108904163-2b0dfa00-75ec-11eb-88a1-92f11bd61524.png">
 
+
+in the leapfrog method   
+32 steps are taken with the centered choice and stays on the circle.   
+in equations 11C, the leapfrog method's second difference Y<sub>n+1</sub> - 2Y<sub>n</sub> + Y<sub>n-1</sub> leaps over the center value Y<sub>n</sub>
+
+in reality, y is the unknown, a vector.   
+the coefficient of y'' is a mass matrix M with n masses.  
+the coefficient of y is a stiffness matrix K (not a number k).   
+the coefficient of y' is a dampening matrix which might be zero.  
+the vector equatoin My'' + Ky = f is a major part of computational mechanics.  it is controlled by the eigenvalues of M<sup>-1</sup>K in Kx = &lambda;Mx [I am guessing that is because M<sup>-1</sup>Kx = &lambda;x]
+
+**Stability of 2 x 2 matrices**
+
+Does the solution to ∂u / ∂t = Au approach u = 0 as t approaches &infinity;
