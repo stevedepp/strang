@@ -2726,7 +2726,9 @@ question is :
 do points (Y<sub>n</sub>, Z<sub>n</sub>) stay on the circle Y<sup>2</sup> + Z<sup>2</sup> = 1   
 with powers of A<sup>n</sup> not powers of e<sup>&lambda;t</sup>, we test the magnitude of |&lambda;| and not the real parts of the eigenvalues. 
 
-Eigenvalues of A: &Lambda; = 1 &pm; i&Delta;t, Then, |&Lambda;| > 1 --> (Y<sub>n</sub>, Z<sub>n</sub>) spirals out. 
+Eigenvalues of A: &Lambda; = 1 &pm; i&Delta;t, Then, |&Lambda;| > 1 --> (Y<sub>n</sub>, Z<sub>n</sub>) spirals out as with the forward Euler spiral formula above and plotted below.  
+
+The backward approximation will do the opposite, spiral inwards.  Notice the new A matrix which unlike forward approximation must be inverted to give U<sub>n+1</sub> like in forward approximation instead of U<sub>n</sub>
 
 
 ![\begin{align*}
@@ -2782,3 +2784,8 @@ to see the results:  these do the perfect unit circle from [cos&theta;, -sin&the
 with this code:
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108892835-5558bb00-75de-11eb-8a89-8164dc2db795.png">
+
+the lambda's tell all.
+
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108898247-fa769200-75e4-11eb-9fb3-cb34bd658c75.png">

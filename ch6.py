@@ -52,7 +52,7 @@ def quadratic(a, b, c):
     '''( -b  +/- squareroot (b**2 - 4ac) ) / 2a when a != 0'''
     if a == 0:
         return 0, 0, 'a is zero; solution undefined'
-    return (-b+(b**2-4*a*c)**.5)/2*a,(-b-(b**2-4*a*c)**.5)/2*a, f'a is not zero; b**2-4ac = {b**2} minus {4*a*c}'
+    return (-b+(b**2-4*a*c)**.5)/2*a,(-b-(b**2-4*a*c)**.5)/2*a, f'a is not zero; b**2-4ac = {b**2} minus {4*(a*c)}'
 
 import numpy as np
 import matplotlib.pyplot as plt
