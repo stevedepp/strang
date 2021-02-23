@@ -2594,6 +2594,18 @@ and by definition ∂y / ∂t = y'
 \end{align*}
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D%3D%5Cfrac%7B%5Cpartial+%5Cbegin%7Bbmatrix%7Dy%5C%5Cy%27%5Cend%7Bbmatrix%7D%7D%7B%5Cpartial+t%7D+%3D+Au+%3D%5Cbegin%7Bbmatrix%7D0%261%5C%5C-1%260%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7Dy%5C%5Cy%27%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7Dy%27%5C%5C-y%5Cend%7Bbmatrix%7D+%0A%5Cend%7Balign%2A%7D%0A)
 
+same as before:   
+- find eigenvalues from determinant of A - &lambda * I   
+- find eigenvectors from the null space of those matrices (A - &lambda<sub>i</sub> * I)     
+- employ 3 steps:    
+1. combine the eigenvectors by finding c from u<sub>0</sub> = [1,0].T and X<sup>-1</sup> as shown below: u<sub>0</sub> = ∑<sub>i=1</sub><sup>n</sup> c<sub>i</sub>x<sub>i</sub>     
+confirm
+
+2. apply the growth factor eigenvalues e<sup>&lambda;<sub>i</sub>t</sup> to respective eigenvectors give exponential solutions.    
+3. combination that starts from u(0) is the combination of the pure solutions.    
+∑<sub>i=1</sub><sup>n</sup> c<sub>i</sub>x<sub>i</sub>e<sup>&lambda;<sub>i</sub>t</sup> = X&Lambda;c    
+
+
 
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108793336-4d9f0500-7551-11eb-8592-0aed6743b9bd.png">
