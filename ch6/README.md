@@ -2671,3 +2671,59 @@ in theory one of those &Delta;&theta; can be moved from denominator on LHS to nu
 
 y(t) = cos(t) makes a complete circle at t = 2&theta;
 
+2 of these Fourier Euler spirals miss by spiralling in (backward) or out (foreard) but one approximates well (leapfrog) as &Delta;t = 2&theta; / 32 
+
+![\begin{align*}
+F \,\, &Forward \, from \, n-1: \, \, \, \, \, \frac{Y_{n+1} -2Y_n + Y_{n-1}}{(&Delta;t)^2} = - Y_{n-1} \, \, \, (I I F) \\ 
+C\, \, &Centered \, at \, time \, n: \, \, \, \, \, \, \, \, \, \,   \frac{Y_{n+1} -2Y_n + Y_{n-1}}{(&Delta;t)^2} = - Y_{n} \, \, \, \, \, \, \, \, \, \,  (I I C) \\ 
+B \, \, &Backward \, from \, n+1: \,  \frac{Y_{n+1} -2Y_n + Y_{n-1}}{(&Delta;t)^2} = - Y_{n+1} \, \, \, \,  (I I B) \\ 
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AF+%5C%2C%5C%2C+%26Forward+%5C%2C+from+%5C%2C+n-1%3A+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5Cfrac%7BY_%7Bn%2B1%7D+-2Y_n+%2B+Y_%7Bn-1%7D%7D%7B%28%26Delta%3Bt%29%5E2%7D+%3D+-+Y_%7Bn-1%7D+%5C%2C+%5C%2C+%5C%2C+%28I+I+F%29+%5C%5C+%0AC%5C%2C+%5C%2C+%26Centered+%5C%2C+at+%5C%2C+time+%5C%2C+n%3A+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+++%5Cfrac%7BY_%7Bn%2B1%7D+-2Y_n+%2B+Y_%7Bn-1%7D%7D%7B%28%26Delta%3Bt%29%5E2%7D+%3D+-+Y_%7Bn%7D+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C+%5C%2C++%28I+I+C%29+%5C%5C+%0AB+%5C%2C+%5C%2C+%26Backward+%5C%2C+from+%5C%2C+n%2B1%3A+%5C%2C++%5Cfrac%7BY_%7Bn%2B1%7D+-2Y_n+%2B+Y_%7Bn-1%7D%7D%7B%28%26Delta%3Bt%29%5E2%7D+%3D+-+Y_%7Bn%2B1%7D+%5C%2C+%5C%2C+%5C%2C+%5C%2C++%28I+I+B%29+%5C%5C+%0A%5Cend%7Balign%2A%7D%0A)
+
+Forward |&lambda;| > 1 --> spiral out 
+Centered |&lambda;| = 1 --> best
+Backward |&lambda;| < 1 --> spiral in
+
+these 2 step equtions in equations 11F, 11C and 11B reduce to 1 step systems U<sub>n+1<sub> = AU<sub>n</sub>.
+
+instead of u = ( y, y' )  
+the discrete unknown is U<sub>n</sub> = (Y<sub>n</sub>, Z<sub>n</sub>)
+with n time steps &Delta;t starting from U<sub>0</sub>  
+[notice U is a matrix here where before u was a vector]
+
+these are like Y' = Z and Z' = Y   
+these are first order equations involving times n and n+1.  Eliminating Z woudl be back the forward second order equation (11 F) above. [ to see how, know that Z<sub>n</sub> = ]
+
+![\begin{align*}
+\begin{matrix}
+forward
+\end{matrix}
+\begin{matrix}
+Y_{n+1} = Y_n + &Delta;t Z_n\\
+Z_{n+1} = Z_n - &Delta;t Y_n
+\end{matrix}
+\begin{matrix}
+becomes
+\end{matrix}
+U_{n+1}=
+\begin{bmatrix}
+Y_{n+1}\\
+Z_{n+1}\\
+\end{bmatrix}=
+\begin{bmatrix}
+1&&Delta;t\\
+-&Delta;t&1\\
+\end{bmatrix}
+\begin{bmatrix}
+Y_n\\
+Z_n\\
+\end{bmatrix}
+=AU_n
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bmatrix%7D%0Aforward%0A%5Cend%7Bmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0AY_%7Bn%2B1%7D+%3D+Y_n+%2B+%26Delta%3Bt+Z_n%5C%5C%0AZ_%7Bn%2B1%7D+%3D+Z_n+-+%26Delta%3Bt+Y_n%0A%5Cend%7Bmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Abecomes%0A%5Cend%7Bmatrix%7D%0AU_%7Bn%2B1%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AY_%7Bn%2B1%7D%5C%5C%0AZ_%7Bn%2B1%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%26%26Delta%3Bt%5C%5C%0A-%26Delta%3Bt%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AY_n%5C%5C%0AZ_n%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3DAU_n%0A%5Cend%7Balign%2A%7D%0A)
+
+question is :   
+do points (Y<sub>n</sub>, Z<sub>n</sub>) stay on the circle Y<sup>2</sup> + Z<sup>2</sup> = 1   
+with powers of A<sup>n</sup> not powers of e<sup>&lambda;t</sup>, we test the magnitude of |&lambda;| and not the real parts of the eigenvalues. 
+
+Eigenvalues of A: &Lambda; = 1 &plusminus;
