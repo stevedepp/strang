@@ -2565,7 +2565,7 @@ substitute y = e<sup>&lambda;t</sup> into y'' + y = 0 = &lambda;<sup>2</sup>e<su
 
 then half of e<sup>it</sup> + e<sup>-it</sup> = (e<sup>it</sup> + e<sup>-it</sup>) / 2 = cos (t) 
 
-[ i think: 
+[ i think that y = cos t isnt an initial value but it is an anchoring value maybe: 
 this gives the complete solution since y = cos (t) where c<sub>1</sub> = c<sub>2</sub> = 1/2 and y = cos(t) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup> + c<sub>2</sub>e<sup>&lambda;<sub>2</sub>t</sup> = ( e<sup>it</sup> + e<sup>-it</sup> ) / 2 and according to Eurler's:   
 e<sup>i&theta;</sup> = cos&theta; + i sin&theta;   
 e<sup>-i&theta;</sup> = cos&theta; - i sin&theta;    
@@ -2575,6 +2575,25 @@ which reduces to ...
 (e<sup>i&theta;</sup> + e<sup>-i&theta;</sup>) / 2 = cos&theta;     
 ]
 
-/frac{1}{2}
-]
-}
+the initial values, ...    
+y(0) =  cos(0) = ( e<sup>i•0</sup> + e<sup>-i•0</sup> ) / 2 = 1   
+y'(0)   
+= (e<sup>i•t</sup> + e<sup>-i•t</sup>)'(0) = i • e<sup>i•0</sup> - i • e<sup>-i•0</sup> = (i • 1 - i • 1) = 0   
+= (cos&theta;)'(0) = -sin(&theta;=(0) = 0   
+... go into u(0) = [1,0].T
+
+above is scalar equations; now vector equations
+
+from given equations, we know:  y'' - y = 0 which means y'' = ∂y' / ∂t = - y   
+and by definition ∂y / ∂t = y'
+
+![\begin{align*}
+\frac{\partial u}{\partial t}=\frac{\partial \begin{bmatrix}y\\y'\end{bmatrix}}{\partial t} = Au =\begin{bmatrix}0&1\\-1&0\end{bmatrix}
+\begin{bmatrix}y\\y'\end{bmatrix}=
+\begin{bmatrix}y'\\-y\end{bmatrix} 
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D%3D%5Cfrac%7B%5Cpartial+%5Cbegin%7Bbmatrix%7Dy%5C%5Cy%27%5Cend%7Bbmatrix%7D%7D%7B%5Cpartial+t%7D+%3D+Au+%3D%5Cbegin%7Bbmatrix%7D0%261%5C%5C-1%260%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7Dy%5C%5Cy%27%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7Dy%27%5C%5C-y%5Cend%7Bbmatrix%7D+%0A%5Cend%7Balign%2A%7D%0A)
+
+
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108793336-4d9f0500-7551-11eb-8592-0aed6743b9bd.png">
