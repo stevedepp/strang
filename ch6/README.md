@@ -2767,4 +2767,4 @@ to see the results:  these do the perfect unit circle from [cos&theta;, -sin&the
 
 with this code:
 
-<img width="752" alt="image" src="https://user-images.githubusercontent.com/38410965/108891564-ddd65c00-75dc-11eb-99e1-953485810584.png">
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108892835-5558bb00-75de-11eb-8a89-8164dc2db795.png">
