@@ -2962,4 +2962,20 @@ eigenvalues of are  e<sup>&lambda;t</sup> = (I + &lambda;t + 1/2! (&lambda;t)<su
 
 [ I am not sure about that x at the end of the last formulae]
 
-E<sup>At</sup>u(0) solves EVEN IF there is a shortcoming of eigenvectors, as shown in the formula way above. 
+e<sup>At</sup>u(0) solves EVEN IF there is a shortcoming of eigenvectors, as shown in the formula way above. 
+
+u' = Au --> u(t) = e<sup>At</sup>u(0)
+
+with n independent eigenvectors A is diagonalizable allowing X&Lambda;X<sup>-1</sup> substitution into the series e<sup>At</sup> and whenever X&Lambda;X<sup>-1</sup>X&Lambda;X<sup>-1</sup> appears in the series, cancel the X<sup>-1</sup>X in the middle to get back to X&Lambda;X<sup>-1</sup>
+
+start with:  
+e<sup>At</sup>u(0) = ∑<sub>j=0</sub><sup>∞</sup> (1/j!)(At)<sup>j</sup> = I + At + (At)<sup>2</sup>/2 + (At)<sup>3</sup>/6 + ... + (At)<sup>∞</sup>/∞!
+
+diagonalize A:  
+e<sup>At</sup>u(0) = ∑<sub>j=0</sub><sup>∞</sup> (1/j!)(X&Lambda;X<sup>-1</sup>t)<sup>j</sup> = I + X&Lambda;X<sup>-1</sup>t + (X&Lambda;X<sup>-1</sup>t)<sup>2</sup>/2 + (X&Lambda;X<sup>-1</sup>t)<sup>3</sup>/6 + ... + (X&Lambda;X<sup>-1</sup>t)<sup>∞</sup>/∞!
+
+factor out X<sup>-1</sup>X from the middle of the powers of (X&Lambda;X<sup>-1</sup>t)<sup>i</sup>:   
+e<sup>At</sup>u(0) = X∑<sub>j=0</sub><sup>∞</sup> (1/j!)(&Lambda;t)<sup>j</sup>X<sup>-1</sup> = X ( I + &Lambda;t + (&Lambda;t)<sup>2</sup>/2 + (&Lambda;t)<sup>3</sup>/6 + ... + (&Lambda;)<sup>∞</sup>/∞!) X<sup>-1</sup>
+
+the sum of the &lambda;<sub>i</sub> appearing in each of the (i,i) cells of each &Lambda; in the last equation equals e<sup>&lambda;<sub>i</sub> in the diagonal matrix represented by e<sup>&Lambda;t</sup> in this equation:   
+e<sup>At</sup> = Xe<sup>&Lambda;</sup>X<sup>-1</sup>
