@@ -2891,9 +2891,30 @@ the matrices in general would:
 - have real &lambda;s above the parabola since the quadratic for A's determinant = &lambda;<sup>2</sup> - T&lambda; + D contains the term (T<sup>2</sup> - 4D)<sup>)<sup>1/2</sup> that is complex if T<sup>2</sup> - 4D)<sup> < 0 or as the parabola shows D < T<sup>2</sup> / 4    
 
 the example matrices in the plot are:     
-- stable [I think neutral] matrix has T = a + d = 0 - 3 = - 3 and D = ad - bc = 2 > 0 so both &lambda;s are < 0.  D = 0 + 2 < T<sup>2</sup> / 4 = (-3)<sup>2</sup> / 4 = 9/4 and so both &lambda;s are complex.    
-- unstable matrix has T = a + d = 0 - 6 = - 6 and D = ad - bc = -20 > 0 so the 1st &lambda;s is > 0 and the 2nd &lambda;s is < 0.  D = -20 < T<sup>2</sup> / 4 = (-6)<sup>2</sup> / 4 = 9 and so both &lambda;s are complex.  
-- neutral [ I think stable ] matrix has T = a + d = 0 and D = ad - bc = 49 > 0 so both &lambda;s are = 0.  D = 49 > T<sup>2</sup> / 4 = (0)<sup>2</sup> / 4 = 0 and so both &lambda;s are real. 
+- stable matrix has T = a + d = 0 - 3 = - 3 < 0 and D = ad - bc = 2 > 0 so both &lambda;s are < 0 indicating stability since u(t) --> 0 as t --> ∞.  Since D = 0 + 2 < T<sup>2</sup> / 4 = (-3)<sup>2</sup> / 4 = 9/4, both &lambda;s are complex.    PURPLE.
+- unstable matrix has T = a + d = 0 - 6 = - 6 < 0 and D = ad - bc = -20 < 0 so they have mixed signs such that the 1st &lambda;s is > 0 and the 2nd &lambda;s is < 0.  D < 0 indicates instability for this reason.   Since D = -20 < T<sup>2</sup> / 4 = (-6)<sup>2</sup> / 4 = 9, both &lambda;s are complex.  AQUA
+- neutral matrix has T = a + d = 0 and so neither < 0 or > 0 and D = ad - bc = 49 > 0 indicating that the product of the &lambda;s > 0 indicating they have the same sign.  Zero for &lambda;s is neutral.  Since D = 49 > T<sup>2</sup> / 4 = (0)<sup>2</sup> / 4 = 0, both &lambda;s are real. YELLOW.
+
+![\begin{align*}
+stable &=
+\begin{bmatrix}
+0&-1 \\
+2&-3 \\
+\end{bmatrix}\\
+\\
+unstable &=
+\begin{bmatrix}
+0&4 \\
+5& -6\\
+\end{bmatrix}\\
+\\
+neutral &=
+\begin{bmatrix}
+0&-7 \\
+7&0 \\
+\end{bmatrix}
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Astable+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%26-1+%5C%5C%0A2%26-3+%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Aunstable+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%264+%5C%5C%0A5%26+-6%5C%5C%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Aneutral+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%26-7+%5C%5C%0A7%260+%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
 
 <img width="752" alt="image"
 src="https://user-images.githubusercontent.com/38410965/108933015-5d355100-7618-11eb-9811-4d790f4f839b.png">
