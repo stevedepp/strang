@@ -2880,9 +2880,20 @@ a negative trace T means the real part is negative.  and thus the matrix is stab
 
 the figure shows parabola T<sup>2</sup> = 4D separating real &lambda;s from complex &lambda;s.  
 
-and the associated matrices that would be:   
-- stable on the LHS of the vertical axis D where T = &lambda;<sub>1</sub> + &lambda;<sub>2</sub> < 0
-- unstable 
+the matrices in general would:      
+- be stable in the 4th quadrant:    
+  - on the LHS of the vertical axis D where T = a + d = &lambda;<sub>1</sub> + &lambda;<sub>2</sub> < 0    
+  - AND above the horizontal axis T where D = ad - bc = &lambda;<sub>1</sub>&lambda;<sub>2</sub> > 0 indicating that signs for both &lambda;s are the same.    
+- be unstable in the 1st quadrant:    
+  - on the RHS of the veritcal axis D where T = a + d = &lambda;<sub>1</sub> + &lambda;<sub>2</sub> < 0 and so at least one &lambda; > 0    
+  - AND above the horizontal axis T where D = ad - bc = &lambda;<sub>1</sub>&lambda;<sub>2</sub> > 0 indicating that signs for both &lambda;s are the same and thus both &lambda;s > 0.    
+- be unstable in the 2nd and 3rd quadrants below the horizontal axis T where determinant D = ad - bc = &lambda;<sub>1</sub>&lambda;<sub>2</sub> < 0 indicating that &lambda;<sub>1</sub> < 0 and &lambda;<sub>2</sub> > 0.    
+- have real &lambda;s above the parabola since the quadratic for A's determinant = &lambda;<sup>2</sup> - T&lambda; + D contains the term (T<sup>2</sup> - 4D)<sup>)<sup>1/2</sup> that is complex if T<sup>2</sup> - 4D)<sup> < 0 or as the parabola shows D < T<sup>2</sup> / 4    
+
+the example matrices in the plot are:     
+- stable [I think neutral] matrix has T = a + d = 0 - 3 = - 3 and D = ad - bc = 2 > 0 so both &lambda;s are < 0.  D = 0 + 2 < T<sup>2</sup> / 4 = (-3)<sup>2</sup> / 4 = 9/4 and so both &lambda;s are complex.    
+- unstable matrix has T = a + d = 0 - 6 = - 6 and D = ad - bc = -20 > 0 so the 1st &lambda;s is > 0 and the 2nd &lambda;s is < 0.  D = -20 < T<sup>2</sup> / 4 = (-6)<sup>2</sup> / 4 = 9 and so both &lambda;s are complex.  
+- neutral [ I think stable ] matrix has T = a + d = 0 and D = ad - bc = 49 > 0 so both &lambda;s are = 0.  D = 49 > T<sup>2</sup> / 4 = (0)<sup>2</sup> / 4 = 0 and so both &lambda;s are real. 
 
 <img width="752" alt="image"
 src="https://user-images.githubusercontent.com/38410965/108933015-5d355100-7618-11eb-9811-4d790f4f839b.png">
