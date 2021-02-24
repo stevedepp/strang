@@ -2977,5 +2977,5 @@ e<sup>At</sup>u(0) = ∑<sub>j=0</sub><sup>∞</sup> (1/j!)(X&Lambda;X<sup>-1</s
 factor out X<sup>-1</sup>X from the middle of the powers of (X&Lambda;X<sup>-1</sup>t)<sup>i</sup>:   
 e<sup>At</sup>u(0) = X∑<sub>j=0</sub><sup>∞</sup> (1/j!)(&Lambda;t)<sup>j</sup>X<sup>-1</sup> = X ( I + &Lambda;t + (&Lambda;t)<sup>2</sup>/2 + (&Lambda;t)<sup>3</sup>/6 + ... + (&Lambda;)<sup>∞</sup>/∞!) X<sup>-1</sup>
 
-the sum of the &lambda;<sub>i</sub> appearing in each of the (i,i) cells of each &Lambda; in the last equation equals e<sup>&lambda;<sub>i</sub> in the diagonal matrix represented by e<sup>&Lambda;t</sup> in this equation:   
+the sum of the &lambda;<sub>i</sub> appearing in each of the (i,i) cells of each &Lambda; in the last equation equals e<sup>&lambda;<sub>i</sub></sup> in the diagonal matrix represented by e<sup>&Lambda;t</sup> in this equation:   
 e<sup>At</sup> = Xe<sup>&Lambda;</sup>X<sup>-1</sup>
