@@ -2906,7 +2906,7 @@ stable ; &complex
 \begin{bmatrix}
 0&4 \\
 5& -6\\
-\end{bmatrix} &--> \begin{matrix} T = a+d = -6; \, D = ad-bc = -20; & \, D = -20 < \frac{T^2}{4} = \frac{9}{4} \end{matrix}
+\end{bmatrix} &--> \begin{matrix} T = a+d = -6; \, D = ad-bc = -20; & \, D = -20 < \frac{T^2}{4} = \frac{36}{4} \end{matrix}
  --> \begin{matrix}
 unstable ; &complex 
 \end{matrix}
@@ -2918,7 +2918,8 @@ unstable ; &complex
  --> \begin{matrix}
 neutral ; &real 
 \end{matrix}
-\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bbmatrix%7D%0A0%26-1+%5C%5C%0A2%26-3+%5C%5C%0A%5Cend%7Bbmatrix%7D+%26--%3E+%5Cbegin%7Bmatrix%7DT+%3D+a%2Bd+%3D+-3%3B+%5C%2C+D+%3D+ad-bc+%3D+2%3B+%26+D+%3D+2+%3C+%5Cfrac%7BT%5E2%7D%7B4%7D+%3D+%5Cfrac%7B9%7D%7B4%7D%5Cend%7Bmatrix%7D+--%3E+%5Cbegin%7Bmatrix%7D%0Astable+%3B+%26complex+%0A%5Cend%7Bmatrix%7D%0A%5C%5C%0A%5Cbegin%7Bbmatrix%7D%0A0%264+%5C%5C%0A5%26+-6%5C%5C%0A%5Cend%7Bbmatrix%7D+%26--%3E+%5Cbegin%7Bmatrix%7D+T+%3D+a%2Bd+%3D+-6%3B+%5C%2C+D+%3D+ad-bc+%3D+-20%3B+%26+%5C%2C+D+%3D+-20+%3C+%5Cfrac%7BT%5E2%7D%7B4%7D+%3D+%5Cfrac%7B9%7D%7B4%7D+%5Cend%7Bmatrix%7D%0A+--%3E+%5Cbegin%7Bmatrix%7D%0Aunstable+%3B+%26complex+%0A%5Cend%7Bmatrix%7D%0A%5C%5C%0A%5Cbegin%7Bbmatrix%7D%0A0%26-7+%5C%5C%0A7%260+%5C%5C%0A%5Cend%7Bbmatrix%7D+%26--%3E+%5Cbegin%7Bmatrix%7D+T+%3D+a%2Bd+%3D+0%3B+%5C%2C+D+%3D+ad-bc+%3D+49%3B+%26+%5C%2C+D+%3D+49+%3E+%5Cfrac%7BT%5E2%7D%7B4%7D+%3D+%5Cfrac%7B0%7D%7B4%7D+%5Cend%7Bmatrix%7D%0A+--%3E+%5Cbegin%7Bmatrix%7D%0Aneutral+%3B+%26real+%0A%5Cend%7Bmatrix%7D%0A%5Cend%7Balign%2A%7D)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bbmatrix%7D%0A0%26-1+%5C%5C%0A2%26-3+%5C%5C%0A%5Cend%7Bbmatrix%7D+%26--%3E+%5Cbegin%7Bmatrix%7DT+%3D+a%2Bd+%3D+-3%3B+%5C%2C+D+%3D+ad-bc+%3D+2%3B+%26+D+%3D+2+%3C+%5Cfrac%7BT%5E2%7D%7B4%7D+%3D+%5Cfrac%7B9%7D%7B4%7D%5Cend%7Bmatrix%7D+--%3E+%5Cbegin%7Bmatrix%7D%0Astable+%3B+%26complex+%0A%5Cend%7Bmatrix%7D%0A%5C%5C%0A%5Cbegin%7Bbmatrix%7D%0A0%264+%5C%5C%0A5%26+-6%5C%5C%0A%5Cend%7Bbmatrix%7D+%26--%3E+%5Cbegin%7Bmatrix%7D+T+%3D+a%2Bd+%3D+-6%3B+%5C%2C+D+%3D+ad-bc+%3D+-20%3B+%26+%5C%2C+D+%3D+-20+%3C+%5Cfrac%7BT%5E2%7D%7B4%7D+%3D+%5Cfrac%7B36%7D%7B4%7D+%5Cend%7Bmatrix%7D%0A+--%3E+%5Cbegin%7Bmatrix%7D%0Aunstable+%3B+%26complex+%0A%5Cend%7Bmatrix%7D%0A%5C%5C%0A%5Cbegin%7Bbmatrix%7D%0A0%26-7+%5C%5C%0A7%260+%5C%5C%0A%5Cend%7Bbmatrix%7D+%26--%3E+%5Cbegin%7Bmatrix%7D+T+%3D+a%2Bd+%3D+0%3B+%5C%2C+D+%3D+ad-bc+%3D+49%3B+%26+%5C%2C+D+%3D+49+%3E+%5Cfrac%7BT%5E2%7D%7B4%7D+%3D+%5Cfrac%7B0%7D%7B4%7D+%5Cend%7Bmatrix%7D%0A+--%3E+%5Cbegin%7Bmatrix%7D%0Aneutral+%3B+%26real+%0A%5Cend%7Bmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
 
 <img width="752" alt="image"
 src="https://user-images.githubusercontent.com/38410965/108933015-5d355100-7618-11eb-9811-4d790f4f839b.png">
