@@ -2892,6 +2892,9 @@ the matrices in general would:
 
 &lambda; = \frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 
+$`\sqrt{2}`$
+
+{\sqrt{n}}
 
 the example matrices in the plot are:     
 - stable matrix has T = a + d = 0 - 3 = - 3 < 0 and D = ad - bc = 2 > 0 so both &lambda;s are < 0 indicating stability since u(t) --> 0 as t --> ∞.  Since D = 0 + 2 < T<sup>2</sup> / 4 = (-3)<sup>2</sup> / 4 = 9/4, both &lambda;s are complex.    PURPLE.
