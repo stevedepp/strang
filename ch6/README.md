@@ -2888,7 +2888,7 @@ the matrices in general would:
   - on the RHS of the veritcal axis D where T = a + d = &lambda;<sub>1</sub> + &lambda;<sub>2</sub> < 0 and so at least one &lambda; > 0    
   - AND above the horizontal axis T where D = ad - bc = &lambda;<sub>1</sub>&lambda;<sub>2</sub> > 0 indicating that signs for both &lambda;s are the same and thus both &lambda;s > 0.    
 - be unstable in the 2nd and 3rd quadrants below the horizontal axis T where determinant D = ad - bc = &lambda;<sub>1</sub>&lambda;<sub>2</sub> < 0 indicating that &lambda;<sub>1</sub> < 0 and &lambda;<sub>2</sub> > 0.    
-- have real &lambda;s above the parabola since the quadratic for A's determinant = &lambda;<sup>2</sup> - T&lambda; + D contains the term (T<sup>2</sup> - 4D)<sup>)<sup>1/2</sup> that is complex if T<sup>2</sup> - 4D)<sup> < 0 or as the parabola shows D < T<sup>2</sup> / 4    
+- have real &lambda;s above the parabola since the roots quadratic for the determinant of [ A - &lambda I ] = 0 are found in equation &lambda; = T &pm; \sqrt{}{T^2 - 4D}.  This means that when the roots of lambda;<sup>2</sup> - T&lambda; + D are derived from the quadratic formula if the term (T<sup>2</sup> - 4D)<sup>)<sup>1/2</sup> < 0 then both &lambda;s are complex.  This is shown by the parabola which represents points for matrices' (T, D) pairs where D = T<sup>2</sup> / 4.  If below the parabola, then D < T<sup>2</sup> / 4  and both &lambda;s are complex.   
 
 the example matrices in the plot are:     
 - stable matrix has T = a + d = 0 - 3 = - 3 < 0 and D = ad - bc = 2 > 0 so both &lambda;s are < 0 indicating stability since u(t) --> 0 as t --> ∞.  Since D = 0 + 2 < T<sup>2</sup> / 4 = (-3)<sup>2</sup> / 4 = 9/4, both &lambda;s are complex.    PURPLE.
@@ -2926,3 +2926,7 @@ src="https://user-images.githubusercontent.com/38410965/108933015-5d355100-7618-
 
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108933056-750cd500-7618-11eb-88fd-9e89bc507584.png">
+
+plotted by this code
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108941568-5829cf00-7623-11eb-946c-6465f82e9e3b.png">
