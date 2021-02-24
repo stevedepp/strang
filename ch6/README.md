@@ -2833,6 +2833,59 @@ the vector equatoin My'' + Ky = f is a major part of computational mechanics.  i
 
 **Stability of 2 x 2 matrices**
 
-Does the solution to ∂u / ∂t = Au approach u = 0 as t approaches ∞ \&infty& \infinity  &infinity;
-\infty
-\$infty$
+Does the solution to ∂u / ∂t = Au approach u = 0 as t approaches ∞ ?
+
+stable dissipates energy.
+
+e<sup>t</sup> is unstable.  
+
+stability depends on a the eigenvalues &lambda;s of A.
+
+the complete solution u(t) is built from the pure solutions e<sup>&lambda;t</sup>x   
+if the eigenvalue is real, we know exactly when e<sup>&lambda;t</sup> will approach zero.   
+&lambda; must be negative [because then e<sup>&lambda;t</sup> is < 1]   
+if the eigenvalue is complex, &lambda; = r + is then the real part r must be negative  
+when e<sup>&lambda;t</sup> splits in to e<sup>r•t</sup> and e<sup>is•t</sup>, the factor e<sup>is•t</sup> has absolute value fixed at 1 because:   
+e<sup>is•t</sup> = cos(s • t) + i • sin(s • t)   
+which has    
+| e<sup>is • t</sup> |<sup>2</sup> = cos<sup>2</sup>(s • t) + i • sin<sup>2</sup>(s • t) = 1    
+[ notice magnitude absolute value is taken before the squaring so the i drops away ]
+
+the real part of &lambda controls the growth ( real part r > 0 ) ir decay ( real part r < 0 )   
+[because the imaginary part e<sup>is • t</sup> always stays on the circle |e<sup>is • t</sup>|<sup>2</sup> = 1]
+
+the question is which matrices have negative eigenvalues?  when are the real parts of &lambda;s all negative.  2x2 matrices allow a clear answer.  
+
+**stability**
+
+A is stable and u(t) --> 0 when all eigenvalues &lambda; have negative real parts.  
+
+2 x 2 A must pass 2 tests: the trace T = a + d = &lambda;<sub>1</sub> + &lambda;<sub>2</sub> < 0 and the determinant D = ad - bc = &lambda;<sub>1</sub>&lambda;<sub>2</sub> > 0
+
+IFF both are real and negative, then their sum must be negative: T = a + d < 0  
+IFF both signs are the same, then their product must be positive: D = ad - bc > 0
+
+IFF means the logic works in reverse:
+
+if D = ad - bc = &lambda;<sub>1</sub>&lambda;<sub>2</sub> > 0, the both share the same sign. 
+then, if T = a + d = &lambda;<sub>1</sub> + &lambda;<sub>2</sub> < 0 then both are real and their shared signs will be [real and] negative. 
+
+if the &lambda;s are complex numbers, they must have the paired form r + is and r - is.  
+otherwise T = a + d = &lambda;<sub>1</sub> + &lambda;<sub>2</sub> and T = ad - bc = &lambda;<sub>1</sub>&lambda;<sub>2</sub> will not be real.  [the imaginary bits won't cancel.]    
+
+the determinant is automatically positive since ( r + is ) ( r - is ) = ( r<sub>2</sub> + s<sub>2</sub> )
+
+the trace T is r + is  + r - is = 2r is real.  
+a negative trace T means the real part is negative.  and thus the matrix is stable Q.E.D.
+
+the figure shows parabola T<sup>2</sup> = 4D separating real &lambda;s from complex &lambda;s.  
+
+and the associated matrices that would be:   
+- stable on the LHS of the vertical axis D where T = &lambda;<sub>1</sub> + &lambda;<sub>2</sub> < 0
+- unstable 
+
+<img width="752" alt="image"
+src="https://user-images.githubusercontent.com/38410965/108933015-5d355100-7618-11eb-9811-4d790f4f839b.png">
+
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108933056-750cd500-7618-11eb-88fd-9e89bc507584.png">

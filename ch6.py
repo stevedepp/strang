@@ -159,3 +159,17 @@ def eulers_spiral_forward(show=False):
     plt.show()
     if show:
         return U_n
+
+
+def td(matrices=[]):
+    t = [trace(i) for i in matrices]
+    d = [i.det() for i in matrices]
+    colors = [i * 2 * np.pi / len(t) for i in range(len(t))]
+    T = range(-10, 11)
+    D = [i**2 / 4 for i in T]
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    boundary = ax.scatter(T, D)
+    if len(t) != 0:
+        examples = ax.scatter(t, d, c = colors) 
+    plt.show()
