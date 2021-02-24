@@ -2028,16 +2028,16 @@ y(t) &= e^{At}y(0)
 \\
 exponentials :\\
 \\
-e^{x} &= \sum_{i=0}^{n} \frac{(x)^i}{i!}\\
+e^{x} &= \sum_{i=0}^{\infty} \frac{(x)^i}{i!}\\
 \\
 \\
-e^{At} &= \sum_{i=0}^{n} \frac{(At)^i}{i!}\\
+e^{At} &= \sum_{i=0}^{\infty} \frac{(At)^i}{i!}\\
 \\
 & each \,one  \,is  \,a  \,matrix\\
 \\
-&= \frac{(At)^0}{0!} +\frac{(At)^1}{1!} +\frac{(At)^2}{2!}++\frac{(At)^3}{3!}+\, ... +\frac{(At)^n}{n!} \\
+&= \frac{(At)^0}{0!} +\frac{(At)^1}{1!} +\frac{(At)^2}{2!}++\frac{(At)^3}{3!}+\, ... +\frac{(At)^\infty}{\infty!} \\
 \\
-&= I +At +\frac{1}{2}(At)^2+\frac{1}{6}(At)^3+\, ... +\frac{(At)^n}{n!} 
+&= I +At +\frac{1}{2}(At)^2+\frac{1}{6}(At)^3+\, ... +\frac{(At)^\infty}{\infty!} 
 \\
 (e^{At})' &=\\
 \\
@@ -2071,40 +2071,52 @@ y&= (I + X&Lambda;X^{-1}t + \frac{1}{2}X&Lambda;^2X^{-1}t^2 + \frac{1}{6}X&Lambd
 \\
 &= Xe^{&Lambda;t}X^{-1}*y(0)
 \\
-&=X*(\sum^n(I+At+\frac{1}{2}(At)^2+...+\frac{1}{n!}(At)^n))*X^{-1}*y(0)
+&=X*(\sum^\infty(I+&Lambda;t+\frac{1}{2}(&Lambda;t)^2+...+\frac{1}{\infty!}(&Lambda;t)^\infty))*X^{-1}*y(0)
 \\
-&= X *(\sum^n(
+&= X *(\sum^\infty(
 \begin{bmatrix}
 1&0&0\\
 0&1&0\\
 0&0&1
 \end{bmatrix} +
 \begin{bmatrix}
-&Lambda;_1t&0&0\\
-0&&Lambda;_2t&0\\
-0&0&&Lambda;_3t
+&lambda;_1t&0&0\\
+0&&lambda;_2t&0\\
+0&0&&lambda;_3t
 \end{bmatrix} +
 \frac{1}{2}\begin{bmatrix}
-(&Lambda;_1t)^2&0&0\\
-0&(&Lambda;_2t)^2&0\\
-0&0&(&Lambda;_3t)^2
+(&lambda;_1t)^2&0&0\\
+0&(&lambda;_2t)^2&0\\
+0&0&(&lambda;_3t)^2
 \end{bmatrix} +
 ...+
-\frac{1}{n!}\begin{bmatrix}
-(&Lambda;_1t)^n&0&0\\
-0&(&Lambda;_2t)^n&0\\
-0&0&(&Lambda;_3t)^n
+\frac{1}{\infty!}\begin{bmatrix}
+(&lambda;_1t)^\infty&0&0\\
+0&(&lambda;_2t)^\infty&0\\
+0&0&(&lambda;_3t)^\infty
 \end{bmatrix}
 ))*X^{-1}*y(0)\\
 \\
-& each \,cell \, above \,exponential \,series \,sums \,to \, cells \, in \,the \, following:\\
+\\
+&\begin{matrix}
+each&cell&in&the&above&exponential&series&of&matrices&containing&&lambda;t&sums&to&e^{&lambda;t}
+\end{matrix}
+\\
+& for \, example\,add\,cell(1,1)\,across\,all\,matrices\, \\ &=(&lambda;_1t)^0+(&lambda;_1t)^1+(&lambda;_2t)^2 + (&lambda;_it)^i + ... + (&lambda;_1t)^{\infty} 
+=1+&lambda;_1t+(&lambda;_1t)^2 + (&lambda;_1t)^i + ... + (&lambda;_1t)^{\infty} 
+= e^{&lambda;_1t}\\
+& found \,below \,in \,cell \,(1,1)
+\\
 \\
 &= X\begin{bmatrix}
-e^{&Lambda;_1t}&0&0\\
-0&e^{&Lambda;_2t}&0\\
-0&0&e^{&Lambda;_3t}
+e^{&lambda;_1t}&0&0\\
+0&e^{&lambda;_2t}&0\\
+0&0&e^{&lambda;_3t}
 \end{bmatrix}
 X^{-1}*y(0)\\
+\\
+\\
+&= Xe^{&Lambda;t}X^{-1}*y(0)
 \\
 \\
 where:&\\
@@ -2179,7 +2191,7 @@ c_1\\c_2\\c_3\\
 \\
 &=Ay\\
 \\
-\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A1+%5C%2C+equation%3A%26%5C%5C%0A%5C%5C%0Ay%27%26%3Day%5C%5C%0Asolution%3A%26%5C%5C%0A%5C%5C%0Ay%28t%29+%26%3D+e%5E%7Bat%7Dy%280%29%0A%5C%5C%0A%5C%5C%0An+%5C%2C+equations%3A%26%5C%5C%0A%5C%5C%0Ay%27%26%3DAy%5C%5C%0A%5C%5C%0Asolution%3A%26%5C%5C%0Ay%28t%29+%26%3D+e%5E%7BAt%7Dy%280%29%0A%5C%5C%0A%5C%5C%0Aexponentials+%3A%5C%5C%0A%5C%5C%0Ae%5E%7Bx%7D+%26%3D+%5Csum_%7Bi%3D0%7D%5E%7Bn%7D+%5Cfrac%7B%28x%29%5Ei%7D%7Bi%21%7D%5C%5C%0A%5C%5C%0A%5C%5C%0Ae%5E%7BAt%7D+%26%3D+%5Csum_%7Bi%3D0%7D%5E%7Bn%7D+%5Cfrac%7B%28At%29%5Ei%7D%7Bi%21%7D%5C%5C%0A%5C%5C%0A%26+each+%5C%2Cone++%5C%2Cis++%5C%2Ca++%5C%2Cmatrix%5C%5C%0A%5C%5C%0A%26%3D+%5Cfrac%7B%28At%29%5E0%7D%7B0%21%7D+%2B%5Cfrac%7B%28At%29%5E1%7D%7B1%21%7D+%2B%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D%2B%2B%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D%2B%5C%2C+...+%2B%5Cfrac%7B%28At%29%5En%7D%7Bn%21%7D+%5C%5C%0A%5C%5C%0A%26%3D+I+%2BAt+%2B%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2%2B%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3%2B%5C%2C+...+%2B%5Cfrac%7B%28At%29%5En%7D%7Bn%21%7D+%0A%5C%5C%0A%28e%5E%7BAt%7D%29%27+%26%3D%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial+%28e%5E%7BAt%7D%29%7D%7B%5Cpartial+t%7D+%26+%3D+%28I+%2BAt+%2B%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2%2B%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3%2B%5C%2C+...+%29%27%5C%5C%0A%5C%5C%0A%26+%3D+constant+%2BA+%2B%5Cfrac%7B1%7D%7B2%7D%28A%5E2%29%282t%29%2B%5Cfrac%7B1%7D%7B6%7D%28A%5E3%293t%5E2%2B%5C%2C+...+%5C%5C%0A%5C%5C%0A%26+%3D+A+%2BA%5E2t%2B%5Cfrac%7B1%7D%7B2%7DA%5E3t%5E2%2B%5C%2C+...+%5C%5C%0A%5C%5C%0A%26+%3D+A%28+I%2BAt%2B%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2%2B%5C%2C+...+%5C%5C%0A%5C%5C%0A%26+%3D+Ae%5E%7BAt%7D+%5C%5C%0A%5C%5C%0A%5C%5C%0Ay%27%3D%5Cfrac%7B%5Cpartial+%28e%5E%7BAt%7Dy%280%29%29%7D%7B%5Cpartial+t%7D+%26%3D+%28I%2Ay%280%29+%2BAt%2Ay%280%29+%2B%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2%2Ay%280%29%2B%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3%2Ay%280%29%2B%5C%2C+...+%29%27%5C%5C%0A%5C%5C%0A%26due+%5C%2C+to+%5C%2C+product+%5C%2C+rule+%5C%2C+and+%5C%2C+y%280%29+%5C%2C+is+%5C%2C+a+%5C%2C+constant%5C%5C%0A%5C%5C%0A%26%3D+%28I+%2BAt+%2B%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2%2B%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3%2B%5C%2C+...+%29%27y%280%29%5C%5C%0A%5C%5C%0A%26%3D+Ae%5E%7BAt%7Dy%280%29+%5C%5C%0A%5C%5C%0A%26%3DAy%0A%5C%5C%0A%5C%5C%0Adiagonalization+%5C%2Cof+%5C%2C+y%3A%26%0A%5C%5C%0Ay%26%3D+%28I+%2B+X%26Lambda%3BX%5E%7B-1%7Dt+%2B+%5Cfrac%7B1%7D%7B2%7DX%26Lambda%3B%5E2X%5E%7B-1%7Dt%5E2+%2B+%5Cfrac%7B1%7D%7B6%7DX%26Lambda%3B%5E3X%5E%7B-1%7Dt%5E3%29%2Ay%280%29%0A%5C%5C%0A%26%3D+X%28I+%2B+%26Lambda%3Bt+%2B+%5Cfrac%7B1%7D%7B2%7D%26Lambda%3B%5E2t%5E2+%2B+%5Cfrac%7B1%7D%7B6%7D%26Lambda%3B%5E3t%5E3%29X%5E%7B-1%7D%2Ay%280%29%0A%5C%5C%0A%26%3D+Xe%5E%7B%26Lambda%3Bt%7DX%5E%7B-1%7D%2Ay%280%29%0A%5C%5C%0A%26%3DX%2A%28%5Csum%5En%28I%2BAt%2B%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2%2B...%2B%5Cfrac%7B1%7D%7Bn%21%7D%28At%29%5En%29%29%2AX%5E%7B-1%7D%2Ay%280%29%0A%5C%5C%0A%26%3D+X+%2A%28%5Csum%5En%28%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A0%261%260%5C%5C%0A0%260%261%0A%5Cend%7Bbmatrix%7D+%2B%0A%5Cbegin%7Bbmatrix%7D%0A%26Lambda%3B_1t%260%260%5C%5C%0A0%26%26Lambda%3B_2t%260%5C%5C%0A0%260%26%26Lambda%3B_3t%0A%5Cend%7Bbmatrix%7D+%2B%0A%5Cfrac%7B1%7D%7B2%7D%5Cbegin%7Bbmatrix%7D%0A%28%26Lambda%3B_1t%29%5E2%260%260%5C%5C%0A0%26%28%26Lambda%3B_2t%29%5E2%260%5C%5C%0A0%260%26%28%26Lambda%3B_3t%29%5E2%0A%5Cend%7Bbmatrix%7D+%2B%0A...%2B%0A%5Cfrac%7B1%7D%7Bn%21%7D%5Cbegin%7Bbmatrix%7D%0A%28%26Lambda%3B_1t%29%5En%260%260%5C%5C%0A0%26%28%26Lambda%3B_2t%29%5En%260%5C%5C%0A0%260%26%28%26Lambda%3B_3t%29%5En%0A%5Cend%7Bbmatrix%7D%0A%29%29%2AX%5E%7B-1%7D%2Ay%280%29%5C%5C%0A%5C%5C%0A%26+each+%5C%2Ccell+%5C%2C+above+%5C%2Cexponential+%5C%2Cseries+%5C%2Csums+%5C%2Cto+%5C%2C+cells+%5C%2C+in+%5C%2Cthe+%5C%2C+following%3A%5C%5C%0A%5C%5C%0A%26%3D+X%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B%26Lambda%3B_1t%7D%260%260%5C%5C%0A0%26e%5E%7B%26Lambda%3B_2t%7D%260%5C%5C%0A0%260%26e%5E%7B%26Lambda%3B_3t%7D%0A%5Cend%7Bbmatrix%7D%0AX%5E%7B-1%7D%2Ay%280%29%5C%5C%0A%5C%5C%0A%5C%5C%0Awhere%3A%26%5C%5C%0Ay%280%29+%26%3D+c_1+e%5E%7B%26lambda%3B_1t%7D+x_1+%2Bc_2e%5E%7B%26lambda%3B_2t%7Dx_2+%2Bc_3e%5E%7B%26lambda%3B_3t%7Dx_3%5C%5C%0A%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B%26lambda%3B_1%28t%3D0%29%7D%260%260%5C%5C%0A0%26e%5E%7B%26lambda%3B_2%28t%3D0%29%7D%260%5C%5C%0A0%260%26e%5E%7B%26lambda%3B_3%28t%3D0%29%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5Cc_2%5C%5Cc_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5Cc_2%5C%5Cc_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%26%3DXc%0A%5C%5C%0Aso+%5C%2C+...%26%5C%5C%0A%5C%5C%0AX%5E%7B-1%7Dy%280%29+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5Cc_2%5C%5Cc_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%5C%5C%0Athus+%5C%2C+...%26%5C%5C%0A%5C%5C%0Ay+%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B%26Lambda%3B_1t%7D%260%260%5C%5C%0A0%26e%5E%7B%26Lambda%3B_2t%7D%260%5C%5C%0A0%260%26e%5E%7B%26Lambda%3B_3t%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5Cc_2%5C%5Cc_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%26%3DX+e%5E%7B%26Lambda%3Bt%7Dc%5C%5C%0A%5C%5C%0A%5C%5C%0Aand+%5C%2C+...%26%5C%5C%0A%5C%5C%0Ay%27%3D%5Cfrac%7B%5Cpartial+%28e%5E%7BAt%7Dy%280%29%29%7D%7B%5Cpartial+t%7D+%26%3D%0AA%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B%26Lambda%3B_1t%7D%260%260%5C%5C%0A0%26e%5E%7B%26Lambda%3B_2t%7D%260%5C%5C%0A0%260%26e%5E%7B%26Lambda%3B_3t%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5Cc_2%5C%5Cc_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%26%3DAX+e%5E%7B%26Lambda%3Bt%7Dc%5C%5C%0A%5C%5C%0A%5C%5C%0A%26%3DAy%5C%5C%0A%5C%5C%0A%5Cend%7Balign%2A%7D)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A1+%5C%2C+equation%3A%26%5C%5C%0A%5C%5C%0Ay%27%26%3Day%5C%5C%0Asolution%3A%26%5C%5C%0A%5C%5C%0Ay%28t%29+%26%3D+e%5E%7Bat%7Dy%280%29%0A%5C%5C%0A%5C%5C%0An+%5C%2C+equations%3A%26%5C%5C%0A%5C%5C%0Ay%27%26%3DAy%5C%5C%0A%5C%5C%0Asolution%3A%26%5C%5C%0Ay%28t%29+%26%3D+e%5E%7BAt%7Dy%280%29%0A%5C%5C%0A%5C%5C%0Aexponentials+%3A%5C%5C%0A%5C%5C%0Ae%5E%7Bx%7D+%26%3D+%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D+%5Cfrac%7B%28x%29%5Ei%7D%7Bi%21%7D%5C%5C%0A%5C%5C%0A%5C%5C%0Ae%5E%7BAt%7D+%26%3D+%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D+%5Cfrac%7B%28At%29%5Ei%7D%7Bi%21%7D%5C%5C%0A%5C%5C%0A%26+each+%5C%2Cone++%5C%2Cis++%5C%2Ca++%5C%2Cmatrix%5C%5C%0A%5C%5C%0A%26%3D+%5Cfrac%7B%28At%29%5E0%7D%7B0%21%7D+%2B%5Cfrac%7B%28At%29%5E1%7D%7B1%21%7D+%2B%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D%2B%2B%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D%2B%5C%2C+...+%2B%5Cfrac%7B%28At%29%5E%5Cinfty%7D%7B%5Cinfty%21%7D+%5C%5C%0A%5C%5C%0A%26%3D+I+%2BAt+%2B%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2%2B%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3%2B%5C%2C+...+%2B%5Cfrac%7B%28At%29%5E%5Cinfty%7D%7B%5Cinfty%21%7D+%0A%5C%5C%0A%28e%5E%7BAt%7D%29%27+%26%3D%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial+%28e%5E%7BAt%7D%29%7D%7B%5Cpartial+t%7D+%26+%3D+%28I+%2BAt+%2B%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2%2B%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3%2B%5C%2C+...+%29%27%5C%5C%0A%5C%5C%0A%26+%3D+constant+%2BA+%2B%5Cfrac%7B1%7D%7B2%7D%28A%5E2%29%282t%29%2B%5Cfrac%7B1%7D%7B6%7D%28A%5E3%293t%5E2%2B%5C%2C+...+%5C%5C%0A%5C%5C%0A%26+%3D+A+%2BA%5E2t%2B%5Cfrac%7B1%7D%7B2%7DA%5E3t%5E2%2B%5C%2C+...+%5C%5C%0A%5C%5C%0A%26+%3D+A%28+I%2BAt%2B%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2%2B%5C%2C+...+%5C%5C%0A%5C%5C%0A%26+%3D+Ae%5E%7BAt%7D+%5C%5C%0A%5C%5C%0A%5C%5C%0Ay%27%3D%5Cfrac%7B%5Cpartial+%28e%5E%7BAt%7Dy%280%29%29%7D%7B%5Cpartial+t%7D+%26%3D+%28I%2Ay%280%29+%2BAt%2Ay%280%29+%2B%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2%2Ay%280%29%2B%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3%2Ay%280%29%2B%5C%2C+...+%29%27%5C%5C%0A%5C%5C%0A%26due+%5C%2C+to+%5C%2C+product+%5C%2C+rule+%5C%2C+and+%5C%2C+y%280%29+%5C%2C+is+%5C%2C+a+%5C%2C+constant%5C%5C%0A%5C%5C%0A%26%3D+%28I+%2BAt+%2B%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2%2B%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3%2B%5C%2C+...+%29%27y%280%29%5C%5C%0A%5C%5C%0A%26%3D+Ae%5E%7BAt%7Dy%280%29+%5C%5C%0A%5C%5C%0A%26%3DAy%0A%5C%5C%0A%5C%5C%0Adiagonalization+%5C%2Cof+%5C%2C+y%3A%26%0A%5C%5C%0Ay%26%3D+%28I+%2B+X%26Lambda%3BX%5E%7B-1%7Dt+%2B+%5Cfrac%7B1%7D%7B2%7DX%26Lambda%3B%5E2X%5E%7B-1%7Dt%5E2+%2B+%5Cfrac%7B1%7D%7B6%7DX%26Lambda%3B%5E3X%5E%7B-1%7Dt%5E3%29%2Ay%280%29%0A%5C%5C%0A%26%3D+X%28I+%2B+%26Lambda%3Bt+%2B+%5Cfrac%7B1%7D%7B2%7D%26Lambda%3B%5E2t%5E2+%2B+%5Cfrac%7B1%7D%7B6%7D%26Lambda%3B%5E3t%5E3%29X%5E%7B-1%7D%2Ay%280%29%0A%5C%5C%0A%26%3D+Xe%5E%7B%26Lambda%3Bt%7DX%5E%7B-1%7D%2Ay%280%29%0A%5C%5C%0A%26%3DX%2A%28%5Csum%5E%5Cinfty%28I%2B%26Lambda%3Bt%2B%5Cfrac%7B1%7D%7B2%7D%28%26Lambda%3Bt%29%5E2%2B...%2B%5Cfrac%7B1%7D%7B%5Cinfty%21%7D%28%26Lambda%3Bt%29%5E%5Cinfty%29%29%2AX%5E%7B-1%7D%2Ay%280%29%0A%5C%5C%0A%26%3D+X+%2A%28%5Csum%5E%5Cinfty%28%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A0%261%260%5C%5C%0A0%260%261%0A%5Cend%7Bbmatrix%7D+%2B%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1t%260%260%5C%5C%0A0%26%26lambda%3B_2t%260%5C%5C%0A0%260%26%26lambda%3B_3t%0A%5Cend%7Bbmatrix%7D+%2B%0A%5Cfrac%7B1%7D%7B2%7D%5Cbegin%7Bbmatrix%7D%0A%28%26lambda%3B_1t%29%5E2%260%260%5C%5C%0A0%26%28%26lambda%3B_2t%29%5E2%260%5C%5C%0A0%260%26%28%26lambda%3B_3t%29%5E2%0A%5Cend%7Bbmatrix%7D+%2B%0A...%2B%0A%5Cfrac%7B1%7D%7B%5Cinfty%21%7D%5Cbegin%7Bbmatrix%7D%0A%28%26lambda%3B_1t%29%5E%5Cinfty%260%260%5C%5C%0A0%26%28%26lambda%3B_2t%29%5E%5Cinfty%260%5C%5C%0A0%260%26%28%26lambda%3B_3t%29%5E%5Cinfty%0A%5Cend%7Bbmatrix%7D%0A%29%29%2AX%5E%7B-1%7D%2Ay%280%29%5C%5C%0A%5C%5C%0A%5C%5C%0A%26%5Cbegin%7Bmatrix%7D%0Aeach%26cell%26in%26the%26above%26exponential%26series%26of%26matrices%26containing%26%26lambda%3Bt%26sums%26to%26e%5E%7B%26lambda%3Bt%7D%0A%5Cend%7Bmatrix%7D%0A%5C%5C%0A%26+for+%5C%2C+example%5C%2Cadd%5C%2Ccell%281%2C1%29%5C%2Cacross%5C%2Call%5C%2Cmatrices%5C%2C+%5C%5C+%26%3D%28%26lambda%3B_1t%29%5E0%2B%28%26lambda%3B_1t%29%5E1%2B%28%26lambda%3B_2t%29%5E2+%2B+%28%26lambda%3B_it%29%5Ei+%2B+...+%2B+%28%26lambda%3B_1t%29%5E%7B%5Cinfty%7D+%0A%3D1%2B%26lambda%3B_1t%2B%28%26lambda%3B_1t%29%5E2+%2B+%28%26lambda%3B_1t%29%5Ei+%2B+...+%2B+%28%26lambda%3B_1t%29%5E%7B%5Cinfty%7D+%0A%3D+e%5E%7B%26lambda%3B_1t%7D%5C%5C%0A%26+found+%5C%2Cbelow+%5C%2Cin+%5C%2Ccell+%5C%2C%281%2C1%29%0A%5C%5C%0A%5C%5C%0A%26%3D+X%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B%26lambda%3B_1t%7D%260%260%5C%5C%0A0%26e%5E%7B%26lambda%3B_2t%7D%260%5C%5C%0A0%260%26e%5E%7B%26lambda%3B_3t%7D%0A%5Cend%7Bbmatrix%7D%0AX%5E%7B-1%7D%2Ay%280%29%5C%5C%0A%5C%5C%0A%5C%5C%0A%26%3D+Xe%5E%7B%26Lambda%3Bt%7DX%5E%7B-1%7D%2Ay%280%29%0A%5C%5C%0A%5C%5C%0Awhere%3A%26%5C%5C%0Ay%280%29+%26%3D+c_1+e%5E%7B%26lambda%3B_1t%7D+x_1+%2Bc_2e%5E%7B%26lambda%3B_2t%7Dx_2+%2Bc_3e%5E%7B%26lambda%3B_3t%7Dx_3%5C%5C%0A%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B%26lambda%3B_1%28t%3D0%29%7D%260%260%5C%5C%0A0%26e%5E%7B%26lambda%3B_2%28t%3D0%29%7D%260%5C%5C%0A0%260%26e%5E%7B%26lambda%3B_3%28t%3D0%29%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5Cc_2%5C%5Cc_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5Cc_2%5C%5Cc_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%26%3DXc%0A%5C%5C%0Aso+%5C%2C+...%26%5C%5C%0A%5C%5C%0AX%5E%7B-1%7Dy%280%29+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5Cc_2%5C%5Cc_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%5C%5C%0Athus+%5C%2C+...%26%5C%5C%0A%5C%5C%0Ay+%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B%26Lambda%3B_1t%7D%260%260%5C%5C%0A0%26e%5E%7B%26Lambda%3B_2t%7D%260%5C%5C%0A0%260%26e%5E%7B%26Lambda%3B_3t%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5Cc_2%5C%5Cc_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%26%3DX+e%5E%7B%26Lambda%3Bt%7Dc%5C%5C%0A%5C%5C%0A%5C%5C%0Aand+%5C%2C+...%26%5C%5C%0A%5C%5C%0Ay%27%3D%5Cfrac%7B%5Cpartial+%28e%5E%7BAt%7Dy%280%29%29%7D%7B%5Cpartial+t%7D+%26%3D%0AA%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B%26Lambda%3B_1t%7D%260%260%5C%5C%0A0%26e%5E%7B%26Lambda%3B_2t%7D%260%5C%5C%0A0%260%26e%5E%7B%26Lambda%3B_3t%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5Cc_2%5C%5Cc_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%26%3DAX+e%5E%7B%26Lambda%3Bt%7Dc%5C%5C%0A%5C%5C%0A%5C%5C%0A%26%3DAy%5C%5C%0A%5C%5C%0A%5Cend%7Balign%2A%7D)
 
 an example without enough eigenvectors:
 
