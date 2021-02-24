@@ -1727,7 +1727,7 @@ in fact, all vectors in column space of A are eigenvectors with eigenvalues = 1.
 the vectors with &lambda; = 0 lie in the null space and from the 1st fundamental theorem of linear algebra, the dim of the col space plus dim of null space = n.  [col space contains independent columns; null space contains dependent ones]  
 A will be diagonalizable since we guaranteed to have enough n eigenvectors. 
 
-if A has cols x<sub>1</sub> ... x<sub>n</sub> then col by col A<sup>2</sup>=A means every Ax<sub>i</sub> = x<sub>i<sub>.  {because x = A in that]  All vectors in col space combinations of the x<sub>i</sub> columns are eigenvectors with &lambda; = 1.  
+if A has cols x<sub>1</sub> ... x<sub>n</sub> then col by col A<sup>2</sup>=A means every Ax<sub>i</sub> = x<sub>i</sub>.  {because x = A in that]  All vectors in col space combinations of the x<sub>i</sub> columns are eigenvectors with &lambda; = 1.  
 always null space has &lambda; = 0.  A might have dependent columns; so there could be less than n eigenvectors with &lambda; = 1.  dimenions of those spaces columns and null add to n.
 
 26.  Ax = &lambda;x 
@@ -2930,3 +2930,24 @@ src="https://user-images.githubusercontent.com/38410965/108933015-5d355100-7618-
 plotted by this code
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108941568-5829cf00-7623-11eb-946c-6465f82e9e3b.png">
+
+
+**the exponet of a matrix**
+
+u(t) = e<sup>At</sup>u(0) 
+
+for a clue as to what does e<sup>At</sup> mean, look at:
+
+e<sup>x</sup> = 1/0! x<sup>0</sup> + 1/1! x<sup>1</sup> + 1/2! x<sup>2</sup> + ... + 1/n! x<sup>n</sup>  
+
+change x to a square matrix At this series defines matrix expoential e<sup>At</sup>   
+
+matrix exponential e<sup>At</sup> = I + At + 1/2 (At)<sup>2</sup> + 1/6 (At)<sup>3</sup> + ... = ∑<sub>1=0</sub><sup>∞</sup> 1 / ( i ! ) • ( At )<sup>i</sup>
+
+matrix exponential's t derivative = Ae<sup>At</sup> = Au = A + A<sup>2</sup>t + 1/2 A<sup>3</sup>t<sup>2</sup> + 1/6 A<sup>4</sup>t<sup>3</sup> + ... = A • ∑<sub>1=0</sub><sup>∞</sup> 1 / ( i ! ) • ( At )<sup>i</sup>
+
+eigenvalues of are  e<sup>&lambda;t</sup> = (I + &lambda;t + 1/2! (&lambda;t)<sup>2</sup> + 1/3! (&lambda;t)<sup>3</sup> + ... + 1/∞! (&lambda;t)<sup>∞</sup>)x = (∑<sub>1=0</sub><sup>∞</sup> 1 / ( i ! ) • ( &lambda;t )<sup>i</sup>)x 
+
+[ I am not sure about that x at the end of the last formulae]
+
+E<sup>At</sup>u(0) solves EVEN IF there is a shortcoming of eigenvectors, as shown in the formula way above. 
