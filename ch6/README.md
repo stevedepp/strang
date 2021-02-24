@@ -2977,5 +2977,31 @@ e<sup>At</sup>u(0) = ∑<sub>j=0</sub><sup>∞</sup> (1/j!)(X&Lambda;X<sup>-1</s
 factor out X<sup>-1</sup>X from the middle of the powers of (X&Lambda;X<sup>-1</sup>t)<sup>i</sup>:   
 e<sup>At</sup>u(0) = X∑<sub>j=0</sub><sup>∞</sup> (1/j!)(&Lambda;t)<sup>j</sup>X<sup>-1</sup> = X ( I + &Lambda;t + (&Lambda;t)<sup>2</sup>/2 + (&Lambda;t)<sup>3</sup>/6 + ... + (&Lambda;)<sup>∞</sup>/∞!) X<sup>-1</sup>
 
-the sum of the (&lambda;<sub>i</sub>t)<sup>i</sup>/( i !) appearing in each of the (i,i) cells of each &Lambda; in the last equation equals e<sup>&lambda;<sub>i</sub></sup> in the diagonal matrix represented by e<sup>&Lambda;t</sup> in this equation:   
-e<sup>At</sup> = Xe<sup>&Lambda;</sup>X<sup>-1</sup>
+the sum of the (&lambda;<sub>i</sub>t)<sup>i</sup>/( i !) appearing in each of the (i,i) cells of each &Lambda; in the last equation equals e<sup>&lambda;t<sub>i</sub></sup> in the diagonal matrix represented by e<sup>&Lambda;t</sup> in this equation:   
+e<sup>At</sup> = Xe<sup>&Lambda;t</sup>X<sup>-1</sup>
+
+e<sup>At</sup> has the same eigenvector matrix X as A.  
+then &Lambda; is a diagonal matrix and so is e<sup>&Lambda;t</sup> with e<sup>&lambda;<sub>i</sub>t</sup> on its diagonal.
+
+Multiply Xe<sup>&Lambda;t</sup>X<sup>-1</sup> by u(0) to recognize u(t))
+
+
+
+![\begin{align*}
+\\
+u(t) & = e^{At}u(0) = Xe^{&Lambda;t}X^{-1}u(0) =  
+\begin{bmatrix}
+x_1&x_2&x_3\\
+\end{bmatrix}
+\begin{bmatrix}
+e^{&Lambda;_1t}&0&0\\
+0&e^{&Lambda;_2t}&0\\
+0&0&e^{&Lambda;_3t}
+\end{bmatrix}
+\begin{bmatrix}
+c_1\\c_2\\c_3\\
+\end{bmatrix}
+=X e^{&Lambda;t}c\\
+\\
+\\
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5C%5C%0Au%28t%29+%26+%3D+e%5E%7BAt%7Du%280%29+%3D+Xe%5E%7B%26Lambda%3Bt%7DX%5E%7B-1%7Du%280%29+%3D++%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B%26Lambda%3B_1t%7D%260%260%5C%5C%0A0%26e%5E%7B%26Lambda%3B_2t%7D%260%5C%5C%0A0%260%26e%5E%7B%26Lambda%3B_3t%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5Cc_2%5C%5Cc_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3DX+e%5E%7B%26Lambda%3Bt%7Dc%5C%5C%0A%5C%5C%0A%5C%5C%0A%5Cend%7Balign%2A%7D)
