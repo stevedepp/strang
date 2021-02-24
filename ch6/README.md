@@ -2888,13 +2888,7 @@ the matrices in general would:
   - on the RHS of the veritcal axis D where T = a + d = &lambda;<sub>1</sub> + &lambda;<sub>2</sub> < 0 and so at least one &lambda; > 0    
   - AND above the horizontal axis T where D = ad - bc = &lambda;<sub>1</sub>&lambda;<sub>2</sub> > 0 indicating that signs for both &lambda;s are the same and thus both &lambda;s > 0.    
 - be unstable in the 2nd and 3rd quadrants below the horizontal axis T where determinant D = ad - bc = &lambda;<sub>1</sub>&lambda;<sub>2</sub> < 0 indicating that &lambda;<sub>1</sub> < 0 and &lambda;<sub>2</sub> > 0.    
-- have real &lambda;s above the parabola since the roots quadratic for the determinant of [ A - &lambda; I ] = 0 are found in equation &lambda; = T &pm; \sqrt{T^2 - 4D}.  This means that when the roots of &lambda;<sup>2</sup> - T&lambda; + D are derived from the quadratic formula if the term (T<sup>2</sup> - 4D) < 0 then both &lambda;s are complex.  This is shown by the parabola which represents points for matrices' (T, D) pairs where D = T<sup>2</sup> / 4.  If below the parabola, then D < T<sup>2</sup> / 4  and both &lambda;s are complex.   
-
-&lambda; = \frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-
-$`\sqrt{2}`$
-
-{\sqrt{n}}
+- have real &lambda;s above the parabola since the roots quadratic for the determinant of [ A - &lambda; I ] = 0 are found in equation &lambda; = T &pm; (T^2 - 4D)<sup>1/2</sup>.  This means that when the roots of &lambda;<sup>2</sup> - T&lambda; + D are derived from the quadratic formula if the term (T<sup>2</sup> - 4D) < 0 then both &lambda;s are complex.  This is shown by the parabola which represents points for matrices' (T, D) pairs where D = T<sup>2</sup> / 4.  If below the parabola, then D < T<sup>2</sup> / 4  and both &lambda;s are complex.   
 
 the example matrices in the plot are:     
 - stable matrix has T = a + d = 0 - 3 = - 3 < 0 and D = ad - bc = 2 > 0 so both &lambda;s are < 0 indicating stability since u(t) --> 0 as t --> ∞.  Since D = 0 + 2 < T<sup>2</sup> / 4 = (-3)<sup>2</sup> / 4 = 9/4, both &lambda;s are complex.    PURPLE.
