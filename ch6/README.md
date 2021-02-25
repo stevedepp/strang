@@ -638,9 +638,9 @@ so the row space created from (A - &lambda;1•I) is orthogonal to column space 
 
 in sum:
 
-(A - &lambda<sub>2</sub>•I) perpendicular to (A - &lambda<sub>1</sub>•I) perpendicular to x<sub>1</sub><sup>T</sup>
+(A - &lambda:<sub>2</sub>•I) perpendicular to (A - &lambda;<sub>1</sub>•I) perpendicular to x<sub>1</sub><sup>T</sup>
 
-(A - &lambda<sub>1</sub>•I) perpendicular to (A - &lambda<sub>2</sub>•I) perpendicular to x<sub>2</sub><sup>T</sup>
+(A - &lambda:<sub>1</sub>•I) perpendicular to (A - &lambda;<sub>2</sub>•I) perpendicular to x<sub>2</sub><sup>T</sup>
 
 this function, quadratic in ch6, provides the same solution as solve.
 
@@ -650,7 +650,7 @@ multiplying X * &Lambda; gives you x<sub>j</sub>&lambda;<sub>j</sub> in each col
 
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/107859022-fe482e80-6e04-11eb-8637-2db550e1bd92.png">
 
-include this to show that &Lambda;X is not the same but also so to realize that AX = X&Lambda not &Lambda;X which has the x<sub>j</sub>&lambda;<sub>j</sub> in each row.
+include this to show that &Lambda;X is not the same but also so to realize that AX = X&Lambda; not &Lambda;X which has the x<sub>j</sub>&lambda;<sub>j</sub> in each row.
 
 AX = X&Lambda; --> A = X&Lambda;X<sup>-1</sup> --> &Lambda; = X<sup>-1</sup>AX
 
@@ -668,7 +668,7 @@ X has an inverse because its columns (the eigenvectors of A) are assumed to be l
 
 without n independent eigenvectors x<sub>j</sub> we could not diagonalize. 
 
-&lambdas; shift their respective i row of A by &lambdal•1 subtracted from the diagonal element of that row.
+&lambda;s shift their respective i row of A by &lambda;•1 subtracted from the diagonal element of that row.
 
 4 remarks:
 
@@ -1160,7 +1160,7 @@ u<sub>k+1</sub> = Au<sub>k</sub>
 each step multiplies by A   
 solution is u<sub>k</sub> = A<sup>k</sup>u<sub>0</sub>  
 
-diagonalizing matrices computes A<sup>k</sup> quick via &Lambda<sup>k</sup>.
+diagonalizing matrices computes A<sup>k</sup> quick via &Lambda;<sup>k</sup>.
 
 u<sub>k+1</sub> = A<sub>k</sub> is a difference equation that structures the solution u<sub>k</sub> = A<sup>k</sup>u<sub>0</sub>
 
@@ -3011,7 +3011,7 @@ the solution e<sup>At</sup>u(0) is the same answer that came in equations from 3
 1. u(0) = c<sub>1</sub>x<sub>1</sub> + ... + c<sub>n</sub>x<sub>n</sub> = Xc  
 for this we need independent eigenvectors  
 2. multiply each x<sub>j</sub> by its growth factor e<sup>&lambda;<sub>i</sub>t</sup> to follow it forward in time [with t in the next step; t only enters the following equation with &lambda;s]    
-3. the best form of e<sup>At<.sup>u(0) is u(t) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>x<sub>1</sub> + ... + c<sub>n</sub>e<sup>&lambda;<sub>n</sub>t</sup>x<sub>n</sub>
+3. the best form of e<sup>At</sup>u(0) is u(t) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>x<sub>1</sub> + ... + c<sub>n</sub>e<sup>&lambda;<sub>n</sub>t</sup>x<sub>n</sub>
 
 **example 4**
 
