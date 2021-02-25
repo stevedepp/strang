@@ -638,9 +638,9 @@ so the row space created from (A - &lambda;1•I) is orthogonal to column space 
 
 in sum:
 
-(A - &lambda:<sub>2</sub>•I) perpendicular to (A - &lambda;<sub>1</sub>•I) perpendicular to x<sub>1</sub><sup>T</sup>
+(A - &lambda;<sub>2</sub>•I) perpendicular to (A - &lambda;<sub>1</sub>•I) perpendicular to x<sub>1</sub><sup>T</sup>
 
-(A - &lambda:<sub>1</sub>•I) perpendicular to (A - &lambda;<sub>2</sub>•I) perpendicular to x<sub>2</sub><sup>T</sup>
+(A - &lambda;<sub>1</sub>•I) perpendicular to (A - &lambda;<sub>2</sub>•I) perpendicular to x<sub>2</sub><sup>T</sup>
 
 this function, quadratic in ch6, provides the same solution as solve.
 
@@ -1026,7 +1026,7 @@ y
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bbmatrix%7D%0A1-%26lambda%3B%261%5C%5C%0A1%26-%26lambda%3B%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax+-+%26lambda%3Bx%2By+%3D+-%28%26lambda%3Bx-x-y%29%5C%5C%0Ax-%26lambda%3By%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+x_1+%3D+x_2+%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D+%3D+%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D...%26%3D+%5Cbegin%7Bbmatrix%7D%0A-%28%26lambda%3B%26lambda%3B-x-1%29+%3D+-%28%26lambda%3B%5E2-x-1%29+%3D+%28A+-%26lambda%3BI%29+%3D+0%29%5C%5C%0A%26lambda%3B-%26lambda%3B%2A1%3D%26lambda%3B-%26lambda%3B%3D0%0A%5Cend%7Bbmatrix%7D%3D+%5Cbegin%7Bbmatrix%7D%0A0%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
 
 that will lead to A<sub>100</sub> = &lambda;<sub>100</sub>  
-by way of &lambdal<sub>1</sub> = (1 + √5)/2 and &lambda;<sub>2</sub> = (1-√5)/2     
+by way of &lambda;<sub>1</sub> = (1 + √5)/2 and &lambda;<sub>2</sub> = (1-√5)/2     
 acting on x<sub>1</sub> = (&lambda;<sub>1</sub>, 1) and x<sub>2</sub> =  (&lambda;<sub>2</sub>,1)  
 but fibonacci starts with u<sub>0</sub> = (1,0)  
 to act on u<sub>0</sub> with &lambda; eigenvaluess,   
@@ -1252,7 +1252,7 @@ non-diagonalizable matrices
 - eigenvectors (geometric) ... there are non-zero solutions to Ax = &lambda;x   
 - eigenvalues (algebraic) ... the determinant of (A - &lambda;I) = 0
 
-&lambda may be a "simple" eigenvalue or a "multiple" eigenvalue.  
+&lambda; may be a "simple" eigenvalue or a "multiple" eigenvalue.  
 
 [for multiple eigenvalues,] we want to know the eigenvalue's multiplicity.  
 
@@ -2607,8 +2607,8 @@ and by definition ∂y / ∂t = y'
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D%3D%5Cfrac%7B%5Cpartial+%5Cbegin%7Bbmatrix%7Dy%5C%5Cy%27%5Cend%7Bbmatrix%7D%7D%7B%5Cpartial+t%7D+%3D+Au+%3D%5Cbegin%7Bbmatrix%7D0%261%5C%5C-1%260%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7Dy%5C%5Cy%27%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7Dy%27%5C%5C-y%5Cend%7Bbmatrix%7D+%0A%5Cend%7Balign%2A%7D%0A)
 
 same as before:   
-- find eigenvalues from determinant of A - &lambda * I   
-- find eigenvectors from the null space of those matrices (A - &lambda<sub>i</sub> * I)     
+- find eigenvalues from determinant of A - &lambda; * I   
+- find eigenvectors from the null space of those matrices (A - &lambda;<sub>i</sub> * I)     
 - employ 3 steps:    
 1. combine the eigenvectors by finding c from u<sub>0</sub> = [1,0].T and X<sup>-1</sup> as shown below: u<sub>0</sub> = ∑<sub>i=1</sub><sup>n</sup> c<sub>i</sub>x<sub>i</sub> by using c = X<sup>-1</sup>u<sub>0</sub>
 confirm u<sub>0</sub> = X<sup>-1</sup>c   
