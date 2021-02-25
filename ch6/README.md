@@ -3005,3 +3005,137 @@ c_1\\c_2\\c_3\\
 \\
 \\
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5C%5C%0Au%28t%29+%26+%3D+e%5E%7BAt%7Du%280%29+%3D+Xe%5E%7B%26Lambda%3Bt%7DX%5E%7B-1%7Du%280%29+%3D++%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B%26Lambda%3B_1t%7D%260%260%5C%5C%0A0%26e%5E%7B%26Lambda%3B_2t%7D%260%5C%5C%0A0%260%26e%5E%7B%26Lambda%3B_3t%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_1%5C%5Cc_2%5C%5Cc_3%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%3DX+e%5E%7B%26Lambda%3Bt%7Dc%5C%5C%0A%5C%5C%0A%5C%5C%0A%5Cend%7Balign%2A%7D)
+
+
+the solution e<sup>At</sup>u(0) is the same answer that came in equations from 3 steps:   
+1. u(0) = c<sub>1</sub>x<sub>1</sub> + ... + c<sub>n</sub>x<sub>n</sub> = Xc  
+for this we need independent eigenvectors  
+2. multiply each x<sub>j</sub> by its growth factor e<sup>&lambda;<sub>i</sub>t</sup> to follow it forward in time [with t in the next step; t only enters the following equation with &lambda;s]    
+3. the best form of e<sup>At<.sup>u(0) is u(t) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>x<sub>1</sub> + ... + c<sub>n</sub>e<sup>&lambda;<sub>n</sub>t</sup>x<sub>n</sub>
+
+**example 4**
+
+substitute y = e<sup>&lambda;t</sup> into y'' - 2y' + y = 0 to get an equation with repeated roots.   
+[Here, Strang skips this step presented that was presented earlier.]  
+
+(e<sup>&lambda;t</sup>)'' - 2 (e<sup>&lambda;t</sup>) + e<sup>&lambda;t</sup> = 0     
+&lambda;<sup>2</sup>e<sup>&lambda;t</sup> - &lambda;e<sup>&lambda;t</sup> + e<sup>&lambda;t</sup> = 0   
+( &lambda;<sup>2</sup> - &lambda; + 1 ) e<sup>&lambda;t</sup> = 0   
+which factors to  
+( &lambda; - 1 )<sup>2</sup> = 0   
+producing &lambda;<sub>1</sub> = &lambda;<sub>2</sub> = 1.
+
+A differentials equations course would propose e<sup>t</sup> and te<sup>t</sup> as 2 independent solutions.  Why ?
+
+y'' - 2y' +y = 0 reduces to a vector equation for u = ( y, y' ) 
+
+∂ [ y, y' ] / ∂ t  = [ [ y ], [ 2y' - y ] is derived from knowing ∂ y = y' in general and ∂ y' = y'' = 2y' - y in our original equation y'' - 2y' + y = 0 converts to y'' = 2y' - y    
+
+u = [ y, y' ] then ∂u / ∂t = Au = [ [ 0, 1 ], [ -1, 2 ] ] • u = [ [ 0, 1 ], [ -1, 2 ] ] • [ y, y' ] = [ [ y ], [ 2y' - y ]  
+
+A has  
+- repeated eigenvalues &lambda;<sub>1</sub> = &lambda;<sub>2</sub> = 1 
+- trace T = 2  
+- determinant D = 1 
+
+det [ A - &lambda; • I ] = det [ [ 0 - &lambda;, 1 ], [ -1, 2 - &lambda; ] ] = 0 = &lambda;<sup>2</sup> - 2&lambda; + 1 = (&lambda; - 1)<sup>2</sup> --> &lambda;<sub>1</sub> = &lambda;<sub>2</sub> = 1 
+
+the only eigenvectors in the null space of det [ A - &lambda; • I ]  = det [ A - I ] are multiples of x = ( 1, 1 ):  
+
+[ [ -1, 1 ], [ -1, 1 ] ] • [ 1, 1 ] = [ 0, 0 ]
+
+Diagonalization is not possible,  A has only one line of eigenvectors.  
+
+Instead compute e<sup>At</sup> from its definition as a series:  
+
+e<sup>At</sup> = I + At + (At)<sup>2</sup> + ..., but A<sup>2</sup> = 0 
+
+e<sup>At</sup> = e<sup>It</sup>e<sup>(A-I)t</sup> = e<sup>t</sup>[ I ] e<sup>( A-I ) t </sup> 
+
+[ regard the first factor = e<sup>It</sup> = e<sup>t</sup> and the second factor = e<sup>(A-I)t</sup> as the expoential for the series (A-I)t which would start as all exponential series do with ( ( A-I )t )<sup>0</sup> / 0! = I; so e<sup>( A - I ) t</sup> = [ I + (A - I )t and the two factors together are e<sup>t</sup>[ I + (A - I )t ] as shown.]
+
+e<sup>At</sup> = e<sup>t</sup> [ I + ( A - I ) t ] 
+
+∂u / ∂t = Au where u = [ y, y' ] = e<sup>At</sup> = e<sup>t</sup>[ I + ( A - I ) t ] [ y(0), y'(0) ] 
+
+from this, see 1st component contains the answer of e<sup>At</sup>u(0) is our answer y(t) :
+
+![\begin{align*}
+e^{At}u(0)=
+\begin{bmatrix}
+y\\
+y'
+\end{bmatrix}
+&=
+e^t \, 
+\begin{bmatrix}
+I+
+\begin{bmatrix}
+-1&1\\
+-1&1
+\end{bmatrix} \, t 
+\end{bmatrix} 
+\begin{bmatrix}
+y(0)\\
+y'(0)
+\end{bmatrix}\\
+&=
+\begin{bmatrix}
+e^t y(0)\\
+e^t y'(0)
+\end{bmatrix} 
++
+e^t
+\begin{bmatrix}
+-t&t\\
+-t&t
+\end{bmatrix}
+\begin{bmatrix}
+y(0)\\
+y'(0)
+\end{bmatrix}\\
+&=
+\begin{bmatrix}
+e^t y(0)\\
+e^t y'(0)
+\end{bmatrix} 
++
+\begin{bmatrix}
+-te^t &te^t \\
+-te^t &te^t 
+\end{bmatrix}
+\begin{bmatrix}
+y(0)\\
+y'(0)
+\end{bmatrix}\\
+&=
+\begin{bmatrix}
+e^t y(0)-te^ty(0) +te^ty(0) \\
+e^t y'(0)-te^ty'(0) +te^ty'(0) 
+\end{bmatrix}
+\, \, \, \, --> 
+y(t) = e^ty(0)-te^t y(0) + te^t y'(0)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ae%5E%7BAt%7Du%280%29%3D%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%0A%26%3D%0Ae%5Et+%5C%2C+%0A%5Cbegin%7Bbmatrix%7D%0AI%2B%0A%5Cbegin%7Bbmatrix%7D%0A-1%261%5C%5C%0A-1%261%0A%5Cend%7Bbmatrix%7D+%5C%2C+t+%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ay%280%29%5C%5C%0Ay%27%280%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5Et+y%280%29%5C%5C%0Ae%5Et+y%27%280%29%0A%5Cend%7Bbmatrix%7D+%0A%2B%0Ae%5Et%0A%5Cbegin%7Bbmatrix%7D%0A-t%26t%5C%5C%0A-t%26t%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay%280%29%5C%5C%0Ay%27%280%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5Et+y%280%29%5C%5C%0Ae%5Et+y%27%280%29%0A%5Cend%7Bbmatrix%7D+%0A%2B%0A%5Cbegin%7Bbmatrix%7D%0A-te%5Et+%26te%5Et+%5C%5C%0A-te%5Et+%26te%5Et+%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay%280%29%5C%5C%0Ay%27%280%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5Et+y%280%29-te%5Ety%280%29+%2Bte%5Ety%280%29+%5C%5C%0Ae%5Et+y%27%280%29-te%5Ety%27%280%29+%2Bte%5Ety%27%280%29+%0A%5Cend%7Bbmatrix%7D%0A%5C%2C+%5C%2C+%5C%2C+%5C%2C+--%3E+%0Ay%28t%29+%3D+e%5Ety%280%29-te%5Et+y%280%29+%2B+te%5Et+y%27%280%29%0A%5Cend%7Balign%2A%7D)
+
+
+**example 5**
+
+inifite series reveals e<sup>At</sup> for A = [ 0, 1 ] [ -1, 0 ]  
+
+notice A<sup>4</sup> = I
+
+powers of A repeat:   
+A<sup>1</sup>, A<sup>2</sup>, A<sup>3</sup>, A<sup>4</sup>   
+A<sup>5</sup>, A<sup>6</sup>, A<sup>7</sup>, A<sup>8</sup>
+repeat: TR corner repeats 1, 0, -1, 0 in powers of A.
+
+the infinite series for e<supAt</sup> features 
+t - (1/6) t<sup>3</sup> in the TR corner
+1 - (1/2) t<sup>2</sup> in the TL corner
+
+e<sup>At</sup> = ∑<sub>j=0</sub><sup>∞</sup> (At)<sup>j</sup> / ( j ! )
+
+TR \, \, \,1
+TL 
+BR 
+BL 
