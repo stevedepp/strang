@@ -3135,7 +3135,57 @@ t - (1/6) t<sup>3</sup> in the TR corner
 
 e<sup>At</sup> = ∑<sub>j=0</sub><sup>∞</sup> (At)<sup>j</sup> / ( j ! )
 
-TR \, \, \,1
-TL 
-BR 
-BL 
+![\begin{align*}
+e^{At}= I  &&+ \frac{(At)^1}{1!} &&+ \frac{(At)^2}{2!} && +\frac{(At)^3}{3!} && 
++\frac{(At)^4}{4!} &&+ \. ... \\
+&TR&1&& 0& & -1&& 0 \\
+&TL & 0 && -1 && 0 && 1 \\
+&BR & 0 && -1 && 0 && 1 \\
+&BL & -1 && 0 && 1 && 0 \\
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ae%5E%7BAt%7D%3D+I++%26%26%2B+%5Cfrac%7B%28At%29%5E1%7D%7B1%21%7D+%26%26%2B+%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D+%26%26+%2B%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D+%26%26+%0A%2B%5Cfrac%7B%28At%29%5E4%7D%7B4%21%7D+%26%26%2B+%5C.+...+%5C%5C%0A%26TR%261%26%26+0%26+%26+-1%26%26+0+%5C%5C%0A%26TL+%26+0+%26%26+-1+%26%26+0+%26%26+1+%5C%5C%0A%26BR+%26+0+%26%26+-1+%26%26+0+%26%26+1+%5C%5C%0A%26BL+%26+-1+%26%26+0+%26%26+1+%26%26+0+%5C%5C%0A%5Cend%7Balign%2A%7D%0A)
+
+
+
+![\begin{align*}
+e^{At} &= I  + \,
+\begin{bmatrix}
+-\frac{1}{2}t^2+...&t-\frac{1}{6}t^3+...\\
+-t+\frac{1}{6}t^3+...&-\frac{1}{2}t^2+...
+\end{bmatrix}\\
+&=
+\begin{bmatrix}
+1-\frac{1}{2}t^2+...&t-\frac{1}{6}t^3+...\\
+-t+\frac{1}{6}t^3+...&1-\frac{1}{2}t^2+...
+\end{bmatrix}
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ae%5E%7BAt%7D+%26%3D+I++%2B+%5C%2C%0A%5Cbegin%7Bbmatrix%7D%0A-%5Cfrac%7B1%7D%7B2%7Dt%5E2%2B...%26t-%5Cfrac%7B1%7D%7B6%7Dt%5E3%2B...%5C%5C%0A-t%2B%5Cfrac%7B1%7D%7B6%7Dt%5E3%2B...%26-%5Cfrac%7B1%7D%7B2%7Dt%5E2%2B...%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1-%5Cfrac%7B1%7D%7B2%7Dt%5E2%2B...%26t-%5Cfrac%7B1%7D%7B6%7Dt%5E3%2B...%5C%5C%0A-t%2B%5Cfrac%7B1%7D%7B6%7Dt%5E3%2B...%261-%5Cfrac%7B1%7D%7B2%7Dt%5E2%2B...%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+
+![\begin{align*}
+A &= \begin{bmatrix}
+0&1\\
+-1&0
+\end{bmatrix}\\
+e^{At} &= \begin{bmatrix}
+cos t&sin t\\
+-sin t&cos t
+\end{bmatrix}\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%26%3D+%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-1%260%0A%5Cend%7Bbmatrix%7D%5C%5C%0Ae%5E%7BAt%7D+%26%3D+%5Cbegin%7Bbmatrix%7D%0Acos+t%26sin+t%5C%5C%0A-sin+t%26cos+t%0A%5Cend%7Bbmatrix%7D%5Cend%7Balign%2A%7D%0A)
+
+
+![\begin{align*}
+A &= \begin{bmatrix}
+0&1\\
+-1&0
+\end{bmatrix}\\
+e^{At} &= \begin{bmatrix}
+cos t&sin t\\
+-sin t&cos t
+\end{bmatrix}\\
+|A - &lambda;I| &= \begin{bmatrix}
+-&lambda;&1\\
+-1&-&lambda;
+\end{bmatrix}\\
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%26%3D+%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-1%260%0A%5Cend%7Bbmatrix%7D%5C%5C%0Ae%5E%7BAt%7D+%26%3D+%5Cbegin%7Bbmatrix%7D%0Acos+t%26sin+t%5C%5C%0A-sin+t%26cos+t%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%7CA+-+%26lambda%3BI%7C+%26%3D+%5Cbegin%7Bbmatrix%7D%0A-%26lambda%3B%261%5C%5C%0A-1%26-%26lambda%3B%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cend%7Balign%2A%7D%0A)
