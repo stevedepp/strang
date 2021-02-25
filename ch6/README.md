@@ -3135,6 +3135,28 @@ t - (1/6) t<sup>3</sup> in the TR corner
 
 e<sup>At</sup> = ∑<sub>j=0</sub><sup>∞</sup> (At)<sup>j</sup> / ( j ! )
 
+the top row of this matrix shows the inifite series for cos and sin
+
+![\begin{align*}
+A &= \begin{bmatrix}
+0&1\\
+-1&0
+\end{bmatrix}
+&A^2 = \begin{bmatrix}
+-1&0\\
+0&-1
+\end{bmatrix}
+&&A^3 = \begin{bmatrix}
+0&-1\\
+1&0
+\end{bmatrix}
+&&A^4 = \begin{bmatrix}
+1&0\\
+0&1
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%26%3D+%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-1%260%0A%5Cend%7Bbmatrix%7D%0A%26A%5E2+%3D+%5Cbegin%7Bbmatrix%7D%0A-1%260%5C%5C%0A0%26-1%0A%5Cend%7Bbmatrix%7D%0A%26%26A%5E3+%3D+%5Cbegin%7Bbmatrix%7D%0A0%26-1%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D%0A%26%26A%5E4+%3D+%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A0%261%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+
 ![\begin{align*}
 e^{At}= I  &&+ \frac{(At)^1}{1!} &&+ \frac{(At)^2}{2!} && +\frac{(At)^3}{3!} && 
 +\frac{(At)^4}{4!} &&+ \. ... \\
@@ -3189,3 +3211,107 @@ cos t&sin t\\
 \end{bmatrix}\\
 \end{align*}
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%26%3D+%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-1%260%0A%5Cend%7Bbmatrix%7D%5C%5C%0Ae%5E%7BAt%7D+%26%3D+%5Cbegin%7Bbmatrix%7D%0Acos+t%26sin+t%5C%5C%0A-sin+t%26cos+t%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%7CA+-+%26lambda%3BI%7C+%26%3D+%5Cbegin%7Bbmatrix%7D%0A-%26lambda%3B%261%5C%5C%0A-1%26-%26lambda%3B%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cend%7Balign%2A%7D%0A)
+
+A is an antisymmetric matrix (A<sup>T</sup> = -A)  
+A's exponential e<sup>At</sup> is an orthogonal matrix.
+
+The eigenvalues of A are i and -i  
+
+![\begin{align*}
+|A-&lambda;I| &= \begin{bmatrix}
+-&lambda;&0\\
+-1&-&lambda;
+\end{bmatrix} = (-&lambda;^2 + 1) = (-&lambda; - i)(-&lambda; + i) --> -&lambda; = i, -i
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%7CA-%26lambda%3BI%7C+%26%3D+%5Cbegin%7Bbmatrix%7D%0A-%26lambda%3B%260%5C%5C%0A-1%26-%26lambda%3B%0A%5Cend%7Bbmatrix%7D+%3D+%28-%26lambda%3B%5E2+%2B+1%29+%3D+%28-%26lambda%3B+-+i%29%28-%26lambda%3B+%2B+i%29+--%3E+-%26lambda%3B+%3D+i%2C+-i%0A%5Cend%7Balign%2A%7D)
+
+The eigenvalues of e<sup>At</sup> are e<sup>it</sup> and e<sup>-it</sup>
+
+![\begin{align*}
+|e^{At}-&lambda;I| &= \begin{bmatrix}
+cos t-&lambda;&sin t\\
+-sin t&cos t-&lambda;
+\end{bmatrix} = (&lambda;^2 -2&lambda; cos t + cos^2t + sin^2t) 
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%7Ce%5E%7BAt%7D-%26lambda%3BI%7C+%26%3D+%5Cbegin%7Bbmatrix%7D%0Acos+t-%26lambda%3B%26sin+t%5C%5C%0A-sin+t%26cos+t-%26lambda%3B%0A%5Cend%7Bbmatrix%7D+%3D+%28%26lambda%3B%5E2+-2%26lambda%3B+cos+t+%2B+cos%5E2t+%2B+sin%5E2t%29+%0A%5Cend%7Balign%2A%7D)
+
+
+
+
+three rules:
+1. e<sup>At</sup> always has the inverse e<sup>-At</sup>   
+2. the eigenvalues of e<sup>At</sup> are always e<sup>&lambda;t</sup>   
+3. when A is antisymmetric e<sup>At</sup> is orthogonal: inverse = transpose
+
+anti-symmetric = skew symmetric  
+- have pure imaginary eigenvalues
+- then e<sup>At</sup> has eigenvalues e<sup>it</sup> and e<sup>-it</sup> with absolute value 1: | e<sup>i</sup> | = 1
+- so || u(t) || = || u(0) ||
+
+[ | (e<sup>i</sup>)<sup>3</sup> =  e<sup>3i</sup> = -0.9899924966004455+0.1411200080598674j | = 1 ]
+- natural stability, pure oscillation, energy is conserved
+
+**example 6**
+
+triangular A  
+thus eigenvector matrix X is triangular   
+thus X<sup>-1</sup> is triangular  
+and of course e<sup>At</sup> is triangular  
+
+2 forms of solution:  
+- a combination of eigenvectors    
+- short form e<sup>At</sup>u(0)   
+
+solve ∂u/∂t = Au = [[1,1],[0,2]]u for u(t) starting from u(0) = (2,1) at t = 0
+
+the eigenvalues of A are on the diagonal since it is triangular.  
+the eigenvectors of A are x<sub>1</sub> = (1,0) and x<sub>2</sub> = (1,1)   
+the starting u(0) = (2,1) = x<sub>1</sub> + x<sub>2</sub> and so c<sub>1</sub> = c<sub>2</sub> = 1   
+can confirm with Xc = u(0)   
+then u(t)  is same combination of pure exponentials.   
+there is not te<sup>&lambda;t when &lambda; = 1 and 2:    
+solution to u' = Au is u(t)  = e<sup>t</sup>[1,0] + e<sup>2t</sup>[1,1]  
+that is the clearest form but the matrix form with e<sup>At</sup> produces u(t) for every u(0)
+
+
+the last matrix is e<sup>At</sup> [solution to ∂u/∂t = Au is always e<sup>At</sup> = Xe<sup>&Lambda;t</sup>X<sup>-1</sup>]
+
+It's nice because A is triangular.   
+the situationis the same as for Ax = b and inverses.  we dont need A<sup>-1</sup> to find X and we dont need e<sup>At</sup> to solve ∂u/∂t = Au.
+
+But as quick formulas for the answers, A<sup>-1</sup>b and e<sup>At</sup>u(0) are unbeatable. 
+
+![\begin{align*}
+\begin{bmatrix}
+1&1\\
+0& 1
+\end{bmatrix} 
+\begin{bmatrix}
+e^t& \\
+& e^{2t}
+\end{bmatrix} 
+\begin{bmatrix}
+1&-1\\
+0& 1
+\end{bmatrix} \, u(0)= 
+\begin{bmatrix}
+e^t&e{2t}+e^t\\
+0& e{2t}
+\end{bmatrix} \, u(0)
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A0%26+1%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ae%5Et%26+%5C%5C%0A%26+e%5E%7B2t%7D%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%26-1%5C%5C%0A0%26+1%0A%5Cend%7Bbmatrix%7D+%5C%2C+u%280%29%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ae%5Et%26e%7B2t%7D%2Be%5Et%5C%5C%0A0%26+e%7B2t%7D%0A%5Cend%7Bbmatrix%7D+%5C%2C+u%280%29%0A%5Cend%7Balign%2A%7D%0A)
+
+
+**Review of key ideas**
+
+1. the equation u' = Au is linear with constrant coefficients in A.    
+
+2. start with u(0): its solution is usually a combination of exponentials involving &lambda; and x.
+
+independent eigenvectors u(t) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>x<sub>1</sub> + ... + c<sub>n</sub>e<sup>&lambda;<sub>n</sub>t</sup>x<sub>n</sub> 
+
+3. the constants c<sub>1</sub>, ... , c<sub>n</sub> are determined by u(0) = c<sub>1</sub>x<sub>1</sub> + ... + c<sub>n</sub>x<sub>n</sub> = Xc
+
+4. u(t) approaches zero (stability) if every &lambda; has negative real parts: All e<sup>&lambda;t</sup> --> 0
+
+5. solutions have the short form u(t) = e<sup>At</sup>u(0) with the matrix exponential e<sup>At</sup>.
+
+6. equations with y'' reduce to u' = Au by combining y and y' into the vector u.
