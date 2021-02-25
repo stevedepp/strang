@@ -2805,7 +2805,7 @@ with this code:
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108892835-5558bb00-75de-11eb-8a89-8164dc2db795.png">
 
-the lambda's tell all.
+the &lambda;'s tell all.
 
 both the forward and original backward matrix A have eigenvalues 1 &pm; i&Delta;t   
 test the magnitude |&lambda;| not the real parts.   
@@ -2828,7 +2828,7 @@ notice that the original backward method would spiral out like the forward metho
 
 can see that below where LAMBDA for &lambda;s are 1 &pm; i&Delta; in the first highlighted line
 
-for the inverse of backwards approximation A, the | lambda;s | are < 1 as shown in the second highlighted line where &lambda;s are < 1 because they equal 1 divided by 1 &pm; i&Delta;t  that is > 1.
+for the inverse of backwards approximation A, the | &lambda;s | are < 1 as shown in the second highlighted line where &lambda;s are < 1 because they equal 1 divided by 1 &pm; i&Delta;t  that is > 1.
 
 <img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/108904163-2b0dfa00-75ec-11eb-88a1-92f11bd61524.png">
 
@@ -2863,7 +2863,7 @@ which has
 | e<sup>is • t</sup> |<sup>2</sup> = cos<sup>2</sup>(s • t) + i • sin<sup>2</sup>(s • t) = 1    
 [ notice magnitude absolute value is taken before the squaring so the i drops away ]
 
-the real part of &lambda controls the growth ( real part r > 0 ) ir decay ( real part r < 0 )   
+the real part of &lambda; controls the growth ( real part r > 0 ) ir decay ( real part r < 0 )   
 [because the imaginary part e<sup>is • t</sup> always stays on the circle |e<sup>is • t</sup>|<sup>2</sup> = 1]
 
 the question is which matrices have negative eigenvalues?  when are the real parts of &lambda;s all negative.  2x2 matrices allow a clear answer.  
