@@ -1701,7 +1701,7 @@ S set = { A | X&Lambda;X<sup>-1</sup>} for a given X.  then if A<sub>1</sub> and
 A<sub>1</sub> + A<sub>2</sub> = X&Lambda;<sub>1</sub>X<sup>-1</sup> + X&Lambda;<sub>2</sub>X<sup>-1</sup> = X(&Lambda;<sub>1</sub> + &Lambda;<sub>2</sub>)X<sup>-1</sup>
 
 A<sub>1</sub> + A<sub>2</sub> is in S  
-if A<sub>1</sub> element of S then cA<sub>1</sub> = X&(cLambda;<sub>1</sub>)X<sup>-1</sup> is element of S.  
+if A<sub>1</sub> element of S then cA<sub>1</sub> = X(c&Lambda;<sub>1</sub>)X<sup>-1</sup> is element of S.  
 S is a subspace thusly.  
 
 
