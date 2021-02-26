@@ -3347,26 +3347,26 @@ In differential calculus the danger is also repeated &lambda;.  After y = e<sup>
 ∂<sup>2</sup>u/∂t<sup>2</sup> = [[-2,1,0], [1,-2,1], [0,1,-2]] u with ∂u/∂t(0) = 0
 
 ![\begin{align*}
-\frac{\partial u}{\partial t} &=
+\frac{\partial u}{\partial t} &= Au = 
 \begin{bmatrix}
 -2&1&0\\
 1&-2&1\\
 0&-1&-2
 \end{bmatrix} \, u \\
 \\
-\frac{\partial^2 u}{\partial t^2} &=
+\frac{\partial^2 u}{\partial t^2} &= Au = 
 \begin{bmatrix}
 -2&1&0\\
 1&-2&1\\
 0&-1&-2
 \end{bmatrix} \, u  
-\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A-2%261%260%5C%5C%0A1%26-2%261%5C%5C%0A0%26-1%26-2%0A%5Cend%7Bbmatrix%7D+%5C%2C+u+%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial%5E2+u%7D%7B%5Cpartial+t%5E2%7D+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A-2%261%260%5C%5C%0A1%26-2%261%5C%5C%0A0%26-1%26-2%0A%5Cend%7Bbmatrix%7D+%5C%2C+u++%0A%5Cend%7Balign%2A%7D)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%26%3D+Au+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-2%261%260%5C%5C%0A1%26-2%261%5C%5C%0A0%26-1%26-2%0A%5Cend%7Bbmatrix%7D+%5C%2C+u+%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial%5E2+u%7D%7B%5Cpartial+t%5E2%7D+%26%3D+Au+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-2%261%260%5C%5C%0A1%26-2%261%5C%5C%0A0%26-1%26-2%0A%5Cend%7Bbmatrix%7D+%5C%2C+u++%0A%5Cend%7Balign%2A%7D)
 
 u' = Au   
 similar to heat equation ∂u/∂t = ∂<sup>2</sup>u/∂x<sup>2</sup>.   
 its solution u(t) will decay (A has negative eigenvalues).  
 
-u'' Au  
+u'' = Au  
 similar to wave equation ∂<sup>2</sup>u/∂t<sup>2</sup> = ∂<sup>2</sup>u/∂x<sup>2</sup>.   
 its solution will oscillate ( square roots of &lambda; are imaginary).
 
@@ -3468,7 +3468,15 @@ for x_3 =
 the eigenvectors are orthogonal (proved in secrtion 6.4) for all symmetric matrices).    
 all 3 &lambda;s are negative.  This A is negative definite and e<sup>At</sup> decays to zero (stability). 
 
-the starting u(0) = (0,2√2,0) is x<sub>3</sub> - x<sub>2</sub>   
-therefore the solution is u(t) = e<sup>&lambda;<sub>3</sub>t</sup>x<sub>3</sub> - e<sup>&lambda;<sub>2</sub>t</sup>x<sub>2</sub>
+the starting u(0) = (0,2√2,0) is x<sub>3</sub> - x<sub>2</sub> meaning c<sub>2</sub> = -1 and c<sub>3</sub> = +1    
+therefore the complete solution is u(t) = e<sup>&lambda;<sub>3</sub>t</sup>x<sub>3</sub> - e<sup>&lambda;<sub>2</sub>t</sup>x<sub>2</sub>
 
 Heat equation
+
+figure 6.6a    
+temperature at center starts at 2√2 [ you can see this in u<sub>0</sub> = ( 0, 2√2, 0 )  
+heat diffuses into neighboring boxes and then to outside boxes that are frozen at zero degrees.   
+the rate of flow between boxes is the temperature difference    
+[ temp is (2√2) in box 2 and zero in boxes 0 and 4 and (2√2)/2 in 1 and 3; I surmise the rate is (2√2)/2; I think the next statement confirms that: ]   
+from box 2 heat flows L and R at the rate u<sub>1</sub> = u<sub>2</sub> and u<sub>3</sub> = u<sub>2</sub> [ surmise these are negative rates since it is flow out i.e. termperature reductions. ]   
+so the flow out is u<sub>1</sub> - 2•u<sub>2</sub> + u<sub>3</sub> in the second row of Au.
