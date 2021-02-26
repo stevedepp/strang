@@ -3394,9 +3394,9 @@ det \begin{bmatrix}
 & = (-2 -&lambda;)(&lambda;^2 + 4&lambda;+2) 
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Adet+A+-+%26lambda%3BI+%26%3D%0Adet+%5Cbegin%7Bbmatrix%7D%0A-2-+%26lambda%3B%261%260%5C%5C%0A1%26-2-+%26lambda%3B%261%5C%5C%0A0%26-1%26-2-+%26lambda%3B%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%5C%5C%0A%26%3D+%28-2+-+%26lambda%3B%29+%5B%28-2-+%26lambda%3B%29%5E2+-+1%5D+-1%28-2-+%26lambda%3B%29%5C%5C%0A%26%3D+%28-2+-+%26lambda%3B%29+%5B%28-2-+%26lambda%3B%29%5E2+-2+%5D+%5C%5C%0A%26+%3D+%28-2+-%26lambda%3B%29%28%26lambda%3B%5E2+%2B+4%26lambda%3B%2B2%29+%0A%5Cend%7Balign%2A%7D)
 
-&lambda; = -2 --> x<sub>1</sub> = [1,0,-1]   
-&lambda; = -2 - √2 --> x<sub>2</sub> = [1,-√2, 1]   
-&lambda; = -2 - √2 --> x<sub>3</sub> = [1, √2, 1]   
+&lambda;<sub>1</sub> = -2 --> x<sub>1</sub> = [1,0,-1]   
+&lambda;<sub>2</sub> = -2 - √2 --> x<sub>2</sub> = [1,-√2, 1]   
+&lambda;<sub>3</sub> = -2 + √2 --> x<sub>3</sub> = [1, √2, 1]   
 
 ![\begin{align*}
 &lambda;_1=-2: (A -- 2I) \, x_1 &= 
@@ -3469,4 +3469,6 @@ the eigenvectors are orthogonal (proved in secrtion 6.4) for all symmetric matri
 all 3 &lambda;s are negative.  This A is negative definite and e<sup>At</sup> decays to zero (stability). 
 
 the starting u(0) = (0,2√2,0) is x<sub>3</sub> - x<sub>2</sub>   
-therefore the solution is u(t) = e<sup>&lambda;<sub>3</sub>t<sup>x<sub>3</sub> - e<sup>&lambda;<sub>2</sub>t<sup>x<sub>2</sub>
+therefore the solution is u(t) = e<sup>&lambda;<sub>3</sub>t</sup>x<sub>3</sub> - e<sup>&lambda;<sub>2</sub>t<sup>x<sub>2</sub>
+
+Heat equation
