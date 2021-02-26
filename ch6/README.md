@@ -1266,7 +1266,7 @@ there are 2 different ways to count multiplicity.
 GM counts the independent eigenvectors for &lambda;   
 GM is dimension of the null space of (A - &lambda;I)  
 
-[notice there may be multiple &lambda; that satisfy det (A-&lambda;I) = 0, e.g. 0,0 in the example below, but this isnt what this null space is about.  this is about after you use det(A - &lamnda;I) = 0 to find your &lambda;s and are plugging one of them back into (A-&lambda;I), you find that there are a number of dimensions to the null space, i.e. more than one x eigenvector satisfies (A-&lambda;I)x = 0]   GM is about eigenvectors; null space of  A-&lambda;I.  AM is about eigenvalues; det A-&lambda;I.
+[notice there may be multiple &lambda; that satisfy det (A-&lambda;I) = 0, e.g. 0,0 in the example below, but this isnt what this null space is about.  this is about after you use det(A - &lamda;I) = 0 to find your &lambda;s and are plugging one of them back into (A-&lambda;I), you find that there are a number of dimensions to the null space, i.e. more than one x eigenvector satisfies (A-&lambda;I)x = 0]   GM is about eigenvectors; null space of  A-&lambda;I.  AM is about eigenvalues; det A-&lambda;I.
 
 [eigenvectors per &lambda;]  
 2. algebraic multiplicity = AM  
@@ -1541,7 +1541,7 @@ TF if the ONLY eigenvector of A is a multiple of (1,4) then A has ...
 ... a repeated eigenvalue.  TRUE. an eigenvector is missing which can only happen for a repeated eigenvalue.   
 ... no diagonalizable X&Lambda;X<sup>-1</sup>  TRUE.  we konw there is only one line of eigenvectors.  there are not enough eigenvectors to fill the eigenvector matrix X.   
 
-14. the matrix A = [ [ 3,1 ], [ 0,3 ] ] is not diagonalizable because the rank of A - &lamba;I is one.  What to change to make it diagonalizable?  
+14. the matrix A = [ [ 3,1 ], [ 0,3 ] ] is not diagonalizable because the rank of A - &lambda;I is one.  What to change to make it diagonalizable?  
 Changing any entry except a(1,2) = 1 would make it diagonalizable as the new A will have different eigenvalues.   
 The rank of A - 3I = one.  Since rank + null space dim must = n = 2, then the null space has dim = 2 - 1 = 1 and therefore there is not a complete set of 2 eigenvectors for the &lambda; = 3 eigenvalue.  
 
@@ -1984,7 +1984,7 @@ j*z = j*e**( j*theta)
 
 
 34.  the transpose of A = X&Lambda;X<sup>-1</sup> is A<sup>T</sup> = (X<sup>-1</sup>)<sup>T</sup>&Lambda;X<sup>T</sup>.  
-the eigenvectors y in A<sup>T</sup> = &lamnda;y are the columns of that matrix (X<sup>-1</sup>)<sup>T</sup>.  
+the eigenvectors y in A<sup>T</sup> = &lambda;y are the columns of that matrix (X<sup>-1</sup>)<sup>T</sup>.  
 they are clled the 'left eigenvectors' of A because y<sup>T</sup>A = &lambda;y<sup>T</sup>.  
 how do you multiply matrices to find the formula for A.  
 
@@ -2001,7 +2001,7 @@ first a review of whats to come since the book is a bit obtuse in this section:
 
 - this chapter started with Ax = &lambda;x  where Ax and &lambda;x are scalars and A<sup>k</sup>x = &lambda;<sup>k</sup>x.    
 - then the chapter moved to vector u<sub>k</sub> = A<sup>k</sup>u</sub>0</sub> = vector =  X&Lambda;<sup>k</sup>X<sup>-1</sup>u<sub>0</sub> and put u<sub>0</sub> in terms of a linear combination of X's columns, the eigenvectors via coefficients c.    
-- So until now, the function has been linear constants of A multiplying scalar x or vector u.    Here it is function u of t where A is again constants that act on t in function u.   when taking the derivative of u with respect to t, ∂u/∂t, the result is the constant A times u: ∂u/∂t = Au.  This derivative only occurs when u is the exponential constant to the power of At: only u(t) = e<sup>At</sup> has ∂u/∂t = Au.  So, ∂u/∂t can only be solved by u(t) = e<sup>At</sup>, but this has infinite solutions and more specifically ("particularly" in technical terms) solved by e<sup>At</sup> with initial condition u<sub>0</sub>: ∂u/∂t = Au is solved by u(t) = e<sup>At</sup>u<sub>0</sub>  We are solving ∂u/∂t = Au = Ae<sup>At</sup> with u(t) = Xe<sup>&Lambda;t</sup>X<sup>-1</sup>u<sub>t=0</sub>.  for many c's, &lamnda;s and x's, u<sub>t=0</sub> = c<sub>0</sub>e<sup>A•(t=0)</sup>x = c<sub>0</sub>(I)x.  u(0) = Xc or c = X<sup>-1</sup>u<sub>0</sub>, giving us u(t) = Xe<sup>&Lambda;t</sup>c.
+- So until now, the function has been linear constants of A multiplying scalar x or vector u.    Here it is function u of t where A is again constants that act on t in function u.   when taking the derivative of u with respect to t, ∂u/∂t, the result is the constant A times u: ∂u/∂t = Au.  This derivative only occurs when u is the exponential constant to the power of At: only u(t) = e<sup>At</sup> has ∂u/∂t = Au.  So, ∂u/∂t can only be solved by u(t) = e<sup>At</sup>, but this has infinite solutions and more specifically ("particularly" in technical terms) solved by e<sup>At</sup> with initial condition u<sub>0</sub>: ∂u/∂t = Au is solved by u(t) = e<sup>At</sup>u<sub>0</sub>  We are solving ∂u/∂t = Au = Ae<sup>At</sup> with u(t) = Xe<sup>&Lambda;t</sup>X<sup>-1</sup>u<sub>t=0</sub>.  for many c's, &lambda;s and x's, u<sub>t=0</sub> = c<sub>0</sub>e<sup>A•(t=0)</sup>x = c<sub>0</sub>(I)x.  u(0) = Xc or c = X<sup>-1</sup>u<sub>0</sub>, giving us u(t) = Xe<sup>&Lambda;t</sup>c.
 
 very helpful link:
 http://heath.cs.illinois.edu/scicomp/notes/cs450_chapt09.pdf
