@@ -3315,3 +3315,158 @@ independent eigenvectors u(t) = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>t</sup>x<
 5. solutions have the short form u(t) = e<sup>At</sup>u(0) with the matrix exponential e<sup>At</sup>.
 
 6. equations with y'' reduce to u' = Au by combining y and y' into the vector u.
+
+
+
+**Worked examples**
+
+6.3A solve y'' + 4y' +3y = 0 by substituting e<&lambda;t and also by linear algebra.
+
+substituting y = e<&lambda;t</sup> yields (&lambda;<sup>2</sup> + 4&lambda; + 3)e<sup>&lambda;t</sup> = 0 = (&lambda; + 1)(&lambda; + 3) = 0 yielding &lambda;<sub>1</sub> = -1 and &lambda;<sub>2</sub> = -3 and thusly yields pure solutions y<sub>1</sub> = e<sup>-t</sup> and y<sub>2</sub> = e<sup>-3t</sup> and a complete solution y = c<sub>1</sub>y<sub>1</sub> + c<sub>2</sub>y<sub>2</sub> approaches zero [as t-->∞], [but witouth u(0) cannot know the c<sub>i</sub>.]
+
+linear algebra sets u = (y, y') and then the vector equation to u' = Au:  
+
+∂y/∂t = y' and ∂y'/∂t = -3y - 4y' convert to ∂u/∂t = [[0,1],[-3,-4]] u
+
+so that ∂ [y, y'] / ∂t = [[0,1],[-3,-4]] [y, y'] = [y', -3y-4y']
+
+this A is 'companion matrix' and its eigenvalues are -1 and -3 from det (A - &lambda;I) = det [[-&lambda;, 1],[-3, -4 - &lambda;]] = &lambda;<sup>2</sup> + 4&lambda; + 3 = 0 
+
+the eigenvectors of A are (1, &lambda;<sub>1</sub>) and (1, &lambda;<sub>2</sub>). 
+
+the decay in y(t) comes from the e<sup>-t</sup> and e<sup>-3t</sup>.  with constant coefficients, calculus leads to linear algebra: Ax = &lambda;x
+
+note: in linear algebra there is a danger of shortage of eigenvectors.  our eigenvectors (1,&lambda;) and (1, &lambda;) are the same if &lambda;<sub>1</sub> = &lambda;<sub>2</sub> and then one cannot diagonalize A.  In this case, there are not 2 independent solutionsto ∂u/∂t = Au.
+
+In differential calculus the danger is also repeated &lambda;.  After y = e<sup>&lambda;t</sup>, a second solutionhas to be found.  this second solutions turns out to be y = te<sup>&lambda;t</sup>.  This "impure" solution (with an extra t) appears in the exponential e<sup>At</sup> as was shown in example 4.
+
+
+6.3B find eigenvalues and eigenvectors of A and write u(0) = (0, 2√2, 0) as a combination of the eigenvectors.  solve both equations u' = Au and u'' = Au.  
+
+∂u/∂t = [[-2,1,0], [1,-2,1], [0,1,-2]] u   
+∂<sup>2</sup>u/∂t<sup>2</sup> = [[-2,1,0], [1,-2,1], [0,1,-2]] u with ∂u/∂t(0) = 0
+
+![\begin{align*}
+\frac{\partial u}{\partial t} &=
+\begin{bmatrix}
+-2&1&0\\
+1&-2&1\\
+0&-1&-2
+\end{bmatrix} \, u \\
+\\
+\frac{\partial^2 u}{\partial t^2} &=
+\begin{bmatrix}
+-2&1&0\\
+1&-2&1\\
+0&-1&-2
+\end{bmatrix} \, u  
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A-2%261%260%5C%5C%0A1%26-2%261%5C%5C%0A0%26-1%26-2%0A%5Cend%7Bbmatrix%7D+%5C%2C+u+%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial%5E2+u%7D%7B%5Cpartial+t%5E2%7D+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A-2%261%260%5C%5C%0A1%26-2%261%5C%5C%0A0%26-1%26-2%0A%5Cend%7Bbmatrix%7D+%5C%2C+u++%0A%5Cend%7Balign%2A%7D)
+
+u' = Au   
+similar to heat equation ∂u/∂t = ∂<sup>2</sup>u/∂x<sup>2</sup>.   
+its solution u(t) will decay (A has negative eigenvalues).  
+
+u'' Au  
+similar to wave equation ∂<sup>2</sup>u/∂t<sup>2</sup> = ∂<sup>2</sup>u/∂x<sup>2</sup>.   
+its solution will oscillate ( square roots of &lambda; are imaginary).
+
+
+solution:   
+the eigenvalues and eigenvectors come from det(A -&lambda; I) = 0 
+
+det [ [ -2 - &lambda;, 1, 0 ], [ 1, -2 - &lambda;], [ 0, 1, -2 - &lambda;] ]    
+= ( -2 - &lambda; ) [ ( - 2 - &lambda; )<sup>2</sup> - 1 ] - 1 ( -2 - y )  
+= ( -2 - &lambda; ) [ ( - 2 - &lambda; )<sup>2</sup> - 2 ] = 0
+= ( -2 - &lambda; ) [ &lambda;<sup>2</sup> + 4&lambda; - 2 ] = 0
+&lambda;<sub>1</sub> = 2 from ( -2 - &lambda; )
+&lambda;<sub>2</sub> and &lambda;<sub>3</sub> from quadratic soliution to &lambda;<sup>2</sup> + 4&lambda; - 2: -2 &pm; √2
+
+![\begin{align*}
+det A - &lambda;I &=
+det \begin{bmatrix}
+-2- &lambda;&1&0\\
+1&-2- &lambda;&1\\
+0&-1&-2- &lambda;
+\end{bmatrix} \\
+\\
+&= (-2 - &lambda;) [(-2- &lambda;)^2 - 1] -1(-2- &lambda;)\\
+&= (-2 - &lambda;) [(-2- &lambda;)^2 -2 ] \\
+& = (-2 -&lambda;)(&lambda;^2 + 4&lambda;+2) 
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Adet+A+-+%26lambda%3BI+%26%3D%0Adet+%5Cbegin%7Bbmatrix%7D%0A-2-+%26lambda%3B%261%260%5C%5C%0A1%26-2-+%26lambda%3B%261%5C%5C%0A0%26-1%26-2-+%26lambda%3B%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%5C%5C%0A%26%3D+%28-2+-+%26lambda%3B%29+%5B%28-2-+%26lambda%3B%29%5E2+-+1%5D+-1%28-2-+%26lambda%3B%29%5C%5C%0A%26%3D+%28-2+-+%26lambda%3B%29+%5B%28-2-+%26lambda%3B%29%5E2+-2+%5D+%5C%5C%0A%26+%3D+%28-2+-%26lambda%3B%29%28%26lambda%3B%5E2+%2B+4%26lambda%3B%2B2%29+%0A%5Cend%7Balign%2A%7D)
+
+&lambda; = -2 --> x<sub>1</sub> = [1,0,-1]   
+&lambda; = -2 - √2 --> x<sub>2</sub> = [1,-√2, 1]   
+&lambda; = -2 - √2 --> x<sub>3</sub> = [1, √2, 1]   
+
+![\begin{align*}
+&lambda;_1=-2: (A -- 2I) \, x_1 &= 
+\begin{bmatrix}
+0&1&0\\
+1&0&1\\
+0&1&0
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix}=
+\begin{bmatrix}
+0\\
+0\\
+0
+\end{bmatrix} \,
+\, for x_1 = 
+\begin{bmatrix}
+1\\
+0\\
+-1
+\end{bmatrix}\\
+\\
+&lambda;_2=-2-\sqrt{2}: 
+(A -(-2-\sqrt{2})I) \, x_2 &= \begin{bmatrix}
+\sqrt{2}&1&0\\
+1&\sqrt{2}&1\\
+0&1&\sqrt{2}
+\end{bmatrix}
+\begin{bmatrix}
+x\\y\\z
+\end{bmatrix}=
+\begin{bmatrix}
+0\\
+0\\
+0
+\end{bmatrix} \,
+for x_2 = 
+\begin{bmatrix}
+1\\
+-\sqrt{2}\\
+1
+\end{bmatrix}\\
+\\
+&lambda;_3=-2+\sqrt{2}: 
+(A -(-2+\sqrt{2})I)\, x_3 &= \begin{bmatrix}
+-\sqrt{2}&1&0\\
+1&-\sqrt{2}&1\\
+0&1&-\sqrt{2}
+\end{bmatrix}
+\begin{bmatrix}
+x\\y\\z
+\end{bmatrix}=
+\begin{bmatrix}
+0\\
+0\\
+0
+\end{bmatrix} \,
+for x_3 = 
+\begin{bmatrix}
+1\\
+\sqrt{2}\\
+1
+\end{bmatrix}\\
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%26lambda%3B_1%3D-2%3A+%28A+--+2I%29+%5C%2C+x_1+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0%261%260%5C%5C%0A1%260%261%5C%5C%0A0%261%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%5C%5C%0Az%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C%0A0%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D+%5C%2C%0A%5C%2C+for+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A0%5C%5C%0A-1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%26lambda%3B_2%3D-2-%5Csqrt%7B2%7D%3A+%0A%28A+-%28-2-%5Csqrt%7B2%7D%29I%29+%5C%2C+x_2+%26%3D+%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%261%260%5C%5C%0A1%26%5Csqrt%7B2%7D%261%5C%5C%0A0%261%26%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C%0A0%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D+%5C%2C%0Afor+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-%5Csqrt%7B2%7D%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%26lambda%3B_3%3D-2%2B%5Csqrt%7B2%7D%3A+%0A%28A+-%28-2%2B%5Csqrt%7B2%7D%29I%29%5C%2C+x_3+%26%3D+%5Cbegin%7Bbmatrix%7D%0A-%5Csqrt%7B2%7D%261%260%5C%5C%0A1%26-%5Csqrt%7B2%7D%261%5C%5C%0A0%261%26-%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C%0A0%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D+%5C%2C%0Afor+x_3+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A%5Csqrt%7B2%7D%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cend%7Balign%2A%7D)
+
+the eigenvectors are orthogonal (proved in secrtion 6.4) for all symmetric matrices).    
+all 3 &lambda;s are negative.  This A is negative definite and e<sup>At</sup> decays to zero (stability). 
+
+the starting u(0) = (0,2√2,0) is x<sub>3</sub> - x<sub>2</sub>   
+therefore the solution is u(t) = e<sup>&lambda;<sub>3</sub>t<sup>x<sub>3</sub> - e<sup>&lambda;<sub>2</sub>t<sup>x<sub>2</sub>
