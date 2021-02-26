@@ -3469,6 +3469,6 @@ the eigenvectors are orthogonal (proved in secrtion 6.4) for all symmetric matri
 all 3 &lambda;s are negative.  This A is negative definite and e<sup>At</sup> decays to zero (stability). 
 
 the starting u(0) = (0,2√2,0) is x<sub>3</sub> - x<sub>2</sub>   
-therefore the solution is u(t) = e<sup>&lambda;<sub>3</sub>t</sup>x<sub>3</sub> - e<sup>&lambda;<sub>2</sub>t<sup>x<sub>2</sub>
+therefore the solution is u(t) = e<sup>&lambda;<sub>3</sub>t</sup>x<sub>3</sub> - e<sup>&lambda;<sub>2</sub>t</sup>x<sub>2</sub>
 
 Heat equation
