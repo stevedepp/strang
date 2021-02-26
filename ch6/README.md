@@ -3481,7 +3481,6 @@ the rate of flow between boxes is the temperature difference
 from box 2 heat flows L and R at the rate u<sub>1</sub> = u<sub>2</sub> and u<sub>3</sub> = u<sub>2</sub> [ surmise these are negative rates since it is flow out i.e. termperature reductions. ]   
 so the flow out is u<sub>1</sub> - 2•u<sub>2</sub> + u<sub>3</sub> in the second row of Au [ think he means the second row of A which is 1, -2, 1.
 
-
 ![\begin{align*}
 \frac{\partial u}{\partial t} = Au &= 
 \begin{bmatrix}
@@ -3490,16 +3489,16 @@ so the flow out is u<sub>1</sub> - 2•u<sub>2</sub> + u<sub>3</sub> in the seco
 0&-1&-2
 \end{bmatrix} \, u \\
 \\
-u(t) & = X&Lambda;X^{-1}u(0) = X&Lambda;c = 
+u(t) & = Xe^{&Lambda;t}X^{-1}u(0) = Xe^{&Lambda;t}c = 
 \begin{bmatrix}
 1&1&1\\
 0&-\sqrt{2}&\sqrt{2}\\
 -1&1&1
 \end{bmatrix} 
 \begin{bmatrix}
--2&&\\
-&-2-\sqrt{2}&\\
-&&-2+\sqrt{2}
+e^{-2}&&\\
+&e^{-2-\sqrt{2}}&\\
+&&e^{-2+\sqrt{2}}
 \end{bmatrix}
 \begin{bmatrix}
 0\\
@@ -3509,23 +3508,37 @@ u(t) & = X&Lambda;X^{-1}u(0) = X&Lambda;c =
 \\
 \\ I \, think:
 \\
-\frac{\partial u}{\partial t} = Au & = AX&Lambda;X^{-1}u(0) = AX&Lambda;c = 
+\frac{\partial u}{\partial t} = Au & = AXe^{&Lambda;t}X^{-1}u(0) = AXe^{&Lambda;t}c = 
 A\begin{bmatrix}
 1&1&1\\
 0&-\sqrt{2}&\sqrt{2}\\
 -1&1&1
 \end{bmatrix} 
 \begin{bmatrix}
--2&&\\
-&-2-\sqrt{2}&\\
-&&-2+\sqrt{2}
+e^{-2}&&\\
+&e^{-2-\sqrt{2}}&\\
+&&e^{-2+\sqrt{2}}
 \end{bmatrix}
 \begin{bmatrix}
 0\\
 -1\\
 1
 \end{bmatrix}\\
-\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%3D+Au+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-2%261%260%5C%5C%0A1%26-2%261%5C%5C%0A0%26-1%26-2%0A%5Cend%7Bbmatrix%7D+%5C%2C+u+%5C%5C%0A%5C%5C%0Au%28t%29+%26+%3D+X%26Lambda%3BX%5E%7B-1%7Du%280%29+%3D+X%26Lambda%3Bc+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%261%5C%5C%0A0%26-%5Csqrt%7B2%7D%26%5Csqrt%7B2%7D%5C%5C%0A-1%261%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A-2%26%26%5C%5C%0A%26-2-%5Csqrt%7B2%7D%26%5C%5C%0A%26%26-2%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C%0A-1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%5C%5C+I+%5C%2C+think%3A%0A%5C%5C%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%3D+Au+%26+%3D+AX%26Lambda%3BX%5E%7B-1%7Du%280%29+%3D+AX%26Lambda%3Bc+%3D+%0AA%5Cbegin%7Bbmatrix%7D%0A1%261%261%5C%5C%0A0%26-%5Csqrt%7B2%7D%26%5Csqrt%7B2%7D%5C%5C%0A-1%261%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A-2%26%26%5C%5C%0A%26-2-%5Csqrt%7B2%7D%26%5C%5C%0A%26%26-2%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C%0A-1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cend%7Balign%2A%7D)
-
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%3D+Au+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-2%261%260%5C%5C%0A1%26-2%261%5C%5C%0A0%26-1%26-2%0A%5Cend%7Bbmatrix%7D+%5C%2C+u+%5C%5C%0A%5C%5C%0Au%28t%29+%26+%3D+Xe%5E%7B%26Lambda%3Bt%7DX%5E%7B-1%7Du%280%29+%3D+Xe%5E%7B%26Lambda%3Bt%7Dc+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%261%5C%5C%0A0%26-%5Csqrt%7B2%7D%26%5Csqrt%7B2%7D%5C%5C%0A-1%261%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-2%7D%26%26%5C%5C%0A%26e%5E%7B-2-%5Csqrt%7B2%7D%7D%26%5C%5C%0A%26%26e%5E%7B-2%2B%5Csqrt%7B2%7D%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C%0A-1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%5C%5C+I+%5C%2C+think%3A%0A%5C%5C%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%3D+Au+%26+%3D+AXe%5E%7B%26Lambda%3Bt%7DX%5E%7B-1%7Du%280%29+%3D+AXe%5E%7B%26Lambda%3Bt%7Dc+%3D+%0AA%5Cbegin%7Bbmatrix%7D%0A1%261%261%5C%5C%0A0%26-%5Csqrt%7B2%7D%26%5Csqrt%7B2%7D%5C%5C%0A-1%261%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-2%7D%26%26%5C%5C%0A%26e%5E%7B-2-%5Csqrt%7B2%7D%7D%26%5C%5C%0A%26%26e%5E%7B-2%2B%5Csqrt%7B2%7D%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C%0A-1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cend%7Balign%2A%7D)
 
 <img width="825" alt="image" src="https://user-images.githubusercontent.com/38410965/109299233-ca0c3f00-7802-11eb-99bc-869638ae06e6.png">
+
+wave exchange 
+∂<sup>2</sup>u/∂t<sup>2</sup> = Au   
+same eigenvectors x   
+eigenvalues lead to oscillations: &lambda; = e<sup>iwt</sup>x and e<sup>-iwt</sup>x whose frequencies come from w<sup>2</sup> = -&lambda;:
+
+∂<sup>2</sup>(e<sup>iwt</sup>x)/∂t<sup>2</sup> = A(e<sup>iwt</sup>x) = ... 
+becomes ...
+= (iw)<sup>2</sup>e<sup>iwt</sup>x = &lambda;e<sup>iwt</sup>x and w<sup>2</sup> = -&lambda;
+
+there are 2 square roots of -&lambda; so e<sup>iwt</sup> and e<sup>-iwt</sup> [as &lambda;s] with 3 eigenvectors [each] which makes 6 solutions to u'' = Au.  
+a combination will match the 6 components of u(0) and u'(0).   
+since u' = 0 in this problem, e<sup>iwt</sup>x and e<sup>iwt</sup>x produce 2 cos wtx 
+
+
