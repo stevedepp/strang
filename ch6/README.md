@@ -3547,7 +3547,7 @@ since u' = 0 in this problem, e<sup>iwt</sup>x and e<sup>iwt</sup>x produce 2 co
 ∂c/∂t = 2b  
 ∂z/∂t = 3c  
 in that order starting from u(0) = (a(0), b(0), c(0), z(0))  
-solve the same equations by matrix exponential in u(t) = e<sup>&lambda;t</sup>u(0) 
+solve the same equations by matrix exponential in u(t) = e<sup>At</sup>u(0) 
 
 four equations   
 &lambda; = 0, 0, 0, 0  
@@ -3579,14 +3579,20 @@ z
 \\
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Aa%5C%5C%0Ab%5C%5C%0Ac%5C%5C%0Az%0A%5Cend%7Bbmatrix%7D%7D%7B%5Cpartial+t%7D+%3D+%0AAu+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%260%260%260%5C%5C%0A1%260%260%260%5C%5C%0A0%262%260%260%5C%5C%0A0%260%263%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aa%5C%5C%0Ab%5C%5C%0Ac%5C%5C%0Az%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%5Cend%7Balign%2A%7D)
 
+find A<sup>2</sup>, A<sup>3</sup>, A<sup>4</sup> and e<sup>At</sup> = I + At + (At)<sup>3</sup>/6   
+why does the series stop?   
+why is it true that (e<sup>A</sup>)(e<sup>A</sup>) = (e<sup>2A</sup>)
+**always e<sup>As</sup> times e<sup>At</sup> = e<sup>A(s+t)</sup>**
 
 solution 1:  
-integrate ∂u/∂t = 0 then ∂b/∂t = a, then ∂c/∂t = 2b and ∂z/∂t = 3c  
+integrate ∂a/∂t = 0 then ∂b/∂t = a, then ∂c/∂t = 2b and ∂z/∂t = 3c:
+
 this 4x4 matrix which is multiplying a(0), b(0), c(0), z(0) to produce a(t), b(t), c(t), z(t) must be the same e<sup>At</sup> as below.
 
-[the first line is ∂a/∂t integrated: a(0] is c from the integral]  
-[the second line: a(0) is a constant.   t appearswhen ∫ ∂b/∂t ]
+[the first line is ∂a/∂t integrated: a(0] is c from the integral]   
+[the second line: a(0) is a constant.   t appears when ∫ ∂b/∂t ]    
 [third line: ∂c/∂t = 2b so the 2 remains with teh b part but is absorbed with the t<sup>2</sup> part.]
+
 ![\begin{align*}
 solution \, 1:&
 \\
