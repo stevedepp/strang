@@ -3541,4 +3541,101 @@ there are 2 square roots of -&lambda; so e<sup>iwt</sup> and e<sup>-iwt</sup> [a
 a combination will match the 6 components of u(0) and u'(0).   
 since u' = 0 in this problem, e<sup>iwt</sup>x and e<sup>iwt</sup>x produce 2 cos wtx 
 
+6.3C solve 4 equations   
+∂a/∂t = 0   
+∂b/∂t = a  
+∂c/∂t = 2b  
+∂z/∂t = 3c  
+in that order starting from u(0) = (a(0), b(0), c(0), z(0))  
+solve the same equations by matrix exponential in u(t) = e<sup>&lambda;t</sup>u(0) 
 
+four equations   
+&lambda; = 0, 0, 0, 0  
+eigenvalues on the diagonal  
+
+
+![\begin{align*}
+\frac{\partial u}{\partial t} &= 
+\frac{\partial 
+\begin{bmatrix}
+a\\
+b\\
+c\\
+z
+\end{bmatrix}}{\partial t} = 
+Au =
+\begin{bmatrix}
+0&0&0&0\\
+1&0&0&0\\
+0&2&0&0\\
+0&0&3&0
+\end{bmatrix}
+\begin{bmatrix}
+a\\
+b\\
+c\\
+z
+\end{bmatrix}
+\\
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Aa%5C%5C%0Ab%5C%5C%0Ac%5C%5C%0Az%0A%5Cend%7Bbmatrix%7D%7D%7B%5Cpartial+t%7D+%3D+%0AAu+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%260%260%260%5C%5C%0A1%260%260%260%5C%5C%0A0%262%260%260%5C%5C%0A0%260%263%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aa%5C%5C%0Ab%5C%5C%0Ac%5C%5C%0Az%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%5Cend%7Balign%2A%7D)
+
+
+solution 1:  
+integrate ∂u/∂t = 0 then ∂b/∂t = a, then ∂c/∂t = 2b and ∂z/∂t = 3c  
+this 4x4 matrix which is multiplying a(0), b(0), c(0), z(0) to produce a(t), b(t), c(t), z(t) must be the same e<sup>At</sup> as below.
+
+[the first line is ∂a/∂t integrated: a(0] is c from the integral]  
+[the second line: a(0) is a constant.   t appearswhen ∫ ∂b/∂t ]
+[third line: ∂c/∂t = 2b so the 2 remains with teh b part but is absorbed with the t<sup>2</sup> part.]
+![\begin{align*}
+solution \, 1:&
+\\
+a(t) & =a(0)\\
+a(t) & =ta(0)+b(0) \\
+a(t) & =t^2a(0)+2tb(0)+c(0)\\
+a(t) & =t^3a(0)+3t^2b(0) + 3tc(0)+z(0)\\
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Asolution+%5C%2C+1%3A%26%0A%5C%5C%0Aa%28t%29+%26+%3Da%280%29%5C%5C%0Aa%28t%29+%26+%3Dta%280%29%2Bb%280%29+%5C%5C%0Aa%28t%29+%26+%3Dt%5E2a%280%29%2B2tb%280%29%2Bc%280%29%5C%5C%0Aa%28t%29+%26+%3Dt%5E3a%280%29%2B3t%5E2b%280%29+%2B+3tc%280%29%2Bz%280%29%5C%5C%0A%5Cend%7Balign%2A%7D)
+
+
+Solution 2:   
+the powers of A (strictly triangular) are all zero after A<sup>3</sup>:   
+the diagonals move down at each step.  
+so, the series for e<sup>At</sup> stops after 4 terms.   
+the square of e<sup>A</sup> is e<sup>2A</sup>   
+but e<sup>A</sup>e<sup>B</sup> and e<sup>B</sup>e<sup>A</sup> and e<sup>A+B</sup> can all be different.
+
+![\begin{align*}
+solution \, 2:&
+\\
+A^1 &=
+\begin{bmatrix}
+0&0&0&0\\
+1&0&0&0\\
+0&2&0&0\\
+0&0&3&0
+\end{bmatrix} \, \,
+A^2 =
+\begin{bmatrix}
+0&0&0&0\\
+0&0&0&0\\
+2&0&0&0\\
+0&6&0&0\\
+\end{bmatrix} \, \,A^3 =
+\begin{bmatrix}
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&0\\
+6&0&0&0\\
+\end{bmatrix} \, \,
+A^4 = 0
+\\
+Same \,  e^{At} \, as \, Solution \,1:&
+\\
+e^{At} &= I + At + \frac{(At)^2}{2}+ \frac{(At)^3}{6} = 
+\begin{bmatrix}
+1&&&\\
+t&1&&\\
+t^2&2t&1&\\
+t^3&3t^2&3t&1\\
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Asolution+%5C%2C+2%3A%26%0A%5C%5C%0AA%5E1+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%260%260%260%5C%5C%0A1%260%260%260%5C%5C%0A0%262%260%260%5C%5C%0A0%260%263%260%0A%5Cend%7Bbmatrix%7D+%5C%2C+%5C%2C%0AA%5E2+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%260%260%260%5C%5C%0A0%260%260%260%5C%5C%0A2%260%260%260%5C%5C%0A0%266%260%260%5C%5C%0A%5Cend%7Bbmatrix%7D+%5C%2C+%5C%2CA%5E3+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%260%260%260%5C%5C%0A0%260%260%260%5C%5C%0A0%260%260%260%5C%5C%0A6%260%260%260%5C%5C%0A%5Cend%7Bbmatrix%7D+%5C%2C+%5C%2C%0AA%5E4+%3D+0%0A%5C%5C%0ASame+%5C%2C++e%5E%7BAt%7D+%5C%2C+as+%5C%2C+Solution+%5C%2C1%3A%26%0A%5C%5C%0Ae%5E%7BAt%7D+%26%3D+I+%2B+At+%2B+%5Cfrac%7B%28At%29%5E2%7D%7B2%7D%2B+%5Cfrac%7B%28At%29%5E3%7D%7B6%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%26%26%26%5C%5C%0At%261%26%26%5C%5C%0At%5E2%262t%261%26%5C%5C%0At%5E3%263t%5E2%263t%261%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
