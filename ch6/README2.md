@@ -62,13 +62,109 @@ see below for answer using specific X, but generally the u(t) that solves ∂u/�
 what is u(∞)   
 since e<sup>-5t</sup> --> 0 as t --> ∞, steady state u(∞) = (3,2) as shown by the answer below when t = 1000 since exp(-5000 is &lambda;t) = 0
 
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/109375628-2cf5e880-788c-11eb-86ef-1adf00454452.png">
+
+
 4. door opened between room sholding v(0) = 30 people and w(0) = 10 people.  the movement between rooms is proportional to the difference v - w from which we can take ∂v/∂t = w - v = positive inflow if w contains more people or negative outflow if w contains fewer people at  and ∂w/∂t = v - w.  show that the total v + w is constant at 40 people.   find the matrix in ∂u/∂t = Au and its eigenvalues and eigenvectors.  what are v and w at t=1 and t=∞.
 
 ∂u/∂t where u = [v,w]<sup>T</sup> 
 
 ∂u/∂t = ∂[v,w]<sup>T</sup>/∂tAu must be = [[-1,1],[1,-1]][v,w]<sup>T</sup> = [[w-v],[v-w]]
 
-<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/109375628-2cf5e880-788c-11eb-86ef-1adf00454452.png">
+the python code show diagonalization of the singular matrix and steady state is 20 persons in each room. 
 
+differential equations ∂w/∂t = v-w and ∂v/∂t = w-v  
+consider y = v+w and ∂<sup>∞</sup>y/∂t<sup>∞</sup> is the steady state of people is more easily derived by knowing ∂y/∂t = ∂(v+w)/∂t = ∂v/∂t + ∂w/∂t = w - v + v - w = 0  
+so the function y(t) = v(t) + w(t) is constant for all time.  
+y(t) thus is always equal to its initial condition y(t) = y(0) = v(0) + w(0) = 30 + 10 = 40
+
+defining vector of unknowns u as u = [v(t],w(t)] then we have that u satisfies ∂u/∂t = [w-v. v-w] = [[-1,1][1.-1]][v,w]<sup>T</sup> = Au.
+
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/109376057-db4f5d00-788f-11eb-918e-6c8cb5fbd527.png">
+
+![\begin{align*}
+\frac{\partial u}{\partial t} &= 
+\frac{\partial 
+\begin{bmatrix}
+v(t)\\
+w(t)
+\end{bmatrix}}{\partial t} = 
+\begin{bmatrix}
+w-v\\
+v-w
+\end{bmatrix} = 
+\begin{bmatrix}
+-1&1\\
+1&-1
+\end{bmatrix}
+\begin{bmatrix}
+v\\w
+\end{bmatrix}\\
+u(0) &= 
+\begin{bmatrix}
+30\\
+10
+\end{bmatrix} =
+c_1
+\begin{bmatrix}
+1\\
+-1
+\end{bmatrix}
+c_2
+\begin{bmatrix}
+1\\
+1
+\end{bmatrix}
+\\
+u(t) &= 
+10 
+\begin{bmatrix}
+1\\
+-1
+\end{bmatrix}
+e^{-2t}
++20 
+\begin{bmatrix}
+1\\
+1
+\end{bmatrix}
+e^{0t}\\
+&= 
+\begin{bmatrix}
+v(t)\\
+w(t)
+\end{bmatrix} =
+\begin{bmatrix}
+10*1*e^{-2t} + 20*1*e^{0t}\\
+10*-1*e^{-2t} + 20*1*e^{0t}
+\end{bmatrix} =
+\begin{bmatrix}
+10*e^{-2t} + 20\\
+-10*e^{-2t} + 20
+\end{bmatrix}\\
+u(t=1) &= 
+\begin{bmatrix}
+v(t=1)\\
+w(t=1)
+\end{bmatrix}=
+\begin{bmatrix}
+10*e^-2 + 20\\
+-10*e^-2 + 20
+\end{bmatrix}\\
+u(t=\infty) &= 
+\begin{bmatrix}
+v(t=\infty)\\
+w(t=\infty)
+\end{bmatrix}=
+\begin{bmatrix}
+10*e^-2\infty + 20\\
+-10*e^-2\infty + 20
+\end{bmatrix}
+=\begin{bmatrix}
+20\\
+20
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Av%28t%29%5C%5C%0Aw%28t%29%0A%5Cend%7Bbmatrix%7D%7D%7B%5Cpartial+t%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Aw-v%5C%5C%0Av-w%0A%5Cend%7Bbmatrix%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-1%261%5C%5C%0A1%26-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Av%5C%5Cw%0A%5Cend%7Bbmatrix%7D%5C%5C%0Au%280%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A30%5C%5C%0A10%0A%5Cend%7Bbmatrix%7D+%3D%0Ac_1%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-1%0A%5Cend%7Bbmatrix%7D%0Ac_2%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0Au%28t%29+%26%3D+%0A10+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-1%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B-2t%7D%0A%2B20+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B0t%7D%5C%5C%0A%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Av%28t%29%5C%5C%0Aw%28t%29%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A10%2A1%2Ae%5E%7B-2t%7D+%2B+20%2A1%2Ae%5E%7B0t%7D%5C%5C%0A10%2A-1%2Ae%5E%7B-2t%7D+%2B+20%2A1%2Ae%5E%7B0t%7D%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A10%2Ae%5E%7B-2t%7D+%2B+20%5C%5C%0A-10%2Ae%5E%7B-2t%7D+%2B+20%0A%5Cend%7Bbmatrix%7D%5C%5C%0Au%28t%3D1%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Av%28t%3D1%29%5C%5C%0Aw%28t%3D1%29%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A10%2Ae%5E-2+%2B+20%5C%5C%0A-10%2Ae%5E-2+%2B+20%0A%5Cend%7Bbmatrix%7D%5C%5C%0Au%28t%3D%5Cinfty%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Av%28t%3D%5Cinfty%29%5C%5C%0Aw%28t%3D%5Cinfty%29%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A10%2Ae%5E-2%5Cinfty+%2B+20%5C%5C%0A-10%2Ae%5E-2%5Cinfty+%2B+20%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0A20%5C%5C%0A20%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
 
 
