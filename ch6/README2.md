@@ -262,3 +262,110 @@ w(t=\infty)
 -\infty
 \end{bmatrix}
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Av%28t%29%5C%5C%0Aw%28t%29%0A%5Cend%7Bbmatrix%7D%7D%7B%5Cpartial+t%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Av-w%5C%5C%0Aw-v%0A%5Cend%7Bbmatrix%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%26-1%5C%5C%0A-1%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Av%5C%5Cw%0A%5Cend%7Bbmatrix%7D%5C%5C%0Au%280%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A30%5C%5C%0A10%0A%5Cend%7Bbmatrix%7D+%3D%0Ac_1%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%2B%0Ac_2%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-1%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0Au%28t%29+%26%3D+%0A20+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B0t%7D%0A%2B10+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-1%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B2t%7D%5C%5C%0A%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Av%28t%29%5C%5C%0Aw%28t%29%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A20%2A1%2Ae%5E%7B0t%7D+%2B+10%2A1%2Ae%5E%7B2t%7D%5C%5C%0A20%2A1%2Ae%5E%7B0t%7D+%2B+10%2A-1%2Ae%5E%7B2t%7D%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A20+%2B+10%2Ae%5E%7B2t%7D%5C%5C%0A20+-+10%2Ae%5E%7B2t%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0Au%28t%3D1%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Av%28t%3D1%29%5C%5C%0Aw%28t%3D1%29%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A20+%2B+10%2Ae%5E2%5C%5C%0A20+-10%2Ae%5E2%0A%5Cend%7Bbmatrix%7D%5C%5C%0Au%28t%3D%5Cinfty%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Av%28t%3D%5Cinfty%29%5C%5C%0Aw%28t%3D%5Cinfty%29%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A20+%2B+10%2Ae%5E%7B2%5Cinfty%7D%5C%5C%0A+20+-10%2Ae%5E%7B2%5Cinfty%7D%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0A%2B%5Cinfty%5C%5C%0A-%5Cinfty%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+
+6.
+a and b are real  
+A = [[a,1],[1,a]] has real eigenvalues   
+B = [[b,-1],[1,b]] [has complex eigenvalues    
+
+find conditions on a and b so all solutions ∂u/∂t = Au and ∂v/∂t = Bv approach zero as t --> 0 i.e. Re&lambda; < 0 for all eigenvalues.   
+
+for A, stability requires:  
+T<sub>A</sub> = a + a =  2a < 0 or a < 0  for at least one &lambda; < 0
+AND
+D<sub>A</sub> = a<sup>2</sup> - 1 > 0 or a<sup>2</sup> > 1 or -1 > a > 1 for both signs to be the same
+so a < -1
+
+for B, stability requires:  
+T<sub>B</sub> = b + b =  2b < 0 or b < 0  
+D<sub>B</sub> = b<sup>2</sup> + 1 > 0 or b<sup>2</sup> > -1or b > i   
+not sure how to evaluate the D part so will say b < 0
+
+for a 2x2 this is not necessary:
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/109391654-285e1e00-78e6-11eb-8d04-e32e35acdfc7.png">
+
+7.  P is projection matrix onto 45 degree line y = x in R<sup>2</sup>.  what are eigenvalues
+
+if ∂u/∂t = -Pu what is the limit of u(t) as t --> ∞ starting from u(0) = (3,1)?
+
+a = (1,1)
+
+P = aa<sup>T</sup>/a<sup>T</sup> = [[1,1],[1,1]] / 2
+
+projection matrix has eigenvalues of 1 and 0.  
+[for &lambda;<sub>1</sub>] eigenvectors Px = 1x fill the subspace P projects onto x = (1,1).  
+[for &lambda;<sub>2</sub>] eigenvectors with Px = 0x fill the perpendicular subspace: x = (1,-1)
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/109399060-725afa00-790e-11eb-99ad-13ac2f0cfd68.png">
+
+to solve u' = -P change signs for &lambda;s: but eigenvectors stay the same so u(0) still has c = [2,1]:
+
+u(0) = 2[1,1]<sup>T</sup> + 1[1,-1]<sup>T</sup>
+
+notice the -&lambda;s:
+
+u(t) = e<sup>-1t</sup>[2,2]<sup>T</sup> + e<sup>-0t</sup>[1,-1]<sup>T</sup> which approaches [1,-1]<sup>T</sup> as t--> ∞ because the first eigenvalue causes the first part to go to zero.
+
+-P coefficient matrix is -1 times P which means Px = &lambda;x becomes -Ax = -&lambda;x; eigenvectors of -P are same as P and eigenvalues of -P are the negative of P.
+
+8.  the rabbit population grows 6r but declines due to wolves -2w.  
+the wolf population grows always: -w<sup>2</sup> would control the wolves. 
+
+r/t = 6r - 2w  
+w/t = 2r + w
+
+find eigenvalues and eigenvectors.  
+if r(0) = w(0) = 30 what are the populations at t?   
+after a long time what is the ratio rabbits to wolves?   
+
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/109400075-94f01180-7914-11eb-8ab4-ece1bf27e339.png">
+
+r(t) and w(t) must satisfy ∂r/∂t = 6r - 2w and ∂w/∂t = 2r + w as shown in matrix form below.  this coefficient matrix has eignvalues 2 and 5.  for their respective &lambda;s, the eigenvectors are given by the null spaces shown below A - &lambda; I and the total solutions is given by the linear combination of the two solutions here:
+
+x<sub>1</sub>(t) = [1,2]<sub>T</sub>e<sup>2t</sup>  
+x<sub>2</sub>(t) = [2,1]<sub>T</sub>e<sup>5t</sup>  
+
+the initial condition u(0) forces c<sub>1</sub> and c<sub>2</sub> to satisfy u(0) = Xc which produces c = (10,10) for an entire solution of u(t) = 10[1,2]<sub>T</sub>e<sup>2t</sup> + 10[2,1]<sub>T</sub>e<sup>5t</sup> 
+
+the population of rabbits and wolves is from the components of the complete solution:  
+r(t) = 10e<sup>2t</sup> + 20e<sup>5t</sup>    
+w(t) = 20e<sup>2t</sup> + 10e<sup>5t</sup>   
+and the ratio after a while r/w is (10e<sup>2t</sup> + 20e<sup>5t</sup> )/(20e<sup>2t</sup> + 10e<sup>5t</sup>) = 2 since the eigenvector [2,1]<sub>T</sub> with the &lambda; = 5 dominates the the other eigenvector with &lambda; = 2.
+
+
+9. write (4,0) as combination of these two eigenvectors c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub> of A:
+
+Au = &lambda;u:  
+[[0,1],[-1,0]] [1,i].<sup>T</sup> = i [1,i].<sup>T</sup>  
+[[0,1],[-1,0]] [1,i].<sup>T</sup> =  -i [1,i].<sup>T</sup>
+
+the solution to ∂u/∂t = Au starting from (4,0) is c<sub>1</sub>e<sup>it</sup>x<sub>1</sub> + c<sub>2</sub>e<sup>-it</sup>x<sub>2</sub>.  substitute e<sup>it</sup> = cos t + i sin t and e<sup>-it</sup> = cost t -i sin t to find u(t)
+
+
+
+
+
+
+![\begin{align*}
+u(t) & = 
+\begin{bmatrix}
+r(t)\\
+w(t)
+\end{bmatrix}=
+\begin{bmatrix}
+2&1\\
+1&2
+\end{bmatrix}
+\begin{bmatrix}
+e^{2t}&\\
+&e^{5t}
+\end{bmatrix}
+\begin{bmatrix}
+10\\
+10
+\end{bmatrix}
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au%28t%29+%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ar%28t%29%5C%5C%0Aw%28t%29%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%261%5C%5C%0A1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B2t%7D%26%5C%5C%0A%26e%5E%7B5t%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A10%5C%5C%0A10%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
