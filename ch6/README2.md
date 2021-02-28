@@ -464,6 +464,6 @@ the matrix equation is ∂u/∂t = ∂ [y,y'] / ∂t = [[0,1],[-9,6]] [y,y'] = A
 
   c. Show that the second solution to y'' = 6y' - 9y is y = te<sup>3t</sup>
 
-a. y'' = 6y' - 9y --> &lambda;<sup>2</sup>e<sup>&lambda;t</sup> = &lambda;6e<sup>&lambda;t</sup> - 9e<sup>&lambda;t</sup> --> &lambda;<sup>2</sup>e<sup>&lambda;t</sup> - 6&lambda;e<sup>&lambda;t</sup> + 9e<sup>&lambda;t</sup> = (&lambda;<sup>2</sup> - 6&lambda; + 9)e<sup>&lambda;t</sup> 0
+a. y'' = 6y' - 9y --> &lambda;<sup>2</sup>e<sup>&lambda;t</sup> = &lambda;6e<sup>&lambda;t</sup> - 9e<sup>&lambda;t</sup> --> &lambda;<sup>2</sup>e<sup>&lambda;t</sup> - 6&lambda;e<sup>&lambda;t</sup> + 9e<sup>&lambda;t</sup> = (&lambda;<sup>2</sup> - 6&lambda; + 9)e<sup>&lambda;t</sup> = e<sup>&lambda;t</sup>(&lambda; - 3)<sup>2</sup> = 0
 
 solving det (A - &lambda; I) = &lambda;<sup>2</sup> -6
