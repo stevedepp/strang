@@ -336,18 +336,6 @@ w(t) = 20e<sup>2t</sup> + 10e<sup>5t</sup>
 and the ratio after a while r/w is (10e<sup>2t</sup> + 20e<sup>5t</sup> )/(20e<sup>2t</sup> + 10e<sup>5t</sup>) = 2 since the eigenvector [2,1]<sub>T</sub> with the &lambda; = 5 dominates the the other eigenvector with &lambda; = 2.
 
 
-9. write (4,0) as combination of these two eigenvectors c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub> of A:
-
-Au = &lambda;u:  
-[[0,1],[-1,0]] [1,i].<sup>T</sup> = i [1,i].<sup>T</sup>  
-[[0,1],[-1,0]] [1,i].<sup>T</sup> =  -i [1,i].<sup>T</sup>
-
-the solution to ∂u/∂t = Au starting from (4,0) is c<sub>1</sub>e<sup>it</sup>x<sub>1</sub> + c<sub>2</sub>e<sup>-it</sup>x<sub>2</sub>.  substitute e<sup>it</sup> = cos t + i sin t and e<sup>-it</sup> = cost t -i sin t to find u(t)
-
-
-
-
-
 
 ![\begin{align*}
 u(t) & = 
@@ -369,3 +357,51 @@ e^{2t}&\\
 \end{bmatrix}
 \end{align*}
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au%28t%29+%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ar%28t%29%5C%5C%0Aw%28t%29%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%261%5C%5C%0A1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B2t%7D%26%5C%5C%0A%26e%5E%7B5t%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A10%5C%5C%0A10%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+
+9. write (4,0) as combination of these two eigenvectors c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub> of A:
+
+Au = &lambda;u:  
+[[0,1],[-1,0]] [1,i].<sup>T</sup> = i [1,i].<sup>T</sup>  
+[[0,1],[-1,0]] [1,i].<sup>T</sup> =  -i [1,i].<sup>T</sup>
+
+the solution to ∂u/∂t = Au starting from (4,0) is c<sub>1</sub>e<sup>it</sup>x<sub>1</sub> + c<sub>2</sub>e<sup>-it</sup>x<sub>2</sub>.  substitute e<sup>it</sup> = cos t + i sin t and e<sup>-it</sup> = cost t -i sin t to find u(t)
+
+can see the derivation of c: u<sub>0<sub> = 2 [1,i]<sup>T</sup> + 2[1,-i]<sup>T</sup> = [4,0]<sup>T</sup>   
+could also have eyeballed the 2 x's given and seen that 2 works for c's.
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/109404173-83693280-7931-11eb-9215-0bd92edbae1e.png">
+
+
+if substitute Euler's into the complete solution:
+
+2e<sup>it</sup>[1,i]<sup>T</sup> + c<sub>2</sub>e<sup>-it</sup>[1,-i]<sup>T</sup>
+
+[Strang and Waxworth computed a 4 cost not -4cost for 2nd component.]
+
+![\begin{align*}
+u_t &= 
+2e^{it}\begin{bmatrix}1\\i\end{bmatrix}+
+2e^{-it}\begin{bmatrix}1\\-i\end{bmatrix} \\ &= 
+2(cost + isint)\begin{bmatrix}1\\i\end{bmatrix}+
+2(cost - isint)\begin{bmatrix}1\\-i\end{bmatrix} \\ &= 
+\begin{bmatrix}
+2cost + 2isint + 2cost - 2isint\\
+2icost + 2i^2sint -2icost - -2i^2sint
+\end{bmatrix} \\ &= 
+\begin{bmatrix}
+4cost \\
+-4sint 
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au_t+%26%3D+%0A2e%5E%7Bit%7D%5Cbegin%7Bbmatrix%7D1%5C%5Ci%5Cend%7Bbmatrix%7D%2B%0A2e%5E%7B-it%7D%5Cbegin%7Bbmatrix%7D1%5C%5C-i%5Cend%7Bbmatrix%7D+%5C%5C+%26%3D+%0A2%28cost+%2B+isint%29%5Cbegin%7Bbmatrix%7D1%5C%5Ci%5Cend%7Bbmatrix%7D%2B%0A2%28cost+-+isint%29%5Cbegin%7Bbmatrix%7D1%5C%5C-i%5Cend%7Bbmatrix%7D+%5C%5C+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2cost+%2B+2isint+%2B+2cost+-+2isint%5C%5C%0A2icost+%2B+2i%5E2sint+-2icost+-+-2i%5E2sint%0A%5Cend%7Bbmatrix%7D+%5C%5C+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A4cost+%5C%5C%0A-4sint+%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+10. find A to change scalar equation y'' = 5y' + 4y into a vector equation for u = (y, y'):
+
+∂u/∂t = [y',y'']<sup>T</sup> = ∂[y,y']<sup>T</sup>/∂t = [[0,1],[4,5]] [y,y'] = Au 
+
+what are the eigenvalues of A.  
+find them by substituting y = e<sup>&lambda;t</sup> into y'' = 5y' + 4y
+
+substitution: &lambda;t<sup>2</sup>e<sup>&lambda;t</sup> = &lambda;t5e<sup>&lambda;t</sup> + 4e<sup>&lambda;t</sup> --> &lambda;t<sup>2</sup>e<sup>&lambda;t</sup> - &lambda;t5e<sup>&lambda;t</sup> - 4e<sup>&lambda;t</sup> = (&lambda;t<sup>2</sup> - 5&lambda; - 4)e<sup>&lambda;t</sup> = 0 --> &lambda;t<sup>2</sup> - 5&lambda; - 4 = 0 --> &lambda;<sub>1</sub>, &lambda;<sub>2</sub> = 5 &pm; (41)<sup>1/2</sup>/2
+
+[and find the traditional way for me]
