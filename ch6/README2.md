@@ -455,4 +455,15 @@ the factor t tells us that A had only one eigenvector for its two eigenvalues, 0
 
 [note for completeness sake:] u(t) is injected into ∂u/∂t = [y,y']' = Au = e<sup>At</sup>[y(0),y'(0)] = [[1,t],[0,1]] [y(0),y'(0)] = [y(0)+y'(0)],y'(0)]
 
+12. 
+  a.  sustitute y = e<sup>&lambda;t</sup> into y'' = 6y' - 9y to show that &lambda; = 3,3 is a **repeated root**, which is **trouble**: we need a second solution after e<sup>(&lambda;=3)t</sup>.
 
+the matrix equation is ∂u/∂t = ∂ [y,y'] / ∂t = [[0,1],[-9,6]] [y,y'] = Au [ for which u = e<sup>At</sup> is the only solution.  u = e<sup>&lambda;t</sup> comes from diagonalization. ]
+
+  b. Show that this matrix has only a **single line of eigenvectors** which is **also trouble** 
+
+  c. Show that the second solution to y'' = 6y' - 9y is y = te<sup>3t</sup>
+
+a. y'' = 6y' - 9y --> &lambda;<sup>2</sup>e<sup>&lambda;t</sup> = &lambda;6e<sup>&lambda;t</sup> + 9e<sup>&lambda;t</sup> --> &lambda;<sup>2</sup>e<sup>&lambda;t</sup> - 6&lambda;e<sup>&lambda;t</sup> + 9e<sup>&lambda;t</sup> = (&lambda;<sup>2</sup> - 6&lambda; - 9)e<sup>&lambda;t</sup> 0
+
+solving det (A - &lambda; I) = &lambda;<sup>2</sup> -6
