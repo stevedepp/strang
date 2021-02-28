@@ -405,3 +405,54 @@ find them by substituting y = e<sup>&lambda;t</sup> into y'' = 5y' + 4y
 substitution: &lambda;t<sup>2</sup>e<sup>&lambda;t</sup> = &lambda;t5e<sup>&lambda;t</sup> + 4e<sup>&lambda;t</sup> --> &lambda;t<sup>2</sup>e<sup>&lambda;t</sup> - &lambda;t5e<sup>&lambda;t</sup> - 4e<sup>&lambda;t</sup> = (&lambda;t<sup>2</sup> - 5&lambda; - 4)e<sup>&lambda;t</sup> = 0 --> &lambda;t<sup>2</sup> - 5&lambda; - 4 = 0 --> &lambda;<sub>1</sub>, &lambda;<sub>2</sub> = 5 &pm; (41)<sup>1/2</sup>/2
 
 [and find the traditional way for me]
+A - &lambda; I = [[-&lambda;,1],[4,5-&lambda;]]  
+det(A - &lambda; I) = &lambda;<sup>2</sup> - 5&lambda; - 4 = 0 which is the same quadratic found by subsitution of e<sup>&lambda;t</sup>
+
+11. the solution to y'' = 0 is a straight line y = C + Dt.  Convert to a matrix equation.  
+
+[are we double integrating when we move from y'' to y?]
+
+∂ [y,y']<sup>T</sup>/∂t = [[0,1],[0,0]] [y,y']<sup>T</sup> has the solution [y,y']<sup>T</sup> = e<sup>At [y(0),y'(0)]<sup>T</sup>
+
+[with this matrix, ∂y/∂t in 1st component is [0,1]<sup>T</sup>[y,y']=y' and ∂y/∂t = 0]
+[coupling allows us to use component 2 (y') to solve component 1 (∂y/∂t) and when diagonalized it is uncoupled into pure solutions that can be recombined with c.]
+
+so y'' = 0y +0y'
+
+[this was the same A as seen earlier which could not be diagonalized.]
+
+&lambda;<sub>1</sub> = &lambda;<sub>2</sub> = 0   
+and so this matrix cannot be diagonalized;   
+
+[it's columns are not independent since column 1 = a multiple zero fo column 2]
+
+find A<sup>2</sup> and compute e<sup>At</sup> = I + At + (1/2)A<sup>2</sup>t<sup>2</sup> + ...    
+then multiply the computed e<sup>At</sup> times [y(0), y'(0)] to check the straight line y(t) = y(0) + y'(0)t   
+[that will be ∂u/∂t = Au]
+
+let vector u be defined as u(t) = [y,y']   
+then ∂u/∂t = [y,y']' = [y',y'']  = [[0,1],[0,0]] [y,y'] which has it's complete solution u(t) = [y(t),y'(t)] = e<sup>At</sup>[y(0),y'(0)].
+
+**good**
+[the complete solution is injected to the problem as ∂u(t)/∂t = [[0,1],[0,0]] [y(t),y'(t)] = [[0,1],[0,0]] e<sup>At</sup>[y(0),y'(0)] which if A held independent vectors could be diagonalized to Xe<sup>&Lambda;t</sup>X<sup>-1</sup>[y(0),y'(0)] = Xe<sup>&Lambda;t</sup>X<sup>-1</sup>u(0) = Xe<sup>&Lambda;t</sup>c = AX = e<sup>&Lambda;</sup>X = ∂u/∂t.]   
+
+can evaluate e<sup>At</sup> using the definition in terms of Taylor series that is 
+
+e≤sup>At</sup> = I + At + A<sup>2</sup>t<sup>2</sup>/2! + A<sup>3</sup>t<sup>3</sup>/3! + ...    
+
+which stops at A<sup>2</sup> because A<sup>2</sup> = [[0,1],[0,0]] [[0,1],[0,0]] = [[0,0],[0,0]] 
+
+so e<sup>At</sup> = I + At = [[1,0],[0,1]] + [[0,1],[0,0]]t = [[1,t],[0,1]]   
+
+thus, u(t) = [y(t),y'(t)] = [[1,t],[0,1]] [y(0),y'(0)] = [y(0)+y'(0)t],y'(0)] which decouples into  
+
+y(t) = y(0)+y'(0)t and y'(t) = y'(0) where  
+
+y(t) = y(0)+y'(0)t = intercept at time zero + (slope at time zero)(time) which is a flat line with given slope multiplied by t.  [it is y=mx+b or y=b+mt in this case.] 
+
+the factor t tells us that A had only one eigenvector for its two eigenvalues, 0 and 0 and thus is not diagonalizable.  [if both eigenvalues had eigenvectors Algebraic Mutliplicity = Geometric Multiplicity and there would be two t's in the complete solution]
+[i guess in some sense then this y(t) = y(0)+y'(0)t is similar to u(t) = linear combination of the eigenvectors weighted by eigenvalues which are exponents in e<sup>(&lambda=0)(t=0)</sup> = 1 that we have seen as complete solution before.
+
+[note for completeness sake:] u(t) is injected into ∂u/∂t = [y,y']' = Au = e<sup>At</sup>[y(0),y'(0)] = [[1,t],[0,1]] [y(0),y'(0)] = [y(0)+y'(0)],y'(0)]
+
+
