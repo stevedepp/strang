@@ -476,4 +476,205 @@ then we are asked to show he second solution to y'' = 6y' -9y is y = te<sup>3t</
 substitute in  y'' = 6y' -9y = 6(e<sup>3t</sup> + 3te<sup>3t</sup>) - 9(te<sup>3t</sup>) = 6e<sup>3t</sup> + 18te<sup>3t</sup> - 9te<sup>3t</sup> = **6e<sup>3t</sup> + 9te<sup>3t</sup>**
 which is y'' showing how y(t) satisfies this differential equation. 
 
+13.  
+a. write 2 functions solving ∂<sup>2</sup>dt<sup>2</sup> = -9y and say which starts with y(0) = 3 and y'(0) = 0 ? 
 
+b. the second order equation y'' = -9y produces a vector equation u' = Au: 
+
+u = [y,y'] and ∂u/∂t = [y',y''] = [[0,1],[-9,0]] [y,y'] = Au   (1 always seems to go in to (1,2) spot so ∂y/∂t = y' = 1 • y' )
+
+find u(t) by using eigenvalues / vectors of A where u(0) = (3,0)
+
+a. generally the cycle is 4:   
+y = cos x has y' = -sin x has y'' = -cos x has y''' = sin x has y'''' = cos x 
+y = sin x has y' = cos x has y'' = -sin x has y''' = -cos x has y'''' = sin x
+
+y'' = <sup>2</sup>dt<sup>2</sup> = -9y has y = A cos t + B cos t as a general solution, into which I read y = cos 3t and y = sin 3t are solutions to y'' = -9y tsince they give y'' = -9 cos 3t and y'' = -9 sin 3t.  [It might be a question of combining these pure solutions for a complete solution.]
+
+which one satisfies y(0) = 1 and which satisfies y(0) = 0 seems obvious since cos 3•0 = 1 and sin 3•0 = 0.
+
+b. u = [y,y'] and ∂u/∂t = [y',y'']  = Au = [[0,1],[-9,0]] [y,y'] = ∂[y,y']/∂t 
+
+A appears diagonalizable since it's vectors are independent.
+
+&lambda;<sup>1</sup> = -3i    
+&lambda;<sup>2</sup> = 3i    
+&lambda;<sup>1</sup> + &lambda;<sup>2</sup> = 0 = trace (A)    
+&lambda;<sup>1</sup>&lambda;<sup>2</sup> = -9 • (i)<sup>2</sup> = -9 • -1 = 9 = det A   
+x<sub>1</sub> = (1, 3i) and x<sub>1</sub> = (1, -3i) form the null solution for the A - &lambda;<sup>1</sup>I and A - &lambda;<sup>2</sup>I    
+
+y(0) = 0 and y(0) = 3 mean that u(0) = (0,3)   
+by way of c = X<sup>-1</sup>u(0) = (3/2,3/2)
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/109434383-0dbd9f00-79e3-11eb-8dcb-60614435ad39.png">
+
+this definitely brings it all together *****
+
+![\begin{align*}
+u &= 
+\begin{bmatrix}
+y\\
+y'
+\end{bmatrix}\\
+\frac{\partial u}{\partial t} &= 
+\frac{\partial 
+\begin{bmatrix}
+y\\
+y'
+\end{bmatrix}
+}{\partial t} = 
+\begin{bmatrix}
+y'\\
+y''
+\end{bmatrix}\\
+&=Au =
+\begin{bmatrix}
+0&1\\
+-9&0
+\end{bmatrix}
+\begin{bmatrix}
+y\\
+y'
+\end{bmatrix}\\
+&=Ae^{At}
+\frac{\partial u(t)}{\partial t} = 
+\frac{\partial 
+\begin{bmatrix}
+y(t)\\
+y'(t)
+\end{bmatrix}
+}{\partial t} = Au = Au(t)(u(0)) = Ae^{At}u(0) = Xe^{&Lambda;t}X^{-1}u(0) = Xe^{&Lambda;t}c \\
+&=
+\begin{bmatrix}
+1&1\\
+3i&-3i
+\end{bmatrix}
+\begin{bmatrix}
+e^{-3it}&\\
+&e^{3it}
+\end{bmatrix}
+-\frac{1}{6i}
+\begin{bmatrix}
+-3i&-1\\
+-3i&1
+\end{bmatrix}
+\begin{bmatrix}
+3\\
+0
+\end{bmatrix}=
+\begin{bmatrix}
+1&1\\
+3i&-3i
+\end{bmatrix}
+\begin{bmatrix}
+e^{-3it}&\\
+&e^{3it}
+\end{bmatrix}
+\begin{bmatrix}
+\frac{3}{2}\\
+\frac{3}{2}
+\end{bmatrix}\\
+where:&\\
+c&=-\frac{1}{6i}
+\begin{bmatrix}
+-3i&-1\\
+-3i&1
+\end{bmatrix}
+\begin{bmatrix}
+3\\
+0
+\end{bmatrix}=
+-\frac{1}{6i}
+\begin{bmatrix}
+-9i\\
+-9i
+\end{bmatrix}=
+\frac{3}{2}\\
+thus:&\\
+u(t) &= \frac{y(t)}{y'(t)} = X&Lambda;X^{-1}u(0) = X&Lambda;c = 
+\begin{bmatrix}
+1&1\\
+3i&-3i
+\end{bmatrix}
+\begin{bmatrix}
+e^{-3it}&\\
+&e^{3it}
+\end{bmatrix}
+\begin{bmatrix}
+\frac{3}{2}\\
+\frac{3}{2}
+\end{bmatrix}\\
+&=\frac{3}{2}
+\begin{bmatrix}
+1\\
+3i
+\end{bmatrix}
+e^{-3it}+
+\frac{3}{2}
+\begin{bmatrix}
+1\\
+-3i
+\end{bmatrix}
+e^{3it}
+=c_1x_1&lambda;_1 + c_2x_2&lambda;_2\\
+u(0) &= 
+u(t=0) = \frac{y(t=0)}{y'(t=0)} = X&Lambda;^0X^{-1}u(0) = X(1)X^{-1}u(0) = I*u(0)= X&Lambda;^0c \\
+&= 
+\begin{bmatrix}
+1&1\\
+3i&-3i
+\end{bmatrix}
+\begin{bmatrix}
+e^{-3i(t=0}&\\
+&e^{3i(t=0)}
+\end{bmatrix}
+\begin{bmatrix}
+\frac{3}{2}\\
+\frac{3}{2}
+\end{bmatrix}\\
+&=\frac{3}{2}
+\begin{bmatrix}
+1\\
+3i
+\end{bmatrix}
+e^{-3i(t=0)}+
+\frac{3}{2}
+\begin{bmatrix}
+1\\
+-3i
+\end{bmatrix}
+e^{3i((t=0)}
+&= 
+\begin{bmatrix}
+1&1\\
+3i&-3i
+\end{bmatrix}
+\begin{bmatrix}
+e^{-3i(t=0}&\\
+&e^{3i(t=0)}
+\end{bmatrix}
+\begin{bmatrix}
+\frac{3}{2}\\
+\frac{3}{2}
+\end{bmatrix}\\
+&=\frac{3}{2}
+(
+\begin{bmatrix}
+1\\
+3i
+\end{bmatrix}
++
+\begin{bmatrix}
+1\\
+-3i
+\end{bmatrix})\\
+&=\frac{3}{2}
+\begin{bmatrix}
+2\\
+0
+\end{bmatrix}=
+\begin{bmatrix}
+3\\
+0
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%0A%7D%7B%5Cpartial+t%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ay%27%5C%5C%0Ay%27%27%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3DAu+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-9%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3DAe%5E%7BAt%7D%0A%5Cfrac%7B%5Cpartial+u%28t%29%7D%7B%5Cpartial+t%7D+%3D+%0A%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Ay%28t%29%5C%5C%0Ay%27%28t%29%0A%5Cend%7Bbmatrix%7D%0A%7D%7B%5Cpartial+t%7D+%3D+Au+%3D+Au%28t%29%28u%280%29%29+%3D+Ae%5E%7BAt%7Du%280%29+%3D+Xe%5E%7B%26Lambda%3Bt%7DX%5E%7B-1%7Du%280%29+%3D+Xe%5E%7B%26Lambda%3Bt%7Dc+%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A3i%26-3i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%26%5C%5C%0A%26e%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%0A-%5Cfrac%7B1%7D%7B6i%7D%0A%5Cbegin%7Bbmatrix%7D%0A-3i%26-1%5C%5C%0A-3i%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A3i%26-3i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%26%5C%5C%0A%26e%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0Awhere%3A%26%5C%5C%0Ac%26%3D-%5Cfrac%7B1%7D%7B6i%7D%0A%5Cbegin%7Bbmatrix%7D%0A-3i%26-1%5C%5C%0A-3i%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%3D%0A-%5Cfrac%7B1%7D%7B6i%7D%0A%5Cbegin%7Bbmatrix%7D%0A-9i%5C%5C%0A-9i%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0Athus%3A%26%5C%5C%0Au%28t%29+%26%3D+%5Cfrac%7By%28t%29%7D%7By%27%28t%29%7D+%3D+X%26Lambda%3BX%5E%7B-1%7Du%280%29+%3D+X%26Lambda%3Bc+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A3i%26-3i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%26%5C%5C%0A%26e%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A3i%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%2B%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-3i%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B3it%7D%0A%3Dc_1x_1%26lambda%3B_1+%2B+c_2x_2%26lambda%3B_2%5C%5C%0Au%280%29+%26%3D+%0Au%28t%3D0%29+%3D+%5Cfrac%7By%28t%3D0%29%7D%7By%27%28t%3D0%29%7D+%3D+X%26Lambda%3B%5E0X%5E%7B-1%7Du%280%29+%3D+X%281%29X%5E%7B-1%7Du%280%29+%3D+I%2Au%280%29%3D+X%26Lambda%3B%5E0c+%5C%5C%0A%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A3i%26-3i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3i%28t%3D0%7D%26%5C%5C%0A%26e%5E%7B3i%28t%3D0%29%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A3i%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B-3i%28t%3D0%29%7D%2B%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-3i%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B3i%28%28t%3D0%29%7D%0A%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A3i%26-3i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3i%28t%3D0%7D%26%5C%5C%0A%26e%5E%7B3i%28t%3D0%29%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%28%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A3i%0A%5Cend%7Bbmatrix%7D%0A%2B%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-3i%0A%5Cend%7Bbmatrix%7D%29%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
