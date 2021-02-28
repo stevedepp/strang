@@ -464,6 +464,16 @@ the matrix equation is ∂u/∂t = ∂ [y,y'] / ∂t = [[0,1],[-9,6]] [y,y'] = A
 
   c. Show that the second solution to y'' = 6y' - 9y is y = te<sup>3t</sup>
 
-a. y'' = 6y' - 9y --> &lambda;<sup>2</sup>e<sup>&lambda;t</sup> = &lambda;6e<sup>&lambda;t</sup> - 9e<sup>&lambda;t</sup> --> &lambda;<sup>2</sup>e<sup>&lambda;t</sup> - 6&lambda;e<sup>&lambda;t</sup> + 9e<sup>&lambda;t</sup> = (&lambda;<sup>2</sup> - 6&lambda; + 9)e<sup>&lambda;t</sup> = e<sup>&lambda;t</sup>(&lambda; - 3)<sup>2</sup> = 0
+a. y'' = 6y' - 9y --> &lambda;<sup>2</sup>e<sup>&lambda;t</sup> = &lambda;6e<sup>&lambda;t</sup> - 9e<sup>&lambda;t</sup> --> &lambda;<sup>2</sup>e<sup>&lambda;t</sup> - 6&lambda;e<sup>&lambda;t</sup> + 9e<sup>&lambda;t</sup> = (&lambda;<sup>2</sup> - 6&lambda; + 9)e<sup>&lambda;t</sup> = e<sup>&lambda;t</sup>(&lambda; - 3)<sup>2</sup> = 0 --> &lambda;<sub>1</sub> = &lambda;<sub>2</sub> = 3 and so need another solution becuse of repeated eigenvalues because of **double root**.
 
-solving det (A - &lambda; I) = &lambda;<sup>2</sup> -6
+the matrix representation for y'' = 6y' - 9y is given by ∂u/∂t = ∂ [y(t),y'(t)] / ∂t = [[0,1],[-9,6]] [y(t),y'(t)] = Au(t))
+employing the &lambda;s in ( A - &lambda; I ) = 0 leads to eigenvectors X = [[-3,1],[-9,3]] which has [1,3] as the **only eigenvector**.  to show that y = te<sup>3t</sup> is a second eigenvector, evaluate the differential equation for this value of y = te<sup>3t</sup> by computing y, y' and y'' using the product rule:
+
+y = te<sup>3t</sup>  
+y' = ∂(te<sup>3t</sup>)/∂t = e<sup>3t</sup> + 3te<sup>3t</sup>  
+y'' = ∂<sup>2</sup>(e<sup>3t</sup> + 3te<sup>3t</sup>) / ∂t<sup>2</sup> = 3e<sup>3t</sup> + 3e<sup>3t</sup> + 3•3te<sup>3t</sup> = **6e<sup>3t</sup> + 9te<sup>3t</sup>**
+then we are asked to show he second solution to y'' = 6y' -9y is y = te<sup>3t</sup>
+substitute in  y'' = 6y' -9y = 6(e<sup>3t</sup> + 3te<sup>3t</sup>) - 9(te<sup>3t</sup>) = 6e<sup>3t</sup> + 18te<sup>3t</sup> - 9te<sup>3t</sup> = **6e<sup>3t</sup> + 9te<sup>3t</sup>**
+which is y'' showing how y(t) satisfies this differential equation. 
+
+
