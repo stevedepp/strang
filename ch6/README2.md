@@ -765,4 +765,13 @@ e^{3i((t=0)}\\
 <img width="1137" alt="image" src="https://user-images.githubusercontent.com/38410965/109438444-0b197480-79f8-11eb-973d-e06df55dccec.png">
 
 
-14. \\sqrt{\\left|{u_{1}}\\right|^{2} + \\left|{u_{2}}\\right|^{2} + \\left|{u_{3}}\\right|^{2}}
+14. || u(t) ||<sup>2</sup> = u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup> + u<sub>3 </sub><sup>2</sup>
+
+the derivative of || u(t) ||<sup>2</sup> = 2u<sub>1</sub>u'<sub>1 </sub> + 2u<sub>2</sub>u'<sub>2</sub> + 2u<sub>3 </sub>u'<sub>3 </sub>
+
+∂u/∂t = Au = [[0,c,-b],[-c,0,a],[b,-a,0]] u =   
+[u<sub>1</sub>', u<sub>1</sub>', u<sub>1</sub>']  
+where  
+u<sub>1</sub>' =  
+u<sub>1</sub>' =  
+u<sub>1</sub>' =  
