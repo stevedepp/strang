@@ -765,13 +765,90 @@ e^{3i((t=0)}\\
 <img width="1137" alt="image" src="https://user-images.githubusercontent.com/38410965/109438444-0b197480-79f8-11eb-973d-e06df55dccec.png">
 
 
-14. || u(t) ||<sup>2</sup> = u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup> + u<sub>3 </sub><sup>2</sup>
+14. ∂u/∂t = Au is solved only by u = e<sup>At</sup>
 
-the derivative of || u(t) ||<sup>2</sup> = 2u<sub>1</sub>u'<sub>1 </sub> + 2u<sub>2</sub>u'<sub>2</sub> + 2u<sub>3 </sub>u'<sub>3 </sub>
+length sqaured of any vector including our u that is composed of e<sup>At</sup> is
+|| u(t) ||<sup>2</sup> = u<sub>1</sub><sup>2</sup> + u<sub>2</sub><sup>2</sup> + u<sub>3 </sub><sup>2</sup>
 
-∂u/∂t = Au = [[0,c,-b],[-c,0,a],[b,-a,0]] u =   
-[u<sub>1</sub>', u<sub>1</sub>', u<sub>1</sub>']  
+by the product rule, the derivative of this squared length = ∂|| u(t) ||<sup>2</sup>/∂t = 2uu' = 2u<sub>1</sub>u'<sub>1 </sub> + 2u<sub>2</sub>u'<sub>2</sub> + 2u<sub>3 </sub>u'<sub>3 </sub>
+
+we are given a skew symmetric A: A<sup>T</sup> = -A
+
+∂u/∂t = u' = Au = [[0,c,-b],[-c,0,a],[b,-a,0]] u = [u<sub>1</sub>', u<sub>1</sub>', u<sub>1</sub>']  
 where  
-u<sub>1</sub>' =  
-u<sub>1</sub>' =  
-u<sub>1</sub>' =  
+u<sub>1</sub>' = Au<sub>1</sub> = cu<sub>2</sub> - bu<sub>3</sub> 
+u<sub>2</sub>' = Au<sub>2</sub> = au<sub>3</sub> - cu<sub>1</sub>  
+u<sub>3</sub>' = Au<sub>3</sub> = bu<sub>1</sub> - au<sub>2</sub>  
+
+substitute u' = u<sub>1</sub>', u<sub>3</sub>', u<sub>3</sub>' into ∂|| u(t) ||<sup>2</sup>/∂t to see that it is zero.
+
+∂|| u(t) ||<sup>2</sup>/∂t 
+= 2u<sub>1</sub>(cu<sub>2</sub> - bu<sub>3</sub>)  
++ 2u<sub>2</sub>(au<sub>3</sub> - cu<sub>1</sub>)  
++ 2u<sub>3</sub>(bu<sub>1</sub> - au<sub>2</sub>)  
+= 2cu<sub>1</sub>u<sub>2</sub> - 2bu<sub>1</sub>u<sub>3</sub>    
++ 2au<sub>2</sub>u<sub>3</sub> - 2cu<sub>2</sub>u<sub>1</sub>       
++ 2bu<sub>3</sub>u<sub>1</sub> - 2a<sub>3</sub>u<sub>2</sub>  
+= 2cu<sub>1</sub>u<sub>2</sub> - 2cu<sub>2</sub>u<sub>1</sub>    
++ 2au<sub>2</sub>u<sub>3</sub> - 2a<sub>3</sub>u<sub>2</sub>        
++ 2bu<sub>3</sub>u<sub>1</sub> - 2bu<sub>1</sub>u<sub>3</sub>      
+= 0   
+
+illustrates that || u(t) ||<sup>2</sup> stays equal to || u(t=0) ||<sup>2</sup> because it's first derivative with respect to time = ∂|| u(t) ||<sup>2</sup>/∂t = 0: ||u|| is a constant when u = e<sup>A</sup> as it is when ∂u/∂t = Au AND when A<sup>T</sup> = -A.
+
+when A is skew symmetric the derivative of u(t) ||<sup>2</sup> is zero.  
+
+when A is skew symmetric Q = e<sup>At</sup> is an orthogonal matrix
+Q<sup>T</sup> = e<sup>-At</sup> 
+thus Q<sup>T</sup>Q  = I
+
+
+15. a particular solution to ∂u/∂t = Au - b finds u<sub>p</sub> = A<sup>-1</sup>b when A is invertible.
+
+the usual solutions to ∂u/∂t = Au give u<sub>n</sub> or null solution.  Find the complete solution u = u<sub>p</sub> + u<sub>n</sub>
+
+17. find matrix illustrating these unstable regions of the D T plane
+- &lambda;<sub>1</sub> < 0 and &lambda;<sub>2</sub> > 0
+
+D = (&lambda;<sub>1</sub> < 0)(&lambda;<sub>2</sub> > 0) needs to be < 0   
+T can be whatever: (&lambda;<sub>1</sub> < 0) + (&lambda;<sub>2</sub> > 0) can be > = < 0
+
+[[1,0],[0-1]] works since it isolates the D as negative and stands in middle of T range.
+
+- &lambda;<sub>1</sub> > 0 and &lambda;<sub>2</sub> > 0
+
+D = (&lambda;<sub>1</sub> < 0)(&lambda;<sub>2</sub> > 0) needs to be > 0   
+T = (&lambda;<sub>1</sub> < 0) + (&lambda;<sub>2</sub> > 0) can be > 0
+
+the identity matrix works
+
+- &lambda; = a &pm; i with a > 0
+
+[&lambda;>0 since unstable]
+
+T<sup>2</sup> < 4D imaginary &lambda;s  
+T<sup>2</sup> > 4D real &lambda;s  
+the real parts of &lambda;<sub>1</sub> and &lambda;<sub>2</sub> are the same and the product of their imaginary = -1.    
+since a > 0, 
+
+
+18. write 5 items of infinite series for e<sup>At</sup> and take their derivative to prove e<sup>At</sup>u<sub>0</sub> solves u' = Au but as part of this see that you have 4 terms of Ae<sup>At</sup> in the end. [infinite series so doesnt matter if fewer terms]
+
+this is good.
+
+∂u/∂t = Au is nothing more than the chain rule since ∂e<sup>At</sup>/∂t = e<sup>At</sup> and ∂At/∂t = A;  the denominator drops out with the product rule since the added quantity of their derivative is zero. Because its the chain rule, (exponent of At)' = exponent -1 and that exponent becomes a factor to At and cancels with the factorial denominator.  A regains its original exponent but loses it when factored out in the end for Au.  AND the intention here is to show that a component drops out.  
+
+![\begin{align*}
+u = e^{At} & = I + At + \frac{1}{2}(At)^2 + \frac{1}{6}(At)^3 + \frac{1}{24}(At)^4 ...\\
+& = \frac{(At)^0}{0!} + \frac{(At)^1}{1!} + \frac{(At)^2}{2!} + \frac{(At)^3}{3!} + \frac{(At)^4}{4!} ...\\
+\frac{\partial u}{\partial t} = \frac{\partial e^{At}}{\partial t} & = (At)'(\frac{(At)^0}{0!})' + (At)'(\frac{(At)^1}{1!})' + (At)'(\frac{(At)^2}{2!})' + (At)'(\frac{(At)^3}{3!})' + (At)'(\frac{(At)^4}{4!})' ...\\
+& = A(\frac{(At)^0}{0!})' + A(\frac{(At)^1}{1!}) + A(\frac{(At)^2}{2!})' + A(\frac{(At)^3}{3!})' + A(\frac{(At)^4}{4!})' ...\\
+& = A(zero) + A(\frac{1(At)^0}{1!}) + A(\frac{2(At)^1}{2!}) + A(\frac{3(At)^2}{3!}) + A(\frac{4(At)^3}{4!}) ...\\
+& = gone + A(I) + A(\frac{At^1}{1!}) + A(\frac{(At)^2}{2!}) + A(\frac{(At)^3}{3!}) ...\\
+& = A(I) + A(\frac{At}{1!}) + A(\frac{(At)^2}{2!}) + A(\frac{(At)^3}{3!}) ... \\
+& = A + \frac{A^2t}{1!} + \frac{A^3t^2}{2!} + \frac{A^4t^3}{3!} ...\\
+& = A + A^2t + \frac{A^3t^2}{2} + \frac{A^4t^3}{6} ...\\
+& = A(I + At + \frac{(At)^2}{2} + \frac{(At)^3}{6} ...)\\
+& = A(I + At + \frac{1}{2}(At)^2 + \frac{1}{6}(At)^3 ...)\\
+& = Au
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au+%3D+e%5E%7BAt%7D+%26+%3D+I+%2B+At+%2B+%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2+%2B+%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3+%2B+%5Cfrac%7B1%7D%7B24%7D%28At%29%5E4+...%5C%5C%0A%26+%3D+%5Cfrac%7B%28At%29%5E0%7D%7B0%21%7D+%2B+%5Cfrac%7B%28At%29%5E1%7D%7B1%21%7D+%2B+%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D+%2B+%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D+%2B+%5Cfrac%7B%28At%29%5E4%7D%7B4%21%7D+...%5C%5C%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%3D+%5Cfrac%7B%5Cpartial+e%5E%7BAt%7D%7D%7B%5Cpartial+t%7D+%26+%3D+%28At%29%27%28%5Cfrac%7B%28At%29%5E0%7D%7B0%21%7D%29%27+%2B+%28At%29%27%28%5Cfrac%7B%28At%29%5E1%7D%7B1%21%7D%29%27+%2B+%28At%29%27%28%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D%29%27+%2B+%28At%29%27%28%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D%29%27+%2B+%28At%29%27%28%5Cfrac%7B%28At%29%5E4%7D%7B4%21%7D%29%27+...%5C%5C%0A%26+%3D+A%28%5Cfrac%7B%28At%29%5E0%7D%7B0%21%7D%29%27+%2B+A%28%5Cfrac%7B%28At%29%5E1%7D%7B1%21%7D%29+%2B+A%28%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D%29%27+%2B+A%28%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D%29%27+%2B+A%28%5Cfrac%7B%28At%29%5E4%7D%7B4%21%7D%29%27+...%5C%5C%0A%26+%3D+A%28zero%29+%2B+A%28%5Cfrac%7B1%28At%29%5E0%7D%7B1%21%7D%29+%2B+A%28%5Cfrac%7B2%28At%29%5E1%7D%7B2%21%7D%29+%2B+A%28%5Cfrac%7B3%28At%29%5E2%7D%7B3%21%7D%29+%2B+A%28%5Cfrac%7B4%28At%29%5E3%7D%7B4%21%7D%29+...%5C%5C%0A%26+%3D+gone+%2B+A%28I%29+%2B+A%28%5Cfrac%7BAt%5E1%7D%7B1%21%7D%29+%2B+A%28%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D%29+%2B+A%28%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D%29+...%5C%5C%0A%26+%3D+A%28I%29+%2B+A%28%5Cfrac%7BAt%7D%7B1%21%7D%29+%2B+A%28%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D%29+%2B+A%28%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D%29+...+%5C%5C%0A%26+%3D+A+%2B+%5Cfrac%7BA%5E2t%7D%7B1%21%7D+%2B+%5Cfrac%7BA%5E3t%5E2%7D%7B2%21%7D+%2B+%5Cfrac%7BA%5E4t%5E3%7D%7B3%21%7D+...%5C%5C%0A%26+%3D+A+%2B+A%5E2t+%2B+%5Cfrac%7BA%5E3t%5E2%7D%7B2%7D+%2B+%5Cfrac%7BA%5E4t%5E3%7D%7B6%7D+...%5C%5C%0A%26+%3D+A%28I+%2B+At+%2B+%5Cfrac%7B%28At%29%5E2%7D%7B2%7D+%2B+%5Cfrac%7B%28At%29%5E3%7D%7B6%7D+...%29%5C%5C%0A%26+%3D+A%28I+%2B+At+%2B+%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2+%2B+%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3+...%29%5C%5C%0A%26+%3D+Au%0A%5Cend%7Balign%2A%7D)
