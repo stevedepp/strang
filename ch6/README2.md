@@ -506,7 +506,8 @@ x<sub>1</sub> = (1, 3i) and x<sub>1</sub> = (1, -3i) form the null solution for 
 y(0) = 0 and y(0) = 3 mean that u(0) = (0,3)   
 by way of c = X<sup>-1</sup>u(0) = (3/2,3/2)
 
-<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/109434383-0dbd9f00-79e3-11eb-8dcb-60614435ad39.png">
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/109439229-7c0e5b80-79fb-11eb-9e6d-3b30aa6a932b.png">
+
 
 this definitely brings it all together *****
 
@@ -536,35 +537,72 @@ y''
 y\\
 y'
 \end{bmatrix}\\
-&=Ae^{At}
-\frac{\partial u(t)}{\partial t} = 
+&=\frac{\partial u(t)}{\partial t} = 
 \frac{\partial 
 \begin{bmatrix}
 y(t)\\
 y'(t)
 \end{bmatrix}
 }{\partial t} = Au = Au(t)(u(0)) = Ae^{At}u(0) = Xe^{&Lambda;t}X^{-1}u(0) = Xe^{&Lambda;t}c \\
+\\
+&=Xe^{&Lambda;t}X^{-1}u(0)\\
+\\
 &=
 \begin{bmatrix}
 1&1\\
-3i&-3i
+-3i&3i
 \end{bmatrix}
 \begin{bmatrix}
 e^{-3it}&\\
 &e^{3it}
 \end{bmatrix}
--\frac{1}{6i}
+(\frac{1}{6i})
 \begin{bmatrix}
--3i&-1\\
--3i&1
+3i&-1\\
+3i&1
 \end{bmatrix}
 \begin{bmatrix}
 3\\
 0
-\end{bmatrix}=
+\end{bmatrix} \\ 
+&=
 \begin{bmatrix}
 1&1\\
-3i&-3i
+-3i&3i
+\end{bmatrix}
+\begin{bmatrix}
+e^{-3it}&\\
+&e^{3it}
+\end{bmatrix}
+(-\frac{i}{6})
+\begin{bmatrix}
+3i&-1\\
+3i&1
+\end{bmatrix}
+\begin{bmatrix}
+3\\
+0
+\end{bmatrix} \\ &=
+\begin{bmatrix}
+1&1\\
+-3i&3i
+\end{bmatrix}
+\begin{bmatrix}
+e^{-3it}&\\
+&e^{3it}
+\end{bmatrix}
+\begin{bmatrix}
+\frac{1}{2}&\frac{i}{6}\\
+\frac{1}{2}&-\frac{1}{2}
+\end{bmatrix}
+\begin{bmatrix}
+3\\
+0
+\end{bmatrix} \\ & = Xe^{&Lambda;t}c \\
+&=
+\begin{bmatrix}
+1&1\\
+-3i&3i
 \end{bmatrix}
 \begin{bmatrix}
 e^{-3it}&\\
@@ -575,26 +613,23 @@ e^{-3it}&\\
 \frac{3}{2}
 \end{bmatrix}\\
 where:&\\
-c&=-\frac{1}{6i}
-\begin{bmatrix}
--3i&-1\\
--3i&1
+c&=\begin{bmatrix}
+\frac{1}{2}&\frac{i}{6}\\
+\frac{1}{2}&-\frac{1}{2}
 \end{bmatrix}
 \begin{bmatrix}
 3\\
 0
 \end{bmatrix}=
--\frac{1}{6i}
 \begin{bmatrix}
--9i\\
--9i
-\end{bmatrix}=
 \frac{3}{2}\\
+\frac{3}{2}
+\end{bmatrix}\\
 thus:&\\
 u(t) &= \frac{y(t)}{y'(t)} = X&Lambda;X^{-1}u(0) = X&Lambda;c = 
 \begin{bmatrix}
 1&1\\
-3i&-3i
+-3i&3i
 \end{bmatrix}
 \begin{bmatrix}
 e^{-3it}&\\
@@ -604,25 +639,86 @@ e^{-3it}&\\
 \frac{3}{2}\\
 \frac{3}{2}
 \end{bmatrix}\\
+&=c_1x_1&lambda;_1 + c_2x_2&lambda;_2\\
+\\
+\\
 &=\frac{3}{2}
 \begin{bmatrix}
 1\\
-3i
+-3i
 \end{bmatrix}
 e^{-3it}+
 \frac{3}{2}
 \begin{bmatrix}
 1\\
--3i
+3i
 \end{bmatrix}
-e^{3it}
-=c_1x_1&lambda;_1 + c_2x_2&lambda;_2\\
+e^{3it}\\
+\\
+&=\frac{3}{2}
+(\begin{bmatrix}
+e^{-3it}\\
+-3ie^{-3it}
+\end{bmatrix}+
+\begin{bmatrix}
+e^{3it}\\
+3ie^{3it}
+\end{bmatrix})
+\\
+\\
+&=\frac{1}{2}
+(\begin{bmatrix}
+3e^{-3it}\\
+-9ie^{-3it}
+\end{bmatrix}+
+\begin{bmatrix}
+3e^{3it}\\
+9ie^{3it}
+\end{bmatrix})
+\\
+&=\frac{1}{2}
+(\begin{bmatrix}
+3(e^{3it}+e^{-3it})\\
+9i(e^{3it}-e^{-3it})
+\end{bmatrix})\\
+\\&=
+\begin{bmatrix}
+3(\frac{e^{3it}+e^{-3it}}{2})\\
+9i(\frac{(e^{3it}-e^{-3it})}{2})
+\end{bmatrix}\\
+\\
+\\&=
+\begin{bmatrix}
+3(cos3t)\\
+9i(isin3t)
+\end{bmatrix}\\
+\\
+\\&=
+\begin{bmatrix}
+3 cos 3t\\
+-9 sin 3t
+\end{bmatrix}\\
+\\
+because&\\
+Euler:&\\ \\
+e^{i\theta} &= cos \theta + i sin \theta\\
+e^{-i\theta} &= cos \theta - i sin \theta\\
+e^{i\theta}+e^{-i\theta}&=cos \theta + i sin \theta + cos \theta - i sin \theta\\
+&=2cos \theta \\
+e^{i\theta}-e^{-i\theta}&=cos \theta + i sin \theta - cos \theta + i sin \theta\\
+&=2i sin \theta\\
+\frac{e^{i\theta}+e^{-i\theta}}{2}&=cos \theta \\
+\frac{e^{i\theta}-e^{-i\theta}}{2}&=i sin \theta\\
+\\
+\\
+\\
+\\
 u(0) &= 
 u(t=0) = \frac{y(t=0)}{y'(t=0)} = X&Lambda;^0X^{-1}u(0) = X(1)X^{-1}u(0) = I*u(0)= X&Lambda;^0c \\
 &= 
 \begin{bmatrix}
 1&1\\
-3i&-3i
+-3i&3i
 \end{bmatrix}
 \begin{bmatrix}
 e^{-3i(t=0}&\\
@@ -635,25 +731,25 @@ e^{-3i(t=0}&\\
 &=\frac{3}{2}
 \begin{bmatrix}
 1\\
-3i
+-3i
 \end{bmatrix}
 e^{-3i(t=0)}+
 \frac{3}{2}
 \begin{bmatrix}
 1\\
--3i
+3i
 \end{bmatrix}
 e^{3i((t=0)}\\
 &=\frac{3}{2}
 (
 \begin{bmatrix}
 1\\
-3i
+-3i
 \end{bmatrix}
 +
 \begin{bmatrix}
 1\\
--3i
+3i
 \end{bmatrix})\\
 &=\frac{3}{2}
 \begin{bmatrix}
@@ -664,4 +760,6 @@ e^{3i((t=0)}\\
 3\\
 0
 \end{bmatrix}
-\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%0A%7D%7B%5Cpartial+t%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ay%27%5C%5C%0Ay%27%27%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3DAu+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-9%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3DAe%5E%7BAt%7D%0A%5Cfrac%7B%5Cpartial+u%28t%29%7D%7B%5Cpartial+t%7D+%3D+%0A%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Ay%28t%29%5C%5C%0Ay%27%28t%29%0A%5Cend%7Bbmatrix%7D%0A%7D%7B%5Cpartial+t%7D+%3D+Au+%3D+Au%28t%29%28u%280%29%29+%3D+Ae%5E%7BAt%7Du%280%29+%3D+Xe%5E%7B%26Lambda%3Bt%7DX%5E%7B-1%7Du%280%29+%3D+Xe%5E%7B%26Lambda%3Bt%7Dc+%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A3i%26-3i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%26%5C%5C%0A%26e%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%0A-%5Cfrac%7B1%7D%7B6i%7D%0A%5Cbegin%7Bbmatrix%7D%0A-3i%26-1%5C%5C%0A-3i%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A3i%26-3i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%26%5C%5C%0A%26e%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0Awhere%3A%26%5C%5C%0Ac%26%3D-%5Cfrac%7B1%7D%7B6i%7D%0A%5Cbegin%7Bbmatrix%7D%0A-3i%26-1%5C%5C%0A-3i%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%3D%0A-%5Cfrac%7B1%7D%7B6i%7D%0A%5Cbegin%7Bbmatrix%7D%0A-9i%5C%5C%0A-9i%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0Athus%3A%26%5C%5C%0Au%28t%29+%26%3D+%5Cfrac%7By%28t%29%7D%7By%27%28t%29%7D+%3D+X%26Lambda%3BX%5E%7B-1%7Du%280%29+%3D+X%26Lambda%3Bc+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A3i%26-3i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%26%5C%5C%0A%26e%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A3i%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%2B%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-3i%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B3it%7D%0A%3Dc_1x_1%26lambda%3B_1+%2B+c_2x_2%26lambda%3B_2%5C%5C%0Au%280%29+%26%3D+%0Au%28t%3D0%29+%3D+%5Cfrac%7By%28t%3D0%29%7D%7By%27%28t%3D0%29%7D+%3D+X%26Lambda%3B%5E0X%5E%7B-1%7Du%280%29+%3D+X%281%29X%5E%7B-1%7Du%280%29+%3D+I%2Au%280%29%3D+X%26Lambda%3B%5E0c+%5C%5C%0A%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A3i%26-3i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3i%28t%3D0%7D%26%5C%5C%0A%26e%5E%7B3i%28t%3D0%29%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A3i%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B-3i%28t%3D0%29%7D%2B%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-3i%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B3i%28%28t%3D0%29%7D%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%28%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A3i%0A%5Cend%7Bbmatrix%7D%0A%2B%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-3i%0A%5Cend%7Bbmatrix%7D%29%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%0A%7D%7B%5Cpartial+t%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ay%27%5C%5C%0Ay%27%27%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3DAu+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-9%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ay%27%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%5Cfrac%7B%5Cpartial+u%28t%29%7D%7B%5Cpartial+t%7D+%3D+%0A%5Cfrac%7B%5Cpartial+%0A%5Cbegin%7Bbmatrix%7D%0Ay%28t%29%5C%5C%0Ay%27%28t%29%0A%5Cend%7Bbmatrix%7D%0A%7D%7B%5Cpartial+t%7D+%3D+Au+%3D+Au%28t%29%28u%280%29%29+%3D+Ae%5E%7BAt%7Du%280%29+%3D+Xe%5E%7B%26Lambda%3Bt%7DX%5E%7B-1%7Du%280%29+%3D+Xe%5E%7B%26Lambda%3Bt%7Dc+%5C%5C%0A%5C%5C%0A%26%3DXe%5E%7B%26Lambda%3Bt%7DX%5E%7B-1%7Du%280%29%5C%5C%0A%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A-3i%263i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%26%5C%5C%0A%26e%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%0A%28%5Cfrac%7B1%7D%7B6i%7D%29%0A%5Cbegin%7Bbmatrix%7D%0A3i%26-1%5C%5C%0A3i%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D+%5C%5C+%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A-3i%263i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%26%5C%5C%0A%26e%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%0A%28-%5Cfrac%7Bi%7D%7B6%7D%29%0A%5Cbegin%7Bbmatrix%7D%0A3i%26-1%5C%5C%0A3i%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D+%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A-3i%263i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%26%5C%5C%0A%26e%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7Bi%7D%7B6%7D%5C%5C%0A%5Cfrac%7B1%7D%7B2%7D%26-%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D+%5C%5C+%26+%3D+Xe%5E%7B%26Lambda%3Bt%7Dc+%5C%5C%0A%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A-3i%263i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%26%5C%5C%0A%26e%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0Awhere%3A%26%5C%5C%0Ac%26%3D%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7Bi%7D%7B6%7D%5C%5C%0A%5Cfrac%7B1%7D%7B2%7D%26-%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0Athus%3A%26%5C%5C%0Au%28t%29+%26%3D+%5Cfrac%7By%28t%29%7D%7By%27%28t%29%7D+%3D+X%26Lambda%3BX%5E%7B-1%7Du%280%29+%3D+X%26Lambda%3Bc+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A-3i%263i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%26%5C%5C%0A%26e%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3Dc_1x_1%26lambda%3B_1+%2B+c_2x_2%26lambda%3B_2%5C%5C%0A%5C%5C%0A%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-3i%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%2B%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A3i%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B3it%7D%5C%5C%0A%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%28%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3it%7D%5C%5C%0A-3ie%5E%7B-3it%7D%0A%5Cend%7Bbmatrix%7D%2B%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B3it%7D%5C%5C%0A3ie%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%29%0A%5C%5C%0A%5C%5C%0A%26%3D%5Cfrac%7B1%7D%7B2%7D%0A%28%5Cbegin%7Bbmatrix%7D%0A3e%5E%7B-3it%7D%5C%5C%0A-9ie%5E%7B-3it%7D%0A%5Cend%7Bbmatrix%7D%2B%0A%5Cbegin%7Bbmatrix%7D%0A3e%5E%7B3it%7D%5C%5C%0A9ie%5E%7B3it%7D%0A%5Cend%7Bbmatrix%7D%29%0A%5C%5C%0A%26%3D%5Cfrac%7B1%7D%7B2%7D%0A%28%5Cbegin%7Bbmatrix%7D%0A3%28e%5E%7B3it%7D%2Be%5E%7B-3it%7D%29%5C%5C%0A9i%28e%5E%7B3it%7D-e%5E%7B-3it%7D%29%0A%5Cend%7Bbmatrix%7D%29%5C%5C%0A%5C%5C%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A3%28%5Cfrac%7Be%5E%7B3it%7D%2Be%5E%7B-3it%7D%7D%7B2%7D%29%5C%5C%0A9i%28%5Cfrac%7B%28e%5E%7B3it%7D-e%5E%7B-3it%7D%29%7D%7B2%7D%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%5C%5C%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A3%28cos3t%29%5C%5C%0A9i%28isin3t%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%5C%5C%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A3+cos+3t%5C%5C%0A-9+sin+3t%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Abecause%26%5C%5C%0AEuler%3A%26%5C%5C+%5C%5C%0Ae%5E%7Bi%5Ctheta%7D+%26%3D+cos+%5Ctheta+%2B+i+sin+%5Ctheta%5C%5C%0Ae%5E%7B-i%5Ctheta%7D+%26%3D+cos+%5Ctheta+-+i+sin+%5Ctheta%5C%5C%0Ae%5E%7Bi%5Ctheta%7D%2Be%5E%7B-i%5Ctheta%7D%26%3Dcos+%5Ctheta+%2B+i+sin+%5Ctheta+%2B+cos+%5Ctheta+-+i+sin+%5Ctheta%5C%5C%0A%26%3D2cos+%5Ctheta+%5C%5C%0Ae%5E%7Bi%5Ctheta%7D-e%5E%7B-i%5Ctheta%7D%26%3Dcos+%5Ctheta+%2B+i+sin+%5Ctheta+-+cos+%5Ctheta+%2B+i+sin+%5Ctheta%5C%5C%0A%26%3D2i+sin+%5Ctheta%5C%5C%0A%5Cfrac%7Be%5E%7Bi%5Ctheta%7D%2Be%5E%7B-i%5Ctheta%7D%7D%7B2%7D%26%3Dcos+%5Ctheta+%5C%5C%0A%5Cfrac%7Be%5E%7Bi%5Ctheta%7D-e%5E%7B-i%5Ctheta%7D%7D%7B2%7D%26%3Di+sin+%5Ctheta%5C%5C%0A%5C%5C%0A%5C%5C%0A%5C%5C%0A%5C%5C%0Au%280%29+%26%3D+%0Au%28t%3D0%29+%3D+%5Cfrac%7By%28t%3D0%29%7D%7By%27%28t%3D0%29%7D+%3D+X%26Lambda%3B%5E0X%5E%7B-1%7Du%280%29+%3D+X%281%29X%5E%7B-1%7Du%280%29+%3D+I%2Au%280%29%3D+X%26Lambda%3B%5E0c+%5C%5C%0A%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A-3i%263i%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B-3i%28t%3D0%7D%26%5C%5C%0A%26e%5E%7B3i%28t%3D0%29%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B3%7D%7B2%7D%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-3i%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B-3i%28t%3D0%29%7D%2B%0A%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A3i%0A%5Cend%7Bbmatrix%7D%0Ae%5E%7B3i%28%28t%3D0%29%7D%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%28%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-3i%0A%5Cend%7Bbmatrix%7D%0A%2B%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A3i%0A%5Cend%7Bbmatrix%7D%29%5C%5C%0A%26%3D%5Cfrac%7B3%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A3%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+<img width="1137" alt="image" src="https://user-images.githubusercontent.com/38410965/109438444-0b197480-79f8-11eb-973d-e06df55dccec.png">
