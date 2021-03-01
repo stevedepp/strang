@@ -852,3 +852,174 @@ u = e^{At} & = I + At + \frac{1}{2}(At)^2 + \frac{1}{6}(At)^3 + \frac{1}{24}(At)
 & = A(I + At + \frac{1}{2}(At)^2 + \frac{1}{6}(At)^3 ...)\\
 & = Au
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au+%3D+e%5E%7BAt%7D+%26+%3D+I+%2B+At+%2B+%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2+%2B+%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3+%2B+%5Cfrac%7B1%7D%7B24%7D%28At%29%5E4+...%5C%5C%0A%26+%3D+%5Cfrac%7B%28At%29%5E0%7D%7B0%21%7D+%2B+%5Cfrac%7B%28At%29%5E1%7D%7B1%21%7D+%2B+%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D+%2B+%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D+%2B+%5Cfrac%7B%28At%29%5E4%7D%7B4%21%7D+...%5C%5C%0A%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D+%3D+%5Cfrac%7B%5Cpartial+e%5E%7BAt%7D%7D%7B%5Cpartial+t%7D+%26+%3D+%28At%29%27%28%5Cfrac%7B%28At%29%5E0%7D%7B0%21%7D%29%27+%2B+%28At%29%27%28%5Cfrac%7B%28At%29%5E1%7D%7B1%21%7D%29%27+%2B+%28At%29%27%28%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D%29%27+%2B+%28At%29%27%28%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D%29%27+%2B+%28At%29%27%28%5Cfrac%7B%28At%29%5E4%7D%7B4%21%7D%29%27+...%5C%5C%0A%26+%3D+A%28%5Cfrac%7B%28At%29%5E0%7D%7B0%21%7D%29%27+%2B+A%28%5Cfrac%7B%28At%29%5E1%7D%7B1%21%7D%29+%2B+A%28%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D%29%27+%2B+A%28%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D%29%27+%2B+A%28%5Cfrac%7B%28At%29%5E4%7D%7B4%21%7D%29%27+...%5C%5C%0A%26+%3D+A%28zero%29+%2B+A%28%5Cfrac%7B1%28At%29%5E0%7D%7B1%21%7D%29+%2B+A%28%5Cfrac%7B2%28At%29%5E1%7D%7B2%21%7D%29+%2B+A%28%5Cfrac%7B3%28At%29%5E2%7D%7B3%21%7D%29+%2B+A%28%5Cfrac%7B4%28At%29%5E3%7D%7B4%21%7D%29+...%5C%5C%0A%26+%3D+gone+%2B+A%28I%29+%2B+A%28%5Cfrac%7BAt%5E1%7D%7B1%21%7D%29+%2B+A%28%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D%29+%2B+A%28%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D%29+...%5C%5C%0A%26+%3D+A%28I%29+%2B+A%28%5Cfrac%7BAt%7D%7B1%21%7D%29+%2B+A%28%5Cfrac%7B%28At%29%5E2%7D%7B2%21%7D%29+%2B+A%28%5Cfrac%7B%28At%29%5E3%7D%7B3%21%7D%29+...+%5C%5C%0A%26+%3D+A+%2B+%5Cfrac%7BA%5E2t%7D%7B1%21%7D+%2B+%5Cfrac%7BA%5E3t%5E2%7D%7B2%21%7D+%2B+%5Cfrac%7BA%5E4t%5E3%7D%7B3%21%7D+...%5C%5C%0A%26+%3D+A+%2B+A%5E2t+%2B+%5Cfrac%7BA%5E3t%5E2%7D%7B2%7D+%2B+%5Cfrac%7BA%5E4t%5E3%7D%7B6%7D+...%5C%5C%0A%26+%3D+A%28I+%2B+At+%2B+%5Cfrac%7B%28At%29%5E2%7D%7B2%7D+%2B+%5Cfrac%7B%28At%29%5E3%7D%7B6%7D+...%29%5C%5C%0A%26+%3D+A%28I+%2B+At+%2B+%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2+%2B+%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3+...%29%5C%5C%0A%26+%3D+Au%0A%5Cend%7Balign%2A%7D)
+
+20. starting from u(0) the solution at time T is e<sup>AT</sup>u(0)   
+moving an additional time t to reach a solution e<sup>At</sup>e<sup>AT</sup>u(0)    
+which can also be written as e<sup>At+ AT</sup>u(0) = e<sup>A(T+t)</sup>u(0)
+
+21. 
+
+![\begin{align*}
+u = e^{At} & = I + At + \frac{1}{2}(At)^2 + \frac{1}{6}(At)^3 + \frac{1}{24}(At)^4 ...\\
+& = I + X&Lambda;X^{-1}t + X&Lambda;^2X^{-1}(\frac{t^2}{2})+ X&Lambda;^3X^{-1}(\frac{t^3}{6})\\
+& = XX^{-1} + X&Lambda;X^{-1}t + X&Lambda;^2X^{-1}(\frac{t^2}{2})+ X&Lambda;^3X^{-1}(\frac{t^3}{6}) \\
+& = X(I + &Lambda;t + &Lambda;^2(\frac{t^2}{2})+ &Lambda;^3(\frac{t^3}{6}))X^{-1}\\
+add \, inside \, matrices:&\\
+& = 
+X( \,
+\begin{bmatrix}
+1&\\
+&1
+\end{bmatrix}+
+\begin{bmatrix}
+&lambda;_1&\\
+& &lambda;_2
+\end{bmatrix}^1( t) +
+\begin{bmatrix}
+&lambda;_1&\\
+& &lambda;_2
+\end{bmatrix}^2 (\frac{t^2}{2}) +
+\begin{bmatrix}
+&lambda;_1&\\
+& &lambda;_2
+\end{bmatrix}^3  (\frac{t^3}{6}) +...
+) \, X^{-1}\\
+& = 
+X( \,
+\begin{bmatrix}
+1&\\
+&1
+\end{bmatrix}+
+\begin{bmatrix}
+&lambda;_1t&\\
+& &lambda;_2t
+\end{bmatrix} +
+\begin{bmatrix}
+&lambda;_1\frac{t^2}{2}&\\
+& &lambda;_2\frac{t^2}{2}
+\end{bmatrix}^2 +
+\begin{bmatrix}
+&lambda;_1 \frac{t^3}{6}&\\
+& &lambda;_2 \frac{t^3}{6}
+\end{bmatrix}^3 + ...
+) \, X^{-1}\\
+& = 
+X \,
+\begin{bmatrix}
+1+&lambda;_1t+&lambda;_1\frac{t^2}{2} + &lambda;_1 \frac{t^3}{6} + ...&\\
+&1+&lambda;_2t + &lambda;_2\frac{t^2}{2} + &lambda;_2 \frac{t^3}{6} + ...
+\end{bmatrix} \,
+ X^{-1}\\
+& = 
+X \,
+\begin{bmatrix}
+e^{&lambda;_1t}&\\
+&e^{&lambda;_2t}
+\end{bmatrix} \,
+ X^{-1}\\
+& = 
+X &Lambda;
+ X^{-1}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Au+%3D+e%5E%7BAt%7D+%26+%3D+I+%2B+At+%2B+%5Cfrac%7B1%7D%7B2%7D%28At%29%5E2+%2B+%5Cfrac%7B1%7D%7B6%7D%28At%29%5E3+%2B+%5Cfrac%7B1%7D%7B24%7D%28At%29%5E4+...%5C%5C%0A%26+%3D+I+%2B+X%26Lambda%3BX%5E%7B-1%7Dt+%2B+X%26Lambda%3B%5E2X%5E%7B-1%7D%28%5Cfrac%7Bt%5E2%7D%7B2%7D%29%2B+X%26Lambda%3B%5E3X%5E%7B-1%7D%28%5Cfrac%7Bt%5E3%7D%7B6%7D%29%5C%5C%0A%26+%3D+XX%5E%7B-1%7D+%2B+X%26Lambda%3BX%5E%7B-1%7Dt+%2B+X%26Lambda%3B%5E2X%5E%7B-1%7D%28%5Cfrac%7Bt%5E2%7D%7B2%7D%29%2B+X%26Lambda%3B%5E3X%5E%7B-1%7D%28%5Cfrac%7Bt%5E3%7D%7B6%7D%29+%5C%5C%0A%26+%3D+X%28I+%2B+%26Lambda%3Bt+%2B+%26Lambda%3B%5E2%28%5Cfrac%7Bt%5E2%7D%7B2%7D%29%2B+%26Lambda%3B%5E3%28%5Cfrac%7Bt%5E3%7D%7B6%7D%29%29X%5E%7B-1%7D%5C%5C%0Aadd+%5C%2C+inside+%5C%2C+matrices%3A%26%5C%5C%0A%26+%3D+%0AX%28+%5C%2C%0A%5Cbegin%7Bbmatrix%7D%0A1%26%5C%5C%0A%261%0A%5Cend%7Bbmatrix%7D%2B%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26+%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%5E1%28+t%29+%2B%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26+%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%5E2+%28%5Cfrac%7Bt%5E2%7D%7B2%7D%29+%2B%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26+%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%5E3++%28%5Cfrac%7Bt%5E3%7D%7B6%7D%29+%2B...%0A%29+%5C%2C+X%5E%7B-1%7D%5C%5C%0A%26+%3D+%0AX%28+%5C%2C%0A%5Cbegin%7Bbmatrix%7D%0A1%26%5C%5C%0A%261%0A%5Cend%7Bbmatrix%7D%2B%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1t%26%5C%5C%0A%26+%26lambda%3B_2t%0A%5Cend%7Bbmatrix%7D+%2B%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%5Cfrac%7Bt%5E2%7D%7B2%7D%26%5C%5C%0A%26+%26lambda%3B_2%5Cfrac%7Bt%5E2%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5E2+%2B%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1+%5Cfrac%7Bt%5E3%7D%7B6%7D%26%5C%5C%0A%26+%26lambda%3B_2+%5Cfrac%7Bt%5E3%7D%7B6%7D%0A%5Cend%7Bbmatrix%7D%5E3+%2B+...%0A%29+%5C%2C+X%5E%7B-1%7D%5C%5C%0A%26+%3D+%0AX+%5C%2C%0A%5Cbegin%7Bbmatrix%7D%0A1%2B%26lambda%3B_1t%2B%26lambda%3B_1%5Cfrac%7Bt%5E2%7D%7B2%7D+%2B+%26lambda%3B_1+%5Cfrac%7Bt%5E3%7D%7B6%7D+%2B+...%26%5C%5C%0A%261%2B%26lambda%3B_2t+%2B+%26lambda%3B_2%5Cfrac%7Bt%5E2%7D%7B2%7D+%2B+%26lambda%3B_2+%5Cfrac%7Bt%5E3%7D%7B6%7D+%2B+...%0A%5Cend%7Bbmatrix%7D+%5C%2C%0A+X%5E%7B-1%7D%5C%5C%0A%26+%3D+%0AX+%5C%2C%0A%5Cbegin%7Bbmatrix%7D%0Ae%5E%7B%26lambda%3B_1t%7D%26%5C%5C%0A%26e%5E%7B%26lambda%3B_2t%7D%0A%5Cend%7Bbmatrix%7D+%5C%2C%0A+X%5E%7B-1%7D%5C%5C%0A%26+%3D+%0AX+%26Lambda%3B%0A+X%5E%7B-1%7D%0A%5Cend%7Balign%2A%7D)
+
+
+22. if A<sup>2</sup> = A show that the infinite series produces e<sup>At</sup> = I + (e<sup>r</sup> - I)A.
+
+this is true for [[1,4],[0,0]
+
+e<sup>At</sup>   
+= I + At + (At)<sup>2</sup>/2 + (At)<sup>2</sup>/2 + ...  
+= I + At + At<sup>2</sup>/2 + At<sup>2</sup>/2 + ...    (because we say if A<sup>2</sup> = A)  
+= I + A(e<sup>t</sup> - 1) because ...  
+
+e<sup>t</sup> = 1 + t + t<sup>2</sup>/2 + t<sup>3</sup>/6 + ...
+e<sup>t</sup> - 1 = t + t<sup>2</sup>/2 + t<sup>3</sup>/6 + ...
+
+A(e<sup>t</sup> - 1) 
+= A(t + t<sup>2</sup>/2 + t<sup>3</sup>/6 + ...)
+= At + At<sup>2</sup>/2 + At<sup>3</sup>/6 + ...
+
+I + A(e<sup>t</sup> - 1) 
+= I + At + At<sup>2</sup>/2 + At<sup>3</sup>/6 + ...
+= e<sup>At</sup>
+
+so for our matrix, e<sup>At</sup> = I + (e<sup>t</sup> -1) A = I + (e<sup>t</sup> -1)[[1,4],[0,0]
+
+26. 2 reasons why e<sup>At</sup> is never singular:
+
+since matrix (e<sup>At</sup>)<sup>-1</sup> = e<sup>-At</sup>, matrix e<sup>At</sup> is never singular.
+
+if Ax = &lambda;x then e<sup>At</sup>x = e<sup>&lambda;t</sup>x and e<sup>&lambda;t</sup> is never = 0
+
+27.  dont make this mistake.  matrix A has a positive eigenvalue and thus blows up as t goes to infnity.  to correct this a scientist switched the rows and found that the eigenvalues were negative et voila stability.  if you look however, it is not the same with different eigenvalues and eigenvectors and thus is a different equation.  
+
+if switch rows in A, must also switch columns.  
+
+3 examples seem like they should be the same   
+- the original matrix A: 
+∂x/∂t = 0x-4y 
+∂y/∂t = -2x +2y
+- the matrix with rows switched Ar
+∂y/∂t = -2x +2y
+∂x/∂t = 0x-4y 
+- the matrix with rows and columns switched Arc
+∂y/∂t = -2x +2y
+∂x/∂t = 0x-4y 
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/109549699-51c0aa80-7a9c-11eb-8dd8-23f9f6890981.png">
+
+
+the problem is that we switch the rows of A but not of u.  The equations work out with this configuration, but e.g. ∂y is no longer = y' ∂x is = y'!
+
+![\begin{align*}
+\frac{\partial x}{\partial t} &= 0x -4y \\
+\frac{\partial y}{\partial t} &= -2x+2y \\
+\frac{\partial \frac{x}{y}}{\partial t} &= 
+\begin{bmatrix}
+0&-4\\
+-2&2
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}=
+\begin{bmatrix}
+0x-4y\\
+-2x+2y
+\end{bmatrix}
+\\
+\\
+\frac{\partial y}{\partial t} &= -2x+2y \\
+\frac{\partial x}{\partial t} &= 0x -4y \\
+\frac{\partial \frac{y}{x}}{\partial t} &= 
+\begin{bmatrix}
+-2&2\\
+0&-4
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}=
+\begin{bmatrix}
+-2x+2y\\
+0x-4y
+\end{bmatrix}
+\\
+\\
+\frac{\partial y}{\partial t} &= 2y-2x \\
+\frac{\partial x}{\partial t} &= -4y +0x \\
+\frac{\partial \frac{y}{x}}{\partial t} &= 
+\begin{bmatrix}
+2&-2\\
+-4&0
+\end{bmatrix}
+\begin{bmatrix}
+y\\
+x
+\end{bmatrix}=
+\begin{bmatrix}
+2y-2x\\
+-4y+ 0x
+\end{bmatrix}
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+t%7D+%26%3D+0x+-4y+%5C%5C%0A%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+t%7D+%26%3D+-2x%2B2y+%5C%5C%0A%5Cfrac%7B%5Cpartial+%5Cfrac%7Bx%7D%7By%7D%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0%26-4%5C%5C%0A-2%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A0x-4y%5C%5C%0A-2x%2B2y%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+t%7D+%26%3D+-2x%2B2y+%5C%5C%0A%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+t%7D+%26%3D+0x+-4y+%5C%5C%0A%5Cfrac%7B%5Cpartial+%5Cfrac%7By%7D%7Bx%7D%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-2%262%5C%5C%0A0%26-4%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A-2x%2B2y%5C%5C%0A0x-4y%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+t%7D+%26%3D+2y-2x+%5C%5C%0A%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+t%7D+%26%3D+-4y+%2B0x+%5C%5C%0A%5Cfrac%7B%5Cpartial+%5Cfrac%7By%7D%7Bx%7D%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-2%5C%5C%0A-4%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ax%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A2y-2x%5C%5C%0A-4y%2B+0x%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
