@@ -1991,7 +1991,7 @@ how do you multiply matrices to find the formula for A.
 A = X&Lambda;X<sup>-1</sup> = &lambda;<sub>1</sub>x<sub>1</sub>y<sub>1</sub><sup>T</sup> + ... + &lambda;<sub>n</sub>x<sub>n</sub>y<sub>n</sub><sup>T</sup>
 
 
-section 6.2
+section 6.3
 
 systems of differential equations
 
@@ -4672,3 +4672,5 @@ x
 \end{bmatrix}
 \end{align*}
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+t%7D+%26%3D+0x+-4y+%5C%5C%0A%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+t%7D+%26%3D+-2x%2B2y+%5C%5C%0A%5Cfrac%7B%5Cpartial+%5Cfrac%7Bx%7D%7By%7D%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0%26-4%5C%5C%0A-2%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A0x-4y%5C%5C%0A-2x%2B2y%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+t%7D+%26%3D+-2x%2B2y+%5C%5C%0A%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+t%7D+%26%3D+0x+-4y+%5C%5C%0A%5Cfrac%7B%5Cpartial+%5Cfrac%7By%7D%7Bx%7D%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-2%262%5C%5C%0A0%26-4%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A-2x%2B2y%5C%5C%0A0x-4y%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%5C%5C%0A%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+t%7D+%26%3D+2y-2x+%5C%5C%0A%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+t%7D+%26%3D+-4y+%2B0x+%5C%5C%0A%5Cfrac%7B%5Cpartial+%5Cfrac%7By%7D%7Bx%7D%7D%7B%5Cpartial+t%7D+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-2%5C%5C%0A-4%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Ax%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A2y-2x%5C%5C%0A-4y%2B+0x%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+6.4 Sym
