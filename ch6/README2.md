@@ -34,4 +34,4 @@ possibly because X<sup>T</sup>X = I which makes each eigenvector orthogonal to e
 
 Facts:
 1. symmetric matrix has only real eigenvalues   
-2. symmetric matrix eigenvectors can be \underline{chosen} orthogonal  
+2. symmetric matrix eigenvectors can be \underline {chosen} orthogonal  
