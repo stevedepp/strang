@@ -109,4 +109,4 @@ Sx = &lambda;x
 
 &lambda; might be complex a + ib where a and b are real with complex conjugate a - ib   
 x might be complex as well.   switching the signs of their imaginary parts gives 
-\bar{s}
+x(U+0305)
