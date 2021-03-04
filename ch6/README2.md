@@ -8,6 +8,7 @@ principles:
 1. a symmetric matrix s has n real eigenvalues &lambda; and n orthogonal eigenvectors q<sub>1</sub>, ... , q<sub>n</sub>   
 2. every real symmetric S can be diagonalized [and therefore has n independent columns?]    
 S = Q&Lambda;Q<sup>-1</sup> = Q&Lambda;Q<sup>T</sup>   
+[ in place of A = X&Lambda;X<sup>-1</sup> ≠ X&Lambda;X<sup>T</sup> ]
 3.  the number of positive eigenvalues of S = the number of positive roots.    
 4.  antisymmetric matrices A = -A<sup>T</sup> have imaginary &lambda;s and orthogonal complex q's    
 5.  section 9.2 explains why the test S = S<sup>T</sup> becomes S = Sbar<sup>T</sup> for complex matrices.   
