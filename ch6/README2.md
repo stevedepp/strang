@@ -365,3 +365,20 @@ if move L's off diagonal to zero then L becomes I and the eigenvalues of IDI = b
 as this occurs eigenvalues from 4,-2 to 1,-8 the eigenvalues never cross zero where they become singular.   
 
 as  move L toward I by moving the off diagonal entries to zero, the pivots are not changing and not zero.  the eigenvalues of LDL<sup>T</sup> change to the eigenvalues of  IDI<sup>T</sup> =  the pivots of both.  Since the eigenvalues cannot cross zero as they move toward the pivots, their signs cannot change. 
+
+**all symmetric matrices are diagonalizable**
+
+when no eigenvalues of A are repeated  
+all eigenvalues are sure to be independent.  
+
+a repeated eigenvalue may produce a shortage of eigenvectors.   
+this never happens for symmetric matrices  
+there are always enough eigenvectors to diagonalize S = S<sup>T</sup>   
+
+6.2 remember:  
+there is no connection between invertibility and diagonalizability:  
+invertibility is concerned with eigenvalues: a single &lambda; = 0 means determinant = 0     
+diagonalizability is concerned with sufficient or insufficient numbers of eigenvectors    
+any matrix with NO repeated eigenvalues can be diagonalized.  
+6.4 remember:  
+S = [[1,2],[2,4]] is singular with dependent columns and determinant = 0, but has &lambda;s = 0, 5 and 2 eigenvectors (2,-1) and (1,2) which are not only different eigenvectors but different eigenvectors because they come from different eigenvalues. SYMMETRIC MATRIX.
