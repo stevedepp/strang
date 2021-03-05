@@ -4144,7 +4144,7 @@ which one satisfies y(0) = 1 and which satisfies y(0) = 0 seems obvious since co
 
 b. u = [y,y'] and ∂u/∂t = [y',y'']  = Au = [[0,1],[-9,0]] [y,y'] = ∂[y,y']/∂t 
 
-A appears diagonalizable since it's vectors are independent.
+A appears diagonalizable since it's vectors are independent. [careful: not sure who wrote this, but only the eignvectors need to be independent for the matris A to be diagonalizable.]
 
 &lambda;<sup>1</sup> = -3i    
 &lambda;<sup>2</sup> = 3i    
