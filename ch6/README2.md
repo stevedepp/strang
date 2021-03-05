@@ -327,3 +327,41 @@ sin&theta; +icos&theta;
 \end{bmatrix}
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Acos%26theta%3B%26-sin%26theta%3B%5C%5C%0Asin%26theta%3B%26cos%26theta%3B%0A%5Cend%7Bbmatrix%7D%5C%5C%0Ahas%3A%5C%5C%0A%26lambda%3B_1+%26%3D+cos%26theta%3B%2Bisin%26theta%3B%5C%5C%0A%26lambda%3B_2+%26%3D+cos%26theta%3B-isin%26theta%3B%5C%5C%0A%5C%5C%0AAx+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Acos%26theta%3B%26-sin%26theta%3B%5C%5C%0Asin%26theta%3B%26cos%26theta%3B%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-i%0A%5Cend%7Bbmatrix%7D%3D%0A%26lambda%3Bx+%3D%0A%28cos%26theta%3B+%2B+isin%26theta%3B%29%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-i%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0Acos%26theta%3B+%2B+isin%26theta%3B%5C%5C%0Asin%26theta%3B+-icos%26theta%3B%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0AA%5Cbar%7Bx%7D+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Acos%26theta%3B%26-sin%26theta%3B%5C%5C%0Asin%26theta%3B%26cos%26theta%3B%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0Ai%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbar%7B%26lambda%3B%7D%5Cbar%7Bx%7D+%3D%0A%28cos%26theta%3B+-+isin%26theta%3B%29%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0Ai%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0Acos%26theta%3B+-+isin%26theta%3B%5C%5C%0Asin%26theta%3B+%2Bicos%26theta%3B%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
 
+eigenvectors (1,-i) and (1,i) are complex conjugates because A is real.  
+
+eigenvalue absolute value [magnitude?] is |&lambda;| = 1 because cos<sup>2</sup>&theta; + sin<sup>2</sup>&theta; = 1  
+
+eigenvalue absolute value [magnitude?] is |&lambda;| = 1 holds for eigenvalues of every Q orthogonal matrix    
+
+complex numbers are unavoidable even for real matrices.  
+
+**eigenvalues vs pivots**
+
+elimination --> pivots   
+det(A-&lambda;I) = 0 --> eigenvalues
+
+product of pivots = product of eigenvalues = determinant of A    
+
+d<sub>1</sub>, ..., d<sub>n</sub>    
+&lambda;<sub>1</sub>, ..., &lambda;<sub>n</sub> 
+
+d<sub>i</sub> ≠ &lambda;<sub>i</sub>    
+but   
+for **symmetric matrices**, the pivots and eigenvalues have the same signs:   
+the number of positive eigenvalues equals the number of positive pivots for S = S<sup>T</sup>
+
+S will have all positive eigenvalues &lambda;<sub>i</sub> > 0 IFF all pivots are positive.  
+return to this when discussing positive definite matrices.   
+
+example:
+
+S = [[1,3],[3,1]] has pivots 1 and -8 and eigenvalues 4 and -2   
+
+proof that for S=S<sup>T</sup> there are the same number of positive eigenvalues as pivots:
+
+S = LU = LDL<sup>T</sup> 
+
+if move L's off diagonal to zero then L becomes I and the eigenvalues of IDI = become 1 and -8    
+as this occurs eigenvalues from 4,-2 to 1,-8 the eigenvalues never cross zero where they become singular.   
+
+as  move L toward I by moving the off diagonal entries to zero, the pivots are not changing and not zero.  the eigenvalues of LDL<sup>T</sup> change to the eigenvalues of  IDI<sup>T</sup> =  the pivots of both.  Since the eigenvalues cannot cross zero as they move toward the pivots, their signs cannot change. 
