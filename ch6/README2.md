@@ -380,5 +380,189 @@ there is no connection between invertibility and diagonalizability:
 invertibility is concerned with eigenvalues: a single &lambda; = 0 means determinant = 0     
 diagonalizability is concerned with sufficient or insufficient numbers of eigenvectors    
 any matrix with NO repeated eigenvalues can be diagonalized.  
-6.4 remember:  
-S = [[1,2],[2,4]] is singular with dependent columns and determinant = 0, but has &lambda;s = 0, 5 and 2 eigenvectors (2,-1) and (1,2) which are not only different eigenvectors but different eigenvectors because they come from different eigenvalues. SYMMETRIC MATRIX.
+6.4 remember:  diagonalizable even if singular/not invertible
+S = [[1,2],[2,4]] is singular with dependent columns and determinant = 0, but has &lambda;s = 0, 5 and 2 eigenvectors (2,-1) and (1,2) which are not only different eigenvectors but different eigenvectors because they come from different eigenvalues. "any matrix that has no repeated eigenvalues can be diagonalized because its eigenvectors are independent." and "theres a proof for when λ eigenvalues are distinct, eigenvectors x are independent."
+
+no repeat &lambda;s --> independent eigenvectors --> X<sup>-1</sup> exists --> diagonlizable
+
+returning to "there are always enough eigenvectors to diagonalize S = S<sup>T</sup>". 
+
+proof-ish:
+S with repeated eigenvaleus   
+change S slightly by a diagonal matrix = diag(c<sub>1</sub>, ... , c<sub>n</sub>).   
+if c very small then symmetric matrix will have no repeated eigenvalues.   
+then S has a full set of orthonormal eigenvectors.   
+as c --> 0, the eigenvectors --> n orthonormal eigenvectors of the original S   
+even if some of the eigenvalues of S are repeated.  
+
+a different proof:   
+useful factorization of square matrices A   
+symmetric or not   
+quickly produces   
+S = Q&Lambda;Q<sup>T</sup>  
+with full set of real orthonormal eigenvectors  
+WHEN S is any realy SYMMETRIC matrix.
+
+Schur's theorem:  
+
+**Every square A factors into QTQ<sup>-1</sup>   
+where T is upper triangular   
+where Q_bar<sup>T</sup> = Q<sup>-1</sup>     
+if A has real eigenvalues, 
+then Q and T can be chosen as real: Q<sup>T</sup>Q = I**
+[no bar in that last Q<sup>T</sup>!]
+
+when S is symmetric, 
+T is diagonal (T = &Lambda;)  
+and  S = Q&Lambda;Q<sup>T</sup>    
+
+we know   
+every symmetric S  
+has real eigenvalues   
+Schur's S allows repeated eigenvalues.  
+
+Schur's S = QTQ<sup>-1</sup>
+means that T = Q<sup>T</sup>SQ
+and the transpose is also Q<sup>T</sup>SQ.
+the triangular T is symmetric when S = S<sup>T</sup>   
+then T must be diagonal and T = &Lambda; [seems repetitive]
+
+this proves S = Q&Lambda;Q<sup>-1</sup>.  
+The symmetric S has n orthonormal eigenvectors Q
+
+7.2 shows eigenvalues &lambda; can be described one at a time  
+the largest &lambda; is maximum of x<sup>T</sup>Sx / x<sup>T</sup>.  
+then &lambda;<sub>2</sub> = second largest is again the same maximum if we only allow vectors x that are perpendicular to the 1st eigenvector.  the 3rd eigenvalue &lambda;<sub>3</sub> comes by requiring x<sub>T</sub>q<sub>1</sub> = 0 and x<sub>T</sub>q<sub>2</sub> = 0.  chapter 7 covers this because one-at-a-time succeeds for singular values of any matrix A.  singular values come from A<sup>T</sup>A and AA<sup>T</sup>.
+
+review:
+1. every symmetric matrix S has real eigenvalues and perpendicular eigenvectors  
+2. diagonalization becomes S = Q&Lambda;Q<sup>T</sup> with an orthonormal eigenvector matrix Q  
+3. all symmetric matrices are diagonalizable even with repeated eigenvalues    
+4. the signs of eigenvalues match the signs of pivots when S + S<sup>T</sup>
+5. every square matrix can be 'triangularlized' by A = QTQ<sup>-1</sup>
+if A = S then T = &Lambda;
+
+worked examples:
+A. what matrix A has eigenvalues &lambda; =1,-1 and eigenvectors x<sub>1</sub>eigenvectors x<sub>1</sub> = (-sin&theta;, cos&theta;) ? which property can be predicted in advance?
+
+A = A<sup>T</sup>  
+A<sup>2</sup> = I  
+det A = -1   
+pivots are + and -
+A<sup>-1</sup> = A   
+
+all can be predicted:   
+- with real eigenvalues 1 and -1 and orthonormal x<sub>1</sub> and x<sub>2</sub> the matrix A = Q&Lambda;Q<sup>T</sup> must be symmetric.
+- the eigenvalues 1 and -1 indicate:
+  - A<sup>2</sup> = I since &lambda;<sup>2</sup> = 1
+  - A<sup>-1</sup> = A also since &lambda;<sup>2</sup> for both = 1
+  - det A = -1
+- 2 pivots must be positive and negative like eigenvalues since A is symmetric
+- the matrix will be a reflection.  
+  - vectors in the directoin of x<sub>1</sub> = (cos&theta;,sin&theta;) will be unchanged by A since &lambda;=1  
+  - vectors in the perpendicular direction of (-sin&theta;,cos&theta;) are reversed.  
+- the reflection A = Q&Lambda;Q<sup>T</sup> is across the "&theta;" line.  Write c for cos&theta; and s for sin&theta;:
+
+notice that x = (1,0) goes to Ax = (cos2&theta, sin2&theta;) on the 2&theta; line [unchd] and (cos2&theta, sin2&theta;) goes back across the &theta; line to x = (1,0)
+
+\begin{align*}
+A=
+\begin{bmatrix}
+cos&theta;-&sin&theta;\\
+sin&theta;&cos&theta;
+\end{bmatrix}
+\begin{bmatrix}
+1&0\\
+0&-1
+\end{bmatrix}
+\begin{bmatrix}
+cos&theta;-&sin&theta;\\
+-sin&theta;&cos&theta;
+\end{bmatrix}=
+\begin{bmatrix}
+cos^2&theta;-sin^2&theta;&2cos&theta;sin&theta;\\
+2cos&theta;sin&theta;&sin^2&theta;-cos^2&theta;
+\end{bmatrix}=
+\begin{bmatrix}
+cos&theta;&sin&theta;\\
+sin&theta;&-cos&theta;
+\end{bmatrix} 
+\end{align*}
+
+B. find eigenvalues and eigenvectors (discrete sines and cosines) of A<sub>3</sub> and B<sub>4</sub>.
+
+![\begin{align*}
+A_3 &= 
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix}\\
+det(A-&lambda;I) &=
+\begin{bmatrix}
+2-&lambda;&-1&0\\
+-1&2-&lambda;&-1\\
+0&-1&2-&lambda;
+\end{bmatrix} \\ 
+&= (-2-&lambda;)[(-2-&lambda;)^2 - 1] -1(-2-&lambda;) \\
+&= (-2-&lambda;)[(-2-&lambda;)^2 - 2] \\
+&= (-2-&lambda;)[(&lambda;^2 +4&lambda; + 2] \\
+&lambda;_1 = -2 \longrightarrow (A + 2I) &= 
+\begin{bmatrix}
+0&-1&0\\
+-1&0&-1\\
+0&-1&0
+\end{bmatrix}
+\begin{bmatrix}
+x\\y\\z
+\end{bmatrix} =
+\begin{bmatrix}
+0\\0\\0
+\end{bmatrix}
+\longrightarrow x_1 = 
+\begin{bmatrix}
+1\\0\\-1
+\end{bmatrix}
+\\
+&lambda;_2 = -2-\sqrt{2}  \longrightarrow (A + (2+\sqrt{2})I)& = 
+\begin{bmatrix}
+\sqrt{2}&-1&0\\
+-1&\sqrt{2}&-1\\
+0&-1&\sqrt{2}
+\end{bmatrix}
+\begin{bmatrix}
+x\\y\\z
+\end{bmatrix} =
+\begin{bmatrix}
+0\\0\\0
+\end{bmatrix}
+\longrightarrow x_2 = 
+\begin{bmatrix}
+1\\\-\sqrt{2}\\1
+\end{bmatrix}\\
+&lambda;_3 = -2+\sqrt{2} \longrightarrow (A + (-2-\sqrt{2})I) &= 
+\begin{bmatrix}
+-\sqrt{2}&-1&0\\
+-1&-\sqrt{2}&-1\\
+0&-1&-\sqrt{2}
+\end{bmatrix}
+\begin{bmatrix}
+x\\y\\z
+\end{bmatrix} =
+\begin{bmatrix}
+0\\0\\0
+\end{bmatrix}
+\longrightarrow x_3 = 
+\begin{bmatrix}
+1\\\sqrt{2}\\1
+\end{bmatrix}\\
+sines &=
+\begin{bmatrix}
+1&\sqrt{2}&1\\
+\sqrt{2}&0&-\sqrt{2}\\
+1&-\sqrt{2}&1
+\end{bmatrix}
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA_3+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%5C%5C%0Adet%28A-%26lambda%3BI%29+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A2-%26lambda%3B%26-1%260%5C%5C%0A-1%262-%26lambda%3B%26-1%5C%5C%0A0%26-1%262-%26lambda%3B%0A%5Cend%7Bbmatrix%7D+%5C%5C+%0A%26%3D+%28-2-%26lambda%3B%29%5B%28-2-%26lambda%3B%29%5E2+-+1%5D+-1%28-2-%26lambda%3B%29+%5C%5C%0A%26%3D+%28-2-%26lambda%3B%29%5B%28-2-%26lambda%3B%29%5E2+-+2%5D+%5C%5C%0A%26%3D+%28-2-%26lambda%3B%29%5B%28%26lambda%3B%5E2+%2B4%26lambda%3B+%2B+2%5D+%5C%5C%0A%26lambda%3B_1+%3D+-2+%5Clongrightarrow+%28A+%2B+2I%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0%26-1%260%5C%5C%0A-1%260%26-1%5C%5C%0A0%26-1%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C0%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C0%5C%5C-1%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%26lambda%3B_2+%3D+-2-%5Csqrt%7B2%7D++%5Clongrightarrow+%28A+%2B+%282%2B%5Csqrt%7B2%7D%29I%29%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%26-1%260%5C%5C%0A-1%26%5Csqrt%7B2%7D%26-1%5C%5C%0A0%26-1%26%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C0%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%5C-%5Csqrt%7B2%7D%5C%5C1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26lambda%3B_3+%3D+-2%2B%5Csqrt%7B2%7D+%5Clongrightarrow+%28A+%2B+%28-2-%5Csqrt%7B2%7D%29I%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-%5Csqrt%7B2%7D%26-1%260%5C%5C%0A-1%26-%5Csqrt%7B2%7D%26-1%5C%5C%0A0%26-1%26-%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C0%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+x_3+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%5Csqrt%7B2%7D%5C%5C1%0A%5Cend%7Bbmatrix%7D%5C%5C%0Asines+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%26%5Csqrt%7B2%7D%261%5C%5C%0A%5Csqrt%7B2%7D%260%26-%5Csqrt%7B2%7D%5C%5C%0A1%26-%5Csqrt%7B2%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/110194155-fdebf380-7e04-11eb-9a38-2408360c18cd.png">
