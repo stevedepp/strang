@@ -601,3 +601,134 @@ A = S + N = 0.5 (A + A<sup>T</sup>) + 0.5 (A - A<sup>T</sup>)
 4. if C symmetric, prove A<sup>T</sup>CA is also symmetric by transposing it:
 
 (A<sup>T</sup>CA)<sup>T</sup> = A<sup>T</sup>C<sup>T</sup>(A<sup>T</sup>)<sup>T</sup> = A<sup>T</sup>CA and thus A<sup>T</sup>CA symmetric because (A<sup>T</sup>CA)<sup>T</sup> = A<sup>T</sup>CA 
+
+this is true even if A is 6x3 matrix:  
+A<sup>T</sup>CA = [3x6][6x6][6x3] 
+
+
+
+
+![\begin{align*}
+A = A^T &= 
+\begin{bmatrix}
+1&0&2\\
+0&-1&-2\\
+2&-2&0
+\end{bmatrix}\\
+det(A-&lambda;I) &=
+\begin{bmatrix}
+1-&lambda;&0&2\\
+0&-1-&lambda;&-2\\
+2&-2&0-&lambda;
+\end{bmatrix} \\ 
+&= [1-&lambda;] [(-1-&lambda;)(-&lambda;)-(-2)(-2)] + [2][0-(2(-1-&lambda;))] \\
+&= [1-&lambda;] [&lambda;+&lambda;^2-4] + [2][2-2&lambda;] \\
+&= [&lambda;+&lambda;^2-4+ -&lambda;^2-&lambda;^3+4&lambda;] + [4-4&lambda;] \\
+&= -&lambda;^3+9&lambda;\\
+&= -(&lambda;^3-9&lambda;)\\
+&= -&lambda;(&lambda;^2-9)\\
+\\
+&lambda;_1 = -3 \longrightarrow (A + 3I) &= 
+\begin{bmatrix}
+4&0&2\\
+0&2&-2\\
+2&-2&3
+\end{bmatrix}
+\begin{bmatrix}
+x\\y\\z
+\end{bmatrix} =
+\begin{bmatrix}
+0\\0\\0
+\end{bmatrix}
+\longrightarrow x_1 = 
+\begin{bmatrix}
+1\\-2\\-2
+\end{bmatrix}
+\\
+&lambda;_2 = 0  \longrightarrow (A -0I)& = 
+\begin{bmatrix}
+1&0&2\\
+0&-1&-2\\
+2&-2&0
+\end{bmatrix}
+\begin{bmatrix}
+x\\y\\z
+\end{bmatrix} =
+\begin{bmatrix}
+0\\0\\0
+\end{bmatrix}
+\longrightarrow x_2 = 
+\begin{bmatrix}
+2\\ 2\\-1
+\end{bmatrix}\\
+&lambda;_3 = 3 \longrightarrow (A -3I) &= 
+\begin{bmatrix}
+-2&0&2\\
+0&-4&-2\\
+2&-2&-3
+\end{bmatrix}
+\begin{bmatrix}
+x\\y\\z
+\end{bmatrix} =
+\begin{bmatrix}
+0\\0\\0
+\end{bmatrix}
+\longrightarrow x_3 = 
+\begin{bmatrix}
+2\\-1\\2
+\end{bmatrix}\\
+\\
+A = A^T = 
+\begin{bmatrix}
+1&0&2\\
+0&-1&-2\\
+2&-2&0
+\end{bmatrix} &= X&Lambda;X^{-1}=
+\begin{bmatrix}
+1&2&2\\
+-2&2&-1\\
+-2&-1&2
+\end{bmatrix}
+\begin{bmatrix}
+-3&&\\
+&0&\\
+&&3
+\end{bmatrix}
+\frac{1}{9}
+\begin{bmatrix}
+1&-2&-2\\
+2&2&-1\\
+2&-1&02
+\end{bmatrix}
+\\
+A = A^T = 
+\begin{bmatrix}
+1&0&2\\
+0&-1&-2\\
+2&-2&0
+\end{bmatrix} &= Q&Lambda;Q^{-1}=
+\frac{1}{3}
+\begin{bmatrix}
+1&2&2\\
+-2&2&-1\\
+-2&-1&2
+\end{bmatrix}
+\begin{bmatrix}
+-3&&\\
+&0&\\
+&&3
+\end{bmatrix}
+\frac{1}{3}
+\begin{bmatrix}
+1&-2&-2\\
+2&2&-1\\
+2&-1&02
+\end{bmatrix}=Q&Lambda;Q^T\\
+\\
+&= q_1q_1^T&lambda;_1 +q_2 q_2^T&lambda;_2 + q_3q_3^T&lambda;_3\\
+\\
+&= \frac{x_1x_1^T&lambda;_1}{|x_1|} + \frac{x_2x_2^T&lambda;_2}{|x_2|} + \frac{x_3x_3^T&lambda;_3}{|x_2|}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%3D+A%5ET+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%260%262%5C%5C%0A0%26-1%26-2%5C%5C%0A2%26-2%260%0A%5Cend%7Bbmatrix%7D%5C%5C%0Adet%28A-%26lambda%3BI%29+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1-%26lambda%3B%260%262%5C%5C%0A0%26-1-%26lambda%3B%26-2%5C%5C%0A2%26-2%260-%26lambda%3B%0A%5Cend%7Bbmatrix%7D+%5C%5C+%0A%26%3D+%5B1-%26lambda%3B%5D+%5B%28-1-%26lambda%3B%29%28-%26lambda%3B%29-%28-2%29%28-2%29%5D+%2B+%5B2%5D%5B0-%282%28-1-%26lambda%3B%29%29%5D+%5C%5C%0A%26%3D+%5B1-%26lambda%3B%5D+%5B%26lambda%3B%2B%26lambda%3B%5E2-4%5D+%2B+%5B2%5D%5B2-2%26lambda%3B%5D+%5C%5C%0A%26%3D+%5B%26lambda%3B%2B%26lambda%3B%5E2-4%2B+-%26lambda%3B%5E2-%26lambda%3B%5E3%2B4%26lambda%3B%5D+%2B+%5B4-4%26lambda%3B%5D+%5C%5C%0A%26%3D+-%26lambda%3B%5E3%2B9%26lambda%3B%5C%5C%0A%26%3D+-%28%26lambda%3B%5E3-9%26lambda%3B%29%5C%5C%0A%26%3D+-%26lambda%3B%28%26lambda%3B%5E2-9%29%5C%5C%0A%5C%5C%0A%26lambda%3B_1+%3D+-3+%5Clongrightarrow+%28A+%2B+3I%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A4%260%262%5C%5C%0A0%262%26-2%5C%5C%0A2%26-2%263%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C0%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C-2%5C%5C-2%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%26lambda%3B_2+%3D+0++%5Clongrightarrow+%28A+-0I%29%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%260%262%5C%5C%0A0%26-1%26-2%5C%5C%0A2%26-2%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C0%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%5C%5C+2%5C%5C-1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26lambda%3B_3+%3D+3+%5Clongrightarrow+%28A+-3I%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-2%260%262%5C%5C%0A0%26-4%26-2%5C%5C%0A2%26-2%26-3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C0%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+x_3+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%5C%5C-1%5C%5C2%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0AA+%3D+A%5ET+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%260%262%5C%5C%0A0%26-1%26-2%5C%5C%0A2%26-2%260%0A%5Cend%7Bbmatrix%7D+%26%3D+X%26Lambda%3BX%5E%7B-1%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%262%262%5C%5C%0A-2%262%26-1%5C%5C%0A-2%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A-3%26%26%5C%5C%0A%260%26%5C%5C%0A%26%263%0A%5Cend%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B9%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-2%26-2%5C%5C%0A2%262%26-1%5C%5C%0A2%26-1%2602%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0AA+%3D+A%5ET+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%260%262%5C%5C%0A0%26-1%26-2%5C%5C%0A2%26-2%260%0A%5Cend%7Bbmatrix%7D+%26%3D+Q%26Lambda%3BQ%5E%7B-1%7D%3D%0A%5Cfrac%7B1%7D%7B3%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%262%262%5C%5C%0A-2%262%26-1%5C%5C%0A-2%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A-3%26%26%5C%5C%0A%260%26%5C%5C%0A%26%263%0A%5Cend%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B3%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-2%26-2%5C%5C%0A2%262%26-1%5C%5C%0A2%26-1%2602%0A%5Cend%7Bbmatrix%7D%3DQ%26Lambda%3BQ%5ET%5C%5C%0A%5C%5C%0A%26%3D+q_1q_1%5ET%26lambda%3B_1+%2Bq_2+q_2%5ET%26lambda%3B_2+%2B+q_3q_3%5ET%26lambda%3B_3%5C%5C%0A%5C%5C%0A%26%3D+%5Cfrac%7Bx_1x_1%5ET%26lambda%3B_1%7D%7B%7Cx_1%7C%7D+%2B+%5Cfrac%7Bx_2x_2%5ET%26lambda%3B_2%7D%7B%7Cx_2%7C%7D+%2B+%5Cfrac%7Bx_3x_3%5ET%26lambda%3B_3%7D%7B%7Cx_2%7C%7D%0A%5Cend%7Balign%2A%7D)
+
+
+<img width="662" alt="image" src="https://user-images.githubusercontent.com/38410965/110219053-f7a05a80-7e8a-11eb-861a-72cf18251319.png">
