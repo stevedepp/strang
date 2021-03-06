@@ -738,3 +738,12 @@ A = A^T =
 
 
 <img width="662" alt="image" src="https://user-images.githubusercontent.com/38410965/110219152-89a86300-7e8b-11eb-9064-edb4d1a2e0da.png">
+
+
+8.  to provide all orthogonal matrices that diagonalize a matrix A  
+- normalize the eigenvectors 
+- place a factor next to each eigenvector to represent that all orthogonal matrices that diagonalize A are found in the span of A's eigenvector matrix.  these factors are different from the c values computed with u(0).  
+
+9. to find a symmetric matrix [[1,b].[b,1]] that has only negative eigenvalues, reduce to find the pivots and solve for b where all pivots are < zero.  symmetric matrices have same number of positive eigenvalues and positive pivots. 
+
+
