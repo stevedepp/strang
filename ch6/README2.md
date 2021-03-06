@@ -491,6 +491,23 @@ sin&theta;&-cos&theta;
 
 B. find eigenvalues and eigenvectors (discrete sines and cosines) of A<sub>3</sub> and B<sub>4</sub>.
 
+The 1-2-1 pattern in both matrices is a 'second difference' like 'second derivative'.  
+Ax = &lambda;x and Bx = &lambda;x are like ∂<sup>2</sup>x/∂t<sup>2</sup> = &lambda;x    
+this has eigenvectors = x = sin kt and x = cos kt that are the bases for Fourier Series.
+
+A<sub>n</sub> and B<sub>n</sub> lead to "discrete sines" and "discrete cosines" that are bases for Discrete Fourier Transform.  The DFT is absolutely central to all areas of digital singal processing.  The favorite choice for JPEG in image processing has been B<sub>8</sub> of size n=8.
+
+A<sub>3</sub> below eigenvector matrix X gives the "Discrete SIne Transform" and the eigenvectors fall onto sine curves.
+
+the eigenvectors are orthogonal as proved in this section for all symmetric matrices.  
+
+all the eigenvalues are real and negative which means "negative definite" so that e<sup>At</sup> decays to zero --> stable. 
+
+the starting u(0) = (0, 2√2, 0) is x<sub>3</sub> - x<sub>2</sub> and so the solution is u(t) = e<sup>&lambda;<sub>3</sub>t</sup>x<sub>3</sub> + e<sup>&lambda;<sub>2</sub>t</sup>x<sub>2</sub>
+
+The eigenvalues of B<sub>4</sub> are 2-√2 and 2 and 2+√2 and zero which is the same as A<sub>3</sub> with the addition of the zero.  Trace remains 6 but determinant = 0.  Eigenvector matrix gives the 4-point "Discrete Cosine Transform".  All eigenvectors of B<sub>4</sub> fall on the consine curves.  These eigenvectors match cosines at the half-way points &pi;/8, 3&pi;/8, 5&pi;/8, 7&pi;/8
+
+
 ![\begin{align*}
 A_3 &= 
 \begin{bmatrix}
@@ -538,7 +555,7 @@ x\\y\\z
 \end{bmatrix}
 \longrightarrow x_2 = 
 \begin{bmatrix}
-1\\\-\sqrt{2}\\1
+1\\ \sqrt{2}\\1
 \end{bmatrix}\\
 &lambda;_3 = -2+\sqrt{2} \longrightarrow (A + (-2-\sqrt{2})I) &= 
 \begin{bmatrix}
@@ -554,7 +571,7 @@ x\\y\\z
 \end{bmatrix}
 \longrightarrow x_3 = 
 \begin{bmatrix}
-1\\\sqrt{2}\\1
+1\\-\sqrt{2}\\1
 \end{bmatrix}\\
 sines &=
 \begin{bmatrix}
@@ -562,7 +579,25 @@ sines &=
 \sqrt{2}&0&-\sqrt{2}\\
 1&-\sqrt{2}&1
 \end{bmatrix}
-\end{align*}
-](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA_3+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%5C%5C%0Adet%28A-%26lambda%3BI%29+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A2-%26lambda%3B%26-1%260%5C%5C%0A-1%262-%26lambda%3B%26-1%5C%5C%0A0%26-1%262-%26lambda%3B%0A%5Cend%7Bbmatrix%7D+%5C%5C+%0A%26%3D+%28-2-%26lambda%3B%29%5B%28-2-%26lambda%3B%29%5E2+-+1%5D+-1%28-2-%26lambda%3B%29+%5C%5C%0A%26%3D+%28-2-%26lambda%3B%29%5B%28-2-%26lambda%3B%29%5E2+-+2%5D+%5C%5C%0A%26%3D+%28-2-%26lambda%3B%29%5B%28%26lambda%3B%5E2+%2B4%26lambda%3B+%2B+2%5D+%5C%5C%0A%26lambda%3B_1+%3D+-2+%5Clongrightarrow+%28A+%2B+2I%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0%26-1%260%5C%5C%0A-1%260%26-1%5C%5C%0A0%26-1%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C0%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C0%5C%5C-1%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%26lambda%3B_2+%3D+-2-%5Csqrt%7B2%7D++%5Clongrightarrow+%28A+%2B+%282%2B%5Csqrt%7B2%7D%29I%29%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%26-1%260%5C%5C%0A-1%26%5Csqrt%7B2%7D%26-1%5C%5C%0A0%26-1%26%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C0%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%5C-%5Csqrt%7B2%7D%5C%5C1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26lambda%3B_3+%3D+-2%2B%5Csqrt%7B2%7D+%5Clongrightarrow+%28A+%2B+%28-2-%5Csqrt%7B2%7D%29I%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-%5Csqrt%7B2%7D%26-1%260%5C%5C%0A-1%26-%5Csqrt%7B2%7D%26-1%5C%5C%0A0%26-1%26-%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C0%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+x_3+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%5Csqrt%7B2%7D%5C%5C1%0A%5Cend%7Bbmatrix%7D%5C%5C%0Asines+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%26%5Csqrt%7B2%7D%261%5C%5C%0A%5Csqrt%7B2%7D%260%26-%5Csqrt%7B2%7D%5C%5C%0A1%26-%5Csqrt%7B2%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA_3+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%5C%5C%0Adet%28A-%26lambda%3BI%29+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A2-%26lambda%3B%26-1%260%5C%5C%0A-1%262-%26lambda%3B%26-1%5C%5C%0A0%26-1%262-%26lambda%3B%0A%5Cend%7Bbmatrix%7D+%5C%5C+%0A%26%3D+%28-2-%26lambda%3B%29%5B%28-2-%26lambda%3B%29%5E2+-+1%5D+-1%28-2-%26lambda%3B%29+%5C%5C%0A%26%3D+%28-2-%26lambda%3B%29%5B%28-2-%26lambda%3B%29%5E2+-+2%5D+%5C%5C%0A%26%3D+%28-2-%26lambda%3B%29%5B%28%26lambda%3B%5E2+%2B4%26lambda%3B+%2B+2%5D+%5C%5C%0A%26lambda%3B_1+%3D+-2+%5Clongrightarrow+%28A+%2B+2I%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0%26-1%260%5C%5C%0A-1%260%26-1%5C%5C%0A0%26-1%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C0%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C0%5C%5C-1%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%26lambda%3B_2+%3D+-2-%5Csqrt%7B2%7D++%5Clongrightarrow+%28A+%2B+%282%2B%5Csqrt%7B2%7D%29I%29%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%26-1%260%5C%5C%0A-1%26%5Csqrt%7B2%7D%26-1%5C%5C%0A0%26-1%26%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C0%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C+%5Csqrt%7B2%7D%5C%5C1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26lambda%3B_3+%3D+-2%2B%5Csqrt%7B2%7D+%5Clongrightarrow+%28A+%2B+%28-2-%5Csqrt%7B2%7D%29I%29+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-%5Csqrt%7B2%7D%26-1%260%5C%5C%0A-1%26-%5Csqrt%7B2%7D%26-1%5C%5C%0A0%26-1%26-%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5Cy%5C%5Cz%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C0%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+x_3+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C-%5Csqrt%7B2%7D%5C%5C1%0A%5Cend%7Bbmatrix%7D%5C%5C%0Asines+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%26%5Csqrt%7B2%7D%261%5C%5C%0A%5Csqrt%7B2%7D%260%26-%5Csqrt%7B2%7D%5C%5C%0A1%26-%5Csqrt%7B2%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
 
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/110194155-fdebf380-7e04-11eb-9a38-2408360c18cd.png">
+
+Lessons from problem set:
+
+1.  For a matrix that factors into ASB, B must = A<sup>T</sup> = A<sup>-1</sup> for the matrix to be symmetric. 
+
+2. For ASB where S = S<sup>-1</sup>, ASB is "similar" to S (has same eigenvalues) when B = A<sup>-1</sup>. [Simply means that ASB is diagonalizable; remember the eigenvectors in X need to be independent to obtain X<sup>-1</sup>.]
+
+For ASB to be symmetric, B = A<sup>T</sup>     
+For ASB to be **similar** and **symmetric** B = A<sup>T</sup> = A<sup>-1</sup>
+
+3. to write A as a sum of a symmetric matrix S and skew symmetric matrix N:
+
+A = S + N = 0.5 (A + A<sup>T</sup>) + 0.5 (A - A<sup>T</sup>)
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/110214481-b56b1f00-7e72-11eb-9c11-08e9bdf24c65.png">
+
+4. if C symmetric, prove A<sup>T</sup>CA is also symmetric by transposing it:
+
+(A<sup>T</sup>CA)<sup>T</sup> = A<sup>T</sup>C<sup>T</sup>(A<sup>T</sup>)<sup>T</sup> = A<sup>T</sup>CA and thus A<sup>T</sup>CA symmetric because (A<sup>T</sup>CA)<sup>T</sup> = A<sup>T</sup>CA 
