@@ -761,7 +761,7 @@ projection review:
 b shines onto a   
 shortest distance is via e that is perpendicular to a   
 so b - e arrives at xhat(a) = the endpoint that is at a percentage xhat of a that is closest to b:  
-b - e = (xhat) a
+b - e = (xhat) a   
 b - xhat(a) = e
 [keep in mind e extends from 0, 0 in this last equation]
 a • e = a • (b - xhat) = 0 
