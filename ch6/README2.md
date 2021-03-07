@@ -747,3 +747,23 @@ A = A^T =
 9. to find a symmetric matrix [[1,b].[b,1]] that has only negative eigenvalues, reduce to find the pivots and solve for b where all pivots are < zero.  symmetric matrices have same number of positive eigenvalues and positive pivots. 
 
 
+10. if A<sup>3</sup> = 0 then the eigenvalues of A must be zero. 
+
+11. if &lambda; = a + ib is an eigenvalue of a real matrix A, then its conjugate &lambda;_bar = a - ib is also an eigenvalue.  and so for a 3x3 matrix, there must be at least one real eigenvalue. 
+
+always the trace = &lambda; + &lambda; is real.  
+
+the characteristic equation of a 3x3 matrix is a third order polynomial. as such it can hae at most 2 complex roots (that must be complex conjugates) to be a real matrix
+
+
+projection review:
+
+b shines onto a   
+shortest distance is via e that is perpendicular to a   
+so b - e arrives at xhat(a) = the endpoint that is at a percentage xhat of a that is closest to b:  
+b - e = (xhat) a
+b - xhat(a) = e
+[keep in mind e extends from 0, 0 in this last equation]
+a • e = a • (b - xhat) = 0 
+perpendicular
+a • b = a • xhat
