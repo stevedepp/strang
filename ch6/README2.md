@@ -1114,10 +1114,69 @@ det (\begin{bmatrix}
 
 
 20.  Another proof that eigenvectors are perpendicular when S = S<sup>T</sup> in 2 steps:   
-1. suppose Sx = &lambda;x and Sy = &phi;y and &lamnda; ≠ 0   
+1. suppose Sx = &lambda;x and Sy = 0y and &lambda; ≠ 0   
 then y is in the null space [presumably because 0y = 0]   
 and x is in the column space   
-which are perpendicular to one another.  
+why are these subspaces orthogonal?
 
-if 
+y is in the null space of S and x in the column space of S which is the row space of S<sup>T</sup>.  
+the null space and row space are perpendicualar.   
+so y<sup>T</sup>x = 0
+[answer to me doesnt make sense since the question states &lambda; ≠ 0 and so is y an eigenvector to begin with if it is just paired with zero but zero is not an eigenvalue?]
 
+if Sy = &beta;y and &beta; is an eigenvalue, apply that argument to  S - &beta;I.  One eigenvalue of S-&beta;I moves to zero. the eigenvectors x,y stay the same and so they are perpendicular.  
+
+if Sx = &lambda;x and Sy = &beta;y then shift S by &beta;I to have zero eigenvalue that matches step 1.  y is known null and By = Sy; so Sy - &beta;yIy = (S-&beta;I)y = 0.  (S-&betal=;I)x = (&lambda-&beta;)x and (S-&beta;I)y = 0 and again x perpendicular to y.  
+
+22.
+S is Hermatian where S_bar<sup>T</sup> = S  
+its eigenvalues are -4 and 6   
+Adjust equations to prove that &lambda; always real when Hermatian.
+
+Sx = &lambda;x -->     
+S_bar x_bar = &lambda;_bar x_bar  -->
+x_bar<sup>T</sup>S_bar<sup>T</sup>  = x_bar<sup>T</sup>&lambda;_bar  
+
+since S_bar<sup>T</sup> = S   
+x_bar<sup>T</sup>S  = x_bar<sup>T</sup>&lambda;_bar  
+
+multiply both sides by x 
+x_bar<sup>T</sup>Sx  = x_bar<sup>T</sup>&lambda;_bar x  
+
+notice that the Sx on the LHS = &lambda;x from the first equation above; so, ....  
+x_bar<sup>T</sup>&lambda;x  = x_bar<sup>T</sup>&lambda;_bar x  
+
+thus &lambda; = &lambda;_bar
+
+![\begin{align*}
+S &= 
+\begin{bmatrix}
+1&3+4i\\
+3-4i&1
+\end{bmatrix}\\
+\overline{S} &= 
+\begin{bmatrix}
+1&3-4i\\
+3+4i&1
+\end{bmatrix}\\
+\overline{S}^T &= 
+\begin{bmatrix}
+1&3+4i\\
+3-4i&1
+\end{bmatrix}\\
+\\
+det S &= (&lambda;+4)(&lambda;-6) = 0\\
+\\
+(S-&lambda;I)x &= \begin{bmatrix}
+1-&lambda;&3+4i\\
+3-4i&1-&lambda;
+\end{bmatrix}x\\
+&= \begin{bmatrix}
+-5&3+4i\\
+3-4i&-5
+\end{bmatrix}x_1\\ 
+&= \begin{bmatrix}
+-5&3+4i\\
+3-4i&-5
+\end{bmatrix}x_2
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%263%2B4i%5C%5C%0A3-4i%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Coverline%7BS%7D+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%263-4i%5C%5C%0A3%2B4i%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Coverline%7BS%7D%5ET+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%263%2B4i%5C%5C%0A3-4i%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Adet+S+%26%3D+%28%26lambda%3B%2B4%29%28%26lambda%3B-6%29+%3D+0%5C%5C%0A%5C%5C%0A%28S-%26lambda%3BI%29x+%26%3D+%5Cbegin%7Bbmatrix%7D%0A1-%26lambda%3B%263%2B4i%5C%5C%0A3-4i%261-%26lambda%3B%0A%5Cend%7Bbmatrix%7Dx%5C%5C%0A%26%3D+%5Cbegin%7Bbmatrix%7D%0A-5%263%2B4i%5C%5C%0A3-4i%26-5%0A%5Cend%7Bbmatrix%7Dx_1%5C%5C+%0A%26%3D+%5Cbegin%7Bbmatrix%7D%0A-5%263%2B4i%5C%5C%0A3-4i%26-5%0A%5Cend%7Bbmatrix%7Dx_2%0A%5Cend%7Balign%2A%7D)
