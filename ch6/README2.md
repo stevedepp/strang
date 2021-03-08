@@ -1131,22 +1131,6 @@ if Sx = &lambda;x and Sy = &beta;y then shift S by &beta;I to have zero eigenval
 22.
 S is Hermatian where S_bar<sup>T</sup> = S  
 its eigenvalues are -4 and 6   
-Adjust equations to prove that &lambda; always real when Hermatian.
-
-Sx = &lambda;x -->      
-S_bar x_bar = &lambda;_bar x_bar  -->   
-x_bar<sup>T</sup>S_bar<sup>T</sup>  = x_bar<sup>T</sup>&lambda;_bar  
-
-since S_bar<sup>T</sup> = S     
-x_bar<sup>T</sup>S  = x_bar<sup>T</sup>&lambda;_bar    
-
-multiply both sides by x   
-x_bar<sup>T</sup>Sx  = x_bar<sup>T</sup>&lambda;_bar x  
-
-notice that the Sx on the LHS = &lambda;x from the first equation above; so, ....  
-x_bar<sup>T</sup>&lambda;x  = x_bar<sup>T</sup>&lambda;_bar x  
-
-thus &lambda; = &lambda;_bar
 
 ![\begin{align*}
 S &= 
@@ -1180,3 +1164,108 @@ det S &= (&lambda;+4)(&lambda;-6) = 0\\
 3-4i&-5
 \end{bmatrix}x_2
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%263%2B4i%5C%5C%0A3-4i%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Coverline%7BS%7D+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%263-4i%5C%5C%0A3%2B4i%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Coverline%7BS%7D%5ET+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%263%2B4i%5C%5C%0A3-4i%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Adet+S+%26%3D+%28%26lambda%3B%2B4%29%28%26lambda%3B-6%29+%3D+0%5C%5C%0A%5C%5C%0A%28S-%26lambda%3BI%29x+%26%3D+%5Cbegin%7Bbmatrix%7D%0A1-%26lambda%3B%263%2B4i%5C%5C%0A3-4i%261-%26lambda%3B%0A%5Cend%7Bbmatrix%7Dx%5C%5C%0A%26%3D+%5Cbegin%7Bbmatrix%7D%0A-5%263%2B4i%5C%5C%0A3-4i%26-5%0A%5Cend%7Bbmatrix%7Dx_1%5C%5C+%0A%26%3D+%5Cbegin%7Bbmatrix%7D%0A-5%263%2B4i%5C%5C%0A3-4i%26-5%0A%5Cend%7Bbmatrix%7Dx_2%0A%5Cend%7Balign%2A%7D)
+
+Adjust equations to prove that &lambda; always real when Hermatian.
+
+Sx = &lambda;x -->      
+S_bar x_bar = &lambda;_bar x_bar  -->   
+x_bar<sup>T</sup>S_bar<sup>T</sup>  = x_bar<sup>T</sup>&lambda;_bar  
+
+since S_bar<sup>T</sup> = S     
+x_bar<sup>T</sup>S  = x_bar<sup>T</sup>&lambda;_bar    
+
+multiply both sides by x   
+x_bar<sup>T</sup>Sx  = x_bar<sup>T</sup>&lambda;_bar x  
+
+notice that the Sx on the LHS = &lambda;x from the first equation above; so, ....  
+x_bar<sup>T</sup>&lambda;x  = x_bar<sup>T</sup>&lambda;_bar x  
+
+thus &lambda; = &lambda;_bar
+
+![\begin{align*}
+Sx & = &lambda;x \longrightarrow \overline{S}\overline{x} = \overline{&lambda;}\overline{x} \longrightarrow \overline{x}^T\overline{S}^T = \overline{x}^T\overline{&lambda;}\\
+\\
+\overline{S}^T & = S \longrightarrow \overline{x}^TS = \overline{x}^T\overline{&lambda;}
+\\
+\overline{x}^TSx &= \overline{x}^T\overline{&lambda;}x
+\\
+\overline{x}^T&lambda;x &= \overline{x}^T\overline{&lambda;}x\\
+\\
+&lambda; &= \overline{&lambda;}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0ASx+%26+%3D+%26lambda%3Bx+%5Clongrightarrow+%5Coverline%7BS%7D%5Coverline%7Bx%7D+%3D+%5Coverline%7B%26lambda%3B%7D%5Coverline%7Bx%7D+%5Clongrightarrow+%5Coverline%7Bx%7D%5ET%5Coverline%7BS%7D%5ET+%3D+%5Coverline%7Bx%7D%5ET%5Coverline%7B%26lambda%3B%7D%5C%5C%0A%5C%5C%0A%5Coverline%7BS%7D%5ET+%26+%3D+S+%5Clongrightarrow+%5Coverline%7Bx%7D%5ETS+%3D+%5Coverline%7Bx%7D%5ET%5Coverline%7B%26lambda%3B%7D%0A%5C%5C%0A%5Coverline%7Bx%7D%5ETSx+%26%3D+%5Coverline%7Bx%7D%5ET%5Coverline%7B%26lambda%3B%7Dx%0A%5C%5C%0A%5Coverline%7Bx%7D%5ET%26lambda%3Bx+%26%3D+%5Coverline%7Bx%7D%5ET%5Coverline%7B%26lambda%3B%7Dx%5C%5C%0A%5C%5C%0A%26lambda%3B+%26%3D+%5Coverline%7B%26lambda%3B%7D%0A%5Cend%7Balign%2A%7D)
+
+23.
+
+F
+a matrix with real eigenvalues and n real eigenvectors is symmetric
+e.g. A = [[1,2],[0,1]]
+
+T
+a matrix with real eigenvalues and n orthogonal eigenvectors is symmetric    
+because dot product in off diagonal = - and lengths in diagonals.
+A<sup>T</sup> = Q&Lambda;Q<sup>T</sup> 
+
+
+T 
+the inverse of ann invertible symmetric matrix is symmetric   
+because faxtors and cofactors are same on both sides of diagonal.  
+S<sup>-1</sup> = Q&Lambda;Q<sup>T</sup>
+
+
+24. if AA<sup>T</sup> = A<sup>T</sup>    
+then A and A<sup>T</sup> share the same eigenvectors    
+A and A<sup>T</sup> share the same eigenvalues.  
+
+Whats wrong with this conclusion:  A and A<sup>T</sup> must have the same X and &Lambda
+
+A and A<sup>T</sup> have same &lambda;s and there's no ordering the &lambda;s,
+but the order of the x's change for each &lambda; as switch from A to A<supT</sup>.  
+Shown below, A and A<sup>T</sup> have &lambda;<sub>1</sub> = i and &lambda;<sub>2</sub> = -i,
+but for &lambda;<sub>1</sub> = i, A has x<sub>1</sub> = (1,i) while A<sup>T</sup> has x<sub>1</sub> = (1,-i) .
+
+![\begin{align*}
+A =& 
+\begin{bmatrix}
+0&1\\
+-1&0
+\end{bmatrix} \\
+A^T =&
+\begin{bmatrix}
+0&-1\\
+1&0
+\end{bmatrix} \\
+\\
+det(A-&lambda;I)=det(A^T-&lambda;I) =& &lambda;^2 + 1 = 0 \\
+\longrightarrow & &lambda;_1 = i \\
+& &lambda;_2 = -i\\
+\\
+(A-&lambda;_1I)x_1  =& 
+\begin{bmatrix}
+-i&1\\
+-1&-i
+\end{bmatrix}x_1 \longrightarrow x_1 = \begin{bmatrix} 1\\i \end{bmatrix}\\
+(A^T-&lambda;_1I)x_1  =& 
+\begin{bmatrix}
+-i&-1\\
+1&-i
+\end{bmatrix}x_1 \longrightarrow x_1 = 
+\begin{bmatrix} 
+1\\ 
+-i 
+\end{bmatrix}\\
+\\
+(A-&lambda;_2I)x_2  =& 
+\begin{bmatrix}
+i&1\\
+-1&i
+\end{bmatrix}x_2 \longrightarrow x_2 = \begin{bmatrix} 1\\-i \end{bmatrix}\\
+(A^T-&lambda;_2I)x_2  =& 
+\begin{bmatrix}
+i&-1\\
+1&i
+\end{bmatrix}x_2 \longrightarrow x_2 = 
+\begin{bmatrix} 
+1\\ 
+i 
+\end{bmatrix}\\
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-1%260%0A%5Cend%7Bbmatrix%7D+%5C%5C%0AA%5ET+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A0%26-1%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%5C%5C%0Adet%28A-%26lambda%3BI%29%3Ddet%28A%5ET-%26lambda%3BI%29+%3D%26+%26lambda%3B%5E2+%2B+1+%3D+0+%5C%5C%0A%5Clongrightarrow+%26+%26lambda%3B_1+%3D+i+%5C%5C%0A%26+%26lambda%3B_2+%3D+-i%5C%5C%0A%5C%5C%0A%28A-%26lambda%3B_1I%29x_1++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A-i%261%5C%5C%0A-1%26-i%0A%5Cend%7Bbmatrix%7Dx_1+%5Clongrightarrow+x_1+%3D+%5Cbegin%7Bbmatrix%7D+1%5C%5Ci+%5Cend%7Bbmatrix%7D%5C%5C%0A%28A%5ET-%26lambda%3B_1I%29x_1++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A-i%26-1%5C%5C%0A1%26-i%0A%5Cend%7Bbmatrix%7Dx_1+%5Clongrightarrow+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C+%0A-i+%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%28A-%26lambda%3B_2I%29x_2++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ai%261%5C%5C%0A-1%26i%0A%5Cend%7Bbmatrix%7Dx_2+%5Clongrightarrow+x_2+%3D+%5Cbegin%7Bbmatrix%7D+1%5C%5C-i+%5Cend%7Bbmatrix%7D%5C%5C%0A%28A%5ET-%26lambda%3B_2I%29x_2++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ai%26-1%5C%5C%0A1%26i%0A%5Cend%7Bbmatrix%7Dx_2+%5Clongrightarrow+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C+%0Ai+%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cend%7Balign%2A%7D)
