@@ -1133,14 +1133,14 @@ S is Hermatian where S_bar<sup>T</sup> = S
 its eigenvalues are -4 and 6   
 Adjust equations to prove that &lambda; always real when Hermatian.
 
-Sx = &lambda;x -->     
-S_bar x_bar = &lambda;_bar x_bar  -->
+Sx = &lambda;x -->      
+S_bar x_bar = &lambda;_bar x_bar  -->   
 x_bar<sup>T</sup>S_bar<sup>T</sup>  = x_bar<sup>T</sup>&lambda;_bar  
 
-since S_bar<sup>T</sup> = S   
-x_bar<sup>T</sup>S  = x_bar<sup>T</sup>&lambda;_bar  
+since S_bar<sup>T</sup> = S     
+x_bar<sup>T</sup>S  = x_bar<sup>T</sup>&lambda;_bar    
 
-multiply both sides by x 
+multiply both sides by x   
 x_bar<sup>T</sup>Sx  = x_bar<sup>T</sup>&lambda;_bar x  
 
 notice that the Sx on the LHS = &lambda;x from the first equation above; so, ....  
