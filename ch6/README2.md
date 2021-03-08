@@ -923,4 +923,4 @@ b & = p_1+p_2+p+3 \\
 14.  every 2x2 symmetric matrix is &lambda;<sub>1</sub>x<sub>1</sub>x<sub>1</sub><sup>T</sup> + &lambda;<sub>2</sub>x<sub>2</sub>x<sub>2</sub><sup>T</sup> = &lambda;<sub>1</sub>P<sub>1</sub> + &lambda;<sub>2</sub>P<sub>2</sub>   
 Explain P<sub>1</sub> + P<sub>2</sub> = x<sub>1</sub>x<sub>1</sub><sup>T</sup> + x<sub>2</sub>x<sub>2</sub><sup>T</sup> = I from columns times rows of PQ.  Why is P<sub>1</sub> P<sub>2</sub> = 0?
 
-{x<sub>1</sub>, x<sub>2</sub>} is a Q matrix so P<sub>1</sub> + P<sub>2</sub> = x<sub>1</sub>x<sub>1</sub><sup>T</sup> + x<sub>2</sub>x<sub>2</sub><sup>T<sup> = I because ||
+{x<sub>1</sub>, x<sub>2</sub>} is a Q matrix so P<sub>1</sub> + P<sub>2</sub> = x<sub>1</sub>x<sub>1</sub><sup>T</sup> + x<sub>2</sub>x<sub>2</sub><sup>T</sup> = I because ||
