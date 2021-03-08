@@ -957,4 +957,54 @@ P = QQ<sup>T</sup>
 p = Pb   
 
 if Q is square then Q<sup>T</sup> = Q<sup>-1</sup> maps all space:  
-p = Qxhat = Qx = b = Pb = QQ<sup>T</sup>b = Ib = b
+p = Qxhat   
+p = Pb   
+p = QQ<sup>T</sup>b = Ib = b
+p = q<sub>1</sub>q<sub>1</sub><sup>T</sup>b + q<sub>n</sub>q<sub>n</sub><sup>T</sup>b
+
+interesting putting that together with S = Q&Lambda;Q<sup>T</sup> = q<sub>1</sub>q<sub>1</sub><sup>T</sup>&lambda;<sub>n</sub> + q<sub>n</sub>q<sub>n</sub><sup>T</sup>&lambda;<sub>n</sub>
+
+where b is replaced by a series of &lambda;<sub>i</sub> matched to each orthogonal axis q<sub>i</sub>
+
+
+15. the eigenvalues of A = -A<sup>T</sup> are imaginary.  verify by means of characteristic equation 
+
+![\begin{align*}
+det A - &lambda;I & = det (-A)^T - &lambda;I \\ &= det 
+\begin{bmatrix} 0&b\\-b&0\end{bmatrix} \\ &= det 
+\begin{bmatrix} 0&-b\\b&0\end{bmatrix} \\ & =
+&lambda;^2 + b^2 = 0 \longrightarrow &lambda; = \pm bi
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Adet+A+-+%26lambda%3BI+%26+%3D+det+%28-A%29%5ET+-+%26lambda%3BI+%5C%5C+%26%3D+det+%0A%5Cbegin%7Bbmatrix%7D+0%26b%5C%5C-b%260%5Cend%7Bbmatrix%7D+%5C%5C+%26%3D+det+%0A%5Cbegin%7Bbmatrix%7D+0%26-b%5C%5Cb%260%5Cend%7Bbmatrix%7D+%5C%5C+%26+%3D%0A%26lambda%3B%5E2+%2B+b%5E2+%3D+0+%5Clongrightarrow+%26lambda%3B+%3D+%5Cpm+bi%0A%5Cend%7Balign%2A%7D)
+
+if need to make a 4x4 example can use these block matrices which are skew symmetric:
+
+![\begin{align*}
+A = -A^T &= 
+\begin{bmatrix} 0&b\\-b&0\end{bmatrix} \\ 
+\\
+BM &= 
+\begin{bmatrix} 0&A\\A&0\end{bmatrix} \\ & =
+\begin{bmatrix} A&0\\0&A\end{bmatrix} 
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%3D+-A%5ET+%26%3D+%0A%5Cbegin%7Bbmatrix%7D+0%26b%5C%5C-b%260%5Cend%7Bbmatrix%7D+%5C%5C+%0A%5C%5C%0ABM+%26%3D+%0A%5Cbegin%7Bbmatrix%7D+0%26A%5C%5CA%260%5Cend%7Bbmatrix%7D+%5C%5C+%26+%3D%0A%5Cbegin%7Bbmatrix%7D+A%260%5C%5C0%26A%5Cend%7Bbmatrix%7D+%0A%5Cend%7Balign%2A%7D)
+
+![\begin{align*}
+A = -A^T &= 
+\begin{bmatrix} 0&b\\-b&0\end{bmatrix} \\ 
+\\
+BM_1 &= 
+\begin{bmatrix} 0&A\\A&0\end{bmatrix} \\
+BM_2 &= 
+\begin{bmatrix} A&0\\0&A\end{bmatrix} \\
+|BM_1| & = det 
+\begin{bmatrix} 
+-&lambda;&b&0&0\\
+-b&-&lambda;&0&0\\
+0&0&-&lambda;&b\\
+0&0&-b&-&lambda;\\
+\end{bmatrix} \\ & = 
+(-&lambda;)(-&lambda;)[(-&lambda;)(-&lambda;) - (b)(-b)] -b(-b)[(-&lambda;)(-&lambda;) - (b)(-b)] \\ &= 
+&lambda;^2[&lambda;^2 + b^2] +b^2[&lambda;^2+b^2] \\ &=
+&lambda;^4 + 2&lambda;^2b^2 + b^4 \\ &=
+(&lambda;^2 + b^2)^2 = 0 \longrightarrow &lambda;^2 + b^2 = 0 \longrightarrow &lambda;^2 = -b^2 \longrightarrow &lambda; = \pm ib
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%3D+-A%5ET+%26%3D+%0A%5Cbegin%7Bbmatrix%7D+0%26b%5C%5C-b%260%5Cend%7Bbmatrix%7D+%5C%5C+%0A%5C%5C%0ABM_1+%26%3D+%0A%5Cbegin%7Bbmatrix%7D+0%26A%5C%5CA%260%5Cend%7Bbmatrix%7D+%5C%5C%0ABM_2+%26%3D+%0A%5Cbegin%7Bbmatrix%7D+A%260%5C%5C0%26A%5Cend%7Bbmatrix%7D+%5C%5C%0A%7CBM_1%7C+%26+%3D+det+%0A%5Cbegin%7Bbmatrix%7D+%0A-%26lambda%3B%26b%260%260%5C%5C%0A-b%26-%26lambda%3B%260%260%5C%5C%0A0%260%26-%26lambda%3B%26b%5C%5C%0A0%260%26-b%26-%26lambda%3B%5C%5C%0A%5Cend%7Bbmatrix%7D+%5C%5C+%26+%3D+%0A%28-%26lambda%3B%29%28-%26lambda%3B%29%5B%28-%26lambda%3B%29%28-%26lambda%3B%29+-+%28b%29%28-b%29%5D+-b%28-b%29%5B%28-%26lambda%3B%29%28-%26lambda%3B%29+-+%28b%29%28-b%29%5D+%5C%5C+%26%3D+%0A%26lambda%3B%5E2%5B%26lambda%3B%5E2+%2B+b%5E2%5D+%2Bb%5E2%5B%26lambda%3B%5E2%2Bb%5E2%5D+%5C%5C+%26%3D%0A%26lambda%3B%5E4+%2B+2%26lambda%3B%5E2b%5E2+%2B+b%5E4+%5C%5C+%26%3D%0A%28%26lambda%3B%5E2+%2B+b%5E2%29%5E2+%3D+0+%5Clongrightarrow+%26lambda%3B%5E2+%2B+b%5E2+%3D+0+%5Clongrightarrow+%26lambda%3B%5E2+%3D+-b%5E2+%5Clongrightarrow+%26lambda%3B+%3D+%5Cpm+ib%0A%5Cend%7Balign%2A%7D)
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/110273307-50aae400-7f9a-11eb-803e-4cb2b1861eca.png">
