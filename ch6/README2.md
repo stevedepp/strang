@@ -1243,7 +1243,11 @@ det(A-&lambda;I)=det(A^T-&lambda;I) =& &lambda;^2 + 1 = 0 \\
 \begin{bmatrix}
 -i&1\\
 -1&-i
-\end{bmatrix}x_1 \longrightarrow x_1 = \begin{bmatrix} 1\\i \end{bmatrix}\\
+\end{bmatrix}x_1 \longrightarrow x_1 = 
+\begin{bmatrix} 
+1\\
+i 
+\end{bmatrix} \\
 (A^T-&lambda;_1I)x_1  =& 
 \begin{bmatrix}
 -i&-1\\
@@ -1258,14 +1262,18 @@ det(A-&lambda;I)=det(A^T-&lambda;I) =& &lambda;^2 + 1 = 0 \\
 \begin{bmatrix}
 i&1\\
 -1&i
-\end{bmatrix}x_2 \longrightarrow x_2 = \begin{bmatrix} 1\\-i \end{bmatrix}\\
+\end{bmatrix}x_2 \longrightarrow x_2 = 
+\begin{bmatrix} 
+1\\
+-i 
+\end{bmatrix} \\
 (A^T-&lambda;_2I)x_2  =& 
 \begin{bmatrix}
 i&-1\\
 1&i
-\end{bmatrix}x_2 \longrightarrow x_2 = 
+\end{bmatrix} x_2 \longrightarrow x_2 = 
 \begin{bmatrix} 
-1\\ 
-i 
+1\\
+-i 
 \end{bmatrix}\\
-\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-1%260%0A%5Cend%7Bbmatrix%7D+%5C%5C%0AA%5ET+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A0%26-1%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%5C%5C%0Adet%28A-%26lambda%3BI%29%3Ddet%28A%5ET-%26lambda%3BI%29+%3D%26+%26lambda%3B%5E2+%2B+1+%3D+0+%5C%5C%0A%5Clongrightarrow+%26+%26lambda%3B_1+%3D+i+%5C%5C%0A%26+%26lambda%3B_2+%3D+-i%5C%5C%0A%5C%5C%0A%28A-%26lambda%3B_1I%29x_1++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A-i%261%5C%5C%0A-1%26-i%0A%5Cend%7Bbmatrix%7Dx_1+%5Clongrightarrow+x_1+%3D+%5Cbegin%7Bbmatrix%7D+1%5C%5Ci+%5Cend%7Bbmatrix%7D%5C%5C%0A%28A%5ET-%26lambda%3B_1I%29x_1++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A-i%26-1%5C%5C%0A1%26-i%0A%5Cend%7Bbmatrix%7Dx_1+%5Clongrightarrow+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C+%0A-i+%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%28A-%26lambda%3B_2I%29x_2++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ai%261%5C%5C%0A-1%26i%0A%5Cend%7Bbmatrix%7Dx_2+%5Clongrightarrow+x_2+%3D+%5Cbegin%7Bbmatrix%7D+1%5C%5C-i+%5Cend%7Bbmatrix%7D%5C%5C%0A%28A%5ET-%26lambda%3B_2I%29x_2++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ai%26-1%5C%5C%0A1%26i%0A%5Cend%7Bbmatrix%7Dx_2+%5Clongrightarrow+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C+%0Ai+%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cend%7Balign%2A%7D)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-1%260%0A%5Cend%7Bbmatrix%7D+%5C%5C%0AA%5ET+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A0%26-1%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%5C%5C%0Adet%28A-%26lambda%3BI%29%3Ddet%28A%5ET-%26lambda%3BI%29+%3D%26+%26lambda%3B%5E2+%2B+1+%3D+0+%5C%5C%0A%5Clongrightarrow+%26+%26lambda%3B_1+%3D+i+%5C%5C%0A%26+%26lambda%3B_2+%3D+-i%5C%5C%0A%5C%5C%0A%28A-%26lambda%3B_1I%29x_1++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A-i%261%5C%5C%0A-1%26-i%0A%5Cend%7Bbmatrix%7Dx_1+%5Clongrightarrow+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C%0Ai+%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%28A%5ET-%26lambda%3B_1I%29x_1++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A-i%26-1%5C%5C%0A1%26-i%0A%5Cend%7Bbmatrix%7Dx_1+%5Clongrightarrow+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C+%0A-i+%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%28A-%26lambda%3B_2I%29x_2++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ai%261%5C%5C%0A-1%26i%0A%5Cend%7Bbmatrix%7Dx_2+%5Clongrightarrow+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C%0A-i+%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%28A%5ET-%26lambda%3B_2I%29x_2++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ai%26-1%5C%5C%0A1%26i%0A%5Cend%7Bbmatrix%7D+x_2+%5Clongrightarrow+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C%0A-i+%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cend%7Balign%2A%7D)
