@@ -758,12 +758,169 @@ the characteristic equation of a 3x3 matrix is a third order polynomial. as such
 
 projection review:
 
+a is a vector recipient of b's projection:
+
 b shines onto a   
 shortest distance is via e that is perpendicular to a   
 so b - e arrives at xhat(a) = the endpoint that is at a percentage xhat of a that is closest to b:  
-b - e = (xhat) a   
+b - e = xhat(a)   
 b - xhat(a) = e
-[keep in mind e extends from 0, 0 in this last equation]
-a • e = a • (b - xhat) = 0 
-perpendicular
-a • b = a • xhat
+[keep in mind e extends from 0, 0 in this last equation]    
+a<sup>T</sup> • e = a<sup>T</sup>(b - xhat(a)) = 0 because perpendicular    
+a<sup>T</sup>b = a<sup>T</sup>( xhat(a)) = xhat(a<sup>T</sup>a)    
+xhat = (a<sup>T</sup>b) / (a<sup>T</sup>a) = a ratio or percentage number    
+p = xhat(a) = [(a<sup>T</sup>b) / (a<sup>T</sup>a)]a    
+p = Pb where P is a matrix and b is a vector    
+p    
+= [(a<sup>T</sup>b) / (a<sup>T</sup>a)]a = xhat(a) = a(xhat)   
+= [(aa<sup>T</sup>) / (a<sup>T</sup>a)]b = Pb    
+P = [(aa<sup>T</sup>) / (a<sup>T</sup>a)]   
+
+Note:   
+switching from p = xhat percentage of a to a matrix projection of b, note that a is switching sides in the numerator as:    
+- either xhat(a) = a(xhat) when xhat is a percent of vector a    
+- or when computing P by placing itself on the LHS of a<sup>T</sup>.    
+The way to resolve whether a is dot product with a<sup>T</sup> by being on its RHS or a matrix by a being on a<sup>T</sup>'s LHS is that a is a vector being acted on by xhat or a vector forming a matrix.
+
+
+A is a matrix surface recipient of b's projection:
+
+A is a matrix representing a surface   
+b shines onto that surface   
+the closest point from b to A, is at point Axhat on A,   
+where b - Axhat is perpendicular to A:   
+A<sup>T</sup>(b - Axhat) = zero vector = 0      
+A<sup>T</sup>b = A<sup>T</sup>Axhat    
+xhat =  (A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>b)
+p = Axhat = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>b)
+p = Pb = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>)b
+P = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>)
+
+A is a matrix surface recipient of b's projection but A is symmetric and diagonalizable to Q&Lambda;Q<sup>T</sup> or Q&Lambda;Q<sup>-1</sup>
+
+page 236   
+orthogonal matrices are excellent for computations - numbers never grow too large when lengths are fixed. stable computer odes use Q as much as possible. for projections onto subspaces all formulas involve A<sup>T</sup>A.  The entries of A<sup>T</sup>A are the dot products of a<sub>i</sub><sup>T</sup>a<sub>i</sub> of the basis vectors a<sub>i</sub>, ... , a<sub>n</sub>.  suppose the basis vectors are actually orthonormal.  the a's become q's. then A<sup>T</sup>A simplifies to Q<sup>T</sup>Q = I.  Improvments in x_hat and p and P computations.  Instead of A<sup>T</sup>A there is Q<sup>T</sup>Q but that too is replaced with a blank.   
+
+A<sup>T</sup>(b - Axhat) = zero vector = 0      
+Q<sup>T</sup>(b - Qxhat) = zero vector = 0      
+
+A<sup>T</sup>b = A<sup>T</sup>Axhat    
+Q<sup>T</sup>b = Q<sup>T</sup>Qxhat    
+
+A<sup>T</sup>Axhat = A<sup>T</sup>b    
+Q<sup>T</sup>Qxhat = Q<sup>T</sup>b    
+
+xhat =  (A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>b)
+xhat =  (Q<sup>T</sup>Q)<sup>-1</sup>(Q<sup>T</sup>b)
+xhat =  (I)(Q<sup>T</sup>b)
+xhat =  Q<sup>T</sup>b
+
+p = Axhat = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>b)
+p = Qxhat = Q(Q<sup>T</sup>Q)<sup>-1</sup>(Q<sup>T</sup>b)
+p = Qxhat = Q(I)(Q<sup>T</sup>b)
+p = Qxhat = QQ<sup>T</sup>b
+p = Qxhat = Qxhat
+
+p = Pb = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>)b
+p = Pb = Q(Q<sup>T</sup>Q)<sup>-1</sup>(Q<sup>T</sup>)b
+p = Pb = Q(I)(Q<sup>T</sup>)b
+
+P = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>)
+P = Q(Q<sup>T</sup>Q)<sup>-1</sup>(Q<sup>T</sup>)
+P = QQ<sup>T</sup>
+
+no matrices to invert which is the point of an orthonormal basis.  the best xhat = Q<sup>T</sup>b just has  dot products of q<sub>1</sub>, ... , q<sub>n</sub> with b.  these are one dimensional projections!  the "coupling matrix" or "correlation matrix" A<sup>T</sup>A is now Q<sup>T</sup>Q = I.  
+**there is no coupling**   Wgeb A us Q with orthonormal columns, here is p = Qxhat = QQ<sup>T</sup>b:
+
+![\begin{align*}
+p = 
+\begin{bmatrix}
+q_1&...&q_n
+\end{bmatrix}
+\begin{bmatrix}
+q_1^Tb\\
+...\\
+q_n^Tb
+\end{bmatrix}=
+q_1(q_1^Tb) + ... + q_n(q_n^Tb)
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ap+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%26...%26q_n%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%5ETb%5C%5C%0A...%5C%5C%0Aq_n%5ETb%0A%5Cend%7Bbmatrix%7D%3D%0Aq_1%28q_1%5ETb%29+%2B+...+%2B+q_n%28q_n%5ETb%29%0A%5Cend%7Balign%2A%7D)
+
+important case:   
+when Q is square and m = n, the subspace is the whole space.
+then Q<sup>T</sup> = Q<sup>-1</sup> and xhat = Q<sup>T</sup>b is the same as x = Q<sup>-1</sup>b.  The solution is exact! The projection of b onto the whole space is b itself (no e)  In this case p = b and P = QQ<sup>T</sup> = I.  
+
+when p = b the formula assembles b out of its  1-dimensional projections.   
+if q<sub>1</sub>, ..., q<sub>n</sub> is an orthonormal basis for the whole space then Q is square.  Every b = QQ<sup>T<sup>b is the sum of its components along the q's:
+
+b = q<sub>1</sub>(q<sub>1</sub><sup>T</sup>b) + ... + q<sub>n</sub>(q<sub>n</sub><sup>T</sup>b)
+
+transforms:   
+QQ<sup>T</sup> = I is the foundation of Fourier series and all great transforms of applied mathematics.  They break vectors b or functions f(x)  into perpendicular pieces.  they by adding the pieces in the above equation together, teh inverse transform puts b and f(x) back together. 
+
+example: 
+
+the columns of tis orthogonal Q are orthonormal vectors q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub>
+
+the separate projections of b = (0,0,1) onto q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub> are p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub>
+
+the sum of the first two is the projection of b onto the the plane of q<sub>1</sub> and q<sub>2</sub>.   
+
+the sum of all three is the projection of b onto the whole space = q<sub>1</sub>, q<sub>2</sub>, q<sub>3</sub> which is p<sub>1</sub> + p<sub>2</sub> + p<sub>3</sub> = b itself. 
+
+this leads to gram-schmidt processes.
+
+![\begin{align*}
+m = n & = 3 \\ 
+Q &= \frac{1}{3}
+\begin{bmatrix}
+-1&2&2\\
+2&-1&2\\
+2&2&-1
+\end{bmatrix}\\
+\\
+I& = Q^TQ = QQ^T\\
+\\
+b& = 
+\begin{bmatrix}
+0\\0\\1
+\end{bmatrix}\\
+\\
+q_1(q_1^Tb) &= q_1(q_1^T 
+\begin{bmatrix} 
+0\\0\\1 
+\end{bmatrix} ) = 
+\frac{2}{3}q_1\\
+q_2(q_2^Tb) &= q_2(q_2^T
+\begin{bmatrix} 
+0\\0\\1 
+\end{bmatrix} ) = 
+\frac{2}{3}q_2\\
+q_3(q_3^Tb) &= q_3(q_3^T 
+\begin{bmatrix} 
+0\\0\\1 
+\end{bmatrix} ) = 
+\frac{1}{3}q_3\\
+q_1(q_1^Tb) + ... + q_n(q_n^Tb) \\
+\\
+b & = p_1+p_2+p+3 \\
+&= \frac{2}{3}q_1 +\frac{2}{3}q_2 +\frac{1}{3}q_3 \\
+&= \frac{2}{3}(\frac{1}{3} \begin{bmatrix} -1\\2\\2 \end{bmatrix} )
++\frac{2}{3}(\frac{1}{3} \begin{bmatrix} 2\\-1\\2 \end{bmatrix} )
++\frac{1}{3}(\frac{1}{3} \begin{bmatrix} 2\\2\\-1 \end{bmatrix} ) \\
+&= \frac{1}{9}
+\begin{bmatrix}
+-2+4-2\\
+4-2-2\\
+4+4+1
+\end{bmatrix} \\
+& = 
+\begin{bmatrix} 
+0\\0\\1 
+\end{bmatrix}  
+= b
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Am+%3D+n+%26+%3D+3+%5C%5C+%0AQ+%26%3D+%5Cfrac%7B1%7D%7B3%7D%0A%5Cbegin%7Bbmatrix%7D%0A-1%262%262%5C%5C%0A2%26-1%262%5C%5C%0A2%262%26-1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0AI%26+%3D+Q%5ETQ+%3D+QQ%5ET%5C%5C%0A%5C%5C%0Ab%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C0%5C%5C1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Aq_1%28q_1%5ETb%29+%26%3D+q_1%28q_1%5ET+%0A%5Cbegin%7Bbmatrix%7D+%0A0%5C%5C0%5C%5C1+%0A%5Cend%7Bbmatrix%7D+%29+%3D+%0A%5Cfrac%7B2%7D%7B3%7Dq_1%5C%5C%0Aq_2%28q_2%5ETb%29+%26%3D+q_2%28q_2%5ET%0A%5Cbegin%7Bbmatrix%7D+%0A0%5C%5C0%5C%5C1+%0A%5Cend%7Bbmatrix%7D+%29+%3D+%0A%5Cfrac%7B2%7D%7B3%7Dq_2%5C%5C%0Aq_3%28q_3%5ETb%29+%26%3D+q_3%28q_3%5ET+%0A%5Cbegin%7Bbmatrix%7D+%0A0%5C%5C0%5C%5C1+%0A%5Cend%7Bbmatrix%7D+%29+%3D+%0A%5Cfrac%7B1%7D%7B3%7Dq_3%5C%5C%0Aq_1%28q_1%5ETb%29+%2B+...+%2B+q_n%28q_n%5ETb%29+%5C%5C%0A%5C%5C%0Ab+%26+%3D+p_1%2Bp_2%2Bp%2B3+%5C%5C%0A%26%3D+%5Cfrac%7B2%7D%7B3%7Dq_1+%2B%5Cfrac%7B2%7D%7B3%7Dq_2+%2B%5Cfrac%7B1%7D%7B3%7Dq_3+%5C%5C%0A%26%3D+%5Cfrac%7B2%7D%7B3%7D%28%5Cfrac%7B1%7D%7B3%7D+%5Cbegin%7Bbmatrix%7D+-1%5C%5C2%5C%5C2+%5Cend%7Bbmatrix%7D+%29%0A%2B%5Cfrac%7B2%7D%7B3%7D%28%5Cfrac%7B1%7D%7B3%7D+%5Cbegin%7Bbmatrix%7D+2%5C%5C-1%5C%5C2+%5Cend%7Bbmatrix%7D+%29%0A%2B%5Cfrac%7B1%7D%7B3%7D%28%5Cfrac%7B1%7D%7B3%7D+%5Cbegin%7Bbmatrix%7D+2%5C%5C2%5C%5C-1+%5Cend%7Bbmatrix%7D+%29+%5C%5C%0A%26%3D+%5Cfrac%7B1%7D%7B9%7D%0A%5Cbegin%7Bbmatrix%7D%0A-2%2B4-2%5C%5C%0A4-2-2%5C%5C%0A4%2B4%2B1%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%26+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A0%5C%5C0%5C%5C1+%0A%5Cend%7Bbmatrix%7D++%0A%3D+b%0A%5Cend%7Balign%2A%7D)
+
+14.  every 2x2 symmetric matrix is &lambda;<sub>1</sub>x<sub>1</sub>x<sub>1</sub><sup>T</sup> + &lambda;<sub>2</sub>x<sub>2</sub>x<sub>2</sub><sup>T</sup> = &lambda;<sub>1</sub>P<sub>1</sub> + &lambda;<sub>2</sub>P<sub>2</sub>   
+Explain P<sub>1</sub> + P<sub>2</sub> = x<sub>1</sub>x<sub>1</sub><sup>T</sup> + x<sub>2</sub>x<sub>2</sub><sup>T</sup> = I from columns times rows of PQ.  Why is P<sub>1</sub> P<sub>2</sub> = 0?
+
+{x<sub>1, x<sub>2} is a Q matrix so P<sub>1</sub> + P<sub>2</sub> = x<sub>1</sub>x<sub>1</sub><sup>T<sup> + x<sub>2</sub>x<sub>2</sub><sup>T<sup> = I because ||
