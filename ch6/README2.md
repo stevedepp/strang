@@ -801,7 +801,7 @@ A is a matrix surface recipient of b's projection but A is symmetric and diagona
 page 236   
 orthogonal matrices are excellent for computations - numbers never grow too large when lengths are fixed. stable computer odes use Q as much as possible. for projections onto subspaces all formulas involve A<sup>T</sup>A.  The entries of A<sup>T</sup>A are the dot products of a<sub>i</sub><sup>T</sup>a<sub>i</sub> of the basis vectors a<sub>i</sub>, ... , a<sub>n</sub>.  suppose the basis vectors are actually orthonormal.  the a's become q's. then A<sup>T</sup>A simplifies to Q<sup>T</sup>Q = I.  Improvments in x_hat and p and P computations.  Instead of A<sup>T</sup>A there is Q<sup>T</sup>Q but that too is replaced with a blank.   
 
-A<sup>T</sup>(b - Axhat) = zero vector = 0      
+A<sup>T</sup>(b - Axhat) = zero vector = 0        
 Q<sup>T</sup>(b - Qxhat) = zero vector = 0      
 
 A<sup>T</sup>b = A<sup>T</sup>Axhat    
@@ -810,25 +810,27 @@ Q<sup>T</sup>b = Q<sup>T</sup>Qxhat
 A<sup>T</sup>Axhat = A<sup>T</sup>b    
 Q<sup>T</sup>Qxhat = Q<sup>T</sup>b    
 
-xhat =  (A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>b)
-xhat =  (Q<sup>T</sup>Q)<sup>-1</sup>(Q<sup>T</sup>b)
-xhat =  (I)(Q<sup>T</sup>b)
-xhat =  Q<sup>T</sup>b
+xhat =  (A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>b)    
+xhat =  (Q<sup>T</sup>Q)<sup>-1</sup>(Q<sup>T</sup>b)    
+xhat =  (I)(Q<sup>T</sup>b)    
+xhat =  Q<sup>T</sup>b    
 
-p = Axhat = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>b)
-p = Qxhat = Q(Q<sup>T</sup>Q)<sup>-1</sup>(Q<sup>T</sup>b)
-p = Qxhat = Q(I)(Q<sup>T</sup>b)
-p = Qxhat = QQ<sup>T</sup>b
-p = Qxhat = Qxhat
+p = Axhat = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>b)    
+p = Qxhat = Q(Q<sup>T</sup>Q)<sup>-1</sup>(Q<sup>T</sup>b)    
+p = Qxhat = Q(I)(Q<sup>T</sup>b)    
+p = Qxhat = QQ<sup>T</sup>b    
+p = Qxhat = Qxhat    
 
-p = Pb = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>)b
-p = Pb = Q(Q<sup>T</sup>Q)<sup>-1</sup>(Q<sup>T</sup>)b
-p = Pb = Q(I)(Q<sup>T</sup>)b
+p = Pb = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>)b    
+p = Pb = Q(Q<sup>T</sup>Q)<sup>-1</sup>(Q<sup>T</sup>)b    
+p = Pb = Q(I)(Q<sup>T</sup>)b    
+if Q square: p = Pb = Q(I)(Q<sup>T</sup>)b = QQ<sup>T</sup>b = Ib = b   
 
-P = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>)
-P = Q(Q<sup>T</sup>Q)<sup>-1</sup>(Q<sup>T</sup>)
-P = QQ<sup>T</sup>
-
+P = A(A<sup>T</sup>A)<sup>-1</sup>(A<sup>T</sup>)    
+P = Q(Q<sup>T</sup>Q)<sup>-1</sup>(Q<sup>T</sup>)    
+P = QQ<sup>T</sup>    
+if Q sqaure: P = QQ<sup>T</sup> = I   
+ 
 no matrices to invert which is the point of an orthonormal basis.  the best xhat = Q<sup>T</sup>b just has  dot products of q<sub>1</sub>, ... , q<sub>n</sub> with b.  these are one dimensional projections!  the "coupling matrix" or "correlation matrix" A<sup>T</sup>A is now Q<sup>T</sup>Q = I.  
 **there is no coupling**   Wgeb A us Q with orthonormal columns, here is p = Qxhat = QQ<sup>T</sup>b:
 
@@ -923,4 +925,36 @@ b & = p_1+p_2+p+3 \\
 14.  every 2x2 symmetric matrix is &lambda;<sub>1</sub>x<sub>1</sub>x<sub>1</sub><sup>T</sup> + &lambda;<sub>2</sub>x<sub>2</sub>x<sub>2</sub><sup>T</sup> = &lambda;<sub>1</sub>P<sub>1</sub> + &lambda;<sub>2</sub>P<sub>2</sub>   
 Explain P<sub>1</sub> + P<sub>2</sub> = x<sub>1</sub>x<sub>1</sub><sup>T</sup> + x<sub>2</sub>x<sub>2</sub><sup>T</sup> = I from columns times rows of PQ.  Why is P<sub>1</sub> P<sub>2</sub> = 0?
 
-{x<sub>1</sub>, x<sub>2</sub>} is a Q matrix so P<sub>1</sub> + P<sub>2</sub> = x<sub>1</sub>x<sub>1</sub><sup>T</sup> + x<sub>2</sub>x<sub>2</sub><sup>T</sup> = I because ||
+becuase A = S = S<sup>T</sup>, 
+{x<sub>1</sub>, x<sub>2</sub>} is a Q matrix so P<sub>1</sub> + P<sub>2</sub> = x<sub>1</sub>x<sub>1</sub><sup>T</sup> + x<sub>2</sub>x<sub>2</sub><sup>T</sup> = I   
+because ||x<sub>1</sub>|| = ||x<sub>2</sub>|| = 1 and x<sub>1</sub><sup>T</sup>x<sub>2</sub> = 0  
+
+
+P<sub>1</sub>P<sub>2</sub> = 0 
+- because P<sub>1</sub>P<sub>2</sub> = x<sub>1</sub>x<sub>1</sub><sup>T</sup> x<sub>2</sub>x<sub>2</sub><sup>T</sup> = 0   
+- also because P<sub>1</sub> + P<sub>2</sub> = I and then   
+P<sub>1</sub> = I - P<sub>2</sub> or P<sub>2</sub> = I - P<sub>1</sub>   
+so P<sub>1</sub>P<sub>2</sub> = P<sub>1</sub>(I - P<sub>1</sub>) = P<sub>1</sub> - P<sub>2</sub><sup>2</sup> = P<sub>1</sub> - P<sub>2</sub> = 0
+
+every 2x2 symmetric marix system can be written as A = &lambda;<sub>1</sub>x<sub>1</sub>x<sub>1</sub><sup>T</sup> + &lambda;<sub>2</sub>x<sub>2</sub>x<sub>2</sub><sup>T</sup> = &lambda;<sub>1</sub>P<sub>1</sub> + &lambda;<sub>2</sub>P<sub>2</sub>
+where P<sub>1</sub> and P<sub>2</sub> are projection matrices 
+if x<sub>1</sub> and x<sub>2</sub> are orthogonal to one another and unit length then the projection matrices sum = I and product = zero.
+
+S = Q&Lambda;Q<sup>T</sup> = &lambda;<sub>1</sub>q<sub>1</sub>q<sub>1</sub><sup>T</sup> + &lambda;<sub>2</sub>q<sub>2</sub>q<sub>2</sub><sup>T</sup>
+
+P is derived:   
+Axhat = b when Ax ≠ b   
+Axhat is projection of b on to A  
+Axhat + e = b   
+solving for xhat:  
+Axhat = b --> A<sup>T</sup>Axhat = A<sup>T</sup>b --> xhat = (A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b --> p = Axhat = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b = **P** b = **(A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>)** b where P = A(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>
+
+then, finding orthogonal basis vectors for A in q's: A<sup>T</sup>A becomes Q<sup>T</sup>Q = I   
+thus:   
+xhat = Q<sup>T</sup>b   
+p = Qxhat   
+P = QQ<sup>T</sup>  
+p = Pb   
+
+if Q is square then Q<sup>T</sup> = Q<sup>-1</sup> maps all space:  
+p = Qxhat = Qx = b = Pb = QQ<sup>T</sup>b = Ib = b
