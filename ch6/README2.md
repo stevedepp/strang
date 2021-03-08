@@ -1044,11 +1044,14 @@ det A-&lambda;I &= det \begin{bmatrix}i-&lambda;&1\\1&i-&lambda;\end{bmatrix}=0\
 Az = &lambda;y  
 A<sup>T</sup>y = &lambda;z
 
-multiply both sides of 1st equation by A<sup>T</sup> to reveal that &lambda;<sup>2</sup> is an eigenvalue of A<sup>T</sup>A.  Thus if A = I then &pm; 1 is an eigenvalue of A and two of &pm; 1 are 4 eigenvalues of S: 1-1+1-1 = 0 = trace<sub>S</sub> and det S = 0 • 0 - (I • I) = -I<sup>2</sup> should match the product of the eigenvalues which is +1 not -1, but this says det S = 1 so it concurs with logic of det S = product of eigenvalues +1, -1, +1, -1.
+multiply both sides of 1st equation by A<sup>T</sup> to reveal that &lambda;<sup>2</sup> is an eigenvalue of A<sup>T</sup>A.  (This algebra shown below the python code below.)
+
+Thus if A = I then &pm; 1 is an eigenvalue of A and two of &pm; 1 are 4 eigenvalues of S: 1-1+1-1 = 0 = trace<sub>S</sub> and det S = 0 • 0 - (I • I) = -I<sup>2</sup> should match the product of the eigenvalues which is +1 not -1, but this says det S = 1 so it concurs with logic of det S = product of eigenvalues +1, -1, +1, -1.
 
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/110359280-4c6adf00-800b-11eb-8fab-834fa582ee45.png">
 
-
+19.  if A = (1,1) then eigenvalues are zero, and &pm; √2   
+and inciidentally (not shown) eigenvectors are (1,-1,0), (1,1,√2), (1,1,-√2)
 
 
 ![\begin{align*}
@@ -1108,4 +1111,13 @@ det (\begin{bmatrix}
 & \longrightarrow &lambda; = 0,  +\sqrt{2}, -\sqrt{2}
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%26A%5C%5C%0AA%5ET%260%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%5C%5C%0ASx+%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0%26A%5C%5C%0AA%5ET%260%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Az%0A%5Cend%7Bbmatrix%7D+%3D+%26lambda%3B+%0A%5Cbegin%7Bbmatrix%7D%0Ay%5C%5C%0Az%0A%5Cend%7Bbmatrix%7D+%3D+%26lambda%3Bx+%0A%5C%5C%0A%5Clongrightarrow+%26%0A+Az+%3D+%26lambda%3By+%5C%5C%0A%26+A%5ETy+%3D+%26lambda%3Bz%5C%5C%0A%5C%5C%0A%26A%5ET%28Az+%3D+%26lambda%3By%29+%5C%5C%0A%26A%5ETAz+%3D+%26lambda%3BA%5ETy+%5C%5C%0A%26A%5ETAz+%3D+%26lambda%3B%5E2z+%5C%5C%0A%5Clongrightarrow+%26+%26lambda%3B_%7BA%5ETA%7D+%3D+%26lambda%3B%5E2+%3D+%5Cpm+%26lambda%3B%5C%5C%0A%5C%5C%0AA%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D+%5C%5C%0AS+%3D+%26%0A%5Cbegin%7Bbmatrix%7D%0A%26%261%5C%5C%0A%26%261%5C%5C%0A1%261%26%0A%5Cend%7Bbmatrix%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0%260%261%5C%5C%0A0%260%261%5C%5C%0A1%261%260%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Adet+%28S+-+%26lambda%3BI%29+%26%3D+%0Adet+%28%5Cbegin%7Bbmatrix%7D%0A-%26lambda%3B%260%261%5C%5C%0A0%26-%26lambda%3B%261%5C%5C%0A1%261%26-+%26lambda%3B%26%0A%5Cend%7Bbmatrix%7D%29+%5C%5C%0A%26%3D+-%26lambda%3B%28%26lambda%3B%5E2-1%29+%2B+1%2A%280-%281%2A-%26lambda%3B%29%29+%3D+-%26lambda%3B%28%26lambda%3B%5E2-2%29%3D0+%5C%5C%0A%26+%5Clongrightarrow+%26lambda%3B+%3D+0%2C++%2B%5Csqrt%7B2%7D%2C+-%5Csqrt%7B2%7D%0A%5Cend%7Balign%2A%7D)
 
+
+
+20.  Another proof that eigenvectors are perpendicular when S = S<sup>T</sup> in 2 steps:   
+1. suppose Sx = &lambda;x and Sy = &phi;y and &lamnda; ≠ 0   
+then y is in the null space [presumably because 0y = 0]   
+and x is in the column space   
+which are perpendicular to one another.  
+
+if 
 
