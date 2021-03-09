@@ -1364,3 +1364,38 @@ cos &theta; &= \frac{v^Tw}{||v|| \, ||w||} \\
 & = acos \frac{1}{\sqrt{2}} \\
 & = \pi \frac{45^\circ}{180^\circ}
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%2610%5E%7B-15%7D%5C%5C%0A0%261%2B10%5E%7B-15%7D%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%5C%5C%0Adet%28A-%26lambda%3BI%29+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1-%26lambda%3B%2610%5E%7B-15%7D%5C%5C%0A0%261%2B10%5E%7B-15%7D+-+%26lambda%3B%0A%5Cend%7Bbmatrix%7D++%3D++%281-%26lambda%3B%29%281%2B10%5E%7B-15%7D+-+%26lambda%3B%29+-+0%2A10%5E%7B-15%7D+%5Clongrightarrow+%26lambda%3B+%3D1%2C1%2B10%5E%7B-15%7D+%5C%5C%0A%5C%5C%0A%28A-%26lambda%3B_1I%29x_1++%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1-1%2610%5E%7B-15%7D%5C%5C%0A0%261%2B10%5E%7B-15%7D-1%0A%5Cend%7Bbmatrix%7Dx_1+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0%2610%5E%7B-15%7D%5C%5C%0A0%2610%5E%7B-15%7D%0A%5Cend%7Bbmatrix%7Dx_1+%0A%5Clongrightarrow+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C+%0A0+%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%5C%5C%0A%28A-%26lambda%3B_2I%29x_2++%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1-%281%2B10%5E%7B-15%7D%29%2610%5E%7B-15%7D%5C%5C%0A0%261%2B10%5E%7B-15%7D-%281%2B10%5E%7B-15%7D%29%0A%5Cend%7Bbmatrix%7Dx_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-10%5E%7B-15%7D%2610%5E%7B-15%7D%5C%5C%0A0%260%0A%5Cend%7Bbmatrix%7Dx_2+%0A%5Clongrightarrow+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C+%0A1+%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Acos+%26theta%3B+%26%3D+%5Cfrac%7Bv%5ETw%7D%7B%7C%7Cv%7C%7C+%5C%2C+%7C%7Cw%7C%7C%7D+%5C%5C%0A%26theta%3B+%26%3D+acos+%28%5Cfrac%7Bv%5ETw%7D%7B%7C%7Cv%7C%7C+%5C%2C+%7C%7Cw%7C%7C%7D%29++%5C%5C%0A%26%3D+acos+%28%5Cfrac%7B%0A%5Cbegin%7Bbmatrix%7D+1%26+0+%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D+1%5C%5C+1+%0A%5Cend%7Bbmatrix%7D%7D%0A%7B%5Csqrt%7B1%5E2%2B0%5E2%7D+%5C%2C%5Csqrt%7B1%5E2%2B1%5E2%7D%7D%29+%5C%5C%0A%26+%3D+acos+%5Cfrac%7B1%7D%7B1%2A%5Csqrt%7B2%7D%7D+%5C%5C%0A%26+%3D+acos+%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D+%5C%5C%0A%26+%3D+%5Cpi+%5Cfrac%7B45%5E%5Ccirc%7D%7B180%5E%5Ccirc%7D%0A%5Cend%7Balign%2A%7D)
+
+
+30.  for complex matrices, S<sup>T</sup> = S the produces real eigenvalues must change to Sbar<sup>T</sup> = S.  From det (S - &lambda;I) = 0 find the eigenvalues of the 2x2 Hermitian matrix S = [[4, 2+i], [2-i, 0]] = S_bar<sup>T</sup>  
+
+det S - &lambda;I = -&lambda;(4-&lambda;) - (2+i)(2-i) = &lambda;<sup>2</sup> - 4&lambda; - 5 = (&lambda;-5)(&lambda;+1) --> &lambda; = 5, -1
+
+this solution proves that &lambda;s are real when S_bar<sup>T</sup> = S.
+
+31.  Normal matrices have N_bar<sup>T</sup>N = NN_bar<sup>T</sup>.  
+[normal allows transpose to commute]  Normal includes symmetric, skew symmetric and orthogonal (with real |&lambda;, imaginary |&lambda; and |&lambda;|=1).  Other normal matrices can have only complex eigenvalues.  Key point is normal matrices have n orthonormal eigenvectors.  THose vectors x<sub>i</sub> probably will have complex components.  In that complex case, orthogonality means x_bar<sub>i</sub><sup>T</sup>x<sub>i</sub> = 0 [imaginary cancel to -1].  Inner produces (dots) x<sup>T</sup>y become x_bar<sup>T</sup>y.
+
+The test for n orthonormal columns in Q becomes Q_bar<sup>T</sup>Q = I instead of Q<sup>T</sup>Q = I
+
+N has n orthonormal eigenvectors (N = Q&Lambda;Q_bar<sup>T</sup>) if and only if N is normal.  
+
+a. start from N = Q&Lambda;Q_bar<sup>T</sup> with Q_bar<sup>T</sup>Q = I.  Show N_bar<sup>T</sup>N = NN_bar<sup>T</sup>.  N is normal.  
+
+b. Now start from N_bar<sup>T</sup>N = NN_bar<sup>T</sup>.   Schur found A = QTQ_bar<sup>T</sup> for every matrix A with a triangular T.  For normal matrices A = N we must show (3 steps) that this triangular matrix T will be diagonal and then T = &Lambda.
+
+1. Put N = QTQ_bar<sup>T</sup> into N_bar<sup>T</sup>N = NN_bar<sup>T</sup> to find T_bar<sup>T</sup>T = TT_bar<sup>T</sup>
+
+N = Q&Lambda;Q_bar<sup>T</sup> with Q_bar<sup>T</sup>Q = I   
+A = Q&lambda;Q_bar<sup>T</sup> times A<sup>T</sup> = Q&Lambda;_bar<sup>T</sup>Q_bar<sup>T</sup> = A_bar<sup>T</sup>A because Q = Q_bar<sup>T</sup> and &Lambda;&Lambda;_bar<sup>T</sup> = &Lambda;_bar<sup>T</sup>&Lambda;
+
+Diagonal!
+
+![\begin{align*}
+\overline{A}^T ( Q&Lambda; \overline{Q}^T ) = Q \overline{&Lambda;}^T \overline{Q}^T ( Q&Lambda; \overline{Q}^T ) = Q \overline{&Lambda;}^T I &Lambda; \overline{Q}^T
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Coverline%7BA%7D%5ET+%28+Q%26Lambda%3B+%5Coverline%7BQ%7D%5ET+%29+%3D+Q+%5Coverline%7B%26Lambda%3B%7D%5ET+%5Coverline%7BQ%7D%5ET+%28+Q%26Lambda%3B+%5Coverline%7BQ%7D%5ET+%29+%3D+Q+%5Coverline%7B%26Lambda%3B%7D%5ET+I+%26Lambda%3B+%5Coverline%7BQ%7D%5ET%0A%5Cend%7Balign%2A%7D)
+
+2. suppose T = [[a,b],[0,d]] has T_bar<sup>T</sup>T = TT_bar<sup>T</sup> prove that b = 0
+
+4. extend step 2 to size n.  Any normal triangular T must be diagonal. 
+
+
