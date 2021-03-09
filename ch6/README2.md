@@ -1277,3 +1277,90 @@ i&-1\\
 -i 
 \end{bmatrix}\\
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A0%261%5C%5C%0A-1%260%0A%5Cend%7Bbmatrix%7D+%5C%5C%0AA%5ET+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A0%26-1%5C%5C%0A1%260%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%5C%5C%0Adet%28A-%26lambda%3BI%29%3Ddet%28A%5ET-%26lambda%3BI%29+%3D%26+%26lambda%3B%5E2+%2B+1+%3D+0+%5C%5C%0A%5Clongrightarrow+%26+%26lambda%3B_1+%3D+i+%5C%5C%0A%26+%26lambda%3B_2+%3D+-i%5C%5C%0A%5C%5C%0A%28A-%26lambda%3B_1I%29x_1++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A-i%261%5C%5C%0A-1%26-i%0A%5Cend%7Bbmatrix%7Dx_1+%5Clongrightarrow+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C%0Ai+%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%28A%5ET-%26lambda%3B_1I%29x_1++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A-i%26-1%5C%5C%0A1%26-i%0A%5Cend%7Bbmatrix%7Dx_1+%5Clongrightarrow+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C+%0A-i+%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%28A-%26lambda%3B_2I%29x_2++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ai%261%5C%5C%0A-1%26i%0A%5Cend%7Bbmatrix%7Dx_2+%5Clongrightarrow+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C%0A-i+%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%28A%5ET-%26lambda%3B_2I%29x_2++%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ai%26-1%5C%5C%0A1%26i%0A%5Cend%7Bbmatrix%7D+x_2+%5Clongrightarrow+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C%0A-i+%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5Cend%7Balign%2A%7D)
+
+
+26. what number b in A = [[2,b],[1,0]] makes A = Q&Lambda;Q<sup>T</sup> possible? makes diagonalization impossible, makes A singular ?
+
+1 makes Q&Lambda;Q<sup>T</sup> possible because symmetry makes possible orthogonal diagonalization.    
+-1 makes diagonalization impossible since (&lambda; -1)<sup>2</sup> has repeated eigenvalues with insufficient eigenvector and thus the eigenvector matrix wont have independent vectors.
+
+0 makes A singular. 
+
+27. find all 2x2 matrices that are orthogonal and symmetric. which 2 numbers can be eigenvalues of these 2 matrices ?   
+
+orthogonal and symmetric matrices require |&lambda;| = 1 and &lambda; real.  So &lambda; = &pm; 1.  
+
+1st matrix:   
+so S 
+= &pm; I 
+or 
+2nd matrix:  
+S 
+= Q&Lambda;Q<sup>T</sup>  
+= [[cos &theta;, -sin &theta;], [sin &theta;, cos &theta;]] [[1,0],[0,-1]] [[cos &theta;, sin &theta;],[-sin &theta;, cos &theta;]] 
+= [[cos 2&theta;, sin 2&theta;],[sin 2&theta;, -cos 2&theta;]]
+
+28. A is nearly symmetric but eigenvectors are far from orthogonal.
+
+whats the angle between them ?
+
+eigenvectors (1,0) and (1,1) give 45 degrees even thought the A<sup>T</sup> is very close to A.  
+
+The point is that eigenvectors are blunt instrument. 
+
+![\begin{align*}
+A &=
+\begin{bmatrix}
+1&10^{-15}\\
+0&1+10^{-15}
+\end{bmatrix} \\
+\\
+det(A-&lambda;I) &=
+\begin{bmatrix}
+1-&lambda;&10^{-15}\\
+0&1+10^{-15} - &lambda;
+\end{bmatrix}  =  (1-&lambda;)(1+10^{-15} - &lambda;) - 0*10^{-15} \longrightarrow &lambda; =1,1+10^{-15} \\
+\\
+(A-&lambda;_1I)x_1  &= 
+\begin{bmatrix}
+1-1&10^{-15}\\
+0&1+10^{-15}-1
+\end{bmatrix}x_1 = 
+\begin{bmatrix}
+0&10^{-15}\\
+0&10^{-15}
+\end{bmatrix}x_1 
+\longrightarrow x_1 = 
+\begin{bmatrix} 
+1\\ 
+0 
+\end{bmatrix}\\
+\\
+\\
+(A-&lambda;_2I)x_2  &= 
+\begin{bmatrix}
+1-(1+10^{-15})&10^{-15}\\
+0&1+10^{-15}-(1+10^{-15})
+\end{bmatrix}x_2 = 
+\begin{bmatrix}
+-10^{-15}&10^{-15}\\
+0&0
+\end{bmatrix}x_2 
+\longrightarrow x_2 = 
+\begin{bmatrix} 
+1\\ 
+1 
+\end{bmatrix}\\
+\\
+cos &theta; &= \frac{v^Tw}{||v|| \, ||w||} \\
+&theta; &= acos (\frac{v^Tw}{||v|| \, ||w||})  \\
+&= acos (\frac{
+\begin{bmatrix} 1& 0 
+\end{bmatrix}
+\begin{bmatrix} 1\\ 1 
+\end{bmatrix}}
+{\sqrt{1^2+0^2} \,\sqrt{1^2+1^2}}) \\
+& = acos \frac{1}{1*\sqrt{2}} \\
+& = acos \frac{1}{\sqrt{2}} \\
+& = \pi \frac{45^\circ}{180^\circ}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AA+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%2610%5E%7B-15%7D%5C%5C%0A0%261%2B10%5E%7B-15%7D%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%5C%5C%0Adet%28A-%26lambda%3BI%29+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1-%26lambda%3B%2610%5E%7B-15%7D%5C%5C%0A0%261%2B10%5E%7B-15%7D+-+%26lambda%3B%0A%5Cend%7Bbmatrix%7D++%3D++%281-%26lambda%3B%29%281%2B10%5E%7B-15%7D+-+%26lambda%3B%29+-+0%2A10%5E%7B-15%7D+%5Clongrightarrow+%26lambda%3B+%3D1%2C1%2B10%5E%7B-15%7D+%5C%5C%0A%5C%5C%0A%28A-%26lambda%3B_1I%29x_1++%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1-1%2610%5E%7B-15%7D%5C%5C%0A0%261%2B10%5E%7B-15%7D-1%0A%5Cend%7Bbmatrix%7Dx_1+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0%2610%5E%7B-15%7D%5C%5C%0A0%2610%5E%7B-15%7D%0A%5Cend%7Bbmatrix%7Dx_1+%0A%5Clongrightarrow+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C+%0A0+%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0A%5C%5C%0A%28A-%26lambda%3B_2I%29x_2++%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1-%281%2B10%5E%7B-15%7D%29%2610%5E%7B-15%7D%5C%5C%0A0%261%2B10%5E%7B-15%7D-%281%2B10%5E%7B-15%7D%29%0A%5Cend%7Bbmatrix%7Dx_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-10%5E%7B-15%7D%2610%5E%7B-15%7D%5C%5C%0A0%260%0A%5Cend%7Bbmatrix%7Dx_2+%0A%5Clongrightarrow+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D+%0A1%5C%5C+%0A1+%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Acos+%26theta%3B+%26%3D+%5Cfrac%7Bv%5ETw%7D%7B%7C%7Cv%7C%7C+%5C%2C+%7C%7Cw%7C%7C%7D+%5C%5C%0A%26theta%3B+%26%3D+acos+%28%5Cfrac%7Bv%5ETw%7D%7B%7C%7Cv%7C%7C+%5C%2C+%7C%7Cw%7C%7C%7D%29++%5C%5C%0A%26%3D+acos+%28%5Cfrac%7B%0A%5Cbegin%7Bbmatrix%7D+1%26+0+%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D+1%5C%5C+1+%0A%5Cend%7Bbmatrix%7D%7D%0A%7B%5Csqrt%7B1%5E2%2B0%5E2%7D+%5C%2C%5Csqrt%7B1%5E2%2B1%5E2%7D%7D%29+%5C%5C%0A%26+%3D+acos+%5Cfrac%7B1%7D%7B1%2A%5Csqrt%7B2%7D%7D+%5C%5C%0A%26+%3D+acos+%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D+%5C%5C%0A%26+%3D+%5Cpi+%5Cfrac%7B45%5E%5Ccirc%7D%7B180%5E%5Ccirc%7D%0A%5Cend%7Balign%2A%7D)
