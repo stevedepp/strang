@@ -884,10 +884,10 @@ x_3
 \\ &= 2x_1^2 - 2x_1x_2 +2x_2^2 - 2x_2x_3 + 2x_3^2 
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax%5ETSx+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1+%5C%5C%0Ax_2+%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2x_1-1x_2%5C%5C%0A-1x_1%2B2x_2-1x_3%5C%5C%0A-1x_2%2B2x_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A2x_1-1x_2+%26+-1x_1%2B2x_2-1x_3+%26+-1x_2%2B2x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1+%5C%5C%0Ax_2+%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26%3D+2x_1x_1+-+1x_1x_2+-+1x_1x_2+%2B2x_2x_2+-+1x_2x_3+++-+1x_2x_3+%2B+2x_3x_3+%0A%5C%5C+%26%3D+2x_1%5E2+-+2x_1x_2+%2B2x_2%5E2+-+2x_2x_3+%2B+2x_3%5E2+%0A%5Cend%7Balign%2A%7D)
 
-1st way:
-3 independent vectors in A of S = A<sup>T</sup>A where A is a 1st difference matrix:
+**1st way:**
+3 independent vectors in A<sub>1</sub> make S = A<sub>1</sub><sup>T</sup>A<sub>1</sub> where A is a 1st difference matrix:
 
-again here it doesnt matter the order of multiplication because x<sup>T</sup>A<sup>T</sup> is just wide where Ax is tall.
+again here it doesnt matter the order of multiplication because x<sup>T</sup>A<sub>1</sub><sup>T</sup> is just wide where A<sub>1</sub>x is tall.
 
 length of Ax = || Ax || = ( (Ax)<sup>T</sup>(Ax) )<sup>1/2</sup>
 
@@ -965,3 +965,7 @@ x_1\\
 \\ & =x_1^2 + x_1^2 -x_1x_2 + x_2^2 + x_2^2 -x_2x_3 +x_3^2+ x_3^2 
 \\ & =2x_1^2 - x_1x_2 + 2x_2^2 - x_2x_3 + 2x_3^2 
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Aa_1+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1+%5C%5C%0A-1+%5C%5C%0A0+%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D+%5C%2C%0Aa_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0+%5C%5C%0A1+%5C%5C%0A-1+%5C%5C%0A0+%0A%5Cend%7Bbmatrix%7D+%5C%2C%0Aa_3+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0+%5C%5C%0A0+%5C%5C%0A1+%5C%5C%0A-1++%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Ax%5ET%26lambda%3Bx+%3D+x%5ETSx+%26%3D+x%5ETA%5ETAx+%0A%5C%5C%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-1%260%260%5C%5C%0A0%261%26-1%260%5C%5C%0A0%260%261%26-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-1%261%260%5C%5C%0A0%26-1%261%5C%5C%0A0%260%26-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1+%5C%5C%0Ax_2+%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26+%3D+%28x%5ETA%5ET%29%28Ax%29+%3D+%28Ax%29%5ET%28Ax%29+%3D+%7C%7C+Ax+%7C%7C%5E2%0A%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26-x_1%2Bx_2%26-x_2%2Bx_3%26-x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0A-x_1%2Bx_2%5C%5C%0A-x_2%2Bx_3%5C%5C%0A-x_3%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0A-x_1%2Bx_2%5C%5C%0A-x_2%2Bx_3%5C%5C%0A-x_3%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0A-x_1%2Bx_2%5C%5C%0A-x_2%2Bx_3%5C%5C%0A-x_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26%3D+x_1%5E2+%2B+%28-x_1%2Bx_2%29%5E2+%2B%28-x_2%2Bx_3%29%5E2+%2B+x_3%5E2%0A%5C%5C%26%3D+%7C%7CAx%7C%7C%5E2+%3D+%28%5Csqrt%7B%28%28Ax%29%5ET%28Ax%29%29%7D+%5C%2C+%29%5E2+%3D+%28%5Csqrt%7B%28x_1%5E2+%2B+%28-x_1%2Bx_2%29%5E2+%2B%28-x_2%2Bx_3%29%5E2+%2B+x_3%5E2%29%7D+%5C%2C%29%5E2%0A%5C%5C+%26+%3Dx_1%5E2+%2B+x_1%5E2+-x_1x_2+%2B+x_2%5E2+%2B+x_2%5E2+-x_2x_3+%2Bx_3%5E2%2B+x_3%5E2+%0A%5C%5C+%26+%3D2x_1%5E2+-+x_1x_2+%2B+2x_2%5E2+-+x_2x_3+%2B+2x_3%5E2+%0A%5Cend%7Balign%2A%7D)
+
+
+**2nd way:**   
+
