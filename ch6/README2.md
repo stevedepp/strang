@@ -889,9 +889,9 @@ x_3
 
 again here it doesnt matter the order of multiplication because x<sup>T</sup>A<sup>T</sup> is just wide where Ax is tall.
 
-length of Ax = || Ax || = ( (Ax)<sup>T</sup>(Ax) )<sup>\frac{1}{2}</sup>
+length of Ax = || Ax || = ( (Ax)<sup>T</sup>(Ax) )<sup>1/2</sup>
 
-(Ax)<sup>T</sup>(Ax) = || Ax ||<sup>2</sup> = ( ( (Ax)<sup>T</sup>(Ax) )<sup>\frac{1}{2}</sup> )<sup>2</sup>
+(Ax)<sup>T</sup>(Ax) = || Ax ||<sup>2</sup> = ( ( (Ax)<sup>T</sup>(Ax) )<sup>1/2</sup> )<sup>2</sup>
 
 ![\begin{align*}
 a_1 &= 
