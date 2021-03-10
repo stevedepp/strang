@@ -295,7 +295,7 @@ then S = A<sup>T</sup>A is positive definite
 proof:   
 pivots and eigenvalues are long to compute, but  
 the numbers of x<sup>T</sup>Sx is the same as x<sup>T</sup>A<sup>T</sup>Ax.  
-[so for the same reason as we know x<sup>T</supSx is positive so is x<sup>T</sup>A<sup>T</sup>Ax]
+[so for the same reason as we know x<sup>T</sup>Sx is positive so is x<sup>T</sup>A<sup>T</sup>Ax]
 x<sup>T</sup>Sx = x<sup>T</sup>A<sup>T</sup>Ax = (x<sup>T</sup>A<sup>T</sup>)(Ax) = (Ax)<sup>T</sup>(Ax) = || Ax ||<sup>T</sup> > 0 when x ≠ 0.  (This is [how?] the meaning of independent columns [because Ax ≠ 0 unelss x = 0 so null space is empty except x = 0?])
 Then x<sup>T</sup>Sx is the positive number || Ax ||<sup>2</sup> [= x<sup>T</sup>&lambda;x?] and the matrix S is positive definite. 
 
