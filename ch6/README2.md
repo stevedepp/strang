@@ -630,4 +630,235 @@ All three versions show that -1, 2, -1 matrix is positive definite:
 - pivots of S = (A<sup>T</sup>)(A) = (L√D)(L√D)<sup>T</sup>   
 - eigenvalues of S = (A<sup>T</sup>)(A) = (Q√&Lambda;)(Q√&Lambda;)<sup>T</sup>
 
+![\begin{align*}
+S = S^T &= 
+\begin{bmatrix}
+2&-1&\\
+-1&2&-1\\
+&-1&2
+\end{bmatrix}
+\begin{matrix}
+r_2 - (\frac{-1}{2})r_1
+\end{matrix} \longrightarrow
+\begin{bmatrix}
+2&-1&0\\
+0&\frac{3}{2}&-1\\
+0&-1&2
+\end{bmatrix}
+\begin{matrix}
+r_3 - (\frac{-2}{2})r_2
+\end{matrix} \longrightarrow
+\begin{bmatrix}
+2&-1&0\\
+0&\frac{3}{2}&-1\\
+0&0&\frac{4}{3}
+\end{bmatrix}\\
+&=E_{21}S =E_{32}E_{21}S=U \\
+&=LU \\ &=
+\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix}
+\begin{bmatrix}
+2&-\frac{1}{2}&0\\
+0&\frac{2}{3}&-\frac{2}{3}\\
+0&0&\frac{4}{3}
+\end{bmatrix} \\
+&=LDU \\ &=
+\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix}
+\begin{bmatrix}
+2&0&0\\
+0&\frac{2}{3}&0\\
+0&0&\frac{4}{3}
+\end{bmatrix}
+\begin{bmatrix}
+2&-\frac{1}{2}&0\\
+0&\frac{2}{3}&-\frac{2}{3}\\
+0&0&\frac{4}{3}
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%3D+S%5ET+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%26%5C%5C%0A-1%262%26-1%5C%5C%0A%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ar_2+-+%28%5Cfrac%7B-1%7D%7B2%7D%29r_1%0A%5Cend%7Bmatrix%7D+%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ar_3+-+%28%5Cfrac%7B-2%7D%7B2%7D%29r_2%0A%5Cend%7Bmatrix%7D+%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3DE_%7B21%7DS+%3DE_%7B32%7DE_%7B21%7DS%3DU+%5C%5C%0A%26%3DLU+%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-%5Cfrac%7B1%7D%7B2%7D%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%26-%5Cfrac%7B2%7D%7B3%7D%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%26%3DLDU+%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%260%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%260%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-%5Cfrac%7B1%7D%7B2%7D%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%26-%5Cfrac%7B2%7D%7B3%7D%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
 
+![\begin{align*}
+S = S^T &= 
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix}
+\begin{matrix}
+r_2 - (\frac{-1}{2})r_1
+\end{matrix} \longrightarrow
+\begin{bmatrix}
+2&-1&0\\
+0&\frac{3}{2}&-1\\
+0&-1&2
+\end{bmatrix}
+\begin{matrix}
+r_3 - (\frac{-2}{3})r_2
+\end{matrix} \longrightarrow
+\begin{bmatrix}
+2&-1&0\\
+0&\frac{3}{2}&-1\\
+0&0&\frac{4}{3}
+\end{bmatrix}\\
+&= 
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix}
+\begin{matrix}
+r_2 - (L_{21})r_1
+\end{matrix} \longrightarrow
+\begin{bmatrix}
+2&-1&0\\
+0&\frac{3}{2}&-1\\
+0&-1&2
+\end{bmatrix}
+\begin{matrix}
+r_3 - (L_{32})r_2
+\end{matrix} \longrightarrow
+\begin{bmatrix}
+2&-1&0\\
+0&\frac{3}{2}&-1\\
+0&0&\frac{4}{3}
+\end{bmatrix}\\
+E_{21}S &=
+\begin{bmatrix}
+1&0&0\\
+\frac{1}{2}&1&0\\
+0&0&1
+\end{bmatrix}
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix} =
+\begin{bmatrix}
+2&-1&0\\
+0&\frac{3}{2}&-1\\
+0&-1&2
+\end{bmatrix}\\
+E_{32}E_{21}S &=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&\frac{2}{3}&1
+\end{bmatrix}
+\begin{bmatrix}
+1&0&0\\
+\frac{1}{2}&1&0\\
+0&0&1
+\end{bmatrix}
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix} =
+\begin{bmatrix}
+2&-1&0\\
+0&\frac{3}{2}&-1\\
+0&0&\frac{4}{3}
+\end{bmatrix} =U \\
+E_{32}E_{21}S &=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&-L_{32}&1
+\end{bmatrix}
+\begin{bmatrix}
+1&0&0\\
+-L_{21}&1&0\\
+0&0&1
+\end{bmatrix}
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix} =
+\begin{bmatrix}
+2&-1&0\\
+0&\frac{3}{2}&-1\\
+0&0&\frac{4}{3}
+\end{bmatrix} =U \\
+S =E_{21}^{-1}E_{32}^{-1}U &=
+\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&0&1
+\end{bmatrix}
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix}
+\begin{bmatrix}
+2&-1&0\\
+0&\frac{3}{2}&-1\\
+0&0&\frac{4}{3}
+\end{bmatrix} = 
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix} =S
+ \\
+S=LU &=
+\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix}
+\begin{bmatrix}
+2&-\frac{1}{2}&0\\
+0&\frac{2}{3}&-\frac{2}{3}\\
+0&0&\frac{4}{3}
+\end{bmatrix}= 
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix} =S \\
+S=LU &=
+\begin{bmatrix}
+1&0&0\\
+L_{21}&1&0\\
+0&L_{32}&1
+\end{bmatrix}
+\begin{bmatrix}
+2&-\frac{1}{2}&0\\
+0&\frac{2}{3}&-\frac{2}{3}\\
+0&0&\frac{4}{3}
+\end{bmatrix}= 
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix} =S \\
+S=LDU &=
+\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix}
+\begin{bmatrix}
+2&0&0\\
+0&\frac{2}{3}&0\\
+0&0&\frac{4}{3}
+\end{bmatrix}
+\begin{bmatrix}
+2&-\frac{1}{2}&0\\
+0&\frac{2}{3}&-\frac{2}{3}\\
+0&0&\frac{4}{3}
+\end{bmatrix}= 
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix} =S
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%3D+S%5ET+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ar_2+-+%28%5Cfrac%7B-1%7D%7B2%7D%29r_1%0A%5Cend%7Bmatrix%7D+%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ar_3+-+%28%5Cfrac%7B-2%7D%7B3%7D%29r_2%0A%5Cend%7Bmatrix%7D+%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ar_2+-+%28L_%7B21%7D%29r_1%0A%5Cend%7Bmatrix%7D+%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ar_3+-+%28L_%7B32%7D%29r_2%0A%5Cend%7Bmatrix%7D+%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0AE_%7B21%7DS+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%260%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%5C%5C%0AE_%7B32%7DE_%7B21%7DS+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A0%261%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%260%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D+%3DU+%5C%5C%0AE_%7B32%7DE_%7B21%7DS+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A0%261%260%5C%5C%0A0%26-L_%7B32%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-L_%7B21%7D%261%260%5C%5C%0A0%260%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D+%3DU+%5C%5C%0AS+%3DE_%7B21%7D%5E%7B-1%7DE_%7B32%7D%5E%7B-1%7DU+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%260%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A0%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3DS%0A+%5C%5C%0AS%3DLU+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-%5Cfrac%7B1%7D%7B2%7D%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%26-%5Cfrac%7B2%7D%7B3%7D%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3DS+%5C%5C%0AS%3DLU+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0AL_%7B21%7D%261%260%5C%5C%0A0%26L_%7B32%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-%5Cfrac%7B1%7D%7B2%7D%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%26-%5Cfrac%7B2%7D%7B3%7D%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3DS+%5C%5C%0AS%3DLDU+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%260%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%260%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-%5Cfrac%7B1%7D%7B2%7D%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%26-%5Cfrac%7B2%7D%7B3%7D%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3DS%0A%5Cend%7Balign%2A%7D)
