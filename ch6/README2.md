@@ -885,6 +885,9 @@ x_3
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax%5ETSx+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1+%5C%5C%0Ax_2+%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2x_1-1x_2%5C%5C%0A-1x_1%2B2x_2-1x_3%5C%5C%0A-1x_2%2B2x_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A2x_1-1x_2+%26+-1x_1%2B2x_2-1x_3+%26+-1x_2%2B2x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1+%5C%5C%0Ax_2+%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26%3D+2x_1x_1+-+1x_1x_2+-+1x_1x_2+%2B2x_2x_2+-+1x_2x_3+++-+1x_2x_3+%2B+2x_3x_3+%0A%5C%5C+%26%3D+2x_1%5E2+-+2x_1x_2+%2B2x_2%5E2+-+2x_2x_3+%2B+2x_3%5E2+%0A%5Cend%7Balign%2A%7D)
 
 **1st way:**
+
+||Ax||<sup>2</sup> = x<sub>1</sub><sup>2</sup> + ( x<sub>2</sub> -  x<sub>1</sub>)<sup>2</sup> + ( x<sub>3</sub>- x<sub>2</sub>)<sup>2</sup> +  x<sub>3</sub><sup>2</sup>
+
 3 independent vectors in A<sub>1</sub> make S = A<sub>1</sub><sup>T</sup>A<sub>1</sub> where A is a 1st difference matrix:
 
 again here it doesnt matter the order of multiplication because x<sup>T</sup>A<sub>1</sub><sup>T</sup> is just wide where A<sub>1</sub>x is tall.
@@ -971,6 +974,8 @@ x_1\\
 
 
 **2nd way:**   
+
+||Ax||<sup>2</sup> = (2)(x<sub>1</sub> - (1/2)x<sub>2</sub>)<sup>2</sup> + (3/2)( x<sub>2</sub> -  (2/3)x<sub>3</sub>)<sup>2</sup> + (4/3)x<sub>3</sub><sup>2</sup>
 
 [seems that counter to book, A<sub>2</sub> = (L√D)<sup>T</sup> and A<sub>2</sub><sup>T</sup> = L√D so that A<sub>2</sub><sup>T</sup>A<sub>2</sub> = L√D(L√D)<sup>T</sup> = L√D√D<sup>T</sup>L<sup>T</sup> = L√D√DL<sup>T</sup> = LDL<sup>T</sup> = S
 
