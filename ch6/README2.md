@@ -839,8 +839,8 @@ notice because S is symmetric, it does not matter which direction we multiply th
 (1 x 3)(3 x 3)(3 x 1) ––> (1 x 3)(3 x 1)
 
 the matrix components:
-- off diagonal are summed in their symmetric positions: -1 + -1 = -2 coefficients for x<sub>12</sub> and x<sub>23</sub> crosses:  -2x<sub>12</sub> and -2x<sub>23</sub>
-- diagonals are taken as given: +2 coefficient for each of the x<sub>1</sub><sup>2</sup>, x<sub>2</sub><sup>2</sup>, x<sub>3</sub><sup>2</sup> squares: 2x<sub>1</sub><sup>2</sup>, 2x<sub>2</sub><sup>2</sup>, 2x<sub>3</sub><sup>2</sup>
+- off diagonal matrix components are summed in their symmetric positions: -1 + -1 = -2 coefficients for x<sub>12</sub> and x<sub>23</sub> crosses:  -2x<sub>12</sub> and -2x<sub>23</sub>
+- diagonal matrix components are taken as given: +2 coefficient for each of the x<sub>1</sub><sup>2</sup>, x<sub>2</sub><sup>2</sup>, x<sub>3</sub><sup>2</sup> squares: 2x<sub>1</sub><sup>2</sup>, 2x<sub>2</sub><sup>2</sup>, 2x<sub>3</sub><sup>2</sup>
 
 - result is:
 
@@ -887,3 +887,81 @@ x_3
 1st way:
 3 independent vectors in A of S = A<sup>T</sup>A where A is a 1st difference matrix:
 
+again here it doesnt matter the order of multiplication because x<sup>T</sup>A<sup>T</sup> is just wide where Ax is tall.
+
+length of Ax = || Ax || = ( (Ax)<sup>T</sup>(Ax) )<sup>\frac{1}{2}</sup>
+
+(Ax)<sup>T</sup>(Ax) = || Ax ||<sup>2</sup> = ( ( (Ax)<sup>T</sup>(Ax) )<sup>\frac{1}{2}</sup> )<sup>2</sup>
+
+![\begin{align*}
+a_1 &= 
+\begin{bmatrix}
+1 \\
+-1 \\
+0 \\
+0
+\end{bmatrix} \,
+a_2 = 
+\begin{bmatrix}
+0 \\
+1 \\
+-1 \\
+0 
+\end{bmatrix} \,
+a_3 =
+\begin{bmatrix}
+0 \\
+0 \\
+1 \\
+-1  
+\end{bmatrix}\\
+\\
+x^T&lambda;x = x^TSx &= x^TA^TAx 
+\\&=
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix}
+\begin{bmatrix}
+1&-1&0&0\\
+0&1&-1&0\\
+0&0&1&-1
+\end{bmatrix}
+\begin{bmatrix}
+1&0&0\\
+-1&1&0\\
+0&-1&1\\
+0&0&-1
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{bmatrix}
+\\ & = (x^TA^T)(Ax) = (Ax)^T(Ax) = || Ax ||^2
+\\ &=
+\begin{bmatrix}
+x_1&-x_1+x_2&-x_2+x_3&-x_3
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+-x_1+x_2\\
+-x_2+x_3\\
+-x_3
+\end{bmatrix} =
+\begin{bmatrix}
+x_1\\
+-x_1+x_2\\
+-x_2+x_3\\
+-x_3
+\end{bmatrix}^T
+\begin{bmatrix}
+x_1\\
+-x_1+x_2\\
+-x_2+x_3\\
+-x_3
+\end{bmatrix}
+\\ &= x_1^2 + (-x_1+x_2)^2 +(-x_2+x_3)^2 + x_3^2
+\\&= ||Ax||^2 = (\sqrt{((Ax)^T(Ax))} \, )^2 = (\sqrt{(x_1^2 + (-x_1+x_2)^2 +(-x_2+x_3)^2 + x_3^2)} \,)^2
+\\ & =x_1^2 + x_1^2 -x_1x_2 + x_2^2 + x_2^2 -x_2x_3 +x_3^2+ x_3^2 
+\\ & =2x_1^2 - x_1x_2 + 2x_2^2 - x_2x_3 + 2x_3^2 
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Aa_1+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1+%5C%5C%0A-1+%5C%5C%0A0+%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D+%5C%2C%0Aa_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A0+%5C%5C%0A1+%5C%5C%0A-1+%5C%5C%0A0+%0A%5Cend%7Bbmatrix%7D+%5C%2C%0Aa_3+%3D%0A%5Cbegin%7Bbmatrix%7D%0A0+%5C%5C%0A0+%5C%5C%0A1+%5C%5C%0A-1++%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Ax%5ET%26lambda%3Bx+%3D+x%5ETSx+%26%3D+x%5ETA%5ETAx+%0A%5C%5C%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-1%260%260%5C%5C%0A0%261%26-1%260%5C%5C%0A0%260%261%26-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-1%261%260%5C%5C%0A0%26-1%261%5C%5C%0A0%260%26-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1+%5C%5C%0Ax_2+%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26+%3D+%28x%5ETA%5ET%29%28Ax%29+%3D+%28Ax%29%5ET%28Ax%29+%3D+%7C%7C+Ax+%7C%7C%5E2%0A%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26-x_1%2Bx_2%26-x_2%2Bx_3%26-x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0A-x_1%2Bx_2%5C%5C%0A-x_2%2Bx_3%5C%5C%0A-x_3%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0A-x_1%2Bx_2%5C%5C%0A-x_2%2Bx_3%5C%5C%0A-x_3%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0A-x_1%2Bx_2%5C%5C%0A-x_2%2Bx_3%5C%5C%0A-x_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26%3D+x_1%5E2+%2B+%28-x_1%2Bx_2%29%5E2+%2B%28-x_2%2Bx_3%29%5E2+%2B+x_3%5E2%0A%5C%5C%26%3D+%7C%7CAx%7C%7C%5E2+%3D+%28%5Csqrt%7B%28%28Ax%29%5ET%28Ax%29%29%7D+%5C%2C+%29%5E2+%3D+%28%5Csqrt%7B%28x_1%5E2+%2B+%28-x_1%2Bx_2%29%5E2+%2B%28-x_2%2Bx_3%29%5E2+%2B+x_3%5E2%29%7D+%5C%2C%29%5E2%0A%5C%5C+%26+%3Dx_1%5E2+%2B+x_1%5E2+-x_1x_2+%2B+x_2%5E2+%2B+x_2%5E2+-x_2x_3+%2Bx_3%5E2%2B+x_3%5E2+%0A%5C%5C+%26+%3D2x_1%5E2+-+x_1x_2+%2B+2x_2%5E2+-+x_2x_3+%2B+2x_3%5E2+%0A%5Cend%7Balign%2A%7D)
