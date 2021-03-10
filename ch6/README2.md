@@ -891,7 +891,7 @@ again here it doesnt matter the order of multiplication because x<sup>T</sup>A<s
 
 length of Ax = || Ax || = ( (Ax)<sup>T</sup>(Ax) )<sup>1/2</sup>
 
-(Ax)<sup>T</sup>(Ax) = || Ax ||<sup>2</sup> = ( ( (Ax)<sup>T</sup>(Ax) )<sup>1/2</sup> )<sup>2</sup>
+x<sup>T</sup>Sx = x<sup>T</sup>A<sup>T</sup>Ax = (Ax)<sup>T</sup>(Ax) = || Ax ||<sup>2</sup> = ( ( (Ax)<sup>T</sup>(Ax) )<sup>1/2</sup> )<sup>2</sup>
 
 ![\begin{align*}
 a_1 &= 
