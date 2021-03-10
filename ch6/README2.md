@@ -840,12 +840,12 @@ notice because S is symmetric, it does not matter which direction we multiply th
 
 the matrix components:
 - off diagonal are summed in their symmetric positions: -1 + -1 = -2 coefficients for x<sub>12</sub> and x<sub>23</sub> crosses:  -2x<sub>12</sub> and -2x<sub>23</sub>
-- diagonals are taken as given: +2 coefficient for each of the x<sub>1</sub><sup>2</sup>, x<sub>2</sub><sup>2</sup>, x<sub>3</sub><sup>2</sup>
+- diagonals are taken as given: +2 coefficient for each of the x<sub>1</sub><sup>2</sup>, x<sub>2</sub><sup>2</sup>, x<sub>3</sub><sup>2</sup> squares: 2x<sub>1</sub><sup>2</sup>, 2x<sub>2</sub><sup>2</sup>, 2x<sub>3</sub><sup>2</sup>
+
 - result is:
 
 2x<sub>1</sub><sup>2</sup> - 2x<sub>12</sub> + 2x<sub>2</sub><sup>2</sup> - 2x<sub>23</sub> + 2x<sub>3</sub><sup>2</sup>
 
-2x<sub>1</sub><sup>2</sup>, 2x<sub>2</sub><sup>2</sup>, 2x<sub>3</sub><sup>2</sup>
 
 ![\begin{align*}
 x^TSx &= 
