@@ -972,3 +972,324 @@ x_1\\
 
 **2nd way:**   
 
+[seems that counter to book, A<sub>2</sub> = (L√D)<sup>T</sup> and A<sub>2</sub><sup>T</sup> = L√D so that A<sub>2</sub><sup>T</sup>A<sub>2</sub> = L√D(L√D)<sup>T</sup> = L√D√D<sup>T</sup>L<sup>T</sup> = L√D√DL<sup>T</sup> = LDL<sup>T</sup> = S
+
+A<sub>2</sub> is the Cholesky factor of S [ = √DL<sup>T</sup> = (L√D)<sup>T</sup> = A<sub>2</sub> ]
+
+This triangular choice of A has square roots (not pretty) and is called the "Cholesky factor" of S.  
+
+![\begin{align*}
+x^T&lambda;x &= x^TSx =
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix} 
+\\&=x^TA_2^TA_2x 
+\\&=x^T(A_2^T)(A_2)x 
+\\&= x^T(L\sqrt{D})(L\sqrt{D})^Tx 
+\\ & = 
+(\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix} 
+(\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix} 
+\begin{bmatrix}
+\sqrt{2}&0&0\\
+0&\sqrt{\frac{3}{2}}&0\\
+0&0&\sqrt{\frac{4}{3}}
+\end{bmatrix} )
+(\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix} 
+\begin{bmatrix}
+\sqrt{2}&0&0\\
+0&\sqrt{\frac{3}{2}}&0\\
+0&0&\sqrt{\frac{4}{3}}
+\end{bmatrix} )^T 
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix} 
+\\ &= 
+x^TL\sqrt{D}\sqrt{D}L^Tx 
+\\ & =
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix} 
+\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix} 
+\begin{bmatrix}
+\sqrt{2}&0&0\\
+0&\sqrt{\frac{3}{2}}&0\\
+0&0&\sqrt{\frac{4}{3}}
+\end{bmatrix} 
+\begin{bmatrix}
+\sqrt{2}&0&0\\
+0&\sqrt{\frac{3}{2}}&0\\
+0&0&\sqrt{\frac{4}{3}}
+\end{bmatrix} 
+\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix}^T 
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix} 
+\\ & =
+x^TLDL^Tx 
+\\ & = 
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix} 
+\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix} 
+\begin{bmatrix}
+2&0&0\\
+0&\frac{3}{2}&0\\
+0&0&\frac{4}{3}
+\end{bmatrix}
+\begin{bmatrix}
+1&-\frac{1}{2}&0\\
+0&1&-\frac{2}{3}\\
+0&0&1
+\end{bmatrix} 
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix} 
+\\ & =
+(x^TL)D(L^Tx) 
+\\ & = 
+\begin{bmatrix}
+x_1-\frac{1}{2}x_2&x_2-\frac{2}{3}x_3&x_3
+\end{bmatrix} 
+\begin{bmatrix}
+2&0&0\\
+0&\frac{3}{2}&0\\
+0&0&\frac{4}{3}
+\end{bmatrix}
+\begin{bmatrix}
+x_1-\frac{1}{2}x_2\\
+x_2-\frac{2}{3}x_3\\
+x_3
+\end{bmatrix} 
+\\ & =
+(x^TLD)(L^Tx) 
+\\ &=
+\begin{bmatrix}
+2(x_1-\frac{1}{2}x_2)&\frac{3}{2}(x_2-\frac{2}{3}x_3)&\frac{4}{3}(x_3)
+\end{bmatrix} 
+\begin{bmatrix}
+x_1-\frac{1}{2}x_2\\
+x_2-\frac{2}{3}x_3\\
+x_3
+\end{bmatrix}\\ & = 
+(x^TL)(DL^Tx) 
+\\ & =
+\begin{bmatrix}
+x_1-\frac{1}{2}x_2 & x_2-\frac{2}{3}x_3& x_3
+\end{bmatrix} \begin{bmatrix}
+2(x_1-\frac{1}{2}x_2)\\
+\frac{3}{2}(x_2-\frac{2}{3}x_3)\\
+\frac{4}{3}(x_3)
+\end{bmatrix} 
+\\ &= 2(x_1-\frac{1}{2}x_2)^2 + \frac{3}{2}(x_2-\frac{2}{3}x_3)^2+\frac{4}{3}(x_3)^2
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax%5ET%26lambda%3Bx+%26%3D+x%5ETSx+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C%26%3Dx%5ETA_2%5ETA_2x+%0A%5C%5C%26%3Dx%5ET%28A_2%5ET%29%28A_2%29x+%0A%5C%5C%26%3D+x%5ET%28L%5Csqrt%7BD%7D%29%28L%5Csqrt%7BD%7D%29%5ETx+%0A%5C%5C+%26+%3D+%0A%28%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D+%0A%28%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%260%260%5C%5C%0A0%26%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%260%5C%5C%0A0%260%26%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%0A%5Cend%7Bbmatrix%7D+%29%0A%28%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%260%260%5C%5C%0A0%26%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%260%5C%5C%0A0%260%26%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%0A%5Cend%7Bbmatrix%7D+%29%5ET+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C+%26%3D+%0Ax%5ETL%5Csqrt%7BD%7D%5Csqrt%7BD%7DL%5ETx+%0A%5C%5C+%26+%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%260%260%5C%5C%0A0%26%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%260%5C%5C%0A0%260%26%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%260%260%5C%5C%0A0%26%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%260%5C%5C%0A0%260%26%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%5ET+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C+%26+%3D%0Ax%5ETLDL%5ETx+%0A%5C%5C+%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A2%260%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%260%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-%5Cfrac%7B1%7D%7B2%7D%260%5C%5C%0A0%261%26-%5Cfrac%7B2%7D%7B3%7D%5C%5C%0A0%260%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C+%26+%3D%0A%28x%5ETL%29D%28L%5ETx%29+%0A%5C%5C+%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1-%5Cfrac%7B1%7D%7B2%7Dx_2%26x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%26x_3%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A2%260%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%260%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1-%5Cfrac%7B1%7D%7B2%7Dx_2%5C%5C%0Ax_2-%5Cfrac%7B2%7D%7B3%7Dx_3%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C+%26+%3D%0A%28x%5ETLD%29%28L%5ETx%29+%0A%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%28x_1-%5Cfrac%7B1%7D%7B2%7Dx_2%29%26%5Cfrac%7B3%7D%7B2%7D%28x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%29%26%5Cfrac%7B4%7D%7B3%7D%28x_3%29%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1-%5Cfrac%7B1%7D%7B2%7Dx_2%5C%5C%0Ax_2-%5Cfrac%7B2%7D%7B3%7Dx_3%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%5C%5C+%26+%3D+%0A%28x%5ETL%29%28DL%5ETx%29+%0A%5C%5C+%26+%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1-%5Cfrac%7B1%7D%7B2%7Dx_2+%26+x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%26+x_3%0A%5Cend%7Bbmatrix%7D+%5Cbegin%7Bbmatrix%7D%0A2%28x_1-%5Cfrac%7B1%7D%7B2%7Dx_2%29%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%28x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%29%5C%5C%0A%5Cfrac%7B4%7D%7B3%7D%28x_3%29%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C+%26%3D+2%28x_1-%5Cfrac%7B1%7D%7B2%7Dx_2%29%5E2+%2B+%5Cfrac%7B3%7D%7B2%7D%28x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%29%5E2%2B%5Cfrac%7B4%7D%7B3%7D%28x_3%29%5E2%0A%5Cend%7Balign%2A%7D)
+
+
+![\begin{align*}
+x^T&lambda;x &= x^TSx =
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix} 
+\\&=x^TA_2^TA_2x 
+\\&=x^T(A_2^T)(A_2)x 
+\\&= x^T(L\sqrt{D})(L\sqrt{D})^Tx 
+\\ & = 
+(\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix} 
+(\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix} 
+\begin{bmatrix}
+\sqrt{2}&0&0\\
+0&\sqrt{\frac{3}{2}}&0\\
+0&0&\sqrt{\frac{4}{3}}
+\end{bmatrix} )
+(\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix} 
+\begin{bmatrix}
+\sqrt{2}&0&0\\
+0&\sqrt{\frac{3}{2}}&0\\
+0&0&\sqrt{\frac{4}{3}}
+\end{bmatrix} )^T 
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix} 
+\\ &= 
+x^TL\sqrt{D}\sqrt{D}L^Tx 
+\\ & =
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix} 
+\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix} 
+\begin{bmatrix}
+\sqrt{2}&0&0\\
+0&\sqrt{\frac{3}{2}}&0\\
+0&0&\sqrt{\frac{4}{3}}
+\end{bmatrix} 
+\begin{bmatrix}
+\sqrt{2}&0&0\\
+0&\sqrt{\frac{3}{2}}&0\\
+0&0&\sqrt{\frac{4}{3}}
+\end{bmatrix} 
+\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix}^T 
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix} 
+\\ & =
+x^TLDL^Tx 
+\\ & = 
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix} 
+\begin{bmatrix}
+1&0&0\\
+-\frac{1}{2}&1&0\\
+0&-\frac{2}{3}&1
+\end{bmatrix} 
+\begin{bmatrix}
+2&0&0\\
+0&\frac{3}{2}&0\\
+0&0&\frac{4}{3}
+\end{bmatrix}
+\begin{bmatrix}
+1&-\frac{1}{2}&0\\
+0&1&-\frac{2}{3}\\
+0&0&1
+\end{bmatrix} 
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix} 
+\\ & =
+(x^TL)D(L^Tx) 
+\\ & = 
+\begin{bmatrix}
+x_1-\frac{1}{2}x_2&x_2-\frac{2}{3}x_3&x_3
+\end{bmatrix} 
+\begin{bmatrix}
+2&0&0\\
+0&\frac{3}{2}&0\\
+0&0&\frac{4}{3}
+\end{bmatrix}
+\begin{bmatrix}
+x_1-\frac{1}{2}x_2\\
+x_2-\frac{2}{3}x_3\\
+x_3
+\end{bmatrix} 
+\\ & =
+(x^TLD)(L^Tx) 
+\\ &=
+\begin{bmatrix}
+2(x_1-\frac{1}{2}x_2)&\frac{3}{2}(x_2-\frac{2}{3}x_3)&\frac{4}{3}(x_3)
+\end{bmatrix} 
+\begin{bmatrix}
+x_1-\frac{1}{2}x_2\\
+x_2-\frac{2}{3}x_3\\
+x_3
+\end{bmatrix}\\ & = 
+(x^TL)(DL^Tx) 
+\\ & =
+\begin{bmatrix}
+x_1-\frac{1}{2}x_2 & x_2-\frac{2}{3}x_3& x_3
+\end{bmatrix} \begin{bmatrix}
+2(x_1-\frac{1}{2}x_2)\\
+\frac{3}{2}(x_2-\frac{2}{3}x_3)\\
+\frac{4}{3}(x_3)
+\end{bmatrix} 
+\\ &= 2(x_1-\frac{1}{2}x_2)^2 + \frac{3}{2}(x_2-\frac{2}{3}x_3)^2+\frac{4}{3}(x_3)^2
+\\ &= 
+x^TL\sqrt{D}\sqrt{D}L^Tx 
+\\ & =
+x^T(L\sqrt{D})(L\sqrt{D})^Tx = x^T(A^T)Ax \longleftarrow A = (L\sqrt{D})^T
+\\ & =
+(x^TL)\sqrt{D}\sqrt{D}^T(L^Tx)
+\\ & = 
+\begin{bmatrix}
+x_1-\frac{1}{2}x_2&x_2-\frac{2}{3}x_3&x_3
+\end{bmatrix} 
+\begin{bmatrix}
+\sqrt{2}&0&0\\
+0&\sqrt{\frac{3}{2}}&0\\
+0&0&\sqrt{\frac{4}{3}}
+\end{bmatrix} 
+\begin{bmatrix}
+\sqrt{2}&0&0\\
+0&\sqrt{\frac{3}{2}}&0\\
+0&0&\sqrt{\frac{4}{3}}
+\end{bmatrix} 
+\begin{bmatrix}
+x_1-\frac{1}{2}x_2\\
+x_2-\frac{2}{3}x_3\\
+x_3
+\end{bmatrix} 
+\\ & =
+(x^TL\sqrt{D})(\sqrt{D}^TL^Tx)
+\\ & =
+(x^TL\sqrt{D})((L\sqrt{D})^Tx) \longleftarrow A = (L\sqrt{D})^T
+\\ & = 
+(x^TA^T)(Ax)\\ &=
+(Ax)^T(Ax)\\ & = 
+((L\sqrt{D})^Tx)^T((L\sqrt{D})^Tx)\\ &=
+\begin{bmatrix}
+\sqrt{2}(x_1-\frac{1}{2}x_2)&\sqrt{\frac{3}{2}}(x_2-\frac{2}{3}x_3)&\sqrt{\frac{4}{3}}(x_3)
+\end{bmatrix} 
+\begin{bmatrix}
+\sqrt{2}(x_1-\frac{1}{2}x_2)\\
+\sqrt{\frac{3}{2}}(x_2-\frac{2}{3}x_3)\\
+\sqrt{\frac{4}{3}}(x_3)
+\end{bmatrix} 
+\\&=||(Ax)||^2 = (\sqrt{(Ax)^T(Ax)}\,)^2 \\  
+\\ & = ||((L\sqrt{D})^Tx)||^2 = (\sqrt{((L\sqrt{D})^Tx)^T((L\sqrt{D})^Tx)}\,)^2
+\\&= (\sqrt{2})^2(x_1-\frac{1}{2}x_2)^2+(\sqrt{\frac{3}{2}})^2(x_2-\frac{2}{3}x_3)^2+(\sqrt{\frac{4}{3}})^2(x_3)^2
+\\&= 2(x_1-\frac{1}{2}x_2)^2+\frac{3}{2}(x_2-\frac{2}{3}x_3)^2+\frac{4}{3}(x_3)^2
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax%5ET%26lambda%3Bx+%26%3D+x%5ETSx+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C%26%3Dx%5ETA_2%5ETA_2x+%0A%5C%5C%26%3Dx%5ET%28A_2%5ET%29%28A_2%29x+%0A%5C%5C%26%3D+x%5ET%28L%5Csqrt%7BD%7D%29%28L%5Csqrt%7BD%7D%29%5ETx+%0A%5C%5C+%26+%3D+%0A%28%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D+%0A%28%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%260%260%5C%5C%0A0%26%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%260%5C%5C%0A0%260%26%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%0A%5Cend%7Bbmatrix%7D+%29%0A%28%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%260%260%5C%5C%0A0%26%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%260%5C%5C%0A0%260%26%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%0A%5Cend%7Bbmatrix%7D+%29%5ET+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C+%26%3D+%0Ax%5ETL%5Csqrt%7BD%7D%5Csqrt%7BD%7DL%5ETx+%0A%5C%5C+%26+%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%260%260%5C%5C%0A0%26%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%260%5C%5C%0A0%260%26%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%260%260%5C%5C%0A0%26%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%260%5C%5C%0A0%260%26%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%5ET+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C+%26+%3D%0Ax%5ETLDL%5ETx+%0A%5C%5C+%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A2%260%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%260%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-%5Cfrac%7B1%7D%7B2%7D%260%5C%5C%0A0%261%26-%5Cfrac%7B2%7D%7B3%7D%5C%5C%0A0%260%261%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C+%26+%3D%0A%28x%5ETL%29D%28L%5ETx%29+%0A%5C%5C+%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1-%5Cfrac%7B1%7D%7B2%7Dx_2%26x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%26x_3%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A2%260%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%260%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1-%5Cfrac%7B1%7D%7B2%7Dx_2%5C%5C%0Ax_2-%5Cfrac%7B2%7D%7B3%7Dx_3%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C+%26+%3D%0A%28x%5ETLD%29%28L%5ETx%29+%0A%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%28x_1-%5Cfrac%7B1%7D%7B2%7Dx_2%29%26%5Cfrac%7B3%7D%7B2%7D%28x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%29%26%5Cfrac%7B4%7D%7B3%7D%28x_3%29%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1-%5Cfrac%7B1%7D%7B2%7Dx_2%5C%5C%0Ax_2-%5Cfrac%7B2%7D%7B3%7Dx_3%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%5C%5C+%26+%3D+%0A%28x%5ETL%29%28DL%5ETx%29+%0A%5C%5C+%26+%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1-%5Cfrac%7B1%7D%7B2%7Dx_2+%26+x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%26+x_3%0A%5Cend%7Bbmatrix%7D+%5Cbegin%7Bbmatrix%7D%0A2%28x_1-%5Cfrac%7B1%7D%7B2%7Dx_2%29%5C%5C%0A%5Cfrac%7B3%7D%7B2%7D%28x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%29%5C%5C%0A%5Cfrac%7B4%7D%7B3%7D%28x_3%29%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C+%26%3D+2%28x_1-%5Cfrac%7B1%7D%7B2%7Dx_2%29%5E2+%2B+%5Cfrac%7B3%7D%7B2%7D%28x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%29%5E2%2B%5Cfrac%7B4%7D%7B3%7D%28x_3%29%5E2%0A%5C%5C+%26%3D+%0Ax%5ETL%5Csqrt%7BD%7D%5Csqrt%7BD%7DL%5ETx+%0A%5C%5C+%26+%3D%0Ax%5ET%28L%5Csqrt%7BD%7D%29%28L%5Csqrt%7BD%7D%29%5ETx+%3D+x%5ET%28A%5ET%29Ax+%5Clongleftarrow+A+%3D+%28L%5Csqrt%7BD%7D%29%5ET%0A%5C%5C+%26+%3D%0A%28x%5ETL%29%5Csqrt%7BD%7D%5Csqrt%7BD%7D%5ET%28L%5ETx%29%0A%5C%5C+%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1-%5Cfrac%7B1%7D%7B2%7Dx_2%26x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%26x_3%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%260%260%5C%5C%0A0%26%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%260%5C%5C%0A0%260%26%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%260%260%5C%5C%0A0%26%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%260%5C%5C%0A0%260%26%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1-%5Cfrac%7B1%7D%7B2%7Dx_2%5C%5C%0Ax_2-%5Cfrac%7B2%7D%7B3%7Dx_3%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C+%26+%3D%0A%28x%5ETL%5Csqrt%7BD%7D%29%28%5Csqrt%7BD%7D%5ETL%5ETx%29%0A%5C%5C+%26+%3D%0A%28x%5ETL%5Csqrt%7BD%7D%29%28%28L%5Csqrt%7BD%7D%29%5ETx%29+%5Clongleftarrow+A+%3D+%28L%5Csqrt%7BD%7D%29%5ET%0A%5C%5C+%26+%3D+%0A%28x%5ETA%5ET%29%28Ax%29%5C%5C+%26%3D%0A%28Ax%29%5ET%28Ax%29%5C%5C+%26+%3D+%0A%28%28L%5Csqrt%7BD%7D%29%5ETx%29%5ET%28%28L%5Csqrt%7BD%7D%29%5ETx%29%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%28x_1-%5Cfrac%7B1%7D%7B2%7Dx_2%29%26%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%28x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%29%26%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%28x_3%29%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Csqrt%7B2%7D%28x_1-%5Cfrac%7B1%7D%7B2%7Dx_2%29%5C%5C%0A%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%28x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%29%5C%5C%0A%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%28x_3%29%0A%5Cend%7Bbmatrix%7D+%0A%5C%5C%26%3D%7C%7C%28Ax%29%7C%7C%5E2+%3D+%28%5Csqrt%7B%28Ax%29%5ET%28Ax%29%7D%5C%2C%29%5E2+%5C%5C++%0A%5C%5C+%26+%3D+%7C%7C%28%28L%5Csqrt%7BD%7D%29%5ETx%29%7C%7C%5E2+%3D+%28%5Csqrt%7B%28%28L%5Csqrt%7BD%7D%29%5ETx%29%5ET%28%28L%5Csqrt%7BD%7D%29%5ETx%29%7D%5C%2C%29%5E2%0A%5C%5C%26%3D+%28%5Csqrt%7B2%7D%29%5E2%28x_1-%5Cfrac%7B1%7D%7B2%7Dx_2%29%5E2%2B%28%5Csqrt%7B%5Cfrac%7B3%7D%7B2%7D%7D%29%5E2%28x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%29%5E2%2B%28%5Csqrt%7B%5Cfrac%7B4%7D%7B3%7D%7D%29%5E2%28x_3%29%5E2%0A%5C%5C%26%3D+2%28x_1-%5Cfrac%7B1%7D%7B2%7Dx_2%29%5E2%2B%5Cfrac%7B3%7D%7B2%7D%28x_2-%5Cfrac%7B2%7D%7B3%7Dx_3%29%5E2%2B%5Cfrac%7B4%7D%7B3%7D%28x_3%29%5E2%0A%5Cend%7Balign%2A%7D)
