@@ -633,59 +633,6 @@ All three versions show that -1, 2, -1 matrix is positive definite:
 ![\begin{align*}
 S = S^T &= 
 \begin{bmatrix}
-2&-1&\\
--1&2&-1\\
-&-1&2
-\end{bmatrix}
-\begin{matrix}
-r_2 - (\frac{-1}{2})r_1
-\end{matrix} \longrightarrow
-\begin{bmatrix}
-2&-1&0\\
-0&\frac{3}{2}&-1\\
-0&-1&2
-\end{bmatrix}
-\begin{matrix}
-r_3 - (\frac{-2}{2})r_2
-\end{matrix} \longrightarrow
-\begin{bmatrix}
-2&-1&0\\
-0&\frac{3}{2}&-1\\
-0&0&\frac{4}{3}
-\end{bmatrix}\\
-&=E_{21}S =E_{32}E_{21}S=U \\
-&=LU \\ &=
-\begin{bmatrix}
-1&0&0\\
--\frac{1}{2}&1&0\\
-0&-\frac{2}{3}&1
-\end{bmatrix}
-\begin{bmatrix}
-2&-\frac{1}{2}&0\\
-0&\frac{2}{3}&-\frac{2}{3}\\
-0&0&\frac{4}{3}
-\end{bmatrix} \\
-&=LDU \\ &=
-\begin{bmatrix}
-1&0&0\\
--\frac{1}{2}&1&0\\
-0&-\frac{2}{3}&1
-\end{bmatrix}
-\begin{bmatrix}
-2&0&0\\
-0&\frac{2}{3}&0\\
-0&0&\frac{4}{3}
-\end{bmatrix}
-\begin{bmatrix}
-2&-\frac{1}{2}&0\\
-0&\frac{2}{3}&-\frac{2}{3}\\
-0&0&\frac{4}{3}
-\end{bmatrix}
-\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%3D+S%5ET+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%26%5C%5C%0A-1%262%26-1%5C%5C%0A%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ar_2+-+%28%5Cfrac%7B-1%7D%7B2%7D%29r_1%0A%5Cend%7Bmatrix%7D+%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ar_3+-+%28%5Cfrac%7B-2%7D%7B2%7D%29r_2%0A%5Cend%7Bmatrix%7D+%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3DE_%7B21%7DS+%3DE_%7B32%7DE_%7B21%7DS%3DU+%5C%5C%0A%26%3DLU+%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-%5Cfrac%7B1%7D%7B2%7D%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%26-%5Cfrac%7B2%7D%7B3%7D%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%26%3DLDU+%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%260%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%260%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-%5Cfrac%7B1%7D%7B2%7D%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%26-%5Cfrac%7B2%7D%7B3%7D%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
-
-![\begin{align*}
-S = S^T &= 
-\begin{bmatrix}
 2&-1&0\\
 -1&2&-1\\
 0&-1&2
@@ -862,3 +809,81 @@ S=LDU &=
 0&-1&2
 \end{bmatrix} =S
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%3D+S%5ET+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ar_2+-+%28%5Cfrac%7B-1%7D%7B2%7D%29r_1%0A%5Cend%7Bmatrix%7D+%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ar_3+-+%28%5Cfrac%7B-2%7D%7B3%7D%29r_2%0A%5Cend%7Bmatrix%7D+%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ar_2+-+%28L_%7B21%7D%29r_1%0A%5Cend%7Bmatrix%7D+%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bmatrix%7D%0Ar_3+-+%28L_%7B32%7D%29r_2%0A%5Cend%7Bmatrix%7D+%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0AE_%7B21%7DS+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%260%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%5C%5C%0AE_%7B32%7DE_%7B21%7DS+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A0%261%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%260%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D+%3DU+%5C%5C%0AE_%7B32%7DE_%7B21%7DS+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A0%261%260%5C%5C%0A0%26-L_%7B32%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-L_%7B21%7D%261%260%5C%5C%0A0%260%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D+%3DU+%5C%5C%0AS+%3DE_%7B21%7D%5E%7B-1%7DE_%7B32%7D%5E%7B-1%7DU+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%260%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A0%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A0%26%5Cfrac%7B3%7D%7B2%7D%26-1%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3DS%0A+%5C%5C%0AS%3DLU+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-%5Cfrac%7B1%7D%7B2%7D%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%26-%5Cfrac%7B2%7D%7B3%7D%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3DS+%5C%5C%0AS%3DLU+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0AL_%7B21%7D%261%260%5C%5C%0A0%26L_%7B32%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-%5Cfrac%7B1%7D%7B2%7D%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%26-%5Cfrac%7B2%7D%7B3%7D%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3DS+%5C%5C%0AS%3DLDU+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-%5Cfrac%7B1%7D%7B2%7D%261%260%5C%5C%0A0%26-%5Cfrac%7B2%7D%7B3%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%260%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%260%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-%5Cfrac%7B1%7D%7B2%7D%260%5C%5C%0A0%26%5Cfrac%7B2%7D%7B3%7D%26-%5Cfrac%7B2%7D%7B3%7D%5C%5C%0A0%260%26%5Cfrac%7B4%7D%7B3%7D%0A%5Cend%7Bbmatrix%7D%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D+%3DS%0A%5Cend%7Balign%2A%7D)
+
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/110581943-70c4d980-8139-11eb-8c33-80b940a30743.png">
+
+
+to see the energy of x<sup>T</sup>Sx is positive,   
+write it out as a sum of squares, 
+in detail,  
+using the 3 choices that identify key tests:   
+- independence: x<sup>T</sup>Sx = &lambda;x = x<sup>T</sup>A<sup>T</sup>Ax = (Ax)<sup>T</sup>(Ax) = || Ax ||<sup>2</sup>   
+- pivots: x<sup>T</sup>Sx = &lambda;x = x<sup>T</sup>A<sup>T</sup>Ax = LDL<sup>T</sup> = L√D√DL<sup>T</sup> = L√D(L√D)<sup>T</sup>   
+- eigenvalues: = Q&Lambda;Q<sup>T</sup> = Xnorm&Lambda;(Xnorm)<sup>T</sup> = A<sup>T</sup>A
+
+
+Sx - &lambda;x ––> x<sup>T</sup>Sx = &lambda;x<sup>T</sup>x  
+with knowledge that 
+- &lambda; > 0, and   
+- x<sup>T</sup>x = || x ||<sup>2</sup>,  
+comes knowledge that  
+- x<sup>T</sup>Sx > 0    
+
+THE POINT:   
+&lambda; > 0 allows us to say x<sup>T</sup>Sx > 0   
+which allows us to decompose positive definite S three different ways:   
+
+notice because S is symmetric, it does not matter which direction we multiply the x vectors: 
+
+(1 x 3)(3 x 3)(3 x 1) ––> (1 x 3)(3 x 1)
+
+the matrix components:
+- off diagonal are summed in their symmetric positions: -1 + -1 = -2 coefficients for x<sub>12</sub> and x<sub>23</sub> crosses:  -2x<sub>12</sub> and -2x<sub>23</sub>
+- diagonals are taken as given: +2 coefficient for each of the x<sub>1</sub><sup>2</sup>, x<sub>2</sub><sup>2</sup>, x<sub>3</sub><sup>2</sup>
+- result is:
+
+2x<sub>1</sub><sup>2</sup> - 2x<sub>12</sub> + 2x<sub>2</sub><sup>2</sup> - 2x<sub>23</sub> + 2x<sub>3</sub><sup>2</sup>
+
+2x<sub>1</sub><sup>2</sup>, 2x<sub>2</sub><sup>2</sup>, 2x<sub>3</sub><sup>2</sup>
+
+![\begin{align*}
+x^TSx &= 
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix}
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{bmatrix}
+\\ &=
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix}
+\begin{bmatrix}
+2x_1-1x_2\\
+-1x_1+2x_2-1x_3\\
+-1x_2+2x_3
+\end{bmatrix}
+\\ &=
+\begin{bmatrix}
+2x_1-1x_2 & -1x_1+2x_2-1x_3 & -1x_2+2x_3
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{bmatrix}
+\\ &= 2x_1x_1 - 1x_1x_2 - 1x_1x_2 +2x_2x_2 - 1x_2x_3   - 1x_2x_3 + 2x_3x_3 
+\\ &= 2x_1^2 - 2x_1x_2 +2x_2^2 - 2x_2x_3 + 2x_3^2 
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax%5ETSx+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1+%5C%5C%0Ax_2+%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2x_1-1x_2%5C%5C%0A-1x_1%2B2x_2-1x_3%5C%5C%0A-1x_2%2B2x_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A2x_1-1x_2+%26+-1x_1%2B2x_2-1x_3+%26+-1x_2%2B2x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1+%5C%5C%0Ax_2+%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C+%26%3D+2x_1x_1+-+1x_1x_2+-+1x_1x_2+%2B2x_2x_2+-+1x_2x_3+++-+1x_2x_3+%2B+2x_3x_3+%0A%5C%5C+%26%3D+2x_1%5E2+-+2x_1x_2+%2B2x_2%5E2+-+2x_2x_3+%2B+2x_3%5E2+%0A%5Cend%7Balign%2A%7D)
+
+1st way:
+3 independent vectors in A of S = A<sup>T</sup>A where A is a 1st difference matrix:
+
