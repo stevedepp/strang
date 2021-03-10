@@ -296,7 +296,7 @@ proof:
 pivots and eigenvalues are long to compute, but  
 the numbers of x<sup>T</supSx is the same as x<sup>T</sup>A<sup>T</sup>Ax.  
 [so for the same reason as we know x<sup>T</supSx is positive so is x<sup>T</sup>A<sup>T</sup>Ax]
-x<sup>T</supSx = x<sup>T</sup>A<sup>T</sup>Ax = (x<sup>T</sup>A<sup>T</sup>)(Ax) = (Ax)<sup>T</sup>(Ax) = || Ax ||<sup>T</sup> > 0 when x ≠ 0.  (This is [how?] the meaning of independent columns [because Ax ≠ 0 unelss x = 0 so null space is empty except x = 0?])
+x<sup>T</sup>Sx = x<sup>T</sup>A<sup>T</sup>Ax = (x<sup>T</sup>A<sup>T</sup>)(Ax) = (Ax)<sup>T</sup>(Ax) = || Ax ||<sup>T</sup> > 0 when x ≠ 0.  (This is [how?] the meaning of independent columns [because Ax ≠ 0 unelss x = 0 so null space is empty except x = 0?])
 Then x<sup>T</sup>Sx is the positive number || Ax ||<sup>2</sup> [= x<sup>T</sup>&lambda;x?] and the matrix S is positive definite. 
 
 to collect this theory together, 5 equivalent statements are possible for positive defnitiveness.  these 5 statements connect pivots, determinants, eigenvalues, and least squares (from A<sup>T</sup>A).
