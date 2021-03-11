@@ -1165,7 +1165,8 @@ x_3
 
 **3rd way**
 
-||A<sub>3</sub>x||<sup>2</sup> = &lambda;<sub>1</sub>(q<sub>1</sub>x)<sup>T</sup>q<sub>1</sub>x + &lambda;<sub>2</sub>(q<sub>2</sub>x)<sup>T</sup>q<sub>2</sub>x +&lambda;<sub>3</sub>(q<sub>3</sub>x)<sup>T</sup>q<sub>3</sub>x 
+||A<sub>3</sub>x||<sup>2</sup> = &lambda;<sub>1</sub>(q<sub>1</sub>x)<sup>T</sup>q<sub>1</sub>x + &lambda;<sub>2</sub>(q<sub>2</sub>x)<sup>T</sup>q<sub>2</sub>x +&lambda;<sub>3</sub>(q<sub>3</sub>x)<sup>T</sup>q<sub>3</sub>x   
+= || (Q√&Lambda;)<sup>T</sup>x||
 
 ![\begin{align*}
 x^T&lambda;x = x^TSx = x^TA^TAx & = x^TQ\sqrt{&Lambda;}(Q\sqrt{&Lambda;})^Tx \\
@@ -1277,4 +1278,611 @@ x_3
 +(2-\sqrt{2})(\frac{1}{2}x_1+\frac{\sqrt{2}}{2}x_2+\frac{1}{2}x_3)^2 
 +(2-\sqrt{2})(\frac{1}{2}x_1-\frac{\sqrt{2}}{2}x_2+\frac{1}{2}x_3)^2
 \\& = &lambda;_1((q_1x)^T(q_1x) + &lambda;_2(q_2x)^T(q_2x) + &lambda;_3(q_3^Tx)(q_3x)
-\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax%5ET%26lambda%3Bx+%3D+x%5ETSx+%3D+x%5ETA%5ETAx+%26+%3D+x%5ETQ%5Csqrt%7B%26Lambda%3B%7D%28Q%5Csqrt%7B%26Lambda%3B%7D%29%5ETx+%5C%5C%0A%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%5C%5C%0A0%26%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%26-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26%26%5C%5C%0A%262-%5Csqrt%7B2%7D%26%5C%5C%0A%26%262%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D+%5E+%5Cfrac%7B1%7D%7B2%7D%0A%28%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%5C%5C%0A0%26%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%26-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26%26%5C%5C%0A%262-%5Csqrt%7B2%7D%26%5C%5C%0A%26%262%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%5E+%5Cfrac%7B1%7D%7B2%7D%29%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax_1+%5C%5C%0Ax_2+%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%26%3D+x%5ETQ%5Csqrt%7B%26Lambda%3B%7D%5Csqrt%7B%26Lambda%3B%7D%5ETQ%5ETx+%5C%5C%0A%26+%3Dx%5ETA%5ETAx+%5C%5C%0A%26%3D+x%5ETQ%5Csqrt%7B%26Lambda%3B%7D%5Csqrt%7B%26Lambda%3B%7DQ%5ETx+%5C%5C%0A%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%5C%5C%0A0%26%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%26-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26%26%5C%5C%0A%262-%5Csqrt%7B2%7D%26%5C%5C%0A%26%262%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D+%5E+%5Cfrac%7B1%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26%26%5C%5C%0A%262-%5Csqrt%7B2%7D%26%5C%5C%0A%26%262%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%5E+%5Cfrac%7B1%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%5C%5C%0A0%26%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%26-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26+%3D+x%5ETQ%26Lambda%3BQ%5ETx%0A%5C%5C%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%5C%5C%0A0%26%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%26-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26%26%5C%5C%0A%262-%5Csqrt%7B2%7D%26%5C%5C%0A%26%262%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%5C%5C%0A0%26%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%26-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26+%3D+%28x%5ETQ%29%26Lambda%3B%28Q%5ETx%29%0A%5C%5C%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx_1+%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx_3+%26%0A%5Cfrac%7B1%7D%7B2%7Dx_1%2B%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7Dx_2%2B%5Cfrac%7B1%7D%7B2%7Dx_3+%26%0A%5Cfrac%7B1%7D%7B2%7Dx_1-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7Dx_2%2B%5Cfrac%7B1%7D%7B2%7Dx_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26%26%5C%5C%0A%262-%5Csqrt%7B2%7D%26%5C%5C%0A%26%262%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx_1+%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx_3%5C%5C%0A%5Cfrac%7B1%7D%7B2%7Dx_1%2B%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7Dx_2%2B%5Cfrac%7B1%7D%7B2%7Dx_3%5C%5C%0A%5Cfrac%7B1%7D%7B2%7Dx_1-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7Dx_2%2B%5Cfrac%7B1%7D%7B2%7Dx_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26+%3D+%0A%282%29%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx_1+%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx_3%29%5E2+%0A%2B%282-%5Csqrt%7B2%7D%29%28%5Cfrac%7B1%7D%7B2%7Dx_1%2B%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7Dx_2%2B%5Cfrac%7B1%7D%7B2%7Dx_3%29%5E2+%0A%2B%282-%5Csqrt%7B2%7D%29%28%5Cfrac%7B1%7D%7B2%7Dx_1-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7Dx_2%2B%5Cfrac%7B1%7D%7B2%7Dx_3%29%5E2%0A%5C%5C%26+%3D+%26lambda%3B_1%28%28q_1x%29%5ET%28q_1x%29+%2B+%26lambda%3B_2%28q_2x%29%5ET%28q_2x%29+%2B+%26lambda%3B_3%28q_3%5ETx%29%28q_3x%29%0A%5Cend%7Balign%2A%7D)
+\\&= x^TQ\sqrt{&Lambda;}\sqrt{&Lambda;}^TQ^Tx 
+\\&= (x^TQ\sqrt{&Lambda;})(\sqrt{&Lambda;}^TQ^Tx) \\
+\\&= (x^TQ\sqrt{&Lambda;})((Q\sqrt{&Lambda;})^Tx) \\
+\\&= ((Q\sqrt{&Lambda;})^Tx)^T((Q\sqrt{&Lambda;})^Tx) \\
+\\& =(Ax)^T(Ax) 
+\\&=||Ax||^2 
+\\&= ||(Q\sqrt{&Lambda;})^Tx||^2
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax%5ET%26lambda%3Bx+%3D+x%5ETSx+%3D+x%5ETA%5ETAx+%26+%3D+x%5ETQ%5Csqrt%7B%26Lambda%3B%7D%28Q%5Csqrt%7B%26Lambda%3B%7D%29%5ETx+%5C%5C%0A%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%5C%5C%0A0%26%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%26-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26%26%5C%5C%0A%262-%5Csqrt%7B2%7D%26%5C%5C%0A%26%262%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D+%5E+%5Cfrac%7B1%7D%7B2%7D%0A%28%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%5C%5C%0A0%26%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%26-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26%26%5C%5C%0A%262-%5Csqrt%7B2%7D%26%5C%5C%0A%26%262%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%5E+%5Cfrac%7B1%7D%7B2%7D%29%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax_1+%5C%5C%0Ax_2+%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%26%3D+x%5ETQ%5Csqrt%7B%26Lambda%3B%7D%5Csqrt%7B%26Lambda%3B%7D%5ETQ%5ETx+%5C%5C%0A%26+%3Dx%5ETA%5ETAx+%5C%5C%0A%26%3D+x%5ETQ%5Csqrt%7B%26Lambda%3B%7D%5Csqrt%7B%26Lambda%3B%7DQ%5ETx+%5C%5C%0A%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%5C%5C%0A0%26%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%26-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26%26%5C%5C%0A%262-%5Csqrt%7B2%7D%26%5C%5C%0A%26%262%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D+%5E+%5Cfrac%7B1%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26%26%5C%5C%0A%262-%5Csqrt%7B2%7D%26%5C%5C%0A%26%262%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%5E+%5Cfrac%7B1%7D%7B2%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%5C%5C%0A0%26%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%26-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26+%3D+x%5ETQ%26Lambda%3BQ%5ETx%0A%5C%5C%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%5C%5C%0A0%26%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%26-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26%26%5C%5C%0A%262-%5Csqrt%7B2%7D%26%5C%5C%0A%26%262%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%5C%5C%0A0%26%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%26-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B2%7D%26%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26+%3D+%28x%5ETQ%29%26Lambda%3B%28Q%5ETx%29%0A%5C%5C%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx_1+%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx_3+%26%0A%5Cfrac%7B1%7D%7B2%7Dx_1%2B%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7Dx_2%2B%5Cfrac%7B1%7D%7B2%7Dx_3+%26%0A%5Cfrac%7B1%7D%7B2%7Dx_1-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7Dx_2%2B%5Cfrac%7B1%7D%7B2%7Dx_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%26%26%5C%5C%0A%262-%5Csqrt%7B2%7D%26%5C%5C%0A%26%262%2B%5Csqrt%7B2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx_1+%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx_3%5C%5C%0A%5Cfrac%7B1%7D%7B2%7Dx_1%2B%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7Dx_2%2B%5Cfrac%7B1%7D%7B2%7Dx_3%5C%5C%0A%5Cfrac%7B1%7D%7B2%7Dx_1-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7Dx_2%2B%5Cfrac%7B1%7D%7B2%7Dx_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26+%3D+%0A%282%29%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx_1+%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx_3%29%5E2+%0A%2B%282-%5Csqrt%7B2%7D%29%28%5Cfrac%7B1%7D%7B2%7Dx_1%2B%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7Dx_2%2B%5Cfrac%7B1%7D%7B2%7Dx_3%29%5E2+%0A%2B%282-%5Csqrt%7B2%7D%29%28%5Cfrac%7B1%7D%7B2%7Dx_1-%5Cfrac%7B%5Csqrt%7B2%7D%7D%7B2%7Dx_2%2B%5Cfrac%7B1%7D%7B2%7Dx_3%29%5E2%0A%5C%5C%26+%3D+%26lambda%3B_1%28%28q_1x%29%5ET%28q_1x%29+%2B+%26lambda%3B_2%28q_2x%29%5ET%28q_2x%29+%2B+%26lambda%3B_3%28q_3%5ETx%29%28q_3x%29%0A%5C%5C%26%3D+x%5ETQ%5Csqrt%7B%26Lambda%3B%7D%5Csqrt%7B%26Lambda%3B%7D%5ETQ%5ETx+%0A%5C%5C%26%3D+%28x%5ETQ%5Csqrt%7B%26Lambda%3B%7D%29%28%5Csqrt%7B%26Lambda%3B%7D%5ETQ%5ETx%29+%5C%5C%0A%5C%5C%26%3D+%28x%5ETQ%5Csqrt%7B%26Lambda%3B%7D%29%28%28Q%5Csqrt%7B%26Lambda%3B%7D%29%5ETx%29+%5C%5C%0A%5C%5C%26%3D+%28%28Q%5Csqrt%7B%26Lambda%3B%7D%29%5ETx%29%5ET%28%28Q%5Csqrt%7B%26Lambda%3B%7D%29%5ETx%29+%5C%5C%0A%5C%5C%26+%3D%28Ax%29%5ET%28Ax%29+%0A%5C%5C%26%3D%7C%7CAx%7C%7C%5E2+%0A%5C%5C%26%3D+%7C%7C%28Q%5Csqrt%7B%26Lambda%3B%7D%29%5ETx%7C%7C%5E2%0A%5Cend%7Balign%2A%7D)
+
+
+Now turn to the example matrix T.    
+the cells (1,3) and (3,1) in this symmetric matrix   
+move from 0 to b as move from example matrix S to example matix T  
+
+the determinant test is easist:  
+- the 1x1 determinant is 2  
+- the 2x2 determinant is 4 - 1 = 3  
+- the 3x3 determinant involves b:  
+
+det T = 4 + 2b - 2b<sup>2</sup> = (1 + b)(4 - 2b) > 0
+
+det T ≤ 0 for 2 ≤ b ≤ -1   
+
+T has positive energy, det T > 0, for 2 ≥ b ≥ -1
+
+![\begin{align*}
+T &= 
+\begin{bmatrix}
+2&-1&b\\
+-1&2&-1\\
+b&-1&2
+\end{bmatrix}\\
+det(T) & = (+1)*(2) * ((2*2) - (-1*-1)) \\
+&+(-1) * (-1)((-1*2)-(-1*b) \\
+&+(+1) * (b)((-1*-1)-(2*b))\\
+&=6\\
+&-2+b\\
+&+b -2b^2\\
+&= -2b^2 + 2b +4\\
+&=(-2b+4)(b+1)
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AT+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%26b%5C%5C%0A-1%262%26-1%5C%5C%0Ab%26-1%262%0A%5Cend%7Bbmatrix%7D%5C%5C%0Adet%28T%29+%26+%3D+%28%2B1%29%2A%282%29+%2A+%28%282%2A2%29+-+%28-1%2A-1%29%29+%5C%5C%0A%26%2B%28-1%29+%2A+%28-1%29%28%28-1%2A2%29-%28-1%2Ab%29+%5C%5C%0A%26%2B%28%2B1%29+%2A+%28b%29%28%28-1%2A-1%29-%282%2Ab%29%29%5C%5C%0A%26%3D6%5C%5C%0A%26-2%2Bb%5C%5C%0A%26%2Bb+-2b%5E2%5C%5C%0A%26%3D+-2b%5E2+%2B+2b+%2B4%5C%5C%0A%26%3D%28-2b%2B4%29%28b%2B1%29%0A%5Cend%7Balign%2A%7D%0A)
+
+**positive semi definite matrices**
+
+the smallest &lambda; is zero. 
+
+the energy **in its eigenvector** is   
+x<sup>T</sup>Sx = x<sup>t</sup>0x = 0
+
+these matrices on the edge of positive defninitiveness are positive semi definite.  
+
+here are 2 examples, that of course are not invertible since determinants are zero:  
+
+S has eigenvalues 5, 0  
+S upper left determinants are 1 for 1x1 and zero for 2x2  
+S rank is 1  
+S factors into A<sup>T</sup> with dependent columns in A:  
+
+
+![\begin{align*}
+S &= 
+\begin{bmatrix}
+1&2\\
+2&4
+\end{bmatrix} = A^TA = 
+\begin{bmatrix}
+1&0\\
+2&0
+\end{bmatrix}
+\begin{bmatrix}
+1&2\\
+0&0
+\end{bmatrix}
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%262%5C%5C%0A2%264%0A%5Cend%7Bbmatrix%7D+%3D+A%5ETA+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A2%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%262%5C%5C%0A0%260%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+
+this cyclic T matric also has determinant zero as computed above when b = -1  
+T is thus singular.  
+the eigenvector x = (1,1,1) has Tx = &lambda;x = 0 and thusly x<sup>T</sup>Tx = x<sup>Tx = 0.   
+[because T is singular, the eigenvalue of 0 has the null space as this eigenvector and T has this eigenvector as its null space; thus when x<sub>1</sub> = (1,1,1) we know Tx<sub>1</sub> = zero by null space and by &lambda;<sub>1</sub>x<sub>1</sub> = zero because &lambda;<sub>1</sub> = 0]
+vectors in all directions other than x<sub>1</sub> = (1,1,1) do give positive energy.  
+[for example &lambda;<sub>2</sub> = 3 has x<sub>2</sub> = (2,-1,-1]
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/38410965/110717280-bedbea80-81d6-11eb-91dc-56ed56264cfa.png">
+
+T can be written as A<sup>T</sup> in many ways, but A will always have dependent columns with (1,1,1) in it's null space.  
+
+here, "second difference" T from "1st difference" A 
+or "cyclic" T from "cyclic" A
+
+because X is singular, with the 2nd and 3rd columns identical, T is not diagonalizable into X&Lambda;X<sup>-1</sup>.
+
+T = -ones(3) + 3*eye(3)
+trace(T) = 6
+det(T) = 0 • 3 • 3
+
+![\begin{align*}
+T &= 
+\begin{bmatrix}
+2&-1&-1\\
+-1&2&-1\\
+-1&-1&2
+\end{bmatrix}
+=\begin{bmatrix}
+1&-1&0\\
+0&1&-1\\
+-1&0&1
+\end{bmatrix}
+\begin{bmatrix}
+1&0&-1\\
+1&-1&0\\
+0&-1&1
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AT+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%26-1%5C%5C%0A-1%262%26-1%5C%5C%0A-1%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%3D%5Cbegin%7Bbmatrix%7D%0A1%26-1%260%5C%5C%0A0%261%26-1%5C%5C%0A-1%260%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%26-1%5C%5C%0A1%26-1%260%5C%5C%0A0%26-1%261%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+positive semi definite matrics all have &lambda;s ≥ 0 and all x<sup>Sx ≥ 0.  
+these weak inequalities include positive definite S and singular matrices at the edge (positive semi definite.)
+
+**the ellipse**
+
+ax<sup>2</sup> + bxy + cy<sup>2</sup> = 1
+
+think of a tilted ellipse x<sup>T</sup>Sx = 1  
+its center is (0,0) 
+
+turn it to line up with coordinate axes (X and Y)
+
+these 2 ellipses show the geometry behind the factorization of S = Q&Lambda;Q<sup>-1</sup> = Q&Lambda;Q<sup>T</sup>
+
+1. the tilted ellipse is associated with S: its equation is x<sup>T</sup>Sx = 1.  
+2. the lined up ellipse is associated with &Lambda: its equation is X<sup>T</sup>&Lambda;X = 1.  
+3. the rotation matrix that lines up the ellipse is the eigenvector matrix Q.  
+
+[x<sup>T</sup>Sx = X<sup>T</sup>&Lambda;X is the origin of this in order to prove PDef PSDef NDef.  x<sup>T</sup>Sx = x<sup>T</sup>A<sup>T</sup>Ax = LDL<sup>T</sup> = Q&Lambda;Q<sup>T</sup> = ||Ax||<sup>2</sup> ]
+
+
+titled ellipse:  5x<sup>2</sup> + 8xy + 5y<sup>2</sup> = x<sup>T</sup>Sx = 1    
+lined up ellipse = 9X<sup>2</sup> + Y<sup>2</sup> = &lambda;<sub>1</sub>X<sup>2</sup> + &lambda;<sub>2</sub>Y<sup>2</sup> = 1     
+
+ellipse tilting to the LHS:  
+x1 = (1,-1) upon which ellipse intersects (x<sub>1</sub>, y<sub>1</sub>) = (1/3)(1/√2,1/√2)   
+x2 = (1,1) upon which ellipse intersects (x<sub>2</sub>, y<sub>2</sub>) = (1)(1/√2,-1/√2)   
+5x<sup>2</sup> + 8xy + 5y<sup>2</sup> = x<sup>T</sup>Sx = 1  
+
+ellipse lined up taller than wide:   
+intersects (X<sub>1</sub>, Y<sub>1</sub>) = (0,1) and (X<sub>2</sub>, Y<sub>2</sub>) = (1/2,0)
+9Y<sup>2</sup> + Y<sup>2</sup> = 1
+
+https://courses.lumenlearning.com/waymakercollegealgebra/chapter/equations-of-ellipses/
+
+
+**example 2**
+
+find axes of this titled ellipse: 5x<sup>2</sup> + 8xy + 5y<sup>2</sup> = 1
+
+solution:  
+start with the positive definite matrix that makes this equation   
+
+![\begin{align*}
+&5x^2 + 8xy + 5y^2 = 1\\
+x^TSx =&
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+5&4\\
+4&5
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+(x^TS)x=&
+\begin{bmatrix}
+5x+4y & 4x+5y
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+x^T(Sx)=&
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+5x+4y\\
+4x+5y
+\end{bmatrix}
+\\&=
+5xx+4xy+4xy+5yy
+\\&=
+5x^2+8xy+5y^2
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%265x%5E2+%2B+8xy+%2B+5y%5E2+%3D+1%5C%5C%0Ax%5ETSx+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%28x%5ETS%29x%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5x%2B4y+%26+4x%2B5y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0Ax%5ET%28Sx%29%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5x%2B4y%5C%5C%0A4x%2B5y%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%26%3D%0A5xx%2B4xy%2B4xy%2B5yy%0A%5C%5C%26%3D%0A5x%5E2%2B8xy%2B5y%5E2%0A%5Cend%7Balign%2A%7D%0A)
+
+decompose x<sup>T</sup>Sx into x<sup>T</sup>Q&Lambda;Q<sup>T</sup>x   
+the eigenvectors are (1,1) and (1,-1)  
+divide by length √2 for unit vectors   
+then S = Q&LambdaQ<sup>T</sup>
+eigenvectors in Q and eigenvalues 9 and 1 in &Lambda;
+
+![\begin{align*}
+&5x^2 + 8xy + 5y^2 = 1\\
+S =&
+\begin{bmatrix}
+5&4\\
+4&5
+\end{bmatrix}\\
+det(S-&lambda;I) =&
+det
+\begin{bmatrix}
+5-&lambda;&4\\
+4&5-&lambda;
+\end{bmatrix} =0\\
+=& &lambda;^2 - 10&lambda; + 25 -16 =0\\
+=& &lambda;^2 - 10&lambda; + 9 =0 \\
+=& (&lambda; - 9)(&lambda; -1) = 0 \\
+\longrightarrow & &lambda;_1 =9, &lambda;_2 =1 \\
+(S-&lambda;_1I)x_1 = (S-9I)x_1=&
+\begin{bmatrix}
+5-&lambda;_1&4\\
+4&5-&lambda;_1
+\end{bmatrix}
+\begin{bmatrix}
+x_1
+\end{bmatrix} =0\\
+=&
+\begin{bmatrix}
+5-9&4\\
+4&5-9
+\end{bmatrix}
+\begin{bmatrix}
+x_1
+\end{bmatrix} =0\\
+=&
+\begin{bmatrix}
+-4&4\\
+4&-4
+\end{bmatrix}
+\begin{bmatrix}
+x_1
+\end{bmatrix} = 0 \\
+\longrightarrow & x_1 = 
+\begin{bmatrix}
+1\\
+1
+\end{bmatrix}\\
+||x_1|| = \sqrt{1^2+1^2} = \sqrt{2} \longrightarrow & q_1 = 
+\begin{bmatrix}
+\frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}}
+\end{bmatrix}\\
+(S-&lambda;_2I)x_2 = (S-1I)x_2=&
+\begin{bmatrix}
+5-&lambda;_2&4\\
+4&5-&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+x_2
+\end{bmatrix} =0\\
+=&
+\begin{bmatrix}
+5-1&4\\
+4&5-1
+\end{bmatrix}
+\begin{bmatrix}
+x_2
+\end{bmatrix} =0\\
+=&
+\begin{bmatrix}
+4&4\\
+4&4
+\end{bmatrix}
+\begin{bmatrix}
+x_2
+\end{bmatrix} = 0 \\
+\longrightarrow & x_2 = 
+\begin{bmatrix}
+1\\
+-1
+\end{bmatrix}\\
+||x_2|| = \sqrt{1^2+(-1)^2} = \sqrt{2} \longrightarrow & q_2 = 
+\begin{bmatrix}
+\frac{1}{\sqrt{2}}\\
+\frac{-1}{\sqrt{2}}
+\end{bmatrix}\\
+\\
+S =
+\begin{bmatrix}
+5&4\\
+4&5
+\end{bmatrix} =& Q&Lambda;Q^T \\
+=& \frac{1}{\sqrt{2}} 
+\begin{bmatrix}
+1&1\\
+1&-1
+\end{bmatrix}
+\begin{bmatrix}
+9&\\
+&1
+\end{bmatrix}
+\begin{bmatrix}
+1&1\\
+1&-1
+\end{bmatrix}^T
+\frac{1}{\sqrt{2}} \\
+x^TSx =
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+5&4\\
+4&5
+\end{bmatrix} 
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+=& x^TQ&Lambda;Q^Tx \\
+=& 
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\frac{1}{\sqrt{2}} 
+\begin{bmatrix}
+1&1\\
+1&-1
+\end{bmatrix}
+\begin{bmatrix}
+9&\\
+&1
+\end{bmatrix}
+\begin{bmatrix}
+1&1\\
+1&-1
+\end{bmatrix}^T
+\frac{1}{\sqrt{2}}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{2}}
+\end{bmatrix}
+\begin{bmatrix}
+9&\\
+&1
+\end{bmatrix}
+\begin{bmatrix}
+\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{2}}
+\end{bmatrix}^T
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+(\frac{1}{\sqrt{2}}x+\frac{1}{\sqrt{2}}y) &
+(\frac{1}{\sqrt{2}}x-\frac{1}{\sqrt{2}}y)
+\end{bmatrix}
+\begin{bmatrix}
+9&\\
+&1
+\end{bmatrix}
+\begin{bmatrix}
+(\frac{1}{\sqrt{2}}x+\frac{1}{\sqrt{2}}y)\\
+(\frac{1}{\sqrt{2}}x-\frac{1}{\sqrt{2}}y)
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+9(\frac{1}{\sqrt{2}}x+\frac{1}{\sqrt{2}}y) &
+1(\frac{1}{\sqrt{2}}x-\frac{1}{\sqrt{2}}y)
+\end{bmatrix}
+\begin{bmatrix}
+(\frac{1}{\sqrt{2}}x+\frac{1}{\sqrt{2}}y)\\
+(\frac{1}{\sqrt{2}}x-\frac{1}{\sqrt{2}}y)
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+(\frac{1}{\sqrt{2}}x+\frac{1}{\sqrt{2}}y) &
+(\frac{1}{\sqrt{2}}x-\frac{1}{\sqrt{2}}y)
+\end{bmatrix}
+\begin{bmatrix}
+9(\frac{1}{\sqrt{2}}x+\frac{1}{\sqrt{2}}y)\\
+1(\frac{1}{\sqrt{2}}x-\frac{1}{\sqrt{2}}y)
+\end{bmatrix}\\
+=& 
+9(\frac{1}{\sqrt{2}}x+\frac{1}{\sqrt{2}}y)^2 + 1(\frac{1}{\sqrt{2}}x-\frac{1}{\sqrt{2}}y)^2\\
+=& 
+9(\frac{x}{\sqrt{2}}+\frac{y}{\sqrt{2}})^2 + 1(\frac{x}{\sqrt{2}}-\frac{y}{\sqrt{2}})^2\\
+=& 
+9(\frac{x+y}{\sqrt{2}})^2 + 1(\frac{x-y}{\sqrt{2}})^2
+\\
+\\
+x^TSx = 5x^2 +8xy+5y^2
+=& x^TQ&Lambda;Q^Tx \\
+\\
+=& 
+9 ( \frac{x+y}{\sqrt{2}})^2 + 1 ( \frac{x-y}{\sqrt{2}})^2\\
+=& 
+x^T
+\begin{bmatrix}
+q_1&q_2
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+q_1&q_2
+\end{bmatrix}^T
+x\\
+=& 
+x^T
+\begin{bmatrix}
+q_1&q_2
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+q_1^T\\
+q_2^T
+\end{bmatrix}
+x\\
+=& 
+\begin{bmatrix}
+x^Tq_1&x^Tq_2
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+q_1^Tx\\
+q_2^Tx
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+x^Tq_1&lambda;_1&x^Tq_2&lambda;_1
+\end{bmatrix}
+\begin{bmatrix}
+q_1^Tx\\
+q_2^Tx
+\end{bmatrix}
+\\
+=& 
+\begin{bmatrix}
+x^Tq_1&x^Tq_2
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1q_1^Tx\\
+&lambda;_2q_2^Tx
+\end{bmatrix}\\
+=&
+x^Tq_1&lambda;_1q_1^Tx +x^Tq_2&lambda;_2q_2^Tx
+\\
+ \\
+\\
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%265x%5E2+%2B+8xy+%2B+5y%5E2+%3D+1%5C%5C%0AS+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D%5C%5C%0Adet%28S-%26lambda%3BI%29+%3D%26%0Adet%0A%5Cbegin%7Bbmatrix%7D%0A5-%26lambda%3B%264%5C%5C%0A4%265-%26lambda%3B%0A%5Cend%7Bbmatrix%7D+%3D0%5C%5C%0A%3D%26+%26lambda%3B%5E2+-+10%26lambda%3B+%2B+25+-16+%3D0%5C%5C%0A%3D%26+%26lambda%3B%5E2+-+10%26lambda%3B+%2B+9+%3D0+%5C%5C%0A%3D%26+%28%26lambda%3B+-+9%29%28%26lambda%3B+-1%29+%3D+0+%5C%5C%0A%5Clongrightarrow+%26+%26lambda%3B_1+%3D9%2C+%26lambda%3B_2+%3D1+%5C%5C%0A%28S-%26lambda%3B_1I%29x_1+%3D+%28S-9I%29x_1%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5-%26lambda%3B_1%264%5C%5C%0A4%265-%26lambda%3B_1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%0A%5Cend%7Bbmatrix%7D+%3D0%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5-9%264%5C%5C%0A4%265-9%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%0A%5Cend%7Bbmatrix%7D+%3D0%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A-4%264%5C%5C%0A4%26-4%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%0A%5Cend%7Bbmatrix%7D+%3D+0+%5C%5C%0A%5Clongrightarrow+%26+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%7C%7Cx_1%7C%7C+%3D+%5Csqrt%7B1%5E2%2B1%5E2%7D+%3D+%5Csqrt%7B2%7D+%5Clongrightarrow+%26+q_1+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%28S-%26lambda%3B_2I%29x_2+%3D+%28S-1I%29x_2%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5-%26lambda%3B_2%264%5C%5C%0A4%265-%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_2%0A%5Cend%7Bbmatrix%7D+%3D0%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5-1%264%5C%5C%0A4%265-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_2%0A%5Cend%7Bbmatrix%7D+%3D0%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A4%264%5C%5C%0A4%264%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_2%0A%5Cend%7Bbmatrix%7D+%3D+0+%5C%5C%0A%5Clongrightarrow+%26+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%7C%7Cx_2%7C%7C+%3D+%5Csqrt%7B1%5E2%2B%28-1%29%5E2%7D+%3D+%5Csqrt%7B2%7D+%5Clongrightarrow+%26+q_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%5C%5C%0A%5Cfrac%7B-1%7D%7B%5Csqrt%7B2%7D%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0AS+%3D%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D+%3D%26+Q%26Lambda%3BQ%5ET+%5C%5C%0A%3D%26+%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%26-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A9%26%5C%5C%0A%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%26-1%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D+%5C%5C%0Ax%5ETSx+%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%0A%3D%26+x%5ETQ%26Lambda%3BQ%5ETx+%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%26-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A9%26%5C%5C%0A%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%26-1%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A9%26%5C%5C%0A%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29+%26%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A9%26%5C%5C%0A%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%5C%5C%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A9%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29+%26%0A1%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%5C%5C%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29+%26%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A9%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%5C%5C%0A1%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A9%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%5E2+%2B+1%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%5E2%5C%5C%0A%3D%26+%0A9%28%5Cfrac%7Bx%7D%7B%5Csqrt%7B2%7D%7D%2B%5Cfrac%7By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2+%2B+1%28%5Cfrac%7Bx%7D%7B%5Csqrt%7B2%7D%7D-%5Cfrac%7By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2%5C%5C%0A%3D%26+%0A9%28%5Cfrac%7Bx%2By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2+%2B+1%28%5Cfrac%7Bx-y%7D%7B%5Csqrt%7B2%7D%7D%29%5E2%0A%5C%5C%0A%5C%5C%0Ax%5ETSx+%3D+5x%5E2+%2B8xy%2B5y%5E2%0A%3D%26+x%5ETQ%26Lambda%3BQ%5ETx+%5C%5C%0A%5C%5C%0A%3D%26+%0A9+%28+%5Cfrac%7Bx%2By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2+%2B+1+%28+%5Cfrac%7Bx-y%7D%7B%5Csqrt%7B2%7D%7D%29%5E2%5C%5C%0A%3D%26+%0Ax%5ET%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%26q_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%26q_2%0A%5Cend%7Bbmatrix%7D%5ET%0Ax%5C%5C%0A%3D%26+%0Ax%5ET%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%26q_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%5ET%5C%5C%0Aq_2%5ET%0A%5Cend%7Bbmatrix%7D%0Ax%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5ETq_1%26x%5ETq_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%5ETx%5C%5C%0Aq_2%5ETx%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5ETq_1%26lambda%3B_1%26x%5ETq_2%26lambda%3B_1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%5ETx%5C%5C%0Aq_2%5ETx%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5ETq_1%26x%5ETq_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1q_1%5ETx%5C%5C%0A%26lambda%3B_2q_2%5ETx%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26%0Ax%5ETq_1%26lambda%3B_1q_1%5ETx+%2Bx%5ETq_2%26lambda%3B_2q_2%5ETx%0A%5C%5C%0A+%5C%5C%0A%5C%5C%0A%5Cend%7Balign%2A%7D)
+
+x<sup>T</sup>Sx becomes the sum of squres 5x<sup>2</sup> + 8xy + 5y<sup>2</sup> = 9((x+y)/
+2)<sup>2</sup> + 1((x-y)/2)<sup>2</sup>
+
+- the coefficients of the titled ellipse are = 5, 8, 5 which are the diagonal, sum of off-diagonal, and diagonal components of S   
+- the axes of the titled ellipse point along the axes of the eigenvectors x<sub>1</sub> = (1,1) and x<sub>2</sub> = (1,-1) and the titled ellipse intersects those axes at q<sub>1</sub> = (1/√2,1√2) and x<sub>2</sub> = (1/√2,-1/√2)
+- the coefficients of the lines-up ellipse are 9 and 1 from &Lambda;'s diagonal   
+- the pivots are 5 and 9/5. 
+
+this explains why S = Q&Lambda;Q<sup>T</sup> is called the "Principle Axis Theorem".  Q displays the axes.  Not only axis directions, from the eigenvectors, but also the axis lengths, from the eigenvalues.  To see it all, including why the largest eigenvalues, &lambda;<sub>1</sub> = 9 has shortest length, use capital letters for the new coordinates that line up the ellipse.  
+
+lined up:
+
+X = (x+y) / √2
+
+Y = (x-y) / √2 
+
+9 [ (x+y) / √2 ]<sup>2</sup> + 1 [ (x-y) / √2 ]<sup>2</sup> = 1
+
+becomes 
+
+9 X<sup>2</sup> + 1 Y<sup>2</sup> = 1
+
+the largest value of X<sup>2</sup> = 1/9 when Y = 0  
+the largest value of X<sup>2</sup> = 1 when X = 0
+
+the endpoit of the shorter axis has X = 1/3 so that X<sup>2</sup> = 1/9 and Y = 0
+
+the bigger eigenvalue 9 gives the shorter axis where the half length that extends from the (0,0) origin = 1/3 = 1/√&lambda;<sub>1</sub>
+
+the smaller eigenvalue 1 gives the longer axis where the half length that extends from the (0,0) origin = 1/1 = 1/√&lambda;<sub>2</sub>
+
+
+![\begin{align*}
+X &=\frac{x+y}{\sqrt{2}}\\
+Y &=\frac{x-y}{\sqrt{2}}\\
+1&=9(\frac{x+y}{\sqrt{2}})^2 +1(\frac{x-y}{\sqrt{2}})^2\\
+\\
+1&=9X^2 +1Y^2\\
+1&=(&lambda;_1=9)(X=\frac{1}{\sqrt{&lambda;_1=9}})+(&lambda;_2=1)(Y=0)\\
+1&=(&lambda;_1=9)(X=0)+(&lambda;_2=1)(Y=\frac{1}{\sqrt{&lambda;_2=1}})
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AX+%26%3D%5Cfrac%7Bx%2By%7D%7B%5Csqrt%7B2%7D%7D%5C%5C%0AY+%26%3D%5Cfrac%7Bx-y%7D%7B%5Csqrt%7B2%7D%7D%5C%5C%0A1%26%3D9%28%5Cfrac%7Bx%2By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2+%2B1%28%5Cfrac%7Bx-y%7D%7B%5Csqrt%7B2%7D%7D%29%5E2%5C%5C%0A%5C%5C%0A1%26%3D9X%5E2+%2B1Y%5E2%5C%5C%0A1%26%3D%28%26lambda%3B_1%3D9%29%28X%3D%5Cfrac%7B1%7D%7B%5Csqrt%7B%26lambda%3B_1%3D9%7D%7D%29%2B%28%26lambda%3B_2%3D1%29%28Y%3D0%29%5C%5C%0A1%26%3D%28%26lambda%3B_1%3D9%29%28X%3D0%29%2B%28%26lambda%3B_2%3D1%29%28Y%3D%5Cfrac%7B1%7D%7B%5Csqrt%7B%26lambda%3B_2%3D1%7D%7D%29%0A%5Cend%7Balign%2A%7D%0A)
+
+in the xy system the axes are along the eigenvectors of S: (1,1) and (1,-1) 
+
+in the XY system the axes are along the eigenvectors of &Lambda;: (1,0) and (0,1)
+
+![\begin{align*}
+&Lambda; &= 
+\begin{bmatrix}
+9&\\
+&1
+\end{bmatrix}\\
+det(&Lambda;-&lambda;I) &=
+(\begin{bmatrix}
+9-&lambda;&\\
+&1-&lambda;
+\end{bmatrix})=(9-&lambda;)(1-&lambda;)=0\\
+&lambda;_1 = 9 &\longrightarrow
+\begin{bmatrix}
+0&0\\
+0&-8
+\end{bmatrix}
+\begin{bmatrix}
+x_1
+\end{bmatrix}
+\longrightarrow 
+x_1=
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}\\
+&lambda;_2 = 1 &\longrightarrow
+\begin{bmatrix}
+8&0\\
+0&0
+\end{bmatrix}
+\begin{bmatrix}
+x_2
+\end{bmatrix}
+\longrightarrow 
+x_2=
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}\\
+X &=
+\begin{bmatrix}
+1&0\\
+0&1
+\end{bmatrix}
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%26Lambda%3B+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A9%26%5C%5C%0A%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0Adet%28%26Lambda%3B-%26lambda%3BI%29+%26%3D%0A%28%5Cbegin%7Bbmatrix%7D%0A9-%26lambda%3B%26%5C%5C%0A%261-%26lambda%3B%0A%5Cend%7Bbmatrix%7D%29%3D%289-%26lambda%3B%29%281-%26lambda%3B%29%3D0%5C%5C%0A%26lambda%3B_1+%3D+9+%26%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A0%260%5C%5C%0A0%26-8%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+%0Ax_1%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26lambda%3B_2+%3D+1+%26%5Clongrightarrow%0A%5Cbegin%7Bbmatrix%7D%0A8%260%5C%5C%0A0%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_2%0A%5Cend%7Bbmatrix%7D%0A%5Clongrightarrow+%0Ax_2%3D%0A%5Cbegin%7Bbmatrix%7D%0A0%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%5C%5C%0AX+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A0%261%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+
+for reference here is the LDL<sup>T</sup> decomposition
+
+![\begin{align*}
+S =&
+\begin{bmatrix}
+5&4\\
+4&5
+\end{bmatrix}\\
+E_{21}S =&
+\begin{bmatrix}
+1&0\\
+-\frac{4}{5}&1
+\end{bmatrix}
+\begin{bmatrix}
+5&4\\
+4&5
+\end{bmatrix} \\
+=&U\\
+=&
+\begin{bmatrix}
+5&4\\
+0&\frac{4}{5}
+\end{bmatrix}\\
+S =&
+\begin{bmatrix}
+5&4\\
+4&5
+\end{bmatrix} \\
+=& LDU = LDL^T \\
+=&
+\begin{bmatrix}
+1&0\\
+\frac{4}{5}&1
+\end{bmatrix}
+\begin{bmatrix}
+5&0\\
+0&\frac{9}{5}
+\end{bmatrix}
+\begin{bmatrix}
+1&\frac{4}{5}\\
+0&1
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D%5C%5C%0AE_%7B21%7DS+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A-%5Cfrac%7B4%7D%7B5%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%3D%26U%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A0%26%5Cfrac%7B4%7D%7B5%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0AS+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%3D%26+LDU+%3D+LDL%5ET+%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A%5Cfrac%7B4%7D%7B5%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5%260%5C%5C%0A0%26%5Cfrac%7B9%7D%7B5%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26%5Cfrac%7B4%7D%7B5%7D%5C%5C%0A0%261%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
