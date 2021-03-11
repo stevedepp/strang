@@ -1478,7 +1478,7 @@ x&y
 decompose x<sup>T</sup>Sx into x<sup>T</sup>Q&Lambda;Q<sup>T</sup>x   
 the eigenvectors are (1,1) and (1,-1)  
 divide by length √2 for unit vectors   
-then S = Q&LambdaQ<sup>T</sup>
+then S = Q&Lambda;Q<sup>T</sup>
 eigenvectors in Q and eigenvalues 9 and 1 in &Lambda;
 
 ![\begin{align*}
@@ -1748,6 +1748,221 @@ x^Tq_1&lambda;_1q_1^Tx +x^Tq_2&lambda;_2q_2^Tx
 \\
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%265x%5E2+%2B+8xy+%2B+5y%5E2+%3D+1%5C%5C%0AS+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D%5C%5C%0Adet%28S-%26lambda%3BI%29+%3D%26%0Adet%0A%5Cbegin%7Bbmatrix%7D%0A5-%26lambda%3B%264%5C%5C%0A4%265-%26lambda%3B%0A%5Cend%7Bbmatrix%7D+%3D0%5C%5C%0A%3D%26+%26lambda%3B%5E2+-+10%26lambda%3B+%2B+25+-16+%3D0%5C%5C%0A%3D%26+%26lambda%3B%5E2+-+10%26lambda%3B+%2B+9+%3D0+%5C%5C%0A%3D%26+%28%26lambda%3B+-+9%29%28%26lambda%3B+-1%29+%3D+0+%5C%5C%0A%5Clongrightarrow+%26+%26lambda%3B_1+%3D9%2C+%26lambda%3B_2+%3D1+%5C%5C%0A%28S-%26lambda%3B_1I%29x_1+%3D+%28S-9I%29x_1%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5-%26lambda%3B_1%264%5C%5C%0A4%265-%26lambda%3B_1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%0A%5Cend%7Bbmatrix%7D+%3D0%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5-9%264%5C%5C%0A4%265-9%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%0A%5Cend%7Bbmatrix%7D+%3D0%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A-4%264%5C%5C%0A4%26-4%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%0A%5Cend%7Bbmatrix%7D+%3D+0+%5C%5C%0A%5Clongrightarrow+%26+x_1+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%7C%7Cx_1%7C%7C+%3D+%5Csqrt%7B1%5E2%2B1%5E2%7D+%3D+%5Csqrt%7B2%7D+%5Clongrightarrow+%26+q_1+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%28S-%26lambda%3B_2I%29x_2+%3D+%28S-1I%29x_2%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5-%26lambda%3B_2%264%5C%5C%0A4%265-%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_2%0A%5Cend%7Bbmatrix%7D+%3D0%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5-1%264%5C%5C%0A4%265-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_2%0A%5Cend%7Bbmatrix%7D+%3D0%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A4%264%5C%5C%0A4%264%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_2%0A%5Cend%7Bbmatrix%7D+%3D+0+%5C%5C%0A%5Clongrightarrow+%26+x_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0A-1%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%7C%7Cx_2%7C%7C+%3D+%5Csqrt%7B1%5E2%2B%28-1%29%5E2%7D+%3D+%5Csqrt%7B2%7D+%5Clongrightarrow+%26+q_2+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%5C%5C%0A%5Cfrac%7B-1%7D%7B%5Csqrt%7B2%7D%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0AS+%3D%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D+%3D%26+Q%26Lambda%3BQ%5ET+%5C%5C%0A%3D%26+%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%26-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A9%26%5C%5C%0A%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%26-1%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D+%5C%5C%0Ax%5ETSx+%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%0A%3D%26+x%5ETQ%26Lambda%3BQ%5ETx+%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D+%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%26-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A9%26%5C%5C%0A%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%261%5C%5C%0A1%26-1%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A9%26%5C%5C%0A%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%5C%5C%0A%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%26-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29+%26%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A9%26%5C%5C%0A%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%5C%5C%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A9%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29+%26%0A1%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%5C%5C%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29+%26%0A%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A9%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%5C%5C%0A1%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A9%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx%2B%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%5E2+%2B+1%28%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dx-%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7Dy%29%5E2%5C%5C%0A%3D%26+%0A9%28%5Cfrac%7Bx%7D%7B%5Csqrt%7B2%7D%7D%2B%5Cfrac%7By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2+%2B+1%28%5Cfrac%7Bx%7D%7B%5Csqrt%7B2%7D%7D-%5Cfrac%7By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2%5C%5C%0A%3D%26+%0A9%28%5Cfrac%7Bx%2By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2+%2B+1%28%5Cfrac%7Bx-y%7D%7B%5Csqrt%7B2%7D%7D%29%5E2%0A%5C%5C%0A%5C%5C%0Ax%5ETSx+%3D+5x%5E2+%2B8xy%2B5y%5E2%0A%3D%26+x%5ETQ%26Lambda%3BQ%5ETx+%5C%5C%0A%5C%5C%0A%3D%26+%0A9+%28+%5Cfrac%7Bx%2By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2+%2B+1+%28+%5Cfrac%7Bx-y%7D%7B%5Csqrt%7B2%7D%7D%29%5E2%5C%5C%0A%3D%26+%0Ax%5ET%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%26q_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%26q_2%0A%5Cend%7Bbmatrix%7D%5ET%0Ax%5C%5C%0A%3D%26+%0Ax%5ET%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%26q_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%5ET%5C%5C%0Aq_2%5ET%0A%5Cend%7Bbmatrix%7D%0Ax%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5ETq_1%26x%5ETq_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%5ETx%5C%5C%0Aq_2%5ETx%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5ETq_1%26lambda%3B_1%26x%5ETq_2%26lambda%3B_1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%5ETx%5C%5C%0Aq_2%5ETx%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5ETq_1%26x%5ETq_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1q_1%5ETx%5C%5C%0A%26lambda%3B_2q_2%5ETx%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26%0Ax%5ETq_1%26lambda%3B_1q_1%5ETx+%2Bx%5ETq_2%26lambda%3B_2q_2%5ETx%0A%5C%5C%0A+%5C%5C%0A%5C%5C%0A%5Cend%7Balign%2A%7D)
 
+
+repeats some of the above but generalizes to terms:
+
+![\begin{align*}
+x^TSx =
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+5&4\\
+4&5
+\end{bmatrix} 
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+=& x^TQ&Lambda;Q^Tx \\
+\\
+x^TSx =
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+s_{11}&s_{12}\\
+s_{21}&s_{22}
+\end{bmatrix} 
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+=& x^TQ&Lambda;Q^Tx \\
+=& 
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\frac{1}{||q||} 
+\begin{bmatrix}
+q_{11}&q_{12}\\
+q_{21}&q_{22}
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+q_{11}&q_{12}\\
+q_{21}&q_{22}
+\end{bmatrix}^T
+\frac{1}{||q||}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+\frac{q_{11}}{||q_1|}&\frac{q_{12}}{||q_2||}\\
+\frac{q_{21}}{||q_1}&-\frac{q_{22}}{||q_2||}
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+\frac{q_{11}}{||q_1|}&\frac{q_{12}}{||q_2||}\\
+\frac{q_{21}}{||q_1}&-\frac{q_{22}}{||q_2||}
+\end{bmatrix}^T
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+\frac{q_{11}}{||q_1||}&\frac{q_{12}}{||q_2||}\\
+\frac{q_{21}}{||q_1||}&-\frac{q_{22}}{||q_2||}
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+\frac{q_{11}}{||q_1||}&\frac{q_{21}}{||q_1||}\\
+\frac{q_{12}}{||q_2||}&-\frac{q_{22}}{||q_2||}
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+(\frac{q_{11}}{||q_1|}x+\frac{q_{21}}{||q_1||}y)&
+(\frac{q_{12}}{||q_2}x-\frac{q_{22}}{||q_2||}y)
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)\\
+(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+&lambda;_1(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y) &
+&lambda;_2(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
+\end{bmatrix}
+\begin{bmatrix}
+(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)\\
+(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)&
+(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)\\
+&lambda;_2(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
+\end{bmatrix}\\
+=& 
+&lambda;_1(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)^2 + &lambda;_2(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)^2\\
+=& 
+&lambda;_1(\frac{q_{11}x + q_{21}y}{||q_1||})^2 + &lambda;_2(\frac{q_{12}x + q_{22}y}{||q_2||})^2 \\
+\\
+X = & \frac{q_{11}x + q_{21}y}{||q_1||} \\
+Y =& \frac{q_{12}x + q_{22}y}{||q_2||} \\
+x^TQ&Lambda;Q^Tx
+=&  &lambda;_1 X^2 + &lambda;_2 Y^2
+=& 
+9(\frac{x}{\sqrt{2}}+\frac{y}{\sqrt{2}})^2 + 1(\frac{x}{\sqrt{2}}-\frac{y}{\sqrt{2}})^2\\
+=& 
+9(\frac{x+y}{\sqrt{2}})^2 + 1(\frac{x-y}{\sqrt{2}})^2
+\\
+\\
+X = & \frac{x+y}{\sqrt{2}}\\
+Y =& \frac{x-y}{\sqrt{2}}\\
+x^TQ&Lambda;Q^Tx
+=&  9 X^2 + 1 Y^2
+\\
+\\
+x^TSx = 5x^2 +8xy+5y^2
+=& x^TQ&Lambda;Q^Tx \\
+\\
+=& 
+9 ( \frac{x+y}{\sqrt{2}})^2 + 1 ( \frac{x-y}{\sqrt{2}})^2\\
+=& 
+x^T
+\begin{bmatrix}
+q_1&q_2
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+q_1&q_2
+\end{bmatrix}^T
+x\\
+=& 
+x^T
+\begin{bmatrix}
+q_1&q_2
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+q_1^T\\
+q_2^T
+\end{bmatrix}
+x\\
+=& 
+\begin{bmatrix}
+x^Tq_1&x^Tq_2
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+q_1^Tx\\
+q_2^Tx
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+x^Tq_1&lambda;_1&x^Tq_2&lambda;_1
+\end{bmatrix}
+\begin{bmatrix}
+q_1^Tx\\
+q_2^Tx
+\end{bmatrix}
+\\
+=& 
+\begin{bmatrix}
+x^Tq_1&x^Tq_2
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1q_1^Tx\\
+&lambda;_2q_2^Tx
+\end{bmatrix}\\
+=&
+x^Tq_1&lambda;_1q_1^Tx +x^Tq_2&lambda;_2q_2^Tx
+\\
+ \\
+\\
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax%5ETSx+%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%0A%3D%26+x%5ETQ%26Lambda%3BQ%5ETx+%5C%5C%0A%5C%5C%0Ax%5ETSx+%3D%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0As_%7B11%7D%26s_%7B12%7D%5C%5C%0As_%7B21%7D%26s_%7B22%7D%0A%5Cend%7Bbmatrix%7D+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%0A%3D%26+x%5ETQ%26Lambda%3BQ%5ETx+%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cfrac%7B1%7D%7B%7C%7Cq%7C%7C%7D+%0A%5Cbegin%7Bbmatrix%7D%0Aq_%7B11%7D%26q_%7B12%7D%5C%5C%0Aq_%7B21%7D%26q_%7B22%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_%7B11%7D%26q_%7B12%7D%5C%5C%0Aq_%7B21%7D%26q_%7B22%7D%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cfrac%7B1%7D%7B%7C%7Cq%7C%7C%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7Bq_%7B11%7D%7D%7B%7C%7Cq_1%7C%7D%26%5Cfrac%7Bq_%7B12%7D%7D%7B%7C%7Cq_2%7C%7C%7D%5C%5C%0A%5Cfrac%7Bq_%7B21%7D%7D%7B%7C%7Cq_1%7D%26-%5Cfrac%7Bq_%7B22%7D%7D%7B%7C%7Cq_2%7C%7C%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7Bq_%7B11%7D%7D%7B%7C%7Cq_1%7C%7D%26%5Cfrac%7Bq_%7B12%7D%7D%7B%7C%7Cq_2%7C%7C%7D%5C%5C%0A%5Cfrac%7Bq_%7B21%7D%7D%7B%7C%7Cq_1%7D%26-%5Cfrac%7Bq_%7B22%7D%7D%7B%7C%7Cq_2%7C%7C%7D%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7Bq_%7B11%7D%7D%7B%7C%7Cq_1%7C%7C%7D%26%5Cfrac%7Bq_%7B12%7D%7D%7B%7C%7Cq_2%7C%7C%7D%5C%5C%0A%5Cfrac%7Bq_%7B21%7D%7D%7B%7C%7Cq_1%7C%7C%7D%26-%5Cfrac%7Bq_%7B22%7D%7D%7B%7C%7Cq_2%7C%7C%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7Bq_%7B11%7D%7D%7B%7C%7Cq_1%7C%7C%7D%26%5Cfrac%7Bq_%7B21%7D%7D%7B%7C%7Cq_1%7C%7C%7D%5C%5C%0A%5Cfrac%7Bq_%7B12%7D%7D%7B%7C%7Cq_2%7C%7C%7D%26-%5Cfrac%7Bq_%7B22%7D%7D%7B%7C%7Cq_2%7C%7C%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7Bq_%7B11%7D%7D%7B%7C%7Cq_1%7C%7Dx%2B%5Cfrac%7Bq_%7B21%7D%7D%7B%7C%7Cq_1%7C%7C%7Dy%29%26%0A%28%5Cfrac%7Bq_%7B12%7D%7D%7B%7C%7Cq_2%7Dx-%5Cfrac%7Bq_%7B22%7D%7D%7B%7C%7Cq_2%7C%7C%7Dy%29%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7Bq_%7B11%7D%7D%7B%7C%7Cq_1%7C%7C%7Dx%2B%5Cfrac%7Bq_%7B21%7D%7D%7B%7C%7Cq_1%7C%7C%7Dy%29%5C%5C%0A%28%5Cfrac%7Bq_%7B12%7D%7D%7B%7C%7Cq_2%7C%7C%7Dx-%5Cfrac%7Bq_%7B22%7D%7D%7B%7C%7Cq_2%7C%7C%7Dy%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%28%5Cfrac%7Bq_%7B11%7D%7D%7B%7C%7Cq_1%7C%7C%7Dx%2B%5Cfrac%7Bq_%7B21%7D%7D%7B%7C%7Cq_1%7C%7C%7Dy%29+%26%0A%26lambda%3B_2%28%5Cfrac%7Bq_%7B12%7D%7D%7B%7C%7Cq_2%7C%7C%7Dx-%5Cfrac%7Bq_%7B22%7D%7D%7B%7C%7Cq_2%7C%7C%7Dy%29%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7Bq_%7B11%7D%7D%7B%7C%7Cq_1%7C%7C%7Dx%2B%5Cfrac%7Bq_%7B21%7D%7D%7B%7C%7Cq_1%7C%7C%7Dy%29%5C%5C%0A%28%5Cfrac%7Bq_%7B12%7D%7D%7B%7C%7Cq_2%7C%7C%7Dx-%5Cfrac%7Bq_%7B22%7D%7D%7B%7C%7Cq_2%7C%7C%7Dy%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A%28%5Cfrac%7Bq_%7B11%7D%7D%7B%7C%7Cq_1%7C%7C%7Dx%2B%5Cfrac%7Bq_%7B21%7D%7D%7B%7C%7Cq_1%7C%7C%7Dy%29%26%0A%28%5Cfrac%7Bq_%7B12%7D%7D%7B%7C%7Cq_2%7C%7C%7Dx-%5Cfrac%7Bq_%7B22%7D%7D%7B%7C%7Cq_2%7C%7C%7Dy%29%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%28%5Cfrac%7Bq_%7B11%7D%7D%7B%7C%7Cq_1%7C%7C%7Dx%2B%5Cfrac%7Bq_%7B21%7D%7D%7B%7C%7Cq_1%7C%7C%7Dy%29%5C%5C%0A%26lambda%3B_2%28%5Cfrac%7Bq_%7B12%7D%7D%7B%7C%7Cq_2%7C%7C%7Dx-%5Cfrac%7Bq_%7B22%7D%7D%7B%7C%7Cq_2%7C%7C%7Dy%29%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%26lambda%3B_1%28%5Cfrac%7Bq_%7B11%7D%7D%7B%7C%7Cq_1%7C%7C%7Dx%2B%5Cfrac%7Bq_%7B21%7D%7D%7B%7C%7Cq_1%7C%7C%7Dy%29%5E2+%2B+%26lambda%3B_2%28%5Cfrac%7Bq_%7B12%7D%7D%7B%7C%7Cq_2%7C%7C%7Dx-%5Cfrac%7Bq_%7B22%7D%7D%7B%7C%7Cq_2%7C%7C%7Dy%29%5E2%5C%5C%0A%3D%26+%0A%26lambda%3B_1%28%5Cfrac%7Bq_%7B11%7Dx+%2B+q_%7B21%7Dy%7D%7B%7C%7Cq_1%7C%7C%7D%29%5E2+%2B+%26lambda%3B_2%28%5Cfrac%7Bq_%7B12%7Dx+%2B+q_%7B22%7Dy%7D%7B%7C%7Cq_2%7C%7C%7D%29%5E2+%5C%5C%0A%5C%5C%0AX+%3D+%26+%5Cfrac%7Bq_%7B11%7Dx+%2B+q_%7B21%7Dy%7D%7B%7C%7Cq_1%7C%7C%7D+%5C%5C%0AY+%3D%26+%5Cfrac%7Bq_%7B12%7Dx+%2B+q_%7B22%7Dy%7D%7B%7C%7Cq_2%7C%7C%7D+%5C%5C%0Ax%5ETQ%26Lambda%3BQ%5ETx%0A%3D%26++%26lambda%3B_1+X%5E2+%2B+%26lambda%3B_2+Y%5E2%0A%3D%26+%0A9%28%5Cfrac%7Bx%7D%7B%5Csqrt%7B2%7D%7D%2B%5Cfrac%7By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2+%2B+1%28%5Cfrac%7Bx%7D%7B%5Csqrt%7B2%7D%7D-%5Cfrac%7By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2%5C%5C%0A%3D%26+%0A9%28%5Cfrac%7Bx%2By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2+%2B+1%28%5Cfrac%7Bx-y%7D%7B%5Csqrt%7B2%7D%7D%29%5E2%0A%5C%5C%0A%5C%5C%0AX+%3D+%26+%5Cfrac%7Bx%2By%7D%7B%5Csqrt%7B2%7D%7D%5C%5C%0AY+%3D%26+%5Cfrac%7Bx-y%7D%7B%5Csqrt%7B2%7D%7D%5C%5C%0Ax%5ETQ%26Lambda%3BQ%5ETx%0A%3D%26++9+X%5E2+%2B+1+Y%5E2%0A%5C%5C%0A%5C%5C%0Ax%5ETSx+%3D+5x%5E2+%2B8xy%2B5y%5E2%0A%3D%26+x%5ETQ%26Lambda%3BQ%5ETx+%5C%5C%0A%5C%5C%0A%3D%26+%0A9+%28+%5Cfrac%7Bx%2By%7D%7B%5Csqrt%7B2%7D%7D%29%5E2+%2B+1+%28+%5Cfrac%7Bx-y%7D%7B%5Csqrt%7B2%7D%7D%29%5E2%5C%5C%0A%3D%26+%0Ax%5ET%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%26q_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%26q_2%0A%5Cend%7Bbmatrix%7D%5ET%0Ax%5C%5C%0A%3D%26+%0Ax%5ET%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%26q_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%5ET%5C%5C%0Aq_2%5ET%0A%5Cend%7Bbmatrix%7D%0Ax%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5ETq_1%26x%5ETq_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1%26%5C%5C%0A%26%26lambda%3B_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%5ETx%5C%5C%0Aq_2%5ETx%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5ETq_1%26lambda%3B_1%26x%5ETq_2%26lambda%3B_1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Aq_1%5ETx%5C%5C%0Aq_2%5ETx%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%5ETq_1%26x%5ETq_2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%26lambda%3B_1q_1%5ETx%5C%5C%0A%26lambda%3B_2q_2%5ETx%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26%0Ax%5ETq_1%26lambda%3B_1q_1%5ETx+%2Bx%5ETq_2%26lambda%3B_2q_2%5ETx%0A%5C%5C%0A+%5C%5C%0A%5C%5C%0A%5Cend%7Balign%2A%7D%0A)
+
+
 x<sup>T</sup>Sx becomes the sum of squres 5x<sup>2</sup> + 8xy + 5y<sup>2</sup> = 9((x+y)/
 2)<sup>2</sup> + 1((x-y)/2)<sup>2</sup>
 
@@ -1886,3 +2101,214 @@ S =&
 0&1
 \end{bmatrix}
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D%5C%5C%0AE_%7B21%7DS+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A-%5Cfrac%7B4%7D%7B5%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%3D%26U%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A0%26%5Cfrac%7B4%7D%7B5%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0AS+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%3D%26+LDU+%3D+LDL%5ET+%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A%5Cfrac%7B4%7D%7B5%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5%260%5C%5C%0A0%26%5Cfrac%7B9%7D%7B5%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26%5Cfrac%7B4%7D%7B5%7D%5C%5C%0A0%261%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+
+
+x^TSx =
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+5&4\\
+4&5
+\end{bmatrix} 
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+=& x^TQ&Lambda;Q^Tx \\
+\\
+x^TSx =
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+s_{11}&s_{12}\\
+s_{21}&s_{22}
+\end{bmatrix} 
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+=& x^TQ&Lambda;Q^Tx \\
+=& 
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\frac{1}{||q||} 
+\begin{bmatrix}
+q_{11}&q_{12}\\
+q_{21}&q_{22}
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+q_{11}&q_{12}\\
+q_{21}&q_{22}
+\end{bmatrix}^T
+\frac{1}{||q||}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+\frac{q_{11}}{||q_1|}&\frac{q_{12}}{||q_2||}\\
+\frac{q_{21}}{||q_1}&-\frac{q_{22}}{||q_2||}
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+\frac{q_{11}}{||q_1|}&\frac{q_{12}}{||q_2||}\\
+\frac{q_{21}}{||q_1}&-\frac{q_{22}}{||q_2||}
+\end{bmatrix}^T
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+\frac{q_{11}}{||q_1||}&\frac{q_{12}}{||q_2||}\\
+\frac{q_{21}}{||q_1||}&-\frac{q_{22}}{||q_2||}
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+\frac{q_{11}}{||q_1||}&\frac{q_{21}}{||q_1||}\\
+\frac{q_{12}}{||q_2||}&-\frac{q_{22}}{||q_2||}
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+(\frac{q_{11}}{||q_1|}x+\frac{q_{21}}{||q_1||}y)&
+(\frac{q_{12}}{||q_2}x-\frac{q_{22}}{||q_2||}y)
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)\\
+(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+&lambda;_1(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y) &
+&lambda;_2(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
+\end{bmatrix}
+\begin{bmatrix}
+(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)\\
+(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)&
+(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)\\
+&lambda;_2(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
+\end{bmatrix}\\
+=& 
+&lambda;_1(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)^2 + &lambda;_2(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)^2\\
+=& 
+&lambda;_1(\frac{q_{11}x + q_{21}y}{||q_1||})^2 + &lambda;_2(\frac{q_{12}x + q_{22}y}{||q_2||})^2 \\
+\\
+X = & \frac{q_{11}x + q_{21}y}{||q_1||} \\
+Y =& \frac{q_{12}x + q_{22}y}{||q_2||} \\
+x^TQ&Lambda;Q^Tx
+=&  &lambda;_1 X^2 + &lambda;_2 Y^2
+=& 
+9(\frac{x}{\sqrt{2}}+\frac{y}{\sqrt{2}})^2 + 1(\frac{x}{\sqrt{2}}-\frac{y}{\sqrt{2}})^2\\
+=& 
+9(\frac{x+y}{\sqrt{2}})^2 + 1(\frac{x-y}{\sqrt{2}})^2
+\\
+\\
+X = & \frac{x+y}{\sqrt{2}}\\
+Y =& \frac{x-y}{\sqrt{2}}\\
+x^TQ&Lambda;Q^Tx
+=&  9 X^2 + 1 Y^2
+\\
+\\
+x^TSx = 5x^2 +8xy+5y^2
+=& x^TQ&Lambda;Q^Tx \\
+\\
+=& 
+9 ( \frac{x+y}{\sqrt{2}})^2 + 1 ( \frac{x-y}{\sqrt{2}})^2\\
+=& 
+x^T
+\begin{bmatrix}
+q_1&q_2
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+q_1&q_2
+\end{bmatrix}^T
+x\\
+=& 
+x^T
+\begin{bmatrix}
+q_1&q_2
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+q_1^T\\
+q_2^T
+\end{bmatrix}
+x\\
+=& 
+\begin{bmatrix}
+x^Tq_1&x^Tq_2
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1&\\
+&&lambda;_2
+\end{bmatrix}
+\begin{bmatrix}
+q_1^Tx\\
+q_2^Tx
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+x^Tq_1&lambda;_1&x^Tq_2&lambda;_1
+\end{bmatrix}
+\begin{bmatrix}
+q_1^Tx\\
+q_2^Tx
+\end{bmatrix}
+\\
+=& 
+\begin{bmatrix}
+x^Tq_1&x^Tq_2
+\end{bmatrix}
+\begin{bmatrix}
+&lambda;_1q_1^Tx\\
+&lambda;_2q_2^Tx
+\end{bmatrix}\\
+=&
+x^Tq_1&lambda;_1q_1^Tx +x^Tq_2&lambda;_2q_2^Tx
+\\
+ \\
+\\
+\end{align*}
