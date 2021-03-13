@@ -1,6 +1,6 @@
 section 6.5 positive definite matrices
 
-1. symmetric S: all eigenvalues > 0 &longleftrightarrow; all pivots > 0 &longleftrigtharrow; all upper left determinants > 0    
+1. symmetric S: all eigenvalues > 0 &longleftrightarrow; all pivots > 0 &longleftrightarrow; all upper left determinants > 0    
 2. the matrix S is then positive definite:    tests are ...
 - the energy test is x<sup>T</sup>Sx > 0 for all vectors ≠ 0.     
 - another positive definitiveness test is S = A<sup>T</sup>A with independent columns in A  
@@ -2103,212 +2103,317 @@ S =&
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D%5C%5C%0AE_%7B21%7DS+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A-%5Cfrac%7B4%7D%7B5%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%3D%26U%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A0%26%5Cfrac%7B4%7D%7B5%7D%0A%5Cend%7Bbmatrix%7D%5C%5C%0AS+%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A5%264%5C%5C%0A4%265%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%3D%26+LDU+%3D+LDL%5ET+%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A%5Cfrac%7B4%7D%7B5%7D%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5%260%5C%5C%0A0%26%5Cfrac%7B9%7D%7B5%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26%5Cfrac%7B4%7D%7B5%7D%5C%5C%0A0%261%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
 
 
+S = I gives a circle x<sup>2</sup> + y<sup>2</sup> = 1.
 
-x^TSx =
+if one eigenvalue is negative  
+(e.g. switching a 4 and 5 in the S example above)  
+then the ellipse changes to a hyperbola.   
+the sum of squares becomes a difference of squares  
+9X<sup>2</sup> - 1Y<sup>2</sup> = 1   
+
+for a negative definite matrix like S = -I   
+with both &lambda;s negative,  
+the graph of -X<sup>2</sup> - Y<sup>2</sup> =1 has no points at all     
+
+if S is n x n, x<sup>T</sup>Sx = 1   
+is an ellipsoid in R<sup>n</sup>  [fills up space]   
+its axes are the eigenvectors of S   
+
+
+S = Q&Lambda;Q<sup>T</sup> is positive definite when all &lambda;<sub>i</sub> >0.   
+the graph of x<sup>T</sup>Sx = 1 is an ellipse.   
+the axes point along eigenvectors of S.  
+the half lengths are 1/√&lambda;<sub>1</sub> and 1/√&lambda;<sub>2</sub>
+
+![\begin{align*}
 \begin{bmatrix}
 x&y
 \end{bmatrix}
-\begin{bmatrix}
-5&4\\
-4&5
-\end{bmatrix} 
+Q&Lambda;Q^T
 \begin{bmatrix}
 x\\
 y
+\end{bmatrix}=
+\begin{bmatrix}
+X&Y
 \end{bmatrix}
-=& x^TQ&Lambda;Q^Tx \\
-\\
-x^TSx =
+&Lambda;
 \begin{bmatrix}
-x&y
+X\\
+Y
 \end{bmatrix}
-\begin{bmatrix}
-s_{11}&s_{12}\\
-s_{21}&s_{22}
-\end{bmatrix} 
-\begin{bmatrix}
-x\\
-y
-\end{bmatrix}
-=& x^TQ&Lambda;Q^Tx \\
-=& 
-\begin{bmatrix}
-x&y
-\end{bmatrix}
-\frac{1}{||q||} 
-\begin{bmatrix}
-q_{11}&q_{12}\\
-q_{21}&q_{22}
-\end{bmatrix}
-\begin{bmatrix}
-&lambda;_1&\\
-&&lambda;_2
-\end{bmatrix}
-\begin{bmatrix}
-q_{11}&q_{12}\\
-q_{21}&q_{22}
-\end{bmatrix}^T
-\frac{1}{||q||}
-\begin{bmatrix}
-x\\
-y
-\end{bmatrix}\\
-=& 
-\begin{bmatrix}
-x&y
-\end{bmatrix}
-\begin{bmatrix}
-\frac{q_{11}}{||q_1|}&\frac{q_{12}}{||q_2||}\\
-\frac{q_{21}}{||q_1}&-\frac{q_{22}}{||q_2||}
-\end{bmatrix}
-\begin{bmatrix}
-&lambda;_1&\\
-&&lambda;_2
-\end{bmatrix}
-\begin{bmatrix}
-\frac{q_{11}}{||q_1|}&\frac{q_{12}}{||q_2||}\\
-\frac{q_{21}}{||q_1}&-\frac{q_{22}}{||q_2||}
-\end{bmatrix}^T
-\begin{bmatrix}
-x\\
-y
-\end{bmatrix}\\
-=& 
-\begin{bmatrix}
-x&y
-\end{bmatrix}
-\begin{bmatrix}
-\frac{q_{11}}{||q_1||}&\frac{q_{12}}{||q_2||}\\
-\frac{q_{21}}{||q_1||}&-\frac{q_{22}}{||q_2||}
-\end{bmatrix}
-\begin{bmatrix}
-&lambda;_1&\\
-&&lambda;_2
-\end{bmatrix}
-\begin{bmatrix}
-\frac{q_{11}}{||q_1||}&\frac{q_{21}}{||q_1||}\\
-\frac{q_{12}}{||q_2||}&-\frac{q_{22}}{||q_2||}
-\end{bmatrix}
-\begin{bmatrix}
-x\\
-y
-\end{bmatrix}\\
-=& 
-\begin{bmatrix}
-(\frac{q_{11}}{||q_1|}x+\frac{q_{21}}{||q_1||}y)&
-(\frac{q_{12}}{||q_2}x-\frac{q_{22}}{||q_2||}y)
-\end{bmatrix}
-\begin{bmatrix}
-&lambda;_1&\\
-&&lambda;_2
-\end{bmatrix}
-\begin{bmatrix}
-(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)\\
-(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
-\end{bmatrix}\\
-=& 
-\begin{bmatrix}
-&lambda;_1(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y) &
-&lambda;_2(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
-\end{bmatrix}
-\begin{bmatrix}
-(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)\\
-(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
-\end{bmatrix}\\
-=& 
-\begin{bmatrix}
-(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)&
-(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
-\end{bmatrix}
-\begin{bmatrix}
-&lambda;_1(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)\\
-&lambda;_2(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)
-\end{bmatrix}\\
-=& 
-&lambda;_1(\frac{q_{11}}{||q_1||}x+\frac{q_{21}}{||q_1||}y)^2 + &lambda;_2(\frac{q_{12}}{||q_2||}x-\frac{q_{22}}{||q_2||}y)^2\\
-=& 
-&lambda;_1(\frac{q_{11}x + q_{21}y}{||q_1||})^2 + &lambda;_2(\frac{q_{12}x + q_{22}y}{||q_2||})^2 \\
-\\
-X = & \frac{q_{11}x + q_{21}y}{||q_1||} \\
-Y =& \frac{q_{12}x + q_{22}y}{||q_2||} \\
-x^TQ&Lambda;Q^Tx
-=&  &lambda;_1 X^2 + &lambda;_2 Y^2
-=& 
-9(\frac{x}{\sqrt{2}}+\frac{y}{\sqrt{2}})^2 + 1(\frac{x}{\sqrt{2}}-\frac{y}{\sqrt{2}})^2\\
-=& 
-9(\frac{x+y}{\sqrt{2}})^2 + 1(\frac{x-y}{\sqrt{2}})^2
-\\
-\\
-X = & \frac{x+y}{\sqrt{2}}\\
-Y =& \frac{x-y}{\sqrt{2}}\\
-x^TQ&Lambda;Q^Tx
-=&  9 X^2 + 1 Y^2
-\\
-\\
-x^TSx = 5x^2 +8xy+5y^2
-=& x^TQ&Lambda;Q^Tx \\
-\\
-=& 
-9 ( \frac{x+y}{\sqrt{2}})^2 + 1 ( \frac{x-y}{\sqrt{2}})^2\\
-=& 
-x^T
-\begin{bmatrix}
-q_1&q_2
-\end{bmatrix}
-\begin{bmatrix}
-&lambda;_1&\\
-&&lambda;_2
-\end{bmatrix}
-\begin{bmatrix}
-q_1&q_2
-\end{bmatrix}^T
-x\\
-=& 
-x^T
-\begin{bmatrix}
-q_1&q_2
-\end{bmatrix}
-\begin{bmatrix}
-&lambda;_1&\\
-&&lambda;_2
-\end{bmatrix}
-\begin{bmatrix}
-q_1^T\\
-q_2^T
-\end{bmatrix}
-x\\
-=& 
-\begin{bmatrix}
-x^Tq_1&x^Tq_2
-\end{bmatrix}
-\begin{bmatrix}
-&lambda;_1&\\
-&&lambda;_2
-\end{bmatrix}
-\begin{bmatrix}
-q_1^Tx\\
-q_2^Tx
-\end{bmatrix}\\
-=& 
-\begin{bmatrix}
-x^Tq_1&lambda;_1&x^Tq_2&lambda;_1
-\end{bmatrix}
-\begin{bmatrix}
-q_1^Tx\\
-q_2^Tx
-\end{bmatrix}
-\\
-=& 
-\begin{bmatrix}
-x^Tq_1&x^Tq_2
-\end{bmatrix}
-\begin{bmatrix}
-&lambda;_1q_1^Tx\\
-&lambda;_2q_2^Tx
-\end{bmatrix}\\
-=&
-x^Tq_1&lambda;_1q_1^Tx +x^Tq_2&lambda;_2q_2^Tx
-\\
- \\
-\\
+= &lambda;_1X^2 + &lambda;_2X^2 = 1
 \end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0AQ%26Lambda%3BQ%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%3D%0A%5Cbegin%7Bbmatrix%7D%0AX%26Y%0A%5Cend%7Bbmatrix%7D%0A%26Lambda%3B%0A%5Cbegin%7Bbmatrix%7D%0AX%5C%5C%0AY%0A%5Cend%7Bbmatrix%7D%0A%3D+%26lambda%3B_1X%5E2+%2B+%26lambda%3B_2X%5E2+%3D+1%0A%5Cend%7Balign%2A%7D%0A)
+
+**Important application: Test for a Minimum**
+
+Does F(x,y) have a minimum if 
+∂F/∂x = 0 and ∂F/∂y = 0 at the point (x,y) = (0,0)?
+
+for f(x) the test for minimum comes from calculus  
+if ∂f/∂x = 0 and ∂<sup>2</sup>f/∂x<sup>2</sup> > 0.  
+
+two variables in F(x,y)   
+produce a symmetric matrix S   
+which contains 4 second derivatives  
+**Positive ∂<sup>2</sup>f/∂x<sup>2</sup> changes to positive definite S**
+
+![\begin{align*}
+S = 
+\begin{bmatrix}
+\frac{\partial^2 F}{\partial x^2}&\frac{\partial^2 F}{\partial x\partial y}\\
+\frac{\partial^2 F}{\partial x\partial y}&\frac{\partial^2 F}{\partial y^2}
+\end{bmatrix}
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%3D+%0A%5Cbegin%7Bbmatrix%7D%0A%5Cfrac%7B%5Cpartial%5E2+F%7D%7B%5Cpartial+x%5E2%7D%26%5Cfrac%7B%5Cpartial%5E2+F%7D%7B%5Cpartial+x%5Cpartial+y%7D%5C%5C%0A%5Cfrac%7B%5Cpartial%5E2+F%7D%7B%5Cpartial+x%5Cpartial+y%7D%26%5Cfrac%7B%5Cpartial%5E2+F%7D%7B%5Cpartial+y%5E2%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+F(x,y) has a minimum if ∂F/∂x = ƒF/∂y = 0 and S is positive definite.  Reason is that S reveals all important terms ax<sup>2</sup> + 2bxy + cy<sup>2</sup> near (x,y) = (0,0)  
+The second derivatives of F are 2a, 2b, 2b, 2c.   
+For F(x,y,z) the matrix will be 3x3.
+
+
+review:  
+1. positive definite matrices have positive eigenvalues and positive pivots   
+2. quick test is given by the UL determinants: a > 0 and ad - b<sup>2</sup> > 0   
+3. the graph of energy x<sup>T</sup>Sx is the "bowl" going up from **x = 0**   
+x<sup>T</sup>Sx = ax<sup>2</sup> + 2bxy + cy<sup>2</sup> is positive except at x,y = 0,0  
+
+[ x<sup>T</sup>Sx = ax<sup>2</sup> + 2bxy + cy<sup>2</sup> > 0 always except x,y = 0,0  because of positive eigenvalues; this was proven ]   
+4.   S = A<sup>T</sup>A is automatically positive definite if A has independent columns.   
+5.  the ellipsoid x<sup>T</sup>Sx = 1 has its axes along the eigenvectors of S and lengths 1/√&lambda;   
+6. minimum of F(x,y) if ∂F/∂x = ∂F/∂y = 0 and 2nd derivative matrix is positive definite.  
+
+6.5 A 
+
+numpy has lots of features.
+
+scipy libraries are fast.  
+https://docs.scipy.org/doc/scipy/reference/linalg.html
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.ldl.html#scipy.linalg.ldl
+
+sympy is very convenient but slow: e.g. this diagonalization doesnt work for pascal(6) might be too much processing whereas scipy can do it
+https://docs.sympy.org/latest/tutorial/matrices.html#eigenvalues-eigenvectors-and-diagonalization     
+
+also very convenient from sympy
+LDL via Matrix.LDLdecomposition
+https://docs.sympy.org/latest/modules/matrices/matrices.html#matrixbase-class-reference
+
+S = LDL<sup>T</sup> from pivots and multipliers   
+S  =Q&Lambda;Q<sup>T</sup> from eigenvalues and eigenvectors  
+
+try nxn tests on pascal(6) and ones(6) and hilb(6) and other matrices in MatLab galliery; I do it here with numpy and scipy for the above reasons:   
+- pascal is positive definite because all its pivots are 1   
+- ones is positive semidefnite because its eigenvalues are (0,0,0,0,0,6)    
+- hilb is positive definite even though eig(H) shows eigenvaleus very near zero. [there is a 1 and 5 zeros when integerized]
+hilbert matric x<sup>T</sup>Hx = &Integral;
+- rand(6) + rand(6).T can be positive or negative definite.  here are 20,000 experiments where add up the number of positive eigenvalues of the A + A.T matrix that are > 0 and then take the proportion.  If completely random should be able to run this 20,000 experiment 1000 times and get 3 of 6 eigenvalues > 0 but here I consistently get 3+.
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/111038528-8b2bdb00-83f7-11eb-95bf-f3c9b1a09b2a.png">
+
+
+6.5 B
+
+When is symmetric block matrix M = [ [ A, B ], [ B.T, C ] ] positive definite ? 
+
+multiply the first row of M by B<sup>T</sup>A<sup>-1</sup> and subtract from the second row to get a block of zeros.  The Schur complement S = C - B<sup>T</sup>A<sup>-1</sup>B appears in the corner.   These 2 blocks A and S must be positive definite.  Their pivots are the pivots of M. 
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/111038819-d692b900-83f8-11eb-9aa0-1344e477c7cf.png">
+
+
+6.5 C
+
+find eigenvalues of the -1, 2, -1 tridiagonal n x n matrix S.
+
+The best way is zzzzzz
+
+
+problems: 
+
+2x2 tests for positive definitiveness: 
+- a > 0
+- ac - b<sup>2</sup> > 0
+
+if these are passed then you know c > b<sup>2</sup> / a > 0
+
+which of S<sub>1</sub>, S<sub>2</sub>, S<sub>3</sub>, S<sub>4</sub> have 2 postivie eigenvalues.
+
+- S<sub>1</sub> passes first fails second but there is a vector [x,y] = [4,2] for which x<sup>T</sub>Sx > 0. the tests only tell you if they are positive **always** - there might be other cases that have positive energy. 
+- S<sub>2</sub> fails first passes second
+- S<sub>3</sub> passes first fails second, semidefinite
+- S<sub>4</sub> passes first passes second
+
+
+![\begin{align*}
+S &= 
+\begin{bmatrix}
+a&b\\
+b&c
+\end{bmatrix}\\
+\\
+S_1 &= 
+\begin{bmatrix}
+5&6\\
+6&7
+\end{bmatrix}\\
+a& > 0\\
+ac - b^2 &< 0\\
+\\
+x^TS_1x & = 
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+5&6\\
+6&7
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+& = \begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+5x+6y\\
+6x+7y
+\end{bmatrix} \\
+& = \begin{bmatrix}
+5x+6y&
+6x+7y
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+& = 5xx+6yx + 6xy+7yy \\
+& = 5x^2+6xy + 6xy+7y^2 \\
+& = 5x^2+12xy+7y^2 \\
+& = ax^2+bxy + bxy+cy^2 \\
+& = ax^2+2bxy+cy^2 \\
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix} &=
+\begin{bmatrix}
+4\\
+2
+\end{bmatrix} \longrightarrow x^TSx = 5*4^2+12*4*2+7*2^2 > 0\\
+\\
+\\S_2 &= 
+\begin{bmatrix}
+-1&-2\\
+-2&-5
+\end{bmatrix}\\
+a& < 0\\
+ac - b^2 &> 0\\
+\\
+S_3 &= 
+\begin{bmatrix}
+1&10\\
+10&100
+\end{bmatrix}\\
+a& > 0\\
+ac - b^2 &= 0\\
+\\
+S_4 &= 
+\begin{bmatrix}
+1&10\\
+10&101
+\end{bmatrix}\\
+a& > 0\\
+ac - b^2 &> 0
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0Aa%26b%5C%5C%0Ab%26c%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0AS_1+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A5%266%5C%5C%0A6%267%0A%5Cend%7Bbmatrix%7D%5C%5C%0Aa%26+%3E+0%5C%5C%0Aac+-+b%5E2+%26%3C+0%5C%5C%0A%5C%5C%0Ax%5ETS_1x+%26+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5%266%5C%5C%0A6%267%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26+%3D+%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A5x%2B6y%5C%5C%0A6x%2B7y%0A%5Cend%7Bbmatrix%7D+%5C%5C%0A%26+%3D+%5Cbegin%7Bbmatrix%7D%0A5x%2B6y%26%0A6x%2B7y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%26+%3D+5xx%2B6yx+%2B+6xy%2B7yy+%5C%5C%0A%26+%3D+5x%5E2%2B6xy+%2B+6xy%2B7y%5E2+%5C%5C%0A%26+%3D+5x%5E2%2B12xy%2B7y%5E2+%5C%5C%0A%26+%3D+ax%5E2%2Bbxy+%2B+bxy%2Bcy%5E2+%5C%5C%0A%26+%3D+ax%5E2%2B2bxy%2Bcy%5E2+%5C%5C%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D+%26%3D%0A%5Cbegin%7Bbmatrix%7D%0A4%5C%5C%0A2%0A%5Cend%7Bbmatrix%7D+%5Clongrightarrow+x%5ETSx+%3D+5%2A4%5E2%2B12%2A4%2A2%2B7%2A2%5E2+%3E+0%5C%5C%0A%5C%5C%0A%5C%5CS_2+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A-1%26-2%5C%5C%0A-2%26-5%0A%5Cend%7Bbmatrix%7D%5C%5C%0Aa%26+%3C+0%5C%5C%0Aac+-+b%5E2+%26%3E+0%5C%5C%0A%5C%5C%0AS_3+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%2610%5C%5C%0A10%26100%0A%5Cend%7Bbmatrix%7D%5C%5C%0Aa%26+%3E+0%5C%5C%0Aac+-+b%5E2+%26%3D+0%5C%5C%0A%5C%5C%0AS_4+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0A1%2610%5C%5C%0A10%26101%0A%5Cend%7Bbmatrix%7D%5C%5C%0Aa%26+%3E+0%5C%5C%0Aac+-+b%5E2+%26%3E+0%0A%5Cend%7Balign%2A%7D)
+
+5.
+writing f(x,y) as difference of squares necessitated decompose into LDL or Q&Lambda;Q 
+
+no minimum at 0,0 even though positive coefficients. 
+minimum at 2 and -1 where the squares are zero. 
+
+![\begin{align*}
+f(x,y) =& x^2 + 4xy + 3y^2 \\
+= &x^T Sx = 
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+1&2\\
+2&3
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+1x+2y\\
+2x+3y
+\end{bmatrix}
+\\=& 1x^2 + 4xy +3y^2 \\
+=& x^TLDL^Tx  \\
+=& 
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+1&0\\
+2&1
+\end{bmatrix}
+\begin{bmatrix}
+1&0\\
+0&-1
+\end{bmatrix}
+\begin{bmatrix}
+1&2\\
+0&1
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+1x+2y&
+0x+1y
+\end{bmatrix}
+\begin{bmatrix}
+1&0\\
+0&-1
+\end{bmatrix}
+\begin{bmatrix}
+1x+2y\\
+0x+1y
+\end{bmatrix}\\
+=& 
+\begin{bmatrix}
+1(1x+2y) &-1(0x+1y)
+\end{bmatrix}
+\begin{bmatrix}
+1x+2y\\
+0x+1y
+\end{bmatrix}\\
+=& 1(1x+2y)^2 -1(0x+1y)^2 \\
+=&  (x+2y)^2 -y^2 \\
+=& x^2 +4xy +4y^2- y^2
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Af%28x%2Cy%29+%3D%26+x%5E2+%2B+4xy+%2B+3y%5E2+%5C%5C%0A%3D+%26x%5ET+Sx+%3D+%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%262%5C%5C%0A2%263%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1x%2B2y%5C%5C%0A2x%2B3y%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%3D%26+1x%5E2+%2B+4xy+%2B3y%5E2+%5C%5C%0A%3D%26+x%5ETLDL%5ETx++%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A2%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A0%26-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%262%5C%5C%0A0%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A1x%2B2y%26%0A0x%2B1y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A0%26-1%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1x%2B2y%5C%5C%0A0x%2B1y%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0A1%281x%2B2y%29+%26-1%280x%2B1y%29%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1x%2B2y%5C%5C%0A0x%2B1y%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+1%281x%2B2y%29%5E2+-1%280x%2B1y%29%5E2+%5C%5C%0A%3D%26++%28x%2B2y%29%5E2+-y%5E2+%5C%5C%0A%3D%26+x%5E2+%2B4xy+%2B4y%5E2-+y%5E2%0A%5Cend%7Balign%2A%7D)
+
+
+6. 
+f(x,y) = 2xy has a saddle point and not a minimum at (0,0)     
+the symmetric matrix producing 2xy is [ [0,1], [1,0] ]   
+a = c = 0 and b = 1   
+
+S = [ [0,1], [1,0] ] produces f(x,y) = [x y] [ [0,1], [1,0] ] [ x y ]<sup>T</sup> = 2xy has &lambda;s = 1 and -1: S is an indefinite matrix and f(x,y) has a saddle point. 
+
+
+7.  A<sup>T</sup>A are PD in each case.  A needs independent columns only.  A doesnt need independent rows: e.g. A<sup>2</sup> with independent columns and dependent rows vs A<sup>3</sup> with dependent columns and independent rows
+
+A<sup>T</sup> is invertible if A has independent columns.  AA<sup>T</sup> is not necessarily invertible with A having independent columns.  
+
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/111052058-b7f6e700-8425-11eb-9656-6561f4929028.png">
+
+
