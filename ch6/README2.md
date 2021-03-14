@@ -2416,4 +2416,367 @@ A<sup>T</sup> is invertible if A has independent columns.  AA<sup>T</sup> is not
 
 <img width="602" alt="image" src="https://user-images.githubusercontent.com/38410965/111052058-b7f6e700-8425-11eb-9656-6561f4929028.png">
 
+8.
+the function f(x,y) = 3 (x+2y)<sup>2</sup> +4y<sup>2</sup> is positive except at (0,0)    
 
+the matrix that represents this equation is S
+
+pivots outside squares and L multipliers inside 
+
+
+![\begin{align*}
+f(x,y) =& 3(x+2y)^2 +4y^2 \\
+=& 3(x^2 + 4xy + 4y^2) + 4y^2 \\
+=& 3x^2 + 12xy + 12y^2 + 4y^2 \\
+=& 3x^2 + 12xy + 16y^2 \\
+= &x^TSx \\
+= &
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+3&6\\
+6&16
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+\\
+LDL^T factor:&\\
+E_{21} S =& U \\
+\begin{bmatrix}
+1&0\\
+-2&1
+\end{bmatrix}
+\begin{bmatrix}
+3&6\\
+6&16
+\end{bmatrix}
+=&
+\begin{bmatrix}
+3&6\\
+0&4
+\end{bmatrix}\\
+=& DL^T\\
+=&
+\begin{bmatrix}
+3&0\\
+0&4
+\end{bmatrix}
+\begin{bmatrix}
+1&2\\
+0&1
+\end{bmatrix}\\
+\\
+f(x,y) =& x^TSx \\
+=& x^TLDL^Tx \\
+=&
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+1&0\\
+2&1
+\end{bmatrix}
+\begin{bmatrix}
+3&0\\
+0&4
+\end{bmatrix}
+\begin{bmatrix}
+1&2\\
+0&1
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+=&
+\begin{bmatrix}
+x&y
+\end{bmatrix}
+\begin{bmatrix}
+L_{11}&L_{12}\\
+L_{21}&L_{22}
+\end{bmatrix}
+\begin{bmatrix}
+D_{11}&0\\
+0&D_{22}
+\end{bmatrix}
+\begin{bmatrix}
+L_{11}^T&L_{21}^T\\
+L_{12}^T&L_{22}^T
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}\\
+=&
+\begin{bmatrix}
+1x+2y&
+0x + 1y
+\end{bmatrix}
+\begin{bmatrix}
+3&0\\
+0&4
+\end{bmatrix}
+\begin{bmatrix}
+1x+2y\\
+0x+1y
+\end{bmatrix}\\
+=&
+\begin{bmatrix}
+3(1x+2y)&
+4(0x + 1y)
+\end{bmatrix}
+\begin{bmatrix}
+1x+2y\\
+0x+1y
+\end{bmatrix}
+\\
+=&
+3(1x+2y)^2 +4(0x + 1y)^2
+\\
+=&
+3(x+2y)^2 +4y^2\\
+=&
+D_{11}(L_{11}x+L_{21}y)^2 +D_{22}(L_{12}x +L_{22}y)^2
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Af%28x%2Cy%29+%3D%26+3%28x%2B2y%29%5E2+%2B4y%5E2+%5C%5C%0A%3D%26+3%28x%5E2+%2B+4xy+%2B+4y%5E2%29+%2B+4y%5E2+%5C%5C%0A%3D%26+3x%5E2+%2B+12xy+%2B+12y%5E2+%2B+4y%5E2+%5C%5C%0A%3D%26+3x%5E2+%2B+12xy+%2B+16y%5E2+%5C%5C%0A%3D+%26x%5ETSx+%5C%5C%0A%3D+%26%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A3%266%5C%5C%0A6%2616%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0ALDL%5ET+factor%3A%26%5C%5C%0AE_%7B21%7D+S+%3D%26+U+%5C%5C%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A-2%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A3%266%5C%5C%0A6%2616%0A%5Cend%7Bbmatrix%7D%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A3%266%5C%5C%0A0%264%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+DL%5ET%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A3%260%5C%5C%0A0%264%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%262%5C%5C%0A0%261%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%0Af%28x%2Cy%29+%3D%26+x%5ETSx+%5C%5C%0A%3D%26+x%5ETLDL%5ETx+%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%5C%5C%0A2%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A3%260%5C%5C%0A0%264%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%262%5C%5C%0A0%261%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Ax%26y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AL_%7B11%7D%26L_%7B12%7D%5C%5C%0AL_%7B21%7D%26L_%7B22%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AD_%7B11%7D%260%5C%5C%0A0%26D_%7B22%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AL_%7B11%7D%5ET%26L_%7B21%7D%5ET%5C%5C%0AL_%7B12%7D%5ET%26L_%7B22%7D%5ET%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax%5C%5C%0Ay%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A1x%2B2y%26%0A0x+%2B+1y%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A3%260%5C%5C%0A0%264%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1x%2B2y%5C%5C%0A0x%2B1y%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A3%281x%2B2y%29%26%0A4%280x+%2B+1y%29%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1x%2B2y%5C%5C%0A0x%2B1y%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%0A%3D%26%0A3%281x%2B2y%29%5E2+%2B4%280x+%2B+1y%29%5E2%0A%5C%5C%0A%3D%26%0A3%28x%2B2y%29%5E2+%2B4y%5E2%5C%5C%0A%3D%26%0AD_%7B11%7D%28L_%7B11%7Dx%2BL_%7B21%7Dy%29%5E2+%2BD_%7B22%7D%28L_%7B12%7Dx+%2BL_%7B22%7Dy%29%5E2%0A%5Cend%7Balign%2A%7D)
+
+
+9. 3x3 matrix S and its pivot, rank, eigenvalues and determinant for 4(x<sub>1</sub> - x<sub>2</sub> + 2x<sub>3</sub>)<sup>2</sup>
+
+can see where the L, D and S matrix cells come from 
+
+since there is only pivot, rank = 1  
+since trace = 4 +4+16 = 24, it can have only 1 non-zero eigenvalue = 24 and the remaining two eigenvalues are 0 so that 0 • 0 • 24 = 0 = determinant = 0
+
+one positive eigenvalue
+one positive pivot
+
+![\begin{align*}
+f(x_1,x_2, x_3) =& 4(x_1-x_2+2x_3)^2 \\
+\\
+=& x^TSx \\
+=& x^TLDL^Tx \\
+=&
+\begin{bmatrix}
+x
+\end{bmatrix}^T
+\begin{bmatrix}
+L
+\end{bmatrix}
+\begin{bmatrix}
+D
+\end{bmatrix}
+\begin{bmatrix}
+L
+\end{bmatrix}^T
+\begin{bmatrix}
+x
+\end{bmatrix}\\
+=&
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix}
+\begin{bmatrix}
+L_{11}&L_{12}&L_{13}\\
+L_{21}&L_{22}&L_{23}\\
+L_{31}&L_{32}&L_{33}\\
+\end{bmatrix}
+\begin{bmatrix}
+D_{11}&0&0\\
+0&D_{22}&0\\
+0&0&D_{33}
+\end{bmatrix}
+\begin{bmatrix}
+L_{11}^T&L_{21}^T&L_{31}^T\\
+L_{12}^T&L_{22}^T&L_{32}^T\\
+L_{13}^T&L_{23}^T&L_{33}^T
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}\\
+=&
+D_{11}(L_{11}x_1+L_{21}x_2+L_{31}x_3)^2 +D_{22}(L_{12}x_1 +L_{22}x_2+L_{32})^2+D_{33}(L_{13}x_1 +L_{23}x_2+L_{33})^2 \\
+=&
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix}
+\begin{bmatrix}
+1&L_{12}&L_{13}\\
+-1&L_{22}&L_{23}\\
+2&L_{32}&L_{33}\\
+\end{bmatrix}
+\begin{bmatrix}
+4&0&0\\
+0&D_{22}&0\\
+0&0&D_{33}
+\end{bmatrix}
+\begin{bmatrix}
+1&-1&2\\
+L_{12}^T&L_{22}^T&L_{32}^T\\
+L_{13}^T&L_{23}^T&L_{33}^T
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}\\
+=&
+4(1x_1-1x_2+2x_3)^2 +D_{22}(L_{12}x_1 +L_{22}x_2+L_{32})^2+D_{33}(L_{13}x_1 +L_{23}x_2+L_{33})^2 \\
+=&
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix}
+\begin{bmatrix}
+1&0&0\\
+-1&0&0\\
+2&0&0\\
+\end{bmatrix}
+\begin{bmatrix}
+4&0&0\\
+0&0&0\\
+0&0&0
+\end{bmatrix}
+\begin{bmatrix}
+1&-1&2\\
+0&0&0\\
+0&0&0
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}
+\\=&
+\begin{bmatrix}
+x^TL
+\end{bmatrix}
+\begin{bmatrix}
+D
+\end{bmatrix}
+\begin{bmatrix}
+L^Tx
+\end{bmatrix}
+\\=&
+\begin{bmatrix}
+1x_1-1x_2+2x_3&0&0
+\end{bmatrix}
+\begin{bmatrix}
+4&0&0\\
+0&0&0\\
+0&0&0
+\end{bmatrix}
+\begin{bmatrix}
+1x_1-1x_2+2x_3\\
+0\\
+0
+\end{bmatrix}\\
+\\=&
+\begin{bmatrix}
+4(1x_1-1x_2+2x_3)&0&0
+\end{bmatrix}
+\begin{bmatrix}
+1x_1-1x_2+2x_3\\
+0\\
+0
+\end{bmatrix}\\
+=&
+4(1x_1-1x_2+2x_3)^2 \\
+=& x^TLDL^Tx \\
+\\
+=&
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix}
+\begin{bmatrix}
+1&0&0\\
+-1&0&0\\
+2&0&0\\
+\end{bmatrix}
+\begin{bmatrix}
+4&0&0\\
+0&0&0\\
+0&0&0
+\end{bmatrix}
+\begin{bmatrix}
+1&-1&2\\
+0&0&0\\
+0&0&0
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}\\
+=& [x^T][LD][L^T]x \\
+=& 
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix}
+\begin{bmatrix}
+4&0&0\\
+-4&0&0\\
+8&0&0
+\end{bmatrix}
+\begin{bmatrix}
+1&-1&2\\
+0&0&0\\
+0&0&0
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}\\
+=& x^TSx \\
+=&
+\begin{bmatrix}
+x_1&x_2&x_3
+\end{bmatrix}
+\begin{bmatrix}
+4&-4&8\\
+-4&4&8\\
+8&-8&16
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}\\
+=& [x^TS]x \\
+=&
+\begin{bmatrix}
+4x_1-4x_2+8x_3&-4x_1+4x_2-8x_3&8x_1-8x_2+16x_3
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}\\
+=&
+4\begin{bmatrix}
+x_1-x_2+2x_3&-x_1+x_2-2x_3&2x_1-2x_2+4x_3
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}\\
+=&
+4(x_1x_1-x_1x_2+2x_1x_3-x_1x_2+x_2x_2-2x_2x_3+2x_1x_3-2x_2x_3+4x_3x_3)\\
+=&
+4x_1x_1-4x_1x_2+8x_1x_3-4x_1x_2+4x_2x_2-8x_2x_3+8x_1x_3-8x_2x_3+16x_3x_3)\\
+=&
+S_{11}x_1x_1-S_{12}x_1x_2+S_{13}x_1x_3-S_{21}x_1x_2+S_{22}x_2x_2-S_{32}x_2x_3+S_{13}x_1x_3-S_{23}x_2x_3+S_{33}x_3x_3)\\
+=&
+4(x_1^2-2x_1x_2+4x_1x_3+x_2^2-4x_2x_3-2x_2x_3+4x_3^2)\\
+=&
+4(1x_1-1x_2+2x_3)^2 \\
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Af%28x_1%2Cx_2%2C+x_3%29+%3D%26+4%28x_1-x_2%2B2x_3%29%5E2+%5C%5C%0A%5C%5C%0A%3D%26+x%5ETSx+%5C%5C%0A%3D%26+x%5ETLDL%5ETx+%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Ax%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cbegin%7Bbmatrix%7D%0AL%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AD%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AL%0A%5Cend%7Bbmatrix%7D%5ET%0A%5Cbegin%7Bbmatrix%7D%0Ax%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AL_%7B11%7D%26L_%7B12%7D%26L_%7B13%7D%5C%5C%0AL_%7B21%7D%26L_%7B22%7D%26L_%7B23%7D%5C%5C%0AL_%7B31%7D%26L_%7B32%7D%26L_%7B33%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AD_%7B11%7D%260%260%5C%5C%0A0%26D_%7B22%7D%260%5C%5C%0A0%260%26D_%7B33%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AL_%7B11%7D%5ET%26L_%7B21%7D%5ET%26L_%7B31%7D%5ET%5C%5C%0AL_%7B12%7D%5ET%26L_%7B22%7D%5ET%26L_%7B32%7D%5ET%5C%5C%0AL_%7B13%7D%5ET%26L_%7B23%7D%5ET%26L_%7B33%7D%5ET%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26%0AD_%7B11%7D%28L_%7B11%7Dx_1%2BL_%7B21%7Dx_2%2BL_%7B31%7Dx_3%29%5E2+%2BD_%7B22%7D%28L_%7B12%7Dx_1+%2BL_%7B22%7Dx_2%2BL_%7B32%7D%29%5E2%2BD_%7B33%7D%28L_%7B13%7Dx_1+%2BL_%7B23%7Dx_2%2BL_%7B33%7D%29%5E2+%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26L_%7B12%7D%26L_%7B13%7D%5C%5C%0A-1%26L_%7B22%7D%26L_%7B23%7D%5C%5C%0A2%26L_%7B32%7D%26L_%7B33%7D%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A4%260%260%5C%5C%0A0%26D_%7B22%7D%260%5C%5C%0A0%260%26D_%7B33%7D%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-1%262%5C%5C%0AL_%7B12%7D%5ET%26L_%7B22%7D%5ET%26L_%7B32%7D%5ET%5C%5C%0AL_%7B13%7D%5ET%26L_%7B23%7D%5ET%26L_%7B33%7D%5ET%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26%0A4%281x_1-1x_2%2B2x_3%29%5E2+%2BD_%7B22%7D%28L_%7B12%7Dx_1+%2BL_%7B22%7Dx_2%2BL_%7B32%7D%29%5E2%2BD_%7B33%7D%28L_%7B13%7Dx_1+%2BL_%7B23%7Dx_2%2BL_%7B33%7D%29%5E2+%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-1%260%260%5C%5C%0A2%260%260%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A4%260%260%5C%5C%0A0%260%260%5C%5C%0A0%260%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-1%262%5C%5C%0A0%260%260%5C%5C%0A0%260%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Ax%5ETL%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AD%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AL%5ETx%0A%5Cend%7Bbmatrix%7D%0A%5C%5C%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A1x_1-1x_2%2B2x_3%260%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A4%260%260%5C%5C%0A0%260%260%5C%5C%0A0%260%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1x_1-1x_2%2B2x_3%5C%5C%0A0%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%5C%5C%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A4%281x_1-1x_2%2B2x_3%29%260%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1x_1-1x_2%2B2x_3%5C%5C%0A0%5C%5C%0A0%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26%0A4%281x_1-1x_2%2B2x_3%29%5E2+%5C%5C%0A%3D%26+x%5ETLDL%5ETx+%5C%5C%0A%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%260%260%5C%5C%0A-1%260%260%5C%5C%0A2%260%260%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A4%260%260%5C%5C%0A0%260%260%5C%5C%0A0%260%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-1%262%5C%5C%0A0%260%260%5C%5C%0A0%260%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%5Bx%5ET%5D%5BLD%5D%5BL%5ET%5Dx+%5C%5C%0A%3D%26+%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A4%260%260%5C%5C%0A-4%260%260%5C%5C%0A8%260%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A1%26-1%262%5C%5C%0A0%260%260%5C%5C%0A0%260%260%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+x%5ETSx+%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%26x_2%26x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A4%26-4%268%5C%5C%0A-4%264%268%5C%5C%0A8%26-8%2616%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26+%5Bx%5ETS%5Dx+%5C%5C%0A%3D%26%0A%5Cbegin%7Bbmatrix%7D%0A4x_1-4x_2%2B8x_3%26-4x_1%2B4x_2-8x_3%268x_1-8x_2%2B16x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26%0A4%5Cbegin%7Bbmatrix%7D%0Ax_1-x_2%2B2x_3%26-x_1%2Bx_2-2x_3%262x_1-2x_2%2B4x_3%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_3%0A%5Cend%7Bbmatrix%7D%5C%5C%0A%3D%26%0A4%28x_1x_1-x_1x_2%2B2x_1x_3-x_1x_2%2Bx_2x_2-2x_2x_3%2B2x_1x_3-2x_2x_3%2B4x_3x_3%29%5C%5C%0A%3D%26%0A4x_1x_1-4x_1x_2%2B8x_1x_3-4x_1x_2%2B4x_2x_2-8x_2x_3%2B8x_1x_3-8x_2x_3%2B16x_3x_3%29%5C%5C%0A%3D%26%0AS_%7B11%7Dx_1x_1-S_%7B12%7Dx_1x_2%2BS_%7B13%7Dx_1x_3-S_%7B21%7Dx_1x_2%2BS_%7B22%7Dx_2x_2-S_%7B32%7Dx_2x_3%2BS_%7B13%7Dx_1x_3-S_%7B23%7Dx_2x_3%2BS_%7B33%7Dx_3x_3%29%5C%5C%0A%3D%26%0A4%28x_1%5E2-2x_1x_2%2B4x_1x_3%2Bx_2%5E2-4x_2x_3-2x_2x_3%2B4x_3%5E2%29%5C%5C%0A%3D%26%0A4%281x_1-1x_2%2B2x_3%29%5E2+%5C%5C%0A%5Cend%7Balign%2A%7D)
+
+
+10. 
