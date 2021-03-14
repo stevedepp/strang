@@ -2790,3 +2790,59 @@ S_{11}x_1x_1-S_{12}x_1x_2+S_{13}x_1x_3-S_{21}x_1x_2+S_{22}x_2x_2-S_{32}x_2x_3+S_
 
 
 10. 
+
+convert formula to 3x3 matrix and explain why PD and PSD
+
+the coefficients of crosses need to be split evenly between the symmetric off diagonals.
+
+PSD vs PD is by looking at 1x1, 2x2, 3x3 determinants which tell the ratio of pivots: for the first S theyre all positive and for the second, the last determinant and thus the last pivot is zero.
+
+the second is thusly singular and has T = (1,1,1) in its null space 
+
+![\begin{align*}
+x^TSx 
+\\ &= x^TLDL^Tx
+\\ &= [x^TL\sqrt{D}][\sqrt{D}L^Tx]
+\\ &= [\sqrt{D}L^Tx]^T[\sqrt{D}L^Tx]
+\\ &= ||\sqrt{D}L^Tx||^2
+\\or &
+\\ &= x^TLDQ^Tx
+\\ &= [x^TL\sqrt{D}][\sqrt{D}Q^Tx]
+\\ &= [\sqrt{D}L^Tx]^T[\sqrt{D}Q^Tx]
+\\ &= ||\sqrt{D}Q^Tx||^2
+\\generically &
+\\&= x^TA^TAx 
+\\&= [x^TA^T][Ax] 
+\\&= [Ax]^T[Ax] 
+\\&= ||Ax||^2 
+\\
+\\ x^TS_1x &=
+\\ &= 2(x_1^2+x_2^2+x_3^2-x_1x_2-x_2x_3)
+\\ & = 2x_1^2-2x_1x_2+2x_2^2-2x_2x_3+2x_3^2
+\\ & = 2x_1^2-x_1x_2-x_2x_1+2x_2^2-x_2x_3-x_3x_2+2x_3^2
+\\ & =
+\begin{bmatrix}
+2&-1&0\\
+-1&2&-1\\
+0&-1&2
+\end{bmatrix}
+\\det_{1x1}(S_1) &= 2 > 0
+\\det_{2x2}(S_1) &= 3 > 0
+\\det_{3x3}(S_1) &= 2*(4-1) -1*-1*(-2)  = 4 > 0 \longrightarrow PD
+\\ x^TS_2x &= 
+\\&= 2(x_1^2+x_2^2+x_3^2-x_1x_2-2x_1x_3-x_2x_3)
+\\ & = 2x_1^2-2x_1x_2-2x_1x_3+2x_2^2-2x_2x_3+2x_3^2
+\\ & = 2x_1^2-x_1x_2-x_2x_1-x_1x_3-x_3x_1+2x_2^2-x_2x_3-x_3x_2+2x_3^2
+\\ & =
+\begin{bmatrix}
+2&-1&-1\\
+-1&2&-1\\
+-1&-1&2
+\end{bmatrix}
+\\det_{1x1}(S_2) &= 2 > 0
+\\det_{2x2}(S_2) &= 3 > 0
+\\det_{3x3}(S_2) &= 2*(4-1) -1*-1*(-2) +(-1)(1+3)  = 0 \longrightarrow PSD
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax%5ETSx+%0A%5C%5C+%26%3D+x%5ETLDL%5ETx%0A%5C%5C+%26%3D+%5Bx%5ETL%5Csqrt%7BD%7D%5D%5B%5Csqrt%7BD%7DL%5ETx%5D%0A%5C%5C+%26%3D+%5B%5Csqrt%7BD%7DL%5ETx%5D%5ET%5B%5Csqrt%7BD%7DL%5ETx%5D%0A%5C%5C+%26%3D+%7C%7C%5Csqrt%7BD%7DL%5ETx%7C%7C%5E2%0A%5C%5Cor+%26%0A%5C%5C+%26%3D+x%5ETLDQ%5ETx%0A%5C%5C+%26%3D+%5Bx%5ETL%5Csqrt%7BD%7D%5D%5B%5Csqrt%7BD%7DQ%5ETx%5D%0A%5C%5C+%26%3D+%5B%5Csqrt%7BD%7DL%5ETx%5D%5ET%5B%5Csqrt%7BD%7DQ%5ETx%5D%0A%5C%5C+%26%3D+%7C%7C%5Csqrt%7BD%7DQ%5ETx%7C%7C%5E2%0A%5C%5Cgenerically+%26%0A%5C%5C%26%3D+x%5ETA%5ETAx+%0A%5C%5C%26%3D+%5Bx%5ETA%5ET%5D%5BAx%5D+%0A%5C%5C%26%3D+%5BAx%5D%5ET%5BAx%5D+%0A%5C%5C%26%3D+%7C%7CAx%7C%7C%5E2+%0A%5C%5C%0A%5C%5C+x%5ETS_1x+%26%3D%0A%5C%5C+%26%3D+2%28x_1%5E2%2Bx_2%5E2%2Bx_3%5E2-x_1x_2-x_2x_3%29%0A%5C%5C+%26+%3D+2x_1%5E2-2x_1x_2%2B2x_2%5E2-2x_2x_3%2B2x_3%5E2%0A%5C%5C+%26+%3D+2x_1%5E2-x_1x_2-x_2x_1%2B2x_2%5E2-x_2x_3-x_3x_2%2B2x_3%5E2%0A%5C%5C+%26+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5C%5Cdet_%7B1x1%7D%28S_1%29+%26%3D+2+%3E+0%0A%5C%5Cdet_%7B2x2%7D%28S_1%29+%26%3D+3+%3E+0%0A%5C%5Cdet_%7B3x3%7D%28S_1%29+%26%3D+2%2A%284-1%29+-1%2A-1%2A%28-2%29++%3D+4+%3E+0+%5Clongrightarrow+PD%0A%5C%5C+x%5ETS_2x+%26%3D+%0A%5C%5C%26%3D+2%28x_1%5E2%2Bx_2%5E2%2Bx_3%5E2-x_1x_2-2x_1x_3-x_2x_3%29%0A%5C%5C+%26+%3D+2x_1%5E2-2x_1x_2-2x_1x_3%2B2x_2%5E2-2x_2x_3%2B2x_3%5E2%0A%5C%5C+%26+%3D+2x_1%5E2-x_1x_2-x_2x_1-x_1x_3-x_3x_1%2B2x_2%5E2-x_2x_3-x_3x_2%2B2x_3%5E2%0A%5C%5C+%26+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%26-1%5C%5C%0A-1%262%26-1%5C%5C%0A-1%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5C%5Cdet_%7B1x1%7D%28S_2%29+%26%3D+2+%3E+0%0A%5C%5Cdet_%7B2x2%7D%28S_2%29+%26%3D+3+%3E+0%0A%5C%5Cdet_%7B3x3%7D%28S_2%29+%26%3D+2%2A%284-1%29+-1%2A-1%2A%28-2%29+%2B%28-1%29%281%2B3%29++%3D+0+%5Clongrightarrow+PSD%0A%5Cend%7Balign%2A%7D%0A)
+
+
