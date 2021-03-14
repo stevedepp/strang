@@ -2548,11 +2548,21 @@ D_{11}(L_{11}x+L_{21}y)^2 +D_{22}(L_{12}x +L_{22}y)^2
 
 can see where the L, D and S matrix cells come from 
 
+
+
 since there is only pivot, rank = 1  
 since trace = 4 +4+16 = 24, it can have only 1 non-zero eigenvalue = 24 and the remaining two eigenvalues are 0 so that 0 • 0 • 24 = 0 = determinant = 0
 
 one positive eigenvalue
 one positive pivot
+
+**this helps show where the squared x's and the cross xs come from.  
+it is because :**
+
+x<sup>T</sup>Sx 
+= x<sup>T</sup>A<sup>T</sup>Ax   
+= [x<sup>T</sup>A<sup>T</sup>][Ax]   
+
 
 ![\begin{align*}
 f(x_1,x_2, x_3) =& 4(x_1-x_2+2x_3)^2 \\
