@@ -2846,3 +2846,63 @@ x^TSx
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax%5ETSx+%0A%5C%5C+%26%3D+x%5ETLDL%5ETx%0A%5C%5C+%26%3D+%5Bx%5ETL%5Csqrt%7BD%7D%5D%5B%5Csqrt%7BD%7DL%5ETx%5D%0A%5C%5C+%26%3D+%5B%5Csqrt%7BD%7DL%5ETx%5D%5ET%5B%5Csqrt%7BD%7DL%5ETx%5D%0A%5C%5C+%26%3D+%7C%7C%5Csqrt%7BD%7DL%5ETx%7C%7C%5E2%0A%5C%5Cor+%26%0A%5C%5C+%26%3D+x%5ETLDQ%5ETx%0A%5C%5C+%26%3D+%5Bx%5ETL%5Csqrt%7BD%7D%5D%5B%5Csqrt%7BD%7DQ%5ETx%5D%0A%5C%5C+%26%3D+%5B%5Csqrt%7BD%7DL%5ETx%5D%5ET%5B%5Csqrt%7BD%7DQ%5ETx%5D%0A%5C%5C+%26%3D+%7C%7C%5Csqrt%7BD%7DQ%5ETx%7C%7C%5E2%0A%5C%5Cgenerically+%26%0A%5C%5C%26%3D+x%5ETA%5ETAx+%0A%5C%5C%26%3D+%5Bx%5ETA%5ET%5D%5BAx%5D+%0A%5C%5C%26%3D+%5BAx%5D%5ET%5BAx%5D+%0A%5C%5C%26%3D+%7C%7CAx%7C%7C%5E2+%0A%5C%5C%0A%5C%5C+x%5ETS_1x+%26%3D%0A%5C%5C+%26%3D+2%28x_1%5E2%2Bx_2%5E2%2Bx_3%5E2-x_1x_2-x_2x_3%29%0A%5C%5C+%26+%3D+2x_1%5E2-2x_1x_2%2B2x_2%5E2-2x_2x_3%2B2x_3%5E2%0A%5C%5C+%26+%3D+2x_1%5E2-x_1x_2-x_2x_1%2B2x_2%5E2-x_2x_3-x_3x_2%2B2x_3%5E2%0A%5C%5C+%26+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%260%5C%5C%0A-1%262%26-1%5C%5C%0A0%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5C%5Cdet_%7B1x1%7D%28S_1%29+%26%3D+2+%3E+0%0A%5C%5Cdet_%7B2x2%7D%28S_1%29+%26%3D+3+%3E+0%0A%5C%5Cdet_%7B3x3%7D%28S_1%29+%26%3D+2%2A%284-1%29+-1%2A-1%2A%28-2%29++%3D+4+%3E+0+%5Clongrightarrow+PD%0A%5C%5C+x%5ETS_2x+%26%3D+%0A%5C%5C%26%3D+2%28x_1%5E2%2Bx_2%5E2%2Bx_3%5E2-x_1x_2-2x_1x_3-x_2x_3%29%0A%5C%5C+%26+%3D+2x_1%5E2-2x_1x_2-2x_1x_3%2B2x_2%5E2-2x_2x_3%2B2x_3%5E2%0A%5C%5C+%26+%3D+2x_1%5E2-x_1x_2-x_2x_1-x_1x_3-x_3x_1%2B2x_2%5E2-x_2x_3-x_3x_2%2B2x_3%5E2%0A%5C%5C+%26+%3D%0A%5Cbegin%7Bbmatrix%7D%0A2%26-1%26-1%5C%5C%0A-1%262%26-1%5C%5C%0A-1%26-1%262%0A%5Cend%7Bbmatrix%7D%0A%5C%5Cdet_%7B1x1%7D%28S_2%29+%26%3D+2+%3E+0%0A%5C%5Cdet_%7B2x2%7D%28S_2%29+%26%3D+3+%3E+0%0A%5C%5Cdet_%7B3x3%7D%28S_2%29+%26%3D+2%2A%284-1%29+-1%2A-1%2A%28-2%29+%2B%28-1%29%281%2B3%29++%3D+0+%5Clongrightarrow+PSD%0A%5Cend%7Balign%2A%7D%0A)
 
 
+11.  pivots = ratio of the determinants   
+determinant = product of the pivots  
+
+so if looking at PD PSD ND can look at either
+
+pivot<sub>1</sub>pivot<sub>2</sub>pivot<sub>3</sub> = det(S<sub>1x1</sub>)
+D<sub>11</sub>D<sub>22</sub>D<sub>23</sub> = det(S<sub>1x1</sub>)
+
+![\begin{align*}
+det(S_{11}), \frac{det(S_{22})}{det(S_{11})}, \frac{det(S_{33})}{det(S_{22})} &= pivot_{11}, pivot_{22}, pivot_{33} \\
+det(S_{11}) * \frac{det(S_{22})}{{det(S_{11}})} * \frac{det(S_{33})}{det(S_{22})} 
+&= pivot_{11} * pivot_{22} * pivot_{33} \\
+\cancel{det(S_{11})} * \frac{\cancel{det(S_{22}})}{{\cancel{det(S_{11}}})} * \frac{det(S_{33})}{\cancel{det(S_{22}})} &= pivot_{11} * pivot_{22} * pivot_{33} = det(S_{33})
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Adet%28S_%7B11%7D%29%2C+%5Cfrac%7Bdet%28S_%7B22%7D%29%7D%7Bdet%28S_%7B11%7D%29%7D%2C+%5Cfrac%7Bdet%28S_%7B33%7D%29%7D%7Bdet%28S_%7B22%7D%29%7D+%26%3D+pivot_%7B11%7D%2C+pivot_%7B22%7D%2C+pivot_%7B33%7D+%5C%5C%0Adet%28S_%7B11%7D%29+%2A+%5Cfrac%7Bdet%28S_%7B22%7D%29%7D%7B%7Bdet%28S_%7B11%7D%7D%29%7D+%2A+%5Cfrac%7Bdet%28S_%7B33%7D%29%7D%7Bdet%28S_%7B22%7D%29%7D+%0A%26%3D+pivot_%7B11%7D+%2A+pivot_%7B22%7D+%2A+pivot_%7B33%7D+%5C%5C%0A%5Ccancel%7Bdet%28S_%7B11%7D%29%7D+%2A+%5Cfrac%7B%5Ccancel%7Bdet%28S_%7B22%7D%7D%29%7D%7B%7B%5Ccancel%7Bdet%28S_%7B11%7D%7D%7D%29%7D+%2A+%5Cfrac%7Bdet%28S_%7B33%7D%29%7D%7B%5Ccancel%7Bdet%28S_%7B22%7D%7D%29%7D+%26%3D+pivot_%7B11%7D+%2A+pivot_%7B22%7D+%2A+pivot_%7B33%7D+%3D+det%28S_%7B33%7D%29%0A%5Cend%7Balign%2A%7D%0A)
+
+
+12.  for c > 1, and c, c<sup>2</sup> - 1, and (c-1)<sup>2</sup>(c+2) > 0 the matrix S is PD
+
+T<sub>1x1</sub>: ok  
+T<sub>1x1</sub>:  d > 4  
+T<sub>1x1</sub>: d < 3  
+
+so cannot be PD
+
+![\begin{align*}
+S & =
+\begin{bmatrix}
+c&1&1\\
+1&c&1\\
+1&1&c
+\end{bmatrix}
+\\T & =
+\begin{bmatrix}
+1&2&3\\
+2&d&4\\
+3&4&5
+\end{bmatrix}
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%26+%3D%0A%5Cbegin%7Bbmatrix%7D%0Ac%261%261%5C%5C%0A1%26c%261%5C%5C%0A1%261%26c%0A%5Cend%7Bbmatrix%7D%0A%5C%5CT+%26+%3D%0A%5Cbegin%7Bbmatrix%7D%0A1%262%263%5C%5C%0A2%26d%264%5C%5C%0A3%264%265%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D%0A)
+
+
+13. for 2x2 matrices
+
+trace > 0 means at least one diagonal element is > 0   
+det > 0 means that both signs the same   
+obviously, must test trace to ensure the signs are same and positive 
+
+![\begin{align*}
+\sum_{i=1}^n \lambda_i = trace_S 
+\\ \product_{i=1}^n \lambda_i  = det(S)
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Csum_%7Bi%3D1%7D%5En+%5Clambda_i+%3D+trace_S+%0A%5C%5C+%5Cproduct_%7Bi%3D1%7D%5En+%5Clambda_i++%3D+det%28S%29%0A%5Cend%7Balign%2A%7D%0A)
+
+
+14. if S is PD then S<sup>-1</sup> is PD because the eigenvalues of S<sup>-1</sup> are the arithmetic inverse 1/&lambda; of the eigenvalues of S.  
+
+and x<sup>T</sup>S<sup>-1</sup>x > 0 &longrightarrow; (S<sup>-1</sup>x)<sup>T</sup>S(S<sup>-1</sup>x) > 0 for all x ≠ 0
+
+x<sup>T</sup>S<sup>-1</sup>x = ((S<sup>-1</sup>)x)<sup>T</sup>x = (S<sup>-1</sup>)<sup>T</sup>x = (S<sup>-1</sup>x)<sup>T</sup>(SS<sup>-1</sup>)x = (S<sup>-1</sup>x)<sup>T</sup>S(S<sup>-1</sup>x)
