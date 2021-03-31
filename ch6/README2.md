@@ -2906,3 +2906,103 @@ obviously, must test trace to ensure the signs are same and positive
 and x<sup>T</sup>S<sup>-1</sup>x > 0 &longrightarrow; (S<sup>-1</sup>x)<sup>T</sup>S(S<sup>-1</sup>x) > 0 for all x ≠ 0
 
 x<sup>T</sup>S<sup>-1</sup>x = ((S<sup>-1</sup>)x)<sup>T</sup>x = (S<sup>-1</sup>)<sup>T</sup>x = (S<sup>-1</sup>x)<sup>T</sup>(SS<sup>-1</sup>)x = (S<sup>-1</sup>x)<sup>T</sup>S(S<sup>-1</sup>x)
+
+(S<sup>-1</sup>x)<sup>T</sup>S(S<sup>-1</sup>x) > 0 is useful because if replace S with &lambda; then (S<sup>-1</sup>x)<sup>T</sup>&lambda;(S<sup>-1</sup>x) = &lambda;(S<sup>-1</sup>x)<sup>T</sup>(S<sup>-1</sup>x) = &lambda;||S<sup>-1</sup>x|| > 0 since both &lambda; > 0  and ||S<sup>-1</sup>x|| > 0
+
+15. if S and T are PD, their sum S + T is PD.  
+
+Since x<sup>T</sup>Sx > 0 and x<sup>T</sup>Tx > 0, x<sup>T</sup>Sx + x<sup>T</sup>Tx = 0 and so x<sup>(S+T)</sup>Sx > 0 for all x ≠ 0, then S + T is PD matrix
+
+S = A<sup>T</sup>A and T = B<sup>T</sup>B give S + T = [A+B]<sup>T</sup> [A + B] with independent columns in A and B.  If S and T pass the independent columns in A and B test then S+T  also passes the test and must be PD. 
+
+by distributive law, x<sup>T</sup>(A + B)x = x<sup>T</sup>Ax + x<sup>T</sup>Bx.  since both A and B are PD we know x<sup>T</sup>Ax > 0 and x<sup>T</sup>Bx > 0 for all x ≠ 0.  since each term individually positive, the sum is x<sup>T</sup>Ax + x<sup>T</sup>Bx > 0 for all x ≠ 0.
+
+16. A PD matrix cannot have zero or negative on the diagonal because x<sup>T</sup>Sx loses one of its squared elements when a diagonal is zero or has a negative coefficent on squared element when the diagonal contains a negative.  Most simply this enables a null space solution that is x ≠ 0 
+
+
+![\begin{align*}
+S & = A^TA
+\\ T & = B^TB
+\\ S + T &= 
+\begin{bmatrix}
+A^T&B^T\end{bmatrix}
+\begin{bmatrix}
+A\\
+B
+\end{bmatrix}
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AS+%26+%3D+A%5ETA%0A%5C%5C+T+%26+%3D+B%5ETB%0A%5C%5C+S+%2B+T+%26%3D+%0A%5Cbegin%7Bbmatrix%7D%0AA%5ET%26B%5ET%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0AA%5C%5C%0AB%0A%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign%2A%7D)
+
+17. Follows from 16: a diagonal entry S<sub>jj</sub> of a symmetric matrix cannot be smaller than all the &lambda;s.  if it d<sub>jj</sub> were smaller than all &lambda;s, then [ S - S<sub>jj</sub>•I ] would have all &lambda; eigenvalues > 0 and [ S - S<sub>jj</sub>•I ] would be PD, but we know this is impossible since [ S - S<sub>jj</sub>•I ] would have a zero in position [ S - S<sub>jj</sub>•I ]<sub>jj</sub> and we know from problem 16 that this prevents PD. 
+
+18.  if Sx = &lambda;x, then x<sup>T</sup>Sx = &lambda;x<sup>T</sup>x. Thus setting up by saying that the x's are eigenvectors to the &lambda; eigenvalues.  Why if &lambda; > 0 is x<sup>T</sup>Sx > 0 ?  &lambda;x<sup>T</sup>x is &lambda; which is positive times length squared which is positive.  
+
+if Sx = &lambda;x then x<sup>T</sup>Sx = &lambda;x<sup>T</sup>x.  then if S is PD then &lambda; = (x<sup>T</sup>Sx)/(x<sup>T</sup>x) > 0 which is a ratio of positive numbers.  
+
+thus positive energy ––> positive &lambda;s
+
+19. Now do the reverse.  without knowing x's are eigenvectors to &lambda; :  if all &lambda; > 0, we must show that for every non-zero x, not just eigenvectors, &lambda;x<sup>T</sup>x > 0.  
+
+write x as a combination of the eigenvectors and explain why the cross terms are x<sub>i</sub>x<sub>j</sub> = 0:  then x<sup>T</sup>Sx = (c<sub>1</sub>x<sub>1</sub> + ... + c<sub>n</sub>x<sub>n</sub>)<sup>T</sup>(c<sub>1</sub>&lambda;<sub>n</sub>x<sub>1</sub> + ... + c<sub>n</sub>&lambda;<sub>n</sub>x<sub>n</sub>) 
+
+all cross terms are x<sub>i</sub><sup>T</sup>x<sub>j</sub> = 0 because **symmetric matrices have orthogonal eigenvectors** which ––> positive energy. 
+
+if x is an eigenvector of S then x<sup>T</sup>Ax = x<sup>T</sup>(&lambda;x) = &lambda;x<sup>T</sup>x.  If S is PD then x<sup>T</sup>Sx > 0 which means &lambda;x<sup>T</sup>x > 0 and &lambda; > 0 and thus PD.
+
+20.
+
+every PD matrix is invertible because the determinant is > 0 because all &lambda;s are > 0.
+
+the only PD projection matrix is P = I because all projection matrices except I are singular.   to be a PD matrix, the matrix must have positive non-zero diagonal elements, which for a projection matrix only occurs when 1s are on the diagonal.
+
+a diagonal matrix with a positive diagonal entries is PD because the diagonal entries of D are its eigenvalues. 
+
+a symmetric matric with a positive determinant might not be PD because S = -I has det of +1 when n is even.
+
+23.  x<sup>2</sup>/a<sup>2</sup> + y<sup>2</sup>/b<sup>2</sup> = 1 is an equation for ellipse.  if written as &lambda;<sub>1</sub>x<sup>2</sup> + &lambda;<sub>2</sub>y<sup>2</sup> = 1 then a = 1/ (&lambda;<sub>1</sub>)<sup>1/2</sup> and b = 1/ (&lambda;<sub>2</sub>)<sup>1/2</sup>  
+
+x<sup>2</sup>/a<sup>2</sup> + y<sup>2</sup>/b<sup>2</sup> = x<sup>T</sup>Sx when S = diagonal matrix = diag(1/a<sup>2</sup>, 1/b<sup>2</sup>).  Then &lambda;<sub>1</sub> = 1/a<sup>2</sup> and &lambda;<sub>2</sub> = 1/b<sup>2</sup>.  So a = 1/ (&lambda;<sub>1</sub>)<sup>1/2</sup> and b = 1/ (&lambda;<sub>2</sub>)<sup>1/2</sup>  
+
+
+an ellipse written as 9x<sup>2</sup> + 16y<sup>2</sup> = 1 has axes with half lengths a = 1/3 and b = 1/4.  The points (1/3,0) and (0,1/4) are at the ends of the axes.  
+
+24.  the tilted ellipse x<sup>2</sup> + xy + y<sup>2</sup> = 1 has the following S
+
+S = [[1,1/2], [1/2,1]] 
+
+det [S-&lambda;I] = 0 ––> &lambda;<sup>2</sup> - 2&ambda; + 1 - 1/4 = (&lambda;-1/2)(&lambda;-3/2)  
+
+for &lambda;<sub>1</sub> = 1/2, x<sub>1</sub> = (1,1)
+for &lambda;<sub>2</sub> = 3/2, x<sub>2</sub> = (1,-1)  
+
+the ellipse x<sup>2</sup> + xy + y<sup>2</sup> = 1 will have axes with half lengths = 1/&lambda;<sup>1/2</sup> = √2 and √2/3 
+
+25. Cholesky factoriation is to S = C<sup>T</sup>C where C = √D L<sup>T</sup>
+
+28.  without multiplying find
+- the determinant of S = 10
+- the eigenvalues of S = 2 and 5
+- the eigenvector of S (cos&theta;, sin&theta;) and (-sin&theta;, cos&theta;)
+- the reason why S is symmetric positive definite. because all eigenvalues > 0
+
+this solution's decomposition is not LDL<sup>T</sup> because not U or L  
+this solution's decomposition is Q&Lambda;Q<sup>T</sup> because the Q vectors are orthogonal.  
+
+![\begin{align*}
+\begin{bmatrix}
+cos\theta&-sin\theta\\
+sin\theta&cos\theta
+\end{bmatrix}
+\begin{bmatrix}
+2&0\\
+0&5
+\end{bmatrix}
+\begin{bmatrix}
+cos\theta&sin\theta\\
+sin\theta&cos\theta
+\end{bmatrix}
+= Q&Lambda;Q^T
+\end{align*}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cbegin%7Bbmatrix%7D%0Acos%5Ctheta%26-sin%5Ctheta%5C%5C%0Asin%5Ctheta%26cos%5Ctheta%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A2%260%5C%5C%0A0%265%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Acos%5Ctheta%26sin%5Ctheta%5C%5C%0Asin%5Ctheta%26cos%5Ctheta%0A%5Cend%7Bbmatrix%7D%0A%3D+Q%26Lambda%3BQ%5ET%0A%5Cend%7Balign%2A%7D%0A)
+
+
+29.  test for minimums S
